@@ -77,7 +77,8 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-bower-task');
     grunt.loadNpmTasks('grunt-karma');
-    grunt.loadNpmTasks('grunt-serve')
+    grunt.loadNpmTasks('grunt-serve');
+
     grunt.registerTask('dev', [ 'bower', 'connect:server', 'watch:dev' ]);
     grunt.registerTask('test', [ 'bower', 'jshint', 'karma:continuous' ]);
     grunt.registerTask('minified', [ 'bower', 'connect:server', 'watch:min' ]);
