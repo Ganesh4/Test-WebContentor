@@ -8,7 +8,7 @@ module.exports = function (grunt) {
                 options: {
                     install: true,
                     copy: false,
-                    targetDir: './libs',
+                    targetDir: './app/bower_components',
                     cleanTargetDir: true
                 }
             }
@@ -27,9 +27,9 @@ module.exports = function (grunt) {
                 autoWatch: true
             }
         },
-           html2js: {
+        html2js: {
             dist: {
-                src: [ 'app/**/*.html' ],
+                src: ['app/**/*.html'],
                 dest: 'tmp/templates.js'
             }
         },
@@ -47,7 +47,7 @@ module.exports = function (grunt) {
             },
             min: {
                 files: ['Gruntfile.js', 'app/*.js', '*.html'],
-                tasks: ['jshint', 'karma:unit', 'html2js:dist', 'concat:dist', 'clean:temp', 'uglify:dist'],
+                tasks: ['html2js:dist', 'concat:dist', 'clean:temp', 'uglify:dist'],
                 options: {
                     atBegin: true
                 }
@@ -60,7 +60,7 @@ module.exports = function (grunt) {
                     open: {
                         target: 'http://localhost:4040/app' // target url to open
                     },
-                    debug:true
+                    debug: true
                 }
             }
         }
@@ -79,9 +79,9 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-karma');
     grunt.loadNpmTasks('grunt-serve');
 
-    grunt.registerTask('dev', [ 'bower', 'connect:server', 'watch:dev' ]);
-    grunt.registerTask('test', [ 'bower', 'jshint', 'karma:continuous' ]);
-    grunt.registerTask('minified', [ 'bower', 'connect:server', 'watch:min' ]);
-    grunt.registerTask('server', [ 'bower', 'connect:server','watch:min']);
-    grunt.registerTask('package', [ 'bower', 'jshint', 'karma:unit','clean:temp']);
+    grunt.registerTask('dev', ['bower', 'connect:server', 'watch:dev']);
+    grunt.registerTask('test', ['bower', 'jshint', 'karma:continuous']);
+    grunt.registerTask('minified', ['bower', 'connect:server', 'watch:min']);
+    grunt.registerTask('server', ['connect:server', 'watch:dev']);
+    grunt.registerTask('package', ['bower', 'jshint', 'karma:unit', 'clean:temp']);
 };
