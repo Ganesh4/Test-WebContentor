@@ -38,11 +38,14 @@ module.exports = function (grunt) {
                 src: ['tmp']
             }
         }, watch: {
+            options: {
+                livereload: true,
+            },
             dev: {
-                files: ['Gruntfile.js', 'app/*.js', '*.html'],
-                tasks: ['html2js:dist', 'clean:temp'],
+                files: ['Gruntfile.js', 'app/**/*.js','app/*.js', 'app/**/*.html','app/*.html'],
+                tasks: ['html2js:dist'],
                 options: {
-                    atBegin: true
+                    atBegin: true,
                 }
             },
             min: {
