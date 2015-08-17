@@ -37,7 +37,14 @@ module.exports = function (grunt) {
             temp: {
                 src: ['tmp']
             }
-        }, watch: {
+        },compass: {
+            dist: {
+                options: {
+                    sassDir: 'sass',
+                    cssDir: 'css'
+                }
+            }
+        },watch: {
             options: {
                 livereload: true,
             },
@@ -54,6 +61,10 @@ module.exports = function (grunt) {
                 options: {
                     atBegin: true
                 }
+            },
+            css: {
+                files: '**/*.scss',
+                tasks: ['compass']
             }
         }, connect: {
             server: {
@@ -77,6 +88,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-html2js');
+    grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-bower-task');
     grunt.loadNpmTasks('grunt-karma');
@@ -87,4 +99,5 @@ module.exports = function (grunt) {
     grunt.registerTask('minified', ['bower', 'connect:server', 'watch:min']);
     grunt.registerTask('server', ['connect:server', 'watch:dev']);
     grunt.registerTask('package', ['bower', 'jshint', 'karma:unit', 'clean:temp']);
+    grunt.registerTask('default',['watch']);
 };
