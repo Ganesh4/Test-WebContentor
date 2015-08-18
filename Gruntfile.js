@@ -40,8 +40,8 @@ module.exports = function (grunt) {
         },compass: {
             dist: {
                 options: {
-                    sassDir: 'sass',
-                    cssDir: 'css'
+                    sassDir: ['app/sass'],
+                    cssDir: ['app/css']
                 }
             }
         },watch: {
@@ -62,8 +62,8 @@ module.exports = function (grunt) {
                     atBegin: true
                 }
             },
-            css: {
-                files: '**/*.scss',
+            compass: {
+                files: ['app/sass/*.scss'],
                 tasks: ['compass']
             }
         }, connect: {
