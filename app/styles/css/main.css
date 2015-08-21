@@ -176,3 +176,22 @@ header {
 .title_main-nav {
   padding: 8px 0;
 }
+/* Sass Document */
+/* line 3, ../sass/global/_footer.scss */
+footer {
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  width: 85%;
+  float: right;
+  bottom: 0px;
+  position: absolute;
+  right: 0;
+}
+/* line 12, ../sass/global/_footer.scss */
+footer .text-right {
+  float: right;
+}
+/* line 15, ../sass/global/_footer.scss */
+footer .text-left {
+  float: left;
+}

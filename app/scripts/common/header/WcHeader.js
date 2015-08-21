@@ -11,7 +11,7 @@
                 return{
 
                     restrict:'AE',
-                    templateUrl:'./views/common/header/header.html',
+                    templateUrl:'./views/commons/header/header.html',
                     controller:('HeaderCtrl',['$scope','$state'],function($scope,$state)
                             {
 

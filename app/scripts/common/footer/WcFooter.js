@@ -12,7 +12,7 @@
                 return{
 
                     restrict:'AE',
-                    templateUrl:'./views/common/footer/footer.html',
+                    templateUrl:'./views/commons/footer/footer.html',
                     controller:('FooterCtrl',['$scope','$state'],function($scope,$state)
                             {
 

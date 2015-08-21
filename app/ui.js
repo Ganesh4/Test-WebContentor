@@ -16,7 +16,7 @@
     // Now set up the states
     $stateProvider.state('overview', {
         url: "/overview",
-        templateUrl:"views/overview/home.html"
+        templateUrl:"views/overview/overview.html"
 
     })
 }]);

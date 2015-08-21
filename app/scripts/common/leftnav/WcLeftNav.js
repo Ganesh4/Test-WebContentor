@@ -10,7 +10,7 @@
                 return{
 
                     restrict:'AE',
-                    templateUrl:'./views/common/leftnav/leftnav.html',
+                    templateUrl:'./views/commons/leftnav/leftnav.html',
                     controller:('LeftnavCtrl',['$scope','$state'],function($scope,$state)
                             {
 
