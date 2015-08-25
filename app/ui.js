@@ -20,6 +20,11 @@
 
     }).state('home.overview', {
         url: "/overview",
+        templateUrl:"views/overview/overview.html",
+        controller:'OverviewCtrl'
+
+    }).state('home.dashboard', {
+        url: "/dashboard",
         templateUrl:"views/overview/overview.html"
 
     });
