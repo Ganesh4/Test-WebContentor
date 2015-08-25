@@ -1,0 +1,42 @@
+<div class="row">
+          <div class="col-lg-4" ng-repeat ='template in templates | filter : usercreated'>
+            <div class="thumb-block">
+              <div class="thumb-img"></div>   
+              <div class="thumb-innr">
+      
+                <div class="thumb-details">
+                  <span class="title">Template Title</span>
+                  <p class="thumb-desc">{{template.title}}
+                  </p>
+                  <div class="thumb-info">
+                    <span class="revision">Revision:6</span>
+                    <span class="age">Age:5 days ago</span>
+                  </div>
+                  <span class="btn_view-more">
+                    <a href="#">View More</a>
+                  </span>
+                </div>
+            </div>       
+                
+            <div class="thumb-stats-view">
+              <div class="thumb-innr">
+                <span class="title">Stats Overview</span>
+                   <div class="thumb-graph-wrap">
+                      <div class="thumb-graph"></div>
+                      <div class="thumb-graph-details">
+                        <p>Live Visitors:200</p>
+                        <p>Bounce Rate:50%</p>                
+                        <p>Total Visits:200</p>
+                      </div>
+                   </div>                  
+                  <span class="btn_view-more">
+                    <a href="#">View More</a>
+                  </span>
+              </div>
+            </div>
+          </div> <!-- thumb block -->
+          </div>
+            
+               
+   
+    </div>
