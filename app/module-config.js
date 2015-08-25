@@ -6,7 +6,7 @@
  */
 	(function(angular){
 
-	angular.module('vendor',['ui.router']);
+	angular.module('vendor',['ui.router','restangular']);
 	
 	angular.module('common',['vendor']);
 
