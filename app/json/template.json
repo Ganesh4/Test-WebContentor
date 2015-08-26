@@ -25,7 +25,7 @@
 },{
 	"id" : "4",
 	"screenshots" : "/images/one.jpg",
-	"title" : "Test",
+	"title" : "Test featured",
 	"revision" : "2",
 	"age"  : "12/12/2015",
 	"category": "featured"
@@ -33,7 +33,7 @@
 },{
 	"id" : "5",
 	"screenshots" : "/images/one.jpg",
-	"title" : "Test",
+	"title" : "Test featured",
 	"revision" : "2",
 	"age"  : "12/12/2015",
 	"category": "featured"
@@ -41,7 +41,7 @@
 },{
 	"id" : "6",
 	"screenshots" : "/images/one.jpg",
-	"title" : "Test",
+	"title" : "Test featured",
 	"revision" : "2",
 	"age"  : "12/12/2015",
 	"category": "featured"
