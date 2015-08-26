@@ -1,7 +1,7 @@
 <div ng-repeat ='row in repeatRow'>
    <div class="content-padding">
     <!-- <div class="content-inner">    -->
-    
+    <div class="thumb-row">
     <div class="thumb-category">
      
        <h3 class="thumb-category-title">{{row.name}}</h3>
@@ -11,11 +11,16 @@
           </div>
               <wc-on-off-button is-hidden = "isHidden"></wc-on-off-button>
         </div> 
-    </div> <!-- thumb-category -->
+    </div> 
+    
+    <!-- thumb-category -->
     <div class="row" ng-hide = "isHidden">
         <div class="col-lg-4" ng-repeat ='template in templates | filter : row.name'>
             <div class="thumb-block">
-                <div class="thumb-img"></div>   
+                <div class="thumb-img">
+                	<img src="images/img_1.gif" alt="screenshot">
+              </div>
+                  
                 <div class="thumb-innr">
       
                 <div class="thumb-details">
@@ -30,7 +35,8 @@
                     <a href="#">View More</a>
                   </span>
                 </div>
-            </div>       
+            </div>
+
                 
         <div class="thumb-stats-view" ng-show = "{{template.category == 'usercreated'}}" >
           <div class="thumb-innr">
@@ -48,9 +54,10 @@
               </span>
           </div>
         </div>
-        </div> <!-- thumb block -->
+        </div> <!-- ./thumb block -->
       </div>
-   </div>
+   </div><!-- ./row -->
  </div>          
   </div> 
+  </div>
  
