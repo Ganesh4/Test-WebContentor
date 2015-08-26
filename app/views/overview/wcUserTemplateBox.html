@@ -1,12 +1,26 @@
-<div class="row">
-          <div class="col-lg-4" ng-repeat ='template in templates | filter : usercreated'>
+<div ng-repeat ='row in repeatRow'>
+   <div class="content-padding">
+    <!-- <div class="content-inner">    -->
+    
+    <div class="thumb-category">
+     
+       <h3 class="thumb-category-title">{{row.name}}</h3>
+       <div class="right-elements">
+          <div class="btn_view-all">
+            <a href="#">View all</a>
+          </div>
+              <wc-on-off-button is-hidden = "isHidden"></wc-on-off-button>
+        </div> 
+    </div> <!-- thumb-category -->
+    <div class="row" ng-hide = "isHidden">
+        <div class="col-lg-4" ng-repeat ='template in templates | filter : row.name'>
             <div class="thumb-block">
-              <div class="thumb-img"></div>   
-              <div class="thumb-innr">
+                <div class="thumb-img"></div>   
+                <div class="thumb-innr">
       
                 <div class="thumb-details">
-                  <span class="title">Template Title</span>
-                  <p class="thumb-desc">{{template.title}}
+                  <span class="title">{{template.title}}</span>
+                  <p class="thumb-desc">{{template.description}}
                   </p>
                   <div class="thumb-info">
                     <span class="revision">Revision:6</span>
@@ -18,25 +32,25 @@
                 </div>
             </div>       
                 
-            <div class="thumb-stats-view">
-              <div class="thumb-innr">
-                <span class="title">Stats Overview</span>
-                   <div class="thumb-graph-wrap">
-                      <div class="thumb-graph"></div>
-                      <div class="thumb-graph-details">
-                        <p>Live Visitors:200</p>
-                        <p>Bounce Rate:50%</p>                
-                        <p>Total Visits:200</p>
-                      </div>
-                   </div>                  
-                  <span class="btn_view-more">
-                    <a href="#">View More</a>
-                  </span>
-              </div>
-            </div>
-          </div> <!-- thumb block -->
+        <div class="thumb-stats-view" ng-show = "{{template.category == 'usercreated'}}" >
+          <div class="thumb-innr">
+            <span class="title">Stats Overview</span>
+               <div class="thumb-graph-wrap">
+                  <div class="thumb-graph"></div>
+                  <div class="thumb-graph-details">
+                    <p>Live Visitors:200</p>
+                    <p>Bounce Rate:50%</p>                
+                    <p>Total Visits:200</p>
+                  </div>
+               </div>                  
+              <span class="btn_view-more">
+                <a href="#">View More</a>
+              </span>
           </div>
-            
-               
-   
-    </div>
+        </div>
+        </div> <!-- thumb block -->
+      </div>
+   </div>
+ </div>          
+  </div> 
+ 

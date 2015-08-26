@@ -1,4 +1,13 @@
-<div class="row">
+<div class="thumb-category">       
+   <h3 class="thumb-category-title">Featured</h3>
+   <div class="right-elements">
+      <div class="btn_view-all">
+        <a href="#">View all</a>
+      </div>
+         <wc-on-off-button is-hidden  = "isHidden"></wc-on-off-button>
+    </div> 
+</div>
+<div class="row"  ng-hide = "isHidden">
        <div class="col-lg-4" ng-repeat ='template in templates | filter : featured' >
             <div class="thumb-block">
               <div class="thumb-img"></div>   
@@ -19,7 +28,7 @@
             </div>       
           </div> <!-- thumb block -->
          </div>
-          
+</div>          
  
           
-       </div> <!-- row -->
+     <!-- row -->
