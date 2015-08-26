@@ -7,5 +7,5 @@
 	function($urlProvider,$stateProvider,RestangularProvider){
 		RestangularProvider.setBaseUrl('/app/json/');
 		RestangularProvider.setRequestSuffix('.json');
-}]);
+    }]);
 })(angular);
