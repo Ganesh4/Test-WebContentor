@@ -11,13 +11,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* line 10, ../sass/global/_config.scss */
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/*======= end of common css =======*/
+/* line 18, ../sass/global/_config.scss */
 h2.common-headng {
   font-size: 1.2em;
   text-align: center;
   padding: 10px 0;
 }
 
-/* line 15, ../sass/global/_config.scss */
+/* line 23, ../sass/global/_config.scss */
 .clearfix:after {
   visibility: hidden;
   display: block;
@@ -27,30 +35,174 @@ h2.common-headng {
   height: 0;
 }
 
-/* line 23, ../sass/global/_config.scss */
+/* line 31, ../sass/global/_config.scss */
 label {
   font-weight: normal;
 }
 
-/* line 26, ../sass/global/_config.scss */
+/* line 34, ../sass/global/_config.scss */
 .content-padding {
   padding: 10px 20px;
+  width: 100%;
+  float: left;
 }
 
-/* line 30, ../sass/global/_config.scss */
+/* line 39, ../sass/global/_config.scss */
 .content-main {
   float: right;
   width: 85%;
   /*  background-color:#ccc;*/
 }
 
-/* line 35, ../sass/global/_config.scss */
+/* line 44, ../sass/global/_config.scss */
 .content-inner {
   width: 100%;
   margin: 0 auto;
   float: left;
 }
 
+/* line 49, ../sass/global/_config.scss */
+.wrap-box {
+  width: 100%;
+  float: left;
+}
+
+/* Scss Document */
+/*===================== switch button css =====================*/
+/* line 6, ../sass/global/_components.scss */
+.switch {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 56px;
+  height: 20px;
+  padding: 3px;
+  background-color: white;
+  border-radius: 18px;
+  box-shadow: inset 0 -1px white, inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  background-image: -webkit-linear-gradient(top, #eee, white 25px);
+  background-image: -moz-linear-gradient(top, #eee, white 25px);
+  background-image: -o-linear-gradient(top, #eee, white 25px);
+  background-image: linear-gradient(to bottom, #eee, white 25px);
+  float: right;
+}
+
+/* line 22, ../sass/global/_components.scss */
+.switch-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+/* line 29, ../sass/global/_components.scss */
+.switch-label {
+  position: relative;
+  display: block;
+  height: inherit;
+  font-size: 10px;
+  text-transform: uppercase;
+  background: #eceeef;
+  border-radius: inherit;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.15);
+  -webkit-transition: 0.15s ease-out;
+  -moz-transition: 0.15s ease-out;
+  -o-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: opacity background;
+  -moz-transition-property: opacity background;
+  -o-transition-property: opacity background;
+  transition-property: opacity background;
+}
+/* line 42, ../sass/global/_components.scss */
+.switch-label:before, .switch-label:after {
+  position: absolute;
+  top: 50%;
+  margin-top: -.5em;
+  line-height: 1;
+  -webkit-transition: inherit;
+  -moz-transition: inherit;
+  -o-transition: inherit;
+  transition: inherit;
+}
+/* line 50, ../sass/global/_components.scss */
+.switch-label:before {
+  content: attr(data-off);
+  right: 11px;
+  color: #aaa;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+}
+/* line 57, ../sass/global/_components.scss */
+.switch-label:after {
+  content: attr(data-on);
+  left: 11px;
+  color: white;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+}
+/* line 65, ../sass/global/_components.scss */
+.switch-input:checked ~ .switch-label {
+  background: #47a8d8;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+/* line 70, ../sass/global/_components.scss */
+.switch-input:checked ~ .switch-label:before {
+  opacity: 0;
+}
+/* line 71, ../sass/global/_components.scss */
+.switch-input:checked ~ .switch-label:after {
+  opacity: 1;
+}
+
+/* line 75, ../sass/global/_components.scss */
+.switch-handle {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 18px;
+  height: 18px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  background-image: -webkit-linear-gradient(top, white 40%, #f0f0f0);
+  background-image: -moz-linear-gradient(top, white 40%, #f0f0f0);
+  background-image: -o-linear-gradient(top, white 40%, #f0f0f0);
+  background-image: linear-gradient(to bottom, white 40%, #f0f0f0);
+  -webkit-transition: left 0.15s ease-out;
+  -moz-transition: left 0.15s ease-out;
+  -o-transition: left 0.15s ease-out;
+  transition: left 0.15s ease-out;
+}
+/* line 87, ../sass/global/_components.scss */
+.switch-handle:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -6px 0 0 -6px;
+  width: 12px;
+  height: 12px;
+  background: #f9f9f9;
+  border-radius: 6px;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.02);
+  background-image: -webkit-linear-gradient(top, #eee, white);
+  background-image: -moz-linear-gradient(top, #eee, white);
+  background-image: -o-linear-gradient(top, #eee, white);
+  background-image: linear-gradient(to bottom, #eee, white);
+}
+/* line 101, ../sass/global/_components.scss */
+.switch-input:checked ~ .switch-handle {
+  left: 40px;
+  box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* line 107, ../sass/global/_components.scss */
+.switch-green > .switch-input:checked ~ .switch-label {
+  background: #4fb845;
+}
+
+/*===================== end of switch button css =====================*/
 /* Scss Document */
 /* header specific css */
 /* line 11, ../sass/global/_header.scss */
@@ -93,13 +245,13 @@ header {
   width: 280px;
   float: left;
   margin-top: 5px;
-    /*label:after {
+  	/*label:after {
       border-left:1px solid #000;
-      border-right:1px solid #000;    
+      border-right:1px solid #000;		
       border-bottom:1px solid #000;
-      position:absolute;
-      left:1px;
-    }*/
+  		position:absolute;
+  		left:1px;
+  	}*/
 }
 /* line 43, ../sass/global/_header.scss */
 .search-text-input-wrap label {
@@ -141,7 +293,7 @@ header {
 .hamburger-wrap {
   width: 40px;
   height: 23px;
-  background-image: url(../images/hambuger.svg);
+  background-image: url(../../images/hambuger.svg);
   float: left;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -192,8 +344,12 @@ header {
   border-bottom: 2px solid #000;
   border-top: 2px solid #000;
 }
-
 /* line 17, ../sass/global/_left-navbar.scss */
+.logo-main img {
+  width: 85%;
+}
+
+/* line 21, ../sass/global/_left-navbar.scss */
 .btn_create-new-design {
   width: 90%;
   text-align: center;
@@ -203,13 +359,13 @@ header {
   cursor: pointer;
 }
 
-/* line 25, ../sass/global/_left-navbar.scss */
+/* line 29, ../sass/global/_left-navbar.scss */
 .btn_create-new-design-wrap {
   border-bottom: 1px solid #000;
   padding: 8px 0;
 }
 
-/* line 29, ../sass/global/_left-navbar.scss */
+/* line 33, ../sass/global/_left-navbar.scss */
 .btn_left-bar {
   border-bottom: 1px solid #000;
   text-align: center;
@@ -218,21 +374,22 @@ header {
   cursor: pointer;
   font-size: 1.2em;
 }
-/* line 37, ../sass/global/_left-navbar.scss */
+/* line 41, ../sass/global/_left-navbar.scss */
 .btn_left-bar:hover {
   background-color: #333;
   color: #fff;
 }
 
-/* line 42, ../sass/global/_left-navbar.scss */
+/* line 46, ../sass/global/_left-navbar.scss */
 .title_main-nav {
   padding: 8px 0;
   height: 56px;
   border-bottom: 2px solid #000;
 }
-.active {
 
-    background-color: black;
+/* line 51, ../sass/global/_left-navbar.scss */
+.active {
+  background-color: #000;
 }
 
 /* Sass Document */
@@ -257,6 +414,12 @@ footer .text-left {
 
 /* Scss Document */
 /* line 3, ../sass/global/_template-thumbs.scss */
+.thumb-row {
+  /* float: left;*/
+  width: 100%;
+}
+
+/* line 7, ../sass/global/_template-thumbs.scss */
 .thumb-block {
   width: 100%;
   border: 1px solid #000;
@@ -264,7 +427,7 @@ footer .text-left {
   float: left;
   /*margin: 5px 8px;*/
 }
-/* line 10, ../sass/global/_template-thumbs.scss */
+/* line 14, ../sass/global/_template-thumbs.scss */
 .thumb-block .title {
   width: 100%;
   font-size: 1.3em;
@@ -272,54 +435,60 @@ footer .text-left {
   padding: 5px 0;
 }
 
-/* line 17, ../sass/global/_template-thumbs.scss */
+/* line 21, ../sass/global/_template-thumbs.scss */
 .thumb-innr {
   padding: 10px 15px 10px;
   float: left;
   width: 100%;
 }
 
-/* line 22, ../sass/global/_template-thumbs.scss */
+/* line 26, ../sass/global/_template-thumbs.scss */
 .thumb-img {
-  background-image: url(../../images/img_1.gif);
-  background-repeat: no-repeat;
   height: 280px;
-  background-size: 100% auto;
-  background-position: center 0;
+  /*	background-image: url(../../images/img_1.gif);
+  	background-repeat: no-repeat;
+  	background-size: 100% auto;
+    background-position: center 0;*/
   border-bottom: 1px solid #000;
+  overflow: hidden;
+}
+/* line 35, ../sass/global/_template-thumbs.scss */
+.thumb-img img {
+  width: 100%;
+  height: auto;
 }
 
-/* line 30, ../sass/global/_template-thumbs.scss */
+/* line 40, ../sass/global/_template-thumbs.scss */
 .thumb-desc {
   font-size: 0.9em;
 }
 
-/* line 33, ../sass/global/_template-thumbs.scss */
+/* line 43, ../sass/global/_template-thumbs.scss */
 .thumb-info {
   width: 100%;
   float: left;
   padding: 5px 0;
 }
-/* line 38, ../sass/global/_template-thumbs.scss */
+/* line 48, ../sass/global/_template-thumbs.scss */
 .thumb-info .info-text-size, .thumb-info .revision, .thumb-info .age {
   font-size: 0.9em;
 }
-/* line 41, ../sass/global/_template-thumbs.scss */
+/* line 51, ../sass/global/_template-thumbs.scss */
 .thumb-info .revision {
   float: left;
 }
-/* line 45, ../sass/global/_template-thumbs.scss */
+/* line 55, ../sass/global/_template-thumbs.scss */
 .thumb-info .age {
   float: right;
 }
 
-/* line 50, ../sass/global/_template-thumbs.scss */
+/* line 60, ../sass/global/_template-thumbs.scss */
 .bg-text-color, .btn_view-more a:hover, .btn_load-templates a:hover {
   color: #8b8a8a;
   background-color: #eee;
 }
 
-/* line 54, ../sass/global/_template-thumbs.scss */
+/* line 64, ../sass/global/_template-thumbs.scss */
 .btn_view-more {
   width: 100%;
   display: block;
@@ -328,7 +497,7 @@ footer .text-left {
   text-align: center;
   font-size: 0.9em;
 }
-/* line 62, ../sass/global/_template-thumbs.scss */
+/* line 72, ../sass/global/_template-thumbs.scss */
 .btn_view-more a {
   padding: 5px 10px;
   border: 1px solid #000;
@@ -336,21 +505,21 @@ footer .text-left {
   text-decoration: none;
 }
 
-/* line 73, ../sass/global/_template-thumbs.scss */
+/* line 83, ../sass/global/_template-thumbs.scss */
 .thumb-stats-view {
   border-top: 1px solid #000;
   width: 100%;
   float: left;
 }
 
-/* line 78, ../sass/global/_template-thumbs.scss */
+/* line 88, ../sass/global/_template-thumbs.scss */
 .thumb-graph-wrap {
   float: left;
   width: 100%;
   padding: 5px 0 15px;
 }
 
-/* line 83, ../sass/global/_template-thumbs.scss */
+/* line 93, ../sass/global/_template-thumbs.scss */
 .thumb-graph {
   width: 45%;
   float: left;
@@ -359,18 +528,18 @@ footer .text-left {
   background-repeat: no-repeat;
 }
 
-/* line 90, ../sass/global/_template-thumbs.scss */
+/* line 100, ../sass/global/_template-thumbs.scss */
 .thumb-graph-details {
   width: 45%;
   float: right;
 }
-/* line 94, ../sass/global/_template-thumbs.scss */
+/* line 104, ../sass/global/_template-thumbs.scss */
 .thumb-graph-details p {
   font-size: 0.9em;
   margin: 5px 0;
 }
 
-/* line 99, ../sass/global/_template-thumbs.scss */
+/* line 109, ../sass/global/_template-thumbs.scss */
 .thumb-category {
   width: 100%;
   border-bottom: 1px dashed #000;
@@ -378,23 +547,23 @@ footer .text-left {
   margin-bottom: 10px;
   float: left;
 }
-/* line 106, ../sass/global/_template-thumbs.scss */
+/* line 116, ../sass/global/_template-thumbs.scss */
 .thumb-category .thumb-category-title {
   font-size: 1.4em;
   float: left;
 }
-/* line 110, ../sass/global/_template-thumbs.scss */
+/* line 120, ../sass/global/_template-thumbs.scss */
 .thumb-category .right-elements {
   float: right;
   width: 160px;
 }
 
-/* line 116, ../sass/global/_template-thumbs.scss */
+/* line 126, ../sass/global/_template-thumbs.scss */
 .content-padding .thumb-category:first-child {
   padding: 10px 0;
 }
 
-/* line 121, ../sass/global/_template-thumbs.scss */
+/* line 131, ../sass/global/_template-thumbs.scss */
 .btn_view-all {
   width: 50%;
   display: block;
@@ -403,162 +572,77 @@ footer .text-left {
   text-align: center;
   font-size: 0.9em;
 }
-/* line 129, ../sass/global/_template-thumbs.scss */
+/* line 139, ../sass/global/_template-thumbs.scss */
 .btn_view-all a {
   text-decoration: underline;
 }
-/* line 132, ../sass/global/_template-thumbs.scss */
+/* line 142, ../sass/global/_template-thumbs.scss */
 .btn_view-all a:hover {
   text-decoration: none;
 }
 
-/* line 137, ../sass/global/_template-thumbs.scss */
+/* line 147, ../sass/global/_template-thumbs.scss */
 .btn_load-templates {
   width: 400px;
   margin: 20px auto 10px;
   text-align: center;
   border: 1px solid #000;
 }
-/* line 143, ../sass/global/_template-thumbs.scss */
+/* line 153, ../sass/global/_template-thumbs.scss */
 .btn_load-templates a {
   padding: 8px 0;
   display: block;
 }
-/* line 147, ../sass/global/_template-thumbs.scss */
+/* line 157, ../sass/global/_template-thumbs.scss */
 .btn_load-templates a:hover {
   text-decoration: none;
 }
 
+/*==================== multi tabs css ===================*/
+/* line 166, ../sass/global/_template-thumbs.scss */
+.nav-pills > li {
+  border: 1px solid #000;
+}
+/* line 169, ../sass/global/_template-thumbs.scss */
+.nav-pills > li + li {
+  margin-left: -1px;
+}
+/* line 174, ../sass/global/_template-thumbs.scss */
+.nav-pills > li > a {
+  background-color: #d6d6d6;
+  border-radius: 0;
+  color: #000;
+  padding: 6px 35px;
+}
+/* line 182, ../sass/global/_template-thumbs.scss */
+.nav-pills > li.active a {
+  background-color: #fff;
+  color: #000;
+}
+/* line 185, ../sass/global/_template-thumbs.scss */
+.nav-pills > li.active a:hover {
+  background-color: #ecebeb;
+  color: #000;
+}
+/* line 189, ../sass/global/_template-thumbs.scss */
+.nav-pills > li.active a:visited {
+  background-color: #ecebeb;
+  color: #000;
+}
+
+/* line 196, ../sass/global/_template-thumbs.scss */
+.tab-content {
+  border: 1px solid #000;
+}
+/* line 199, ../sass/global/_template-thumbs.scss */
+.tab-content > .tab-pane {
+  padding: 40px 20px 10px;
+}
+
+/* line 203, ../sass/global/_template-thumbs.scss */
+.template-details select {
+  width: 25%;
+}
+
 /* Scss Document */
-/* line 5, ../sass/global/_button.scss */
-.switch {
-  position: relative;
-  display: inline-block;
-  vertical-align: top;
-  width: 56px;
-  height: 20px;
-  padding: 3px;
-  background-color: white;
-  border-radius: 18px;
-  box-shadow: inset 0 -1px white, inset 0 1px 1px rgba(0, 0, 0, 0.05);
-  cursor: pointer;
-  background-image: -webkit-linear-gradient(top, #eee, white 25px);
-  background-image: -moz-linear-gradient(top, #eee, white 25px);
-  background-image: -o-linear-gradient(top, #eee, white 25px);
-  background-image: linear-gradient(to bottom, #eee, white 25px);
-  float: right;
-}
-
-/* line 21, ../sass/global/_button.scss */
-.switch-input {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-}
-
-/* line 28, ../sass/global/_button.scss */
-.switch-label {
-  position: relative;
-  display: block;
-  height: inherit;
-  font-size: 10px;
-  text-transform: uppercase;
-  background: #eceeef;
-  border-radius: inherit;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.15);
-  -webkit-transition: 0.15s ease-out;
-  -moz-transition: 0.15s ease-out;
-  -o-transition: 0.15s ease-out;
-  transition: 0.15s ease-out;
-  -webkit-transition-property: opacity background;
-  -moz-transition-property: opacity background;
-  -o-transition-property: opacity background;
-  transition-property: opacity background;
-}
-/* line 41, ../sass/global/_button.scss */
-.switch-label:before, .switch-label:after {
-  position: absolute;
-  top: 50%;
-  margin-top: -.5em;
-  line-height: 1;
-  -webkit-transition: inherit;
-  -moz-transition: inherit;
-  -o-transition: inherit;
-  transition: inherit;
-}
-/* line 49, ../sass/global/_button.scss */
-.switch-label:before {
-  content: attr(data-off);
-  right: 11px;
-  color: #aaa;
-  text-shadow: 0 1px rgba(255, 255, 255, 0.5);
-}
-/* line 56, ../sass/global/_button.scss */
-.switch-label:after {
-  content: attr(data-on);
-  left: 11px;
-  color: white;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.2);
-  opacity: 0;
-}
-/* line 64, ../sass/global/_button.scss */
-.switch-input:checked ~ .switch-label {
-  background: #47a8d8;
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 3px rgba(0, 0, 0, 0.2);
-}
-/* line 69, ../sass/global/_button.scss */
-.switch-input:checked ~ .switch-label:before {
-  opacity: 0;
-}
-/* line 70, ../sass/global/_button.scss */
-.switch-input:checked ~ .switch-label:after {
-  opacity: 1;
-}
-
-/* line 74, ../sass/global/_button.scss */
-.switch-handle {
-  position: absolute;
-  top: 4px;
-  left: 4px;
-  width: 18px;
-  height: 18px;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
-  background-image: -webkit-linear-gradient(top, white 40%, #f0f0f0);
-  background-image: -moz-linear-gradient(top, white 40%, #f0f0f0);
-  background-image: -o-linear-gradient(top, white 40%, #f0f0f0);
-  background-image: linear-gradient(to bottom, white 40%, #f0f0f0);
-  -webkit-transition: left 0.15s ease-out;
-  -moz-transition: left 0.15s ease-out;
-  -o-transition: left 0.15s ease-out;
-  transition: left 0.15s ease-out;
-}
-/* line 86, ../sass/global/_button.scss */
-.switch-handle:before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -6px 0 0 -6px;
-  width: 12px;
-  height: 12px;
-  background: #f9f9f9;
-  border-radius: 6px;
-  box-shadow: inset 0 1px rgba(0, 0, 0, 0.02);
-  background-image: -webkit-linear-gradient(top, #eee, white);
-  background-image: -moz-linear-gradient(top, #eee, white);
-  background-image: -o-linear-gradient(top, #eee, white);
-  background-image: linear-gradient(to bottom, #eee, white);
-}
-/* line 100, ../sass/global/_button.scss */
-.switch-input:checked ~ .switch-handle {
-  left: 40px;
-  box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
-}
-
-/* line 106, ../sass/global/_button.scss */
-.switch-green > .switch-input:checked ~ .switch-label {
-  background: #4fb845;
-}
+/* Sass Document */
