@@ -388,7 +388,7 @@ header {
 }
 
 /* line 51, ../sass/global/_left-navbar.scss */
-.active {
+.btn_active {
   background-color: #000;
 }
 
