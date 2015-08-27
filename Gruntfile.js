@@ -63,7 +63,7 @@ module.exports = function (grunt) {
                 }
             },
             compass: {
-                files: ['app/styles/sass/*.scss'],
+                files: ['app/styles/sass/main.scss' , 'app/**/*.scss'],
                 tasks: ['compass']
             }
         }, connect: {
