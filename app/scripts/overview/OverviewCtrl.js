@@ -18,9 +18,7 @@
 			console.log("DATA ----------------- ",$scope.templates);
 	    });
 
-		$scope.usercreated = 'usercreated';
-		$scope.featured = 'featured';
-		$scope.music = 'music';
+
 		$scope.isHidden = false;    
 		$scope.repeatRow = [{"name" : "usercreated" },{"name" : "featured"},{"name" : "music"}];  
     }]);
