@@ -1,0 +1,21 @@
+/* Scss Document */
+
+
+.upload-wrapper{
+
+    margin: 2px;
+    width: 100%;
+    float: left;
+    padding: 10px;
+}
+.upload-inner{
+    width: 60%;
+    float: left;
+    border: 1px solid #000;
+		padding:3% 15% 20px 30px;
+		
+		.thumb-category-title{
+		    text-align:center;
+		    margin-bottom: 30px;  	
+			}
+}
