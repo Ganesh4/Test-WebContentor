@@ -16,7 +16,7 @@
     <!-- thumb-category -->
     <div class="row" ng-hide = "isHidden">
         <div class="col-lg-4" ng-repeat ='template in templates | filter : row.name'>
-            <div class="thumb-block">
+            <div class="thumb-block" ng-mouseover="onMouseOver($event)">
                 <div class="thumb-img">
                 	<img ng-src="{{template.screenshots}}">
               </div>
