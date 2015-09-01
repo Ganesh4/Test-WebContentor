@@ -15,24 +15,26 @@
     $urlRouterProvider.otherwise("/home/overview");
     // Now set up the states
     $stateProvider.state('home', {
-        url: "/home",
-        templateUrl:"views/overview/home.html"
-
+        url: '/home',
+        templateUrl:'views/overview/home.html'
     }).state('home.overview', {
-        url: "/overview",
+        url: '/overview',
         templateUrl:"views/overview/overview.html",
         controller:'OverviewCtrl'
+    }).state('home.dashboard', {
+        url: '/dashboard',
+        templateUrl:'views/overview/overview.html'
+    });
 
-    }).state('home.design', {
-        url: "/design",
-        templateUrl:"views/design/DesignUpload.html",
-        
-
-    }).state('home.detail', {
-        url: "/detail",
-        templateUrl:"views/design/DesignDetail.html",
-        
-
+    $stateProvider.state('home.design', {
+        url: '/design',
+        template:'<ui-view></ui-view>'
+    }).state('home.design.detail', {
+        url:'/detail',
+        templateUrl:'views/design/DesignDetail.html'
+    }).state('home.design.upload', {
+        url:'/upload',
+        templateUrl:'views/design/DesignUpload.html'
     });
 }]);
 
