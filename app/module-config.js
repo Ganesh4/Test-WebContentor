@@ -10,10 +10,10 @@
 
 	angular.module('common',['vendor']);
 
-	angular.module('overview',['common']);
+    angular.module('overview',['common']);
+    angular.module('design',['common']);
 
-	angular.module('design',['vendor']);
+ 	angular.module('microsite',['overview','common','design']);
 
-	angular.module('microsite',['overview','common']);
 
 })(angular);
