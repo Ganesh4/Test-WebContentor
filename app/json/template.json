@@ -77,22 +77,6 @@
 	"title" : "Test music",
 	"revision" : "2",
 	"age"  : "12/12/2015",
-	"category": "Music"
-
-},{
-	"id" : "11",
-	"screenshots" : "images/img_1.gif",
-	"title" : "Test music",
-	"revision" : "2",
-	"age"  : "12/12/2015",
-	"category": "Music"
-
-},{
-	"id" : "12",
-	"screenshots" : "images/img_1.gif",
-	"title" : "Test music",
-	"revision" : "2",
-	"age"  : "12/12/2015",
-	"category": "Music"
+	"category": "SASAA"
 
 }]
