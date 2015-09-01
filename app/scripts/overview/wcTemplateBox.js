@@ -11,11 +11,6 @@
             restrict:'AE',
             templateUrl:'./views/overview/wcTemplateBox.html',
             controller:('TemplateCtrl',['$scope'],function($scope){
-                        
-                      
-
-
-
                       
             })
         }

@@ -20,7 +20,7 @@
 
 
 		$scope.isHidden = false;    
-		$scope.repeatRow = [{"name" : "usercreated" },{"name" : "featured"},{"name" : "music"}];  
+		$scope.repeatRow = [{"name" : "User Created" },{"name" : "Featured"},{"name" : "Music"}];  
     }]);
 
 })(angular);

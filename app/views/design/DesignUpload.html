@@ -1,0 +1,59 @@
+
+   <div class="upload-inner">
+   <h3 class="thumb-category-title">Upload Template</h3>
+  <form class="form-horizontal" role="form">     
+        <div class="form-group">
+          <label class="control-label col-sm-2" for="Name">Name:</label>
+          <div class="col-sm-10">
+             <input type="email" class="form-control" id="email" placeholder="Name"> 
+              
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="Description">Category:</label>
+            <div class="col-sm-10">
+             <!-- <input type="email" class="form-control" id="email" placeholder="Enter email"> -->
+                  <select class="form-control">
+                      <option>Most Viewed</option>
+                      <option>Music</option>                 
+                  </select>   
+                
+              </div>
+         </div>
+        
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="Description">Template Details:</label>
+            <div class="col-sm-10">
+             <!-- <input type="email" class="form-control" id="email" placeholder="Enter email"> -->
+                <textarea class="form-control" rows="5" id="comment" placeholder=""></textarea>
+              </div>
+         </div>
+         
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="Screen Shot">Screen Shot:</label>
+            <div class="col-sm-10">
+              <label for="exampleInputFile">File input</label>
+              <span file-model="screenShot"></span>
+              </div>
+         </div>
+
+         <div class="form-group">
+            <label class="control-label col-sm-2" for="Files">Files:</label>
+            <div class="col-sm-10">
+                <label for="exampleInputFile">File input</label>
+                <span wc-file-upload-model="screenShot"></span>
+                
+              </div>
+         </div>
+         
+          <div class="form-group">        
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-primary">Upload</button>
+                    <button type="button" class="btn">Cancel</button>
+                </div>
+
+          </div>
+ </form>
+        
+   </div>

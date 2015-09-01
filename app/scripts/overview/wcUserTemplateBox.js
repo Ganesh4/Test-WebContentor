@@ -9,7 +9,7 @@
         return{
 
             restrict:'AE',
-            templateUrl:'./views/overview/wcUserTemplateBox.html',
+            templateUrl:'./views/overview/UserTemplateBox.html',
             controller:('UserTemplateBOxCtrl',['$scope'],function($scope){
                         
                       
