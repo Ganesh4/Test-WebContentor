@@ -23,9 +23,15 @@
         templateUrl:"views/overview/overview.html",
         controller:'OverviewCtrl'
 
-    }).state('home.dashboard', {
-        url: "/dashboard",
-        templateUrl:"views/overview/overview.html"
+    }).state('home.design', {
+        url: "/design",
+        templateUrl:"views/design/DesignUpload.html",
+        
+
+    }).state('home.detail', {
+        url: "/detail",
+        templateUrl:"views/design/DesignDetail.html",
+        
 
     });
 }]);
