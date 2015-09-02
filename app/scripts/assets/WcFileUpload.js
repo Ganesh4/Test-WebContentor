@@ -4,22 +4,22 @@
 (function(angular){
     angular.module('design').directive('wcFileUploadModel',['$parse',function($parse){
         return{
-            restrict:'EA',
+            restrict:'AE',
             scope:{
-                name : '='
+                name : '&'
             },
-            templateUrl: '/views/assets/fileInputBox.html'
+            templateUrl: './views/assets/fileInputBox.html',
             link: function(scope, element, attrs) {
-                var model = $parse(attrs.fileModel);
+                var model = attrs.name;
                 element.bind('change', function(){
                 var files = event.target.files;
-              
+                console.log('Name ============  ', model);
                 //iterate files since 'multiple' may be specified on the element
                 for (var i = 0;i<files.length;i++) {
                     //emit event upward
                     var fileData = {};
-                    fileData[name] = files[i];
-                    console.log('Files ------------  ', name);
+                    fileData[model] = files[i];
+                    console.log('Files ------------  ', model);
                     scope.$emit("fileSelected", fileData);
                 }   
                 });
