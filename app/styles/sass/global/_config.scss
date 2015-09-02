@@ -20,3 +20,18 @@ h2.common-headng{
 	 clear: both;
 	 height: 0;	
 }
+.content-padding {
+  padding: 10px 20px;
+  width: 100%;
+  float: left;
+}
+.content-main {
+  float: right;
+  width: 85%;
+  /*  background-color:#ccc;*/
+  border-top: 2px solid #000;
+}
+.wrap-box {
+  width: 100%;
+  float: left;
+}
