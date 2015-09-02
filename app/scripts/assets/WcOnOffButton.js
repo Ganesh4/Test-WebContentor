@@ -15,7 +15,10 @@
 				$scope.showHide = function () {
 					//If DIV is hidden it will be visible and vice versa.
 					$scope.isHidden = $scope.isHidden ? false : true;
+                    
+                    console.log('$scope.isHidden',$scope.isHidden);
 				}
         	}
     	}
 })})(angular);
+

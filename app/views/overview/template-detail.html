@@ -149,6 +149,40 @@
     <div id="menu1" class="tab-pane fade">
       <h3>Menu 1</h3>
       <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      
+      <!-- table data -->
+ <table class="table">
+    <thead>
+      <tr>
+        <th>Revision Id</th>
+        <th>Message</th>
+        <th>User</th>
+        <th>Date</th>
+        <th>Date</th>
+        <th>Date</th>        
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td>
+        <td>Doe</td>
+        <td>john@example.com</td>
+      </tr>
+      <tr>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>mary@example.com</td>
+      </tr>
+      <tr>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>july@example.com</td>
+      </tr>
+    </tbody>
+  </table>
+
+      <!-- table end -->
+      
     </div>
     <div id="menu2" class="tab-pane fade">
       <h3>Menu 2</h3>
@@ -168,5 +202,17 @@
     <div class="text-right">Crafted by Microsite</div>
     <div class="text-left">One micro 1.1</div>    
 </footer>
+
+<script>
+    $(function () {
+        var $table = $('#table-transform');
+        $('#transform').click(function () {
+            $table.bootstrapTable();
+        });
+        $('#destroy').click(function () {
+            $table.bootstrapTable('destroy');
+        });
+    });
+</script>
 </body>
 </html>

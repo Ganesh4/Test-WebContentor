@@ -10,21 +10,21 @@
 }
 header{
 	width:85%;
-  border-top:2px solid #000;
-  border-bottom:2px solid #000;
 	float:right;
 	
 }
 .padding-allside{
-  padding:9px 10px 8px;	
+  padding:9px 20px 8px;	
 }
 .header-main{
 	 @extend .padding-allside;
 	 clear:both;
+	 min-height:60px;
+	 border-top:2px solid #000;
 }
 .social-icon-tray{
-	 width:200px;
 	 float:right;  
+	 
 		a{
 			display:inline-block; 
 			margin-right: 5px;
@@ -52,12 +52,14 @@ header{
 .header-sub{
   @extend .padding-allside;
   border-top:2px solid #000;
-	
+/*  border-bottom:2px solid #000;*/	
+  min-height: 60px;
 }
 .common-headng-wrap{
 	float: left;
-	/* width: 200px; */
-	padding: 0 0 0 19px;	
+	/* width: 200px; 
+	padding: 0 0 0 19px;*/	
+  margin-top: 10px;
 	
 	h2.common-headng{
 	    padding:0 0;
@@ -70,13 +72,24 @@ header{
 	float:left;
 	background-repeat: no-repeat;
 	background-size: 100%;
-  margin: 9px 40px 0 20px;
+  margin: 9px 40px 0 0px;
 }
 .shortout-wrap{
-  width:50%;	
 	float:right;
 	
 	select{
 	  padding:2px 5px;  	
+    width: 130px;
+	}
+	.line-break{
+		font-size: 1.7em;
+		color: #8b8a8a;
+		/* margin-top: 0px; */
+		display: inline-block;
+		margin-right: 3px;	
+ 	}
+	label {
+		font-size: 0.9em;
+		font-weight:normal;
 	}
 }
