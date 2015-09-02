@@ -2,10 +2,8 @@
  * Created by subhash on 25/08/15.
  */
 'use strict';
-
 (function(angular){
-
-    angular.module('overview').directive('wcOnOffButton',function(){
+    angular.module('microsite').directive('wcOnOffButton',function(){
         return{
             restrict:'AE',
             scope:{
