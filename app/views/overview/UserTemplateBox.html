@@ -18,6 +18,9 @@
         <div class="col-lg-4" ng-repeat ='template in templates | filter : row.name'>
             <div class="thumb-block" ng-mouseover="onMouseOver($event)">
                 <div class="thumb-img">
+                  <span class="btn_template-img-over">
+                  <a href="#">Preview</a>
+                  <a href="#">Edit</a></span> 
                 	<img ng-src="{{template.screenshots}}">
               </div>
                   
