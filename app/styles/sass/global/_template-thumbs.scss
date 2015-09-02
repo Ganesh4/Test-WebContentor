@@ -31,10 +31,21 @@
   background-position: center 0;*/
   border-bottom: 1px solid #000;
 	overflow:hidden;
-	
+	position:relative;
+  cursor: pointer;
+	  
+	  &:hover .btn_template-img-over{
+		   	display:block;
+				background:rgba(255, 255, 255, .7);
+		 }
+	 
 		img{
 			width: 100%;
 			height: auto;	
+			
+		   /* &:hover{
+					opacity: 0.5;
+		     }	*/
 			}
 }
 .thumb-desc{
@@ -202,4 +213,31 @@
 }
 .template-details select{
   width:25%;	
+}
+.btn_template-img-over{
+    width: 100%;
+    display: none;
+    float: left;
+    padding: 5px 0;
+    text-align: center;
+    font-size: 0.9em;
+    position: absolute;	
+    /*margin-top: 26%;*/
+    height: 100%;
+    padding-top: 30%;
+		
+		a{
+			padding: 5px 10px;
+      border: 1px solid #000;
+      color: #000;
+   		text-decoration:none;
+      display: block;
+			width: 25%;
+			margin: 0 auto 10px;
+			background-color:#d6d6d6;
+		
+			&:hover{
+					@extend .bg-text-color;    		
+			}
+		 }
 }
