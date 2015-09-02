@@ -12,8 +12,8 @@
 
 	angular.module('overview',['common']);
 
-	angular.module('design',['vendor']);
+	angular.module('design',['common']);
 
-	angular.module('microsite',['overview','common']);
+	angular.module('microsite',['overview','common','design']);
 
 })(angular);

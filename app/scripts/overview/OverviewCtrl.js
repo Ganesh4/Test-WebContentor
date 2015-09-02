@@ -1,8 +1,8 @@
-
+/**
+*
+**/
 'use strict';
-
 (function(angular){
-
   angular.module('overview').controller('OverviewCtrl',
     [
 		'$scope',
@@ -17,12 +17,9 @@
 			$scope.templates = result;	
 			console.log("DATA ----------------- ",$scope.templates);
 	    });
-
-
 		$scope.isHidden = false;    
 		$scope.repeatRow = [{"name" : "User Created" },{"name" : "Featured"},{"name" : "Music"}];  
     }]);
-
 })(angular);
 
 
