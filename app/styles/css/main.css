@@ -220,6 +220,12 @@ header {
   min-height: 60px;
 }
 
+/* line 53, ../sass/global/_left-navbar.scss */
+.btn_active {
+  background-color: #000;
+  color: #fff;
+}
+
 /* Scss Document */
 /* Sass Document */
 /* line 3, ../sass/global/_footer.scss */
