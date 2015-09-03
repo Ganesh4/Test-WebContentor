@@ -11,6 +11,10 @@
 	float: left;
 	/*margin: 5px 8px;*/ 	
 	
+	&:hover .btn_template-img-over{
+		   	display:block;
+				background:rgba(255, 255, 255, .7);
+		 }
 	.title{
 		width: 100%;
 		font-size: 1.3em;
@@ -34,10 +38,7 @@
 	position:relative;
   cursor: pointer;
 	  
-	  &:hover .btn_template-img-over{
-		   	display:block;
-				background:rgba(255, 255, 255, .7);
-		 }
+
 	 
 		img{
 			width: 100%;
