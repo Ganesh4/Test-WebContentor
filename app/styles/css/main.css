@@ -406,6 +406,11 @@ footer .text-left {
   /*margin: 5px 8px;*/
 }
 /* line 14, ../sass/global/_template-thumbs.scss */
+.thumb-block:hover .btn_template-img-over {
+  display: block;
+  background: rgba(255, 255, 255, 0.7);
+}
+/* line 18, ../sass/global/_template-thumbs.scss */
 .thumb-block .title {
   width: 100%;
   font-size: 1.3em;
@@ -413,14 +418,14 @@ footer .text-left {
   padding: 5px 0;
 }
 
-/* line 21, ../sass/global/_template-thumbs.scss */
+/* line 25, ../sass/global/_template-thumbs.scss */
 .thumb-innr {
   padding: 10px 15px 10px;
   float: left;
   width: 100%;
 }
 
-/* line 26, ../sass/global/_template-thumbs.scss */
+/* line 30, ../sass/global/_template-thumbs.scss */
 .thumb-img {
   height: 280px;
   /*	background-image: url(../../images/img_1.gif);
@@ -432,12 +437,7 @@ footer .text-left {
   position: relative;
   cursor: pointer;
 }
-/* line 37, ../sass/global/_template-thumbs.scss */
-.thumb-img:hover .btn_template-img-over {
-  display: block;
-  background: rgba(255, 255, 255, 0.7);
-}
-/* line 42, ../sass/global/_template-thumbs.scss */
+/* line 43, ../sass/global/_template-thumbs.scss */
 .thumb-img img {
   width: 100%;
   height: auto;
@@ -446,37 +446,37 @@ footer .text-left {
      }	*/
 }
 
-/* line 51, ../sass/global/_template-thumbs.scss */
+/* line 52, ../sass/global/_template-thumbs.scss */
 .thumb-desc {
   font-size: 0.9em;
 }
 
-/* line 54, ../sass/global/_template-thumbs.scss */
+/* line 55, ../sass/global/_template-thumbs.scss */
 .thumb-info {
   width: 100%;
   float: left;
   padding: 5px 0;
 }
-/* line 59, ../sass/global/_template-thumbs.scss */
+/* line 60, ../sass/global/_template-thumbs.scss */
 .thumb-info .info-text-size, .thumb-info .revision, .thumb-info .age {
   font-size: 0.9em;
 }
-/* line 62, ../sass/global/_template-thumbs.scss */
+/* line 63, ../sass/global/_template-thumbs.scss */
 .thumb-info .revision {
   float: left;
 }
-/* line 66, ../sass/global/_template-thumbs.scss */
+/* line 67, ../sass/global/_template-thumbs.scss */
 .thumb-info .age {
   float: right;
 }
 
-/* line 71, ../sass/global/_template-thumbs.scss */
+/* line 72, ../sass/global/_template-thumbs.scss */
 .bg-text-color, .btn_view-more a:hover, .btn_load-templates a:hover, .btn_template-img-over a:hover {
   color: #8b8a8a;
   background-color: #eee;
 }
 
-/* line 75, ../sass/global/_template-thumbs.scss */
+/* line 76, ../sass/global/_template-thumbs.scss */
 .btn_view-more {
   width: 100%;
   display: block;
@@ -485,7 +485,7 @@ footer .text-left {
   text-align: center;
   font-size: 0.9em;
 }
-/* line 83, ../sass/global/_template-thumbs.scss */
+/* line 84, ../sass/global/_template-thumbs.scss */
 .btn_view-more a {
   padding: 5px 10px;
   border: 1px solid #000;
@@ -493,21 +493,21 @@ footer .text-left {
   text-decoration: none;
 }
 
-/* line 94, ../sass/global/_template-thumbs.scss */
+/* line 95, ../sass/global/_template-thumbs.scss */
 .thumb-stats-view {
   border-top: 1px solid #000;
   width: 100%;
   float: left;
 }
 
-/* line 99, ../sass/global/_template-thumbs.scss */
+/* line 100, ../sass/global/_template-thumbs.scss */
 .thumb-graph-wrap {
   float: left;
   width: 100%;
   padding: 5px 0 15px;
 }
 
-/* line 104, ../sass/global/_template-thumbs.scss */
+/* line 105, ../sass/global/_template-thumbs.scss */
 .thumb-graph {
   width: 45%;
   float: left;
@@ -516,18 +516,18 @@ footer .text-left {
   background-repeat: no-repeat;
 }
 
-/* line 111, ../sass/global/_template-thumbs.scss */
+/* line 112, ../sass/global/_template-thumbs.scss */
 .thumb-graph-details {
   width: 45%;
   float: right;
 }
-/* line 115, ../sass/global/_template-thumbs.scss */
+/* line 116, ../sass/global/_template-thumbs.scss */
 .thumb-graph-details p {
   font-size: 0.9em;
   margin: 5px 0;
 }
 
-/* line 120, ../sass/global/_template-thumbs.scss */
+/* line 121, ../sass/global/_template-thumbs.scss */
 .thumb-category {
   width: 100%;
   border-bottom: 1px dashed #000;
@@ -535,23 +535,23 @@ footer .text-left {
   margin-bottom: 10px;
   float: left;
 }
-/* line 127, ../sass/global/_template-thumbs.scss */
+/* line 128, ../sass/global/_template-thumbs.scss */
 .thumb-category .thumb-category-title {
   font-size: 1.4em;
   float: left;
 }
-/* line 131, ../sass/global/_template-thumbs.scss */
+/* line 132, ../sass/global/_template-thumbs.scss */
 .thumb-category .right-elements {
   float: right;
   width: 160px;
 }
 
-/* line 137, ../sass/global/_template-thumbs.scss */
+/* line 138, ../sass/global/_template-thumbs.scss */
 .content-padding .thumb-category:first-child {
   padding: 10px 0;
 }
 
-/* line 142, ../sass/global/_template-thumbs.scss */
+/* line 143, ../sass/global/_template-thumbs.scss */
 .btn_view-all {
   width: 50%;
   display: block;
@@ -560,79 +560,79 @@ footer .text-left {
   text-align: center;
   font-size: 0.9em;
 }
-/* line 150, ../sass/global/_template-thumbs.scss */
+/* line 151, ../sass/global/_template-thumbs.scss */
 .btn_view-all a {
   text-decoration: underline;
 }
-/* line 153, ../sass/global/_template-thumbs.scss */
+/* line 154, ../sass/global/_template-thumbs.scss */
 .btn_view-all a:hover {
   text-decoration: none;
 }
 
-/* line 158, ../sass/global/_template-thumbs.scss */
+/* line 159, ../sass/global/_template-thumbs.scss */
 .btn_load-templates {
   width: 400px;
   margin: 20px auto 10px;
   text-align: center;
   border: 1px solid #000;
 }
-/* line 164, ../sass/global/_template-thumbs.scss */
+/* line 165, ../sass/global/_template-thumbs.scss */
 .btn_load-templates a {
   padding: 8px 0;
   display: block;
 }
-/* line 168, ../sass/global/_template-thumbs.scss */
+/* line 169, ../sass/global/_template-thumbs.scss */
 .btn_load-templates a:hover {
   text-decoration: none;
 }
 
 /*==================== multi tabs css ===================*/
-/* line 177, ../sass/global/_template-thumbs.scss */
+/* line 178, ../sass/global/_template-thumbs.scss */
 .nav-pills > li {
   border: 1px solid #000;
 }
-/* line 180, ../sass/global/_template-thumbs.scss */
+/* line 181, ../sass/global/_template-thumbs.scss */
 .nav-pills > li + li {
   margin-left: -1px;
 }
-/* line 185, ../sass/global/_template-thumbs.scss */
+/* line 186, ../sass/global/_template-thumbs.scss */
 .nav-pills > li > a {
   background-color: #d6d6d6;
   border-radius: 0;
   color: #000;
   padding: 6px 35px;
 }
-/* line 193, ../sass/global/_template-thumbs.scss */
+/* line 194, ../sass/global/_template-thumbs.scss */
 .nav-pills > li.active a {
   background-color: #fff;
   color: #000;
 }
-/* line 196, ../sass/global/_template-thumbs.scss */
+/* line 197, ../sass/global/_template-thumbs.scss */
 .nav-pills > li.active a:hover {
   background-color: #ecebeb;
   color: #000;
 }
-/* line 200, ../sass/global/_template-thumbs.scss */
+/* line 201, ../sass/global/_template-thumbs.scss */
 .nav-pills > li.active a:visited {
   background-color: #ecebeb;
   color: #000;
 }
 
-/* line 207, ../sass/global/_template-thumbs.scss */
+/* line 208, ../sass/global/_template-thumbs.scss */
 .tab-content {
   border: 1px solid #000;
 }
-/* line 210, ../sass/global/_template-thumbs.scss */
+/* line 211, ../sass/global/_template-thumbs.scss */
 .tab-content > .tab-pane {
   padding: 40px 20px 10px;
 }
 
-/* line 214, ../sass/global/_template-thumbs.scss */
+/* line 215, ../sass/global/_template-thumbs.scss */
 .template-details select {
   width: 25%;
 }
 
-/* line 217, ../sass/global/_template-thumbs.scss */
+/* line 218, ../sass/global/_template-thumbs.scss */
 .btn_template-img-over {
   width: 100%;
   display: none;
@@ -645,7 +645,7 @@ footer .text-left {
   height: 100%;
   padding-top: 30%;
 }
-/* line 229, ../sass/global/_template-thumbs.scss */
+/* line 230, ../sass/global/_template-thumbs.scss */
 .btn_template-img-over a {
   padding: 5px 10px;
   border: 1px solid #000;
@@ -658,7 +658,7 @@ footer .text-left {
 }
 
 /*===================== css for tables ========================*/
-/* line 249, ../sass/global/_template-thumbs.scss */
+/* line 250, ../sass/global/_template-thumbs.scss */
 .revision table thead {
   background-color: #ccc;
 }
