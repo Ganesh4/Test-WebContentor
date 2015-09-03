@@ -146,19 +146,17 @@
         </form>
       
     </div>
-    <div id="menu1" class="tab-pane fade">
-      <h3>Menu 1</h3>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <div id="menu1" class="tab-pane fade revision">
       
       <!-- table data -->
- <table class="table">
+ <table class="table" >
     <thead>
       <tr>
         <th>Revision Id</th>
         <th>Message</th>
         <th>User</th>
         <th>Date</th>
-        <th>checkboxes</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
@@ -170,19 +168,23 @@
         <td><input type="checkbox" value=""></td>
       </tr>
       <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
+        <td>2</td>
+        <td>Second Commit</td>
+        <td>Admin</td>
+        <td>16 July 2015 16:00 </td>
+        <td><input type="checkbox" value=""></td>
       </tr>
     </tbody>
   </table>
+       <!-- table end -->
+       <form class="form-horizontal" role="form">  
+         <div class="form-group">        
 
-      <!-- table end -->
+                    <button type="submit" class="btn btn-primary">View Changes</button>
+                    <button type="button" class="btn">Revert</button>
+
+         </div>
+       </form>
       
     </div>
     <div id="menu2" class="tab-pane fade">
