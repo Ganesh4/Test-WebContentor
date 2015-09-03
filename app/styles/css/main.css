@@ -48,6 +48,13 @@ h2.common-headng {
   float: left;
 }
 
+/* line 38, ../sass/global/_config.scss */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 /* Scss Document */
 /* header specific css */
 /* line 11, ../sass/global/_header.scss */
@@ -650,6 +657,12 @@ footer .text-left {
   background-color: #d6d6d6;
 }
 
+/*===================== css for tables ========================*/
+/* line 249, ../sass/global/_template-thumbs.scss */
+.revision table thead {
+  background-color: #ccc;
+}
+
 /* Scss Document */
 /* line 4, ../sass/global/_upload-template.scss */
 .upload-wrapper {
@@ -670,4 +683,30 @@ footer .text-left {
 .upload-inner .thumb-category-title {
   text-align: center;
   margin-bottom: 30px;
+}
+
+/* Scss Document */
+/* line 3, ../sass/global/_left-navbar-edit.scss */
+.left-navbar-edit {
+  width: 10%;
+  float: left;
+  border-right: 2px solid #000;
+  height: 700px;
+}
+
+/* line 9, ../sass/global/_left-navbar-edit.scss */
+.left-navbar-edit-header {
+  width: 100%;
+  text-align: center;
+  padding: 6px 0;
+  border-top: 2px solid #000;
+  min-height: 60px;
+}
+
+/* line 22, ../sass/global/_left-navbar-edit.scss */
+.nav-main-edit a {
+  width: 100%;
+  display: block;
+  padding: 10px 20px;
+  text-align: center;
 }
