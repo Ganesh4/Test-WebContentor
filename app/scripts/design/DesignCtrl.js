@@ -19,7 +19,8 @@
 					//add the file object to the scope's files collection
 					$scope.files.push(args);
 		        });
-		    });	    
+		    });	 
+		      $scope.subheader.title = 'Upload Design';   
 	    }
     ]);
 })(angular);
