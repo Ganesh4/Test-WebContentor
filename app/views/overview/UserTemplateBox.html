@@ -7,7 +7,7 @@
        <h3 class="thumb-category-title">{{row.name}}</h3>
        <div class="right-elements">
           <div class="btn_view-all">
-            <a href="#">View all</a>
+            <a ui-sref="#">View all</a>
           </div>
               <wc-on-off-button is-hidden = "isHidden"></wc-on-off-button>
         </div> 
@@ -19,8 +19,8 @@
             <div class="thumb-block" ng-mouseover="onMouseOver($event)">
                 <div class="thumb-img">
                   <span class="btn_template-img-over">
-                  <a href="#">Preview</a>
-                  <a href="#">Edit</a></span> 
+                  <a ui-sref="#">Preview</a>
+                  <a ui-sref="#">Edit</a></span> 
                 	<img ng-src="{{template.screenshots}}">
               </div>
                   
@@ -31,7 +31,7 @@
                   <p class="thumb-desc">{{template.description}}
                   </p>
                   <div class="thumb-info">
-                    <span class="revision">Revision:6</span>
+                    <span class="revision">Revision:{{template.revision}}</span>
                     <span class="age">Age:5 days ago</span>
                   </div>
                   <span class="btn_view-more">
@@ -53,7 +53,7 @@
                   </div>
                </div>                  
               <span class="btn_view-more">
-                <a href="#">View More</a>
+                <a ui-sref="#">View More</a>
               </span>
           </div>
         </div>
