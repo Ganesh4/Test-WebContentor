@@ -38,46 +38,47 @@ h2.common-headng {
 .content-main {
   float: right;
   width: 85%;
-  /*  background-color:#ccc;
+  /*background-color:#ccc;
     border-top: 2px solid #000;*/
+  margin-top: 120px;
 }
 
-/* line 34, ../sass/global/_config.scss */
+/* line 35, ../sass/global/_config.scss */
 .wrap-box {
   width: 100%;
   float: left;
 }
 
-/* line 38, ../sass/global/_config.scss */
+/* line 39, ../sass/global/_config.scss */
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 43, ../sass/global/_config.scss */
+/* line 44, ../sass/global/_config.scss */
 a {
   color: #000000;
 }
-/* line 45, ../sass/global/_config.scss */
+/* line 46, ../sass/global/_config.scss */
 a:hover {
   text-decoration: none;
 }
 
-/* line 50, ../sass/global/_config.scss */
+/* line 51, ../sass/global/_config.scss */
 .btn-view {
   padding: 5px 10px;
   border: 1px solid #000;
   color: #000;
   text-decoration: none;
 }
-/* line 56, ../sass/global/_config.scss */
+/* line 57, ../sass/global/_config.scss */
 .btn-view:hover {
   color: #eee;
   background-color: #b8b8b8;
 }
 
-/* line 61, ../sass/global/_config.scss */
+/* line 62, ../sass/global/_config.scss */
 .btn-rect {
   padding: 5px 16px;
 }
@@ -88,50 +89,54 @@ a:hover {
 header {
   width: 85%;
   float: right;
+  position: fixed;
+  right: 0;
+  z-index: 9;
+  background-color: #fff;
 }
 
-/* line 15, ../sass/global/_header.scss */
+/* line 19, ../sass/global/_header.scss */
 .padding-allside, .header-main, .header-sub {
   padding: 9px 20px 8px;
 }
 
-/* line 18, ../sass/global/_header.scss */
+/* line 22, ../sass/global/_header.scss */
 .header-main {
   clear: both;
   min-height: 60px;
   border-top: 2px solid #000;
 }
 
-/* line 24, ../sass/global/_header.scss */
+/* line 28, ../sass/global/_header.scss */
 .header-right-col {
   float: right;
   margin-top: 8px;
 }
 
-/* line 28, ../sass/global/_header.scss */
+/* line 32, ../sass/global/_header.scss */
 .social-icon-tray {
   float: right;
 }
-/* line 31, ../sass/global/_header.scss */
+/* line 35, ../sass/global/_header.scss */
 .social-icon-tray a {
   display: inline-block;
   margin-right: 5px;
   padding: 5px;
 }
-/* line 36, ../sass/global/_header.scss */
+/* line 40, ../sass/global/_header.scss */
 .social-icon-tray .glyphicon {
   font-size: 1.8em;
   color: #000;
 }
 
-/* line 41, ../sass/global/_header.scss */
+/* line 45, ../sass/global/_header.scss */
 .search-text-input-wrap {
   width: 280px;
   float: left;
   margin-top: 5px;
 }
 
-/* line 46, ../sass/global/_header.scss */
+/* line 50, ../sass/global/_header.scss */
 .search-text-input {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -145,26 +150,26 @@ header {
   width: 100%;
 }
 
-/* line 55, ../sass/global/_header.scss */
+/* line 59, ../sass/global/_header.scss */
 .header-sub {
   border-top: 2px solid #000;
   border-bottom: 2px solid #000;
   min-height: 60px;
 }
 
-/* line 61, ../sass/global/_header.scss */
+/* line 65, ../sass/global/_header.scss */
 .common-headng-wrap {
   float: left;
   /* width: 200px; 
   padding: 0 0 0 19px;*/
   margin-top: 10px;
 }
-/* line 67, ../sass/global/_header.scss */
+/* line 71, ../sass/global/_header.scss */
 .common-headng-wrap h2.common-headng {
   padding: 0 0;
 }
 
-/* line 71, ../sass/global/_header.scss */
+/* line 75, ../sass/global/_header.scss */
 .hamburger-wrap {
   width: 40px;
   height: 23px;
@@ -175,16 +180,16 @@ header {
   margin: 9px 40px 0 0px;
 }
 
-/* line 80, ../sass/global/_header.scss */
+/* line 84, ../sass/global/_header.scss */
 .shortout-wrap {
   float: right;
 }
-/* line 83, ../sass/global/_header.scss */
+/* line 87, ../sass/global/_header.scss */
 .shortout-wrap select {
   padding: 2px 5px;
   width: 130px;
 }
-/* line 87, ../sass/global/_header.scss */
+/* line 91, ../sass/global/_header.scss */
 .shortout-wrap .line-break {
   font-size: 1.7em;
   color: #8b8a8a;
@@ -192,7 +197,7 @@ header {
   display: inline-block;
   margin-right: 3px;
 }
-/* line 94, ../sass/global/_header.scss */
+/* line 98, ../sass/global/_header.scss */
 .shortout-wrap label {
   font-size: 0.9em;
   font-weight: normal;
@@ -205,6 +210,7 @@ header {
   float: left;
   border-right: 2px solid #000;
   height: 700px;
+  position: fixed;
 }
 
 /* line 10, ../sass/global/_left-navbar.scss */
@@ -634,9 +640,10 @@ footer .text-left {
   width: 60%;
   float: left;
   /*border: 1px solid #000;*/
-  padding: 3% 15% 20px 30px;
+  /*padding:3% 15% 20px 30px;*/
+  margin-top: 20px;
 }
-/* line 16, ../sass/global/_upload-template.scss */
+/* line 17, ../sass/global/_upload-template.scss */
 .upload-inner .thumb-category-title {
   text-align: center;
   margin-bottom: 30px;
@@ -695,16 +702,37 @@ footer .text-left {
 }
 
 /* line 49, ../sass/global/_left-navbar-edit.scss */
+.nav-arrows-col {
+  float: left;
+  width: 150px;
+  margin-top: 8px;
+  font-size: 1.2em;
+  margin-left: 3%;
+}
+/* line 56, ../sass/global/_left-navbar-edit.scss */
+.nav-arrows-col a {
+  display: block;
+  float: left;
+  margin-right: 40px;
+}
+
+/* line 62, ../sass/global/_left-navbar-edit.scss */
 .template-edit {
   width: 100%;
 }
-/* line 52, ../sass/global/_left-navbar-edit.scss */
+/* line 65, ../sass/global/_left-navbar-edit.scss */
 .template-edit img {
   width: 100%;
 }
 
-/* line 56, ../sass/global/_left-navbar-edit.scss */
+/* line 69, ../sass/global/_left-navbar-edit.scss */
 .content-main-edit {
+  width: 92%;
+  margin-top: 60px;
+}
+
+/* line 73, ../sass/global/_left-navbar-edit.scss */
+.footer-edit {
   width: 92%;
 }
 
