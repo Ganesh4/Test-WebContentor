@@ -55,6 +55,33 @@ ul {
   padding: 0;
 }
 
+/* line 43, ../sass/global/_config.scss */
+a {
+  color: #000000;
+}
+/* line 45, ../sass/global/_config.scss */
+a:hover {
+  text-decoration: none;
+}
+
+/* line 50, ../sass/global/_config.scss */
+.btn-view {
+  padding: 5px 10px;
+  border: 1px solid #000;
+  color: #000;
+  text-decoration: none;
+}
+/* line 56, ../sass/global/_config.scss */
+.btn-view:hover {
+  color: #eee;
+  background-color: #b8b8b8;
+}
+
+/* line 61, ../sass/global/_config.scss */
+.btn-rect {
+  padding: 5px 16px;
+}
+
 /* Scss Document */
 /* header specific css */
 /* line 11, ../sass/global/_header.scss */
@@ -76,29 +103,35 @@ header {
 }
 
 /* line 24, ../sass/global/_header.scss */
+.header-right-col {
+  float: right;
+  margin-top: 8px;
+}
+
+/* line 28, ../sass/global/_header.scss */
 .social-icon-tray {
   float: right;
 }
-/* line 27, ../sass/global/_header.scss */
+/* line 31, ../sass/global/_header.scss */
 .social-icon-tray a {
   display: inline-block;
   margin-right: 5px;
   padding: 5px;
 }
-/* line 32, ../sass/global/_header.scss */
+/* line 36, ../sass/global/_header.scss */
 .social-icon-tray .glyphicon {
   font-size: 1.8em;
   color: #000;
 }
 
-/* line 37, ../sass/global/_header.scss */
+/* line 41, ../sass/global/_header.scss */
 .search-text-input-wrap {
   width: 280px;
   float: left;
   margin-top: 5px;
 }
 
-/* line 42, ../sass/global/_header.scss */
+/* line 46, ../sass/global/_header.scss */
 .search-text-input {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -112,26 +145,26 @@ header {
   width: 100%;
 }
 
-/* line 51, ../sass/global/_header.scss */
+/* line 55, ../sass/global/_header.scss */
 .header-sub {
   border-top: 2px solid #000;
   border-bottom: 2px solid #000;
   min-height: 60px;
 }
 
-/* line 57, ../sass/global/_header.scss */
+/* line 61, ../sass/global/_header.scss */
 .common-headng-wrap {
   float: left;
   /* width: 200px; 
   padding: 0 0 0 19px;*/
   margin-top: 10px;
 }
-/* line 63, ../sass/global/_header.scss */
+/* line 67, ../sass/global/_header.scss */
 .common-headng-wrap h2.common-headng {
   padding: 0 0;
 }
 
-/* line 67, ../sass/global/_header.scss */
+/* line 71, ../sass/global/_header.scss */
 .hamburger-wrap {
   width: 40px;
   height: 23px;
@@ -142,16 +175,16 @@ header {
   margin: 9px 40px 0 0px;
 }
 
-/* line 76, ../sass/global/_header.scss */
+/* line 80, ../sass/global/_header.scss */
 .shortout-wrap {
   float: right;
 }
-/* line 79, ../sass/global/_header.scss */
+/* line 83, ../sass/global/_header.scss */
 .shortout-wrap select {
   padding: 2px 5px;
   width: 130px;
 }
-/* line 83, ../sass/global/_header.scss */
+/* line 87, ../sass/global/_header.scss */
 .shortout-wrap .line-break {
   font-size: 1.7em;
   color: #8b8a8a;
@@ -159,7 +192,7 @@ header {
   display: inline-block;
   margin-right: 3px;
 }
-/* line 90, ../sass/global/_header.scss */
+/* line 94, ../sass/global/_header.scss */
 .shortout-wrap label {
   font-size: 0.9em;
   font-weight: normal;
@@ -612,27 +645,67 @@ footer .text-left {
 /* Scss Document */
 /* line 3, ../sass/global/_left-navbar-edit.scss */
 .left-navbar-edit {
-  width: 10%;
+  width: 8%;
   float: left;
   border-right: 2px solid #000;
   height: 700px;
+  position: fixed;
 }
 
-/* line 9, ../sass/global/_left-navbar-edit.scss */
+/* line 10, ../sass/global/_left-navbar-edit.scss */
 .left-navbar-edit-header {
   width: 100%;
   text-align: center;
   padding: 6px 0;
   border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
   min-height: 60px;
 }
 
-/* line 22, ../sass/global/_left-navbar-edit.scss */
+/* line 21, ../sass/global/_left-navbar-edit.scss */
+.nav-main-edit li {
+  border-bottom: 1px solid #000;
+}
+/* line 25, ../sass/global/_left-navbar-edit.scss */
 .nav-main-edit a {
   width: 100%;
   display: block;
-  padding: 10px 20px;
+  padding: 15px 20px;
   text-align: center;
+  text-transform: uppercase;
+  font-size: 0.85em;
+}
+/* line 33, ../sass/global/_left-navbar-edit.scss */
+.nav-main-edit a:hover {
+  color: #eee;
+  background-color: #b8b8b8;
+}
+/* line 38, ../sass/global/_left-navbar-edit.scss */
+.nav-main-edit .fa {
+  font-size: 1.5em;
+}
+
+/* line 42, ../sass/global/_left-navbar-edit.scss */
+.header-edit {
+  width: 92%;
+}
+/* line 45, ../sass/global/_left-navbar-edit.scss */
+.header-edit .header-main {
+  border-bottom: 2px solid #000;
+}
+
+/* line 49, ../sass/global/_left-navbar-edit.scss */
+.template-edit {
+  width: 100%;
+}
+/* line 52, ../sass/global/_left-navbar-edit.scss */
+.template-edit img {
+  width: 100%;
+}
+
+/* line 56, ../sass/global/_left-navbar-edit.scss */
+.content-main-edit {
+  width: 92%;
 }
 
 /* Scss Document */
