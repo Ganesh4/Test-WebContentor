@@ -11,9 +11,8 @@
 	angular.module('common',['vendor']);
 
 	angular.module('overview',['common']);
-    
 
-	angular.module('design',['common']);
+	angular.module('design',['common','validation','validation.rule']);
 
 	angular.module('header',['common']);
 

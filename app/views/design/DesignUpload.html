@@ -1,17 +1,17 @@
 <div class="upload-inner">
   <h3 class="thumb-category-title">Upload Template</h3>
-  <form class="form-horizontal" role="form">     
+  <form class="form-horizontal" name="Form">     
     <div class="form-group">
       <label class="control-label col-sm-2" for="Name">Name:</label>
       <div class="col-sm-10">
-         <input ng-model="design.name" class="form-control" placeholder="Name"> 
+         <input ng-model="design.name" name="name" class="form-control" placeholder="Name" validator="required"> 
         </div>
     </div>
     <div class="form-group">
         <label class="control-label col-sm-2" for="Description">Category:</label>
         <div class="col-sm-10">
          <!-- <input type="email" class="form-control" id="email" placeholder="Enter email"> -->
-              <select ng-model="design.category.name" class="form-control">
+              <select ng-model="design.category.name" class="form-control" validator="required">
                   <option>Most Viewed</option>
                   <option>Music</option>                 
               </select>   
@@ -20,7 +20,7 @@
     <div class="form-group">
         <label class="control-label col-sm-2" for="Description">Template Details:</label>
         <div class="col-sm-10">
-            <textarea class="form-control"  ng-model="design.description" rows="5" id="comment" placeholder=""></textarea>
+            <textarea class="form-control"  ng-model="design.description" name="description" rows="5" id="comment" placeholder="" validator="required"></textarea>
           </div>
      </div>
     <div class="form-group">
@@ -39,8 +39,8 @@
      </div>
       <div class="form-group">        
             <div class="col-sm-offset-2 col-sm-10">
-                <button ng-click="uploadDesign()" class="btn btn-primary">Upload</button>
-                <button type="reset" ui-sref="home.overview" class="btn">Cancel</button>
+                <button ng-click="uploadDesign()" validation-submit="Form" class="btn btn-primary">Upload</button>
+                <button type="reset" ui-sref="home.overview" validation-reset="Form" class="btn">Cancel</button>
             </div>
 
       </div>
