@@ -40,3 +40,24 @@ ul{
  margin:0;
  padding:0; 	
 }
+a{
+ color:#000000;
+ &:hover{
+	  text-decoration:none;
+ }	
+}
+
+.btn-view{
+  padding: 5px 10px;
+	border: 1px solid #000;
+	color: #000;
+	text-decoration: none;	
+	
+	&:hover{
+     color: #eee;
+     background-color: #b8b8b8; 
+	}
+}
+.btn-rect{
+	padding: 5px 16px;
+}
