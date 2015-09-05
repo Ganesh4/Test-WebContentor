@@ -19,6 +19,10 @@ angular.module('microsite').controller('HomeCtrl',
                 $state.reload();
                 //console.log('$event',$scope.$event);
             }
+            console.log("===========================");
+            console.log("ApiSrv.accessToken();");
+            console.log("============================");
+            ApiSrv.accessToken();
         }
     ]);
 })(angular);

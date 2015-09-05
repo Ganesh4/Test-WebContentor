@@ -14,8 +14,6 @@
    
 	angular.module('design',['common']);
 
-    
-  
 	angular.module('header',['common']);
 	
 	angular.module('api', ['microsite']);

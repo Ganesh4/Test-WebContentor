@@ -9,16 +9,25 @@
 		'DesignSrv',
 		'$state',
 		function($scope, DesignSrv,$state){
+			
 			$scope.design = {};
 			$scope.files = {};
+			$scope.index;
 			//Select 2 Options to populate.
 			$scope.select2Options = {
 				'multiple': true,
 				'simple_tags': true,
-				'tags': $state.current.data.tags
+				'tags': $state.current.data.tags				
 			};
+						
 			$scope.uploadDesign = function(){
 				$scope.design.seo.metaDescription = $scope.design.description;
+				console.log('Category------------',$scope.index,'---',$scope.catagories);
+				var category = _.filter($scope.catagories,function(category){
+						return category.id == $scope.index;
+				});
+
+				$scope.design.category = category[0];
 				var data = {
 					design : $scope.design,
 					files: $scope.files
@@ -41,6 +50,8 @@
 		    DesignSrv.getDesignCategories(function(data){
 		    	if(data)
 		    		$scope.catagories = data.plain();
+
+
 		    }) 
 	    }
     ]);
