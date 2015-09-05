@@ -9,7 +9,7 @@
 		'DesignSrv',
 		function($scope, DesignSrv){
 			$scope.design = {};
-			$scope.files = [];
+			$scope.files = {};
 			$scope.uploadDesign = function(){
 				var data = {
 					design : $scope.design,
@@ -23,7 +23,9 @@
 		    $scope.$on("fileSelected", function (event, args) {
 		        $scope.$apply(function () {            
 					//add the file object to the scope's files collection
-					$scope.files.push(args);
+					//$scope.files.push(args);
+					_.extend($scope.files, args);
+					console.log($scope.files);
 		        });
 		    });	 
 		      $scope.subheader.title = 'Upload Design';   

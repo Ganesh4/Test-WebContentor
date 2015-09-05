@@ -15,7 +15,7 @@ angular.module('design').service('DesignSrv', ['$http', 'Restangular', 'CommonSr
 	**/
 	self.saveDesign = function(userId, data, success, error){
 		var formData = CommonSrv.getFormData(data);
-		console.log('design ---------  ' , data.design);
+		console.log('design ---------  ' , data);
 		
 		console.log(formData);
 		Restangular.one(userId.toString()).one('designs').withHttpConfig(

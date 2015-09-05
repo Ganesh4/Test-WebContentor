@@ -6,7 +6,8 @@
   	angular.module('microsite').controller('HomeCtrl',
     		['$scope',
     		'$state',
-    		 function($scope ,$state){
+            'ApiSrv',
+    		 function($scope ,$state, ApiSrv){
     			
     				$scope.subheader ={
     					title : 'Overview',
