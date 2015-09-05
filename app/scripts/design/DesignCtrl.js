@@ -31,7 +31,8 @@
 				$scope.design.category = category[0];
 				var data = {
 					design : $scope.design,
-					files: $scope.files
+					templateFiles: $scope.files.templateFiles,
+					screenshot : $scope.files.screenshot
 				}
 				DesignSrv.saveDesign(1, data, function(response){
 					console.log(response);
