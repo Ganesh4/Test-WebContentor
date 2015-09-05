@@ -10,7 +10,7 @@
 		'$state',
 		function($scope, DesignSrv,$state){
 			$scope.design = {};
-			$scope.files = [];
+			$scope.files = {};
 			//Select 2 Options to populate.
 			console.log($state);
 			$scope.select2Options = {
@@ -32,7 +32,9 @@
 		    $scope.$on("fileSelected", function (event, args) {
 		        $scope.$apply(function () {            
 					//add the file object to the scope's files collection
-					$scope.files.push(args);
+					//$scope.files.push(args);
+					_.extend($scope.files, args);
+					console.log($scope.files);
 		        });
 		    });	 
 		      $scope.subheader.title = 'Upload Design';  
