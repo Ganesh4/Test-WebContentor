@@ -18,6 +18,8 @@
 			$scope.templates = result;	
 			console.log("DATA ----------------- ",$scope.templates);
 	    });
+	    $scope.subheader = $scope.$parent.subheader;
+	    $scope.subheader.title = 'Overview';
 		$scope.isHidden = false;    
 		$scope.repeatRow = [{"name" : "User Created" },{"name" : "Featured"},{"name" : "Music"}];  
     }]);

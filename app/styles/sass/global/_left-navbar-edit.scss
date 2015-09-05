@@ -1,0 +1,75 @@
+/* Scss Document */
+
+.left-navbar-edit{
+  width:8%;
+	float:left;
+	border-right:2px solid #000;
+	height:700px;	
+  position: fixed;
+}
+.left-navbar-edit-header{
+  width: 100%;
+	text-align: center;
+	padding: 6px 0;	
+	border-top:2px solid #000;
+	border-bottom:2px solid #000;
+  min-height: 60px;
+	
+}
+.nav-main-edit{
+	
+ li{
+	 border-bottom:1px solid #000;
+	 
+  }	
+	a{
+	 width:100%;
+	 display:block;
+	 padding:15px 20px;
+	 text-align:center;
+	 text-transform:uppercase;
+   font-size: 0.85em;  	
+	 
+	 &:hover{
+     color: #eee;
+     background-color: #b8b8b8; 
+	 }
+	}
+	.fa{
+	 font-size:1.5em;
+	}
+}
+.header-edit{
+  width:92%;
+	
+	.header-main{
+	   border-bottom:2px solid #000;
+	} 
+}
+.nav-arrows-col{
+	float: left;
+	width: 150px;
+	margin-top: 8px;
+	font-size: 1.2em; 
+	margin-left: 3%;	
+
+	a{
+		display:block;
+		float:left;
+    margin-right:40px;		
+	}
+}
+.template-edit{
+   width:100%; 
+	 
+	 img{
+		  width:100%; 
+		}	
+}
+.content-main-edit{
+  width:92%;	
+  margin-top: 60px;
+}
+.footer-edit{
+  width:92%;	
+}

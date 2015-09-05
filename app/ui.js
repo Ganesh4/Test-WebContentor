@@ -15,6 +15,7 @@
             $stateProvider.state('home', {
                 url: '/home',
                 templateUrl:'views/overview/home.html',
+                controller:'HomeCtrl'
             }).state('home.overview', {
                 url: '/overview',
                 templateUrl:"views/overview/overview.html",

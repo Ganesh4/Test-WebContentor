@@ -5,7 +5,7 @@
 	float:left;
 	border-right:2px solid #000;
 	height:700px;
-	
+	position: fixed;
 }
 .left-header-logo{
   width: 100%;
@@ -28,7 +28,7 @@
 	cursor:pointer;
 }
 .btn_create-new-design-wrap{
-  border-top: 2px solid #000;  	
+/*  border-top: 2px solid #000;*/  	
 	padding:8px 0;
 }
 .btn_left-bar{
@@ -48,6 +48,7 @@
 .leftnav-title{
   padding:8px 0;	
 	border-top:2px solid #000;
+	border-bottom:2px solid #000;
 	min-height:60px;
 }
 .btn_active {

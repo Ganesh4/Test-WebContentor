@@ -6,7 +6,7 @@
  */
 (function(angular){
 
-	angular.module('vendor',['ui.router','restangular']);
+	angular.module('vendor',['ui.router','restangular', 'validation','validation.rule']);
 
 	angular.module('common',['vendor']);
 
@@ -14,8 +14,14 @@
    
 	angular.module('design',['common']);
 
-	angular.module('microsite',['overview','common','design']);
+    
+  
+	angular.module('header',['common']);
 	
 	angular.module('api', ['microsite']);
+
+	angular.module('subheader',['header']);
+
+	angular.module('microsite',['overview','common','design','header','subheader']);
 
 })(angular);
