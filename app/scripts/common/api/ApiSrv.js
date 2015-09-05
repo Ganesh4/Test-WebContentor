@@ -36,7 +36,6 @@ angular.module('microsite').service('ApiSrv', ['$http', '$q', 'Restangular', fun
 			*/
 			if(result.value){
 				Restangular.configuration.defaultRequestParams.common.access_token = result.value;
-				console.log(Restangular.configuration.defaultRequestParams);
 				$defer.resolve(result);
 			}else{
 				result = undefined;
@@ -68,9 +67,6 @@ angular.module('microsite').service('ApiSrv', ['$http', '$q', 'Restangular', fun
 		return true; // error not handled
 	});
 
-
-	self.accessToken();
-	
 
 }]);
 

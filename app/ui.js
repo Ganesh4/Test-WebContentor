@@ -29,8 +29,7 @@
                 template:'<ui-view></ui-view>',
                 data: {
                     tags:['Iteractive User Interface', 'Parrallex Design', 'Entertainment', 'Music']
-                },
-             
+                },              
             }).state('home.design.detail', {
                 url:'/detail',
                 templateUrl:'views/design/DesignDetail.html',
