@@ -12,7 +12,6 @@
 			$scope.design = {};
 			$scope.files = {};
 			//Select 2 Options to populate.
-			console.log($state);
 			$scope.select2Options = {
 				'multiple': true,
 				'simple_tags': true,
@@ -40,7 +39,6 @@
 		      $scope.subheader.title = 'Upload Design';  
 
 		    DesignSrv.getDesignCategories(function(data){
-		    	console.log('Categories --------  ' , data.plain());
 		    	if(data)
 		    		$scope.catagories = data.plain();
 		    }) 

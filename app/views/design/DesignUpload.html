@@ -21,7 +21,7 @@
         <label class="control-label col-sm-2" for="Category">Category:</label>
         <div class="col-sm-10">
          <!-- <input type="email" class="form-control" id="email" placeholder="Enter email"> -->
-            <select ui-select2 ng-model="selected" data-placeholder="Pick a number">
+            <select ui-select2 ng-model="selected" class = "form-control" data-placeholder="Pick a catagory">
                 <option value=""></option>
                  <option ng-repeat = "catagory in catagories" value = "{{catagory}}">{{catagory.name}}</option>                 
             </select>   
