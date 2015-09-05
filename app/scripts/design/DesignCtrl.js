@@ -7,10 +7,19 @@
     [
 		'$scope',
 		'DesignSrv',
-		function($scope, DesignSrv){
+		'$state',
+		function($scope, DesignSrv,$state){
 			$scope.design = {};
 			$scope.files = [];
+			//Select 2 Options to populate.
+			console.log($state);
+			$scope.select2Options = {
+				'multiple': true,
+				'simple_tags': true,
+				'tags': $state.current.data.tags
+			};
 			$scope.uploadDesign = function(){
+				$scope.design.seo.metaDescription = $scope.design.description;
 				var data = {
 					design : $scope.design,
 					files: $scope.files
@@ -26,7 +35,13 @@
 					$scope.files.push(args);
 		        });
 		    });	 
-		      $scope.subheader.title = 'Upload Design';   
+		      $scope.subheader.title = 'Upload Design';  
+
+		    DesignSrv.getDesignCategories(function(data){
+		    	console.log('Categories --------  ' , data.plain());
+		    	if(data)
+		    		$scope.catagories = data.plain();
+		    }) 
 	    }
     ]);
 })(angular);

@@ -9,22 +9,32 @@
          <input ng-model="design.name" name="name" class="form-control" placeholder="Name" validator="required"> 
         </div>
     </div>
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="Name">Keywords:</label>
+      <div class="col-sm-10">
+       <input ui-select2="select2Options" class="form-control" ng-model="design.seo.keywords" data-placeholder="Add Keywords to optimise your design in our search"/>
+        </div>
+    </div>
+  
     <div class="form-group">
         <label class="control-label col-sm-2" for="Category">Category:</label>
         <div class="col-sm-10">
          <!-- <input type="email" class="form-control" id="email" placeholder="Enter email"> -->
-              <select ng-model="design.category.name" class="form-control" validator="required">
-                  <option>Most Viewed</option>
-                  <option>Music</option>                 
-              </select>   
+            <select ui-select2 ng-model="selected" data-placeholder="Pick a number">
+                <option value=""></option>
+                 <option ng-repeat = "catagory in catagories" value = "{{catagory}}">{{catagory.name}}</option>                 
+            </select>   
           </div>
      </div>
+
     <div class="form-group">
-        <label class="control-label col-sm-2" for="Description">Template Details:</label>
+        <label class="control-label col-sm-2" for="Description">Design Details:</label>
         <div class="col-sm-10">
             <textarea class="form-control"  ng-model="design.description" name="description" rows="5" id="comment" placeholder="" validator="required"></textarea>
           </div>
-     </div>
+    </div>
+
     <div class="form-group">
         <label class="control-label col-sm-2" for="Screen Shot">Screen Shot:</label>
         <div class="col-sm-10">

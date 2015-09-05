@@ -27,10 +27,13 @@
             $stateProvider.state('home.design', {
                 url: '/design',
                 template:'<ui-view></ui-view>',
+                data: {
+                    tags:['Iteractive User Interface', 'Parrallex Design', 'Entertainment', 'Music']
+                },
              
             }).state('home.design.detail', {
                 url:'/detail',
-                templateUrl:'views/design/DesignDetail.html'
+                templateUrl:'views/design/DesignDetail.html',
             }).state('home.design.upload', {
                 url:'/upload',
                 templateUrl:'views/design/DesignUpload.html',

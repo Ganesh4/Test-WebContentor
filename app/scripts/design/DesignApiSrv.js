@@ -26,6 +26,10 @@ angular.module('design').service('DesignSrv', ['$http', 'Restangular', 'CommonSr
 			}).then(success);
 	}
 
+	self.getDesignCategories = function(success , error){
+		Restangular.one('catagories').getList().then(success);
+	}
+
 	self.getUserDesign = function(userId, params, success, error){
 
 	}
