@@ -7,7 +7,8 @@
     [
 		'$scope',
 		'Restangular',
-		function($scope,Restangular){
+		'ApiSrv',
+		function($scope, Restangular, ApiSrv){
 		Restangular.all('template').getList().then(function(result){
 			/*console.log('My data ------------- ',result[0].id);	
 			console.log('My data ------------- ',result[0].screenshots);	

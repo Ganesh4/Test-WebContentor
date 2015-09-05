@@ -11,7 +11,7 @@
             restrict:'AE',
             templateUrl:'./views/overview/UserTemplateBox.html',
             controller:('UserTemplateBOxCtrl',['$scope'],function($scope){
-         
+         		
             })
         }
     })

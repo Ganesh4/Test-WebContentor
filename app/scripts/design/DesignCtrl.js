@@ -6,12 +6,18 @@
   angular.module('design').controller('DesignCtrl',
     [
 		'$scope',
-		function($scope){
+		'DesignSrv',
+		function($scope, DesignSrv){
 			$scope.design = {};
 			$scope.files = [];
 			$scope.uploadDesign = function(){
-				console.log($scope.files);
-
+				var data = {
+					design : $scope.design,
+					files: $scope.files
+				}
+				DesignSrv.saveDesign(1, data, function(response){
+					console.log(response);
+				});
 			}
 		    //listen for the file selected event
 		    $scope.$on("fileSelected", function (event, args) {

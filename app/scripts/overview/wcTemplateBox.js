@@ -9,7 +9,7 @@
         return{
 
             restrict:'AE',
-            templateUrl:'./views/overview/wcTemplateBox.html',
+            templateUrl:'./views/overview/TemplateBox.html',
             controller:('TemplateCtrl',['$scope'],function($scope){
                       
             })
