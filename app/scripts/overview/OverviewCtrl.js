@@ -21,11 +21,10 @@ angular.module('overview').controller('OverviewCtrl',
 			OverviewApiSrv.getUserDesigns(1, {
 				filter : $scope.filter
 			}, function(data){
-
-				$scope.templates = new Array(data.plain());
+				if(data)
+					$scope.templates = data.plain();
 				console.log('Templates -----------  ' , 	$scope.templates );
-			});		
-
+			});
 		}
 	]);
 })(angular);
