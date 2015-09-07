@@ -12,15 +12,18 @@ angular.module('overview').controller('OverviewCtrl',
 			$scope.subheader = $scope.$parent.subheader;
 			$scope.subheader.title = 'Overview';
 			$scope.isHidden = false;    
-			$scope.repeatRow = [{"name" : "My Designs" },{"name" : "Featured"},{"name" : "Music"}];
 			$scope.filter = {
 				size : 3, 
 				orderBy : 'createdDate',
 				page : 1,
 				sortBy : 'ASC'
 			};  
-			OverviewApiSrv.getUserDesigns(1, $scope.filter, function(data){
-				$scope.templates = data;
+			OverviewApiSrv.getUserDesigns(1, {
+				filter : $scope.filter
+			}, function(data){
+
+				$scope.templates = new Array(data.plain());
+				console.log('Templates -----------  ' , 	$scope.templates );
 			});		
 
 		}

@@ -1,10 +1,10 @@
-<div ng-repeat ='row in repeatRow'>
+<div ng-repeat ='template in templates'>
    <div class="content-padding">
     <!-- <div class="content-inner">    -->
     <div class="thumb-row">
     <div class="thumb-category">
      
-       <h3 class="thumb-category-title">{{row.name}}</h3>
+       <h3 class="thumb-category-title">{{template.category}}</h3>
        <div class="right-elements">
           <div class="btn_view-all">
             <a ui-sref="#">View all</a>
@@ -15,7 +15,7 @@
     
     <!-- thumb-category -->
     <div class="row" ng-hide = "isHidden">
-        <div class="col-lg-4" ng-repeat ='template in templates | filter : row.name'>
+        <div class="col-lg-4" ng-repeat ='template in templates'>
             <div class="thumb-block" ng-mouseover="onMouseOver($event)">
                 <div class="thumb-img">
                   <span class="btn_template-img-over">

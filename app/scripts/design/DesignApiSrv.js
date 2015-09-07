@@ -24,7 +24,7 @@ angular.module('design').service('DesignSrv',
 		
 				Restangular.one(userId.toString()).one('designs').withHttpConfig({
 				transformRequest: angular.identity
-			}).customPOST(formData, '', undefined, {
+			}).customPOST(formData, undefined, undefined, {
 				'Content-Type': undefined
 			}).then(success);
 	}
