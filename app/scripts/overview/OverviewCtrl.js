@@ -25,6 +25,10 @@ angular.module('overview').controller('OverviewCtrl',
 					$scope.templates = data.plain();
 				console.log('Templates -----------  ' , 	$scope.templates );
 			});
+
+			OverviewApiSrv.getCategoriesDesigns('featured',function(data){
+				console.log("Design ----------  " , data.plain());
+			});
 		}
 	]);
 })(angular);

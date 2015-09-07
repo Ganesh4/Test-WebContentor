@@ -30,7 +30,7 @@ angular.module('design').service('DesignSrv',
 	}
 
 	self.getDesignCategories = function(success , error){
-		Restangular.one('catagories').getList().then(success);
+		Restangular.one('categories').getList().then(success);
 	}
 
 	self.getUserDesign = function(userId, params, success, error){
