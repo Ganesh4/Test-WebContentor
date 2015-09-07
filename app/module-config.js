@@ -9,6 +9,8 @@
 	angular.module('vendor',['ui.router','restangular', 'validation','validation.rule','ui.select2']);
 
 	angular.module('common',['vendor']);
+	
+	angular.module('home',['common']);
 
 	angular.module('overview',['common']);
    
