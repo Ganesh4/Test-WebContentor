@@ -14,7 +14,7 @@
             // Now set up the states
             $stateProvider.state('home', {
                 url: '/home',
-                templateUrl:'views/overview/home.html',
+                templateUrl:'views/home/home.html',
                 controller:'HomeCtrl'
             }).state('home.overview', {
                 url: '/overview',
@@ -27,10 +27,12 @@
             $stateProvider.state('home.design', {
                 url: '/design',
                 template:'<ui-view></ui-view>',
-             
+                data: {
+                    tags:['Iteractive User Interface', 'Parrallex Design', 'Entertainment', 'Music']
+                },              
             }).state('home.design.detail', {
                 url:'/detail',
-                templateUrl:'views/design/DesignDetail.html'
+                templateUrl:'views/design/DesignDetail.html',
             }).state('home.design.upload', {
                 url:'/upload',
                 templateUrl:'views/design/DesignUpload.html',

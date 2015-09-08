@@ -7,7 +7,8 @@
 	'RestangularProvider',
 	function($urlProvider, $stateProvider, RestangularProvider){
 		
-		RestangularProvider.setBaseUrl('http://localhost/MicroS/');
-		//
+		RestangularProvider.setBaseUrl('http://localhost:8080/MicroS/');
+		
+
 	}]);
 })(angular);
