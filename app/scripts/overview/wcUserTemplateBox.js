@@ -18,26 +18,30 @@
            // controller : 'TemplateBoxCtrl',
             scope : {
             	templateType : '=',
-            	categories : '='
+            	categories : '=',
+            	filter : '=',
             },
             link : function(scope, elem, attrs){
   				console.log('Templates ---------  ' ,  attrs.templateType);
            		var type = attrs.templateType;
            		if(type == 'userTemplates'){
-           			OverviewApiSrv.getCategoriesDesigns('userTemplates',function(data){
-           				scope.templates = data.plain();
-						scope.templateType = 'User Created';
-						
+           			OverviewApiSrv.getUserDesigns(1,{
+           				filter : scope.filter
+           			},function(data){
+           				if(data){
+	           				scope.templates = data.plain();
+							scope.templateType = 'User Created';
+						}
 					});
            		}else if(type == 'featured'){
            			
-           			OverviewApiSrv.getCategoriesDesigns('featured',function(data){
+           			OverviewApiSrv.getCategoriesDesigns('featured',{
+           				filter : scope.filter
+           			},function(data){
            				scope.categories = [];
            				scope.categories.push({name: 'featured'});
            				scope.templates = data.plain();
 						scope.templateType = 'Featured';
-
-						
 					});
 
            		}else if(type = "categoryTemplates"){
@@ -48,9 +52,9 @@
            				scope.templates = [];
            				_.each(scope.categories,function(value,key){
            					//Getting templates from  category 
-							OverviewApiSrv.getCategoriesDesigns(value.name,function(data){
-								console.log("Category --------------------- ",value.name);
-								console.log('Design ----------- ',data.plain());
+							OverviewApiSrv.getCategoriesDesigns(value.name,{
+           						filter : scope.filter
+           					},function(data){
 								_.each(data.plain(),function(value,key){
 									scope.templates.push(value);
 								});

@@ -25,9 +25,6 @@ angular.module('overview').controller('OverviewCtrl',
 				page : 1,
 				sortBy : 'ASC'
 			}; 
-
-			
-					
 		}
 	]);
 })(angular);

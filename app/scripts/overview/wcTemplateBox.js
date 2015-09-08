@@ -11,7 +11,7 @@
             restrict:'AE',
             templateUrl:'./views/overview/TemplateBox.html',
             controller:('TemplateCtrl',['$scope'],function($scope){
-                      
+            	
             })
         }
     })
