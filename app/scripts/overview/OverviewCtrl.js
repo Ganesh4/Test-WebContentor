@@ -5,6 +5,7 @@
 (function(angular){
 angular.module('overview').controller('OverviewCtrl',
 	[
+	    
 		'$scope',
 		'Restangular',
 		'OverviewApiSrv',
