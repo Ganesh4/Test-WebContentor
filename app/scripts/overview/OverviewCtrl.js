@@ -25,7 +25,12 @@ angular.module('overview').controller('OverviewCtrl',
 				orderBy : 'createdDate',
 				page : 1,
 				sortBy : 'ASC'
-			}; 
+			};
+
+			$scope.selectTemplate = function(data){
+				$scope.selectedTemplate = data;
+				console.log('Selected Template --------- ',$scope.selectedTemplate);
+			} 
 
 			
 					
