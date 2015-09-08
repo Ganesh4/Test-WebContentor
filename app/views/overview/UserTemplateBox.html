@@ -12,7 +12,6 @@
               <wc-on-off-button is-hidden = "isHidden"></wc-on-off-button>
         </div> 
     </div> 
-{{template}}
     <!-- thumb-category -->
     <div class="row" ng-if = "category.name != 'featured'" ng-hide = "isHidden">
         <div class="col-lg-4"  ng-repeat ='template in templates | categoryFilter : category.name'>
