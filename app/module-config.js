@@ -12,16 +12,16 @@
 	
 	angular.module('home',['common']);
 
-	angular.module('overview',['common']);
+	angular.module('overview',['home']);
    
-	angular.module('design',['common']);
+	angular.module('design',['home']);
 
-	angular.module('header',['common']);
+	angular.module('header',['home']);
 	
 	angular.module('api', ['microsite']);
 
 	angular.module('subheader',['header']);
 
-	angular.module('microsite',['overview','common','design','header','subheader']);
+	angular.module('microsite',['home','overview','common','design','header','subheader']);
 
 })(angular);

@@ -32,6 +32,10 @@ angular.module('common').service('CommonSrv',
                 console.log('FormData -------- ' ,  formData);
                 return formData;
             }
+
+            self.getDesignCategories = function(success , error){
+               Restangular.one('categories').getList().then(success);
+            }
         }
     ]);
 })(angular);

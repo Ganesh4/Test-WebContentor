@@ -7,8 +7,9 @@
     [
 		'$scope',
 		'DesignSrv',
+		'CommonSrv',
 		'$state',
-		function($scope, DesignSrv,$state){
+		function($scope, DesignSrv,CommonSrv,$state){
 			
 			$scope.design = {};
 			$scope.files = [];
@@ -47,7 +48,7 @@
 		    });	 
 		      $scope.subheader.title = 'Upload Design';  
 
-		    DesignSrv.getDesignCategories(function(data){
+		    CommonSrv.getDesignCategories(function(data){
 		    	console.log('Categories --------  ' , data.plain());
 		    	if(data)
 		    		$scope.catagories = data.plain();

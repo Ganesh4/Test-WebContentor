@@ -1,10 +1,10 @@
-<div ng-repeat ='template in templates'>
+<div ng-repeat = "category in categories">
    <div class="content-padding">
     <!-- <div class="content-inner">    -->
     <div class="thumb-row">
     <div class="thumb-category">
      
-       <h3 class="thumb-category-title">{{template.category}}</h3>
+       <h3 class="thumb-category-title">{{category.name}}</h3>
        <div class="right-elements">
           <div class="btn_view-all">
             <a ui-sref="#">View all</a>
@@ -12,10 +12,10 @@
               <wc-on-off-button is-hidden = "isHidden"></wc-on-off-button>
         </div> 
     </div> 
-    
+{{template}}
     <!-- thumb-category -->
-    <div class="row" ng-hide = "isHidden">
-        <div class="col-lg-4" ng-repeat ='template in templates'>
+    <div class="row" ng-if = "category.name != 'featured'" ng-hide = "isHidden">
+        <div class="col-lg-4"  ng-repeat ='template in templates | filter : category.name'>
             <div class="thumb-block" ng-mouseover="onMouseOver($event)">
                 <div class="thumb-img">
                   <span class="btn_template-img-over">
@@ -27,7 +27,7 @@
                 <div class="thumb-innr">
       
                 <div class="thumb-details">
-                  <span class="title">{{template.title}}</span>
+                  <span class="title">{{template.name}}</span>
                   <p class="thumb-desc">{{template.description}}
                   </p>
                   <div class="thumb-info">
@@ -59,7 +59,59 @@
         </div>
         </div> <!-- ./thumb block -->
       </div>
-   </div><!-- ./row -->
+
+     </div><!-- ./row -->
+
+
+        <!-- thumb-category -->
+    <div class="row" ng-if = "category.name == 'featured'" ng-hide = "isHidden">
+        <div class="col-lg-4"  ng-repeat ='template in templates'>
+            <div class="thumb-block" ng-mouseover="onMouseOver($event)">
+                <div class="thumb-img">
+                  <span class="btn_template-img-over">
+                  <a ui-sref="#">Preview</a>
+                  <a ui-sref="#">Edit</a></span> 
+                  <img ng-src="{{template.screenshots}}">
+              </div>
+                  
+                <div class="thumb-innr">
+      
+                <div class="thumb-details">
+                  <span class="title">{{template.name}}</span>
+                  <p class="thumb-desc">{{template.description}}
+                  </p>
+                  <div class="thumb-info">
+                    <span class="revision">Revision:{{template.revision}}</span>
+                    <span class="age">Age:5 days ago</span>
+                  </div>
+                  <span class="btn_view-more">
+                    <a ui-sref = "home.design.detail">View More</a>
+                  </span>
+                </div>
+            </div>
+
+                
+        <div class="thumb-stats-view" ng-show = "{{template.category == 'User Created'}}" >
+          <div class="thumb-innr">
+            <span class="title">Stats Overview</span>
+               <div class="thumb-graph-wrap">
+                  <div class="thumb-graph"></div>
+                  <div class="thumb-graph-details">
+                    <p>Live Visitors:200</p>
+                    <p>Bounce Rate:50%</p>                
+                    <p>Total Visits:200</p>
+                  </div>
+               </div>                  
+              <span class="btn_view-more">
+                <a ui-sref="#">View More</a>
+              </span>
+          </div>
+        </div>
+        </div> <!-- ./thumb block -->
+      </div>
+
+     </div><!-- ./row -->
+
  </div>          
   </div> 
   </div>

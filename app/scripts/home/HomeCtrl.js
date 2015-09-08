@@ -8,7 +8,8 @@ angular.module('microsite').controller('HomeCtrl',
         '$scope',
         '$state',
         'ApiSrv',
-        function($scope ,$state, ApiSrv){
+        'CommonSrv',
+        function($scope ,$state, ApiSrv,CommonSrv){
 
             $scope.subheader ={
             title : 'Overview',
@@ -24,6 +25,13 @@ angular.module('microsite').controller('HomeCtrl',
             console.log("ApiSrv.accessToken();");
             console.log("============================");
             ApiSrv.accessToken();
+
+            CommonSrv.getDesignCategories(function(response){
+                if(response)
+                    $scope.templateCategories = response.plain();
+
+                console.log('$scope.templateCategories  --------------- ',$scope.templateCategories);
+            });
         }
     ]);
 })(angular);
