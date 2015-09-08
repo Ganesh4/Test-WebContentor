@@ -91,7 +91,7 @@ header {
   float: right;
   position: fixed;
   right: 0;
-  z-index: 9;
+  z-index: 10;
   background-color: #fff;
 }
 
@@ -657,9 +657,10 @@ footer .text-left {
   border-right: 2px solid #000;
   height: 700px;
   position: fixed;
+  z-index: 99;
 }
 
-/* line 10, ../sass/global/_left-navbar-edit.scss */
+/* line 11, ../sass/global/_left-navbar-edit.scss */
 .left-navbar-edit-header {
   width: 100%;
   text-align: center;
@@ -669,11 +670,26 @@ footer .text-left {
   min-height: 60px;
 }
 
-/* line 21, ../sass/global/_left-navbar-edit.scss */
+/* line 19, ../sass/global/_left-navbar-edit.scss */
+.left-navbar-edit-header {
+  width: 100%;
+  text-align: center;
+  padding: 16px 0 6px;
+  border-top: 2px solid #000;
+  min-height: 60px;
+}
+/* line 26, ../sass/global/_left-navbar-edit.scss */
+.left-navbar-edit-header img {
+  width: 90%;
+}
+
+/* line 33, ../sass/global/_left-navbar-edit.scss */
 .nav-main-edit li {
   border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+  position: relative;
 }
-/* line 25, ../sass/global/_left-navbar-edit.scss */
+/* line 38, ../sass/global/_left-navbar-edit.scss */
 .nav-main-edit a {
   width: 100%;
   display: block;
@@ -682,26 +698,26 @@ footer .text-left {
   text-transform: uppercase;
   font-size: 0.85em;
 }
-/* line 33, ../sass/global/_left-navbar-edit.scss */
+/* line 46, ../sass/global/_left-navbar-edit.scss */
 .nav-main-edit a:hover {
   color: #eee;
   background-color: #b8b8b8;
 }
-/* line 38, ../sass/global/_left-navbar-edit.scss */
+/* line 51, ../sass/global/_left-navbar-edit.scss */
 .nav-main-edit .fa {
   font-size: 1.5em;
 }
 
-/* line 42, ../sass/global/_left-navbar-edit.scss */
+/* line 55, ../sass/global/_left-navbar-edit.scss */
 .header-edit {
   width: 92%;
 }
-/* line 45, ../sass/global/_left-navbar-edit.scss */
+/* line 58, ../sass/global/_left-navbar-edit.scss */
 .header-edit .header-main {
   border-bottom: 2px solid #000;
 }
 
-/* line 49, ../sass/global/_left-navbar-edit.scss */
+/* line 62, ../sass/global/_left-navbar-edit.scss */
 .nav-arrows-col {
   float: left;
   width: 150px;
@@ -709,31 +725,118 @@ footer .text-left {
   font-size: 1.2em;
   margin-left: 3%;
 }
-/* line 56, ../sass/global/_left-navbar-edit.scss */
+/* line 69, ../sass/global/_left-navbar-edit.scss */
 .nav-arrows-col a {
   display: block;
   float: left;
   margin-right: 40px;
 }
 
-/* line 62, ../sass/global/_left-navbar-edit.scss */
+/* line 75, ../sass/global/_left-navbar-edit.scss */
 .template-edit {
   width: 100%;
+  position: relative;
 }
-/* line 65, ../sass/global/_left-navbar-edit.scss */
+/* line 79, ../sass/global/_left-navbar-edit.scss */
 .template-edit img {
   width: 100%;
 }
+/* line 82, ../sass/global/_left-navbar-edit.scss */
+.template-edit .grid-vertical {
+  width: 85%;
+  border-left: 1px dashed #000;
+  border-right: 1px dashed #000;
+  position: absolute;
+  height: 100%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+/* line 92, ../sass/global/_left-navbar-edit.scss */
+.template-edit .grid-horizontal {
+  width: 100%;
+  border-top: 1px dashed #000;
+  border-bottom: 1px dashed #000;
+  position: absolute;
+  height: 93.5%;
+  margin: auto 0;
+  top: 0;
+  bottom: 0;
+}
 
-/* line 69, ../sass/global/_left-navbar-edit.scss */
+/* line 103, ../sass/global/_left-navbar-edit.scss */
 .content-main-edit {
   width: 92%;
   margin-top: 60px;
+  position: relative;
+  z-index: 9;
 }
 
-/* line 73, ../sass/global/_left-navbar-edit.scss */
+/* line 109, ../sass/global/_left-navbar-edit.scss */
 .footer-edit {
   width: 92%;
+}
+
+/* submenu blocks */
+/* line 115, ../sass/global/_left-navbar-edit.scss */
+.add-submenu {
+  width: 640px;
+  height: 500px;
+  position: absolute;
+  top: 0px;
+  left: 108px;
+  /*display:none;*/
+}
+
+/* line 123, ../sass/global/_left-navbar-edit.scss */
+.submenu-block {
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #000;
+  float: left;
+}
+
+/* line 129, ../sass/global/_left-navbar-edit.scss */
+.submenu-header {
+  width: 100%;
+  min-height: 60px;
+  padding: 10px 0;
+  border-bottom: 1px solid #000;
+}
+/* line 135, ../sass/global/_left-navbar-edit.scss */
+.submenu-header .heading-top {
+  font-size: 1.3em;
+}
+
+/* line 139, ../sass/global/_left-navbar-edit.scss */
+.submenu-leftnav {
+  width: 120px;
+  float: left;
+}
+/* line 146, ../sass/global/_left-navbar-edit.scss */
+.submenu-leftnav a {
+  padding: 10px 20px;
+  font-size: 0.83em;
+  text-transform: capitalize;
+}
+
+/* line 152, ../sass/global/_left-navbar-edit.scss */
+.submenu-content {
+  width: 81%;
+  float: right;
+}
+/* line 156, ../sass/global/_left-navbar-edit.scss */
+.submenu-content .heading {
+  width: 100%;
+  background-color: #ebebeb;
+  padding: 4px 10px;
+}
+/* line 161, ../sass/global/_left-navbar-edit.scss */
+.submenu-content .content-block {
+  background-color: #ccc;
+  width: 100%;
+  height: 332px;
+  overflow-y: auto;
 }
 
 /* Scss Document */

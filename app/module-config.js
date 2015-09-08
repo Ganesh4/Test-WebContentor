@@ -22,6 +22,8 @@
 
 	angular.module('subheader',['header']);
 
-	angular.module('microsite',['home','overview','common','design','header','subheader']);
+	angular.module('editor',['common']);
+
+	angular.module('microsite',['home','overview','common','design','header','subheader','editor']);
 
 })(angular);
