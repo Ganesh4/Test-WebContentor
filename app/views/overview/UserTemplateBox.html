@@ -19,8 +19,8 @@
             <div class="thumb-block" ng-mouseover="onMouseOver($event)">
                 <div class="thumb-img">
                   <span class="btn_template-img-over">
-                  <a ui-sref="#">Preview</a>
-                  <a ui-sref="#">Edit</a></span> 
+                  <a ui-sref="preview" target="_blank">Preview</a>
+                  <a ui-sref="editor" target="_blank">Edit</a></span> 
                 	<img ng-src="{{template.screenshots}}">
               </div>
                   
@@ -32,7 +32,7 @@
                   </p>
                   <div class="thumb-info">
                     <span class="revision">Revision:{{template.revision}}</span>
-                    <span class="age">Age:5 days ago</span>
+                    <span class="age">Age:{{template.date}} days ago</span>
                   </div>
                   <span class="btn_view-more">
                     <a ui-sref = "home.design.detail">View More</a>
@@ -69,8 +69,8 @@
             <div class="thumb-block" ng-mouseover="onMouseOver($event)">
                 <div class="thumb-img">
                   <span class="btn_template-img-over">
-                  <a ui-sref="#">Preview</a>
-                  <a ui-sref="#">Edit</a></span> 
+                  <a ui-sref="preview" target="_blank">Preview</a>
+                  <a ui-sref="editor" target="_blank">Edit</a></span> 
                   <img ng-src="{{template.screenshots}}">
               </div>
                   
