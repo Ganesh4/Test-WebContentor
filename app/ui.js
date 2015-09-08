@@ -38,6 +38,15 @@
                 templateUrl:'views/design/DesignUpload.html',
                 controller:'DesignCtrl',
             });
+            $stateProvider.state('editor', {
+                url:'/editor',
+                templateUrl:'views/editor/TemplateEdit.html',
+                
+            }).state('preview', {
+                url:'/preview',
+                templateUrl:'views/editor/TemplatePreview.html',
+                controller:'TemplatePreviewCtrl',
+            });
         }
     ]);
 })(angular);
