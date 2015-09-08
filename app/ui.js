@@ -33,6 +33,7 @@
             }).state('home.design.detail', {
                 url:'/detail',
                 templateUrl:'views/design/DesignDetail.html',
+                controller:'DesignDetailCtrl',
             }).state('home.design.upload', {
                 url:'/upload',
                 templateUrl:'views/design/DesignUpload.html',
