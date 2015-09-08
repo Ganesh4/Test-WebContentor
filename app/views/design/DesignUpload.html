@@ -29,11 +29,30 @@
      </div>
 
     <div class="form-group">
-        <label class="control-label col-sm-2" for="Description">Design Details:</label>
+        <label class="control-label col-sm-2" for="Description">Description:</label>
         <div class="col-sm-10">
             <textarea class="form-control"  ng-model="design.description" name="description" rows="5" id="comment" placeholder="" validator="required"></textarea>
           </div>
     </div>
+
+<div class="form-group">
+      <label class="control-label col-sm-2" for="Name">Featured:</label>
+      <div class="col-sm-10">
+        <label class="radio-inline">
+         <input type="radio" name="optradio" checked>NO
+        </label>
+        <label class="radio-inline">
+          <input type="radio" name="optradio">YES
+        </label>
+        </div>
+    </div>
+    
+<div class="form-group">
+      <label class="control-label col-sm-2" for="Name">SEO Keywords:</label>
+      <div class="col-sm-10">
+       <input ui-select2="" class="form-control" ng-model="design.seo.keywords" data-placeholder="Add Keywords to optimise your design in our search"/>
+        </div>
+</div>
 
     <div class="form-group">
         <label class="control-label col-sm-2" for="Screen Shot">Screen Shot:</label>
