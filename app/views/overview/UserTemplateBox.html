@@ -15,7 +15,7 @@
 {{template}}
     <!-- thumb-category -->
     <div class="row" ng-if = "category.name != 'featured'" ng-hide = "isHidden">
-        <div class="col-lg-4"  ng-repeat ='template in templates | filter : category.name'>
+        <div class="col-lg-4"  ng-repeat ='template in templates | categoryFilter : category.name'>
             <div class="thumb-block" ng-mouseover="onMouseOver($event)">
                 <div class="thumb-img">
                   <span class="btn_template-img-over">
