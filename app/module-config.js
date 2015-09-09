@@ -6,7 +6,7 @@
  */
 (function(angular){
 
-	angular.module('vendor',['ui.router','restangular', 'validation','validation.rule','ui.select2']);
+	angular.module('vendor',['ui.router','restangular', 'validation','validation.rule','ui.select2','ngSanitize']);
 
 	angular.module('common',['vendor']);
 	
@@ -22,6 +22,8 @@
 
 	angular.module('subheader',['header']);
 
-	angular.module('microsite',['home','overview','common','design','header','subheader']);
+	angular.module('editor',['common']);
+
+	angular.module('microsite',['home','overview','common','design','header','subheader','editor']);
 
 })(angular);

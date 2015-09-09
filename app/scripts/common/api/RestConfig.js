@@ -10,5 +10,6 @@
 		RestangularProvider.setBaseUrl('http://localhost/MicroS/');
 		
 
+
 	}]);
 })(angular);

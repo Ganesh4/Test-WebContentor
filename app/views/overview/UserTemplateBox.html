@@ -12,16 +12,15 @@
               <wc-on-off-button is-hidden = "isHidden"></wc-on-off-button>
         </div> 
     </div> 
-{{template}}
     <!-- thumb-category -->
     <div class="row" ng-if = "category.name != 'featured'" ng-hide = "isHidden">
-        <div class="col-lg-4"  ng-repeat ='template in templates | filter : category.name'>
+        <div class="col-lg-4"  ng-repeat ='template in templates | categoryFilter : category.name'>
             <div class="thumb-block" ng-mouseover="onMouseOver($event)">
                 <div class="thumb-img">
                   <span class="btn_template-img-over">
-                  <a ui-sref="#">Preview</a>
-                  <a ui-sref="#">Edit</a></span> 
-                	<img ng-src="{{template.screenShot.url}}">
+                  <a ui-sref="preview" target="_blank">Preview</a>
+                  <a ui-sref="editor" target="_blank">Edit</a></span> 
+                	<img ng-src="{{template.screenShot.url}}"/>
               </div>
                  
                 <div class="thumb-innr">
@@ -31,8 +30,9 @@
                   <p class="thumb-desc">{{template.description}}
                   </p>
                   <div class="thumb-info">
-                    <span class="revision">Revision:{{template.revision}}</span>
-                    <span class="age">Age:5 days ago</span>
+                    <span class="revision">Revision:1</span>
+                    <span class="age">{{template.createdDate | DateFilter}}</span>
+
                   </div>
                   <span class="btn_view-more">
                     <a ui-sref = "home.design.detail">View More</a>
@@ -69,8 +69,8 @@
             <div class="thumb-block" ng-mouseover="onMouseOver($event)">
                 <div class="thumb-img">
                   <span class="btn_template-img-over">
-                  <a ui-sref="#">Preview</a>
-                  <a ui-sref="#">Edit</a></span> 
+                  <a ui-sref="preview" target="_blank">Preview</a>
+                  <a ui-sref="editor" target="_blank">Edit</a></span> 
                   <img ng-src="{{template.screenshots}}">
               </div>
                   
@@ -81,8 +81,8 @@
                   <p class="thumb-desc">{{template.description}}
                   </p>
                   <div class="thumb-info">
-                    <span class="revision">Revision:{{template.revision}}</span>
-                    <span class="age">Age:5 days ago</span>
+                    <span class="revision">Revision:1</span>
+                    <span class="age">Age:{{template.createdDate | DateFilter}}</span>
                   </div>
                   <span class="btn_view-more">
                     <a ui-sref = "home.design.detail">View More</a>

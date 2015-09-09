@@ -55,6 +55,7 @@
 							OverviewApiSrv.getCategoriesDesigns(value.name,{
            						filter : scope.filter
            					},function(data){
+           						console.log('Data -------  ' , data.plain());
 								_.each(data.plain(),function(value,key){
 									scope.templates.push(value);
 								});
