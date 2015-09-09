@@ -19,7 +19,7 @@ angular.module('overview').controller('OverviewCtrl',
 			$scope.templateType = ''; 
 			$scope.templateData = [];
 			$scope.categories = [];
-			$scope.selectedTemplate = {};
+			//$scope.selectedTemplate = {};
 			
 			$scope.filter = {
 				size : 3, 
@@ -28,11 +28,7 @@ angular.module('overview').controller('OverviewCtrl',
 				sortBy : 'ASC'
 			};
 
-			$scope.selectTemplate = function(data){
-				$scope.selectedTemplate = data.template; 
-				console.log('Selected Template ------------ ',$scope.selectedTemplate);
-				$state.go('home.design.detail');
-			}
+			
 		}
 	]);
 })(angular);

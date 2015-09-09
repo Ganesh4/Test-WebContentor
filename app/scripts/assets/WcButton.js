@@ -2,17 +2,19 @@
 
 (function(angular){
 
-angular.module('microsite').directive('wcButton',function(){
+angular.module('common').directive('wcButton',function(){
 		return{
 			restrict:'AE',
-			templateUrl:'./views/commons/buttons/button.html',                
-			controller:('toggelCtrl',['$scope'],function($scope){
-				$scope.IsHidden = false;
-					$scope.ShowHide = function () {
-					//If DIV is hidden it will be visible and vice versa.
-					$scope.IsHidden = $scope.IsHidden ? false : true;
-	    	 }    
-		  })
+			templateUrl:'./views/commons/buttons/viewbutton.html',                
+			scope:{
+				selectedTemplate : '=',
+				selectTemplate : '&'
+			},
+			link:function(scope,elem,attrs){
+				console.log("Scope is ------------- ",scope.selectTemplate);
+				
+			}
+
 	  };
   });
 })(angular);

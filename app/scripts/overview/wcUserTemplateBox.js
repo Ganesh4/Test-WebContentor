@@ -15,7 +15,7 @@
 
             restrict:'AE',
             templateUrl:'./views/overview/UserTemplateBox.html',
-           // controller : 'TemplateBoxCtrl',
+           controller : 'TemplateBoxCtrl',
             scope : {
             	templateType : '=',
             	categories : '='
@@ -54,7 +54,7 @@
            				
            			});
            		}
-               scope.selectTemplate = scope.$parent.selectTemplate;
+              scope.selectTemplate = scope.selectTemplate;
             }
 
         }
