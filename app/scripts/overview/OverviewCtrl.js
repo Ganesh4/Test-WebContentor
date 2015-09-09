@@ -14,6 +14,8 @@ angular.module('overview').controller('OverviewCtrl',
 		function($scope,$state, Restangular, OverviewApiSrv,CommonSrv){
 			$scope.subheader = $scope.$parent.subheader;
 			$scope.subheader.title = 'Overview';
+			//$scope.subheader.breadcrumb = ['home','overview'];
+			 console.log('Subheader Data ---------------- ',$scope.subheader);
 			$scope.isHidden = false;   
 			$scope.templates = [];
 			$scope.templateType = ''; 

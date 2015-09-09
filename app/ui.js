@@ -19,7 +19,16 @@
             }).state('home.overview', {
                 url: '/overview',
                 templateUrl:"views/overview/overview.html",
-                controller:'OverviewCtrl'
+                controller:'OverviewCtrl',
+                data : {
+                    breadcrumbs : {
+                        doNotShow : false,
+                        doNoteStore : false,
+                        name : 'overview',
+                        reset : true,
+                        path : '/overview'
+                     }
+                }
             }).state('home.dashboard', {
                 url: '/dashboard',
                 templateUrl:'views/overview/overview.html'
@@ -34,6 +43,15 @@
                 url:'/detail',
                 templateUrl:'views/design/DesignDetail.html',
                 controller:'DesignDetailCtrl',
+                 data : {
+                  breadcrumbs : {
+                  doNotShow : false,
+                  doNoteStore : false,
+                  name : 'detail',
+                  reset : true,
+                  path : '/detail'
+            }
+        } 
             }).state('home.design.upload', {
                 url:'/upload',
                 templateUrl:'views/design/DesignUpload.html',
