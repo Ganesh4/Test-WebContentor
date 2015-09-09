@@ -30,11 +30,12 @@
                   <p class="thumb-desc">{{template.description}}
                   </p>
                   <div class="thumb-info">
-                    <span class="revision">Revision:{{template.revision}}</span>
-                    <span class="age">Age:{{template.date}} days ago</span>
+                    <span class="revision">Revision:1</span>
+                    <span class="age">{{template.createdDate | DateFilter}}</span>
+
                   </div>
                   <span class="btn_view-more">
-                    <a ui-sref = "home.design.detail">View More</a>
+                    <a ng-click = "selectTemplate(this)">View More</a>
                   </span>
                 </div>
             </div>
@@ -80,8 +81,8 @@
                   <p class="thumb-desc">{{template.description}}
                   </p>
                   <div class="thumb-info">
-                    <span class="revision">Revision:{{template.revision}}</span>
-                    <span class="age">Age:5 days ago</span>
+                    <span class="revision">Revision:1</span>
+                    <span class="age">Age:{{template.createdDate | DateFilter}}</span>
                   </div>
                   <span class="btn_view-more">
                     <a ui-sref = "home.design.detail">View More</a>

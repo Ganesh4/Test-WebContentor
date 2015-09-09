@@ -19,48 +19,44 @@
             scope : {
             	templateType : '=',
             	categories : '='
+            
             },
             link : function(scope, elem, attrs){
-  				console.log('Templates ---------  ' ,  attrs.templateType);
+  			
            		var type = attrs.templateType;
            		if(type == 'userTemplates'){
            			OverviewApiSrv.getCategoriesDesigns('userTemplates',function(data){
            				scope.templates = data.plain();
-						scope.templateType = 'User Created';
-						
-					});
+						      scope.templateType = 'User Created';
+						   	});
            		}else if(type == 'featured'){
            			
            			OverviewApiSrv.getCategoriesDesigns('featured',function(data){
            				scope.categories = [];
            				scope.categories.push({name: 'featured'});
            				scope.templates = data.plain();
-						scope.templateType = 'Featured';
-
-						
-					});
+						      scope.templateType = 'Featured';
+      					});
 
            		}else if(type = "categoryTemplates"){
            			CommonSrv.getDesignCategories(function(response){
            				scope.categories = response.plain();
-           				console.log('Category ----------- ',scope.categories);
-
            				scope.templates = [];
            				_.each(scope.categories,function(value,key){
-           					//Getting templates from  category 
-							OverviewApiSrv.getCategoriesDesigns(value.name,function(data){
-								console.log("Category --------------------- ",value.name);
-								console.log('Design ----------- ',data.plain());
-								_.each(data.plain(),function(value,key){
-									scope.templates.push(value);
-								});
-							});
+                 		//Getting templates from  category 
+      							OverviewApiSrv.getCategoriesDesigns(value.name,function(data){
+      								_.each(data.plain(),function(value,key){
+      									scope.templates.push(value);
+      								});
+      							});
 
            				});
            				
            			});
            		}
+               scope.selectTemplate = scope.$parent.selectTemplate;
             }
+
         }
     }]);
 })(angular);
