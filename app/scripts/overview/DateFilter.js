@@ -12,9 +12,9 @@ angular.module('overview').filter('DateFilter', function() {
             var days = Math.floor(hours / 24);
             var months = Math.floor(days / 12);
             console.log('months --- ',months,'days -')
-            if(months == 0){
-                if(days == 0){
-                    if(hours == 0){
+            if(months <= 0){
+                if(days <= 0){
+                    if(hours <= 0){
                        return "Just Now";
                     }else{
                         return  hours + " hours ago";
