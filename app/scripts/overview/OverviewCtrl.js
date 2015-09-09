@@ -29,6 +29,22 @@ angular.module('overview').controller('OverviewCtrl',
 				page : 1,
 				sortBy : 'ASC'
 			};
+
+			$scope.btns = [
+				{
+					name : 'Category',
+					btnType : 'select',
+					templateUrl : 'views/assets/select.html',
+					data : [{label: 'All Templates'},{label: 'None'}]
+				},
+				{
+					name : 'Age',
+					btnType : 'select',
+					templateUrl : 'views/assets/select.html',
+					data : [{label: 'Age'},{label: 'None'}]
+				}
+
+			];
 		}
 	]);
 })(angular);

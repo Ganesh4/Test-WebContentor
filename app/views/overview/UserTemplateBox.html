@@ -86,7 +86,8 @@
                     <span class="age">Age:{{template.createdDate | DateFilter}}</span>
                   </div>
                   <span class="btn_view-more">
-                    <a ui-sref = "home.design.detail">View More</a>
+                   <!-- <a ui-sref = "home.design.detail">View More</a>-->
+                   <wc-button ng-click = "selectTemplate(this)"></wc-button>
                   </span>
                 </div>
             </div>
