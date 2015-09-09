@@ -20,9 +20,10 @@
             	templateType : '=',
             	categories : '=',
             	filter : '=',
+            
             },
             link : function(scope, elem, attrs){
-  				console.log('Templates ---------  ' ,  attrs.templateType);
+  			
            		var type = attrs.templateType;
            		if(type == 'userTemplates'){
            			OverviewApiSrv.getUserDesigns(1,{
@@ -30,7 +31,7 @@
            			},function(data){
            				if(data){
 	           				scope.templates = data.plain();
-							scope.templateType = 'User Created';
+						    scope.templateType = 'User Created';
 						}
 					});
            		}else if(type == 'featured'){
@@ -47,8 +48,6 @@
            		}else if(type = "categoryTemplates"){
            			CommonSrv.getDesignCategories(function(response){
            				scope.categories = response.plain();
-           				console.log('Category ----------- ',scope.categories);
-
            				scope.templates = [];
            				_.each(scope.categories,function(value,key){
            					//Getting templates from  category 
@@ -65,7 +64,9 @@
            				
            			});
            		}
+               scope.selectTemplate = scope.$parent.selectTemplate;
             }
+
         }
     }]);
 })(angular);
