@@ -11,7 +11,7 @@ angular.module('common').directive('wcButton',function(){
 				selectTemplate : '&'
 			},
 			link:function(scope,elem,attrs){
-				console.log("Scope is ------------- ",scope.selectTemplate);
+				//console.log("Scope is ------------- ",scope.selectTemplate);
 				
 			}
 

@@ -13,8 +13,8 @@
 			
 			$scope.selectTemplate = function(data){
 				$scope.selectedTemplate = data.template; 
-				console.log('Selected Template ------------ ',$scope.selectedTemplate);
-				//$state.go('home.design.detail');
+				CommonSrv.template = $scope.selectedTemplate;
+				$state.go('home.design.detail');
 			}
       		
 		}]);
