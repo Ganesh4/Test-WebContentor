@@ -42,7 +42,7 @@
             $stateProvider.state('editor', {
                 url:'/editor',
                 templateUrl:'views/editor/TemplateEdit.html',
-                
+                controller:'TemplateEditCtrl',
             }).state('preview', {
                 url:'/preview',
                 templateUrl:'views/editor/TemplatePreview.html',

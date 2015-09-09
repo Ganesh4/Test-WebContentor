@@ -19,8 +19,8 @@ angular.module('overview').service('OverviewApiSrv',
 
 	 			Restangular.one(userId.toString()).customGET('designs', params).then(success);
 	 		}
-	 		self.getCategoriesDesigns = function(categoryName, success, error){
-	 			Restangular.one('categories',categoryName).all('designs').getList().then(success);
+	 		self.getCategoriesDesigns = function(categoryName, params, success, error){
+	 			Restangular.one('categories',categoryName).all('designs').getList(params).then(success);
 	 		}
 	 	}
 	])

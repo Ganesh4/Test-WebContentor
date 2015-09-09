@@ -6,7 +6,7 @@
  */
 (function(angular){
 
-	angular.module('vendor',['ui.router','restangular', 'validation','validation.rule','ui.select2']);
+	angular.module('vendor',['ui.router','restangular', 'validation','validation.rule','ui.select2','ngSanitize']);
 
 	angular.module('common',['vendor']);
 	

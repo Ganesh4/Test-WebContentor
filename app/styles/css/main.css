@@ -444,13 +444,14 @@ footer .text-left {
   height: auto;
   float: left;
   /*margin: 5px 8px;*/
+  margin-bottom: 20px;
 }
-/* line 14, ../sass/global/_template-thumbs.scss */
+/* line 15, ../sass/global/_template-thumbs.scss */
 .thumb-block:hover .btn_template-img-over {
   display: block;
   background: rgba(255, 255, 255, 0.7);
 }
-/* line 18, ../sass/global/_template-thumbs.scss */
+/* line 19, ../sass/global/_template-thumbs.scss */
 .thumb-block .title {
   width: 100%;
   font-size: 1.3em;
@@ -458,14 +459,14 @@ footer .text-left {
   padding: 5px 0;
 }
 
-/* line 25, ../sass/global/_template-thumbs.scss */
+/* line 26, ../sass/global/_template-thumbs.scss */
 .thumb-innr {
   padding: 10px 15px 10px;
   float: left;
   width: 100%;
 }
 
-/* line 30, ../sass/global/_template-thumbs.scss */
+/* line 31, ../sass/global/_template-thumbs.scss */
 .thumb-img {
   height: 280px;
   /*	background-image: url(../../images/img_1.gif);
@@ -477,7 +478,7 @@ footer .text-left {
   position: relative;
   cursor: pointer;
 }
-/* line 43, ../sass/global/_template-thumbs.scss */
+/* line 44, ../sass/global/_template-thumbs.scss */
 .thumb-img img {
   width: 100%;
   height: auto;
@@ -486,37 +487,37 @@ footer .text-left {
      }	*/
 }
 
-/* line 52, ../sass/global/_template-thumbs.scss */
+/* line 53, ../sass/global/_template-thumbs.scss */
 .thumb-desc {
   font-size: 0.9em;
 }
 
-/* line 55, ../sass/global/_template-thumbs.scss */
+/* line 56, ../sass/global/_template-thumbs.scss */
 .thumb-info {
   width: 100%;
   float: left;
   padding: 5px 0;
 }
-/* line 60, ../sass/global/_template-thumbs.scss */
+/* line 61, ../sass/global/_template-thumbs.scss */
 .thumb-info .info-text-size, .thumb-info .revision, .thumb-info .age {
   font-size: 0.9em;
 }
-/* line 63, ../sass/global/_template-thumbs.scss */
+/* line 64, ../sass/global/_template-thumbs.scss */
 .thumb-info .revision {
   float: left;
 }
-/* line 67, ../sass/global/_template-thumbs.scss */
+/* line 68, ../sass/global/_template-thumbs.scss */
 .thumb-info .age {
   float: right;
 }
 
-/* line 72, ../sass/global/_template-thumbs.scss */
+/* line 73, ../sass/global/_template-thumbs.scss */
 .bg-text-color, .btn_view-more a:hover, .btn_load-templates a:hover, .btn_template-img-over a:hover {
   color: #8b8a8a;
   background-color: #eee;
 }
 
-/* line 76, ../sass/global/_template-thumbs.scss */
+/* line 77, ../sass/global/_template-thumbs.scss */
 .btn_view-more {
   width: 100%;
   display: block;
@@ -525,7 +526,7 @@ footer .text-left {
   text-align: center;
   font-size: 0.9em;
 }
-/* line 84, ../sass/global/_template-thumbs.scss */
+/* line 85, ../sass/global/_template-thumbs.scss */
 .btn_view-more a {
   padding: 5px 10px;
   border: 1px solid #000;
@@ -533,21 +534,21 @@ footer .text-left {
   text-decoration: none;
 }
 
-/* line 95, ../sass/global/_template-thumbs.scss */
+/* line 96, ../sass/global/_template-thumbs.scss */
 .thumb-stats-view {
   border-top: 1px solid #000;
   width: 100%;
   float: left;
 }
 
-/* line 100, ../sass/global/_template-thumbs.scss */
+/* line 101, ../sass/global/_template-thumbs.scss */
 .thumb-graph-wrap {
   float: left;
   width: 100%;
   padding: 5px 0 15px;
 }
 
-/* line 105, ../sass/global/_template-thumbs.scss */
+/* line 106, ../sass/global/_template-thumbs.scss */
 .thumb-graph {
   width: 45%;
   float: left;
@@ -556,18 +557,18 @@ footer .text-left {
   background-repeat: no-repeat;
 }
 
-/* line 112, ../sass/global/_template-thumbs.scss */
+/* line 113, ../sass/global/_template-thumbs.scss */
 .thumb-graph-details {
   width: 45%;
   float: right;
 }
-/* line 116, ../sass/global/_template-thumbs.scss */
+/* line 117, ../sass/global/_template-thumbs.scss */
 .thumb-graph-details p {
   font-size: 0.9em;
   margin: 5px 0;
 }
 
-/* line 121, ../sass/global/_template-thumbs.scss */
+/* line 122, ../sass/global/_template-thumbs.scss */
 .thumb-category {
   width: 100%;
   border-bottom: 1px dashed #000;
@@ -575,23 +576,23 @@ footer .text-left {
   margin-bottom: 10px;
   float: left;
 }
-/* line 128, ../sass/global/_template-thumbs.scss */
+/* line 129, ../sass/global/_template-thumbs.scss */
 .thumb-category .thumb-category-title {
   font-size: 1.4em;
   float: left;
 }
-/* line 132, ../sass/global/_template-thumbs.scss */
+/* line 133, ../sass/global/_template-thumbs.scss */
 .thumb-category .right-elements {
   float: right;
   width: 160px;
 }
 
-/* line 138, ../sass/global/_template-thumbs.scss */
+/* line 139, ../sass/global/_template-thumbs.scss */
 .content-padding .thumb-category:first-child {
   padding: 10px 0;
 }
 
-/* line 143, ../sass/global/_template-thumbs.scss */
+/* line 144, ../sass/global/_template-thumbs.scss */
 .btn_view-all {
   width: 50%;
   display: block;
@@ -600,28 +601,28 @@ footer .text-left {
   text-align: center;
   font-size: 0.9em;
 }
-/* line 151, ../sass/global/_template-thumbs.scss */
+/* line 152, ../sass/global/_template-thumbs.scss */
 .btn_view-all a {
   text-decoration: underline;
 }
-/* line 154, ../sass/global/_template-thumbs.scss */
+/* line 155, ../sass/global/_template-thumbs.scss */
 .btn_view-all a:hover {
   text-decoration: none;
 }
 
-/* line 159, ../sass/global/_template-thumbs.scss */
+/* line 160, ../sass/global/_template-thumbs.scss */
 .btn_load-templates {
   width: 400px;
   margin: 20px auto 10px;
   text-align: center;
   border: 1px solid #000;
 }
-/* line 165, ../sass/global/_template-thumbs.scss */
+/* line 166, ../sass/global/_template-thumbs.scss */
 .btn_load-templates a {
   padding: 8px 0;
   display: block;
 }
-/* line 169, ../sass/global/_template-thumbs.scss */
+/* line 170, ../sass/global/_template-thumbs.scss */
 .btn_load-templates a:hover {
   text-decoration: none;
 }
@@ -637,7 +638,7 @@ footer .text-left {
 
 /* line 10, ../sass/global/_upload-template.scss */
 .upload-inner {
-  width: 60%;
+  width: 80%;
   float: left;
   /*border: 1px solid #000;*/
   /*padding:3% 15% 20px 30px;*/
@@ -647,6 +648,19 @@ footer .text-left {
 .upload-inner .thumb-category-title {
   text-align: center;
   margin-bottom: 30px;
+}
+
+/* line 22, ../sass/global/_upload-template.scss */
+.select2-container {
+  width: 100%;
+}
+
+/* line 27, ../sass/global/_upload-template.scss */
+.select2-container-multi .select2-choices {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 /* Scss Document */
