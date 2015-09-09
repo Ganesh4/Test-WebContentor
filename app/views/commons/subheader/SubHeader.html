@@ -2,9 +2,9 @@
       <div class="common-headng-wrap">
 
         <h2 class="common-headng">{{subheader.title}}</h2>
-       <div ng-repeat = "title in subheader.breadcrumb"> 
-          <h6><a href="{{breadcrumb.path}}"> {{title}} </a></h6>
-        </div>
+       
+         <ui-breadcrumbs displayname-property="data.displayName" abstract-proxy-property="data.proxy" template-url="views/assets/uiBreadcrumbs.tpl.html"></ui-breadcrumbs>
+       
       </div>
       <div class="shortout-wrap">
         <select>

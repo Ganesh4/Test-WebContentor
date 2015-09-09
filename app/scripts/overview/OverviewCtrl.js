@@ -11,6 +11,7 @@ angular.module('overview').controller('OverviewCtrl',
 		'Restangular',
 		'OverviewApiSrv',
 		'CommonSrv',
+		
 		function($scope,$state, Restangular, OverviewApiSrv,CommonSrv){
 			$scope.subheader = $scope.$parent.subheader;
 			$scope.subheader.title = 'Overview';
@@ -23,6 +24,8 @@ angular.module('overview').controller('OverviewCtrl',
 			$scope.categories = [];
 			//$scope.selectedTemplate = {};
 			
+
+			console.log('breadcrumbs ------------ ',$scope.breadcrumb)
 			$scope.filter = {
 				size : 3, 
 				orderBy : 'createdDate',
