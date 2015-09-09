@@ -15,6 +15,9 @@ angular.module('microsite').controller('HomeCtrl',
             title : 'Overview',
             //APPLY_BTN : 'refresh' 
             } 
+
+            $scope.btns = [];
+            
             $scope.reload = function(){
                 //$scope.$event = $state.current; 
                 console.log('state ------------ ',$state);
