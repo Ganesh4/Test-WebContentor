@@ -13,8 +13,12 @@ angular.module('microsite').controller('HomeCtrl',
 
             $scope.subheader ={
             title : 'Overview',
+           // breadcrumb : ['home','overview']
             //APPLY_BTN : 'refresh' 
             } 
+
+            $scope.btns = [];
+            
             $scope.reload = function(){
                 //$scope.$event = $state.current; 
                 console.log('state ------------ ',$state);

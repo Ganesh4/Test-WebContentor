@@ -15,11 +15,20 @@
             $stateProvider.state('home', {
                 url: '/home',
                 templateUrl:'views/home/home.html',
-                controller:'HomeCtrl'
+                controller:'HomeCtrl',
+              data: {
+                      displayName: false
+                    }
+
+
             }).state('home.overview', {
                 url: '/overview',
                 templateUrl:"views/overview/overview.html",
-                controller:'OverviewCtrl'
+                controller:'OverviewCtrl',
+                data: {
+                     displayName: 'overview',
+                }
+                
             }).state('home.dashboard', {
                 url: '/dashboard',
                 templateUrl:'views/overview/overview.html'
@@ -28,21 +37,29 @@
                 url: '/design',
                 template:'<ui-view></ui-view>',
                 data: {
-                    tags:['Iteractive User Interface', 'Parrallex Design', 'Entertainment', 'Music']
+                    tags:['Iteractive User Interface', 'Parrallex Design', 'Entertainment', 'Music'],                 
+                     displayName :'design' 
                 },              
             }).state('home.design.detail', {
                 url:'/detail',
                 templateUrl:'views/design/DesignDetail.html',
                 controller:'DesignDetailCtrl',
+                data: {
+                     displayName: 'detail',
+                }
+        
             }).state('home.design.upload', {
                 url:'/upload',
                 templateUrl:'views/design/DesignUpload.html',
                 controller:'DesignCtrl',
+                 data: {
+                     displayName: 'upload',
+                }
             });
             $stateProvider.state('editor', {
                 url:'/editor',
                 templateUrl:'views/editor/TemplateEdit.html',
-                
+                controller:'TemplateEditCtrl',
             }).state('preview', {
                 url:'/preview',
                 templateUrl:'views/editor/TemplatePreview.html',

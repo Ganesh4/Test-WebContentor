@@ -6,9 +6,9 @@
  */
 (function(angular){
 
-	angular.module('vendor',['ui.router','restangular', 'validation','validation.rule','ui.select2']);
+	angular.module('vendor',['ui.router','restangular', 'validation','validation.rule','ui.select2','ngSanitize']);
 
-	angular.module('common',['vendor']);
+	angular.module('common',['vendor','angularUtils.directives.uiBreadcrumbs']);
 	
 	angular.module('home',['common']);
 

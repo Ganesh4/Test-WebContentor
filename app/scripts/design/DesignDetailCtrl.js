@@ -11,7 +11,9 @@ angular.module('design').controller('DesignDetailCtrl',
 		'CommonSrv',
 		function($scope, Restangular, OverviewApiSrv, CommonSrv){
 			$scope.subheader.title = 'Design Details';
-			console.log('Selected Template -------------- ',$scope);
+			//$scope.subheader.breadcrumb = ['overview','Design Details'];
+			console.log('Selected Template -------------- ',CommonSrv.template);
+			$scope.template = CommonSrv.template;
 			
 					
 		}

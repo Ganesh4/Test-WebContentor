@@ -15,46 +15,56 @@
 
             restrict:'AE',
             templateUrl:'./views/overview/UserTemplateBox.html',
-           // controller : 'TemplateBoxCtrl',
+           controller : 'TemplateBoxCtrl',
             scope : {
             	templateType : '=',
-            	categories : '='
+            	categories : '=',
+            	filter : '=',
             
             },
             link : function(scope, elem, attrs){
   			
            		var type = attrs.templateType;
            		if(type == 'userTemplates'){
-           			OverviewApiSrv.getCategoriesDesigns('userTemplates',function(data){
-           				scope.templates = data.plain();
-						      scope.templateType = 'User Created';
-						   	});
+           			OverviewApiSrv.getUserDesigns(1,{
+           				filter : scope.filter
+           			},function(data){
+           				if(data){
+	           				scope.templates = data.plain();
+						    scope.templateType = 'User Created';
+						}
+					});
            		}else if(type == 'featured'){
            			
-           			OverviewApiSrv.getCategoriesDesigns('featured',function(data){
+           			OverviewApiSrv.getCategoriesDesigns('featured',{
+           				filter : scope.filter
+           			},function(data){
            				scope.categories = [];
            				scope.categories.push({name: 'featured'});
            				scope.templates = data.plain();
-						      scope.templateType = 'Featured';
-      					});
+						scope.templateType = 'Featured';
+					});
 
            		}else if(type = "categoryTemplates"){
            			CommonSrv.getDesignCategories(function(response){
            				scope.categories = response.plain();
            				scope.templates = [];
            				_.each(scope.categories,function(value,key){
-                 		//Getting templates from  category 
-      							OverviewApiSrv.getCategoriesDesigns(value.name,function(data){
-      								_.each(data.plain(),function(value,key){
-      									scope.templates.push(value);
-      								});
-      							});
+           					//Getting templates from  category 
+							OverviewApiSrv.getCategoriesDesigns(value.name,{
+           						filter : scope.filter
+           					},function(data){
+           						console.log('Data -------  ' , data.plain());
+								_.each(data.plain(),function(value,key){
+									scope.templates.push(value);
+								});
+							});
 
            				});
            				
            			});
            		}
-               scope.selectTemplate = scope.$parent.selectTemplate;
+              scope.selectTemplate = scope.selectTemplate;
             }
 
         }

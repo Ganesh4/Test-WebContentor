@@ -11,16 +11,21 @@ angular.module('overview').controller('OverviewCtrl',
 		'Restangular',
 		'OverviewApiSrv',
 		'CommonSrv',
+		
 		function($scope,$state, Restangular, OverviewApiSrv,CommonSrv){
 			$scope.subheader = $scope.$parent.subheader;
 			$scope.subheader.title = 'Overview';
+			//$scope.subheader.breadcrumb = ['home','overview'];
+			 console.log('Subheader Data ---------------- ',$scope.subheader);
 			$scope.isHidden = false;   
 			$scope.templates = [];
 			$scope.templateType = ''; 
 			$scope.templateData = [];
 			$scope.categories = [];
-			$scope.selectedTemplate = {};
+			//$scope.selectedTemplate = {};
 			
+
+			console.log('breadcrumbs ------------ ',$scope.breadcrumb)
 			$scope.filter = {
 				size : 3, 
 				orderBy : 'createdDate',
@@ -28,11 +33,21 @@ angular.module('overview').controller('OverviewCtrl',
 				sortBy : 'ASC'
 			};
 
-			$scope.selectTemplate = function(data){
-				$scope.selectedTemplate = data.template; 
-				console.log('Selected Template ------------ ',$scope.selectedTemplate);
-				$state.go('home.design.detail');
-			}
+			$scope.btns = [
+				{
+					name : 'Category',
+					btnType : 'select',
+					templateUrl : 'views/assets/select.html',
+					data : [{label: 'All Templates'},{label: 'None'}]
+				},
+				{
+					name : 'Age',
+					btnType : 'select',
+					templateUrl : 'views/assets/select.html',
+					data : [{label: 'Age'},{label: 'None'}]
+				}
+
+			];
 		}
 	]);
 })(angular);
