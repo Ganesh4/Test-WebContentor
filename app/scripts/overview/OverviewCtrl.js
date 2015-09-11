@@ -25,14 +25,13 @@ angular.module('overview').controller('OverviewCtrl',
 				size : 3, 
 				orderBy : 'createdDate',
 				page : 1,
-				sortBy : 'ASC'
+				sortBy : 'DESC'
 			};
 
 			$scope.selectTemplate = function(data){
 				$scope.selectedTemplate = data.template; 
-				console.log('Selected Template ------------ ',$scope.selectedTemplate);
 				$state.go('home.design.detail');
-		}
+			}
 		}
 	]);
 })(angular);

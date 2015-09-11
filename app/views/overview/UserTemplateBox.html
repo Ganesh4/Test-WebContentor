@@ -20,7 +20,7 @@
                   <span class="btn_template-img-over">
                   <a ui-sref="preview" target="_blank">Preview</a>
                   <a ui-sref="editor" target="_blank">Edit</a></span> 
-                	<img ng-src="{{template.screenShot.url}}"/>
+                	<img ng-src="{{template.screenShot.url | trusted}}"/>
               </div>
                  
                 <div class="thumb-innr">

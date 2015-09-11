@@ -8,7 +8,14 @@
     angular.module('microsite').config([
         '$stateProvider',
         '$urlRouterProvider',
-        function ($stateProvider, $urlRouterProvider) {
+        '$sceDelegateProvider',
+        function ($stateProvider, $urlRouterProvider , $sceDelegateProvider) {
+            $sceDelegateProvider.resourceUrlWhitelist([
+                // Allow same origin resource loads.
+                'self',
+                // Allow loading from outer templates domain.
+                'https://s3.amazonaws.com/webcontentor-microsite/**'
+            ]); 
             // For any unmatched url, redirect to /state1
             $urlRouterProvider.otherwise("/home/overview");
             // Now set up the states
@@ -40,7 +47,7 @@
                 controller:'DesignCtrl',
             });
             $stateProvider.state('editor', {
-                url:'/editor',
+                url:'/editor/{template.id}',
                 templateUrl:'views/editor/TemplateEdit.html',
                 controller:'TemplateEditCtrl',
             }).state('preview', {

@@ -6,10 +6,6 @@
 	'$stateProvider',
 	'RestangularProvider',
 	function($urlProvider, $stateProvider, RestangularProvider){
-		
 		RestangularProvider.setBaseUrl('http://localhost/MicroS/');
-		
-
-
 	}]);
 })(angular);

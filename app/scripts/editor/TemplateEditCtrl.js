@@ -6,9 +6,17 @@
 	angular.module('editor').controller('TemplateEditCtrl',
 		[
 			'$scope',
-			function($scope){
-				$scope.url = 'https://s3.amazonaws.com/webcontentor-microsite/microsite/index.html';
-				
+			'Restangular',
+			'$http',
+			function($scope,Restangular,$http){
+				$scope.url = 'https://s3.amazonaws.com/webcontentor-microsite/microsite/index.xml';
+				var request = $http({
+					method: "get",
+					url: $scope.url,
+				});
+				request.then(function(data){
+					console.log(data);
+				});
 			}
 		]
 )})(angular);
