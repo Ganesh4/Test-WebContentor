@@ -11,15 +11,19 @@ angular.module('overview').controller('OverviewCtrl',
 		'Restangular',
 		'OverviewApiSrv',
 		'CommonSrv',
+		
 		function($scope,$state, Restangular, OverviewApiSrv,CommonSrv){
 			$scope.subheader = $scope.$parent.subheader;
 			$scope.subheader.title = 'Overview';
+			//$scope.subheader.breadcrumb = ['home','overview'];
+			
 			$scope.isHidden = false;   
 			$scope.templates = [];
 			$scope.templateType = ''; 
 			$scope.templateData = [];
 			$scope.categories = [];
-			$scope.selectedTemplate = {};
+			//$scope.selectedTemplate = {};
+			// $scope.options = ['1','2'];
 			
 			$scope.filter = {
 				size : 3, 
@@ -28,10 +32,21 @@ angular.module('overview').controller('OverviewCtrl',
 				sortBy : 'DESC'
 			};
 
-			$scope.selectTemplate = function(data){
-				$scope.selectedTemplate = data.template; 
-				$state.go('home.design.detail');
-			}
+			$scope.btns = [
+				{
+					name : 'Category',
+					btnType : 'select',
+					templateUrl : 'views/assets/select.html',
+					data : [{label: 'All Templates'},{label: 'None'}]
+				},
+				{
+					name : 'Age',
+					btnType : 'select',
+					templateUrl : 'views/assets/select.html',
+					data : [{label: 'Age'},{label: 'None'}]
+				}
+
+			];
 		}
 	]);
 })(angular);

@@ -15,7 +15,7 @@
 
             restrict:'AE',
             templateUrl:'./views/overview/UserTemplateBox.html',
-           // controller : 'TemplateBoxCtrl',
+           controller : 'TemplateBoxCtrl',
             scope : {
             	templateType : '=',
             	categories : '=',
@@ -54,7 +54,7 @@
 							OverviewApiSrv.getCategoriesDesigns(value.name,{
            						filter : scope.filter
            					},function(data){
-           						console.log('Data -------  ' , data.plain());
+           				
 								_.each(data.plain(),function(value,key){
 									scope.templates.push(value);
 								});
@@ -64,7 +64,7 @@
            				
            			});
            		}
-               scope.selectTemplate = scope.$parent.selectTemplate;
+              scope.selectTemplate = scope.selectTemplate;
             }
 
         }

@@ -4,7 +4,7 @@
 'use strict';
 
 (function(angular){
-    angular.module('microsite').directive('wcSubHeader',function()
+    angular.module('subheader').directive('wcSubHeader',function()
         {
 
 
@@ -12,10 +12,10 @@
 
                     restrict:'AE',
                     templateUrl:'./views/commons/subheader/SubHeader.html',
-                    controller:('SubHeaderCtrl',['$scope','$state'],function($scope,$state)
-                            {
-                                
-                            })
+                    scope : false,
+                    link : function(scope,elem,attrs){
+                        console.log("Subheader scope ------------- ",scope);
+                    }
 
                 }
         })

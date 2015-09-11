@@ -3,7 +3,7 @@
 'use strict';
 
 (function(angular){
-angular.module('microsite').controller('HomeCtrl',
+angular.module('home').controller('HomeCtrl',
     [
         '$scope',
         '$state',
@@ -13,17 +13,20 @@ angular.module('microsite').controller('HomeCtrl',
 
             $scope.subheader ={
             title : 'Overview',
+           // breadcrumb : ['home','overview']
             //APPLY_BTN : 'refresh' 
             } 
+
+            $scope.btns = [];
+            $scope.options = ['1','2'];
+            console.log("Options in home Ctrl --------------- ",$scope.options)
             $scope.reload = function(){
                 //$scope.$event = $state.current; 
                 console.log('state ------------ ',$state);
                 $state.reload();
                 //console.log('$event',$scope.$event);
             }
-            console.log("===========================");
-            console.log("ApiSrv.accessToken();");
-            console.log("============================");
+           
             ApiSrv.accessToken();
 
             CommonSrv.getDesignCategories(function(response){

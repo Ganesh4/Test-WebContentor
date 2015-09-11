@@ -4,39 +4,45 @@
       
   <ul class="nav nav-pills">
     <li class="active"><a data-toggle="pill" ui-sref="home.design.detail">Details</a></li>
-    <li><a data-toggle="pill" ui-sref="#menu1">Revisions</a></li>
+    <li><a data-toggle="pill" ui-sref="menu1">Revisions</a></li>
     <li><a data-toggle="pill" ui-sref="#menu2">Stats Overview</a></li>
   </ul>
   
   <div class="tab-content">
     <div id="home" class="tab-pane fade in active">
-        <form class="form-horizontal" role="form">        
+        <form class="form-horizontal" role="form">
+        <div class="form-group">
+      <label class="control-label col-sm-2" for="Name">Name:</label>
+      <div class="col-sm-10">
+         <input ng-model="template.name" name="name" class="form-control" placeholder="Name"> 
+        </div>
+      </div>        
           <div class="form-group">
             <label class="control-label col-sm-2" for="Description">Description:</label>
             <div class="col-sm-10">
              <!-- <input type="email" class="form-control" id="email" placeholder="Enter email"> -->
-                <textarea class="form-control" rows="5" id="comment"></textarea>
+                <textarea class="form-control" rows="5" id="comment" ng-model="template.description"></textarea>
               </div>
           </div>
           
           <div class="form-group">
             <label class="control-label col-sm-2" for="Description">Seo Keywords:</label>
             <div class="col-sm-10">
-               <input type="email" class="form-control" id="email" placeholder="Interactive, Microsite, Parrallax, Design">
+               <input type="email" class="form-control" id="seo" placeholder="Interactive, Microsite, Parrallax, Design" ng-model="template.seo.keywords">
               </div>
           </div>
           
           <div class="form-group">
             <label class="control-label col-sm-2" for="Description">Created On:</label>
             <div class="col-sm-10">
-                 <p class="form-control-static">16 July 2015 at 12:00 PM</p>
+                 <p class="form-control-static">{{template.createdDate | date : 'dd/MM/yyyy'}}</p>
               </div>
           </div>
           
           <div class="form-group">
             <label class="control-label col-sm-2" for="Description">Last Updated:</label>
             <div class="col-sm-10">
-                 <p class="form-control-static">Never</p>
+                 <p class="form-control-static">{{template.updatedDate | date : 'dd/MM/yyyy'}}</p>
               </div>
           </div>
           
@@ -80,8 +86,43 @@
       
     </div>
     <div id="menu1" class="tab-pane fade">
-      <h3>Menu 1</h3>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <!-- table data -->
+ <table class="table" >
+    <thead>
+      <tr>
+        <th>Revision Id</th>
+        <th>Message</th>
+        <th>User</th>
+        <th>Date</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>First Commit</td>
+        <td>Admin</td>
+        <td>16 July 2015 13:00 </td>
+        <td><input type="checkbox" value=""></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Second Commit</td>
+        <td>Admin</td>
+        <td>16 July 2015 16:00 </td>
+        <td><input type="checkbox" value=""></td>
+      </tr>
+    </tbody>
+  </table>
+       <!-- table end -->
+ <form class="form-horizontal" role="form" style="float:left; margin-top: 30px;">  
+         <div class="form-group">        
+
+                    <button type="submit" class="btn btn-primary">View Changes</button>
+                    <button type="button" class="btn">Revert</button>
+
+         </div>
+       </form>
     </div>
     <div id="menu2" class="tab-pane fade">
       <h3>Menu 2</h3>

@@ -9,6 +9,7 @@
           <div class="btn_view-all">
             <a ui-sref="#">View all</a>
           </div>
+            
               <wc-on-off-button is-hidden = "isHidden"></wc-on-off-button>
         </div> 
     </div> 
@@ -35,7 +36,8 @@
 
                   </div>
                   <span class="btn_view-more">
-                    <a ng-click = "selectTemplate(this)">View More</a>
+                    <!--<a ng-click = "selectTemplate(this)">View More</a>-->                    
+                    <wc-button ng-click = "selectTemplate(this)"></wc-button>
                   </span>
                 </div>
             </div>
@@ -85,7 +87,8 @@
                     <span class="age">Age:{{template.createdDate | DateFilter}}</span>
                   </div>
                   <span class="btn_view-more">
-                    <a ui-sref = "home.design.detail">View More</a>
+                   <!-- <a ui-sref = "home.design.detail">View More</a>-->
+                   <wc-button ng-click = "selectTemplate(this)"></wc-button>
                   </span>
                 </div>
             </div>
