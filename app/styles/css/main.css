@@ -203,6 +203,14 @@ header {
   font-weight: normal;
 }
 
+/* line 103, ../sass/global/_header.scss */
+.breadcrumb {
+  margin: 7px 0 0 20px;
+  padding: 3px 6px;
+  font-size: 0.9em;
+  float: left;
+}
+
 /* Scss Document */
 /* line 3, ../sass/global/_left-navbar.scss */
 .left-navbar {
