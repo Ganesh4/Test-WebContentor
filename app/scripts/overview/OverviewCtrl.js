@@ -16,16 +16,15 @@ angular.module('overview').controller('OverviewCtrl',
 			$scope.subheader = $scope.$parent.subheader;
 			$scope.subheader.title = 'Overview';
 			//$scope.subheader.breadcrumb = ['home','overview'];
-			 console.log('Subheader Data ---------------- ',$scope.subheader);
+			
 			$scope.isHidden = false;   
 			$scope.templates = [];
 			$scope.templateType = ''; 
 			$scope.templateData = [];
 			$scope.categories = [];
 			//$scope.selectedTemplate = {};
-			
-
-			console.log('breadcrumbs ------------ ',$scope.breadcrumb)
+			// $scope.options = ['1','2'];
+            
 			$scope.filter = {
 				size : 3, 
 				orderBy : 'createdDate',

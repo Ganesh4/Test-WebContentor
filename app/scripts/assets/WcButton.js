@@ -2,7 +2,7 @@
 
 (function(angular){
 
-angular.module('common').directive('wcButton',function(){
+angular.module('assets').directive('wcButton',function(){
 		return{
 			restrict:'AE',
 			templateUrl:'./views/commons/buttons/viewbutton.html',                

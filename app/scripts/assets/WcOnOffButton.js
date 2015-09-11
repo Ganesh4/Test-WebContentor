@@ -3,7 +3,7 @@
  */
 'use strict';
 (function(angular){
-    angular.module('microsite').directive('wcOnOffButton',function(){
+    angular.module('assets').directive('wcOnOffButton',function(){
         return{
             restrict:'AE',
             scope:{

@@ -10,7 +10,9 @@
 
 	angular.module('common',['vendor','angularUtils.directives.uiBreadcrumbs']);
 	
-	angular.module('home',['common']);
+	angular.module('assets',['common']);
+
+	angular.module('home',['common','assets']);
 
 	angular.module('overview',['home']);
    
@@ -20,7 +22,7 @@
 	
 	angular.module('api', ['microsite']);
 
-	angular.module('subheader',['header']);
+	angular.module('subheader',['home']);
 
 	angular.module('editor',['common']);
 
