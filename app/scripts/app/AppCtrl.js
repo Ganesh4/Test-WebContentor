@@ -7,8 +7,7 @@
 			'$scope',
 			'$state',
 			'ApiSrv',
-       		'CommonSrv',
-			function($scope,$state, ApiSrv,CommonSrv){
+       		function($scope,$state, ApiSrv){
 					
 			}
 		]);
