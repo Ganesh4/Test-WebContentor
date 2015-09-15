@@ -64,7 +64,7 @@
                 }
             });
             $stateProvider.state('editor', {
-                url:'/editor/{template.id}',
+                url:'/editor/:userId/:templateId',
                 templateUrl:'views/editor/TemplateEdit.html',
                 controller:'TemplateEditCtrl',
             }).state('preview', {

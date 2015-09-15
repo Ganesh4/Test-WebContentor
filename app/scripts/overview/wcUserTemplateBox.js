@@ -10,7 +10,8 @@
     		'OverviewApiSrv',
     		'CommonSrv',
     		'$timeout',
-    		function(OverviewApiSrv,CommonSrv,$timeout){
+    		'$state',
+    		function(OverviewApiSrv,CommonSrv,$timeout,state){
         return{
 
             restrict:'AE',
@@ -65,8 +66,16 @@
            			});
            		}
               scope.selectTemplate = scope.selectTemplate;
-            }
 
+             //Route to the editor for the selected template.
+			scope.editDesign = function(id){
+				console.log('Edit Design');
+				if(id){
+          			var href = state.go('editor', {'templateId' : id.toString(), 'userId' : '1'}, {absolute: true});
+					//window.open(href, '_blank');
+				}
+			}
+          }
         }
     }]);
 })(angular);
