@@ -30,8 +30,8 @@
            				filter : scope.filter
            			},function(data){
            				if(data){
-	           				scope.templates = data.plain();
-						    scope.templateType = 'User Created';
+	           			  scope.templates = data.plain();
+						        scope.templateType = 'User Created';
 						}
 					});
            		}else if(type == 'featured'){
