@@ -19,8 +19,10 @@
             <div class="thumb-block" ng-mouseover="onMouseOver($event)">
                 <div class="thumb-img">
                   <span class="btn_template-img-over">
+
                   <a ui-sref="app.preview" target="_blank">Preview</a>
-                  <a ui-sref="app.editor" target="_blank">Edit</a></span> 
+                  <a target="_blank"  ng-click="editDesign(template.id)">Edit</a></span> 
+
                 	<img ng-src="{{template.screenShot.url | trusted}}"/>
               </div>
                  
@@ -71,8 +73,10 @@
             <div class="thumb-block" ng-mouseover="onMouseOver($event)">
                 <div class="thumb-img">
                   <span class="btn_template-img-over">
+
                   <a ui-sref="app.preview" target="_blank">Preview</a>
-                  <a ui-sref="app.editor" target="_blank">Edit</a></span> 
+                  <a target="_blank" ng-click="editDesign(template.id)">Edit</a></span> 
+
                   <img ng-src="{{template.screenshots}}">
               </div>
                   

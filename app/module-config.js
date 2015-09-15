@@ -6,7 +6,7 @@
  */
 (function(angular){
 
-	angular.module('vendor',['ui.router','restangular', 'validation','validation.rule','ui.select2','ngSanitize']);
+	angular.module('vendor',['ui.router','restangular', 'validation','validation.rule','ui.select2','ngSanitize','cb.x2js']);
 
 	angular.module('common',['vendor','angularUtils.directives.uiBreadcrumbs']);
 	

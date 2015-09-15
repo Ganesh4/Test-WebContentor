@@ -71,8 +71,9 @@
                      displayName: 'upload',
                 }
             });
+
             $stateProvider.state('app.editor', {
-                url:'/editor/{template.id}',
+                url:'/editor/:userId/:templateId',
                 templateUrl:'views/editor/TemplateEdit.html',
                 controller:'TemplateEditCtrl',
             }).state('app.preview', {
