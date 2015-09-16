@@ -7,18 +7,18 @@
       <li class="{{isAddMenu ? 'btn_active' : ''}}">
         <a ng-click = "showSubMenu('add')" ui-sref-active="btn_active">
         <div>
-        <i class="fa fa-plus-square"></i>
+           <i class="fa fa-plus-square"></i>
         </div>Add
         </a>
 
          <div class="add-submenu" ng-show = "isAddMenu">
         <div class="submenu-block">
          <div class="submenu-header">
-           <h3 class="heading-top">Add Content</h3>
+           <h3 class="heading-top" >{{title}}</h3>
          </div>
          <div class="submenu-leftnav">
            <ul>
-             <li ng-repeat = "item in subMenu"><a href="#">{{item.name}}</a></li>
+             <li ng-repeat = "item in subMenu"><a ui-sref="#">{{item.name}}</a></li>
              
            </ul>
          </div>         
@@ -26,7 +26,7 @@
       </div>
     </div>
     </li>
-    <li><a  ng-click="showSubMenu('section')" ui-sref-active="btn_active">Section</a></li>    
+    <li><a ng-click="showSubMenu('section')" ui-sref-active="btn_active">Section</a></li>    
     <li>
       <a ng-click = "showSubMenu('widgets')" ui-sref-active="btn_active">Widgets</a>
     </li>    
