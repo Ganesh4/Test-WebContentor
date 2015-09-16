@@ -85,8 +85,12 @@ header{
 	float:right;
 	
 	select{
-	  padding:2px 5px;  	
+	  padding:2px 5px;
     width: 130px;
+		
+		/*option{
+	     background:blue;		
+		}*/
 	}
 	.line-break{
 		font-size: 1.7em;
@@ -100,7 +104,8 @@ header{
 		font-weight:normal;
 	}
 }
-.breadcrumb{
+.breadcrumb{ 
+
    margin: 7px 0 0 20px;
    padding: 3px 6px;
    font-size:0.9em;		
