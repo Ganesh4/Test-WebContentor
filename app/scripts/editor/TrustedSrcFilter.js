@@ -13,4 +13,9 @@ angular.module('editor').filter('trusted',
 	    	};
 		}
 	]
-)})(angular);
+).filter('unsafe', function($sce) {
+    return function(val) {
+        return $sce.trustAsHtml(val);
+    };
+})
+})(angular);
