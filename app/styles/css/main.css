@@ -188,11 +188,13 @@ header {
 .shortout-wrap select {
   padding: 2px 5px;
   width: 130px;
-  	/*option{
-       background:blue;		
-  	}*/
+  transition: all .25s ease;
 }
-/* line 95, ../sass/global/_header.scss */
+/* line 92, ../sass/global/_header.scss */
+.shortout-wrap select option {
+  border-radius: 40px;
+}
+/* line 96, ../sass/global/_header.scss */
 .shortout-wrap .line-break {
   font-size: 1.7em;
   color: #8b8a8a;
@@ -200,13 +202,13 @@ header {
   display: inline-block;
   margin-right: 3px;
 }
-/* line 102, ../sass/global/_header.scss */
+/* line 103, ../sass/global/_header.scss */
 .shortout-wrap label {
   font-size: 0.9em;
   font-weight: normal;
 }
 
-/* line 107, ../sass/global/_header.scss */
+/* line 108, ../sass/global/_header.scss */
 .breadcrumb {
   margin: 7px 0 0 20px;
   padding: 3px 6px;
