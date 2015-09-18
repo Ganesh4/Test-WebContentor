@@ -11,7 +11,6 @@ angular.module('overview').controller('OverviewCtrl',
 		'Restangular',
 		'OverviewApiSrv',
 		'CommonSrv',
-		
 		function($scope,$state, Restangular, OverviewApiSrv,CommonSrv){
 			$scope.subheader = $scope.$parent.subheader;
 			$scope.subheader.title = 'Overview';
@@ -24,12 +23,12 @@ angular.module('overview').controller('OverviewCtrl',
 			$scope.categories = [];
 			//$scope.selectedTemplate = {};
 			// $scope.options = ['1','2'];
-            
+			
 			$scope.filter = {
 				size : 3, 
 				orderBy : 'createdDate',
 				page : 1,
-				sortBy : 'ASC'
+				sortBy : 'DESC'
 			};
 
 			$scope.btns = [
@@ -45,8 +44,8 @@ angular.module('overview').controller('OverviewCtrl',
 					templateUrl : 'views/assets/select.html',
 					data : [{label: 'Age'},{label: 'None'}]
 				}
-
-			];
+			]; 
+			
 		}
 	]);
 })(angular);

@@ -9,9 +9,10 @@
 
 <div class="content-main content-main-edit">
       <div class="template-edit" >
-      <iframe width="100%" height = "100%" src="{{url | trusted}}"> </iframe>
+      	<!-- <div ng-bind-html = "html | unsafe"></div>-->
+      	<!--<wc-html-bind src = "html"></wc-html-bind>-->
+      	<textarea froala ng-model="html"></textarea>
       </div>
 </div> <!-- content-main -->
 
-<wc-footer-editor></wc-footer-editor>
 

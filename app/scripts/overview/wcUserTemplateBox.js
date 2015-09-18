@@ -10,7 +10,8 @@
     		'OverviewApiSrv',
     		'CommonSrv',
     		'$timeout',
-    		function(OverviewApiSrv,CommonSrv,$timeout){
+    		'$state',
+    		function(OverviewApiSrv,CommonSrv,$timeout,state){
         return{
 
             restrict:'AE',
@@ -30,8 +31,8 @@
            				filter : scope.filter
            			},function(data){
            				if(data){
-	           				scope.templates = data.plain();
-						    scope.templateType = 'User Created';
+	           			  scope.templates = data.plain();
+						        scope.templateType = 'User Created';
 						}
 					});
            		}else if(type == 'featured'){
@@ -65,8 +66,16 @@
            			});
            		}
               scope.selectTemplate = scope.selectTemplate;
-            }
 
+             //Route to the editor for the selected template.
+			scope.editDesign = function(id){
+				console.log('Edit Design');
+				if(id){
+          			var href = state.go('app.editor', {'templateId' : id.toString(), 'userId' : '1'}, {absolute: true});
+					//window.open(href, '_blank');
+				}
+			}
+          }
         }
     }]);
 })(angular);
