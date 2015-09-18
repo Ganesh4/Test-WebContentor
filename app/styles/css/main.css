@@ -714,7 +714,7 @@ footer .text-left {
 .nav-main-edit li {
   border-bottom: 1px solid #000;
   border-right: 1px solid #000;
-  position: relative;
+  /*position:relative;*/
 }
 /* line 38, ../sass/global/_left-navbar-edit.scss */
 .nav-main-edit a {
@@ -810,7 +810,7 @@ footer .text-left {
   width: 640px;
   height: 500px;
   position: absolute;
-  top: 0px;
+  top: 60px;
   left: 108px;
   /*display:none;*/
 }
@@ -864,6 +864,21 @@ footer .text-left {
   width: 100%;
   height: 332px;
   overflow-y: auto;
+}
+
+/* line 168, ../sass/global/_left-navbar-edit.scss */
+.element-highlight {
+  border: 2px dashed #000;
+}
+
+/* line 171, ../sass/global/_left-navbar-edit.scss */
+.image-block {
+  width: 640px;
+  height: 500px;
+  position: absolute;
+  top: 60px;
+  left: 108px;
+  background: blue;
 }
 
 /* Scss Document */
