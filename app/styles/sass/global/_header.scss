@@ -87,10 +87,11 @@ header{
 	select{
 	  padding:2px 5px;
     width: 130px;
-		
-		/*option{
-	     background:blue;		
-		}*/
+	  transition: all .25s ease;
+	 
+		option{
+			 border-radius:40px;
+		}
 	}
 	.line-break{
 		font-size: 1.7em;
