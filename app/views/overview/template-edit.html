@@ -42,7 +42,7 @@
     <a href="#">
    <div><i class="fa fa-plus-square"></i></div>
     Add</a>
-    <div class="add-submenu">
+    <div class="block-container">
       <div class="submenu-block">
          <div class="submenu-header">
            <div class="content-padding">
@@ -74,7 +74,53 @@
       </div>
     </div>
     </li>
-    <li><a href="#">Section</a></li>    
+    <li><a href="#">Section</a>
+      <div class="block-container">
+        <div class="submenu-block">
+            <div class="submenu-header">
+               <div class="content-padding">
+                 <h3 class="heading-top">Upload Image</h3>
+                 <span class="elements-right"><a href="#">Back to add</a></span>
+               </div>
+         </div>
+            <div class="image-container">
+                <ul class="nav nav-pills">
+                  <li class="active"><a data-toggle="pill" href="#home">Upload Image</a></li>
+                  <li><a data-toggle="pill" href="#menu1">User Library</a></li>
+                  <li><a data-toggle="pill" href="#menu2">Image Library</a></li>
+                </ul>
+  
+                <div class="tab-content">
+                   <div id="home" class="tab-pane fade in active">
+                      That's a home screen.
+                       <div class="control-bar">
+                          <span class="control-label"><b>::</b>Paragraph</span>
+                          <span class="control-buttons-container">
+                            <span class="control-button with-separator fa fa-files-o"></span>
+                            <span class="control-button with-separator fa fa-cog"></span>
+                            <span class="control-button with-separator fa fa-trash-o"></span>                    
+                          </span>
+                      </div> 
+
+     
+                           <div class="bottom-fixed-box">
+                              <button type="submit" class="btn btn-primary">Upload</button>
+                              <button type="button" class="btn">Cancel</button>
+                           </div>
+
+
+                   </div>
+                   <div id="menu1" class="tab-pane fade revision">
+                      That's second tab.
+                   </div>
+                   <div id="menu2" class="tab-pane fade">
+                      That's third tab.
+                   </div>
+                </div>
+            </div> <!-- image-container -->
+        </div>
+      </div>
+    </li>    
     <li><a href="#">Widgets</a></li>    
     <li><a href="#">Form</a></li>    
     <li><a href="#">SEO</a></li>    
