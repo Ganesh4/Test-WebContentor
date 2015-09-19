@@ -6,7 +6,7 @@
  */
 (function(angular){
 
-	angular.module('vendor',['ui.router','restangular', 'validation','validation.rule','ui.select2','ngSanitize','cb.x2js','froala']);
+	angular.module('vendor',['ui.router','restangular', 'validation','validation.rule','ui.select2','ngSanitize',angularDragula(angular)]);
 
 	angular.module('common',['vendor','angularUtils.directives.uiBreadcrumbs']);
 	
@@ -26,7 +26,7 @@
 
 	angular.module('subheader',['home']);
 
-	angular.module('editor',['common']);
+	angular.module('editor',['common','cb.x2js','froala']);
 
 	angular.module('microsite',['home','overview','common','design','header','subheader','editor']);
 

@@ -10,8 +10,12 @@
 			'$stateParams',
 			'DesignSrv',
 			'x2js',
-			function($scope, $http, $stateParams, DesignSrv, x2js){
-				$scope.url = 'https://s3.amazonaws.com/webcontentor-microsite/microsite/index.xml';
+			'dragulaService',
+			function($scope, $http, $stateParams, DesignSrv, x2js, dragulaService){
+				
+				dragulaService.options($scope, 'menu', {
+      				copy: true
+    			});
 				console.log('Template Id --------- ',$stateParams.templateId);
 				DesignSrv.getDesignById($stateParams, function(data){
 					if(data){
