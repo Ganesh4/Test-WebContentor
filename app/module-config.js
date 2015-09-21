@@ -6,15 +6,14 @@
  */
 (function(angular){
 
-	angular.module('vendor',['ui.router','restangular', 'validation','validation.rule','ui.select2','ngSanitize',angularDragula(angular)]);
+
+  angular.module('vendor',['ui.router','restangular', 'validation','validation.rule','ui.select2','ngSanitize',    angularDragula(angular)]);
 
 	angular.module('common',['vendor','angularUtils.directives.uiBreadcrumbs']);
 	
 	angular.module('assets',['common']);
 
-	angular.module('app',['assets']);
-
-	angular.module('home',['app']);
+	angular.module('home',['common','assets']);
 
 	angular.module('overview',['home']);
    

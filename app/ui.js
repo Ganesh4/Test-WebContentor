@@ -8,26 +8,11 @@
     angular.module('microsite').config([
         '$stateProvider',
         '$urlRouterProvider',
-        '$sceDelegateProvider',
-        function ($stateProvider, $urlRouterProvider , $sceDelegateProvider) {
-            $sceDelegateProvider.resourceUrlWhitelist([
-                // Allow same origin resource loads.
-                'self',
-                // Allow loading from outer templates domain.
-                'https://s3.amazonaws.com/webcontentor-microsite/**'
-            ]); 
+        function ($stateProvider, $urlRouterProvider) {
             // For any unmatched url, redirect to /state1
-            $urlRouterProvider.otherwise("/app/home/overview");
+            $urlRouterProvider.otherwise("/home/overview");
             // Now set up the states
-            $stateProvider.state('app', {
-                url: '/app',
-                template:'<ui-view></ui-view>',
-                controller:'AppCtrl',
-              data: {
-                      displayName: false
-                    },
-
-            }).state('app.home', {
+            $stateProvider.state('home', {
                 url: '/home',
                 templateUrl:'views/home/home.html',
                 controller:'HomeCtrl',
@@ -36,7 +21,7 @@
                     }
 
 
-            }).state('app.home.overview', {
+            }).state('home.overview', {
                 url: '/overview',
                 templateUrl:"views/overview/overview.html",
                 controller:'OverviewCtrl',
@@ -44,18 +29,18 @@
                      displayName: 'overview',
                 }
                 
-            }).state('app.home.dashboard', {
+            }).state('home.dashboard', {
                 url: '/dashboard',
                 templateUrl:'views/overview/overview.html'
             });
-            $stateProvider.state('app.home.design', {
+            $stateProvider.state('home.design', {
                 url: '/design',
                 template:'<ui-view></ui-view>',
                 data: {
                     tags:['Iteractive User Interface', 'Parrallex Design', 'Entertainment', 'Music'],                 
                      displayName :'design' 
                 },              
-            }).state('app.home.design.detail', {
+            }).state('home.design.detail', {
                 url:'/detail',
                 templateUrl:'views/design/DesignDetail.html',
                 controller:'DesignDetailCtrl',
@@ -63,7 +48,7 @@
                      displayName: 'detail',
                 }
         
-            }).state('app.home.design.upload', {
+            }).state('home.design.upload', {
                 url:'/upload',
                 templateUrl:'views/design/DesignUpload.html',
                 controller:'DesignCtrl',
@@ -71,12 +56,11 @@
                      displayName: 'upload',
                 }
             });
-
-            $stateProvider.state('app.editor', {
-                url:'/editor/:userId/:templateId',
+            $stateProvider.state('editor', {
+                url:'/editor',
                 templateUrl:'views/editor/TemplateEdit.html',
                 controller:'TemplateEditCtrl',
-            }).state('app.preview', {
+            }).state('preview', {
                 url:'/preview',
                 templateUrl:'views/editor/TemplatePreview.html',
                 controller:'TemplatePreviewCtrl',

@@ -35,8 +35,6 @@ angular.module('home').controller('HomeCtrl',
 
                 console.log('$scope.templateCategories  --------------- ',$scope.templateCategories);
             });
-
-            console.log('$state.current-----',$state.args);
         }
     ]);
 })(angular);
