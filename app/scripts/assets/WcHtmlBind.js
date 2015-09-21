@@ -17,7 +17,6 @@ angular.module('microsite').directive('wcHtmlBind',function($compile){
                     element.html(value);
                     $compile(element.contents())(scope);
                 	angular.element(element[0]).children().editable();
-
                 });
 			}
 		}

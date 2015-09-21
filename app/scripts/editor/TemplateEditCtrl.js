@@ -13,16 +13,18 @@
 			'dragulaService',
 			function($scope, $http, $stateParams, DesignSrv, x2js, dragulaService){
 				
-				dragulaService.options($scope, 'menu', {
+				/*dragulaService.options($scope, 'menu', {
       				copy: true
     			});
+				*/
 				console.log('Template Id --------- ',$stateParams.templateId);
 				DesignSrv.getDesignById($stateParams, function(data){
 					if(data){
 						$scope.design = data.plain();
 						var url = $scope.design.template.url;
-						console.log("Template --------------  " ,$scope.design.template);
-						DesignSrv.getTemplateXmlData($stateParams.userId, {'resource':$scope.design.template.xmlFile}, function(data){
+						DesignSrv.getTemplateXmlData($stateParams.userId, {
+							'resource':$scope.design.template.xmlFile
+						}, function(data){
 							if(data){
 								$scope.html = data;
 								console.log(x2js.xml_str2json(data.toString()));
