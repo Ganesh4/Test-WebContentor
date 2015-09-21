@@ -30,23 +30,24 @@
 
 .nav-main-edit{
 	
- li{
+  li{
 	 border-bottom:1px solid #000;
 	 border-right:1px solid #000;	 
-	 position:relative;
+	 /*position:relative;*/
 	}	
+	
 	a{
 	 width:100%;
 	 display:block;
 	 padding:15px 20px;
 	 text-align:center;
 	 text-transform:uppercase;
-   font-size: 0.85em;  	
-	 
-	 &:hover{
-     color: #eee;
-     background-color: #b8b8b8; 
-	 }
+	 font-size: 0.85em;  	
+ 
+		 &:hover{
+			 color: #eee;
+			 background-color: #b8b8b8; 
+		 }
 	}
 	.fa{
 	 font-size:1.5em;
@@ -112,11 +113,11 @@
 
 /* submenu blocks */
 
-.add-submenu{
+.block-container{
   width:640px;
 	height:500px;
 	position:absolute;
-	top: 0px;
+	top: 60px;
 	left: 108px;
 	/*display:none;*/
 }
@@ -134,6 +135,7 @@
 	
 	.heading-top{
 	    font-size:1.3em;
+			float:left;
 		}	
 }
 .submenu-leftnav{
@@ -165,4 +167,109 @@
     overflow-y: auto;
 	}
 }
+.elements-right{
+  width:150px;
+	float:right;
+	text-align:right;
+	
+	a.heading-navlinks{
+    padding: 0;
+    text-decoration: underline;
+    width: auto;
+    display: inline-block;
+    text-transform: capitalize;
+		
+		&:hover{
+      text-decoration:none;
+  		background-color:transparent;
+			color:#000;
+		}
+	}
+}
 
+.element-highlight{
+  border:2px dashed #000;
+}
+
+/*.image-block1{
+	width: 640px;z
+	height: 500px;
+	position: absolute;
+	top: 60px;
+	left: 108px;
+	background:#ccc;
+}
+.image-header{
+  @extend .submenu-header;
+}*/
+.image-container{
+  margin:10px 20px;
+	
+	.nav-pills{
+		 a{
+		   padding:6px 20px;
+	     text-transform:capitalize;	 
+		 }
+	}	
+	.tab-pane{
+	   min-height:385px;	
+		 position: relative;
+		 padding:0;
+	 }
+}
+.bottom-fixed-box{
+	position: absolute;
+	bottom: 0px;
+	width: 100%;
+	padding: 10px;
+	text-align: right;
+	border-top: 1px solid #ccc;
+}
+
+.drag-drop{
+	 background-image:url(../../images/drag-and-drop.png);
+	 background-repeat:no-repeat;
+   background-position: center 30%;
+}
+
+/*============ control-bar styles =============*/
+.vertically-centered{
+  display:inline-block;
+	vertical-align:middle;
+  margin-left: -4px;
+}
+.control-bar{
+   /* width: auto;*/
+    background: #337ab7;
+    position: absolute;
+    top: 250px;
+		padding: 5px 0;
+		border: 1px solid #29689f;
+		color:#e0e0e0;
+		box-shadow:0 1px 3px 0 rgba(37,39,43,.9);
+}
+.control-label{
+  @extend .vertically-centered;
+	padding:0 14px;
+}
+.control-buttons-container{
+  @extend .vertically-centered;
+
+	
+	.fa{
+	  font-size:1.3em;
+	}
+}
+.control-button{
+  @extend .vertically-centered;
+	text-align: center;
+	padding: 0px 10px;
+	font-size: 0.9em;
+	
+	&:hover{
+     color:#fff;		
+	}
+}
+.with-separator{
+	border-left: 1px solid #1c4f7b;
+}

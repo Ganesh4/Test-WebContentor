@@ -18,6 +18,7 @@
     "angular-utils-ui-breadcrumbs": "~0.2.1",
     "angular-x2js": "~0.2.0",
     "angular-froala": "~1.2.8",
-    "components-font-awesome":"~4.1.0"
+    "components-font-awesome":"~4.1.0",
+    "angular-dragula":"~1.0.12"
   }
 }

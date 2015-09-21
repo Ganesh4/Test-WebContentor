@@ -34,7 +34,7 @@ angular.module('common').service('CommonSrv',
             }
 
             self.getDesignCategories = function(success , error){
-                Restangular.one('categories').getList().then(success);
+               Restangular.one('categories').getList().then(success);
             }
         }
     ]);
