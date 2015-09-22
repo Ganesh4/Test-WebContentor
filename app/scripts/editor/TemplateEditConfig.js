@@ -112,11 +112,11 @@
                 data:{
                     subtitle : 'Video',
                     items : [{
-                           icon : '',
+                           icon : 'fa fa-video-camera',
                            name : 'Video' 
                         },
                         {
-                        icon : '',
+                        icon : 'fa fa-video-camera',
                         name : 'Video Gallarey'
                     }]
                 },
@@ -128,11 +128,7 @@
                     items : [{
                            icon : '',
                            name : 'Icons' 
-                        },
-                        {
-                        icon : '',
-                        name : 'Icons Gallarey'
-                    }]
+                        }]
                 },
             }).state(addRoute + '.text',{
                 url:'/text',
@@ -155,11 +151,19 @@
                     subtitle : 'Button',
                     items : [{
                            icon : '',
-                           name : 'Button' 
+                           name : 'Straight button' 
                         },
                         {
                         icon : '',
-                        name : 'Button Gallarey'
+                        name : 'Pill button'
+                    },
+                    {
+                        icon : '',
+                        name : 'Rounded button'
+                    },
+                    {
+                        icon : '',
+                        name : 'Icon button'
                     }]
                 },
             }).state(addRoute + '.graph',{
@@ -168,12 +172,12 @@
                 data:{
                     subtitle : 'Graph',
                     items : [{
-                           icon : '',
-                           name : 'Graph' 
+                           icon : 'fa fa-bar-chart',
+                           name : 'Bar Chart' 
                         },
                         {
-                        icon : '',
-                        name : 'Graph Gallarey'
+                        icon : 'fa fa-line-chart',
+                        name : 'Line Chart'
                     }]
                 },
             }).state(addRoute + '.shapes',{
@@ -183,11 +187,11 @@
                     subtitle : 'Shapes',
                     items : [{
                            icon : '',
-                           name : 'Shapes' 
+                           name : 'Vertical Line' 
                         },
                         {
                         icon : '',
-                        name : 'Shapes Gallarey'
+                        name : 'Rectangle'
                     }]
                 },
             }).state(addRoute + '.sitenavigation',{
@@ -196,12 +200,12 @@
                 data:{
                     subtitle : 'Site Navigation',
                     items : [{
-                           icon : '',
-                           name : 'Site Navigation' 
+                           icon : 'fa fa-link',
+                           name : 'Link 1' 
                         },
                         {
                         icon : '',
-                        name : 'Site Navigation Gallarey'
+                        name : 'Link 1 | Link 1 | Link 1'
                     }]
                 },
             }).state(addRoute + '.slider',{
@@ -210,12 +214,12 @@
                 data:{
                     subtitle : 'Slider',
                     items : [{
-                           icon : '',
-                           name : 'Slider' 
+                           icon : 'glyphicon glyphicon-resize-vertical',
+                           name : 'Vertical' 
                         },
                         {
-                        icon : '',
-                        name : 'Slider Gallarey'
+                        icon : 'glyphicon glyphicon-resize-horizontal',
+                        name : 'Horizontal'
                     }]
                 },
             });
