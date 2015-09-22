@@ -94,17 +94,17 @@
                         {
                             name:'FORM',
                             icon:'',
-                            state:''
+                            state:'app.editor.form'
                         },
                         {
                             name:'SCO',
                             icon:'',
-                            state:''
+                            state:'app.editor.sco'
                         },
                         {
                             name:'STATS',
                             icon:'',
-                            state:''
+                            state:'app.editor.stats'
                     }]
                 },
                 templateUrl:'views/editor/TemplateEdit.html',
