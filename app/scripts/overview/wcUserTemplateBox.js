@@ -10,7 +10,8 @@
     		'OverviewApiSrv',
     		'CommonSrv',
     		'$timeout',
-    		function(OverviewApiSrv,CommonSrv,$timeout){
+        '$state',
+    		function(OverviewApiSrv,CommonSrv,$timeout, state){
         return{
 
             restrict:'AE',
@@ -65,6 +66,13 @@
            			});
            		}
               scope.selectTemplate = scope.selectTemplate;
+
+              scope.editDesign = function(id){
+                if(id){
+                var href = state.go('app.editor', {'templateId' : id.toString(), 'userId' : '1'}, {absolute: true});
+                //window.open(href, '_blank');
+                }
+              }
             }
 
         }
