@@ -1,0 +1,16 @@
+ <div class="submenu-header">
+ <div class="content-padding">
+     <h3 class="heading-top">{{data.title}}</h3>
+     </div>
+     </div>
+     <div class="submenu-leftnav" >
+       <ul>
+         <li ng-repeat = "item in data.subMenu"><a ui-sref="#">{{item.name}}</a></li>           
+       </ul>
+     </div>         
+     <div class="submenu-content">
+        <h1 style="color : #000;">{{subtitle}}</h1>
+        <ul style="color : #000;">
+          <li ng-repeat = "attr in subMenuItem">{{attr.name}}</li>
+     </ul>
+</div>   

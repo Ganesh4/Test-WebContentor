@@ -1,0 +1,9 @@
+<ul class="nav-main-edit">
+  <li ng-repeat=" menu in menus">
+
+   <div> <i class={{menu.icon}} ></i></div><a ui-sref = "{{menu.state}}" ui-sref-active="btn_active" >{{menu.name}}
+    </a>
+
+  </li>
+  <ui-view></ui-view>
+</ul>

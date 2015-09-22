@@ -29,7 +29,7 @@ angular.module('overview').controller('OverviewCtrl',
 				size : 3, 
 				orderBy : 'createdDate',
 				page : 1,
-				sortBy : 'ASC'
+				sortBy : 'DESC'
 			};
 
 			$scope.btns = [
