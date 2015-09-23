@@ -115,7 +115,7 @@
                             state:''
                     }]
                 },
-                templateUrl:'views/editor/TemplateEdit.html',
+               
             }).state('app.editor.add',{
                 url:'/add',
                 templateUrl:'views/editor/SubMenu.html',
