@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<title>Convert ttf to otf | Everything Fonts</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta name="author" content="orthosie.com">
+<meta name="creator" content="webmaster@orthosie.com">
+<meta name="publisher" content="everythingfonts.com">
+<meta name="copyright" content="everythingfonts.com © 2013-15">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="all"/>
+<meta name="revisit-after" content="7 days">
+<meta name="description" content="Convert ttf to otf | Everything Fonts. Convert ttf font files to otf files online. Other font conversion options are also available"/>
+<meta name="keywords" content="ttf2otf, convert ttf to otf ,ttf,otf,ttf to otf, convert font formats ttf and otf,fonts,convert fonts,online font converter"/>
+<link rel="stylesheet" media="screen" href="http://everythingfonts.com/font/face/P0sSgiiaKWEvB8jTj1mTpweF" type="text/css"/>
+<link rel="stylesheet" href="http://everythingfonts.com/css/A.bootstrap.min.css.pagespeed.cf.TfHO4o6v4I.css">
+<style>footer{border-top:10px solid #999;background:url(images/xbg.png.pagespeed.ic.8t9m5V7GZ1.png) repeat;padding-bottom:20px;padding-top:40px;min-height:50px;text-align:center;margin:0 auto;margin-top:20px}footer a,footer strong{color:#fff;text-decoration:none}footer h3{color:#777;letter-spacing:normal;text-transform:uppercase;text-shadow:#000 0 1px 0;border:solid 1px #000;text-rendering:optimizeLegibility;border-bottom:none;border-radius:4px 4px 0 0;position:relative;text-align:center;height:10px;margin-top:20px;font-size:16px}footer h3 span{display:inline-block;padding:3px 10px;position:relative;top:-0.8em;background:url(images/xbg-footer-noise.jpg.pagespeed.ic.dZmJOjl_RQ.jpg) repeat #212121;z-index:1}footer h3:after{content:"";position:absolute;left:0;top:0;width:100%;height:100%;border:solid 1px #333;border-bottom:none;border-radius:4px 4px 0 0}footer .col{margin-left:2.5%;padding:30px 0 20px 0;height:100%}footer .col:first-child{margin-left:0}footer ul li{list-style:none;padding:0;margin:0;line-height:30px}</style>
+<script src="http://everythingfonts.com/js/jquery-1.11.0.min.js.pagespeed.jm.VDIv7VBTRR.js"></script>
+<script src="http://everythingfonts.com/js/bootstrap.min.js.pagespeed.jm.JA9v79blOW.js"></script>
+<!-- icons -->
+<link type="image/x-icon" href="/favicon.ico" rel="shortcut icon"/>
+<!-- tags -->
+<style>body{padding-top:150px;font-family:"exo2regular",sans-serif}h1,h2,h3,h4,h5,h6{font-family:"exo2regular",sans-serif}.jumbotron{padding:0}.head-room{margin-top:10px}.leg-room{margin-bottom:10px}.nav-tabs>li>a{background:#eee}.ads-panel{border:1px solid #d4d4d4;padding:0;border-radius:2px;position:relative;overflow:hidden;-webkit-box-shadow:0 1px 6px rgba(0,0,0,0.175);box-shadow:0 1px 6px rgba(0,0,0,0.175);margin-bottom:10px;height:99%}.vcenter{display:inline-block;vertical-align:middle;float:none}.tools-panel{border:1px solid #d4d4d4;border-radius:2px;padding:20px;position:relative;-webkit-box-shadow:0 1px 6px rgba(0,0,0,0.175);box-shadow:0 1px 6px rgba(0,0,0,0.175);margin-bottom:20px;height:99%}.tools-title{margin-top:0;color:inherit}.tools-body>p,.tools-body>ul{margin-bottom:0}.tools-body>p+p{margin-top:5px}ul.tags{margin-top:20px;margin-bottom:-10px;margin-left:-10px}.tags{margin-right:10px;padding:0;list-style:none;margin-bottom:25px;font-family:"Serif";font-size:12px}.tags li,.tags a{float:left;height:24px;line-height:24px;position:relative;font-size:12px;margin-bottom:15px}.tags a{margin-left:20px;padding:0 10px 0 12px;background:#5bc0de;color:#fff;text-decoration:none;-moz-border-radius-bottomright:4px;-webkit-border-bottom-right-radius:4px;border-bottom-right-radius:4px;-moz-border-radius-topright:4px;-webkit-border-top-right-radius:4px;border-top-right-radius:4px}.tags a:before{content:"";float:left;position:absolute;top:0;left:-12px;width:0;height:0;border-color:transparent #5bc0de transparent transparent;border-style:solid;border-width:12px 12px 12px 0}.tags a:after{content:"";position:absolute;top:10px;left:0;float:left;width:4px;height:4px;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;background:#fff;-moz-box-shadow:-1px -1px 2px #004977;-webkit-box-shadow:-1px -1px 2px #004977;box-shadow:-1px -1px 2px #004977}.tags a:hover{background:#0089e0}.tags a:hover:before{border-color:transparent #0089e0 transparent transparent}.pre-x-scrollable{background-color:#fefefe;background-color: rgb(254,254,254,0.8);overflow-x:auto;word-wrap:normal;white-space:pre;max-width:100%}img.desaturate{filter:grayscale(100%);-webkit-filter:grayscale(100%);-moz-filter:grayscale(100%);-ms-filter:grayscale(100%);-o-filter:grayscale(100%);filter:url(desaturate.svg#greyscale);filter:gray;-webkit-filter:grayscale(1)}.navbar-wrapper{position:absolute;top:0;left:0;right:0;z-index:200}.navbar-wrapper .container{padding-left:0;padding-right:0}.navbar-wrapper .navbar{padding-left:15px;padding-right:15px}.navbar-inverse h3,.navbar-inverse h2{color:#fff}@media (min-width:768px){.navbar{margin-top:10px}.navbar-inverse h3,.navbar-inverse h2{color:#000}.jumbotron{padding-top:20px;padding-bottom:20px}.navbar-wrapper{//margin-top: 20px}.navbar-wrapper .container{padding-left:15px;padding-right:15px}.navbar-wrapper .navbar{padding-left:0;padding-right:0}.navbar-wrapper .navbar{border-radius:4px}.carousel-caption p{margin-bottom:20px;font-size:21px;line-height:1.4}}.yamm .nav,.yamm .collapse,.yamm .dropup,.yamm .dropdown{position:static;z-index:102}.yamm li{font-size:18px}.yamm .container{position:relative}.yamm .dropdown-menu{left:auto;z-index:102}.yamm .nav.navbar-right .dropdown-menu{left:auto;right:0}.yamm .yamm-content{padding:20px 30px}.yamm .dropdown.yamm-fw .dropdown-menu{left:0;right:0;z-index:102}.dropdown-submenu{position:relative;z-index:102}.dropdown-submenu>.dropdown-menu{top:0;left:100%;margin-top:-6px;margin-left:-1px;-webkit-border-radius:0 6px 6px 6px;-moz-border-radius:0 6px 6px 6px;border-radius:0 6px 6px 6px}.dropdown-submenu:hover>.dropdown-menu{display:block}.dropdown-submenu>a:after{display:block;content:" ";float:right;width:0;height:0;border-color:transparent;border-style:solid;border-width:5px 0 5px 5px;border-left-color:#ccc;margin-top:5px;margin-right:-10px}.dropdown-submenu:hover>a:after{border-left-color:#fff}.dropdown-submenu.pull-left{float:none}.dropdown-submenu.pull-left>.dropdown-menu{left:-100%;margin-left:10px;-webkit-border-radius:6px 0 6px 6px;-moz-border-radius:6px 0 6px 6px;border-radius:6px 0 6px 6px}.showcase{min-height:400px}.panel-menu{padding:0px}.panel-menu table tr td{padding-left:15px}.panel-menu .table{margin-bottom:0px}</style>
+<script>$('ul.dropdown-menu [data-toggle=dropdown]').on('click',function(event){event.preventDefault();event.stopPropagation();$('ul.dropdown-menu [data-toggle=dropdown]').parent().removeClass('open');$(this).parent().addClass('open');});$('a[data-toggle="tab"]').on('shown.bs.tab',function(e){$('.eqcol').responsiveEqualHeightGrid();})</script>
+<script>//<![CDATA[
+(function($){$.fn.equalHeight=function(){var heights=[];$.each(this,function(i,element){$element=$(element);var element_height;var includePadding=($element.css('box-sizing')=='border-box')||($element.css('-moz-box-sizing')=='border-box');if(includePadding){element_height=$element.innerHeight();}else{element_height=$element.height();}
+heights.push(element_height);});this.height(Math.max.apply(window,heights));return this;}
+$.fn.equalHeightGrid=function(columns){var $tiles=this;$tiles.css('height','auto');for(var i=0;i<$tiles.length;i++){if(i%columns==0){var row=$($tiles[i]);for(var n=1;n<columns;n++){row=row.add($tiles[i+n]);}
+row.equalHeight();}}
+return this;};$.fn.detectGridColumns=function(){var offset=0,cols=0;this.each(function(i,elem){var elem_offset=$(elem).offset().top;if(offset==0||elem_offset==offset){cols++;offset=elem_offset;}else{return false;}});return cols;};$.fn.responsiveEqualHeightGrid=function(){var _this=this;function syncHeights(){var cols=_this.detectGridColumns();_this.equalHeightGrid(cols);}
+$(window).bind('resize load',syncHeights);syncHeights();return this;};})(jQuery);
+//]]></script>
+<script type="text/javascript">jQuery(function($){$('.eqcol').responsiveEqualHeightGrid();});</script>
+</head>
+<body>
+<div class="navbar-wrapper jumbotron">
+<div class="container">
+<div class="row">
+<nav class="navbar yamm navbar-default navbar-inverse" role="navigation">
+<div class="navbar-header">
+<button type="button" data-toggle="collapse" data-target="#navbar-collapse-2" class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/" class="navbar-brand">
+<img src="http://everythingfonts.com/images/25x25xfolder_fonts.png.pagespeed.ic.Y5uaoy4Gz7.png" height="25px" width="25px" class="" alt="Everything Fonts"/> Everything Fonts</a>
+</div>
+<div id="navbar-collapse-2" class="navbar-collapse collapse">
+<ul class="nav navbar-nav">
+<li class="dropdown"><a href="/" data-toggle="dropdown" class="dropdown-toggle">Home<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li>
+<div class="yamm-content">
+<div class="row">
+<div class="col-sm-4">
+<div class="thumbnail showcase"><img height="128px" width="128px" src="http://everythingfonts.com/images/128x128xfolder_fonts.png.pagespeed.ic.Y5uaoy4Gz7.png">
+<div class="caption">
+<h3>Welcome!</h3>
+<p>
+Welcome !
+Hi and welcome here! Interested in Typography or have some font related work to do? You have come to the perfect place.
+If our tools can't do what you are looking for, try our market place. There is always someone out there who can do it for you!
+</p>
+<p><a href="/marketplace/#" class="btn btn-success">Font Marketplace</a> </p>
+</div>
+</div>
+</div>
+<div class="col-sm-4">
+<div class="thumbnail showcase"><img alt="cross-platform" src="http://everythingfonts.com/images/xApps-kde-windows-icon.png.pagespeed.ic.gYPbf5-pDQ.png">
+<div class="caption">
+<h3>Cross Platform</h3>
+<p>Take the guess work out of the font tools. Use our tools right here from your browser on Linux / Windows / Mac OSX or any other platform that supports a decent browser. And best of all they are free!</p>
+</div>
+</div>
+</div>
+<div class="col-sm-4">
+<div class="thumbnail showcase"><img alt="font-face" src="http://everythingfonts.com/images/xFonts-Folder-icon.png.pagespeed.ic.NdmPu2OWVq.png">
+<div class="caption">
+<h3>Best @font-face Generator</h3>
+<p>The @font-face CSS at-rule allows authors to specify online fonts to display text on their web pages. Find out how you can make your fonts work in all the standard browsers.</p>
+<p><a href="/font-face#" class="btn btn-success">@font-face</a> </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</li>
+</ul>
+</li>
+<li>
+<a href="#" data-toggle="dropdown" class="dropdown-toggle">Font Conversion<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li class="dropdown-submenu">
+<a tabindex="-1" href="#">ttf conversions</a>
+<ul class="dropdown-menu">
+<li><a tabindex="-1" href="/ttf-to-eot" title="ttf2eot - ttf to eot converter">ttf to eot</a></li>
+<li><a tabindex="-1" href="/ttf-to-otf" title="ttf2otf - ttf to otf converter">ttf to otf</a></li>
+<li><a tabindex="-1" href="/ttf-to-woff" title="ttf2woff - ttf to woff converter">ttf to woff</a></li>
+<li><a tabindex="-1" href="/ttf-to-svg" title="ttf2svg - ttf to svg converter">ttf to svg</a></li>
+<li><a tabindex="-1" href="/ttf-to-afm" title="ttf2afm - ttf to afm converter">ttf to afm</a></li>
+<li><a tabindex="-1" href="/ttf-to-pfa" title="ttf2pfa - ttf to pfa converter">ttf to pfa</a></li>
+<li><a tabindex="-1" href="/ttf-to-pfb" title="ttf2pfb - ttf to pfb converter">ttf to pfb</a></li>
+<li><a tabindex="-1" href="/ttf-to-ps" title="ttf2ps - ttf to ps converter">ttf to ps</a></li>
+<li><a tabindex="-1" href="/ttf-to-pt3" title="ttf2pt3 - ttf to pt3 converter">ttf to pt3</a></li>
+<li><a tabindex="-1" href="/ttf-to-t42" title="ttf2t42 - ttf to t42 converter">ttf to t42</a></li>
+<li><a tabindex="-1" href="/ttf-to-apk" title="ttf2apk - ttf to apk converter">ttf to apk</a></li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a tabindex="-1" href="#">otf conversions</a>
+<ul class="dropdown-menu">
+<li><a tabindex="-1" href="/otf-to-eot" title="otf2eot - otf to eot converter">otf to eot</a></li>
+<li><a tabindex="-1" href="/otf-to-ttf" title="otf2ttf - otf to ttf converter">otf to ttf</a></li>
+<li><a tabindex="-1" href="/otf-to-woff" title="otf2woff - otf to woff converter">otf to woff</a></li>
+<li><a tabindex="-1" href="/otf-to-svg" title="otf2svg - otf to svg converter">otf to svg</a></li>
+<li><a tabindex="-1" href="/otf-to-afm" title="otf2afm - otf to afm converter">otf to afm</a></li>
+<li><a tabindex="-1" href="/otf-to-pfa" title="otf2pfa - otf to pfa converter">otf to pfa</a></li>
+<li><a tabindex="-1" href="/otf-to-pfb" title="otf2pfb - otf to pfb converter">otf to pfb</a></li>
+<li><a tabindex="-1" href="/otf-to-pt3" title="otf2pt3 - otf to pt3 converter">otf to pt3</a></li>
+<li><a tabindex="-1" href="/otf-to-t42" title="otf to t42 converter">otf to t42</a></li>
+<li><a tabindex="-1" href="/otf-to-apk" title="otf2apk - otf to apk converter">otf to apk</a></li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a tabindex="-1" href="#">woff conversions</a>
+<ul class="dropdown-menu">
+<li><a tabindex="-1" href="/woff-to-ttf" title="woff2ttf - woff to ttf converter">woff to ttf</a></li>
+<li><a tabindex="-1" href="/woff-to-otf" title="woff2otf - woff to otf converter">woff to otf</a></li>
+<li><a tabindex="-1" href="/woff-to-svg" title="woff2svg - woff to svg converter">woff to svg</a></li>
+<li><a tabindex="-1" href="/woff-to-eot" title="woff to eot converter">woff to eot</a></li>
+</ul>
+</li>
+<li class="dropdown-submenu">
+<a tabindex="-1" href="#">postscript conversions</a>
+<ul class="dropdown-menu">
+<li><a tabindex="-1" href="/pfa-to-ttf" title="pfa to ttf converter">pfa to ttf</a></li>
+<li><a tabindex="-1" href="/pfb-to-ttf" title="pfb to ttf converter">pfb to ttf</a></li>
+<li><a tabindex="-1" href="/pfb-to-otf" title="pfb to otf converter">pfb to otf</a></li>
+<li><a tabindex="-1" href="/pfb-to-pfa" title="pfb to pfa converter">pfb to pfa</a></li>
+<li><a tabindex="-1" href="/pfb-to-ps" title="pfb to ps converter">pfb to ps</a></li>
+<li><a tabindex="-1" href="/pfb-to-afm" title="pfb to afm converter">pfb to afm</a></li>
+<li><a tabindex="-1" href="/ps-to-ttf" title="ps font to ttf converter">ps to ttf</a></li>
+<li><a tabindex="-1" href="/pt3-to-ttf" title="pt3 to ttf converter">pt3 to ttf</a></li>
+<li><a tabindex="-1" href="/t42-to-ttf" title="t42 to ttf converter">t42 to ttf</a></li>
+</ul>
+</li>
+<li><a tabindex="-1" href="/font-face" title="font-face converter">@font-face</a></li>
+</ul>
+</li>
+<li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Font Tools<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li>
+<!-- Content container to add padding -->
+<div class="yamm-content">
+<div class="row">
+<ul class="col-sm-4 list-unstyled">
+<li>
+<h3 class="page-header">Font Info</h3>
+</li>
+<li><a href="/ttfdump">ttfdump</a></li>
+<li><a href="/ttfcoverage">ttfcoverage</a></li>
+<li><a href="/pdffonts" title="List the fonts used in the pdf document">pdffonts</a></li>
+</ul>
+<ul class="col-sm-4 list-unstyled">
+<li>
+<h3 class="page-header">Unicode</h3>
+</li>
+<li><a href="/unicode/maps">Unicode Char Maps</a></li>
+</ul>
+<ul class="col-sm-4 list-unstyled">
+<li>
+<h3 class="page-header">Web</h3>
+</li>
+<li><a href="/font-face#" title="@font-face generator">@font-face</a></li>
+<li><a href="https://www.mashape.com/orthosie/convert-fonts" target="_blank" title="Convert Fonts API">Font Conversion API</a></li>
+</ul>
+</div><!--row-->
+<div class="row">
+<div class="col-sm-12">
+<h3 class="page-header">Elara - Online Font Manager</h3>
+<div class="thumbnail">
+<div class="col-sm-2">
+<img src="http://everythingfonts.com/images/70x70xg12fonts_256.png.pagespeed.ic.qgfGuklqI7.png" width="70" height="70" class="img_left imgshadow" alt="Elara Font Manager"/>
+</div>
+<div class="col-sm-10">
+<p>Meet Elara! The world's best online font manger. With Elara you store your font collections in the cloud and can access them from anywhere in the world. <a href="/manager/#" title="Online Font Manager Elara">Launch Font Manager Elara...</a></p>
+</div>
+<div class="clearfix"></div>
+</div>
+</div><!--col-->
+</div><!--row-->
+</div>
+</li>
+</ul>
+</li>
+<li class="dropdown"><a href="/fonts/#" data-toggle="dropdown" class="dropdown-toggle">Font Directory<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li>
+<!-- Content container to add padding -->
+<div class="yamm-content">
+<div class="row">
+<h3 class="page-header">Fonts Directory</h3>
+<div class="col-sm-4 col-md-4">
+<ul class="list-unstyled">
+<li><a href="/fonts/tag/free-commercial" title="Free fonts for commercial Use">Free Commercial</a></li>
+<li><a href="/fonts/tag/adobe" title="Fonts designed by Adobe">Adobe</a></li>
+<li><a href="/fonts/tag/stix-fonts" title="STIX Fonts">STIX Fonts</a></li>
+</ul>
+</div><!--col-->
+<div class="col-sm-4 col-md-4">
+<ul class="list-unstyled">
+<li><a href="/fonts/tag/cursive" title="Cursive Fonts">Cursive</a></li>
+<li><a href="/fonts/tag/handwriting" title="Handwriting Fonts">Handwritten</a></li>
+<li><a href="/fonts/tag/fell-types" title="Fell Types">Fell Types</a></li>
+</ul>
+</div><!--col-->
+<div class="col-sm-4 col-md-4">
+<ul class="list-unstyled">
+<li><a href="/fonts/tag/gnu" title="GNU Fonts">GNU Fonts</a></li>
+<li><a href="/fonts/tag/free" title="Free fonts">Free</a></li>
+<li><a href="/fonts/#" title="Fonts Directory">More...</a></li>
+</ul>
+</div><!--col-->
+</div><!--row-->
+</div><!--yamm-content-->
+</li>
+</ul>
+</li>
+<li class="dropdown"><a href="/marketplace/#" data-toggle="dropdown" class="dropdown-toggle">Font Marketplace<b class="caret"></b></a>
+<ul class="dropdown-menu">
+<li>
+<!-- Content container to add padding -->
+<div class="yamm-content">
+<div class="row">
+<div class="thumbnail showcase"><img alt="font-works" src="http://everythingfonts.com/images/xfontworks.png.pagespeed.ic.6xMjiNPuGE.png">
+<div class="caption">
+<h3>Font Marketplace</h3>
+<p>Have a font related work and don't know how to do it or don't have time for it? Post your job here and get it done. </p>
+<a href="/marketplace/#" class="btn btn-success">marketplace</a>
+</div>
+</div>
+</div><!--row-->
+</div><!--yamm-content-->
+</li>
+</ul>
+</li>
+<li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">About<b class="caret"></b></a>
+<ul class="dropdown-menu" role="menu">
+<li><a href="#" data-toggle="modal" data-target="#contact"><span class="glyphicon glyphicon-envelope"></span> Contact &nbsp;</a></li>
+<li><a tabindex="-1" href="/terms" title="Terms of Usage">Terms of Usage</a></li>
+<li><a tabindex="-1" href="/privacy" title="Privacy Policy">Privacy Policy</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</nav>
+<div class="clearfix"></div>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="row page-header">
+<div class="col-8 col-md-8 col-sm-8">
+<h1>ttf to otf converter</h1>
+</div>
+<div class="col-4 col-md-4 col-sm-4">
+<!-- AddThis Button BEGIN -->
+<div class="social addthis_toolbox addthis_default_style ">
+<a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+<a class="addthis_button_tweet"></a>
+<a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+<a class="addthis_counter addthis_pill_style"></a>
+</div>
+<script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4f3b35944c004c3a"></script>
+<!-- AddThis Button END -->
+</div>
+</div>
+<div class="row">
+<div class="col-md-12 col-sm-12">
+<div class="ads-panel text-center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- EF font conversion 728x90 -->
+<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4658013134207481" data-ad-slot="3400214225"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-8 col-sm-8 eqcol">
+<div class="tools-panel">
+<form action='/ttf-to-otf' enctype='multipart/form-data' method='post'>
+<div class="tools-heading">
+<h3 class="tools-title"><span class="text-info">ttf</span><span class="text-danger">2</span><span class="text-warning">otf</span></h3>
+<p><small class="text-muted"><i class="glyphicon glyphicon-hand-right"></i> The fastest, easiest and the simplest ttf to otf converter in the world </small></p>
+</div>
+<p>ttf to otf converter converts ttf format font files to otf files. This is an online font conversion utility that works through your browser. No additional software is necessary. Not all format conversions work well, so please be patient and nice if our tools refuse to do the work for you! :) </p>
+<div id="sourcelabel">
+<strong> Select any ttf font file to convert to otf format. The converted otf font file will be available to save locally on your computer immediately. </strong>
+</div>
+<div class="fileinput fileinput-new" data-provides="fileinput">
+<span class="btn btn-success btn-file"><span class="fileinput-new">Select file</span><span class="fileinput-exists">Change</span><input type="file" name="ttffile"></span>
+<span class="fileinput-filename"></span>
+<a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
+</div>
+<button class="btn btn-info" type="submit">Convert to .otf</button>
+</form>
+<ul class="tags pull-right">
+<li><a href="/tags/conversion/tools#" title="{$tag}">conversion</a></li>
+<li><a href="/tags/otf/tools#" title="{$tag}">otf</a></li>
+<li><a href="/tags/tools/tools#" title="{$tag}">tools</a></li>
+<li><a href="/tags/ttf/tools#" title="{$tag}">ttf</a></li>
+</ul>
+<div class="clearfix"></div>
+</div><!--tools-panel-->
+</div><!--col-->
+<div class="col-md-4 col-sm-4 eqcol">
+<div class="ads-panel text-center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- EF Font Conversion 300x250 -->
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-4658013134207481" data-ad-slot="7079315002"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+</div><!--tools-panel-->
+</div><!--col-->
+</div><!--row-->
+<div class="row head-room">
+<div class="col-md-12 col-sm-12">
+<div class="ads-panel text-center">
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- EF font conversion 728x90 -->
+<ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-4658013134207481" data-ad-slot="3400214225"></ins>
+<script>(adsbygoogle=window.adsbygoogle||[]).push({});</script>
+</div>
+</div>
+</div>
+</div><!--container-->
+<div class="footer-top">
+</div>
+<div class="modal fade" id="contact">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+<h4 class="modal-title">Contact Everything Fonts</h4>
+</div>
+<div class="modal-body">
+<div id="alert"></div>
+<form action='/contact' class="form-horizontal" method="post" accept-charset="utf8">
+<div class="form-group">
+<div class="col-md-12">
+<label for="name" class="control-lable">Name</label>
+<input class="form-control" type="text" name="name" placeholder="Enter your name here"/>
+</div>
+<div class="col-md-12">
+<label for="email" class="control-lable">Email</label>
+<input class="form-control" type="email" name="email" placeholder="Enter your email here"/>
+</div>
+<div class="col-md-12">
+<label for="message" class="control-lable">Message</label>
+<textarea class="form-control" name="message" rows="5"></textarea>
+</div>
+<div class="col-md-12 head-room">
+<img width=230 height=80 id="captcha" src="/captcha/securimage_show.php" alt="CAPTCHA Image"/> <br/>
+<a class=smalltext href="#" onclick="document.getElementById('captcha').src = '/captcha/securimage_show.php?' + Math.random(); return false">Show another image</a>
+<object type="application/x-shockwave-flash" data="/captcha/securimage_play.swf?audio=/captcha/securimage_play.php&amp;bgColor1=#fff&amp;bgColor2=#fff&amp;iconColor=#777&amp;borderWidth=1&amp;borderColor=#000" height="19" width="19"> <param name="movie" value="/captcha/securimage_play.swf?audio=/captcha/securimage_play.php&amp;bgColor1=#fff&amp;bgColor2=#fff&amp;iconColor=#777&amp;borderWidth=1&amp;borderColor=#000"/> </object>
+</div>
+<div class="col-md-12">
+<label for="captcha_code" class="control-lable">Enter the letters shown above</label>
+<input class="form-control" type="text" name="captcha_code" placeholder="Enter the captcha characters shown"/>
+</div>
+</div>
+<button class="btn btn-lg btn-default" name="submit" type="submit">Send</button>
+</form>
+</div><!--model-body-->
+<div class="modal-footer">
+<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+</div>
+</div><!-- /.modal-content -->
+</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<script src="http://malsup.github.io/jquery.form.js"></script>
+<script type="text/javascript">$(window).load(function(){$('#contact').ajaxForm({type:'POST',url:'/contact',dataType:'json',success:function(data){if(data.success)
+{$('#alert').html('<div data-alerts="alerts" class="alert alert-success fade in"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><h4>Message Sent!</h4><p>Thank you for your time!</p><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div>');}else{$('#alert').html('<div data-alerts="alerts" class="alert alert-danger fade in"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><h4>Error!</h4><p>'+data.error.msg+'<p></div>');document.getElementById('captcha').src='/captcha/securimage_show.php?'+Math.random();}},error:function(){$('#alert').html('<div data-alerts="alerts" class="alert alert-danger fade in"><button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button><h4>Error!</h4><p>Error sending message. Try again!<p></div>');document.getElementById('captcha').src='/captcha/securimage_show.php?'+Math.random();}});});</script>
+<footer>
+<div class="container">
+<div class="text-center">
+<a href="http://everythingfonts.com" class="pull-left"><img src="http://everythingfonts.com/branding/xefff.gif.pagespeed.ic.BoLpLYvacU.png" title="Powered by fonts from everythingfonts.
+com" alt="Powered by fonts from everythingfonts.com"/> </a>
+<small class="text-muted text-center">Copyright © 2013-2014 - <a class="footerlink" title="Everything Fonts" href="http://everythingfonts.com">everythingfonts.com</a> - All rights reserved. </small>
+<a href="http://orthosie.com" title="Web site designed by Orthosie" class="pull-right"><img src="http://orthosie.com/branding/orthosie.gif" height="20" width="50" class="orthosie" title="Designed by Orthosie" alt="Designed by Orthosie"/></a>
+</div>
+</div>
+</footer>
+<script type="text/javascript">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-38489118-1']);_gaq.push(['_trackPageview']);(function(){var ga=document.createElement('script');ga.type='text/javascript';ga.async=true;ga.src=('https:'==document.location.protocol?'https://':'http://')+'stats.g.doubleclick.net/dc.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga,s);})();</script>
+</body>
+</html>
