@@ -17,7 +17,7 @@
                 'https://s3.amazonaws.com/webcontentor-microsite/**'
             ]); 
             // For any unmatched url, redirect to /state1
-            $urlRouterProvider.otherwise("/app/home/campaign");
+            $urlRouterProvider.otherwise("/app/home/overview");
             // Now set up the states
             $stateProvider.state('app', {
                 url: '/app',
