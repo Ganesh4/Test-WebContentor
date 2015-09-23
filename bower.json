@@ -19,7 +19,8 @@
     "angular-x2js": "~0.2.0",
     "angular-froala": "~1.2.8",
     "components-font-awesome": "~4.1.0",
-    "angular-dragula": "~1.0.12"
+    "angular-dragula": "~1.0.12",
+    "angular-ui-grid" : "~3.0.6"
   },
   "resolutions": {
     "angular": ">= 1.0.8"

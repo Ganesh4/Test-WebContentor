@@ -14,17 +14,21 @@
             $urlRouterProvider.otherwise("/app/home/campaign");
             // Now set up the states
             $stateProvider.state('app', {
+
                 url: '/app',
                 template:'<ui-view></ui-view>',
                 controller:'AppCtrl',
-              data: {
+                data: {
                       displayName: false
-                    },
+                },
 
             }).state('app.home', {
+                cache: false,
                 url: '/home',
                 templateUrl:'views/home/home.html',
+                abstract: true,
                 controller:'HomeCtrl',
+
                 data: {
                       displayName: false
                 }
@@ -33,21 +37,23 @@
                 templateUrl:"views/campaign/home.html",
                // controller:'CampaignCtrl',
                 data: {
-                     displayName: 'campaign',
-                     leftMenu : [{
-                        icon : '',
-                        name : 'Campaign',
-                            innerMenu : [{
-                                icon : '',
-                                name : 'New Campaign'
-                            },{
-                                icon : '',
-                                name : 'My Campaigns'
-                            },{
-                                icon : '',
-                                name : 'All Campaigns'
-                            }]
-                     }]
+                    displayName: 'campaign',
+                    LeftNavList:[
+                        {
+                            icon : '',
+                            name : 'Campaign',
+                                menu : [{
+                                    icon : '',
+                                    name : 'New Campaign'
+                                },{
+                                    icon : '',
+                                    name : 'My Campaigns'
+                                },{
+                                    icon : '',
+                                    name : 'All Campaigns'
+                                }]
+                         }
+                    ]
                 }
             });
 
@@ -57,25 +63,23 @@
                 templateUrl:"views/manage/manage.html",
                // controller:'CampaignCtrl',
                 data: {
-                     displayName: 'manage',
-                     leftMenu : [
+                    displayName: 'manage',
+                    LeftNavList:[
                         {
                             icon : '',
                             name : 'User and Roles',
-                            innerMenu : [{
-                                icon : '',
-                                name : 'New user wizard'
-                            },{
-                                icon : '',
-                                name : 'Credentials'
-                            },{
-                                icon : '',
-                                name : 'Credentials2'
-                            }]
+                            menu : [{
+                                    icon : '',
+                                    name : 'Users'
+                                },{
+                                    icon : '',
+                                    name : 'Roles'
+                                }
+                            ]
                         },{
                             icon : '',
                             name : 'Resources',
-                            innerMenu : [{
+                            menu : [{
                                 icon : '',
                                 name : 'Images'
                             },{
@@ -88,7 +92,7 @@
                         },{
                             icon : '',
                             name : 'Emails and Recipients',
-                            innerMenu : [{
+                            menu : [{
                                 icon : '',
                                 name : 'Emails'
                             },{
@@ -98,36 +102,37 @@
                         },{
                             icon : '',
                             name : 'Promotional Pages',
-                            innerMenu : [{
+                            menu : [{
                                 icon : '',
-                                name : 'Promotional Pages'
+                                name : 'Promotional Pages',
+                                state : 'app.home.manage.page'
                             }]
                         },{
                             icon : '',
                             name : 'Reports',
-                            innerMenu : [{
+                            menu : [{
                                 icon : '',
                                 name : 'Analytics'
                             }]
                         },{
                             icon : '',
                             name : 'Logos',
-                            innerMenu : [{
+                            menu : [{
                                 icon : '',
                                 name : 'Event Logo'
                             }]
                         }
                     ]
                 }
-            }).state('app.home.manage.design', {
-                url: '/design',
+            }).state('app.home.manage.page', {
+                url: '/page',
                 templateUrl:"views/overview/overview.html",
                 controller:'OverviewCtrl',
                  data: {
                     tags:['Iteractive User Interface', 'Parrallex Design', 'Entertainment', 'Music'],                 
-                     displayName :'design' 
+                     displayName :'page' 
                 },     
-            }).state('app.home.manage.design.detail', {
+            }).state('app.home.manage.page.detail', {
                 url:'/detail',
                 templateUrl:'views/design/DesignDetail.html',
                 controller:'DesignDetailCtrl',
@@ -135,7 +140,7 @@
                      displayName: 'detail',
                 }
         
-            }).state('app.home.manage.design.upload', {
+            }).state('app.home.manage.page.upload', {
                 url:'/upload',
                 templateUrl:'views/design/DesignUpload.html',
                 controller:'DesignCtrl',
