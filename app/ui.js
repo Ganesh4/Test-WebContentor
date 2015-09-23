@@ -10,12 +10,6 @@
         '$urlRouterProvider',
         '$sceDelegateProvider',
         function ($stateProvider, $urlRouterProvider , $sceDelegateProvider) {
-            $sceDelegateProvider.resourceUrlWhitelist([
-                // Allow same origin resource loads.
-                'self',
-                // Allow loading from outer templates domain.
-                'https://s3.amazonaws.com/webcontentor-microsite/**'
-            ]); 
             // For any unmatched url, redirect to /state1
             $urlRouterProvider.otherwise("/app/home/campaign");
             // Now set up the states
@@ -31,11 +25,9 @@
                 url: '/home',
                 templateUrl:'views/home/home.html',
                 controller:'HomeCtrl',
-              data: {
+                data: {
                       displayName: false
-                    }
-
-
+                }
             }).state('app.home.campaign', {
                 url: '/campaign',
                 templateUrl:"views/campaign/home.html",
@@ -57,8 +49,77 @@
                             }]
                      }]
                 }
-                
-            }).state('app.home.design', {
+            });
+
+
+            $stateProvider.state('app.home.manage', {
+                url: '/manage',
+                templateUrl:"views/manage/manage.html",
+               // controller:'CampaignCtrl',
+                data: {
+                     displayName: 'manage',
+                     leftMenu : [
+                        {
+                            icon : '',
+                            name : 'User and Roles',
+                            innerMenu : [{
+                                icon : '',
+                                name : 'New user wizard'
+                            },{
+                                icon : '',
+                                name : 'Credentials'
+                            },{
+                                icon : '',
+                                name : 'Credentials2'
+                            }]
+                        },{
+                            icon : '',
+                            name : 'Resources',
+                            innerMenu : [{
+                                icon : '',
+                                name : 'Images'
+                            },{
+                                icon : '',
+                                name : 'Videos'
+                            },{
+                                icon : '',
+                                name : 'Files'
+                            }]
+                        },{
+                            icon : '',
+                            name : 'Emails and Recipients',
+                            innerMenu : [{
+                                icon : '',
+                                name : 'Emails'
+                            },{
+                                icon : '',
+                                name : 'Recipients'
+                            }]
+                        },{
+                            icon : '',
+                            name : 'Promotional Pages',
+                            innerMenu : [{
+                                icon : '',
+                                name : 'Promotional Pages'
+                            }]
+                        },{
+                            icon : '',
+                            name : 'Reports',
+                            innerMenu : [{
+                                icon : '',
+                                name : 'Analytics'
+                            }]
+                        },{
+                            icon : '',
+                            name : 'Logos',
+                            innerMenu : [{
+                                icon : '',
+                                name : 'Event Logo'
+                            }]
+                        }
+                    ]
+                }
+            }).state('app.home.manage.design', {
                 url: '/design',
                 templateUrl:"views/overview/overview.html",
                 controller:'OverviewCtrl',
@@ -66,7 +127,7 @@
                     tags:['Iteractive User Interface', 'Parrallex Design', 'Entertainment', 'Music'],                 
                      displayName :'design' 
                 },     
-            }).state('app.home.design.detail', {
+            }).state('app.home.manage.design.detail', {
                 url:'/detail',
                 templateUrl:'views/design/DesignDetail.html',
                 controller:'DesignDetailCtrl',
@@ -74,7 +135,7 @@
                      displayName: 'detail',
                 }
         
-            }).state('app.home.design.upload', {
+            }).state('app.home.manage.design.upload', {
                 url:'/upload',
                 templateUrl:'views/design/DesignUpload.html',
                 controller:'DesignCtrl',
@@ -91,7 +152,7 @@
                         name:'ADD',
                         icon:'fa fa-plus-square',
                         state:'app.editor.add'
-                         },
+                        },
                         {
                             name:'SECTION',
                             icon:'',
