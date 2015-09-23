@@ -36,6 +36,14 @@
                     }
 
 
+            }).state('app.home.campaign', {
+                url: '/campaign',
+                templateUrl:"views/campaign/home.html",
+                controller:'CampaignCtrl',
+                data: {
+                     displayName: 'campaign',
+                }
+                
             }).state('app.home.overview', {
                 url: '/overview',
                 templateUrl:"views/overview/overview.html",
@@ -107,7 +115,7 @@
                             state:'app.editor.stats'
                     }]
                 },
-                templateUrl:'views/editor/TemplateEdit.html',
+               
             }).state('app.preview', {
                 url:'/preview',
                 templateUrl:'views/editor/TemplatePreview.html',

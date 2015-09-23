@@ -83,141 +83,172 @@ a:hover {
   padding: 5px 16px;
 }
 
+/* CSS Document */
 /* Scss Document */
-/* header specific css */
-/* line 11, ../sass/global/_header.scss */
-header {
-  width: 85%;
+/* line 40, ../sass/global/_variable.scss */
+.login-text {
+  font: 100% Myriad Pro, Calibri, sans-serif;
+  color: #666666;
+}
+
+/* line 46, ../sass/global/_variable.scss */
+.allrightreserved {
+  font: 100% "Arial Regular", "Arial";
+  color: #333333;
+}
+
+/* line 51, ../sass/global/_variable.scss */
+.send-icon {
+  background-color: #0f750f;
+}
+
+/* line 56, ../sass/global/_variable.scss */
+.user-icon {
+  background-color: #cecece;
+}
+
+/* line 63, ../sass/global/_variable.scss */
+.form-control, .password-control {
+  color: #555555;
+}
+
+/* Manage left row */
+/* Scss Document */
+/* line 3, ../sass/global/_header.scss */
+.nav-header {
+  width: 100%;
+  border-bottom: solid 1px #d8d8d8;
+  background-color: #efefef;
+  display: inline-flex;
+}
+/* line 8, ../sass/global/_header.scss */
+.nav-header .logo {
+  width: 100%;
+  float: left;
+  margin-top: 1px;
+  display: inline-flex;
+}
+/* line 14, ../sass/global/_header.scss */
+.nav-header .logo img {
+  height: 56px;
+}
+/* line 16, ../sass/global/_header.scss */
+.nav-header .help-icon {
+  width: 55px;
+  height: 56px;
   float: right;
-  position: fixed;
-  right: 0;
-  z-index: 10;
-  background-color: #fff;
+  background-color: #f6f6f6;
+  text-align: center;
+  line-height: 68px;
+  cursor: pointer;
 }
-
-/* line 19, ../sass/global/_header.scss */
-.padding-allside, .header-main, .header-sub {
-  padding: 9px 20px 8px;
-}
-
-/* line 22, ../sass/global/_header.scss */
-.header-main {
-  clear: both;
-  min-height: 60px;
-  border-top: 2px solid #000;
-}
-
-/* line 28, ../sass/global/_header.scss */
-.header-right-col {
-  float: right;
-  margin-top: 8px;
-}
-
-/* line 32, ../sass/global/_header.scss */
-.social-icon-tray {
-  float: right;
-}
-/* line 35, ../sass/global/_header.scss */
-.social-icon-tray a {
-  display: inline-block;
-  margin-right: 5px;
-  padding: 5px;
-}
-/* line 40, ../sass/global/_header.scss */
-.social-icon-tray .glyphicon {
-  font-size: 1.8em;
+/* line 25, ../sass/global/_header.scss */
+.nav-header .help-icon i {
+  font-size: 38px;
   color: #000;
 }
-
-/* line 45, ../sass/global/_header.scss */
-.search-text-input-wrap {
-  width: 280px;
-  float: left;
-  margin-top: 5px;
-}
-
-/* line 50, ../sass/global/_header.scss */
-.search-text-input {
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  border-radius: 10px;
-  border: 1px solid #000;
-  box-shadow: 0px 1px 1px 1px #e5e5e5;
-  height: 28px;
-  outline: 0;
-  padding: .4em 0 .4em .6em;
-  width: 100%;
-}
-
-/* line 59, ../sass/global/_header.scss */
-.header-sub {
-  border-top: 2px solid #000;
-  border-bottom: 2px solid #000;
-  min-height: 60px;
-}
-
-/* line 65, ../sass/global/_header.scss */
-.common-headng-wrap {
-  float: left;
-  /* width: 200px; 
-  padding: 0 0 0 19px;*/
-  margin-top: 10px;
-}
-/* line 71, ../sass/global/_header.scss */
-.common-headng-wrap h2.common-headng {
-  padding: 0 0;
-}
-
-/* line 75, ../sass/global/_header.scss */
-.hamburger-wrap {
-  width: 40px;
-  height: 23px;
-  background-image: url(../../images/hambuger.svg);
-  float: left;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  margin: 9px 40px 0 0px;
-}
-
-/* line 84, ../sass/global/_header.scss */
-.shortout-wrap {
+/* line 30, ../sass/global/_header.scss */
+.nav-header .nav-upload {
+  width: 75px;
+  height: 56px;
   float: right;
+  background-color: #f5f5f5;
+  text-align: center;
+  line-height: 68px;
+  cursor: pointer;
+  border-left: 1px solid #d8d8d8;
 }
-/* line 87, ../sass/global/_header.scss */
-.shortout-wrap select {
-  padding: 2px 5px;
-  width: 130px;
-  transition: all .25s ease;
+/* line 40, ../sass/global/_header.scss */
+.nav-header .nav-upload i {
+  font-size: 26px;
+  color: #3a3d42;
 }
-/* line 92, ../sass/global/_header.scss */
-.shortout-wrap select option {
-  border-radius: 40px;
+/* line 44, ../sass/global/_header.scss */
+.nav-header .nav-upload i:hover {
+  color: #26ade3;
+}
+/* line 48, ../sass/global/_header.scss */
+.nav-header .nav-search {
+  width: 210px;
+  height: 30px;
+  float: right;
+  margin-right: 70px;
+  margin-top: 13px;
+}
+/* line 55, ../sass/global/_header.scss */
+.nav-header .nav-search .nav-search-form {
+  display: block;
+  width: 100%;
+  height: 30px;
+  padding: 0px 28px 0px 28px;
+  font-size: 13px;
+  line-height: 2.6;
+  background-color: #efefef;
+  background-image: none;
+  border: 1px solid #dfdede;
+  border-radius: 4px;
+  float: left;
+  outline: none;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+/* line 74, ../sass/global/_header.scss */
+.nav-header .nav-search .nav-search-icon {
+  font-size: 18px;
+  color: #3a3d42;
+  position: absolute;
+  padding: 7px;
+}
+/* line 80, ../sass/global/_header.scss */
+.nav-header .nav-search .nav-close-icon {
+  font-size: 18px;
+  color: #3a3d42;
+  position: absolute;
+  padding: 7px;
+  display: inline-flex;
+  margin-left: -28px;
+  cursor: pointer;
+}
+/* line 89, ../sass/global/_header.scss */
+.nav-header .nav-search .nav-close-icon i:hover {
+  color: #C90003;
 }
 /* line 96, ../sass/global/_header.scss */
-.shortout-wrap .line-break {
-  font-size: 1.7em;
-  color: #8b8a8a;
-  /* margin-top: 0px; */
-  display: inline-block;
-  margin-right: 3px;
-}
-/* line 103, ../sass/global/_header.scss */
-.shortout-wrap label {
-  font-size: 0.9em;
-  font-weight: normal;
-}
-
-/* line 108, ../sass/global/_header.scss */
-.breadcrumb {
-  margin: 7px 0 0 20px;
-  padding: 3px 6px;
-  font-size: 0.9em;
+.nav-header .nav-campaign-btn {
+  width: 92px;
+  background-color: #efefef;
+  text-align: center;
   float: left;
+  color: #353535;
+  font-family: "Arial Regular", "Arial";
+  font-size: 13px;
+  padding: 18px;
+  cursor: pointer;
+}
+/* line 107, ../sass/global/_header.scss */
+.nav-header .nav-campaign-btn:hover {
+  background-color: #d8d8d8;
+}
+/* line 110, ../sass/global/_header.scss */
+.nav-header .active {
+  background-color: #d8d8d8 !important;
 }
 
 /* Scss Document */
-/* line 3, ../sass/global/_left-navbar.scss */
+/* Scss Document */
+/* line 4, ../sass/global/_left-navbar.scss */
+.manage-left-row {
+  width: 16.4%;
+  background-color: #3a3a3a;
+  height: 700px;
+  margin-top: -4px;
+  float: left;
+}
+
+/* line 12, ../sass/global/_left-navbar.scss */
 .left-navbar {
   width: 15%;
   float: left;
@@ -226,7 +257,7 @@ header {
   position: fixed;
 }
 
-/* line 10, ../sass/global/_left-navbar.scss */
+/* line 19, ../sass/global/_left-navbar.scss */
 .left-header-logo {
   width: 100%;
   text-align: center;
@@ -234,13 +265,13 @@ header {
   border-top: 2px solid #000;
   min-height: 60px;
 }
-/* line 17, ../sass/global/_left-navbar.scss */
+/* line 26, ../sass/global/_left-navbar.scss */
 .left-header-logo img {
   width: 85%;
   margin-top: 5px;
 }
 
-/* line 22, ../sass/global/_left-navbar.scss */
+/* line 31, ../sass/global/_left-navbar.scss */
 .btn_create-new-design {
   width: 90%;
   text-align: center;
@@ -250,13 +281,13 @@ header {
   cursor: pointer;
 }
 
-/* line 30, ../sass/global/_left-navbar.scss */
+/* line 39, ../sass/global/_left-navbar.scss */
 .btn_create-new-design-wrap {
   /*  border-top: 2px solid #000;*/
   padding: 8px 0;
 }
 
-/* line 34, ../sass/global/_left-navbar.scss */
+/* line 43, ../sass/global/_left-navbar.scss */
 .btn_left-bar {
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
@@ -266,13 +297,13 @@ header {
   cursor: pointer;
   font-size: 1.2em;
 }
-/* line 43, ../sass/global/_left-navbar.scss */
+/* line 52, ../sass/global/_left-navbar.scss */
 .btn_left-bar:hover {
   background-color: #333;
   color: #fff;
 }
 
-/* line 48, ../sass/global/_left-navbar.scss */
+/* line 57, ../sass/global/_left-navbar.scss */
 .leftnav-title {
   padding: 8px 0;
   border-top: 2px solid #000;
@@ -280,7 +311,7 @@ header {
   min-height: 60px;
 }
 
-/* line 54, ../sass/global/_left-navbar.scss */
+/* line 63, ../sass/global/_left-navbar.scss */
 .btn_active {
   background-color: #000;
   color: #fff;
