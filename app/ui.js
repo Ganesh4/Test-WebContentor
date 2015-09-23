@@ -58,6 +58,28 @@
                      }]
                 }
                 
+            }).state('app.home.manage', {
+                url: '/manage',
+                templateUrl:"views/manage/manage.html",
+               // controller:'CampaignCtrl',
+                data: {
+                     displayName: 'manage',
+                     leftMenu : [{
+                        icon : '',
+                        name : 'Manage',
+                            innerMenu : [{
+                                icon : '',
+                                name : 'New user wizard'
+                            },{
+                                icon : '',
+                                name : 'Credentials'
+                            },{
+                                icon : '',
+                                name : 'Credentials2'
+                            }]
+                     }]
+                }
+                
             }).state('app.home.overview', {
                 url: '/overview',
                 templateUrl:"views/overview/overview.html",

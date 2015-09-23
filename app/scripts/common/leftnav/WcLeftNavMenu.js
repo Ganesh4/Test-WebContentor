@@ -13,6 +13,7 @@
                     templateUrl : './views/commons/leftnav/LeftNavMenu.html',
                     link : function(scope, element, attr){
                         scope.data = $state.current.data;
+                        console.log('scope.data------------',scope.data);
                         
 
                     }
