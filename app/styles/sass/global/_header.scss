@@ -73,7 +73,7 @@
 				}
 			.nav-search-icon{
 				font-size: 18px;
-			    color: $nav-i-color;
+			  color: $nav-i-color;
 				position: absolute;
 				padding: 7px;
 				}
@@ -114,4 +114,17 @@
 			
 }
 
-
+.padding-allside{
+  padding:9px 20px 8px;	
+}
+.header-right-col {
+  float: right;
+  margin-top: 8px;
+}
+.header-main {
+	 @extend .padding-allside;
+  clear: both;
+  min-height: 60px;
+  border-top: 2px solid #000;
+	width:100%;
+}
