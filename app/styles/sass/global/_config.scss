@@ -50,9 +50,9 @@ a{
 
 .btn-view{
   padding: 5px 10px;
-	border: 1px solid #000;
+	border: 1px solid $nav-search-border;
 	color: #000;
-	text-decoration: none;	
+	text-decoration: none;
 	
 	&:hover{
      color: #eee;
