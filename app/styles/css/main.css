@@ -270,7 +270,7 @@ body {
   /* Also, for some reason, IE 11 does not use this custom font. See this by changing the body font to just 'segoeui'. */
   /* Also, this font-family cannot be called "Segoe UI", as that causes issues on IE 11/Windows 8. */
   font-family: 'segoeui';
-  src: url("fonts/segoeui.eot"), url("fonts/segoeui.eot?#iefix") format("embedded-opentype"), url("fonts/segoeui.woff") format("woff"), url("fonts/segoeui.ttf") format("truetype"), url("fonts/segoeui.otf") format("opentype"), url("fonts/segoeui.svg") format("svg");
+  src: url("../fonts/segoeui.eot"), url("../fonts/segoeui.eot?#iefix") format("embedded-opentype"), url("../fonts/segoeui.woff") format("woff"), url("../fonts/segoeui.ttf") format("truetype"), url("../fonts/segoeui.otf") format("opentype"), url("../fonts/segoeui.svg") format("svg");
   /* Legacy iOS */
 }
 /* line 24, ../sass/global/_left-navbar.scss */
@@ -350,13 +350,13 @@ body {
 }
 
 /* line 97, ../sass/global/_left-navbar.scss */
-.active {
+.nav-selected {
   background-color: #107c10 !important;
   color: #fff !important;
 }
 
 /* line 101, ../sass/global/_left-navbar.scss */
-.active i {
+.nav-selected i {
   color: #fff !important;
 }
 
@@ -1287,4 +1287,47 @@ footer .text-left {
 /* line 347, ../sass/global/_left-navbar-edit.scss */
 .with-separator {
   border-left: 1px solid #1c4f7b;
+}
+
+/* Scss Document */
+/* line 3, ../sass/global/_submenu.scss */
+.header-sub {
+  width: 83.6%;
+  float: left;
+  background-color: #f3f3f3;
+  margin-top: -3px;
+  padding: 9px 0px;
+  border-bottom: 1px solid #e4e4e4;
+}
+/* line 11, ../sass/global/_submenu.scss */
+.header-sub .sub-header-icon {
+  float: left;
+  padding: 8px 10px 0px 22px;
+}
+/* line 16, ../sass/global/_submenu.scss */
+.header-sub .sub-header-icon i {
+  color: #5d5e64;
+  font-size: 18px;
+}
+
+/* line 22, ../sass/global/_submenu.scss */
+.breadcrumb {
+  float: left;
+  margin-bottom: 0px;
+  padding: 0px;
+  color: #333333;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+/* line 30, ../sass/global/_submenu.scss */
+.submenu-btn {
+  background-color: #fcfcfc;
+  border: 1px solid #dbdada;
+  margin-right: 14px;
+  border-radius: 4px;
+  padding: 5px;
+  min-width: 80px;
+  float: right;
+  outline: none;
 }
