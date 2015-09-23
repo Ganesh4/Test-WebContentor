@@ -1,0 +1,8 @@
+<div>
+	<li ng-repeat = "menu in data.leftMenu" style = "color : #fff">
+	{{menu.name}}
+		<ul>
+			<li ng-repeat = "innerMenu in menu.innerMenu">{{innerMenu.name}}</li>
+		</ul>
+	</li>
+</div>
