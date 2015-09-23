@@ -102,95 +102,20 @@
                         {
                             name:'FORM',
                             icon:'',
-                            state:''
+                            state:'app.editor.form'
                         },
                         {
                             name:'SCO',
                             icon:'',
-                            state:''
+                            state:'app.editor.sco'
                         },
                         {
                             name:'STATS',
                             icon:'',
-                            state:''
+                            state:'app.editor.stats'
                     }]
                 },
                
-            }).state('app.editor.add',{
-                url:'/add',
-                templateUrl:'views/editor/SubMenu.html',
-                data:{
-                    title : 'Add Content',
-                    subMenu: [{
-                        name : 'Section',
-                        icon : '',
-                    },{
-                        name : 'Images',
-                        icon : '',
-                    },{
-                        name : 'Videos',
-                        icon : '',
-                    },{
-                        name : 'Icon',
-                        icon : '',
-                    },{
-                        name : 'Text',
-                        icon : '',
-                    },{
-                        name : 'Button',
-                        icon : '',
-                    },{
-                        name : 'Graph',
-                        icon : '',
-                    },{
-                        name : 'Shapes',
-                        icon : '',
-                    },{
-                        name : 'Site Navigation',
-                        icon : '',
-                    },{
-                        name : 'Slider',
-                        icon : '',
-                    }]
-                },
-            }).state('app.editor.section',{
-                url:'/section',
-                templateUrl:'views/editor/SubMenu.html',
-                data:{
-                    title : 'Section',
-                    subMenu: [{
-                        name : '',
-                        icon : '',
-                    },{
-                        name : '',
-                        icon : '',
-                    },{
-                        name : '',
-                        icon : '',
-                    }]
-                },
-            }).state('app.editor.widgets',{
-                url:'/widgets',
-                templateUrl:'views/editor/SubMenu.html',
-                data:{
-                    title : 'Widgets',
-                    subMenu: [{
-                        name : 'Apps',
-                        icon : '',
-                    },{
-                        name : 'Facebook',
-                        icon : '',
-                    },{
-                        name : 'twitter',
-                        icon : '',
-                    },{
-                        name : 'Linkedn',
-                        icon : '',
-                    },{
-                        name : 'Google Plus',
-                        icon : '',
-                    }]
-                },
             }).state('app.preview', {
                 url:'/preview',
                 templateUrl:'views/editor/TemplatePreview.html',
