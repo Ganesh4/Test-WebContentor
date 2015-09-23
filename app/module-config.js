@@ -16,6 +16,10 @@
 
 	angular.module('home',['app']);
 
+	angular.module('campaign',['home']);
+
+	angular.module('manage',['home']);
+	
 	angular.module('overview',['home']);
    
 	angular.module('design',['home']);
@@ -28,6 +32,6 @@
 
 	angular.module('editor',['common','froala']);
 
-	angular.module('microsite',['home','overview','common','design','header','subheader','editor']);
+	angular.module('microsite',['home','overview','common','design','header','subheader','editor','campaign','manage']);
 
 })(angular);

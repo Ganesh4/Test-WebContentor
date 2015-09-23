@@ -1,6 +1,6 @@
 'use strict';
 (function(angular){
-	angular.module('campaign').controller('CampaignCtrl',
+	angular.module('manage').controller('ManageCtrl',
 		[
 		'$scope',
 		'$state',

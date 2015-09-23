@@ -1,3 +1,33 @@
+/* CSS Document */
+/* Scss Document */
+/* line 40, ../sass/global/_variable.scss */
+.login-text {
+  font: 100% Myriad Pro, Calibri, sans-serif;
+  color: #666666;
+}
+
+/* line 46, ../sass/global/_variable.scss */
+.allrightreserved {
+  font: 100% "Arial Regular", "Arial";
+  color: #333333;
+}
+
+/* line 51, ../sass/global/_variable.scss */
+.send-icon {
+  background-color: #0f750f;
+}
+
+/* line 56, ../sass/global/_variable.scss */
+.user-icon {
+  background-color: #cecece;
+}
+
+/* line 63, ../sass/global/_variable.scss */
+.form-control, .password-control {
+  color: #555555;
+}
+
+/* Manage left row */
 /* Scss Document */
 /* line 3, ../sass/global/_config.scss */
 body {
@@ -68,7 +98,7 @@ a:hover {
 /* line 51, ../sass/global/_config.scss */
 .btn-view {
   padding: 5px 10px;
-  border: 1px solid #000;
+  border: 1px solid #dfdede;
   color: #000;
   text-decoration: none;
 }
@@ -83,36 +113,6 @@ a:hover {
   padding: 5px 16px;
 }
 
-/* CSS Document */
-/* Scss Document */
-/* line 40, ../sass/global/_variable.scss */
-.login-text {
-  font: 100% Myriad Pro, Calibri, sans-serif;
-  color: #666666;
-}
-
-/* line 46, ../sass/global/_variable.scss */
-.allrightreserved {
-  font: 100% "Arial Regular", "Arial";
-  color: #333333;
-}
-
-/* line 51, ../sass/global/_variable.scss */
-.send-icon {
-  background-color: #0f750f;
-}
-
-/* line 56, ../sass/global/_variable.scss */
-.user-icon {
-  background-color: #cecece;
-}
-
-/* line 63, ../sass/global/_variable.scss */
-.form-control, .password-control {
-  color: #555555;
-}
-
-/* Manage left row */
 /* Scss Document */
 /* line 3, ../sass/global/_header.scss */
 .nav-header {
@@ -235,6 +235,25 @@ a:hover {
 /* line 110, ../sass/global/_header.scss */
 .nav-header .active {
   background-color: #d8d8d8 !important;
+}
+
+/* line 117, ../sass/global/_header.scss */
+.padding-allside, .header-main {
+  padding: 9px 20px 8px;
+}
+
+/* line 120, ../sass/global/_header.scss */
+.header-right-col {
+  float: right;
+  margin-top: 8px;
+}
+
+/* line 124, ../sass/global/_header.scss */
+.header-main {
+  clear: both;
+  min-height: 60px;
+  /*border-top: 2px solid #000;*/
+  width: 100%;
 }
 
 /* Scss Document */
@@ -945,13 +964,14 @@ footer .text-left {
 /* line 57, ../sass/global/_left-navbar-edit.scss */
 .header-edit {
   width: 92%;
+  float: right;
 }
-/* line 60, ../sass/global/_left-navbar-edit.scss */
+/* line 61, ../sass/global/_left-navbar-edit.scss */
 .header-edit .header-main {
-  border-bottom: 2px solid #000;
+  /*border-bottom:2px solid #000;*/
 }
 
-/* line 64, ../sass/global/_left-navbar-edit.scss */
+/* line 65, ../sass/global/_left-navbar-edit.scss */
 .nav-arrows-col {
   float: left;
   width: 150px;
@@ -959,23 +979,23 @@ footer .text-left {
   font-size: 1.2em;
   margin-left: 3%;
 }
-/* line 71, ../sass/global/_left-navbar-edit.scss */
+/* line 72, ../sass/global/_left-navbar-edit.scss */
 .nav-arrows-col a {
   display: block;
   float: left;
   margin-right: 40px;
 }
 
-/* line 77, ../sass/global/_left-navbar-edit.scss */
+/* line 78, ../sass/global/_left-navbar-edit.scss */
 .template-edit {
   width: 100%;
   position: relative;
 }
-/* line 81, ../sass/global/_left-navbar-edit.scss */
+/* line 82, ../sass/global/_left-navbar-edit.scss */
 .template-edit img {
   width: 100%;
 }
-/* line 84, ../sass/global/_left-navbar-edit.scss */
+/* line 85, ../sass/global/_left-navbar-edit.scss */
 .template-edit .grid-vertical {
   width: 85%;
   border-left: 1px dashed #000;
@@ -986,7 +1006,7 @@ footer .text-left {
   left: 0;
   right: 0;
 }
-/* line 94, ../sass/global/_left-navbar-edit.scss */
+/* line 95, ../sass/global/_left-navbar-edit.scss */
 .template-edit .grid-horizontal {
   width: 100%;
   border-top: 1px dashed #000;
@@ -998,7 +1018,7 @@ footer .text-left {
   bottom: 0;
 }
 
-/* line 105, ../sass/global/_left-navbar-edit.scss */
+/* line 106, ../sass/global/_left-navbar-edit.scss */
 .content-main-edit {
   width: 92%;
   margin-top: 60px;
@@ -1006,13 +1026,13 @@ footer .text-left {
   z-index: 9;
 }
 
-/* line 111, ../sass/global/_left-navbar-edit.scss */
+/* line 112, ../sass/global/_left-navbar-edit.scss */
 .footer-edit {
   width: 92%;
 }
 
 /* submenu blocks */
-/* line 117, ../sass/global/_left-navbar-edit.scss */
+/* line 118, ../sass/global/_left-navbar-edit.scss */
 .block-container {
   width: 640px;
   height: 500px;
@@ -1022,7 +1042,7 @@ footer .text-left {
   /*display:none;*/
 }
 
-/* line 125, ../sass/global/_left-navbar-edit.scss */
+/* line 126, ../sass/global/_left-navbar-edit.scss */
 .submenu-block {
   width: 100%;
   background-color: #fff;
@@ -1030,43 +1050,43 @@ footer .text-left {
   float: left;
 }
 
-/* line 131, ../sass/global/_left-navbar-edit.scss */
+/* line 132, ../sass/global/_left-navbar-edit.scss */
 .submenu-header {
   width: 100%;
   min-height: 60px;
   padding: 10px 0;
   border-bottom: 1px solid #000;
 }
-/* line 137, ../sass/global/_left-navbar-edit.scss */
+/* line 138, ../sass/global/_left-navbar-edit.scss */
 .submenu-header .heading-top {
   font-size: 1.3em;
   float: left;
 }
 
-/* line 142, ../sass/global/_left-navbar-edit.scss */
+/* line 143, ../sass/global/_left-navbar-edit.scss */
 .submenu-leftnav {
   width: 120px;
   float: left;
 }
-/* line 149, ../sass/global/_left-navbar-edit.scss */
+/* line 150, ../sass/global/_left-navbar-edit.scss */
 .submenu-leftnav a {
   padding: 10px 20px;
   font-size: 0.83em;
   text-transform: capitalize;
 }
 
-/* line 155, ../sass/global/_left-navbar-edit.scss */
+/* line 156, ../sass/global/_left-navbar-edit.scss */
 .submenu-content {
   width: 81%;
   float: right;
 }
-/* line 159, ../sass/global/_left-navbar-edit.scss */
+/* line 160, ../sass/global/_left-navbar-edit.scss */
 .submenu-content .heading {
   width: 100%;
   background-color: #ebebeb;
   padding: 4px 10px;
 }
-/* line 164, ../sass/global/_left-navbar-edit.scss */
+/* line 165, ../sass/global/_left-navbar-edit.scss */
 .submenu-content .content-block {
   /*background-color: #ccc;*/
   width: 100%;
@@ -1074,28 +1094,54 @@ footer .text-left {
   overflow-y: auto;
 }
 
-/* line 171, ../sass/global/_left-navbar-edit.scss */
+/* line 172, ../sass/global/_left-navbar-edit.scss */
 .elements-right {
   width: 150px;
   float: right;
   text-align: right;
 }
-/* line 176, ../sass/global/_left-navbar-edit.scss */
+/* line 177, ../sass/global/_left-navbar-edit.scss */
 .elements-right a.heading-navlinks {
   padding: 0;
   text-decoration: underline;
   width: auto;
   display: inline-block;
   text-transform: capitalize;
+  font-size: 0.85em;
 }
-/* line 183, ../sass/global/_left-navbar-edit.scss */
+/* line 185, ../sass/global/_left-navbar-edit.scss */
 .elements-right a.heading-navlinks:hover {
   text-decoration: none;
   background-color: transparent;
   color: #000;
 }
 
-/* line 191, ../sass/global/_left-navbar-edit.scss */
+/* line 193, ../sass/global/_left-navbar-edit.scss */
+.icon-blocks {
+  margin: 30px;
+  text-align: center;
+}
+/* line 197, ../sass/global/_left-navbar-edit.scss */
+.icon-blocks .icon-block {
+  width: auto;
+  text-align: center;
+  display: inline-block;
+  margin: 10px 40px;
+}
+/* line 203, ../sass/global/_left-navbar-edit.scss */
+.icon-blocks .icon-block a {
+  display: block;
+}
+/* line 206, ../sass/global/_left-navbar-edit.scss */
+.icon-blocks .icon-block i {
+  font-size: 7em;
+}
+/* line 209, ../sass/global/_left-navbar-edit.scss */
+.icon-blocks .icon-block .caption {
+  width: 100%;
+}
+
+/* line 215, ../sass/global/_left-navbar-edit.scss */
 .element-highlight {
   border: 2px dashed #000;
 }
@@ -1111,23 +1157,23 @@ footer .text-left {
 .image-header{
   @extend .submenu-header;
 }*/
-/* line 206, ../sass/global/_left-navbar-edit.scss */
+/* line 230, ../sass/global/_left-navbar-edit.scss */
 .image-container {
   margin: 10px 20px;
 }
-/* line 210, ../sass/global/_left-navbar-edit.scss */
+/* line 234, ../sass/global/_left-navbar-edit.scss */
 .image-container .nav-pills a {
   padding: 6px 20px;
   text-transform: capitalize;
 }
-/* line 215, ../sass/global/_left-navbar-edit.scss */
+/* line 239, ../sass/global/_left-navbar-edit.scss */
 .image-container .tab-pane {
   min-height: 385px;
   position: relative;
   padding: 0;
 }
 
-/* line 221, ../sass/global/_left-navbar-edit.scss */
+/* line 245, ../sass/global/_left-navbar-edit.scss */
 .bottom-fixed-box {
   position: absolute;
   bottom: 0px;
@@ -1137,45 +1183,60 @@ footer .text-left {
   border-top: 1px solid #ccc;
 }
 
-/* line 229, ../sass/global/_left-navbar-edit.scss */
+/* line 253, ../sass/global/_left-navbar-edit.scss */
 .top-fixed-box {
   border-bottom: 1px solid #ccc;
   width: 100%;
   padding: 10px;
   text-align: right;
 }
-/* line 235, ../sass/global/_left-navbar-edit.scss */
+/* line 259, ../sass/global/_left-navbar-edit.scss */
 .top-fixed-box .searchbox {
   width: 35%;
   height: 20px;
 }
 
-/* line 240, ../sass/global/_left-navbar-edit.scss */
-.icon-blocks {
-  margin: 30px;
-  text-align: center;
-}
-/* line 244, ../sass/global/_left-navbar-edit.scss */
-.icon-blocks .icon-block {
-  width: auto;
-  text-align: center;
-  display: inline-block;
-  margin: 10px 40px;
-}
-/* line 250, ../sass/global/_left-navbar-edit.scss */
-.icon-blocks .icon-block a {
-  display: block;
-}
-/* line 253, ../sass/global/_left-navbar-edit.scss */
-.icon-blocks .icon-block i {
-  font-size: 7em;
-}
-/* line 256, ../sass/global/_left-navbar-edit.scss */
-.icon-blocks .icon-block .caption {
+/* line 264, ../sass/global/_left-navbar-edit.scss */
+.user-library-content {
   width: 100%;
+  float: left;
+  height: 400px;
+  padding: 10px;
+}
+/* line 270, ../sass/global/_left-navbar-edit.scss */
+.user-library-content .user-library-blocks {
+  width: 96%;
+  margin: 15px auto;
 }
 
-/* line 263, ../sass/global/_left-navbar-edit.scss */
+/* line 275, ../sass/global/_left-navbar-edit.scss */
+.library-block {
+  width: 25%;
+  float: left;
+  padding: 3px;
+}
+/* line 281, ../sass/global/_left-navbar-edit.scss */
+.library-block .library-block-inner {
+  border: 1px solid #000;
+  text-align: center;
+  background-color: #ccc;
+  min-height: 50px;
+  line-height: 3;
+}
+
+/* line 290, ../sass/global/_left-navbar-edit.scss */
+.uploaded-date-bar {
+  background-color: #ebebeb;
+  width: 100%;
+  margin: 0 auto;
+  padding: 4px;
+}
+/* line 296, ../sass/global/_left-navbar-edit.scss */
+.uploaded-date-bar .date {
+  font-size: 0.85em;
+}
+
+/* line 303, ../sass/global/_left-navbar-edit.scss */
 .drag-drop {
   background-image: url(../../images/drag-and-drop.png);
   background-repeat: no-repeat;
@@ -1183,14 +1244,14 @@ footer .text-left {
 }
 
 /*============ control-bar styles =============*/
-/* line 270, ../sass/global/_left-navbar-edit.scss */
+/* line 310, ../sass/global/_left-navbar-edit.scss */
 .vertically-centered, .control-label, .control-buttons-container, .control-button {
   display: inline-block;
   vertical-align: middle;
   margin-left: -4px;
 }
 
-/* line 275, ../sass/global/_left-navbar-edit.scss */
+/* line 315, ../sass/global/_left-navbar-edit.scss */
 .control-bar {
   /* width: auto;*/
   background: #337ab7;
@@ -1202,28 +1263,28 @@ footer .text-left {
   box-shadow: 0 1px 3px 0 rgba(37, 39, 43, 0.9);
 }
 
-/* line 285, ../sass/global/_left-navbar-edit.scss */
+/* line 325, ../sass/global/_left-navbar-edit.scss */
 .control-label {
   padding: 0 14px;
 }
 
-/* line 293, ../sass/global/_left-navbar-edit.scss */
+/* line 333, ../sass/global/_left-navbar-edit.scss */
 .control-buttons-container .fa {
   font-size: 1.3em;
 }
 
-/* line 297, ../sass/global/_left-navbar-edit.scss */
+/* line 337, ../sass/global/_left-navbar-edit.scss */
 .control-button {
   text-align: center;
   padding: 0px 10px;
   font-size: 0.9em;
 }
-/* line 303, ../sass/global/_left-navbar-edit.scss */
+/* line 343, ../sass/global/_left-navbar-edit.scss */
 .control-button:hover {
   color: #fff;
 }
 
-/* line 307, ../sass/global/_left-navbar-edit.scss */
+/* line 347, ../sass/global/_left-navbar-edit.scss */
 .with-separator {
   border-left: 1px solid #1c4f7b;
 }
