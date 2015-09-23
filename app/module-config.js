@@ -16,6 +16,8 @@
 
 	angular.module('home',['app']);
 
+	angular.module('campaign',['home']);
+	
 	angular.module('overview',['home']);
    
 	angular.module('design',['home']);

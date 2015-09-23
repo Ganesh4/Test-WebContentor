@@ -17,7 +17,7 @@
                 'https://s3.amazonaws.com/webcontentor-microsite/**'
             ]); 
             // For any unmatched url, redirect to /state1
-            $urlRouterProvider.otherwise("/app/home/overview");
+            $urlRouterProvider.otherwise("/app/home/campaign");
             // Now set up the states
             $stateProvider.state('app', {
                 url: '/app',
@@ -39,9 +39,23 @@
             }).state('app.home.campaign', {
                 url: '/campaign',
                 templateUrl:"views/campaign/home.html",
-                controller:'CampaignCtrl',
+               // controller:'CampaignCtrl',
                 data: {
                      displayName: 'campaign',
+                     leftMenu : [{
+                        icon : '',
+                        name : 'Campaign',
+                            innerMenu : [{
+                                icon : '',
+                                name : 'New Campaign'
+                            },{
+                                icon : '',
+                                name : 'My Campaigns'
+                            },{
+                                icon : '',
+                                name : 'All Campaigns'
+                            }]
+                     }]
                 }
                 
             }).state('app.home.overview', {
