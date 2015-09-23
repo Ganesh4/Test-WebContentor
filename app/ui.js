@@ -58,25 +58,14 @@
                      }]
                 }
                 
-            }).state('app.home.overview', {
-                url: '/overview',
+            }).state('app.home.design', {
+                url: '/design',
                 templateUrl:"views/overview/overview.html",
                 controller:'OverviewCtrl',
-                data: {
-                     displayName: 'overview',
-                }
-                
-            }).state('app.home.dashboard', {
-                url: '/dashboard',
-                templateUrl:'views/overview/overview.html'
-            });
-            $stateProvider.state('app.home.design', {
-                url: '/design',
-                template:'<ui-view></ui-view>',
-                data: {
+                 data: {
                     tags:['Iteractive User Interface', 'Parrallex Design', 'Entertainment', 'Music'],                 
                      displayName :'design' 
-                },              
+                },     
             }).state('app.home.design.detail', {
                 url:'/detail',
                 templateUrl:'views/design/DesignDetail.html',
