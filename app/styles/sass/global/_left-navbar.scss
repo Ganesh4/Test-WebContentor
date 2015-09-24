@@ -17,9 +17,12 @@
     overflow-y: auto;    
 	padding-left: 15px;
     padding-right: 15px;
-    position: fixed;
-    top: 51px;
+    position: relative;
+	height: calc(100vh - 50px);
+    top:-1px;
     z-index: 1000;
+	background-color:$sidenavbar-color;
+	
 }	
 	
 .leftnav-hamburger {
