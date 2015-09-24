@@ -10,12 +10,13 @@
             function($state){
                 return {
                     restrict : 'AE',
+                    scope :{
+                        data : '='
+                    },
                     templateUrl : './views/commons/leftnav/LeftNavMenu.html',
                     link : function(scope, element, attr){
-                        scope.data = $state.current.data;
-                        console.log('scope.data------------',scope.data);
                         
-
+                         console.log('data --------  ' , scope.data);
                     }
                 }   
             }

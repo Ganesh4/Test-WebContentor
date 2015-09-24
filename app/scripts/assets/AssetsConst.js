@@ -6,15 +6,12 @@
     angular.module('assets').constant('AssetsConsts', (function () {
         var self = {};
         self.BTNS = {
-             REFRESS: {
-                display: gettext('Refress'),
+             REFRESH: {
+                display: gettext('Refresh'),
 
                  },
                 APPLY: {
-
-                display: gettext('Apply'),
-
-                 },
+                display: gettext('Apply'),                 },
                 PREVIEW : { 
                     display: gettext('Preview'),
                 },
@@ -29,7 +26,6 @@
                  },
 
             }
-
 
         return self;
     })());
