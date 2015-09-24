@@ -28,7 +28,7 @@
   background-image:    -moz-linear-gradient($gradientLine, $colorStops);
   background-image:      -o-linear-gradient($gradientLine, $colorStops);
   @if length($gradientLine) == 2 {
-  background-image:         linear-gradient(to #{inverse-side(nth($gradientLine, 1))} #{inverse-side(nth($gradientLine, 2))}, $colorStops);
+  background-image:linear-gradient(to #{inverse-side(nth($gradientLine, 1))} #{inverse-side(nth($gradientLine, 2))}, $colorStops);
   } @else {
   background-image:         linear-gradient(to #{inverse-side($gradientLine)}, $colorStops);
   }
@@ -93,4 +93,13 @@
          only screen and (min-resolution: 144dpi) {
     @content;
   }
+}
+
+/*================== for border-radious button  =================*/
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
 }

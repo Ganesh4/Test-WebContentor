@@ -40,7 +40,7 @@
                     displayName: 'campaign',
                     LeftNavList:[
                         {
-                            icon : '',
+                            icon : 'fa fa-angle-down',
                             name : 'Campaign',
                                 menu : [{
                                     icon : '',
@@ -66,59 +66,59 @@
                     displayName: 'manage',
                     LeftNavList:[
                         {
-                            icon : '',
+                            icon : 'fa fa-angle-down',
                             name : 'User and Roles',
                             menu : [{
-                                    icon : '',
+                                    icon : 'fa fa-user',
                                     name : 'Users'
                                 },{
-                                    icon : '',
+                                    icon : 'fa fa-users',
                                     name : 'Roles'
                                 }
                             ]
                         },{
-                            icon : '',
+                            icon : 'fa fa-angle-down',
                             name : 'Resources',
                             menu : [{
-                                icon : '',
+                                icon : 'fa fa-picture-o',
                                 name : 'Images'
                             },{
-                                icon : '',
+                                icon : 'fa fa-video-camera',
                                 name : 'Videos'
                             },{
-                                icon : '',
+                                icon : 'fa fa-folder-open',
                                 name : 'Files'
                             }]
                         },{
-                            icon : '',
+                            icon : 'fa fa-angle-down',
                             name : 'Emails and Recipients',
                             menu : [{
-                                icon : '',
+                                icon : 'fa fa-envelope',
                                 name : 'Emails'
                             },{
-                                icon : '',
+                                icon : 'fa fa-list-alt',
                                 name : 'Recipients'
                             }]
                         },{
-                            icon : '',
+                            icon : 'fa fa-angle-down',
                             name : 'Promotional Pages',
                             menu : [{
-                                icon : '',
+                                icon : 'fa fa-file-text',
                                 name : 'Promotional Pages',
                                 state : 'app.home.manage.page'
                             }]
                         },{
-                            icon : '',
+                            icon : 'fa fa-angle-down',
                             name : 'Reports',
                             menu : [{
-                                icon : '',
+                                icon : 'fa fa-bar-chart',
                                 name : 'Analytics'
                             }]
                         },{
-                            icon : '',
+                            icon : 'fa fa-bookmark',
                             name : 'Logos',
                             menu : [{
-                                icon : '',
+                                icon : 'fa fa-bookmark',
                                 name : 'Event Logo'
                             }]
                         }

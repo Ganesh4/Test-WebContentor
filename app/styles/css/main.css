@@ -1,79 +1,1361 @@
-/*
-Error: Undefined variable: "$contant-style".
-        on line 47 of E:/WebcontentorMicroSites/app/styles/sass/global/_variable.scss
-        from line 2 of E:/WebcontentorMicroSites/app/styles/sass/main.scss
+/* CSS Document */
+/* line 40, ../sass/global/_variable.scss */
+.login-text {
+  font: 100% Myriad Pro, Calibri, sans-serif;
+  color: #666666;
+}
 
-Backtrace:
-E:/WebcontentorMicroSites/app/styles/sass/global/_variable.scss:47
-E:/WebcontentorMicroSites/app/styles/sass/main.scss:2
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/script/tree/variable.rb:49:in `_perform'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/script/tree/node.rb:50:in `perform'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/script/tree/list_literal.rb:63:in `block in _perform'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/script/tree/list_literal.rb:63:in `map'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/script/tree/list_literal.rb:63:in `_perform'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/script/tree/node.rb:50:in `perform'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:395:in `visit_prop'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `visit'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:431:in `block (2 levels) in visit_rule'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:431:in `map'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:431:in `block in visit_rule'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:429:in `visit_rule'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `visit'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:326:in `block (2 levels) in visit_import'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:326:in `map'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:326:in `block in visit_import'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/stack.rb:88:in `block in with_import'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/stack.rb:88:in `with_import'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:323:in `visit_import'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:158:in `visit'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:52:in `map'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:157:in `visit'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/tree/visitors/perform.rb:8:in `visit'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/tree/root_node.rb:36:in `css_tree'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/tree/root_node.rb:20:in `render'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/engine.rb:278:in `render'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:209:in `each'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/sass-3.4.18/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/sass_compiler.rb:40:in `compile!'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/commands/update_project.rb:49:in `perform'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/commands/base.rb:18:in `execute'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/commands/project_base.rb:19:in `execute'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:43:in `perform!'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-1.0.3/lib/compass/exec/sub_command_ui.rb:15:in `run!'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-1.0.3/bin/compass:30:in `block in <top (required)>'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-1.0.3/bin/compass:44:in `call'
-C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-1.0.3/bin/compass:44:in `<top (required)>'
-C:/Ruby21-x64/bin/compass:23:in `load'
-C:/Ruby21-x64/bin/compass:23:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Undefined variable: \"$contant-style\".\A         on line 47 of E:/WebcontentorMicroSites/app/styles/sass/global/_variable.scss\A         from line 2 of E:/WebcontentorMicroSites/app/styles/sass/main.scss"; }
+/* line 46, ../sass/global/_variable.scss */
+.allrightreserved {
+  /*font: 100% $contant-style;*/
+  color: #333333;
+}
+
+/* line 51, ../sass/global/_variable.scss */
+.send-icon {
+  background-color: #0f750f;
+}
+
+/* line 56, ../sass/global/_variable.scss */
+.user-icon {
+  background-color: #cecece;
+}
+
+/* line 63, ../sass/global/_variable.scss */
+.form-control, .password-control {
+  color: #555555;
+}
+
+/* Manage left row */
+/* Scss Document */
+/* line 4, ../sass/global/_config.scss */
+body {
+  background: #fff;
+  margin: auto 0;
+  font-family: "segoeui", "Segoe UI";
+}
+
+@font-face {
+  /* There can be only one font-family in a font-face declaration. Multiple will break the font-face. */
+  /* Test on Chrome in Linux to see the result of the broken font-face declaration (fonts will be serif). */
+  /* Also, for some reason, IE 11 does not use this custom font. See this by changing the body font to just 'segoeui'. */
+  /* Also, this font-family cannot be called "Segoe UI", as that causes issues on IE 11/Windows 8. */
+  font-family: 'segoeui';
+  src: url("../fonts/segoeui.eot"), url("../fonts/segoeui.eot?#iefix") format("embedded-opentype"), url("../fonts/segoeui.woff") format("woff"), url("../fonts/segoeui.ttf") format("truetype"), url("../fonts/segoeui.otf") format("opentype"), url("../fonts/segoeui.svg") format("svg");
+  /* Legacy iOS */
+}
+/* line 25, ../sass/global/_config.scss */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 30, ../sass/global/_config.scss */
+h2.common-headng {
+  font-size: 1.2em;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* line 36, ../sass/global/_config.scss */
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+/* line 45, ../sass/global/_config.scss */
+.content-padding {
+  padding: 10px 20px;
+  width: 100%;
+  float: left;
+}
+
+/* line 51, ../sass/global/_config.scss */
+.content-main {
+  float: right;
+  width: 85%;
+  /*background-color:#ccc;
+    border-top: 2px solid #000;*/
+  margin-top: 120px;
+}
+
+/* line 59, ../sass/global/_config.scss */
+.wrap-box {
+  width: 100%;
+  float: left;
+}
+
+/* line 64, ../sass/global/_config.scss */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 70, ../sass/global/_config.scss */
+a {
+  color: #000000;
+}
+/* line 72, ../sass/global/_config.scss */
+a:hover {
+  text-decoration: none;
+}
+
+/* line 77, ../sass/global/_config.scss */
+.btn-view {
+  padding: 5px 10px;
+  border: 1px solid #dfdede;
+  color: #000;
+  text-decoration: none;
+}
+/* line 83, ../sass/global/_config.scss */
+.btn-view:hover {
+  color: #eee;
+  background-color: #b8b8b8;
+}
+
+/* line 89, ../sass/global/_config.scss */
+.btn-rect {
+  padding: 5px 16px;
+}
+
+/*================== for border-radious button  =================*/
+/* Scss Document */
+/* line 3, ../sass/global/_header.scss */
+.nav-header {
+  width: 100%;
+  border-bottom: solid 1px #d8d8d8;
+  background-color: #efefef;
+  display: inline-flex;
+}
+/* line 8, ../sass/global/_header.scss */
+.nav-header .logo {
+  width: 100%;
+  float: left;
+  margin-top: 1px;
+  display: inline-flex;
+}
+/* line 14, ../sass/global/_header.scss */
+.nav-header .logo img {
+  height: 56px;
+}
+/* line 16, ../sass/global/_header.scss */
+.nav-header .help-icon {
+  width: 55px;
+  height: 56px;
+  float: right;
+  background-color: #f6f6f6;
+  text-align: center;
+  line-height: 68px;
+  cursor: pointer;
+}
+/* line 25, ../sass/global/_header.scss */
+.nav-header .help-icon i {
+  font-size: 38px;
+  color: #000;
+}
+/* line 30, ../sass/global/_header.scss */
+.nav-header .nav-upload {
+  width: 75px;
+  height: 56px;
+  float: right;
+  background-color: #f5f5f5;
+  text-align: center;
+  line-height: 68px;
+  cursor: pointer;
+  border-left: 1px solid #d8d8d8;
+}
+/* line 40, ../sass/global/_header.scss */
+.nav-header .nav-upload i {
+  font-size: 26px;
+  color: #3a3d42;
+}
+/* line 44, ../sass/global/_header.scss */
+.nav-header .nav-upload i:hover {
+  color: #26ade3;
+}
+/* line 48, ../sass/global/_header.scss */
+.nav-header .nav-search {
+  width: 210px;
+  height: 30px;
+  float: right;
+  margin-right: 70px;
+  margin-top: 13px;
+}
+/* line 55, ../sass/global/_header.scss */
+.nav-header .nav-search .nav-search-form {
+  display: block;
+  width: 100%;
+  height: 30px;
+  padding: 0px 28px 0px 28px;
+  font-size: 13px;
+  line-height: 2.6;
+  background-color: #efefef;
+  background-image: none;
+  border: 1px solid #dfdede;
+  border-radius: 4px;
+  float: left;
+  outline: none;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+  -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+/* line 74, ../sass/global/_header.scss */
+.nav-header .nav-search .nav-search-icon {
+  font-size: 18px;
+  color: #3a3d42;
+  position: absolute;
+  padding: 7px;
+}
+/* line 80, ../sass/global/_header.scss */
+.nav-header .nav-search .nav-close-icon {
+  font-size: 18px;
+  color: #3a3d42;
+  position: absolute;
+  padding: 7px;
+  display: inline-flex;
+  margin-left: -28px;
+  cursor: pointer;
+}
+/* line 89, ../sass/global/_header.scss */
+.nav-header .nav-search .nav-close-icon i:hover {
+  color: #C90003;
+}
+/* line 96, ../sass/global/_header.scss */
+.nav-header .nav-campaign-btn {
+  width: 92px;
+  background-color: #efefef;
+  text-align: center;
+  float: left;
+  color: #353535;
+  font-family: "Arial Regular", "Arial";
+  font-size: 13px;
+  padding: 18px;
+  cursor: pointer;
+}
+/* line 107, ../sass/global/_header.scss */
+.nav-header .nav-campaign-btn:hover {
+  background-color: #d8d8d8;
+}
+/* line 110, ../sass/global/_header.scss */
+.nav-header .active {
+  background-color: #d8d8d8 !important;
+}
+
+/* line 117, ../sass/global/_header.scss */
+.padding-allside, .header-main {
+  padding: 9px 20px 8px;
+}
+
+/* line 120, ../sass/global/_header.scss */
+.header-right-col {
+  float: right;
+  margin-top: 8px;
+}
+
+/* line 124, ../sass/global/_header.scss */
+.header-main {
+  clear: both;
+  min-height: 60px;
+  /*border-top: 2px solid #000;*/
+  width: 100%;
+}
+
+/* Scss Document */
+/* Scss Document */
+/*.manage-left-row{
+	width: 16.4%;
+	background-color: $manage-left-bg;
+	height: 700px;
+	margin-top: -4px;
+	float: left;
+	background:url(../fonts/segoepr.ttf);
+
+
+	}*/
+/* line 15, ../sass/global/_left-navbar.scss */
+.sidebar {
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: fixed;
+  top: 51px;
+  z-index: 1000;
+}
+
+/* line 25, ../sass/global/_left-navbar.scss */
+.leftnav-hamburger {
+  border-bottom: 1px solid white;
+}
+
+/* line 30, ../sass/global/_left-navbar.scss */
+.leftnav-hamburger {
+  height: 50px;
+  width: 100%;
+  background-color: #3a3a3a;
+}
+/* line 36, ../sass/global/_left-navbar.scss */
+.leftnav-hamburger .hamburger {
+  padding: 10px;
+  cursor: pointer;
+  width: 30px;
+  height: 22px;
+}
+/* line 43, ../sass/global/_left-navbar.scss */
+.leftnav-hamburger .hamburger i {
+  color: #5e5e5e;
+  font-size: 31px;
+}
+/* line 48, ../sass/global/_left-navbar.scss */
+.leftnav-hamburger .hamburger i:hover {
+  color: #26ade3;
+}
+
+/* line 53, ../sass/global/_left-navbar.scss */
+.leftnav-Toggle {
+  border-top: 1px solid #414248;
+}
+/* line 56, ../sass/global/_left-navbar.scss */
+.leftnav-Toggle .leftnav-Toggle-name {
+  height: 32px;
+  background-color: #2d2d2d;
+  width: 100%;
+  color: #fff;
+}
+/* line 63, ../sass/global/_left-navbar.scss */
+.leftnav-Toggle .leftnav-Toggle-name i {
+  color: #5d5e64;
+  font-size: 23px;
+  font-weight: bolder;
+  padding: 6px;
+}
+/* line 70, ../sass/global/_left-navbar.scss */
+.leftnav-Toggle .leftnav-Toggle-name span {
+  vertical-align: text-bottom;
+}
+/* line 75, ../sass/global/_left-navbar.scss */
+.leftnav-Toggle ul li {
+  width: 100%;
+  background-color: #3a3a3a;
+  color: #cccccc;
+  height: 37px;
+  padding: 10px;
+  cursor: pointer;
+}
+/* line 82, ../sass/global/_left-navbar.scss */
+.leftnav-Toggle ul li:hover {
+  background-color: #1b951b;
+  color: #fff !important;
+}
+/* line 88, ../sass/global/_left-navbar.scss */
+.leftnav-Toggle ul li i {
+  margin-right: 10px;
+  color: #5d5e64;
+}
+
+/* line 98, ../sass/global/_left-navbar.scss */
+.nav-selected {
+  background-color: #107c10 !important;
+  color: #fff !important;
+}
+
+/* line 102, ../sass/global/_left-navbar.scss */
+.nav-selected i {
+  color: #fff !important;
+}
+
+/* line 106, ../sass/global/_left-navbar.scss */
+.left-navbar {
+  width: 15%;
+  float: left;
+  border-right: 2px solid #000;
+  height: 700px;
+  position: fixed;
+}
+
+/* line 113, ../sass/global/_left-navbar.scss */
+.left-header-logo {
+  width: 100%;
+  text-align: center;
+  padding: 6px 0;
+  border-top: 2px solid #000;
+  min-height: 60px;
+}
+/* line 120, ../sass/global/_left-navbar.scss */
+.left-header-logo img {
+  width: 85%;
+  margin-top: 5px;
+}
+
+/* line 125, ../sass/global/_left-navbar.scss */
+.btn_create-new-design {
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid #000;
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+/* line 133, ../sass/global/_left-navbar.scss */
+.btn_create-new-design-wrap {
+  /*  border-top: 2px solid #000;*/
+  padding: 8px 0;
+}
+
+/* line 137, ../sass/global/_left-navbar.scss */
+.btn_left-bar {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  text-align: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #000;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+/* line 146, ../sass/global/_left-navbar.scss */
+.btn_left-bar:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* line 151, ../sass/global/_left-navbar.scss */
+.leftnav-title {
+  padding: 8px 0;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  min-height: 60px;
+}
+
+/* line 157, ../sass/global/_left-navbar.scss */
+.btn_active {
+  background-color: #000;
+  color: #fff;
+}
+
+/* Scss Document */
+/* line 4, ../sass/global/_button.scss */
+.submenu-btn {
+  background-color: white;
+  border: 1px solid #dbdada;
+  margin-right: 14px;
+  padding: 5px;
+  min-width: 80px;
+  float: right;
+  outline: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+}
+
+/* Sass Document */
+/* line 3, ../sass/global/_footer.scss */
+footer {
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  width: 85%;
+  float: right;
+  bottom: 0px;
+  /* position: absolute;*/
+  right: 0;
+}
+/* line 12, ../sass/global/_footer.scss */
+footer .text-right {
+  float: right;
+}
+/* line 15, ../sass/global/_footer.scss */
+footer .text-left {
+  float: left;
+}
+
+/* Scss Document */
+/*===================== switch button css =====================*/
+/* line 6, ../sass/global/_components.scss */
+.switch {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 56px;
+  height: 20px;
+  padding: 3px;
+  background-color: white;
+  border-radius: 18px;
+  box-shadow: inset 0 -1px white, inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  background-image: -webkit-linear-gradient(top, #eee, white 25px);
+  background-image: -moz-linear-gradient(top, #eee, white 25px);
+  background-image: -o-linear-gradient(top, #eee, white 25px);
+  background-image: linear-gradient(to bottom, #eee, white 25px);
+  float: right;
+}
+
+/* line 22, ../sass/global/_components.scss */
+.switch-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+
+/* line 29, ../sass/global/_components.scss */
+.switch-label {
+  position: relative;
+  display: block;
+  height: inherit;
+  font-size: 10px;
+  text-transform: uppercase;
+  background: #eceeef;
+  border-radius: inherit;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.15);
+  -webkit-transition: 0.15s ease-out;
+  -moz-transition: 0.15s ease-out;
+  -o-transition: 0.15s ease-out;
+  transition: 0.15s ease-out;
+  -webkit-transition-property: opacity background;
+  -moz-transition-property: opacity background;
+  -o-transition-property: opacity background;
+  transition-property: opacity background;
+}
+/* line 42, ../sass/global/_components.scss */
+.switch-label:before, .switch-label:after {
+  position: absolute;
+  top: 50%;
+  margin-top: -.5em;
+  line-height: 1;
+  -webkit-transition: inherit;
+  -moz-transition: inherit;
+  -o-transition: inherit;
+  transition: inherit;
+}
+/* line 50, ../sass/global/_components.scss */
+.switch-label:before {
+  content: attr(data-off);
+  right: 11px;
+  color: #aaa;
+  text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+}
+/* line 57, ../sass/global/_components.scss */
+.switch-label:after {
+  content: attr(data-on);
+  left: 11px;
+  color: white;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+}
+/* line 65, ../sass/global/_components.scss */
+.switch-input:checked ~ .switch-label {
+  background: #47a8d8;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.15), inset 0 0 3px rgba(0, 0, 0, 0.2);
+}
+/* line 70, ../sass/global/_components.scss */
+.switch-input:checked ~ .switch-label:before {
+  opacity: 0;
+}
+/* line 71, ../sass/global/_components.scss */
+.switch-input:checked ~ .switch-label:after {
+  opacity: 1;
+}
+
+/* line 75, ../sass/global/_components.scss */
+.switch-handle {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 18px;
+  height: 18px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  background-image: -webkit-linear-gradient(top, white 40%, #f0f0f0);
+  background-image: -moz-linear-gradient(top, white 40%, #f0f0f0);
+  background-image: -o-linear-gradient(top, white 40%, #f0f0f0);
+  background-image: linear-gradient(to bottom, white 40%, #f0f0f0);
+  -webkit-transition: left 0.15s ease-out;
+  -moz-transition: left 0.15s ease-out;
+  -o-transition: left 0.15s ease-out;
+  transition: left 0.15s ease-out;
+}
+/* line 87, ../sass/global/_components.scss */
+.switch-handle:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -6px 0 0 -6px;
+  width: 12px;
+  height: 12px;
+  background: #f9f9f9;
+  border-radius: 6px;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.02);
+  background-image: -webkit-linear-gradient(top, #eee, white);
+  background-image: -moz-linear-gradient(top, #eee, white);
+  background-image: -o-linear-gradient(top, #eee, white);
+  background-image: linear-gradient(to bottom, #eee, white);
+}
+/* line 101, ../sass/global/_components.scss */
+.switch-input:checked ~ .switch-handle {
+  left: 40px;
+  box-shadow: -1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* line 107, ../sass/global/_components.scss */
+.switch-green > .switch-input:checked ~ .switch-label {
+  background: #4fb845;
+}
+
+/*===================== end of switch button css =====================*/
+/* Scss Document */
+/* line 3, ../sass/global/_template-thumbs.scss */
+.thumb-row {
+  /* float: left;*/
+  width: 100%;
+}
+
+/* line 7, ../sass/global/_template-thumbs.scss */
+.thumb-block {
+  width: 100%;
+  border: 1px solid #000;
+  height: auto;
+  float: left;
+  /*margin: 5px 8px;*/
+  margin-bottom: 20px;
+}
+/* line 15, ../sass/global/_template-thumbs.scss */
+.thumb-block:hover .btn_template-img-over {
+  display: block;
+  background: rgba(255, 255, 255, 0.7);
+}
+/* line 19, ../sass/global/_template-thumbs.scss */
+.thumb-block .title {
+  width: 100%;
+  font-size: 1.3em;
+  display: block;
+  padding: 5px 0;
+}
+
+/* line 26, ../sass/global/_template-thumbs.scss */
+.thumb-innr {
+  padding: 10px 15px 10px;
+  float: left;
+  width: 100%;
+}
+
+/* line 31, ../sass/global/_template-thumbs.scss */
+.thumb-img {
+  height: 280px;
+  /*	background-image: url(../../images/img_1.gif);
+  	background-repeat: no-repeat;
+  	background-size: 100% auto;
+    background-position: center 0;*/
+  border-bottom: 1px solid #000;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+/* line 44, ../sass/global/_template-thumbs.scss */
+.thumb-img img {
+  width: 100%;
+  height: auto;
+   /* &:hover{
+			opacity: 0.5;
+     }	*/
+}
+
+/* line 53, ../sass/global/_template-thumbs.scss */
+.thumb-desc {
+  font-size: 0.9em;
+}
+
+/* line 56, ../sass/global/_template-thumbs.scss */
+.thumb-info {
+  width: 100%;
+  float: left;
+  padding: 5px 0;
+}
+/* line 61, ../sass/global/_template-thumbs.scss */
+.thumb-info .info-text-size, .thumb-info .revision, .thumb-info .age {
+  font-size: 0.9em;
+}
+/* line 64, ../sass/global/_template-thumbs.scss */
+.thumb-info .revision {
+  float: left;
+}
+/* line 68, ../sass/global/_template-thumbs.scss */
+.thumb-info .age {
+  float: right;
+}
+
+/* line 73, ../sass/global/_template-thumbs.scss */
+.bg-text-color, .btn_view-more a:hover, .btn_load-templates a:hover, .btn_template-img-over a:hover {
+  color: #8b8a8a;
+  background-color: #eee;
+}
+
+/* line 77, ../sass/global/_template-thumbs.scss */
+.btn_view-more {
+  width: 100%;
+  display: block;
+  float: left;
+  padding: 5px 0;
+  text-align: center;
+  font-size: 0.9em;
+}
+/* line 85, ../sass/global/_template-thumbs.scss */
+.btn_view-more a {
+  padding: 5px 10px;
+  border: 1px solid #000;
+  color: #000;
+  text-decoration: none;
+}
+
+/* line 96, ../sass/global/_template-thumbs.scss */
+.thumb-stats-view {
+  border-top: 1px solid #000;
+  width: 100%;
+  float: left;
+}
+
+/* line 101, ../sass/global/_template-thumbs.scss */
+.thumb-graph-wrap {
+  float: left;
+  width: 100%;
+  padding: 5px 0 15px;
+}
+
+/* line 106, ../sass/global/_template-thumbs.scss */
+.thumb-graph {
+  width: 45%;
+  float: left;
+  height: 89px;
+  background-image: url(../../images/chart.jpg);
+  background-repeat: no-repeat;
+}
+
+/* line 113, ../sass/global/_template-thumbs.scss */
+.thumb-graph-details {
+  width: 45%;
+  float: right;
+}
+/* line 117, ../sass/global/_template-thumbs.scss */
+.thumb-graph-details p {
+  font-size: 0.9em;
+  margin: 5px 0;
+}
+
+/* line 122, ../sass/global/_template-thumbs.scss */
+.thumb-category {
+  width: 100%;
+  border-bottom: 1px dashed #000;
+  padding: 20px 0 10px;
+  margin-bottom: 10px;
+  float: left;
+}
+/* line 129, ../sass/global/_template-thumbs.scss */
+.thumb-category .thumb-category-title {
+  font-size: 1.4em;
+  float: left;
+}
+/* line 133, ../sass/global/_template-thumbs.scss */
+.thumb-category .right-elements {
+  float: right;
+  width: 160px;
+}
+
+/* line 139, ../sass/global/_template-thumbs.scss */
+.content-padding .thumb-category:first-child {
+  padding: 10px 0;
+}
+
+/* line 144, ../sass/global/_template-thumbs.scss */
+.btn_view-all {
+  width: 50%;
+  display: block;
+  float: left;
+  padding: 5px 0;
+  text-align: center;
+  font-size: 0.9em;
+}
+/* line 152, ../sass/global/_template-thumbs.scss */
+.btn_view-all a {
+  text-decoration: underline;
+}
+/* line 155, ../sass/global/_template-thumbs.scss */
+.btn_view-all a:hover {
+  text-decoration: none;
+}
+
+/* line 160, ../sass/global/_template-thumbs.scss */
+.btn_load-templates {
+  width: 400px;
+  margin: 20px auto 10px;
+  text-align: center;
+  border: 1px solid #000;
+}
+/* line 166, ../sass/global/_template-thumbs.scss */
+.btn_load-templates a {
+  padding: 8px 0;
+  display: block;
+}
+/* line 170, ../sass/global/_template-thumbs.scss */
+.btn_load-templates a:hover {
+  text-decoration: none;
+}
+
+/* Scss Document */
+/* line 4, ../sass/global/_upload-template.scss */
+.upload-wrapper {
+  margin: 2px;
+  width: 99%;
+  float: left;
+  padding: 10px;
+}
+
+/* line 10, ../sass/global/_upload-template.scss */
+.upload-inner {
+  width: 80%;
+  float: left;
+  /*border: 1px solid #000;*/
+  /*padding:3% 15% 20px 30px;*/
+  margin-top: 20px;
+}
+/* line 17, ../sass/global/_upload-template.scss */
+.upload-inner .thumb-category-title {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* line 22, ../sass/global/_upload-template.scss */
+.select2-container {
+  width: 100%;
+}
+
+/* line 27, ../sass/global/_upload-template.scss */
+.select2-container-multi .select2-choices {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Scss Document */
+/*==================== multi tabs css ===================*/
+/* line 4, ../sass/global/_template-details.scss */
+.template-details {
+  margin-top: 20px;
+}
+
+/* line 8, ../sass/global/_template-details.scss */
+.nav-pills > li {
+  border: 1px solid #000;
+}
+/* line 11, ../sass/global/_template-details.scss */
+.nav-pills > li + li {
+  margin-left: -1px;
+}
+/* line 16, ../sass/global/_template-details.scss */
+.nav-pills > li > a {
+  background-color: #d6d6d6;
+  border-radius: 0;
+  color: #000;
+  padding: 6px 35px;
+}
+/* line 24, ../sass/global/_template-details.scss */
+.nav-pills > li.active a {
+  background-color: #fff;
+  color: #000;
+}
+/* line 27, ../sass/global/_template-details.scss */
+.nav-pills > li.active a:hover {
+  background-color: #ecebeb;
+  color: #000;
+}
+/* line 31, ../sass/global/_template-details.scss */
+.nav-pills > li.active a:visited {
+  background-color: #ecebeb;
+  color: #000;
+}
+
+/* line 38, ../sass/global/_template-details.scss */
+.tab-content {
+  border: 1px solid #000;
+}
+/* line 41, ../sass/global/_template-details.scss */
+.tab-content > .tab-pane {
+  padding: 40px 20px 10px;
+}
+
+/* line 45, ../sass/global/_template-details.scss */
+.template-details select {
+  width: 25%;
+}
+
+/* line 48, ../sass/global/_template-details.scss */
+.btn_template-img-over {
+  width: 100%;
+  display: none;
+  float: left;
+  padding: 5px 0;
+  text-align: center;
+  font-size: 0.9em;
+  position: absolute;
+  /*margin-top: 26%;*/
+  height: 100%;
+  padding-top: 30%;
+}
+/* line 60, ../sass/global/_template-details.scss */
+.btn_template-img-over a {
+  padding: 5px 10px;
+  border: 1px solid #000;
+  color: #000;
+  text-decoration: none;
+  display: block;
+  width: 25%;
+  margin: 0 auto 10px;
+  background-color: #d6d6d6;
+}
+
+/*===================== css for tables ========================*/
+/* line 80, ../sass/global/_template-details.scss */
+.revision table thead {
+  background-color: #ccc;
+}
+
+/* Scss Document */
+/* line 3, ../sass/global/_left-navbar-edit.scss */
+.left-navbar-edit {
+  width: 8%;
+  float: left;
+  border-right: 2px solid #000;
+  height: 700px;
+  position: fixed;
+  z-index: 99;
+}
+
+/* line 11, ../sass/global/_left-navbar-edit.scss */
+.left-navbar-edit-header {
+  width: 100%;
+  text-align: center;
+  padding: 6px 0;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  min-height: 60px;
+}
+
+/* line 19, ../sass/global/_left-navbar-edit.scss */
+.left-navbar-edit-header {
+  width: 100%;
+  text-align: center;
+  padding: 16px 0 6px;
+  border-top: 2px solid #000;
+  min-height: 60px;
+}
+/* line 26, ../sass/global/_left-navbar-edit.scss */
+.left-navbar-edit-header img {
+  width: 90%;
+}
+
+/* line 33, ../sass/global/_left-navbar-edit.scss */
+.nav-main-edit li {
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+  /*position:relative;*/
+}
+/* line 37, ../sass/global/_left-navbar-edit.scss */
+.nav-main-edit li > a {
+  width: 100%;
+  display: block;
+  padding: 15px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.85em;
+}
+/* line 45, ../sass/global/_left-navbar-edit.scss */
+.nav-main-edit li > a:hover {
+  color: #eee;
+  background-color: #b8b8b8;
+}
+/* line 53, ../sass/global/_left-navbar-edit.scss */
+.nav-main-edit .fa {
+  font-size: 1.5em;
+}
+
+/* line 57, ../sass/global/_left-navbar-edit.scss */
+.header-edit {
+  width: 92%;
+  float: right;
+}
+/* line 61, ../sass/global/_left-navbar-edit.scss */
+.header-edit .header-main {
+  /*border-bottom:2px solid #000;*/
+}
+
+/* line 65, ../sass/global/_left-navbar-edit.scss */
+.nav-arrows-col {
+  float: left;
+  width: 150px;
+  margin-top: 8px;
+  font-size: 1.2em;
+  margin-left: 3%;
+}
+/* line 72, ../sass/global/_left-navbar-edit.scss */
+.nav-arrows-col a {
+  display: block;
+  float: left;
+  margin-right: 40px;
+}
+
+/* line 78, ../sass/global/_left-navbar-edit.scss */
+.template-edit {
+  width: 100%;
+  position: relative;
+}
+/* line 82, ../sass/global/_left-navbar-edit.scss */
+.template-edit img {
+  width: 100%;
+}
+/* line 85, ../sass/global/_left-navbar-edit.scss */
+.template-edit .grid-vertical {
+  width: 85%;
+  border-left: 1px dashed #000;
+  border-right: 1px dashed #000;
+  position: absolute;
+  height: 100%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+/* line 95, ../sass/global/_left-navbar-edit.scss */
+.template-edit .grid-horizontal {
+  width: 100%;
+  border-top: 1px dashed #000;
+  border-bottom: 1px dashed #000;
+  position: absolute;
+  height: 93.5%;
+  margin: auto 0;
+  top: 0;
+  bottom: 0;
+}
+
+/* line 106, ../sass/global/_left-navbar-edit.scss */
+.content-main-edit {
+  width: 92%;
+  margin-top: 60px;
+  position: relative;
+  z-index: 9;
+}
+
+/* line 112, ../sass/global/_left-navbar-edit.scss */
+.footer-edit {
+  width: 92%;
+}
+
+/* submenu blocks */
+/* line 118, ../sass/global/_left-navbar-edit.scss */
+.block-container {
+  width: 640px;
+  height: 500px;
+  position: absolute;
+  top: 60px;
+  left: 108px;
+  /*display:none;*/
+}
+
+/* line 126, ../sass/global/_left-navbar-edit.scss */
+.submenu-block {
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #000;
+  float: left;
+}
+
+/* line 132, ../sass/global/_left-navbar-edit.scss */
+.submenu-header {
+  width: 100%;
+  min-height: 60px;
+  padding: 10px 0;
+  border-bottom: 1px solid #000;
+}
+/* line 138, ../sass/global/_left-navbar-edit.scss */
+.submenu-header .heading-top {
+  font-size: 1.3em;
+  float: left;
+}
+
+/* line 143, ../sass/global/_left-navbar-edit.scss */
+.submenu-leftnav {
+  width: 120px;
+  float: left;
+}
+/* line 150, ../sass/global/_left-navbar-edit.scss */
+.submenu-leftnav a {
+  padding: 10px 20px;
+  font-size: 0.83em;
+  text-transform: capitalize;
+}
+
+/* line 156, ../sass/global/_left-navbar-edit.scss */
+.submenu-content {
+  width: 81%;
+  float: right;
+}
+/* line 160, ../sass/global/_left-navbar-edit.scss */
+.submenu-content .heading {
+  width: 100%;
+  background-color: #ebebeb;
+  padding: 4px 10px;
+}
+/* line 165, ../sass/global/_left-navbar-edit.scss */
+.submenu-content .content-block {
+  /*background-color: #ccc;*/
+  width: 100%;
+  height: 332px;
+  overflow-y: auto;
+}
+
+/* line 172, ../sass/global/_left-navbar-edit.scss */
+.elements-right {
+  width: 150px;
+  float: right;
+  text-align: right;
+}
+/* line 177, ../sass/global/_left-navbar-edit.scss */
+.elements-right a.heading-navlinks {
+  padding: 0;
+  text-decoration: underline;
+  width: auto;
+  display: inline-block;
+  text-transform: capitalize;
+  font-size: 0.85em;
+}
+/* line 185, ../sass/global/_left-navbar-edit.scss */
+.elements-right a.heading-navlinks:hover {
+  text-decoration: none;
+  background-color: transparent;
+  color: #000;
+}
+
+/* line 193, ../sass/global/_left-navbar-edit.scss */
+.icon-blocks {
+  margin: 30px;
+  text-align: center;
+}
+/* line 197, ../sass/global/_left-navbar-edit.scss */
+.icon-blocks .icon-block {
+  width: auto;
+  text-align: center;
+  display: inline-block;
+  margin: 10px 40px;
+}
+/* line 203, ../sass/global/_left-navbar-edit.scss */
+.icon-blocks .icon-block a {
+  display: block;
+}
+/* line 206, ../sass/global/_left-navbar-edit.scss */
+.icon-blocks .icon-block i {
+  font-size: 7em;
+}
+/* line 209, ../sass/global/_left-navbar-edit.scss */
+.icon-blocks .icon-block .caption {
+  width: 100%;
+}
+
+/* line 215, ../sass/global/_left-navbar-edit.scss */
+.element-highlight {
+  border: 2px dashed #000;
+}
+
+/*.image-block1{
+	width: 640px;z
+	height: 500px;
+	position: absolute;
+	top: 60px;
+	left: 108px;
+	background:#ccc;
+}
+.image-header{
+  @extend .submenu-header;
+}*/
+/* line 230, ../sass/global/_left-navbar-edit.scss */
+.image-container {
+  margin: 10px 20px;
+}
+/* line 234, ../sass/global/_left-navbar-edit.scss */
+.image-container .nav-pills a {
+  padding: 6px 20px;
+  text-transform: capitalize;
+}
+/* line 239, ../sass/global/_left-navbar-edit.scss */
+.image-container .tab-pane {
+  min-height: 385px;
+  position: relative;
+  padding: 0;
+}
+
+/* line 245, ../sass/global/_left-navbar-edit.scss */
+.bottom-fixed-box {
+  /*position: absolute;
+  bottom: 0px;*/
+  width: 100%;
+  padding: 10px;
+  text-align: right;
+  border-top: 1px solid #ccc;
+  float: left;
+}
+
+/* line 254, ../sass/global/_left-navbar-edit.scss */
+.top-fixed-box {
+  border-bottom: 1px solid #ccc;
+  width: 100%;
+  padding: 10px;
+  text-align: right;
+}
+/* line 260, ../sass/global/_left-navbar-edit.scss */
+.top-fixed-box .searchbox {
+  width: 35%;
+  height: 20px;
+}
+
+/* line 265, ../sass/global/_left-navbar-edit.scss */
+.user-library-content {
+  width: 100%;
+  float: left;
+  height: 350px;
+  padding: 10px;
+  overflow-y: scroll;
+}
+/* line 272, ../sass/global/_left-navbar-edit.scss */
+.user-library-content .user-library-blocks {
+  width: 96%;
+  margin: 15px auto;
+}
+
+/* line 277, ../sass/global/_left-navbar-edit.scss */
+.library-block {
+  width: 25%;
+  float: left;
+  padding: 3px;
+}
+/* line 283, ../sass/global/_left-navbar-edit.scss */
+.library-block .library-block-inner {
+  border: 1px solid #000;
+  text-align: center;
+  background-color: #ccc;
+  min-height: 50px;
+  line-height: 3;
+}
+/* line 290, ../sass/global/_left-navbar-edit.scss */
+.library-block .thumbnail {
+  margin-bottom: 0px;
+}
+
+/* line 295, ../sass/global/_left-navbar-edit.scss */
+.uploaded-date-bar {
+  background-color: #ebebeb;
+  width: 100%;
+  margin: 0 auto;
+  padding: 4px;
+}
+/* line 301, ../sass/global/_left-navbar-edit.scss */
+.uploaded-date-bar .date {
+  font-size: 0.85em;
+}
+
+/* line 306, ../sass/global/_left-navbar-edit.scss */
+.drag-drop {
+  background-image: url(../../images/drag-and-drop.png);
+  background-repeat: no-repeat;
+  background-position: center 30%;
+}
+
+/* line 311, ../sass/global/_left-navbar-edit.scss */
+.upload-image-content {
+  background-image: url(../../images/drag-and-drop.png);
+  background-repeat: no-repeat;
+  background-position: center 30%;
+  min-height: 320px;
+}
+
+/*============ control-bar styles =============*/
+/* line 319, ../sass/global/_left-navbar-edit.scss */
+.vertically-centered, .control-label, .control-buttons-container, .control-button {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: -4px;
+}
+
+/* line 324, ../sass/global/_left-navbar-edit.scss */
+.control-bar {
+  /* width: auto;*/
+  background: #337ab7;
+  position: absolute;
+  top: 250px;
+  padding: 5px 0;
+  border: 1px solid #29689f;
+  color: #e0e0e0;
+  box-shadow: 0 1px 3px 0 rgba(37, 39, 43, 0.9);
+}
+
+/* line 334, ../sass/global/_left-navbar-edit.scss */
+.control-label {
+  padding: 0 14px;
+}
+
+/* line 342, ../sass/global/_left-navbar-edit.scss */
+.control-buttons-container .fa {
+  font-size: 1.3em;
+}
+
+/* line 346, ../sass/global/_left-navbar-edit.scss */
+.control-button {
+  text-align: center;
+  padding: 0px 10px;
+  font-size: 0.9em;
+}
+/* line 352, ../sass/global/_left-navbar-edit.scss */
+.control-button:hover {
+  color: #fff;
+}
+
+/* line 356, ../sass/global/_left-navbar-edit.scss */
+.with-separator {
+  border-left: 1px solid #1c4f7b;
+}
+
+/* Scss Document */
+/* line 3, ../sass/global/_submenu.scss */
+.header-sub {
+  width: 83.6%;
+  float: left;
+  background-color: #f3f3f3;
+  margin-top: -3px;
+  padding: 9px 0px;
+  border-bottom: 1px solid #e4e4e4;
+}
+/* line 11, ../sass/global/_submenu.scss */
+.header-sub .sub-header-icon {
+  float: left;
+  padding: 8px 10px 0px 22px;
+}
+/* line 16, ../sass/global/_submenu.scss */
+.header-sub .sub-header-icon i {
+  color: #5d5e64;
+  font-size: 18px;
+}
+
+/* line 22, ../sass/global/_submenu.scss */
+.breadcrumb {
+  float: left;
+  margin-bottom: 0px;
+  padding: 0px;
+  color: #333333;
+  font-size: 16px;
+  line-height: 30px;
+}
