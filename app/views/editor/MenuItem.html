@@ -1,0 +1,15 @@
+
+    <div class="content-padding">
+        <div class="heading">{{data.subtitle}}
+        </div>
+            <div class="content-block">
+                <div class="icon-blocks" >
+                   <div class="icon-block" ng-repeat = "item in data.items">
+                        <a ng-click="uploadImage()" ui-sref="#"><i class="{{item.icon}}"></i>
+	                       <div class="caption">{{item.name}}
+	                       </div>
+                        </a>
+                    </div>
+               </div>
+            </div>
+    </div>
