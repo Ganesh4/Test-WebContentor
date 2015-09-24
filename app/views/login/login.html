@@ -1,35 +1,64 @@
+
 <div class="wrapper">
 
 <!--Navigation bar start here-->
-    <div class="nav-header"> 
-       <div class="logo"><img src="style/image/logo.png" width="220" height="50" alt=""/></div>
-       <div class="help-icon"><i class="fa fa-question-circle"></i></div>
-    </div> 
-<!--Navigation bar end here-->
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    
+     
+        
+      
+      <ul class="nav navbar-nav navbar-right">         
+            <li><a href="#"><i class="fa fa-question-circle"></i></a></li>           
+           
+            
+       <!--<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">                      
+            <li><a href="#"><i class="fa fa-arrow-circle-up"></i></a></li>
+          </ul>
+        </li>-->
+      </ul>
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav><!--Navigation bar end here-->
    
 <!--Work area start here-->
-    <div class="login-work-area">
-     
-        <div class="login-box">
-           <div class="login-text">Enter User Name and Password to log in.</div>
-           
-           <div class="login-user">
-                <div class="user-icon"><i class="fa fa-user"></i></div>
-                <input type="text" class="form-control"  placeholder="User Name">
-           </div>
-           
-           <div class="login-password">
-                <div class="user-icon"><i class="fa fa-key"></i></div>
-                <input type="password" class="password-control"  placeholder="Password">
-                <div class="send-icon"><i class="fa fa-chevron-right"></i></div>
-           </div>
-           
-           <div class="login-footer"></div>
+    <div class="container">
+
+      <form class="form-signin">
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <label class="sr-only" for="inputEmail">Email address</label>
+        <input type="text" autofocus="" required="" placeholder="User Name" class="form-control">
+        <label class="sr-only" for="inputPassword">Password</label>
+        <input type="password" required="" placeholder="Password" class="form-control">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
         </div>
+        <button type="submit" class="btn btn-lg btn-success btn-block">Sign in</button>
+      </form>
 
     </div>
 <!--Work area end here-->
+
    
     <div class="allrightreserved">© 2015 YAVUN Technology Corp.</div>
    
 </div>
+
