@@ -11,16 +11,22 @@
         '$sceDelegateProvider',
         function ($stateProvider, $urlRouterProvider , $sceDelegateProvider) {
             // For any unmatched url, redirect to /state1
-            $urlRouterProvider.otherwise("/app/home/campaign");
+            $urlRouterProvider.otherwise("/app/login");
             // Now set up the states
             $stateProvider.state('app', {
 
                 url: '/app',
-                template:'<ui-view></ui-view>',
+                template:'<ui-view>Ganesh</ui-view>',
                 controller:'AppCtrl',
                 data: {
                       displayName: false
                 },
+
+            }).state('app.login', {
+               cache: false,
+                url: '/login',
+                templateUrl:'views/login/login.html',
+                //controller:'LoginCtrl',
 
             }).state('app.home', {
                 cache: false,
