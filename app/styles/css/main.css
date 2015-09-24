@@ -1227,7 +1227,7 @@ footer .text-left {
 }
 
 /* line 265, ../sass/global/_left-navbar-edit.scss */
-.user-library-content {
+.user-library-content, .image-library-content {
   width: 100%;
   float: left;
   height: 350px;
@@ -1235,7 +1235,7 @@ footer .text-left {
   overflow-y: scroll;
 }
 /* line 272, ../sass/global/_left-navbar-edit.scss */
-.user-library-content .user-library-blocks {
+.user-library-content .user-library-blocks, .image-library-content .user-library-blocks {
   width: 96%;
   margin: 15px auto;
 }
@@ -1271,14 +1271,71 @@ footer .text-left {
   font-size: 0.85em;
 }
 
+/*=========== upload-image styles ===========*/
 /* line 306, ../sass/global/_left-navbar-edit.scss */
-.drag-drop {
-  background-image: url(../../images/drag-and-drop.png);
-  background-repeat: no-repeat;
-  background-position: center 30%;
+.image-library-content {
+  padding-top: 0px;
+  overflow: hidden;
+}
+/* line 311, ../sass/global/_left-navbar-edit.scss */
+.image-library-content .header {
+  font-size: 1.3em;
+  border-bottom: 1px solid #ccc;
+  padding: 5px;
 }
 
-/* line 311, ../sass/global/_left-navbar-edit.scss */
+/* line 317, ../sass/global/_left-navbar-edit.scss */
+.left-nav {
+  width: 20%;
+  float: left;
+  border-right: 1px solid #ccc;
+  height: 360px;
+}
+/* line 323, ../sass/global/_left-navbar-edit.scss */
+.left-nav .links {
+  margin-top: 10px;
+}
+/* line 326, ../sass/global/_left-navbar-edit.scss */
+.left-nav .links li {
+  border-bottom: 0;
+  border-right: 0;
+}
+/* line 330, ../sass/global/_left-navbar-edit.scss */
+.left-nav .links li a {
+  padding: 7px 10px;
+  font-size: 0.75em;
+}
+/* line 333, ../sass/global/_left-navbar-edit.scss */
+.left-nav .links li a:hover {
+  background-color: transparent;
+  color: blue;
+}
+/* line 338, ../sass/global/_left-navbar-edit.scss */
+.left-nav .links li a.active {
+  color: blue;
+}
+
+/* line 344, ../sass/global/_left-navbar-edit.scss */
+.right-content {
+  width: 78%;
+  float: right;
+}
+
+/* line 348, ../sass/global/_left-navbar-edit.scss */
+.image-library-blocks {
+  width: 100%;
+  padding: 10px 20px;
+  float: left;
+  overflow-y: scroll;
+  height: 314px;
+}
+
+/*.drag-drop{
+	 background-image:url(../../images/drag-and-drop.png);
+	 background-repeat:no-repeat;
+   background-position: center 30%;
+}*/
+/* line 362, ../sass/global/_left-navbar-edit.scss */
 .upload-image-content {
   background-image: url(../../images/drag-and-drop.png);
   background-repeat: no-repeat;
@@ -1287,14 +1344,14 @@ footer .text-left {
 }
 
 /*============ control-bar styles =============*/
-/* line 319, ../sass/global/_left-navbar-edit.scss */
+/* line 370, ../sass/global/_left-navbar-edit.scss */
 .vertically-centered, .control-label, .control-buttons-container, .control-button {
   display: inline-block;
   vertical-align: middle;
   margin-left: -4px;
 }
 
-/* line 324, ../sass/global/_left-navbar-edit.scss */
+/* line 375, ../sass/global/_left-navbar-edit.scss */
 .control-bar {
   /* width: auto;*/
   background: #337ab7;
@@ -1306,28 +1363,28 @@ footer .text-left {
   box-shadow: 0 1px 3px 0 rgba(37, 39, 43, 0.9);
 }
 
-/* line 334, ../sass/global/_left-navbar-edit.scss */
+/* line 385, ../sass/global/_left-navbar-edit.scss */
 .control-label {
   padding: 0 14px;
 }
 
-/* line 342, ../sass/global/_left-navbar-edit.scss */
+/* line 393, ../sass/global/_left-navbar-edit.scss */
 .control-buttons-container .fa {
   font-size: 1.3em;
 }
 
-/* line 346, ../sass/global/_left-navbar-edit.scss */
+/* line 397, ../sass/global/_left-navbar-edit.scss */
 .control-button {
   text-align: center;
   padding: 0px 10px;
   font-size: 0.9em;
 }
-/* line 352, ../sass/global/_left-navbar-edit.scss */
+/* line 403, ../sass/global/_left-navbar-edit.scss */
 .control-button:hover {
   color: #fff;
 }
 
-/* line 356, ../sass/global/_left-navbar-edit.scss */
+/* line 407, ../sass/global/_left-navbar-edit.scss */
 .with-separator {
   border-left: 1px solid #1c4f7b;
 }
