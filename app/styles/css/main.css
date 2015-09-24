@@ -1,5 +1,4 @@
 /* CSS Document */
-/* Scss Document */
 /* line 40, ../sass/global/_variable.scss */
 .login-text {
   font: 100% Myriad Pro, Calibri, sans-serif;
@@ -8,7 +7,7 @@
 
 /* line 46, ../sass/global/_variable.scss */
 .allrightreserved {
-  font: 100% "Arial Regular", "Arial";
+  /*font: 100% $contant-style;*/
   color: #333333;
 }
 
@@ -29,25 +28,36 @@
 
 /* Manage left row */
 /* Scss Document */
-/* line 3, ../sass/global/_config.scss */
+/* line 4, ../sass/global/_config.scss */
 body {
-  font-family: Arial,Helvetica,sans-serif;
+  background: #fff;
+  margin: auto 0;
+  font-family: "segoeui", "Segoe UI";
 }
 
-/* line 6, ../sass/global/_config.scss */
+@font-face {
+  /* There can be only one font-family in a font-face declaration. Multiple will break the font-face. */
+  /* Test on Chrome in Linux to see the result of the broken font-face declaration (fonts will be serif). */
+  /* Also, for some reason, IE 11 does not use this custom font. See this by changing the body font to just 'segoeui'. */
+  /* Also, this font-family cannot be called "Segoe UI", as that causes issues on IE 11/Windows 8. */
+  font-family: 'segoeui';
+  src: url("../fonts/segoeui.eot"), url("../fonts/segoeui.eot?#iefix") format("embedded-opentype"), url("../fonts/segoeui.woff") format("woff"), url("../fonts/segoeui.ttf") format("truetype"), url("../fonts/segoeui.otf") format("opentype"), url("../fonts/segoeui.svg") format("svg");
+  /* Legacy iOS */
+}
+/* line 25, ../sass/global/_config.scss */
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
 }
 
-/* line 10, ../sass/global/_config.scss */
+/* line 30, ../sass/global/_config.scss */
 h2.common-headng {
   font-size: 1.2em;
   text-align: center;
   padding: 10px 0;
 }
 
-/* line 15, ../sass/global/_config.scss */
+/* line 36, ../sass/global/_config.scss */
 .clearfix:after {
   visibility: hidden;
   display: block;
@@ -57,14 +67,14 @@ h2.common-headng {
   height: 0;
 }
 
-/* line 23, ../sass/global/_config.scss */
+/* line 45, ../sass/global/_config.scss */
 .content-padding {
   padding: 10px 20px;
   width: 100%;
   float: left;
 }
 
-/* line 28, ../sass/global/_config.scss */
+/* line 51, ../sass/global/_config.scss */
 .content-main {
   float: right;
   width: 85%;
@@ -73,46 +83,47 @@ h2.common-headng {
   margin-top: 120px;
 }
 
-/* line 35, ../sass/global/_config.scss */
+/* line 59, ../sass/global/_config.scss */
 .wrap-box {
   width: 100%;
   float: left;
 }
 
-/* line 39, ../sass/global/_config.scss */
+/* line 64, ../sass/global/_config.scss */
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 44, ../sass/global/_config.scss */
+/* line 70, ../sass/global/_config.scss */
 a {
   color: #000000;
 }
-/* line 46, ../sass/global/_config.scss */
+/* line 72, ../sass/global/_config.scss */
 a:hover {
   text-decoration: none;
 }
 
-/* line 51, ../sass/global/_config.scss */
+/* line 77, ../sass/global/_config.scss */
 .btn-view {
   padding: 5px 10px;
   border: 1px solid #dfdede;
   color: #000;
   text-decoration: none;
 }
-/* line 57, ../sass/global/_config.scss */
+/* line 83, ../sass/global/_config.scss */
 .btn-view:hover {
   color: #eee;
   background-color: #b8b8b8;
 }
 
-/* line 62, ../sass/global/_config.scss */
+/* line 89, ../sass/global/_config.scss */
 .btn-rect {
   padding: 5px 16px;
 }
 
+/*================== for border-radious button  =================*/
 /* Scss Document */
 /* line 3, ../sass/global/_header.scss */
 .nav-header {
@@ -257,80 +268,80 @@ a:hover {
 }
 
 /* Scss Document */
-/* line 3, ../sass/global/_left-navbar.scss */
-body {
-  background: #fff;
-  margin: auto 0;
-  font-family: "segoeui", "Segoe UI";
+/* Scss Document */
+/*.manage-left-row{
+	width: 16.4%;
+	background-color: $manage-left-bg;
+	height: 700px;
+	margin-top: -4px;
+	float: left;
+	background:url(../fonts/segoepr.ttf);
+
+
+	}*/
+/* line 15, ../sass/global/_left-navbar.scss */
+.sidebar {
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: fixed;
+  top: 51px;
+  z-index: 1000;
 }
 
-@font-face {
-  /* There can be only one font-family in a font-face declaration. Multiple will break the font-face. */
-  /* Test on Chrome in Linux to see the result of the broken font-face declaration (fonts will be serif). */
-  /* Also, for some reason, IE 11 does not use this custom font. See this by changing the body font to just 'segoeui'. */
-  /* Also, this font-family cannot be called "Segoe UI", as that causes issues on IE 11/Windows 8. */
-  font-family: 'segoeui';
-  src: url("../fonts/segoeui.eot"), url("../fonts/segoeui.eot?#iefix") format("embedded-opentype"), url("../fonts/segoeui.woff") format("woff"), url("../fonts/segoeui.ttf") format("truetype"), url("../fonts/segoeui.otf") format("opentype"), url("../fonts/segoeui.svg") format("svg");
-  /* Legacy iOS */
-}
-/* line 24, ../sass/global/_left-navbar.scss */
-.manage-left-row {
-  width: 16.4%;
-  background-color: #3a3a3a;
-  height: 700px;
-  margin-top: -4px;
-  float: left;
-  background: url(../fonts/segoepr.ttf);
-}
-
-/* line 35, ../sass/global/_left-navbar.scss */
+/* line 25, ../sass/global/_left-navbar.scss */
 .leftnav-hamburger {
-  border-bottom: 1px solid #2c2d33;
+  border-bottom: 1px solid white;
+}
+
+/* line 30, ../sass/global/_left-navbar.scss */
+.leftnav-hamburger {
   height: 50px;
   width: 100%;
   background-color: #3a3a3a;
 }
-/* line 41, ../sass/global/_left-navbar.scss */
+/* line 36, ../sass/global/_left-navbar.scss */
 .leftnav-hamburger .hamburger {
   padding: 10px;
   cursor: pointer;
   width: 30px;
   height: 22px;
 }
-/* line 47, ../sass/global/_left-navbar.scss */
+/* line 43, ../sass/global/_left-navbar.scss */
 .leftnav-hamburger .hamburger i {
   color: #5e5e5e;
   font-size: 31px;
 }
-/* line 51, ../sass/global/_left-navbar.scss */
+/* line 48, ../sass/global/_left-navbar.scss */
 .leftnav-hamburger .hamburger i:hover {
   color: #26ade3;
 }
 
-/* line 56, ../sass/global/_left-navbar.scss */
+/* line 53, ../sass/global/_left-navbar.scss */
 .leftnav-Toggle {
   border-top: 1px solid #414248;
 }
-/* line 59, ../sass/global/_left-navbar.scss */
+/* line 56, ../sass/global/_left-navbar.scss */
 .leftnav-Toggle .leftnav-Toggle-name {
   height: 32px;
   background-color: #2d2d2d;
   width: 100%;
   color: #fff;
 }
-/* line 65, ../sass/global/_left-navbar.scss */
+/* line 63, ../sass/global/_left-navbar.scss */
 .leftnav-Toggle .leftnav-Toggle-name i {
   color: #5d5e64;
   font-size: 23px;
   font-weight: bolder;
   padding: 6px;
 }
-/* line 71, ../sass/global/_left-navbar.scss */
+/* line 70, ../sass/global/_left-navbar.scss */
 .leftnav-Toggle .leftnav-Toggle-name span {
   vertical-align: text-bottom;
 }
-/* line 78, ../sass/global/_left-navbar.scss */
-.leftnav-Toggle li {
+/* line 75, ../sass/global/_left-navbar.scss */
+.leftnav-Toggle ul li {
   width: 100%;
   background-color: #3a3a3a;
   color: #cccccc;
@@ -338,29 +349,29 @@ body {
   padding: 10px;
   cursor: pointer;
 }
-/* line 86, ../sass/global/_left-navbar.scss */
-.leftnav-Toggle li:hover {
+/* line 82, ../sass/global/_left-navbar.scss */
+.leftnav-Toggle ul li:hover {
   background-color: #1b951b;
   color: #fff !important;
 }
-/* line 90, ../sass/global/_left-navbar.scss */
-.leftnav-Toggle li i {
+/* line 88, ../sass/global/_left-navbar.scss */
+.leftnav-Toggle ul li i {
   margin-right: 10px;
   color: #5d5e64;
 }
 
-/* line 97, ../sass/global/_left-navbar.scss */
+/* line 98, ../sass/global/_left-navbar.scss */
 .nav-selected {
   background-color: #107c10 !important;
   color: #fff !important;
 }
 
-/* line 101, ../sass/global/_left-navbar.scss */
+/* line 102, ../sass/global/_left-navbar.scss */
 .nav-selected i {
   color: #fff !important;
 }
 
-/* line 122, ../sass/global/_left-navbar.scss */
+/* line 106, ../sass/global/_left-navbar.scss */
 .left-navbar {
   width: 15%;
   float: left;
@@ -369,7 +380,7 @@ body {
   position: fixed;
 }
 
-/* line 129, ../sass/global/_left-navbar.scss */
+/* line 113, ../sass/global/_left-navbar.scss */
 .left-header-logo {
   width: 100%;
   text-align: center;
@@ -377,13 +388,13 @@ body {
   border-top: 2px solid #000;
   min-height: 60px;
 }
-/* line 136, ../sass/global/_left-navbar.scss */
+/* line 120, ../sass/global/_left-navbar.scss */
 .left-header-logo img {
   width: 85%;
   margin-top: 5px;
 }
 
-/* line 141, ../sass/global/_left-navbar.scss */
+/* line 125, ../sass/global/_left-navbar.scss */
 .btn_create-new-design {
   width: 90%;
   text-align: center;
@@ -393,13 +404,13 @@ body {
   cursor: pointer;
 }
 
-/* line 149, ../sass/global/_left-navbar.scss */
+/* line 133, ../sass/global/_left-navbar.scss */
 .btn_create-new-design-wrap {
   /*  border-top: 2px solid #000;*/
   padding: 8px 0;
 }
 
-/* line 153, ../sass/global/_left-navbar.scss */
+/* line 137, ../sass/global/_left-navbar.scss */
 .btn_left-bar {
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
@@ -409,13 +420,13 @@ body {
   cursor: pointer;
   font-size: 1.2em;
 }
-/* line 162, ../sass/global/_left-navbar.scss */
+/* line 146, ../sass/global/_left-navbar.scss */
 .btn_left-bar:hover {
   background-color: #333;
   color: #fff;
 }
 
-/* line 167, ../sass/global/_left-navbar.scss */
+/* line 151, ../sass/global/_left-navbar.scss */
 .leftnav-title {
   padding: 8px 0;
   border-top: 2px solid #000;
@@ -423,13 +434,28 @@ body {
   min-height: 60px;
 }
 
-/* line 173, ../sass/global/_left-navbar.scss */
+/* line 157, ../sass/global/_left-navbar.scss */
 .btn_active {
   background-color: #000;
   color: #fff;
 }
 
 /* Scss Document */
+/* line 4, ../sass/global/_button.scss */
+.submenu-btn {
+  background-color: white;
+  border: 1px solid #dbdada;
+  margin-right: 14px;
+  padding: 5px;
+  min-width: 80px;
+  float: right;
+  outline: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+}
+
 /* Sass Document */
 /* line 3, ../sass/global/_footer.scss */
 footer {
@@ -1175,47 +1201,49 @@ footer .text-left {
 
 /* line 245, ../sass/global/_left-navbar-edit.scss */
 .bottom-fixed-box {
-  position: absolute;
-  bottom: 0px;
+  /*position: absolute;
+  bottom: 0px;*/
   width: 100%;
   padding: 10px;
   text-align: right;
   border-top: 1px solid #ccc;
+  float: left;
 }
 
-/* line 253, ../sass/global/_left-navbar-edit.scss */
+/* line 254, ../sass/global/_left-navbar-edit.scss */
 .top-fixed-box {
   border-bottom: 1px solid #ccc;
   width: 100%;
   padding: 10px;
   text-align: right;
 }
-/* line 259, ../sass/global/_left-navbar-edit.scss */
+/* line 260, ../sass/global/_left-navbar-edit.scss */
 .top-fixed-box .searchbox {
   width: 35%;
   height: 20px;
 }
 
-/* line 264, ../sass/global/_left-navbar-edit.scss */
-.user-library-content {
+/* line 265, ../sass/global/_left-navbar-edit.scss */
+.user-library-content, .image-library-content {
   width: 100%;
   float: left;
-  height: 400px;
+  height: 350px;
   padding: 10px;
+  overflow-y: scroll;
 }
-/* line 270, ../sass/global/_left-navbar-edit.scss */
-.user-library-content .user-library-blocks {
+/* line 272, ../sass/global/_left-navbar-edit.scss */
+.user-library-content .user-library-blocks, .image-library-content .user-library-blocks {
   width: 96%;
   margin: 15px auto;
 }
 
-/* line 275, ../sass/global/_left-navbar-edit.scss */
+/* line 277, ../sass/global/_left-navbar-edit.scss */
 .library-block {
   width: 25%;
   float: left;
   padding: 3px;
 }
-/* line 281, ../sass/global/_left-navbar-edit.scss */
+/* line 283, ../sass/global/_left-navbar-edit.scss */
 .library-block .library-block-inner {
   border: 1px solid #000;
   text-align: center;
@@ -1223,35 +1251,104 @@ footer .text-left {
   min-height: 50px;
   line-height: 3;
 }
-
 /* line 290, ../sass/global/_left-navbar-edit.scss */
+.library-block .thumbnail {
+  margin-bottom: 0px;
+}
+
+/* line 295, ../sass/global/_left-navbar-edit.scss */
 .uploaded-date-bar {
   background-color: #ebebeb;
   width: 100%;
   margin: 0 auto;
   padding: 4px;
 }
-/* line 296, ../sass/global/_left-navbar-edit.scss */
+/* line 301, ../sass/global/_left-navbar-edit.scss */
 .uploaded-date-bar .date {
   font-size: 0.85em;
 }
 
-/* line 303, ../sass/global/_left-navbar-edit.scss */
-.drag-drop {
+/*=========== upload-image styles ===========*/
+/* line 306, ../sass/global/_left-navbar-edit.scss */
+.image-library-content {
+  padding-top: 0px;
+  overflow: hidden;
+}
+/* line 311, ../sass/global/_left-navbar-edit.scss */
+.image-library-content .header {
+  font-size: 1.3em;
+  border-bottom: 1px solid #ccc;
+  padding: 5px;
+}
+
+/* line 317, ../sass/global/_left-navbar-edit.scss */
+.left-nav {
+  width: 20%;
+  float: left;
+  border-right: 1px solid #ccc;
+  height: 360px;
+}
+/* line 323, ../sass/global/_left-navbar-edit.scss */
+.left-nav .links {
+  margin-top: 10px;
+}
+/* line 326, ../sass/global/_left-navbar-edit.scss */
+.left-nav .links li {
+  border-bottom: 0;
+  border-right: 0;
+}
+/* line 330, ../sass/global/_left-navbar-edit.scss */
+.left-nav .links li a {
+  padding: 7px 10px;
+  font-size: 0.75em;
+}
+/* line 333, ../sass/global/_left-navbar-edit.scss */
+.left-nav .links li a:hover {
+  background-color: transparent;
+  color: blue;
+}
+/* line 338, ../sass/global/_left-navbar-edit.scss */
+.left-nav .links li a.active {
+  color: blue;
+}
+
+/* line 344, ../sass/global/_left-navbar-edit.scss */
+.right-content {
+  width: 78%;
+  float: right;
+}
+
+/* line 348, ../sass/global/_left-navbar-edit.scss */
+.image-library-blocks {
+  width: 100%;
+  padding: 10px 20px;
+  float: left;
+  overflow-y: scroll;
+  height: 314px;
+}
+
+/*.drag-drop{
+	 background-image:url(../../images/drag-and-drop.png);
+	 background-repeat:no-repeat;
+   background-position: center 30%;
+}*/
+/* line 362, ../sass/global/_left-navbar-edit.scss */
+.upload-image-content {
   background-image: url(../../images/drag-and-drop.png);
   background-repeat: no-repeat;
   background-position: center 30%;
+  min-height: 320px;
 }
 
 /*============ control-bar styles =============*/
-/* line 310, ../sass/global/_left-navbar-edit.scss */
+/* line 370, ../sass/global/_left-navbar-edit.scss */
 .vertically-centered, .control-label, .control-buttons-container, .control-button {
   display: inline-block;
   vertical-align: middle;
   margin-left: -4px;
 }
 
-/* line 315, ../sass/global/_left-navbar-edit.scss */
+/* line 375, ../sass/global/_left-navbar-edit.scss */
 .control-bar {
   /* width: auto;*/
   background: #337ab7;
@@ -1263,28 +1360,28 @@ footer .text-left {
   box-shadow: 0 1px 3px 0 rgba(37, 39, 43, 0.9);
 }
 
-/* line 325, ../sass/global/_left-navbar-edit.scss */
+/* line 385, ../sass/global/_left-navbar-edit.scss */
 .control-label {
   padding: 0 14px;
 }
 
-/* line 333, ../sass/global/_left-navbar-edit.scss */
+/* line 393, ../sass/global/_left-navbar-edit.scss */
 .control-buttons-container .fa {
   font-size: 1.3em;
 }
 
-/* line 337, ../sass/global/_left-navbar-edit.scss */
+/* line 397, ../sass/global/_left-navbar-edit.scss */
 .control-button {
   text-align: center;
   padding: 0px 10px;
   font-size: 0.9em;
 }
-/* line 343, ../sass/global/_left-navbar-edit.scss */
+/* line 403, ../sass/global/_left-navbar-edit.scss */
 .control-button:hover {
   color: #fff;
 }
 
-/* line 347, ../sass/global/_left-navbar-edit.scss */
+/* line 407, ../sass/global/_left-navbar-edit.scss */
 .with-separator {
   border-left: 1px solid #1c4f7b;
 }
@@ -1318,16 +1415,4 @@ footer .text-left {
   color: #333333;
   font-size: 16px;
   line-height: 30px;
-}
-
-/* line 30, ../sass/global/_submenu.scss */
-.submenu-btn {
-  background-color: #fcfcfc;
-  border: 1px solid #dbdada;
-  margin-right: 14px;
-  border-radius: 4px;
-  padding: 5px;
-  min-width: 80px;
-  float: right;
-  outline: none;
 }

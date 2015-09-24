@@ -1,3 +1,15 @@
 /* Scss Document */
 
 
+.submenu-btn{
+	background-color: $grey-color;
+    border: 1px solid #dbdada;
+    margin-right: 14px;   
+    padding: 5px;
+    min-width: 80px;
+	float: right;
+	outline: none;
+	@include border-radius(3px);
+	}
+	
+	
