@@ -3,22 +3,21 @@
 (function(angular){
 
 
-    angular.module('login')
-        .controller('LoginCtrl',[
+    angular.module('login').controller('LoginCtrl',[
         	'$scope',
-        	'loginServ',
+        	'loginSrv',
         	'$state',
-        	function($scope,loginServ,$state){
-            	$scope.uname='';
+        	function($scope,loginSrv,$state){
+            	$scope.userName='';
             	$scope.password='';
-            	$scope.loginFun = function (uname, password) {
-                $scope.loginStaus= loginServ.loginCheck(uname,password);
+
+                $scope.loginCheck = function (userName, password) {
+                $scope.loginStaus= loginSrv.loginCheck(userName,password);
                 if($scope.loginStaus) {
-                    $state.go('app.home.compaign');
+                    $state.go('app.home.campaign');
                 	}else{
                   		$scope.message='Invalid User Name or Password';
                 	}
                 }
-            }
-        ])
+            }])
     })(angular)

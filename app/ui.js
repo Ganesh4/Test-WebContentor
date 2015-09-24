@@ -26,7 +26,7 @@
                cache: false,
                 url: '/login',
                 templateUrl:'views/login/login.html',
-                //controller:'LoginCtrl',
+                controller:'LoginCtrl',
 
             }).state('app.home', {
                 cache: false,
