@@ -19,6 +19,8 @@ angular.module('microsite').controller('HomeCtrl',
                 $state.reload();
                 //console.log('$event',$scope.$event);
             }
+
+            $scope.leftNavData =  $state.current.data;
             console.log("===========================");
             console.log("ApiSrv.accessToken();");
             console.log("============================");

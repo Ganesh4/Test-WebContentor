@@ -14,7 +14,7 @@
 			$scope.selectTemplate = function(data){
 				$scope.selectedTemplate = data.template; 
 				CommonSrv.template = $scope.selectedTemplate;
-				$state.go('home.design.detail');
+				$state.go('app.home.design.detail');
 			}
       		
 		}]);

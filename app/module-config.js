@@ -6,7 +6,7 @@
  */
 (function(angular){
 
-	angular.module('vendor',['ui.router','restangular', 'validation','validation.rule','ui.select2','ngSanitize','cb.x2js','froala']);
+	angular.module('vendor',['ui.router','restangular', 'validation','validation.rule','ui.select2','ngSanitize','cb.x2js','froala','ui.grid']);
 
 	angular.module('common',['vendor','angularUtils.directives.uiBreadcrumbs']);
 	
@@ -16,8 +16,12 @@
 
 	angular.module('home',['app']);
 
+	angular.module('campaign',['home']);
+
+	angular.module('manage',['home']);
+	
 	angular.module('overview',['home']);
-   
+
 	angular.module('design',['home']);
 
 	angular.module('header',['home']);
@@ -28,6 +32,6 @@
 
 	angular.module('editor',['common','froala']);
 
-	angular.module('microsite',['home','overview','common','design','header','subheader','editor']);
+	angular.module('microsite',['home','overview','common','design','header','subheader','editor','campaign','manage']);
 
 })(angular);
