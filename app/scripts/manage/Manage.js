@@ -5,17 +5,16 @@
  */
 'use strict';
 
-    (function(angular){
-	     angular.module('manage').config(
-            [
-                '$urlRouterProvider',
-                '$stateProvider',	
-                function($urlProvider,$stateProvider){
-                // var route = 'app.home.mange';
-                 $stateProvider.state('app.home.manage', {
+(function(angular){
+     angular.module('manage').config(
+        [
+            '$urlRouterProvider',
+            '$stateProvider',	
+            function($urlProvider,$stateProvider){
+            // var route = 'app.home.mange';
+             $stateProvider.state('app.home.manage', {
                 url: '/manage',
                 templateUrl:"views/manage/manage.html",
-               // controller:'CampaignCtrl',
                 data: {
                     displayName: 'manage',
                     LeftNavList:[
@@ -24,10 +23,12 @@
                             name : 'User and Roles',
                             menu : [{
                                     icon : 'fa fa-user',
-                                    name : 'Users'
+                                    name : 'Users',
+                                    state: 'app.home.manage.user',
                                 },{
                                     icon : 'fa fa-users',
-                                    name : 'Roles'
+                                    name : 'Roles',
+                                    state:'app.home.manage.roles'
                                 }
                             ]
                         },{
@@ -77,8 +78,13 @@
                             }]
                         }
                     ]
-                }
-            });  
-
-            }]);
-    })(angular);
+            }
+        }).state('app.home.manage.user',{
+            url:'/user',
+            templateUrl:'views/user/user.html',
+            data:{
+                displayName: 'user',
+            }
+        });  
+    }]);
+})(angular);
