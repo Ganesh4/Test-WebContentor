@@ -243,12 +243,13 @@
 	 }
 }
 .bottom-fixed-box{
-	position: absolute;
-	bottom: 0px;
+	/*position: absolute;
+	bottom: 0px;*/
 	width: 100%;
 	padding: 10px;
 	text-align: right;
 	border-top: 1px solid #ccc;
+	float:left;
 }
 .top-fixed-box{
   border-bottom:1px solid #ccc;	
@@ -264,8 +265,9 @@
 .user-library-content{
   width:100%;
 	float:left;
-	height:400px;
+	height:350px;
 	padding:10px;
+	overflow-y:scroll;
 	
 	.user-library-blocks{
     width:96%;
@@ -285,6 +287,9 @@
 		min-height:50px;
     line-height: 3;
 	}
+	.thumbnail{
+		margin-bottom: 0px;
+	}
 }
 
 .uploaded-date-bar{
@@ -298,17 +303,21 @@
 	}
 }
 
-
-
 .drag-drop{
 	 background-image:url(../../images/drag-and-drop.png);
 	 background-repeat:no-repeat;
    background-position: center 30%;
 }
+.upload-image-content{
+	 background-image:url(../../images/drag-and-drop.png);
+	 background-repeat:no-repeat;
+   background-position: center 30%;
+	 min-height:320px;
+}
 
 /*============ control-bar styles =============*/
 .vertically-centered{
-  display:inline-block;
+    display:inline-block;
 	vertical-align:middle;
   margin-left: -4px;
 }
