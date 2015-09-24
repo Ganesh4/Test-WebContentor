@@ -302,12 +302,63 @@
     font-size:0.85em;   		
 	}
 }
+/*=========== upload-image styles ===========*/
+.image-library-content{
+  @extend .user-library-content;
+	padding-top:0px;
+	overflow:hidden;
+	
+	.header{
+     font-size:1.3em;
+		 border-bottom:1px solid #ccc;
+		 padding:5px;
+	}
+}
+.left-nav{
+  width: 20%;
+  float: left;	
+	border-right:1px solid #ccc;
+  height: 360px;
+	
+	.links{
+		margin-top:10px;
+		
+     li{
+		     border-bottom:0;
+				 border-right:0;
+				 
+				 a{
+				    padding:7px 10px;
+				    font-size: 0.75em;	 
+						&:hover{
+								 background-color: transparent;		
+								 color:blue;
+						}
+			  	}
+				 a.active{
+				    color:blue;	 
+					}	 
+			}		
+	}
+}
+.right-content{
+  width: 78%;
+  float: right;	
+}
+.image-library-blocks{
+    width: 100%;
+    padding: 10px 20px;
+    float: left;	
+    overflow-y: scroll;
+    height: 314px;
+}
 
-.drag-drop{
+
+/*.drag-drop{
 	 background-image:url(../../images/drag-and-drop.png);
 	 background-repeat:no-repeat;
    background-position: center 30%;
-}
+}*/
 .upload-image-content{
 	 background-image:url(../../images/drag-and-drop.png);
 	 background-repeat:no-repeat;
