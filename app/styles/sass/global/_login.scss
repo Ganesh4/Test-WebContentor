@@ -1,0 +1,141 @@
+/* CSS Document */
+
+/* Scss Document */
+
+	
+.login-work-area{
+	width:$main-width;
+	border-top: 1px solid $workarea-color;
+	display:inline-table;
+	margin-top: -3px;
+        .login-box {
+			width: 25.5%; /*345px*/
+			/*height: 257px;*/
+			border: 1px solid $login-box-color;
+			margin: 62px auto;
+			background-color: $logbg-color; 
+			padding: 44px 118px;
+			    .login-text{
+					text-align: center;
+					font-size: 18px;
+				}
+				
+				.login-user{
+					width:$main-width;
+					border: 1px solid $user-login-color;
+					height: 46px;
+					margin-top: 31px;
+					display: inline-flex;
+					
+					.user-icon{
+						width: 51px;
+						height: 46px;
+						text-align: center;
+						float: left;
+						}
+						
+					.user-icon i{
+						color: $userimg-color;
+						font-size: $light-size;
+						line-height: 45px;
+						}
+						
+					.form-control {
+						display: block;
+						width: 78%;
+						height: 34px;
+						padding: 6px 12px;
+						font-size: $allright-size;
+						line-height: 1.42857143;
+						background-color: $workarea-color;
+						background-image: none;
+						border: 0px;
+						outline: none;
+						border-radius: 0px 4px 4px 0px;
+						float: left;
+						-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+						box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+						-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+						-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+						transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+					    }
+					
+					}
+					.login-password{
+						width:$main-width;
+						border: 1px solid $user-login-color;
+						height: 46px;
+						margin-top: 19px;
+						display: inline-flex;
+					
+					.user-icon{
+						width: 51px;
+						height: 46px;
+						text-align: center;
+						float: left;
+						}
+					.user-icon i{
+						color: $userimg-color;
+						font-size: $light-size;
+						line-height: 45px;
+						}
+						
+					.send-icon{
+						width: 50px;
+						height: 46px;
+						text-align: center;
+						float: left;
+						cursor: pointer;
+						border: 1px solid $send-color;
+						border-left: 0px;
+						margin-top: -1px;
+						}
+					.send-icon i{
+						color: $workarea-color;
+						font-size: $light-size;
+						line-height: 45px;
+						}
+					.password-control {
+						display: block;
+						width: 64%;
+						height: 34px;
+						padding: 6px 12px;
+						font-size: $allright-size;
+						line-height: 1.42857143;
+						background-color: $workarea-color;
+						background-image: none;
+						border: 0px;
+						outline: none;
+						border-radius: 0px 4px 4px 0px;
+						float: left;
+						-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+						box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+						-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+						-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+						transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+					    }
+					
+					}
+					.login-footer{
+						width:$main-width;
+						height: 46px;
+						margin-top: 19px;
+						}		
+		}
+}
+
+		.allrightreserved{
+			width: 98%;
+			text-align: right;
+			font-weight: 400;
+			font-style: normal;
+			font-size: $allright-size;
+			line-height: normal;
+			padding: 0px 10px;
+			position: absolute;
+			bottom: 15px;
+			
+			}
+		
+
+	
