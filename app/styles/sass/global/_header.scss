@@ -1,6 +1,6 @@
 /* Scss Document */
 
-.nav-header {
+/*.nav-header {
 	width:$main-width;	
 	border-bottom:solid 1px $nav-color;
 	background-color:$head-color;
@@ -113,8 +113,27 @@
 			
 			
 }
+*/
 
-.padding-allside{
+.navbar-default {
+	background-color:$header-color;
+	background-image:none;
+	box-shadow:none;
+	border-bottom:solid 1px $brder-color;
+	margin-bottom:0px;
+	}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+	background-color:$brder-color;
+	background-image:none;
+	box-shadow:none;
+	
+}
+	
+	
+
+
+/*.padding-allside{
   padding:9px 20px 8px;	
 }
 .header-right-col {
@@ -125,6 +144,7 @@
 	@extend .padding-allside;
   clear: both;
   min-height: 60px;
-  /*border-top: 2px solid #000;*/
+  border-top: 2px solid #000;
 	width:100%;
-}
+	
+}*/

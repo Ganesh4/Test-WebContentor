@@ -1,12 +1,14 @@
 /* Scss Document */
 
+.manage_padding {
+	padding-top:1px;
+}
+
 .header-sub {
-	width: 83.6%;
-	float: left;
+	width: 100%;	
 	background-color: #f3f3f3;
-	margin-top: -3px;
-	padding: 9px 0px;
-	border-bottom: 1px solid #e4e4e4;
+	margin-left:-15px;
+	margin-right:-15px;
 	
 	.sub-header-icon{
 		float: left;
