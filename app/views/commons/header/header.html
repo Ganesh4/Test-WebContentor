@@ -1,21 +1,47 @@
 <!--Navigation bar start here-->
-    <div class="nav-header"> 
-          <div class="logo">
-              <img src="images/yavun_logo.svg" width="220" height="50" alt=""/>
-              <div class="nav-campaign-btn" ui-sref="app.home.campaign" ui-sref-active = "active">Campaign</div> 
-              <div class="nav-campaign-btn active" ui-sref="app.home.manage" ui-sref-active = "active">Manage</div>
-          </div>
-          
-          <div class="nav-search">
-             <div class="nav-search-icon"><i class="fa fa-search"></i></div>
-             <input type="text" class="nav-search-form"  placeholder="Search">
-             <div class="nav-close-icon"><i class="fa fa-times-circle"></i></div>
-          </div>
-          
-          <div class="nav-upload"><i class="fa fa-user"></i></div>
-          <div class="nav-upload"><i class="fa fa-bell"></i></div>
-          <div class="nav-upload"><i class="fa fa-comments"></i></div>
-          <div class="nav-upload"><i class="fa fa-question-circle"></i></div>
-          <div class="nav-upload"><i class="fa fa-arrow-circle-up"></i></div>
-    </div> 
+     
+   <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    
+    <ul class="nav navbar-nav navbar-left">
+         <li ui-sref-active = "active"><a ui-sref="app.home.campaign">Campaign</a></li>
+            <li ui-sref-active = "active"><a ui-sref="app.home.manage">Manage</a></li>
+    </ul> 
+        
+      
+      <ul class="nav navbar-nav navbar-right">
+         <li><a href="#"><i class="fa fa-user"></i></a></li>
+            <li><a href="#"><i class="fa fa-bell"></i></a></li>
+            <li><a href="#"><i class="fa fa-comments"></i></a></li>
+            <li><a href="#"><i class="fa fa-question-circle"></i></a></li>           
+            <li><a href="#"><i class="fa fa-arrow-circle-up"></i></a></li>
+            
+       <!--<li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu">                      
+            <li><a href="#"><i class="fa fa-arrow-circle-up"></i></a></li>
+          </ul>
+        </li>-->
+      </ul>
+      <form class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>      
+      </form>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
 <!--Navigation bar end here-->
