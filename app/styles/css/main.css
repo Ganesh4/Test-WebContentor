@@ -6,23 +6,23 @@
   color: #666666;
 }
 
-/* line 46, ../sass/global/_variable.scss */
+/* line 47, ../sass/global/_variable.scss */
 .allrightreserved {
   font: 100% "Arial Regular", "Arial";
   color: #333333;
 }
 
-/* line 51, ../sass/global/_variable.scss */
+/* line 53, ../sass/global/_variable.scss */
 .send-icon {
   background-color: #0f750f;
 }
 
-/* line 56, ../sass/global/_variable.scss */
+/* line 59, ../sass/global/_variable.scss */
 .user-icon {
   background-color: #cecece;
 }
 
-/* line 63, ../sass/global/_variable.scss */
+/* line 67, ../sass/global/_variable.scss */
 .form-control, .password-control {
   color: #555555;
 }
@@ -113,6 +113,7 @@ a:hover {
   padding: 5px 16px;
 }
 
+/*================== for border-radious button  =================*/
 /* Scss Document */
 /* line 3, ../sass/global/_header.scss */
 .nav-header {
@@ -273,7 +274,7 @@ body {
   src: url("../fonts/segoeui.eot"), url("../fonts/segoeui.eot?#iefix") format("embedded-opentype"), url("../fonts/segoeui.woff") format("woff"), url("../fonts/segoeui.ttf") format("truetype"), url("../fonts/segoeui.otf") format("opentype"), url("../fonts/segoeui.svg") format("svg");
   /* Legacy iOS */
 }
-/* line 24, ../sass/global/_left-navbar.scss */
+/* line 23, ../sass/global/_left-navbar.scss */
 .manage-left-row {
   width: 16.4%;
   background-color: #3a3a3a;
@@ -283,53 +284,53 @@ body {
   background: url(../fonts/segoepr.ttf);
 }
 
-/* line 35, ../sass/global/_left-navbar.scss */
+/* line 33, ../sass/global/_left-navbar.scss */
 .leftnav-hamburger {
   border-bottom: 1px solid #2c2d33;
   height: 50px;
   width: 100%;
   background-color: #3a3a3a;
 }
-/* line 41, ../sass/global/_left-navbar.scss */
+/* line 39, ../sass/global/_left-navbar.scss */
 .leftnav-hamburger .hamburger {
   padding: 10px;
   cursor: pointer;
   width: 30px;
   height: 22px;
 }
-/* line 47, ../sass/global/_left-navbar.scss */
+/* line 45, ../sass/global/_left-navbar.scss */
 .leftnav-hamburger .hamburger i {
   color: #5e5e5e;
   font-size: 31px;
 }
-/* line 51, ../sass/global/_left-navbar.scss */
+/* line 49, ../sass/global/_left-navbar.scss */
 .leftnav-hamburger .hamburger i:hover {
   color: #26ade3;
 }
 
-/* line 56, ../sass/global/_left-navbar.scss */
+/* line 54, ../sass/global/_left-navbar.scss */
 .leftnav-Toggle {
   border-top: 1px solid #414248;
 }
-/* line 59, ../sass/global/_left-navbar.scss */
+/* line 57, ../sass/global/_left-navbar.scss */
 .leftnav-Toggle .leftnav-Toggle-name {
   height: 32px;
   background-color: #2d2d2d;
   width: 100%;
   color: #fff;
 }
-/* line 65, ../sass/global/_left-navbar.scss */
+/* line 63, ../sass/global/_left-navbar.scss */
 .leftnav-Toggle .leftnav-Toggle-name i {
   color: #5d5e64;
   font-size: 23px;
   font-weight: bolder;
   padding: 6px;
 }
-/* line 71, ../sass/global/_left-navbar.scss */
+/* line 69, ../sass/global/_left-navbar.scss */
 .leftnav-Toggle .leftnav-Toggle-name span {
   vertical-align: text-bottom;
 }
-/* line 78, ../sass/global/_left-navbar.scss */
+/* line 76, ../sass/global/_left-navbar.scss */
 .leftnav-Toggle li {
   width: 100%;
   background-color: #3a3a3a;
@@ -338,29 +339,29 @@ body {
   padding: 10px;
   cursor: pointer;
 }
-/* line 86, ../sass/global/_left-navbar.scss */
+/* line 84, ../sass/global/_left-navbar.scss */
 .leftnav-Toggle li:hover {
   background-color: #1b951b;
   color: #fff !important;
 }
-/* line 90, ../sass/global/_left-navbar.scss */
+/* line 88, ../sass/global/_left-navbar.scss */
 .leftnav-Toggle li i {
   margin-right: 10px;
   color: #5d5e64;
 }
 
-/* line 97, ../sass/global/_left-navbar.scss */
+/* line 95, ../sass/global/_left-navbar.scss */
 .nav-selected {
   background-color: #107c10 !important;
   color: #fff !important;
 }
 
-/* line 101, ../sass/global/_left-navbar.scss */
+/* line 99, ../sass/global/_left-navbar.scss */
 .nav-selected i {
   color: #fff !important;
 }
 
-/* line 122, ../sass/global/_left-navbar.scss */
+/* line 120, ../sass/global/_left-navbar.scss */
 .left-navbar {
   width: 15%;
   float: left;
@@ -369,7 +370,7 @@ body {
   position: fixed;
 }
 
-/* line 129, ../sass/global/_left-navbar.scss */
+/* line 127, ../sass/global/_left-navbar.scss */
 .left-header-logo {
   width: 100%;
   text-align: center;
@@ -377,13 +378,13 @@ body {
   border-top: 2px solid #000;
   min-height: 60px;
 }
-/* line 136, ../sass/global/_left-navbar.scss */
+/* line 134, ../sass/global/_left-navbar.scss */
 .left-header-logo img {
   width: 85%;
   margin-top: 5px;
 }
 
-/* line 141, ../sass/global/_left-navbar.scss */
+/* line 139, ../sass/global/_left-navbar.scss */
 .btn_create-new-design {
   width: 90%;
   text-align: center;
@@ -393,13 +394,13 @@ body {
   cursor: pointer;
 }
 
-/* line 149, ../sass/global/_left-navbar.scss */
+/* line 147, ../sass/global/_left-navbar.scss */
 .btn_create-new-design-wrap {
   /*  border-top: 2px solid #000;*/
   padding: 8px 0;
 }
 
-/* line 153, ../sass/global/_left-navbar.scss */
+/* line 151, ../sass/global/_left-navbar.scss */
 .btn_left-bar {
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
@@ -409,13 +410,13 @@ body {
   cursor: pointer;
   font-size: 1.2em;
 }
-/* line 162, ../sass/global/_left-navbar.scss */
+/* line 160, ../sass/global/_left-navbar.scss */
 .btn_left-bar:hover {
   background-color: #333;
   color: #fff;
 }
 
-/* line 167, ../sass/global/_left-navbar.scss */
+/* line 165, ../sass/global/_left-navbar.scss */
 .leftnav-title {
   padding: 8px 0;
   border-top: 2px solid #000;
@@ -423,13 +424,28 @@ body {
   min-height: 60px;
 }
 
-/* line 173, ../sass/global/_left-navbar.scss */
+/* line 171, ../sass/global/_left-navbar.scss */
 .btn_active {
   background-color: #000;
   color: #fff;
 }
 
 /* Scss Document */
+/* line 4, ../sass/global/_button.scss */
+.submenu-btn {
+  background-color: white;
+  border: 1px solid #dbdada;
+  margin-right: 14px;
+  padding: 5px;
+  min-width: 80px;
+  float: right;
+  outline: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+}
+
 /* Sass Document */
 /* line 3, ../sass/global/_footer.scss */
 footer {
@@ -1175,47 +1191,49 @@ footer .text-left {
 
 /* line 245, ../sass/global/_left-navbar-edit.scss */
 .bottom-fixed-box {
-  position: absolute;
-  bottom: 0px;
+  /*position: absolute;
+  bottom: 0px;*/
   width: 100%;
   padding: 10px;
   text-align: right;
   border-top: 1px solid #ccc;
+  float: left;
 }
 
-/* line 253, ../sass/global/_left-navbar-edit.scss */
+/* line 254, ../sass/global/_left-navbar-edit.scss */
 .top-fixed-box {
   border-bottom: 1px solid #ccc;
   width: 100%;
   padding: 10px;
   text-align: right;
 }
-/* line 259, ../sass/global/_left-navbar-edit.scss */
+/* line 260, ../sass/global/_left-navbar-edit.scss */
 .top-fixed-box .searchbox {
   width: 35%;
   height: 20px;
 }
 
-/* line 264, ../sass/global/_left-navbar-edit.scss */
+/* line 265, ../sass/global/_left-navbar-edit.scss */
 .user-library-content {
   width: 100%;
   float: left;
-  height: 400px;
+  height: 350px;
   padding: 10px;
+  overflow-y: scroll;
 }
-/* line 270, ../sass/global/_left-navbar-edit.scss */
+/* line 272, ../sass/global/_left-navbar-edit.scss */
 .user-library-content .user-library-blocks {
   width: 96%;
   margin: 15px auto;
 }
 
-/* line 275, ../sass/global/_left-navbar-edit.scss */
+/* line 277, ../sass/global/_left-navbar-edit.scss */
 .library-block {
   width: 25%;
   float: left;
   padding: 3px;
 }
-/* line 281, ../sass/global/_left-navbar-edit.scss */
+/* line 283, ../sass/global/_left-navbar-edit.scss */
 .library-block .library-block-inner {
   border: 1px solid #000;
   text-align: center;
@@ -1223,35 +1241,47 @@ footer .text-left {
   min-height: 50px;
   line-height: 3;
 }
-
 /* line 290, ../sass/global/_left-navbar-edit.scss */
+.library-block .thumbnail {
+  margin-bottom: 0px;
+}
+
+/* line 295, ../sass/global/_left-navbar-edit.scss */
 .uploaded-date-bar {
   background-color: #ebebeb;
   width: 100%;
   margin: 0 auto;
   padding: 4px;
 }
-/* line 296, ../sass/global/_left-navbar-edit.scss */
+/* line 301, ../sass/global/_left-navbar-edit.scss */
 .uploaded-date-bar .date {
   font-size: 0.85em;
 }
 
-/* line 303, ../sass/global/_left-navbar-edit.scss */
+/* line 306, ../sass/global/_left-navbar-edit.scss */
 .drag-drop {
   background-image: url(../../images/drag-and-drop.png);
   background-repeat: no-repeat;
   background-position: center 30%;
 }
 
+/* line 311, ../sass/global/_left-navbar-edit.scss */
+.upload-image-content {
+  background-image: url(../../images/drag-and-drop.png);
+  background-repeat: no-repeat;
+  background-position: center 30%;
+  min-height: 320px;
+}
+
 /*============ control-bar styles =============*/
-/* line 310, ../sass/global/_left-navbar-edit.scss */
+/* line 319, ../sass/global/_left-navbar-edit.scss */
 .vertically-centered, .control-label, .control-buttons-container, .control-button {
   display: inline-block;
   vertical-align: middle;
   margin-left: -4px;
 }
 
-/* line 315, ../sass/global/_left-navbar-edit.scss */
+/* line 324, ../sass/global/_left-navbar-edit.scss */
 .control-bar {
   /* width: auto;*/
   background: #337ab7;
@@ -1263,28 +1293,28 @@ footer .text-left {
   box-shadow: 0 1px 3px 0 rgba(37, 39, 43, 0.9);
 }
 
-/* line 325, ../sass/global/_left-navbar-edit.scss */
+/* line 334, ../sass/global/_left-navbar-edit.scss */
 .control-label {
   padding: 0 14px;
 }
 
-/* line 333, ../sass/global/_left-navbar-edit.scss */
+/* line 342, ../sass/global/_left-navbar-edit.scss */
 .control-buttons-container .fa {
   font-size: 1.3em;
 }
 
-/* line 337, ../sass/global/_left-navbar-edit.scss */
+/* line 346, ../sass/global/_left-navbar-edit.scss */
 .control-button {
   text-align: center;
   padding: 0px 10px;
   font-size: 0.9em;
 }
-/* line 343, ../sass/global/_left-navbar-edit.scss */
+/* line 352, ../sass/global/_left-navbar-edit.scss */
 .control-button:hover {
   color: #fff;
 }
 
-/* line 347, ../sass/global/_left-navbar-edit.scss */
+/* line 356, ../sass/global/_left-navbar-edit.scss */
 .with-separator {
   border-left: 1px solid #1c4f7b;
 }
@@ -1318,16 +1348,4 @@ footer .text-left {
   color: #333333;
   font-size: 16px;
   line-height: 30px;
-}
-
-/* line 30, ../sass/global/_submenu.scss */
-.submenu-btn {
-  background-color: #fcfcfc;
-  border: 1px solid #dbdada;
-  margin-right: 14px;
-  border-radius: 4px;
-  padding: 5px;
-  min-width: 80px;
-  float: right;
-  outline: none;
 }
