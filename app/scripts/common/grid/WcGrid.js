@@ -3,6 +3,10 @@
 
 'use strict';
 
+
+
+
+
 (function(angular){
 angular.module('user').directive('gridCtrl',[
     '$state' 
