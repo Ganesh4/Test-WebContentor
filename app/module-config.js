@@ -21,6 +21,8 @@
 	angular.module('campaign',['home']);
 
 	angular.module('manage',['home']);
+
+	angular.module('user', ['home']);
 	
 	angular.module('overview',['home']);
 

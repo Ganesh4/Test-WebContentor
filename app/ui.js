@@ -18,6 +18,7 @@
                 url: '/app',
                 template:'<ui-view></ui-view>',
                 controller:'AppCtrl',
+                abstract:true,
                 data: {
                       displayName: false
                 },
@@ -29,10 +30,9 @@
                 controller:'LoginCtrl',
 
             }).state('app.home', {
-                cache: false,
                 url: '/home',
                 templateUrl:'views/home/home.html',
-                abstract: true,
+                abstract : true,
                 controller:'HomeCtrl',
 
                 data: {
