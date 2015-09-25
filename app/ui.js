@@ -16,7 +16,7 @@
             $stateProvider.state('app', {
 
                 url: '/app',
-                template:'<ui-view>Ganesh</ui-view>',
+                template:'<ui-view></ui-view>',
                 controller:'AppCtrl',
                 data: {
                       displayName: false
