@@ -10,7 +10,9 @@ angular.module('user').controller('UserCtrl',
         'ApiSrv',
         'CommonSrv',
         function($scope ,$state, ApiSrv,CommonSrv){
-            
+            $scope.data = $state.current.data;
+			console.log("$scope.data-----",$scope.data);
+
         }
     ]);
 })(angular);
