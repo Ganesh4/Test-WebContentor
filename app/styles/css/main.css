@@ -448,10 +448,10 @@ a:hover {
 
 /* Scss Document */
 /* line 4, ../sass/global/_button.scss */
-.btn-default {
+.header-sub button {
   background-color: white;
   border: 1px solid #dbdada;
-  margin-right: 14px;
+  margin-right: 10px;
   padding: 5px;
   min-width: 80px;
   float: right;
@@ -1413,7 +1413,7 @@ footer .text-left {
 /* line 15, ../sass/global/_submenu.scss */
 .header-sub .sub-header-icon {
   float: left;
-  padding: 8px 10px 0px 22px;
+  padding: 8px 10px 0px 15px;
 }
 /* line 20, ../sass/global/_submenu.scss */
 .header-sub .sub-header-icon i {
@@ -1433,6 +1433,12 @@ footer .text-left {
 
 /* Scss Document */
 /* line 3, ../sass/global/_overview.scss */
+.yavun_container {
+  display: block;
+  padding: 15px;
+}
+
+/* line 8, ../sass/global/_overview.scss */
 .col-md-offset-2 {
   margin-left: 0px;
 }
@@ -1454,4 +1460,24 @@ footer .text-left {
 /* line 16, ../sass/global/_login.scss */
 .form-signin input.form-control {
   margin-top: 10px;
+}
+
+/* Scss Document */
+/* line 3, ../sass/global/_form.scss */
+.form_main {
+  padding-top: 15px;
+}
+/* line 5, ../sass/global/_form.scss */
+.form_main label {
+  font-weight: normal;
+}
+/* line 9, ../sass/global/_form.scss */
+.form_main .btn-group {
+  margin-right: 15px;
+}
+/* line 13, ../sass/global/_form.scss */
+.form_main .cepcha {
+  width: 150px;
+  float: left;
+  margin-right: 10px;
 }
