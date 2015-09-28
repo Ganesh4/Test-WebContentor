@@ -9,8 +9,8 @@
      angular.module('manage').config(
         [
             '$urlRouterProvider',
-            '$stateProvider',	
-            function($urlProvider,$stateProvider){
+            '$stateProvider',
+            function($urlProvider, $stateProvider){
             // var route = 'app.home.mange';
              $stateProvider.state('app.home.manage', {
                 url: '/manage',
