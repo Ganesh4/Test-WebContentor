@@ -21,6 +21,8 @@
 	angular.module('campaign',['home']);
 
 	angular.module('manage',['home']);
+
+	angular.module('user', ['home']);
 	
 	angular.module('overview',['home']);
 
@@ -34,6 +36,6 @@
 
 	angular.module('editor',['common','froala']);
 
-	angular.module('microsite',['login','home','overview','common','design','header','subheader','editor','campaign','manage']);
+	angular.module('microsite',['login','home','overview','common','design','header','subheader','editor','campaign','manage','user']);
 
 })(angular);

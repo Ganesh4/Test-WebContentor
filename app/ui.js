@@ -18,6 +18,7 @@
                 url: '/app',
                 template:'<ui-view></ui-view>',
                 controller:'AppCtrl',
+                abstract:true,
                 data: {
                       displayName: false
                 },
@@ -27,12 +28,32 @@
                 url: '/login',
                 templateUrl:'views/login/login.html',
                 controller:'LoginCtrl',
+                data: {
+                      displayName: 'login',
+                }
+
+            }).state('app.register', {
+               cache: false,
+                url: '/register',
+                templateUrl:'views/user/registration.html',
+                controller:'RegisterCtrl',
+                data: {
+                      displayName: 'register',
+                }
+
+            }).state('app.success', {
+               cache: false,
+                url: '/success',
+                templateUrl:'views/user/success.html',
+                controller:'SuccessCtrl',
+                data: {
+                      displayName: 'success',
+                }
 
             }).state('app.home', {
-                cache: false,
                 url: '/home',
                 templateUrl:'views/home/home.html',
-                abstract: true,
+                abstract : true,
                 controller:'HomeCtrl',
 
                 data: {
