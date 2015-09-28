@@ -18,10 +18,9 @@
         	 displayName: 'Users',
         }
     });
-   $stateProvider.state('app.home.manage.user.list.add', {
+   $stateProvider.state('app.home.manage.user.add', {
         url:'/add',
         templateUrl:'views/user/add.html',
-        controller : 'UserCtrl',
         data: {
              displayName: 'Add',
         }

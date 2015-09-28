@@ -10,7 +10,8 @@ angular.module('home').controller('HomeCtrl',
         '$state',
         'ApiSrv',
         'CommonSrv',
-        function($scope ,$state, ApiSrv,CommonSrv){
+        'Global',
+        function($scope ,$state, ApiSrv,CommonSrv,Global){
             $scope.subheader ={
                 title : 'Overview',
             } 
@@ -24,6 +25,11 @@ angular.module('home').controller('HomeCtrl',
                 if(response)
                     $scope.templateCategories = response.plain();
             });
+
+            $scope.$on(Global.EVENTS.ADD_USER,function(event,data){
+                $state.go(data.state);
+            });
+
         }
     ]);
 })(angular);

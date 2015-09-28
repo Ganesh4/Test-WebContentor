@@ -9,8 +9,8 @@
      angular.module('manage').config(
         [
             '$urlRouterProvider',
-            '$stateProvider',	
-            function($urlProvider,$stateProvider){
+            '$stateProvider',
+            function($urlProvider, $stateProvider){
             // var route = 'app.home.mange';
              $stateProvider.state('app.home.manage', {
                 url: '/manage',
@@ -86,17 +86,20 @@
             template:'<div ui-view></div>',
             data:{
                 displayName: 'user',
-                subMenuList : [{
+                actionBarBtn : [{
                     name : 'Refresh',
+                    onClickEvent : 'REFRESH',
                 },{
                     name : "Export"
                 },{
-                    name : "Delete"
+                    name : "Delete",
+                    onClickEvent : 'DELETE_USER',
                 },{
                     name : "Properties"
                 },{
                     name : "Add",
-                    state : 'app.home.manage.user.list.add'
+                    onClickEvent : 'ADD_USER',
+                    state : 'app.home.manage.user.add'
                 }]
             }
         });  
