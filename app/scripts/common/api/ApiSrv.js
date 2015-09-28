@@ -7,17 +7,11 @@
 'use strict';
 
 (function(angular){
-angular.module('microsite').service('ApiSrv', ['$http', '$q', 'Restangular', function ($http, $q, Restangular ) {
+angular.module('microsite').service('ApiSrv', ['$http', '$q', 'Restangular','Global', function ($http, $q, Restangular, Global ) {
 
 	var self = this;
     var result = {};
-	var apiCredentials = {
-		grant_type : 'password', 
-		client_id:'yavun01', 
-		client_secret :'secret',
-		username : 'wcuser',
-		password:'wcuser'
-	};
+	var apiCredentials = Global.apiCredentials;
 
 	/**
 
