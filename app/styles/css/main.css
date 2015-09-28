@@ -1258,77 +1258,83 @@ footer .text-left {
   border: 1px solid #000;
   text-align: center;
   background-color: #ccc;
-  min-height: 50px;
+  height: 80px;
   line-height: 3;
+  overflow: hidden;
 }
-/* line 176, ../sass/global/_editor-blocks.scss */
+/* line 177, ../sass/global/_editor-blocks.scss */
+.library-block .library-block-inner img {
+  width: 100%;
+  height: 100%;
+}
+/* line 182, ../sass/global/_editor-blocks.scss */
 .library-block .thumbnail {
   margin-bottom: 0px;
 }
 
-/* line 181, ../sass/global/_editor-blocks.scss */
+/* line 188, ../sass/global/_editor-blocks.scss */
 .uploaded-date-bar {
   background-color: #ebebeb;
   width: 100%;
   margin: 0 auto;
   padding: 4px;
 }
-/* line 187, ../sass/global/_editor-blocks.scss */
+/* line 194, ../sass/global/_editor-blocks.scss */
 .uploaded-date-bar .date {
   font-size: 0.85em;
 }
 
 /*=========== upload-image styles ===========*/
-/* line 193, ../sass/global/_editor-blocks.scss */
+/* line 200, ../sass/global/_editor-blocks.scss */
 .image-library-content {
   padding-top: 0px;
   overflow: hidden;
 }
-/* line 198, ../sass/global/_editor-blocks.scss */
+/* line 205, ../sass/global/_editor-blocks.scss */
 .image-library-content .header {
   font-size: 1.3em;
   border-bottom: 1px solid #ccc;
   padding: 5px;
 }
 
-/* line 204, ../sass/global/_editor-blocks.scss */
+/* line 211, ../sass/global/_editor-blocks.scss */
 .left-nav {
   width: 20%;
   float: left;
   border-right: 1px solid #ccc;
   height: 360px;
 }
-/* line 210, ../sass/global/_editor-blocks.scss */
+/* line 217, ../sass/global/_editor-blocks.scss */
 .left-nav .links {
   margin-top: 10px;
 }
-/* line 213, ../sass/global/_editor-blocks.scss */
+/* line 220, ../sass/global/_editor-blocks.scss */
 .left-nav .links li {
   border-bottom: 0;
   border-right: 0;
 }
-/* line 217, ../sass/global/_editor-blocks.scss */
+/* line 224, ../sass/global/_editor-blocks.scss */
 .left-nav .links li a {
   padding: 7px 10px;
   font-size: 0.75em;
 }
-/* line 220, ../sass/global/_editor-blocks.scss */
+/* line 227, ../sass/global/_editor-blocks.scss */
 .left-nav .links li a:hover {
   background-color: transparent;
   color: blue;
 }
-/* line 225, ../sass/global/_editor-blocks.scss */
+/* line 232, ../sass/global/_editor-blocks.scss */
 .left-nav .links li a.active {
   color: blue;
 }
 
-/* line 231, ../sass/global/_editor-blocks.scss */
+/* line 238, ../sass/global/_editor-blocks.scss */
 .right-content {
   width: 78%;
   float: right;
 }
 
-/* line 235, ../sass/global/_editor-blocks.scss */
+/* line 242, ../sass/global/_editor-blocks.scss */
 .image-library-blocks {
   width: 100%;
   padding: 10px 20px;
@@ -1336,13 +1342,17 @@ footer .text-left {
   overflow-y: scroll;
   height: 314px;
 }
+/* line 249, ../sass/global/_editor-blocks.scss */
+.image-library-blocks .library-block-inner {
+  height: 60px;
+}
 
 /*.drag-drop{
 	 background-image:url(../../images/drag-and-drop.png);
 	 background-repeat:no-repeat;
    background-position: center 30%;
 }*/
-/* line 249, ../sass/global/_editor-blocks.scss */
+/* line 260, ../sass/global/_editor-blocks.scss */
 .upload-image-content {
   background-image: url(../../images/drag-and-drop.png);
   background-repeat: no-repeat;
@@ -1351,14 +1361,14 @@ footer .text-left {
 }
 
 /*============ control-bar styles =============*/
-/* line 257, ../sass/global/_editor-blocks.scss */
+/* line 268, ../sass/global/_editor-blocks.scss */
 .vertically-centered, .control-label, .control-buttons-container, .control-button {
   display: inline-block;
   vertical-align: middle;
   margin-left: -4px;
 }
 
-/* line 262, ../sass/global/_editor-blocks.scss */
+/* line 273, ../sass/global/_editor-blocks.scss */
 .control-bar {
   /* width: auto;*/
   background: #337ab7;
@@ -1370,28 +1380,28 @@ footer .text-left {
   box-shadow: 0 1px 3px 0 rgba(37, 39, 43, 0.9);
 }
 
-/* line 272, ../sass/global/_editor-blocks.scss */
+/* line 283, ../sass/global/_editor-blocks.scss */
 .control-label {
   padding: 0 14px;
 }
 
-/* line 280, ../sass/global/_editor-blocks.scss */
+/* line 291, ../sass/global/_editor-blocks.scss */
 .control-buttons-container .fa {
   font-size: 1.3em;
 }
 
-/* line 284, ../sass/global/_editor-blocks.scss */
+/* line 295, ../sass/global/_editor-blocks.scss */
 .control-button {
   text-align: center;
   padding: 0px 10px;
   font-size: 0.9em;
 }
-/* line 290, ../sass/global/_editor-blocks.scss */
+/* line 301, ../sass/global/_editor-blocks.scss */
 .control-button:hover {
   color: #fff;
 }
 
-/* line 294, ../sass/global/_editor-blocks.scss */
+/* line 305, ../sass/global/_editor-blocks.scss */
 .with-separator {
   border-left: 1px solid #1c4f7b;
 }
