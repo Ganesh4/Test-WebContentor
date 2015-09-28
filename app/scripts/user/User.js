@@ -15,11 +15,12 @@
 		
 		   	$stateProvider.state('app.home.manage.user',{
 		            url:'/user',
-		            templateUrl:'views/user/user.html',
-		            controller : 'UserCtrl',
+		            template:'<ui-view></ui-view>',
+		            controller: 'UserCtrl',
+		            abstract: true,
 	              	data:{
 		                displayName: 'user',
-		                actionBarBtn : [{
+		                actionBarBtn: [{
 		                    name : 'Refresh',
 		                    onClickEvent : 'REFRESH',
 		                },{
@@ -42,10 +43,11 @@
 			        data: {
 			        	 displayName: 'Users',
 			        }
-			    }).state('app.home.manage.user.add', {
+			    });
+
+			    $stateProvider.state('app.home.manage.user.add', {
 		            url:'/add',
 		            templateUrl:'views/user/add.html',
-		            controller : 'UserCtrl',
 		            data: {
 		                 displayName: 'add',
 		            }

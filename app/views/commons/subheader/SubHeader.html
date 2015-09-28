@@ -2,32 +2,9 @@
         <!--<div class="common-headng-wrap"><h2 class="common-headng">{{subheader.title}}</h2> </div>-->
         
         <div class="sub-header-icon"><i class="fa fa-user"></i> </div>
-        
-<<<<<<< HEAD
-        <!--
-        <ol class="breadcrumb">
-        <li>New User Registration</li>
-        </ol>
-                   
-  
-        
-        <button class="btn btn-default" type="button">Reset</button>
-        <button class="btn btn-default" type="button">Export</button>
-        <button class="btn btn-default" type="button">Delete</button>
-        <button class="btn btn-default" type="button">Properties</button>
-        <button class="btn btn-default" ui-sref = "app.home.manage.user.add" type="button">Add</button>        
-        -->
-      <button class="btn btn-default" type="button" ng-repeat = "menu in subMenuList">
-        <a ui-sref = "{{menu.state}}">{{menu.name}}</a>
-      </button>
-=======
-        <ui-breadcrumbs displayname-property="data.displayName" abstract-proxy-property="data.proxy" template-url="views/assets/uiBreadcrumbs.tpl.html"></ui-breadcrumbs>
-         
 
-     
+        <ui-breadcrumbs displayname-property="data.displayName" abstract-proxy-property="data.proxy" template-url="views/assets/uiBreadcrumbs.tpl.html"></ui-breadcrumbs>
         
         <wc-button name = "btn.name" type="btn.type" ng-repeat = "btn in actionBarBtn" on-click="btn.onClickEvent" btn-data="btn" ></wc-button>
->>>>>>> 4eae5e2b8d81bd578773edd9bbabc061be4e3c68
-        
-      </div>
+</div>
   

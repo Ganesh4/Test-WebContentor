@@ -14,8 +14,8 @@
             // var route = 'app.home.mange';
              $stateProvider.state('app.home.manage', {
                 url: '/manage',
-                templateUrl:"views/manage/manage.html",
-                abstract:true,
+                templateUrl: "views/manage/manage.html",
+                abstract: true,
                 data: {
                     displayName: 'manage',
                     LeftNavList:[
