@@ -44,7 +44,7 @@
         <h2 class="form-signin-heading">Please sign in</h2>
         <div>{{message}}</div>
         <label class="sr-only" for="inputEmail">User Name</label>
-        <input type="text" autofocus="" required="" placeholder="User Name" ng-model="userName" class="form-control">
+        <input type="text" autofocus required="" placeholder="User Name" ng-model="userName" class="form-control">
         <label class="sr-only" for="inputPassword">Password</label>
         <input type="password" required="" placeholder="Password" ng-model="password" class="form-control">
         <div class="checkbox">
@@ -52,9 +52,9 @@
             <input type="checkbox" value="remember-me"> Remember me
           </label>
         </div>
-        <button class="btn btn-lg btn-success btn-block"
+        <button class="btn btn-success "
          ng-click = "loginCheck(userName,password)">Sign in</button>
-         <button class="btn btn-lg btn-success btn-block"
+         <button class="btn  btn-success"
          ui-sref = "app.register">New Registration</button>
       </div>
 
