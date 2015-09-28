@@ -1,20 +1,6 @@
 /* Scss Document */
 
-/* Scss Document */
-
-/*.manage-left-row{
-	width: 16.4%;
-	background-color: $manage-left-bg;
-	height: 700px;
-	margin-top: -4px;
-	float: left;
-	background:url(../fonts/segoepr.ttf);
-
-
-	}*/
-.sidebar {   
-    overflow-x: hidden;
-    overflow-y: auto;    
+.sidebar {    
 	padding-left: 15px;
     padding-right: 15px;
     position: relative;
@@ -26,7 +12,7 @@
 }	
 	
 .leftnav-hamburger {
-	border-bottom: 1px solid $grey-color;
+	border-bottom: 0px solid $grey-color;
 
 	}	
 	
@@ -67,7 +53,7 @@
 		color: #5d5e64;
 		font-size: 23px;
 		font-weight: bolder;
-		padding: 6px;
+		padding: 6px 6px 6px 10px;
 		}
 		
 	.leftnav-Toggle-name span {
