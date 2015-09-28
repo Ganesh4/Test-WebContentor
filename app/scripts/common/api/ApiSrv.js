@@ -67,7 +67,9 @@ angular.module('microsite').service('ApiSrv', ['$http', '$q', 'Restangular', fun
 		return true; // error not handled
 	});
 
-
+	self.getList = function(uri, params, success, error){
+		Restangular.all(uri).getList(params).then(success);
+	};
 }]);
 
 })(angular);

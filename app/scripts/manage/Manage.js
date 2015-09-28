@@ -15,6 +15,7 @@
              $stateProvider.state('app.home.manage', {
                 url: '/manage',
                 templateUrl:"views/manage/manage.html",
+                abstract:true,
                 data: {
                     displayName: 'manage',
                     LeftNavList:[
@@ -24,7 +25,7 @@
                             menu : [{
                                     icon : 'fa fa-user',
                                     name : 'Users',
-                                    state: 'app.home.manage.user',
+                                    state: 'app.home.manage.user.list',
                                 },{
                                     icon : 'fa fa-users',
                                     name : 'Roles',
@@ -80,14 +81,13 @@
                     ]
             }
         }).state('app.home.manage.user',{
-            url:'/user',
-            templateUrl:'views/user/user.html',
-            controller : 'UserCtrl',
+            url: '/user',
+            abstract: true,
+            template:'<div ui-view></div>',
             data:{
                 displayName: 'user',
                 subMenuList : [{
-                    name : 'Reset',
-                    
+                    name : 'Refresh',
                 },{
                     name : "Export"
                 },{
@@ -96,16 +96,8 @@
                     name : "Properties"
                 },{
                     name : "Add",
-                    state : 'app.home.manage.user.add'
-
+                    state : 'app.home.manage.user.list.add'
                 }]
-            }
-        }).state('app.home.manage.user.add', {
-            url:'/add',
-            templateUrl:'views/user/add.html',
-            controller : 'UserCtrl',
-            data: {
-                 displayName: 'add',
             }
         });  
     }]);
