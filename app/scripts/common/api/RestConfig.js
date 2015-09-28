@@ -9,5 +9,8 @@
 
 		RestangularProvider.setBaseUrl('http://localhost/MicroS/');
 
+
+      // RestangularProvider.setBaseUrl('http://192.168.1.35/yavun/api');
+
 	}]);
 })(angular);
