@@ -21,8 +21,6 @@ body {
         url('../fonts/segoeui.svg') format('svg'); /* Legacy iOS */
 }
 
-
-
 h1,h2,h3,h4,h5,h6 {
   margin:0;
   padding:0;	
@@ -73,18 +71,6 @@ a{
  &:hover{
 	  text-decoration:none;
  }	
-}
-
-.btn-view {
-  padding: 5px 10px;
-	border: 1px solid $nav-search-border;
-	color: #000;
-	text-decoration: none;
-	
-	&:hover{
-     color: #eee;
-     background-color: #b8b8b8; 
-	}
 }
 
 .btn-rect{
