@@ -82,18 +82,31 @@
         }).state('app.home.manage.user',{
             url:'/user',
             templateUrl:'views/user/user.html',
+            controller : 'UserCtrl',
             data:{
                 displayName: 'user',
+                subMenuList : [{
+                    name : 'Reset',
+                    
+                },{
+                    name : "Export"
+                },{
+                    name : "Delete"
+                },{
+                    name : "Properties"
+                },{
+                    name : "Add",
+                    state : 'app.home.manage.user.add'
+
+                }]
             }
-        });
-        $stateProvider.state('app.home.manage.user.add', {
-                url:'/add',
-                templatesUrl:'views/user/AddNewUser.html',
-                controller:'UserCtrl',
-                data: {
-                     displayName: 'add',
-                }
-        
-            });  
+        }).state('app.home.manage.user.add', {
+            url:'/add',
+            templateUrl:'views/user/add.html',
+            controller : 'UserCtrl',
+            data: {
+                 displayName: 'add',
+            }
+        });  
     }]);
 })(angular);
