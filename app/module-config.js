@@ -14,6 +14,8 @@
 
 	angular.module('app',['assets']);
 
+	angular.module('login',['app']);
+
 	angular.module('home',['app']);
 
 	angular.module('campaign',['home']);
@@ -34,6 +36,6 @@
 
 	angular.module('editor',['common','froala']);
 
-	angular.module('microsite',['home','overview','common','design','header','subheader','editor','campaign','manage']);
+	angular.module('microsite',['login','home','overview','common','design','header','subheader','editor','campaign','manage','user']);
 
 })(angular);

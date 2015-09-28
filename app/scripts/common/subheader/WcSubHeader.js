@@ -4,19 +4,27 @@
 'use strict';
 
 (function(angular){
-    angular.module('subheader').directive('wcSubHeader',function()
+    angular.module('subheader').directive('wcSubHeader',
+        [
+        '$state',
+        function(state)
         {
 
 
                 return{
-
                     restrict:'AE',
                     templateUrl:'./views/commons/subheader/SubHeader.html',
-                    scope : false,
+                    scope : true,
                     link : function(scope,elem,attrs){
-                        console.log("Subheader scope ------------- ",scope);
+                        scope.$watch(function(scope){
+                                return state.current.name;
+                            },function(newValue,oldValue){
+                                console.log(' state.current.data.subMenuList' , state.current.data.subMenuList);
+                                if(newValue!==undefined)
+                                    scope.subMenuList = state.current.data.subMenuList;
+                        });
                     }
 
                 }
-        })
+        }])
      })(angular);
