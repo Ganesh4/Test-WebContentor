@@ -1,6 +1,6 @@
 /* CSS Document */
-/* line 46, ../sass/global/_variables.scss */
-.login-text {
+/* BLACK COLOR */
+/* WHITE COLOR */
 /* BLUE COLOR DIRECTLY */
 /* BLACK SHADES */
 /* FONT FAMILY */
@@ -121,7 +121,7 @@ a:hover {
 
 /* line 31, ../sass/global/_header.scss */
 .navbar-brand > img {
-  width: 155px;
+  /*width: 155px;*/
 }
 
 /*====================== Logo Section End Here ========================*/
@@ -171,6 +171,11 @@ a:hover {
 /* line 74, ../sass/global/_header.scss */
 .navbar-right {
   margin-right: -30px;
+}
+
+/* line 77, ../sass/global/_header.scss */
+.navbar-left {
+  margin-left: 5px;
 }
 
 /*====================== navigation Section end Here ========================*/

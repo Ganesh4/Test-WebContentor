@@ -34,7 +34,14 @@
 
 		                }]
 		            }
-		        }).state('app.home.manage.user.add', {
+		        }).state('app.home.manage.user.list',{
+			        url:'/list',
+			        templateUrl:'views/user/user.html',
+			        controller : 'UserCtrl',
+			        data: {
+			        	 displayName: 'Users',
+			        }
+			    }).state('app.home.manage.user.add', {
 		            url:'/add',
 		            templateUrl:'views/user/add.html',
 		            controller : 'UserCtrl',
@@ -55,8 +62,7 @@
 		            data: {
 		                 displayName: 'roles',
 		            }
-		        });
-   
+		        }); 
 	}]);
 
 })(angular);
