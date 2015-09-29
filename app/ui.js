@@ -1,3 +1,4 @@
+
 /**
  * 
  *
@@ -14,7 +15,6 @@
             $urlRouterProvider.otherwise("/app/login");
             // Now set up the states
             $stateProvider.state('app', {
-
                 url: '/app',
                 template:'<ui-view></ui-view>',
                 controller:'AppCtrl',
@@ -24,7 +24,6 @@
                 },
 
             }).state('app.login', {
-               cache: false,
                 url: '/login',
                 templateUrl:'views/login/login.html',
                 controller:'LoginCtrl',
@@ -33,7 +32,6 @@
                 }
 
             }).state('app.register', {
-               cache: false,
                 url: '/register',
                 templateUrl:'views/user/registration.html',
                 controller:'RegisterCtrl',
@@ -42,7 +40,6 @@
                 }
 
             }).state('app.success', {
-               cache: false,
                 url: '/success',
                 templateUrl:'views/user/success.html',
                 controller:'SuccessCtrl',
@@ -55,7 +52,6 @@
                 templateUrl:'views/home/home.html',
                 abstract : true,
                 controller:'HomeCtrl',
-
                 data: {
                       displayName: false
                 }
@@ -128,4 +124,5 @@
             });
         }
     ]);
+
 })(angular);

@@ -19,11 +19,8 @@ angular.module('design').service('DesignSrv',
 			**/
 			self.saveDesign = function(userId, data, success, error){
 				var formData = CommonSrv.getFormData(data);
-						console.log('design ---------  ' , data);
-						console.log(formData);
-				
 						Restangular.one(userId.toString()).one('designs').withHttpConfig({
-						transformRequest: angular.identity
+							transformRequest: angular.identity
 					}).customPOST(formData, undefined, undefined, {
 						'Content-Type': undefined
 					}).then(success);

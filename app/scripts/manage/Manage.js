@@ -9,12 +9,13 @@
      angular.module('manage').config(
         [
             '$urlRouterProvider',
-            '$stateProvider',	
-            function($urlProvider,$stateProvider){
+            '$stateProvider',
+            function($urlProvider, $stateProvider){
             // var route = 'app.home.mange';
              $stateProvider.state('app.home.manage', {
                 url: '/manage',
-                templateUrl:"views/manage/manage.html",
+                templateUrl: "views/manage/manage.html",
+                abstract: true,
                 data: {
                     displayName: 'manage',
                     LeftNavList:[
@@ -24,7 +25,7 @@
                             menu : [{
                                     icon : 'fa fa-user',
                                     name : 'Users',
-                                    state: 'app.home.manage.user',
+                                    state: 'app.home.manage.user.list',
                                 },{
                                     icon : 'fa fa-users',
                                     name : 'Roles',

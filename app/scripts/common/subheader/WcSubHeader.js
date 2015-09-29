@@ -7,24 +7,20 @@
     angular.module('subheader').directive('wcSubHeader',
         [
         '$state',
-        function(state)
-        {
-
-
-                return{
-                    restrict:'AE',
-                    templateUrl:'./views/commons/subheader/SubHeader.html',
-                    scope : true,
-                    link : function(scope,elem,attrs){
-                        scope.$watch(function(scope){
-                                return state.current.name;
-                            },function(newValue,oldValue){
-                                console.log(' state.current.data.subMenuList' , state.current.data.subMenuList);
-                                if(newValue!==undefined)
-                                    scope.subMenuList = state.current.data.subMenuList;
-                        });
-                    }
-
+        function(state){
+            return{
+                restrict:'AE',
+                templateUrl:'./views/commons/subheader/SubHeader.html',
+                scope : true,
+                link : function(scope,elem,attrs){
+                    scope.$watch(function(scope){
+                            return state.current.name;
+                        },function(newValue,oldValue){
+                            if(newValue!==undefined)
+                                scope.actionBarBtn = state.current.data.actionBarBtn;
+                    });
                 }
+
+            }
         }])
      })(angular);

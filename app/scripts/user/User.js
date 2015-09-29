@@ -15,29 +15,39 @@
 		
 		   	$stateProvider.state('app.home.manage.user',{
 		            url:'/user',
-		            templateUrl:'views/user/user.html',
-		            controller : 'UserCtrl',
-		            data:{
+		            template:'<ui-view></ui-view>',
+		            controller: 'UserCtrl',
+		            abstract: true,
+	              	data:{
 		                displayName: 'user',
-		                subMenuList : [{
-		                    name : 'Reset',
-		                    
+		                actionBarBtn: [{
+		                    name : 'Refresh',
+		                    onClickEvent : 'REFRESH',
 		                },{
 		                    name : "Export"
 		                },{
-		                    name : "Delete"
+		                    name : "Delete",
+		                    onClickEvent : 'DELETE_USER',
 		                },{
 		                    name : "Properties"
 		                },{
 		                    name : "Add",
+		                    onClickEvent : 'ADD_USER',
 		                    state : 'app.home.manage.user.add'
-
 		                }]
 		            }
-		        }).state('app.home.manage.user.add', {
+		        }).state('app.home.manage.user.list',{
+			        url:'/list',
+			        templateUrl:'views/user/user.html',
+			        controller : 'UserCtrl',
+			        data: {
+			        	 displayName: 'Users',
+			        }
+			    });
+
+			    $stateProvider.state('app.home.manage.user.add', {
 		            url:'/add',
 		            templateUrl:'views/user/add.html',
-		            controller : 'UserCtrl',
 		            data: {
 		                 displayName: 'add',
 		            }
@@ -55,8 +65,7 @@
 		            data: {
 		                 displayName: 'roles',
 		            }
-		        });
-   
+		        }); 
 	}]);
 
 })(angular);

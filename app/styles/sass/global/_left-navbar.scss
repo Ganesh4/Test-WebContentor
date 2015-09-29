@@ -54,11 +54,13 @@
 		font-size: 23px;
 		font-weight: bolder;
 		padding: 6px 6px 6px 10px;
+		float: left; 
 		}
 		
 	.leftnav-Toggle-name span {
-		vertical-align: text-bottom;
-		}
+		float: left;
+		margin-top: 6px;
+		} 
 		
 	ul {		
 		li {
