@@ -9,6 +9,7 @@
 	left: 108px;
 	/*display:none;*/
 }
+
 .submenu-block{
   width:100%;	
 	background-color:#fff;
@@ -31,12 +32,21 @@
 	float:left;
 	
 	li{
-		
+    border-bottom: 1px solid #000;
+    border-right: 1px solid #000;
 	}
 	a{
-	  padding:10px 20px;
-		font-size:0.83em;
-		text-transform:capitalize;
+    width: 100%;
+    display: block;
+    padding: 15px 20px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 0.85em;
+		
+		&:hover{
+	    color: #eee;
+      background-color: #b8b8b8;		
+		}
   }
 }
 .submenu-content{
@@ -56,7 +66,7 @@
 	}
 }
 .elements-right{
-  width:150px;
+  width:auto;/*150px*/
 	float:right;
 	text-align:right;
 	
@@ -285,6 +295,80 @@
    background-position: center 30%;
 	 min-height:320px;
 }
+
+/*=================== section styles ====================*/
+.block-container-section{
+  	@extend .block-container;
+		width:440px;
+		height:320px;
+		background-color:#fff;
+		border:1px solid #000;
+		
+		.submenu-block{
+	    border:0;		
+		}
+		.submenu-header{
+	    border-bottom:0;	
+			
+			h3{
+				text-transform:uppercase;		
+			}	
+		}
+		li{
+			border-top: 1px solid #000;
+			float: left;
+			width: 100%;
+			cursor:pointer;
+			
+			&:hover{
+		    background-color:#f4f4f4;		
+			}
+		}
+		.section-inner{
+			width: 100%;
+			float: left;
+		}
+		.section-label{
+			width: auto;
+			float: left;		
+		}
+		.section-right-content{
+			@extend .elements-right;		
+			
+			a{
+				display: inline-block;
+				padding-left: 5px;
+				font-size: 0.8em;
+				color:#ccc;
+				
+				&:hover{
+			    color:#000;		
+				}
+			}
+		}
+	 .btn-add-section{
+			border: 1px solid #000;
+      margin-top: -4px;
+			
+			a{
+		    display:block;		
+  			padding: 3px 5px;	
+				
+				&:hover{
+			    background-color:#ccc;		
+				}
+			}
+			i{
+				font-size: 1.2em;
+				float: left;
+				margin: 2px 4px 0 0;
+			} 
+			span{
+        font-size: 0.9em;		
+			}
+		}	
+}
+
 
 /*============ control-bar styles =============*/
 .vertically-centered{
