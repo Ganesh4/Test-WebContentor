@@ -48,20 +48,33 @@
 			    $stateProvider.state('app.home.manage.user.add', {
 		            url:'/add',
 		            templateUrl:'views/user/add.html',
-		            data: {
-		                 displayName: 'add',
+		            data:{
+		                displayName: 'add',
+		                actionBarBtn: [{
+		                    name : 'Previous',
+		                    onClickEvent : 'PREVIOUS',
+		                },{
+		                    name : "Next",
+		                    onClickEvent : 'NEXT',
+		                },{
+		                    name : "Ok",
+		                    onClickEvent : 'OK',
+		                },{
+		                    name : "Cancel",
+		                    onClickEvent : 'CANCEL',
+		                }]
 		            }
 		        }).state('app.home.manage.user.password', {
 		            url:'/password',
 		            templateUrl:'views/user/password.html',
-		            controller : 'PasswordCtrl',
+		           // controller : 'PasswordCtrl',
 		            data: {
 		                 displayName: 'password',
 		            }
 		        }).state('app.home.manage.user.roles', {
 		            url:'/roles',
 		            templateUrl:'views/user/roles.html',
-		            controller : 'RolesCtrl',
+		            //controller : 'RolesCtrl',
 		            data: {
 		                 displayName: 'roles',
 		            }
