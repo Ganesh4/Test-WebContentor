@@ -39,7 +39,7 @@
                       displayName: 'register',
                 }
 
-            }).state('app.success', {
+            }).state('app.register.success', {
                 url: '/success',
                 templateUrl:'views/user/success.html',
                 controller:'SuccessCtrl',
