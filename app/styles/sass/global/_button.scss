@@ -3,18 +3,37 @@
 .header-sub {
 button  {
 	background-color: $grey-color;
-    border: 1px solid #dbdada;
+    border: 1px solid $brder-color;
     margin-right: 10px;   
-    padding: 5px;
-    min-width: 80px;
+    padding: 4px 15px 6px 15px;
+    min-width: 70px;
 	float: right;
 	outline: none;
-	@include border-radius(3px);
+	@include border-radius(2px);
 	background-image:none;
 	box-shadow:none;
 	text-shadow:none;
+	font-size:13px;
+	&:hover {
+		background-color:$COLOR_GREEN;
+		color:$workarea-color;
+		border:solid 1px $BORDE_GREEN;
+	}	
+  }
+}
+
+.btn-success {
+	@include border-radius(2px);
+	background-image:none;
+	box-shadow:none;
+	padding:5px 12px 7px 12px;	
+}
+
+.btn-group {
+	button.btn-default {
+		background-image:none;
+		background-color:none;
 	}
-	
 }
 	
 	
