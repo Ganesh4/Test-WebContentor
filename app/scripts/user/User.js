@@ -50,34 +50,115 @@
 		            templateUrl:'views/user/add.html',
 		            data:{
 		                displayName: 'add',
-		                actionBarBtn: [{
-		                    name : 'Previous',
-		                    onClickEvent : 'PREVIOUS',
-		                },{
-		                    name : "Next",
-		                    onClickEvent : 'NEXT',
-		                },{
-		                    name : "Ok",
-		                    onClickEvent : 'OK',
-		                },{
-		                    name : "Cancel",
-		                    onClickEvent : 'CANCEL',
-		                }]
-		            }
+		                LeftNavList:[
+                        {
+                            icon : '',
+                            name : 'Steps',
+                            menu : [{
+                                    icon : 'fa fa-user',
+                                    name : 'General',
+                                    state: 'app.home.manage.user.add',
+                                },{
+                                    icon : '',
+                                    name : 'Credentials',
+                                    state:'app.home.manage.user.password',
+                                },{
+                                    icon : '',
+                                    name : 'Roles',
+                                    state:'app.home.manage.user.roles'
+                                }
+                            ]}],
+                         actionBarBtn: [{
+		                           name : "Cancel",
+		                          onClickEvent : 'CANCEL',
+		                        },{
+		                           name : "Ok",
+		                           onClickEvent : 'OK',
+		                        },{
+		                            name : "Next",
+		                            onClickEvent : 'NEXT',
+		                        },{
+		                            name : 'Previous',
+		                            onClickEvent : 'PREVIOUS',
+		                        }]  
+		                }
+		            
 		        }).state('app.home.manage.user.password', {
 		            url:'/password',
 		            templateUrl:'views/user/password.html',
 		           // controller : 'PasswordCtrl',
-		            data: {
-		                 displayName: 'password',
-		            }
+		           data:{
+		                displayName: 'password',
+		                LeftNavList:[
+                        {
+                            icon : '',
+                            name : 'Steps',
+                            menu : [{
+                                    icon : 'fa fa-user',
+                                    name : 'General',
+                                    state: 'app.home.manage.user.add',
+                                },{
+                                    icon : '',
+                                    name : 'Credentials',
+                                    state:'app.home.manage.user.password',
+                                },{
+                                    icon : '',
+                                    name : 'Roles',
+                                    state:'app.home.manage.user.roles'
+                                }
+                            ]}],
+                         actionBarBtn: [{
+		                           name : "Cancel",
+		                          onClickEvent : 'CANCEL',
+		                        },{
+		                           name : "Ok",
+		                           onClickEvent : 'OK',
+		                        },{
+		                            name : "Next",
+		                            onClickEvent : 'NEXT',
+		                        },{
+		                            name : 'Previous',
+		                            onClickEvent : 'PREVIOUS',
+		                        }]  
+		                }
 		        }).state('app.home.manage.user.roles', {
 		            url:'/roles',
 		            templateUrl:'views/user/roles.html',
 		            //controller : 'RolesCtrl',
-		            data: {
-		                 displayName: 'roles',
-		            }
+		           data:{
+		                displayName: 'roles',
+		                LeftNavList:[
+                        {
+                            icon : '',
+                            name : 'Steps',
+                            menu : [{
+                                    icon : 'fa fa-user',
+                                    name : 'General',
+                                    state: 'app.home.manage.user.add',
+                                },{
+                                    icon : '',
+                                    name : 'Credentials',
+                                    state:'app.home.manage.user.password',
+                                },{
+                                    icon : '',
+                                    name : 'Roles',
+                                    state:'app.home.manage.user.roles'
+                                }
+                            ]}],
+                         actionBarBtn: [{
+		                           name : "Cancel",
+		                          onClickEvent : 'CANCEL',
+		                        },{
+		                           name : "Ok",
+		                           onClickEvent : 'OK',
+		                        },{
+		                            name : "Next",
+		                            onClickEvent : 'NEXT',
+		                        },{
+		                            name : 'Previous',
+		                            onClickEvent : 'PREVIOUS',
+		                        }]  
+		                }
 		        }); 
 	}]);
 
