@@ -1,5 +1,14 @@
 /* Scss Document */
 
+.h2, h2 {
+	font-size:1.2em;
+}
+.inner_wrapper {
+	width:100%;
+	display:block;
+	border-top:solid 1px $workarea-color; 
+	}
+	
 .yavun_container {
 	display:block;
 	padding:15px;	
@@ -7,4 +16,8 @@
 
 .col-md-offset-2 {
 	margin-left:0px;
+}
+
+.ng-binding {
+	font-size:13px;
 }
