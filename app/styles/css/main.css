@@ -1,8 +1,11 @@
 /* CSS Document */
-/* line 46, ../sass/global/_variables.scss */
-.login-text {
+/* BLACK COLOR */
+/* WHITE COLOR */
 /* BLUE COLOR DIRECTLY */
 /* BLACK SHADES */
+/* LIGHT GREEN COLOR */
+/* BORDER GREEN COLOR */
+/* BORDER GREEN COLOR */
 /* FONT FAMILY */
 /* Scss Document */
 /* line 4, ../sass/global/_config.scss */
@@ -121,7 +124,7 @@ a:hover {
 
 /* line 31, ../sass/global/_header.scss */
 .navbar-brand > img {
-  width: 155px;
+  /*width: 155px;*/
 }
 
 /*====================== Logo Section End Here ========================*/
@@ -171,6 +174,11 @@ a:hover {
 /* line 74, ../sass/global/_header.scss */
 .navbar-right {
   margin-right: -30px;
+}
+
+/* line 77, ../sass/global/_header.scss */
+.navbar-left {
+  margin-left: 5px;
 }
 
 /*====================== navigation Section end Here ========================*/
@@ -231,12 +239,14 @@ a:hover {
   font-size: 23px;
   font-weight: bolder;
   padding: 6px 6px 6px 10px;
+  float: left;
 }
-/* line 59, ../sass/global/_left-navbar.scss */
+/* line 60, ../sass/global/_left-navbar.scss */
 .leftnav-Toggle .leftnav-Toggle-name span {
-  vertical-align: text-bottom;
+  float: left;
+  margin-top: 6px;
 }
-/* line 64, ../sass/global/_left-navbar.scss */
+/* line 66, ../sass/global/_left-navbar.scss */
 .leftnav-Toggle ul li {
   width: 100%;
   background-color: #3a3a3a;
@@ -245,29 +255,29 @@ a:hover {
   padding: 10px;
   cursor: pointer;
 }
-/* line 71, ../sass/global/_left-navbar.scss */
+/* line 73, ../sass/global/_left-navbar.scss */
 .leftnav-Toggle ul li:hover {
   background-color: #1b951b;
   color: #fff !important;
 }
-/* line 77, ../sass/global/_left-navbar.scss */
+/* line 79, ../sass/global/_left-navbar.scss */
 .leftnav-Toggle ul li i {
   margin-right: 10px;
   color: #5d5e64;
 }
 
-/* line 87, ../sass/global/_left-navbar.scss */
+/* line 89, ../sass/global/_left-navbar.scss */
 .nav-selected {
   background-color: #107c10 !important;
   color: #fff !important;
 }
 
-/* line 91, ../sass/global/_left-navbar.scss */
+/* line 93, ../sass/global/_left-navbar.scss */
 .nav-selected i {
   color: #fff !important;
 }
 
-/* line 95, ../sass/global/_left-navbar.scss */
+/* line 97, ../sass/global/_left-navbar.scss */
 .left-navbar {
   width: 15%;
   float: left;
@@ -276,7 +286,7 @@ a:hover {
   position: fixed;
 }
 
-/* line 102, ../sass/global/_left-navbar.scss */
+/* line 104, ../sass/global/_left-navbar.scss */
 .left-header-logo {
   width: 100%;
   text-align: center;
@@ -284,13 +294,13 @@ a:hover {
   border-top: 2px solid #000;
   min-height: 60px;
 }
-/* line 109, ../sass/global/_left-navbar.scss */
+/* line 111, ../sass/global/_left-navbar.scss */
 .left-header-logo img {
   width: 85%;
   margin-top: 5px;
 }
 
-/* line 114, ../sass/global/_left-navbar.scss */
+/* line 116, ../sass/global/_left-navbar.scss */
 .btn_create-new-design {
   width: 90%;
   text-align: center;
@@ -300,13 +310,13 @@ a:hover {
   cursor: pointer;
 }
 
-/* line 122, ../sass/global/_left-navbar.scss */
+/* line 124, ../sass/global/_left-navbar.scss */
 .btn_create-new-design-wrap {
   /*  border-top: 2px solid #000;*/
   padding: 8px 0;
 }
 
-/* line 126, ../sass/global/_left-navbar.scss */
+/* line 128, ../sass/global/_left-navbar.scss */
 .btn_left-bar {
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
@@ -316,13 +326,13 @@ a:hover {
   cursor: pointer;
   font-size: 1.2em;
 }
-/* line 135, ../sass/global/_left-navbar.scss */
+/* line 137, ../sass/global/_left-navbar.scss */
 .btn_left-bar:hover {
   background-color: #333;
   color: #fff;
 }
 
-/* line 140, ../sass/global/_left-navbar.scss */
+/* line 142, ../sass/global/_left-navbar.scss */
 .leftnav-title {
   padding: 8px 0;
   border-top: 2px solid #000;
@@ -330,7 +340,7 @@ a:hover {
   min-height: 60px;
 }
 
-/* line 146, ../sass/global/_left-navbar.scss */
+/* line 148, ../sass/global/_left-navbar.scss */
 .btn_active {
   background-color: #000;
   color: #fff;
@@ -1405,4 +1415,59 @@ footer .text-left {
   width: 150px;
   float: left;
   margin-right: 10px;
+}
+
+/* Scss Document */
+/* line 3, ../sass/global/_add.scss */
+.main_rhs_wrapper {
+  padding: 15px 15px 15px 15px;
+  display: block;
+}
+/* line 8, ../sass/global/_add.scss */
+.main_rhs_wrapper .form-group label {
+  font-weight: normal;
+}
+/* line 12, ../sass/global/_add.scss */
+.main_rhs_wrapper .form-group .left-fg {
+  width: 48%;
+  float: left;
+}
+/* line 17, ../sass/global/_add.scss */
+.main_rhs_wrapper .form-group .right-fg {
+  width: 48%;
+  float: left;
+  margin-left: 4%;
+}
+/* line 24, ../sass/global/_add.scss */
+.main_rhs_wrapper .form-group-left {
+  display: flex;
+}
+
+/*====================== Roles ======================*/
+/* line 31, ../sass/global/_add.scss */
+.roles-row {
+  width: 100%;
+  min-height: 50px;
+  background-color: #e8f6e2;
+  border: 1px solid #d6e9c6;
+  box-shadow: none;
+  margin-bottom: 5px;
+}
+/* line 39, ../sass/global/_add.scss */
+.roles-row .roles-radio {
+  float: left;
+}
+/* line 42, ../sass/global/_add.scss */
+.roles-row .roles-radio input[type=checkbox], .roles-row .roles-radio input[type=radio] {
+  margin: 6px 10px;
+}
+/* line 47, ../sass/global/_add.scss */
+.roles-row .roles-content {
+  float: left;
+  width: 94%;
+}
+/* line 51, ../sass/global/_add.scss */
+.roles-row .roles-content p {
+  color: #468847;
+  margin: 2px 0px;
 }
