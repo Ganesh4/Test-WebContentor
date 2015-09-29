@@ -1,0 +1,56 @@
+/* Scss Document */
+
+.main_rhs_wrapper {
+	padding:15px 15px 15px 15px;
+	display:block;	
+	.form-group {
+		
+		label {
+			font-weight:normal;
+		    }
+		
+		.left-fg{
+			width: 48%;
+			float: left;
+		    }
+			
+		.right-fg{
+			width: 48%;
+			float: left;
+			margin-left: 4%;
+		    }
+	}
+	
+	.form-group-left{
+		display: flex;
+		}
+}
+
+/*====================== Roles ======================*/
+
+.roles-row{
+	width: 100%;
+	min-height: 50px;
+	background-color: $ROLES_ROW_COLOR;
+	border: 1px solid $ROLES_BORDER_COLOR;
+	box-shadow: none;
+	margin-bottom: 5px;
+	
+	.roles-radio{
+		float: left;
+		
+		input[type=checkbox], input[type=radio]{
+			margin: 6px 10px;
+			} 
+	}
+	
+	.roles-content{
+		float: left;
+		width: 94%;
+	
+	    p{
+		   color: $ROLES_CONTENT_COLOR;
+		   margin: 2px 0px;
+		   }
+	}
+}
