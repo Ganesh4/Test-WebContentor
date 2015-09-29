@@ -1,20 +1,19 @@
 /* Scss Document */
 
 .header-sub {
-button  {
-	background-color: $grey-color;
-    border: 1px solid #dbdada;
-    margin-right: 10px;   
-    padding: 5px;
-    min-width: 80px;
-	float: right;
-	outline: none;
-	@include border-radius(3px);
-	background-image:none;
-	box-shadow:none;
-	text-shadow:none;
+  button  {
+		background-color: $grey-color;
+		border: 1px solid #dbdada;
+		margin-right: 10px;   
+		padding: 5px;
+		min-width: 80px;
+		float: right;
+		outline: none;
+		@include border-radius(3px);
+		background-image:none;
+		box-shadow:none;
+		text-shadow:none;
 	}
-	
 }
-	
+
 	
