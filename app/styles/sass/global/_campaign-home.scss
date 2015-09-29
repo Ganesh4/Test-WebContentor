@@ -1,0 +1,79 @@
+/* Scss Document */
+
+/*====================== Campaign Home Page ======================*/
+
+.campaign-home-row{
+	width: 100%;
+	background-color: $ROLES_ROW_COLOR;
+	border: 1px solid $ROLES_BORDER_COLOR;
+	box-shadow: none;
+	margin-bottom: 5px;
+	
+	.campagin-home-icon{
+		float: left;
+		padding: 5px;
+	}
+	
+	.campagin-home-icon i{
+		 font-size: 24px;
+		 color: $ICON_COLOR;
+	}
+	
+	.campagin-home-content{
+		float: left;
+		width: 92%;
+	
+	    p{
+		   color: $ROLES_CONTENT_COLOR;
+		   margin: 5px 0px;
+		   font-weight: bold;
+		   }
+	}
+}
+
+/*====================== New Campaign Page ======================*/
+
+
+.campaign_rhs_wrapper {
+	padding:15px 15px 15px 15px;
+	display:block;	
+	.form-group {
+		
+		label {
+			font-weight:normal;
+		    }
+			
+		.textarea-height{
+			max-height: 92px;
+			}
+		
+		.campaign-left-fg{
+			width: 48%;
+			float: left;
+		    }
+			
+		.campaign-right-fg{
+			width: 48%;
+			float: left;
+			margin-left: 2%;
+		    }
+		.campaign-right-fg i{
+			color: #5d5e64;
+			font-size: 20px;
+			font-weight: bold;
+			margin-top: 22px;
+			cursor: pointer;
+			}
+			
+		.checkbox-align{
+			width: 100%;
+			   label {
+				  width: 30%;
+				  margin: 0px 0px 5px;
+				  }
+			}	
+	}
+	.campaign-group-left{
+		display: flex;
+		}
+}
