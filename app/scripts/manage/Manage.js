@@ -29,7 +29,7 @@
                                 },{
                                     icon : 'fa fa-users',
                                     name : 'Roles',
-                                    state:'app.home.manage.roles'
+                                    state:'app.home.manage.role.list'
                                 }
                             ]
                         },{
