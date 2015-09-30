@@ -10,10 +10,10 @@ angular.module('user').controller('UserCtrl',
         'ApiSrv',
         'CommonSrv',
         'UserApiSrv',
-        function($scope ,$state, ApiSrv,CommonSrv,UserApiSrv){
+        'Global',
+        function($scope ,$state, ApiSrv,CommonSrv,UserApiSrv, Global){
                        
             var param = {};
-            $scope.user;
             $scope.gridOptions = {
                 multiSelect: true,
                 enableRowSelection:true,
@@ -28,26 +28,25 @@ angular.module('user').controller('UserCtrl',
                     displayName:'Email'
                 },{
                     field:'CreatedDate',
-                    displayName:'Created Date'
+                    displayName:'Created Date',
+                    cellTemplate:'<div class="ui-grid-cell-contents">{{row.entity.CreatedDate | FormatDateFilter}}</div>'
                 },{
                     field:'ModificationDate',
-                    displayName:'Modification Date'
+                    displayName:'Modification Date',
+                    cellTemplate:'<div class="ui-grid-cell-contents">{{row.entity.ModificationDate | FormatDateFilter}}</div>'
+                   // cellFilter:' date : MM-dd-yyyy hh:mm:ss'
                 },{
                     field:'UserRoles.SecurityGroupID',
                     displayName:"Roles"
                 }]
             } 
-            UserApiSrv.getUserList('ManageUser',param, 
+            UserApiSrv.getUserList('users',param, 
                 function(data){
                     if(data)
                         $scope.gridOptions.data = data.plain();
             });
 
-             $scope.$on(Global.EVENTS.ADD_NEW_USER,function(event, data){
-                UserApiSrv.addNewUser( 'users', $scope.user,function(data){
-                    
-                });
-            });
+          
         }
     ]);
 })(angular);
