@@ -1,117 +1,86 @@
 /* Scss Document */
 
-.nav-header {
-	width:$main-width;	
-	border-bottom:solid 1px $nav-color;
-	background-color:$head-color;
-	display:inline-flex;				
-		.logo {
-			width: $main-width;
-			float: left;
-			margin-top: 1px;
-			display: inline-flex;
-		}	
-		.logo img{
-			height: 56px;}	
-		.help-icon{
-			width: 55px;
-			height: 56px;
-			float: right;
-			background-color: $iconbg-color;
-			text-align: center;
-			line-height: 68px;
-			cursor: pointer;
-		}
-		.help-icon i{
-			font-size: 38px;
-			color: $main-color;
-		}
-		
-		.nav-upload{
-			width: 75px;
-			height: 56px;
-			float: right;
-			background-color:$nav-upload-color;
-			text-align: center;
-			line-height: 68px;
-			cursor: pointer;
-			border-left: 1px solid $nav-upload-border-color;
-		}
-		.nav-upload i{
-			font-size: 26px;
-			color: $nav-i-color;
-		}
-		.nav-upload i:hover{
-			color: $nav-ihover-color;
-			}
-			
-		.nav-search{
-			width: 210px;
-			height: 30px;
-			float: right;
-			margin-right: 70px;
-			margin-top: 13px;
-			
-			.nav-search-form{
-				display: block;
-				width: 100%;
-				height: 30px;
-				padding: 0px 28px 0px 28px;
-				font-size: $allright-size;
-				line-height: 2.6;
-				background-color: $head-color;
-				background-image: none;
-				border: 1px solid $nav-search-border;
-				border-radius: 4px;
-				float: left;
-				outline: none;
-				-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-				box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-				-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
-				-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-				transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-				}
-			.nav-search-icon{
-				font-size: 18px;
-			    color: $nav-i-color;
-				position: absolute;
-				padding: 7px;
-				}
-			.nav-close-icon{
-				font-size: 18px;
-				color: $nav-i-color;
-				position: absolute;
-				padding: 7px;
-			    display: inline-flex;
-				margin-left: -28px;
-				cursor: pointer;
-				}
-			.nav-close-icon i:hover{
-				color: $nav-close-icon-hover;
-				}
-		}
-		
-		
-		
-		.nav-campaign-btn{
-			width: 92px;
-			background-color: $head-color;
-			text-align: center;
-			float:left; 
-			color: $nav-campaign-btn-color;
-			font-family: $nav-campaign-btn-font;
-			font-size: 13px;
-			padding: 18px;
-			cursor: pointer;
-			}
-		.nav-campaign-btn:hover{
-			background-color: $nav-upload-border-color;
-			}
-		.active{
-			background-color: $nav-upload-border-color !important;
-			}
-			
-			
+.navbar-default {
+	background-color:$header-color;
+	background-image:none;
+	box-shadow:none;
+	border-bottom:solid 1px $brder-color;
+	margin-bottom:0px;
+	border-radius:0px;
+	}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+	background-color:$brder-color;
+	background-image:none;
+	box-shadow:none;
+	
 }
 
+/*====================== Logo Section Start Here ========================*/	
 
+.navbar-brand{
+	padding: 0px;
+	width: 223px;
+    background-color:$main_blue_color;
+	}
+	
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover{
+	background-color: $main_blue_color;
+	}
+
+.navbar-brand>img{
+	/*width: 155px;*/
+	}	
+
+/*====================== Logo Section End Here ========================*/	
+
+/*====================== navigation Section start Here ========================*/
+
+.navbar-form .form-control {
+	background-color: $header-color;
+	padding-left: 25px;
+	padding-right: 25px;
+	}
+.form-group i{
+	position: absolute;
+	padding: 10px 10px 10px 8px;
+	font-size: 16px;
+	}
+.left-icon{
+	margin-right: -35px;
+	}
+.right-icon{
+	margin-left: -35px;
+	position: relative !important;
+	margin-top: -36px;
+	float: right;
+	}
+	
+.nav-icon-color{
+		li{
+			background-color: $body-color;
+			border-left: 1px solid $brder-color;
+			border-right: 1px solid $workarea-color;
+				a{
+				padding: 13px 20px !important; 
+				}
+				
+			   i{
+				 font-size: 22px;
+				}
+		}
+}
+
+.navbar-right {
+    margin-right: -30px;
+    }
+	
+.navbar-left{
+	margin-left: 5px;
+	}
+	
+.header-sub {
+	border:solid 1px rgba(255,255,255,1.00);
+}
+
+/*====================== navigation Section end Here ========================*/

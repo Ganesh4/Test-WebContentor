@@ -1,13 +1,98 @@
 /* Scss Document */
-/* Scss Document */
 
-.manage-left-row{
-	width: 16.4%;
-	background-color: $manage-left-bg;
-	height: 700px;
-	margin-top: -4px;
-	float: left;
+.sidebar {    
+	padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+	height: calc(100vh - 50px);
+    top:-1px;
+    z-index: 1000;
+	background-color:$sidenavbar-color;
+	
+}	
+	
+.leftnav-hamburger {
+	border-bottom: 0px solid $grey-color;
+
+	}	
+	
+.leftnav-hamburger{
+
+	height: 50px;
+	width: 100%;
+	background-color: #3a3a3a;
+		
+	.hamburger {
+		padding: 10px;
+		cursor: pointer;
+		width: 30px;
+		height: 22px;
+		}
+		
+	.hamburger i{
+		color: #5e5e5e;
+		font-size: 31px;
+		}
+		
+	.hamburger i:hover{
+		color: #26ade3;
+		}
+}
+
+.leftnav-Toggle {
+	border-top: 1px solid #414248;
+		
+	.leftnav-Toggle-name {
+		height: 32px;
+		background-color:#2d2d2d;
+		width: 100%;
+		color: #fff;
+		}
+		
+	.leftnav-Toggle-name i {
+		color: #5d5e64;
+		font-size: 23px;
+		font-weight: bolder;
+		padding: 6px 6px 6px 10px;
+		float: left; 
+		}
+		
+	.leftnav-Toggle-name span {
+		float: left;
+		margin-top: 6px;
+		} 
+		
+	ul {		
+		li {
+			width: 100%;
+			background-color: #3a3a3a;
+			color: #cccccc;
+			height: 37px;
+			padding: 10px;
+			cursor: pointer;
+			&:hover {
+			background-color: #1b951b;
+			color: #fff !important;
+				}
+			}
+				
+		li i {
+			margin-right: 10px;
+			color: #5d5e64;
+			}
+		
 	}
+}
+
+
+
+.nav-selected{
+	background-color: #107c10 !important;
+	color: #fff !important;
+	}
+.nav-selected i{	
+	color: #fff !important;
+	}	
 	
 .left-navbar{
  	width:15%;

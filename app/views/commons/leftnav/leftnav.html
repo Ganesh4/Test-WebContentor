@@ -1,27 +1,19 @@
 
 <div class="manage-left-row">
 
-
-   
-   <div class="leftnav-title">
-      <h2 class="common-headng">Main Navigation</h2>
+  <!--<wc-left-nav-menu data = "leftNavList"></wc-left-nav-menu>-->
+   <div class="leftnav-hamburger">
+      <div class="hamburger"><i class="fa fa-bars"></i></div>
    </div>
-   <div class="btn_create-new-design-wrap">
-     <div class="btn_create-new-design">
-      <span class="glyphicon glyphicon-plus"></span>
-       Create New Design
+  <!-- Users and Roles start here-->
+   <div class="leftnav-Toggle" ng-repeat = "listItem in LeftNavList">
+     <div class="leftnav-Toggle-name">
+        <i class="fa fa-angle-down"></i>
+        <span>{{listItem.name}}</span>
      </div>
-   </div>     
-  <div ui-sref = "app.home.overview" ui-sref-active="btn_active" class="btn_left-bar">
-    Overview
- 
+        <ul>
+           <li ui-sref-active = "nav-selected" ng-repeat = "menu in listItem.menu" ui-sref = "{{menu.state || '#'}}"> <i class="{{menu.icon}}"></i>{{menu.name}}</li>
+        </ul>
   </div>
-   <div ui-sref = "app.home.design.upload" ui-sref-active="btn_active" class="btn_left-bar">
-   Upload Design
-   
-   </div>
-
-   
-
 
 </div>

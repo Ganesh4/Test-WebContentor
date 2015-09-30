@@ -1,0 +1,36 @@
+/* Scss Document */
+
+.manage_padding {
+	padding-top:1px;
+}
+
+.header-sub {
+	width: 100%;	
+	background-color:$secondery-navebar-color;
+	padding-top:9px;
+	padding-bottom:9px;
+	min-height:50px;
+	border-bottom:solid 1px $brder-color;
+	
+	.sub-header-icon{
+		float: left;
+		padding: 8px 10px 0px 15px;
+		}
+		
+	.sub-header-icon i{
+		color: #5d5e64;
+		font-size: 18px;
+		}
+	}
+	
+.breadcrumb {
+	float: left;
+	margin-bottom: 0px;
+	padding: 0px;
+	color: #333333;
+	font-size: 16px;
+	line-height: 30px;
+
+ 	}
+
+

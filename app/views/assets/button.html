@@ -1,0 +1,10 @@
+<ng-if = "type==BUTT">
+	<button class="btn btn-default" ng-click="doOnClick()">{{name}}</button>
+</ng-if> 
+
+<ng-if = "type == 'WIZARD_BTN'">
+	<button class="btn btn-default" ng-click="doOnClick()" >previous</button>
+	<button class="btn btn-default" ng-click="doOnClick()" >next</button>
+	<button class="btn btn-default" ng-click="doOnClick()" >Ok</button>
+	<button class="btn btn-default" ng-click="doOnClick()" >Cancle</button>
+</ng-if>

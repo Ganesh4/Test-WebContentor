@@ -1,0 +1,21 @@
+/* CSS Document */
+
+/* Scss Document */
+
+
+.form-signin  {
+	margin:7% auto 0px auto;
+	padding:30px;	
+	width:400px;
+	border:solid 1px $brder-color;
+	@include border-radius(3px); 
+	input.form-control {
+		margin-top:15px;
+	}
+}
+
+
+	
+
+
+	
