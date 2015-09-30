@@ -66,6 +66,7 @@
 		                 displayName: 'roles',
 		            }
 		        }); 
+
 	}]);
 
 })(angular);

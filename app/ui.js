@@ -40,9 +40,9 @@
                 }
 
             }).state('app.success', {
-                url: '/success',
+                url: '/register/success',
                 templateUrl:'views/user/success.html',
-                controller:'SuccessCtrl',
+              //  controller:'SuccessCtrl',
                 data: {
                       displayName: 'success',
                 }
