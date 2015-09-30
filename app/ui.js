@@ -23,28 +23,12 @@
                       displayName: false
                 },
 
-            }).state('app.login', {
-                url: '/login',
-                templateUrl:'views/login/login.html',
-                controller:'LoginCtrl',
-                data: {
-                      displayName: 'login',
-                }
-
             }).state('app.register', {
                 url: '/register',
                 templateUrl:'views/user/registration.html',
                 controller:'RegisterCtrl',
                 data: {
                       displayName: 'register',
-                }
-
-            }).state('app.register.success', {
-                url: '/success',
-                templateUrl:'views/user/success.html',
-                controller:'SuccessCtrl',
-                data: {
-                      displayName: 'success',
                 }
 
             }).state('app.home', {
@@ -124,5 +108,6 @@
             });
         }
     ]);
+
 
 })(angular);
