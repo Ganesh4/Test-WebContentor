@@ -16,12 +16,13 @@ angular.module('assets').directive('wcButton',['Global','$parse',function(Global
 				disable: '='
 			},
 			link:function(scope,elem,attrs){
-				scope.NEXT_BTN_DISABLE = false;
-				scope.PREVIOUS_BTN_DISABLE = true;
+			
 				scope.doOnClick = function(){
 					scope.$emit(scope.onClick, scope.btnData);
 				}
-				
+				scope.PREVIOUS_BTN_DISABLE = true;
+				scope.NEXT_BTN_DISABLE = false;
+
 				scope.isEnabled = function(){
 					if(scope.disable){
 						var model = $parse(scope.disable);
@@ -31,6 +32,23 @@ angular.module('assets').directive('wcButton',['Global','$parse',function(Global
 					else 
 						return false;
 				}
+
+				scope.$on(Global.EVENTS.NEXT_BTN_DISABLE,function(event, data){
+	                scope.NEXT_BTN_DISABLE = true;
+
+	            });
+	                
+	            scope.$on(Global.EVENTS.PREVIOUS_BTN_DISABLE,function(event, data){
+	                scope.PREVIOUS_BTN_DISABLE = true;
+	            });
+	            
+	            scope.$on(Global.EVENTS.NEXT_BTN_ENABLE,function(event, data){
+	                scope.NEXT_BTN_DISABLE = false;
+	            });
+	            
+	            scope.$on(Global.EVENTS.PREVIOUS_BTN_ENABLE,function(event, data){
+	                scope.PREVIOUS_BTN_DISABLE = false;
+	            });
 			}
 	  };
   }]);

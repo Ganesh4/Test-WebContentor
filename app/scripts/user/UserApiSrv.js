@@ -13,6 +13,10 @@ angular.module('user').service('UserApiSrv', ['ApiSrv', function (ApiSrv) {
 	self.getUserList = function(uri, params, success, error){
 		ApiSrv.getList(uri, params, success, error)
 	}
+
+	self.addNewUser =function(uri, params, success, error){
+		ApiSrv.post(uri,params,success,error);
+	}
 }]);
 
 })(angular);

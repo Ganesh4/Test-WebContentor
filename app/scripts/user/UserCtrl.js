@@ -13,6 +13,7 @@ angular.module('user').controller('UserCtrl',
         function($scope ,$state, ApiSrv,CommonSrv,UserApiSrv){
                        
             var param = {};
+            $scope.user;
             $scope.gridOptions = {
                 multiSelect: true,
                 enableRowSelection:true,
@@ -40,6 +41,12 @@ angular.module('user').controller('UserCtrl',
                 function(data){
                     if(data)
                         $scope.gridOptions.data = data.plain();
+            });
+
+             $scope.$on(Global.EVENTS.ADD_NEW_USER,function(event, data){
+                UserApiSrv.addNewUser( 'users', $scope.user,function(data){
+                    
+                });
             });
         }
     ]);
