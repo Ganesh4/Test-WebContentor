@@ -2,10 +2,12 @@
 /* BLACK COLOR */
 /* WHITE COLOR */
 /* BLUE COLOR DIRECTLY */
+/* GREEN COLOR DIRECTLY */
 /* BLACK SHADES */
 /* LIGHT GREEN COLOR */
 /* BORDER GREEN COLOR */
 /* BORDER GREEN COLOR */
+/* GREEN COLOR */
 /* FONT FAMILY */
 /* Scss Document */
 /* line 4, ../sass/global/_config.scss */
@@ -13,6 +15,7 @@ body {
   background: whitesmoke;
   margin: auto 0;
   font-family: "segoeui", "Segoe UI";
+  font-size: 13px;
 }
 
 @font-face {
@@ -24,20 +27,20 @@ body {
   src: url("../fonts/segoeui.eot"), url("../fonts/segoeui.eot?#iefix") format("embedded-opentype"), url("../fonts/segoeui.woff") format("woff"), url("../fonts/segoeui.ttf") format("truetype"), url("../fonts/segoeui.otf") format("opentype"), url("../fonts/segoeui.svg") format("svg");
   /* Legacy iOS */
 }
-/* line 24, ../sass/global/_config.scss */
+/* line 25, ../sass/global/_config.scss */
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
 }
 
-/* line 29, ../sass/global/_config.scss */
+/* line 30, ../sass/global/_config.scss */
 h2.common-headng {
   font-size: 1.2em;
   text-align: center;
   padding: 10px 0;
 }
 
-/* line 35, ../sass/global/_config.scss */
+/* line 36, ../sass/global/_config.scss */
 .clearfix:after {
   visibility: hidden;
   display: block;
@@ -47,14 +50,14 @@ h2.common-headng {
   height: 0;
 }
 
-/* line 44, ../sass/global/_config.scss */
+/* line 45, ../sass/global/_config.scss */
 .content-padding {
   padding: 10px 20px;
   width: 100%;
   float: left;
 }
 
-/* line 50, ../sass/global/_config.scss */
+/* line 51, ../sass/global/_config.scss */
 .content-main {
   float: right;
   width: 85%;
@@ -63,29 +66,29 @@ h2.common-headng {
   margin-top: 120px;
 }
 
-/* line 58, ../sass/global/_config.scss */
+/* line 59, ../sass/global/_config.scss */
 .wrap-box {
   width: 100%;
   float: left;
 }
 
-/* line 63, ../sass/global/_config.scss */
+/* line 64, ../sass/global/_config.scss */
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 69, ../sass/global/_config.scss */
+/* line 70, ../sass/global/_config.scss */
 a {
   color: #000000;
 }
-/* line 71, ../sass/global/_config.scss */
+/* line 72, ../sass/global/_config.scss */
 a:hover {
   text-decoration: none;
 }
 
-/* line 76, ../sass/global/_config.scss */
+/* line 77, ../sass/global/_config.scss */
 .btn-rect {
   padding: 5px 16px;
 }
@@ -176,9 +179,14 @@ a:hover {
   margin-right: -30px;
 }
 
-/* line 77, ../sass/global/_header.scss */
+/* line 78, ../sass/global/_header.scss */
 .navbar-left {
   margin-left: 5px;
+}
+
+/* line 82, ../sass/global/_header.scss */
+.header-sub {
+  border: solid 1px white;
 }
 
 /*====================== navigation Section end Here ========================*/
@@ -350,19 +358,43 @@ a:hover {
 /* line 4, ../sass/global/_button.scss */
 .header-sub button {
   background-color: white;
-  border: 1px solid #dbdada;
+  border: 1px solid #d6d6d6;
   margin-right: 10px;
-  padding: 5px;
-  min-width: 80px;
+  padding: 4px 15px 6px 15px;
+  min-width: 70px;
   float: right;
   outline: none;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  border-radius: 3px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
   background-image: none;
   box-shadow: none;
   text-shadow: none;
+  font-size: 13px;
+}
+/* line 17, ../sass/global/_button.scss */
+.header-sub button:hover {
+  background-color: #419641;
+  color: #ffffff;
+  border: solid 1px #3e8f3e;
+}
+
+/* line 25, ../sass/global/_button.scss */
+.btn-success {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  border-radius: 2px;
+  background-image: none;
+  box-shadow: none;
+  padding: 5px 12px 7px 12px;
+}
+
+/* line 33, ../sass/global/_button.scss */
+.btn-group button.btn-default {
+  background-image: none;
+  background-color: none;
 }
 
 /* Sass Document */
@@ -1352,17 +1384,16 @@ footer .text-left {
 }
 /* line 349, ../sass/global/_editor-blocks.scss */
 .block-container-section .btn-add-section {
-  border: 1px solid #000;
-  margin-top: -4px;
-}
-/* line 353, ../sass/global/_editor-blocks.scss */
-.block-container-section .btn-add-section a {
-  display: block;
-  padding: 3px 5px;
-}
-/* line 357, ../sass/global/_editor-blocks.scss */
-.block-container-section .btn-add-section a:hover {
-  background-color: #ccc;
+  			/*border: 1px solid #000;
+        margin-top: -4px;*/
+  			/*a{
+  		    display:block;		
+    			padding: 3px 5px;	
+  				
+  				&:hover{
+  			    background-color:#ccc;		
+  				}
+  			}*/
 }
 /* line 361, ../sass/global/_editor-blocks.scss */
 .block-container-section .btn-add-section i {
@@ -1459,33 +1490,49 @@ footer .text-left {
 
 /* Scss Document */
 /* line 3, ../sass/global/_overview.scss */
+.h2, h2 {
+  font-size: 1.2em;
+}
+
+/* line 6, ../sass/global/_overview.scss */
+.inner_wrapper {
+  width: 100%;
+  display: block;
+  border-top: solid 1px #ffffff;
+}
+
+/* line 12, ../sass/global/_overview.scss */
 .yavun_container {
   display: block;
   padding: 15px;
 }
 
-/* line 8, ../sass/global/_overview.scss */
+/* line 17, ../sass/global/_overview.scss */
 .col-md-offset-2 {
   margin-left: 0px;
+}
+
+/* line 21, ../sass/global/_overview.scss */
+.ng-binding {
+  font-size: 13px;
 }
 
 /* CSS Document */
 /* Scss Document */
 /* line 6, ../sass/global/_login.scss */
-.form-signin {
-  margin-bottom: 0;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 7%;
-  max-width: 330px;
-  padding-bottom: 15px;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 15px;
+.form-signin, .registration_form {
+  margin: 7% auto 0px auto;
+  padding: 30px;
+  width: 400px;
+  border: solid 1px #d6d6d6;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
 }
-/* line 17, ../sass/global/_login.scss */
-.form-signin input.form-control {
-  margin-top: 10px;
+/* line 12, ../sass/global/_login.scss */
+.form-signin input.form-control, .registration_form input.form-control {
+  margin-top: 15px;
 }
 
 /* Scss Document */
@@ -1501,9 +1548,35 @@ footer .text-left {
 .form_main .btn-group {
   margin-right: 15px;
 }
-/* line 13, ../sass/global/_form.scss */
-.form_main .cepcha {
-  width: 150px;
+
+/* line 16, ../sass/global/_form.scss */
+.registration_form {
+  width: 70%;
+  min-height: 410px;
+  margin-top: 3%;
+}
+/* line 21, ../sass/global/_form.scss */
+.registration_form .form-group {
+  margin-bottom: 10px;
+}
+/* line 23, ../sass/global/_form.scss */
+.registration_form .form-group label {
+  font-weight: normal;
+}
+/* line 26, ../sass/global/_form.scss */
+.registration_form .form-group input.form-control {
+  margin-top: 0px;
+}
+
+/* line 32, ../sass/global/_form.scss */
+.select_contery {
+  width: 40%;
+  display: inline-table;
+}
+
+/* line 37, ../sass/global/_form.scss */
+.cepcha {
+  width: 50%;
   float: left;
   margin-right: 10px;
 }
@@ -1561,4 +1634,96 @@ footer .text-left {
 .roles-row .roles-content p {
   color: #468847;
   margin: 2px 0px;
+}
+
+/* Scss Document */
+/*====================== Campaign Home Page ======================*/
+/* line 5, ../sass/global/_campaign-home.scss */
+.campaign-home-row {
+  width: 100%;
+  background-color: #e8f6e2;
+  border: 1px solid #d6e9c6;
+  box-shadow: none;
+  margin-bottom: 5px;
+}
+/* line 12, ../sass/global/_campaign-home.scss */
+.campaign-home-row .campagin-home-icon {
+  float: left;
+  padding: 5px;
+}
+/* line 17, ../sass/global/_campaign-home.scss */
+.campaign-home-row .campagin-home-icon i {
+  font-size: 24px;
+  color: #468847;
+}
+/* line 22, ../sass/global/_campaign-home.scss */
+.campaign-home-row .campagin-home-content {
+  float: left;
+  width: 92%;
+}
+/* line 26, ../sass/global/_campaign-home.scss */
+.campaign-home-row .campagin-home-content p {
+  color: #468847;
+  margin: 5px 0px;
+  font-weight: bold;
+}
+
+/*====================== New Campaign Page ======================*/
+/* line 37, ../sass/global/_campaign-home.scss */
+.campaign_rhs_wrapper {
+  padding: 15px 15px 15px 15px;
+  display: block;
+}
+/* line 42, ../sass/global/_campaign-home.scss */
+.campaign_rhs_wrapper .form-group label {
+  font-weight: normal;
+}
+/* line 46, ../sass/global/_campaign-home.scss */
+.campaign_rhs_wrapper .form-group .textarea-height {
+  max-height: 92px;
+}
+/* line 50, ../sass/global/_campaign-home.scss */
+.campaign_rhs_wrapper .form-group .campaign-left-fg {
+  width: 48%;
+  float: left;
+}
+/* line 54, ../sass/global/_campaign-home.scss */
+.campaign_rhs_wrapper .form-group .campaign-right-fg {
+  width: 48%;
+  float: left;
+  margin-left: 2%;
+}
+/* line 59, ../sass/global/_campaign-home.scss */
+.campaign_rhs_wrapper .form-group .campaign-right-fg i {
+  color: #5d5e64;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 22px;
+  cursor: pointer;
+}
+/* line 67, ../sass/global/_campaign-home.scss */
+.campaign_rhs_wrapper .form-group .checkbox-align {
+  width: 100%;
+}
+/* line 69, ../sass/global/_campaign-home.scss */
+.campaign_rhs_wrapper .form-group .checkbox-align label {
+  width: 30%;
+  margin: 0px 0px 5px;
+}
+/* line 75, ../sass/global/_campaign-home.scss */
+.campaign_rhs_wrapper .campaign-group-left {
+  display: flex;
+}
+
+/* Scss Document */
+/* line 3, ../sass/global/_user.scss */
+.ui-grid {
+  width: 97.5%;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+/* line 8, ../sass/global/_user.scss */
+.ui-grid-contents-wrapper {
+  width: 100%;
 }
