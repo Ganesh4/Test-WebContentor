@@ -80,45 +80,41 @@
     <label>Mobile</label>
     <input  class="form-control" ng-model="user.mobile" placeholder="Mobile">
   </div>
+
+    <div class="form-group">
+    <label>Company</label>
+    <input  class="form-control" ng-model="user.organizationName" placeholder="Mobile">
+  </div>
+
   
+
+  
+    
+      </div>
+    <!-- secont paarage re -->
+   
+ 
+  
+ <div class="col-md-4">
   <div class="form-group">
     <label>Country</label>    
-<div class="btn-group">
-  <button type="button" class="btn btn-default ">Action</button>
-  <button type="button" class="btn btn-default  dropdown-toggle" ng-model="user.country" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <span class="caret"></span>
-    <span class="sr-only">Toggle Dropdown</span>
-  </button>
-  <ul class="dropdown-menu">
-    <li><a href="#">Action</a></li>    
-  </ul>
+<div class="form-group">
+ <select ng-model = "user.country" ng-options = "country.name for country in countries" ng-change = "updateCountry()"></select>
 </div>
 
 <label>State</label>    
-<div class="btn-group">
-  <button type="button" class="btn btn-default ">Action</button>
-  <button type="button" class="btn btn-default  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" ng-model="user.state" aria-expanded="false">
-    <span class="caret"></span>
-    <span class="sr-only">Toggle Dropdown</span>
-  </button>
-  <ul class="dropdown-menu">
-    <li><a href="#">Action</a></li>    
-  </ul>
+<div class="form-group">
+  <select ng-model = "user.state" ng-options = "state.name for state in states"></select>
 </div>
 </div>
-    </div>
-    
-    
-    <!-- secont paarage re -->
-    <div class="col-md-4">
- <div class="form-group">
+  <div class="form-group">
     <label>City</label>
     <input  class="form-control" name="city" ng-model="user.city" placeholder="City" validator="required">
-  </div>  
-  
+  </div>
+
  <div class="form-group">
     <label>Address</label>
-    <input  class="form-control"  ng-model="user.address" placeholder="Address"/> 
+    <input  class="form-control"  ng-model="user.address1" placeholder="Address"/> 
   </div> 
   
   <div class="form-group">
@@ -142,7 +138,7 @@
   
   <div class="form-group">
     
-     <div class="g-recaptcha" name = "captcha" data-sitekey="6Lc_0f4SAAAAAF9ZA_d7Dxi9qRbPMMNW-tLSvhe6"></div>
+     <div class="g-recaptcha" ng-model="user.captcha" name = "captcha" data-sitekey="6Lc_0f4SAAAAAF9ZA_d7Dxi9qRbPMMNW-tLSvhe6"></div>
   </div>
   
   <button type="submit" ng-click= "addUser()" validation-submit="Form" class="btn btn-default">Submit</button>
