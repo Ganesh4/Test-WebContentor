@@ -49,18 +49,21 @@ angular.module('common').service('CommonSrv',
                     scope.$broadcast(Global.EVENTS.PREVIOUS_BTN_ENABLE);
                     var stateName = wizardSteps[index + 1];
                     $state.go(stateName);
-                }else{
-                    scope.$emit(Global.EVENTS.NEXT_BTN_DISABLE);
+                }
+                if(index + 1 == maxLength ){
+                    scope.$broadcast(Global.EVENTS.NEXT_BTN_DISABLE);
                 }
             }
             self.goToPreviousStep = function(wizardSteps, scope){
                 var index = self.getWizardCurrentIndex(wizardSteps);
                 if(index > 0){
-                    scope.$emit(Global.EVENTS.PREVIOUS_BTN_ENABLE);
+                    scope.$broadcast(Global.EVENTS.NEXT_BTN_ENABLE);
+                    scope.$broadcast(Global.EVENTS.PREVIOUS_BTN_ENABLE);
                     var stateName = wizardSteps[index-1];
                     $state.go(stateName);
-                }else {
-                    scope.$emit(Global.EVENTS.PREVIOUS_BTN_DISABLE);
+                }
+                if(index -1 == 0){
+                    scope.$broadcast(Global.EVENTS.PREVIOUS_BTN_DISABLE);
                 }
             }
             //Returns current index from the wizad list using current state name.

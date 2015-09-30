@@ -64,6 +64,10 @@ angular.module('microsite').service('ApiSrv', ['$http', '$q', 'Restangular','Glo
 	self.getList = function(uri, params, success, error){
 		Restangular.all(uri).getList(params).then(success);
 	};
+
+	self.post = function(uri, params, success , error){
+		Restangular.one(uri).post(params).then(success);
+	}
 }]);
 
 })(angular);

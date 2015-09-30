@@ -31,8 +31,8 @@
 	                    name : "Properties"
 	                },{
 	                    name : "Add",
-	                    onClickEvent : 'ADD_USER',
-	                    state : 'app.home.manage.user.add'
+	                    onClickEvent : 'NAVIGATE',
+	                    state : 'app.home.manage.user.add.general'
 	                }]
 	            }
 	        }).state('app.home.manage.user.list',{
@@ -48,6 +48,7 @@
 		    $stateProvider.state('app.home.manage.user.add', {
 	            url:'/add',
 	         	template:'<ui-view></ui-view>',
+                abstract: true,
 	            data:{
 	                displayName: 'add',
 	                LeftNavList:[
@@ -75,10 +76,9 @@
 	                    {
 			            	name : "Cancel",
 			                onClickEvent : 'CANCEL',
-			                disable : false
-	                    },{
+			            },{
 	                    	name : "Ok",
-	                        onClickEvent : 'WIZARD_OK',
+	                        onClickEvent : 'ADD_NEW_USER',
 	                        disable : 'OK_BTN_DISABLE'
 	                    },{
 	                        name : "Next",
@@ -112,7 +112,7 @@
 	            url:'/roles',
 	            templateUrl:'views/user/roles.html',
 	           	data:{
-	                displayName: 'roles',
+	                displayName: 'Roles',
 	            }
 	        }); 
 

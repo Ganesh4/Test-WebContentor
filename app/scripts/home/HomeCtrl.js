@@ -30,7 +30,7 @@ angular.module('home').controller('HomeCtrl',
                     $scope.templateCategories = response.plain();
             });
 
-            $scope.$on(Global.EVENTS.ADD_USER,function(event,data){
+            $scope.$on(Global.EVENTS.NAVIGATE,function(event,data){
                 $state.go(data.state);
             });
 
@@ -42,31 +42,11 @@ angular.module('home').controller('HomeCtrl',
                 CommonSrv.goToPreviousStep(wizardSteps, $scope);
             });
 
-            $scope.$on(Global.EVENTS.WIZARD_OK,function(event, data){
-
-            });
-
             $scope.$on(Global.EVENTS.WIZARD_CANCLE,function(event, data){
 
             });
 
-            $scope.$on(Global.EVENTS.NEXT_BTN_DISABLE,function(event, data){
-                $scope.NEXT_BTN_DISABLE = true;
 
-            });
-                
-            $scope.$on(Global.EVENTS.PREVIOUS_BTN_DISABLE,function(event, data){
-                alert('TEST');
-                $scope.PREVIOUS_BTN_DISABLE = true;
-            });
-            
-            $scope.$on(Global.EVENTS.NEXT_BTN_ENABLE,function(event, data){
-                $scope.NEXT_BTN_DISABLE = false;
-            });
-            
-            $scope.$on(Global.EVENTS.PREVIOUS_BTN_ENABLE,function(event, data){
-                $scope.PREVIOUS_BTN_DISABLE = false;
-            });
         }
     ]);
 })(angular);
