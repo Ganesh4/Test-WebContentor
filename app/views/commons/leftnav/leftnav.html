@@ -4,7 +4,7 @@
   <!--<wc-left-nav-menu data = "leftNavList"></wc-left-nav-menu>-->
    <div class="leftnav-hamburger">
       <div class="hamburger"><i class="fa fa-bars"></i></div>
- </div>
+   </div>
   <!-- Users and Roles start here-->
    <div class="leftnav-Toggle" ng-repeat = "listItem in LeftNavList">
      <div class="leftnav-Toggle-name">
@@ -14,6 +14,6 @@
         <ul>
            <li ui-sref-active = "nav-selected" ng-repeat = "menu in listItem.menu" ui-sref = "{{menu.state || '#'}}"> <i class="{{menu.icon}}"></i>{{menu.name}}</li>
         </ul>
-   </div>
+  </div>
 
 </div>
