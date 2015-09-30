@@ -10,7 +10,8 @@ angular.module('user').controller('UserCtrl',
         'ApiSrv',
         'CommonSrv',
         'UserApiSrv',
-        function($scope ,$state, ApiSrv,CommonSrv,UserApiSrv){
+        'Global',
+        function($scope ,$state, ApiSrv,CommonSrv,UserApiSrv,Global){
                        
             var param = {};
             $scope.user;
@@ -45,7 +46,7 @@ angular.module('user').controller('UserCtrl',
 
              $scope.$on(Global.EVENTS.ADD_NEW_USER,function(event, data){
                 UserApiSrv.addNewUser( 'users', $scope.user,function(data){
-                    
+
                 });
             });
         }
