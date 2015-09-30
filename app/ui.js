@@ -1,4 +1,3 @@
-
 /**
  * 
  *
@@ -19,6 +18,7 @@
                 template:'<ui-view></ui-view>',
                 controller:'AppCtrl',
                 abstract:true,
+
                 data: {
                       displayName: false
                 },
