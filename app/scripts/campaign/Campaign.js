@@ -22,15 +22,17 @@
                         icon : 'fa fa-angle-down',
                         name : 'Campaign',
                         menu : [{
-                                     icon : '',
+                                     icon : 'fa fa-plus',
                                      name : 'New Campaign',
                                      state:'app.home.campaign.create'
                                 },{
-                                    icon : '',
-                                    name : 'My Campaigns'
+                                    icon : 'fa fa-list-alt',
+                                    name : 'My Campaigns',
+                                    state:''
                                },{
-                                    icon : '',
-                                    name : 'All Campaigns'
+                                    icon : 'fa fa-file-text',
+                                    name : 'All Campaigns',
+                                    state:''
                                  }]
                                 }]
                              }
@@ -44,13 +46,13 @@
                                     icon : 'fa fa-angle-down',
                                     name : 'Properties',
                                         menu : [{
-                                                    icon : '',
+                                                    icon : 'fa fa-life-ring',
                                                     name : 'General'
                                                 },{
-                                                    icon : '',
+                                                    icon : 'fa fa-envelope',
                                                     name : 'Emails'
                                                 },{
-                                                    icon : '',
+                                                    icon : 'fa fa-list-alt',
                                                     name : 'Promotional Pages'
                                                 }]
                                              }
