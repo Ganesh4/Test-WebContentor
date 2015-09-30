@@ -44,6 +44,7 @@
 		        }
 		    });
 
+
 		    $stateProvider.state('app.home.manage.user.add', {
 	            url:'/add',
 	         	template:'<ui-view></ui-view>',
@@ -114,6 +115,7 @@
 	                displayName: 'Roles',
 	            }
 	        }); 
+
 	}]);
 
 })(angular);

@@ -22,7 +22,7 @@
 
 	angular.module('manage',['home']);
 
-	angular.module('user', ['manage']);
+	angular.module('user', ['manage' , 'reCAPTCHA']);
 
 	angular.module('role',['manage']);
 	
