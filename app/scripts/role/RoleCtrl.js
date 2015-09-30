@@ -27,14 +27,17 @@ angular.module('role').controller('RoleCtrl',
                     displayName: 'Description'
                 },{
                     field: 'CreatedDate', 
-                    displayName: 'Created Date'
+                    displayName: 'Created Date',
+                    cellTemplate:'<div class="ui-grid-cell-contents">{{row.entity.CreatedDate | FormatDateFilter}}</div>'
                 },{
                     field: 'ModifyDate', 
-                    displayName: 'Modify Date'
+                    displayName: 'Modify Date',
+                    cellTemplate:'<div class="ui-grid-cell-contents">{{row.entity.ModifyDate | FormatDateFilter}}</div>'
                 }]
             } 
-            RoleApiSrv.getRoleList('SecurityRole',param, 
+            RoleApiSrv.getRoleList('roles',param, 
                 function(data){
+                    console.log('Roles ------------ ',data);
                     if(data)
                         $scope.gridOptions.data = data.plain();
             });
