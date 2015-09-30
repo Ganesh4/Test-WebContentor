@@ -67,7 +67,7 @@
                             icon : 'fa fa-angle-down',
                             name : 'Reports',
                             menu : [{
-                                icon : 'fa fa-bar-chart',
+                                icon : 'fa fa-signal',
                                 name : 'Analytics'
                             }]
                         },{
