@@ -17,14 +17,14 @@
                  templateUrl:"views/campaign/home.html",
                 // controller:'CampaignCtrl',
                     data: {
-                    displayName: 'campaign',
+                    displayName: 'Campaign',
                     LeftNavList:[{
                         icon : 'fa fa-angle-down',
                         name : 'Campaign',
                         menu : [{
                                      icon : 'fa fa-plus',
                                      name : 'New Campaign',
-                                     state:'app.home.campaign.create'
+                                     state:'app.home.campaign.general'
                                 },{
                                     icon : 'fa fa-list-alt',
                                     name : 'My Campaigns',
@@ -36,18 +36,19 @@
                                  }]
                                 }]
                              }
-                        }).state('app.home.campaign.create', {
-                            url: '/create',
+                        }).state('app.home.campaign.general', {
+                            url: '/general',
                             templateUrl:"views/campaign/NewCampaign.html",
                             // controller:'CampaignCtrl',
                                 data: {
-                                displayName: 'create',
+                                displayName: 'General',
                                 LeftNavList:[{
                                     icon : 'fa fa-angle-down',
                                     name : 'Properties',
                                         menu : [{
                                                     icon : 'fa fa-life-ring',
-                                                    name : 'General'
+                                                    name : 'General',
+                                                    state:'app.home.campaign.general'
                                                 },{
                                                     icon : 'fa fa-envelope',
                                                     name : 'Emails'
@@ -56,8 +57,19 @@
                                                     name : 'Promotional Pages'
                                                 }]
                                              }
-                                        ]
-                                    }
+                                        ],
+                                actionBarBtn: [{
+                                                name : "Cancel",
+                                                onClickEvent : 'CANCEL',
+                                            },{
+                                                name : "Save & Exit",
+                                                onClickEvent : '',
+                                                
+                                            },{
+                                                 name : "Save",
+                                                 onClickEvent : ''
+                                            }],
+                                 }
                 })  
 
            }]);

@@ -52,7 +52,6 @@ angular.module('home').controller('HomeCtrl',
                 console.log('Data ----------- ',$scope.user);
                 UserApiSrv.addNewUser( 'users', $scope.user,function(data){
 
-                    console.log('USER--------',$scope.user);
 
                 });
             });
