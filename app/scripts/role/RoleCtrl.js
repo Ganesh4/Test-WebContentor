@@ -35,7 +35,7 @@ angular.module('role').controller('RoleCtrl',
                     cellTemplate:'<div class="ui-grid-cell-contents">{{row.entity.ModifyDate | FormatDateFilter}}</div>'
                 }]
             } 
-            RoleApiSrv.getRoleList('roles',param, 
+             RoleApiSrv.getRoleList('roles',param, 
                 function(data){
                     console.log('Roles ------------ ',data);
                     if(data)

@@ -44,7 +44,7 @@ angular.module('user').controller('UserCtrl',
 					cellClass : 'green-color'
                 }]
             } 
-            UserApiSrv.getUserList('ManageUser',param, 
+            UserApiSrv.getUserList('users',param, 
                 function(data){
                     if(data)
                         $scope.gridOptions.data = data.plain();
