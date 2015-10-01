@@ -1,3 +1,4 @@
+
 /**
  * 
  *
@@ -29,7 +30,7 @@
                                 },{
                                     icon : 'fa fa-users',
                                     name : 'Roles',
-                                    state:'app.home.manage.roles'
+                                    state:'app.home.manage.role.list'
                                 }
                             ]
                         },{
@@ -67,7 +68,7 @@
                             icon : 'fa fa-angle-down',
                             name : 'Reports',
                             menu : [{
-                                icon : 'fa fa-signal',
+                                icon : 'fa fa-bar-chart',
                                 name : 'Analytics'
                             }]
                         },{
@@ -83,3 +84,4 @@
         });  
     }]);
 })(angular);
+

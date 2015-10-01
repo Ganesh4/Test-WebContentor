@@ -14,41 +14,43 @@ angular.module('user').controller('UserCtrl',
         function($scope ,$state, ApiSrv,CommonSrv,UserApiSrv,Global){
                        
             var param = {};
-            $scope.user;
             $scope.gridOptions = {
                 multiSelect: true,
                 enableRowSelection:true,
                 columnDefs: [{
                     field: 'FirstName', 
-                    displayName: 'First Name'
+                    displayName: 'First Name',
+					cellClass : 'name-color'
                 },{
                     field:'Lastname', 
-                    displayName:'Last Name'
+                    displayName:'Last Name',
+					cellClass : 'green-color'
                 },{
                     field:'Email',
-                    displayName:'Email'
+                    displayName:'Email',
+					cellClass: 'orange-color'
                 },{
                     field:'CreatedDate',
-                    displayName:'Created Date'
+                    displayName:'Created Date',
+					cellClass: 'blue-color',
+                    cellTemplate:'<div class="ui-grid-cell-contents">{{row.entity.CreatedDate | FormatDateFilter}}</div>'
                 },{
                     field:'ModificationDate',
-                    displayName:'Modification Date'
+                    displayName:'Modification Date',
+					cellClass: 'skyblue-color',
+                    cellTemplate:'<div class="ui-grid-cell-contents">{{row.entity.ModificationDate | FormatDateFilter}}</div>'
                 },{
                     field:'UserRoles.SecurityGroupID',
-                    displayName:"Roles"
+                    displayName:"Roles",
+					cellClass : 'green-color'
                 }]
             } 
-            UserApiSrv.getUserList('ManageUser',param, 
+            UserApiSrv.getUserList('users',param, 
                 function(data){
                     if(data)
                         $scope.gridOptions.data = data.plain();
             });
-
-             $scope.$on(Global.EVENTS.ADD_NEW_USER,function(event, data){
-                UserApiSrv.addNewUser( 'users', $scope.user,function(data){
-
-                });
-            });
         }
     ]);
 })(angular);
+

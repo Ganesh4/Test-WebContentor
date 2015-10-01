@@ -18,6 +18,10 @@
 	width:70%;
 	min-height:410px;
 	margin-top:3%;
+	
+	.checkbox{
+		margin-top: 0px;
+		}
 	.form-group {
 		margin-bottom:10px;
 		label {
@@ -27,13 +31,20 @@
 			margin-top:0px;
 		}
  	}
+
 }
 
 .select_contery {
-	width:40%;
+	width: 100%;
 	display:inline-table;	
-	}
 	
+	.btn-group{
+		width: 100%;
+		}
+	}
+.btn-new-reg{
+	width: 75%;
+	}
 .cepcha {
 		width:50%;
 		float:left;

@@ -46,130 +46,130 @@
            </div>
         <button class="btn btn-default" type="button">Cancel</button>
         <button class="btn btn-default disabled" type="button">Save</button>
-      </div>
+</div>
    
 <!--Work area start here-->
 <div class="inner_wrapper">
-<div class="container-fluid"> 
-	<div class="registration_form">
-    
-    	 <div class="col-md-4">
-            <div class="form-group">
-            <label>First Name</label>
-            <input class="form-control" placeholder="First Name">
-            </div>
+
+ <div class="container-fluid"> 
+ <div class="registration_form"> 
+ <form class="form_main" name="Form" > 
+<div class="row">
+
+
+  <div class="col-lg-4">
+    <div class="form-group">
+       <label>First Name</label>
+            <input class="form-control" name="name" ng-model="user.firstName" placeholder="First Name" validator="required">
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-4 -->
+  
+  <div class="col-lg-4">
+    <div class="form-group">
+     <label>Last Name</label>
+          <input class="form-control" ng-model="user.lastName" placeholder="Last Name">
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-4 -->
+  
+  <div class="col-lg-4">
+    <div class="form-group">
+        <label>Email</label>
+        <input class="form-control" name = "email"  ng-model="user.email" placeholder="Email" validator="required">
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-4 -->
+  
+  <div class="col-lg-4">
+    <div class="form-group">
+       <label>Phone</label>
+            <input class="form-control" ng-model="user.phone" placeholder="Phone">
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-4 -->
+  
+  <div class="col-lg-4">
+    <div class="form-group">
+     <label>Mobile</label>
+          <input class="form-control" ng-model="user.mobile" placeholder="Mobile">
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-4 -->
+  
+  <div class="col-lg-4">
+    <div class="form-group">
+    <label>Country</label>
+     <select class="form-control" ng-model = "user.country" ng-options = "country.name for country in countries"
+      ng-change = "updateCountry()"></select>
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-4 -->
+  
+  <div class="col-lg-4">
+    <div class="form-group">
+     <label>Address1</label>
+          <input class="form-control" ng-model="user.address1" placeholder="Address">
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-4 -->
+  
+  <div class="col-lg-4">
+    <div class="form-group">
+     <label>Address2</label>
+          <input class="form-control" ng-model="user.address2" placeholder="Address2">
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-4 -->
+  
+  <div class="col-lg-4">
+    <div class="form-group">
+     <label>City</label>
+          <input class="form-control" name="city" ng-model="user.city" placeholder="City" validator="required">
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-4 -->
+  
+    <div class="col-lg-4">
+    <div class="form-group">
+    <label>State</label>
+       <select ng-model = "user.state" class = "form-control" 
+        ng-options = "state.name for state in states"></select>
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-4 -->
+  
+    <div class="col-lg-4">
+    <div class="form-group">
+     <label>Zip</label>
+          <input class="form-control"  ng-model="user.zip" placeholder="Zip">
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-4 -->
+  
+  <div class="col-lg-4">
+    <div class="form-group">
+            <label>Prove you are not a robot </label><br/>
+           <div class="g-recaptcha" ng-model="user.captcha" name = "captcha" data-sitekey="6Lc_0f4SAAAAAF9ZA_d7Dxi9qRbPMMNW-tLSvhe6"></div>
             
-            <div class="form-group">
-            <label>Phone</label>
-            <input  class="form-control"  placeholder="Phone">
-            </div>
-            
-            <div class="form-group">
-            <label>City</label>
-            <input  class="form-control"  placeholder="City">
-            </div>
-            
-            <div class="form-group">
-            <label>Zip</label>
-            <input  class="form-control"  placeholder="Zip">
-            </div>
-            
-            <div class="checkbox">
+            </div><!-- /input-group -->
+  </div><!-- /.col-lg-4 -->
+  
+  <div class="col-lg-4">
+     <div class="checkbox">
             <label>
             <input type="checkbox"> I here by agree to  the yavun terms of service and policy
             </label>
-            </div>
-            
-            <button ng-click="loginCheck(userName,password)" class="btn btn-success ">Sign in</button>
-            
-         </div>
-         
-         <div class="col-md-4">
-            <div class="form-group">
-            <label>Last Name</label>
-            <input  class="form-control" placeholder="Last Name">
-            </div>
-            
-            <div class="form-group">
-            <label>Mobile</label>
-            <input  class="form-control"  placeholder="Mobile">
-            </div>
-            
-            <div class="form-group">
-            <label>Address</label>
-            <input  class="form-control"  placeholder="Address"/> 
-            </div>
-            
-            <div class="form-group">
-            <label>Prove you are not a robot </label><br/>
-            <img alt="CAPTCHA Image" src="../app/images/chepcha.png"/>
-            <br/>
-            <input  class="form-control cepcha"  placeholder="">
-                <div class="btn-group" role="group" aria-label="...">
-                <button type="button" class="btn btn-default"><span class="fa fa-refresh"></span></button>
-                <button type="button" class="btn btn-default"><span class="fa fa-headphones"></span></button>
-                <button type="button" class="btn btn-default"><span class="fa fa-volume-up"></span></button>
-                </div>
-            
-            </div>
-             
-         </div>
-         
-         
-         <div class="col-md-4">
-            <div class="form-group">
-            <label>Email</label>
-            <input  class="form-control"  placeholder="Email">
-            </div>
-            
-            <div class="form-group">
-            <div class="select_contery">
-            <label>Country</label> <br/>
-            <div class="btn-group">            
-            <button type="button" class="btn btn-default ">Action</button>
-            <button type="button" class="btn btn-default  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="caret"></span>
-            <span class="sr-only">Toggle Dropdown</span>
-            </button>
-            <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>    
-            </ul>
-            </div>
-            </div>
-            
-            <div class="select_contery">
-             <label>State</label> <br/>   
-            <div class="btn-group">
-            <button type="button" class="btn btn-default ">Action</button>
-            <button type="button" class="btn btn-default  dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="caret"></span>
-            <span class="sr-only">Toggle Dropdown</span>
-            </button>
-            <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>    
-            </ul>
-            </div>
-         	</div>
-            </div>
-            
-            <div class="form-group">
-            <label>Address2</label>
-            <input  class="form-control"  placeholder="Address2"> 
-            </div>
-            
-            
+            </div><!-- /input-group -->
+  </div><!-- /.col-lg-4 -->
+  
+  <div class="col-lg-4">
+    <div class="form-group">
+    <button ng-click= "addUser()" type = "submit" validation-submit="Form"  class="btn btn-success ">Sign in</button>
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-4 -->
 
-         </div>
-         
-         
-    </div>  
+
+    
+      </div>
+    <!-- secont paarage re -->
+   
+
+    </form>
+    </div>
 
 </div>
 </div>
 <!--Work area end here-->
 
-   
-    
-   
 </div>
 

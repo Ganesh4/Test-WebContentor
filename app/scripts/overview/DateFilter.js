@@ -26,5 +26,16 @@ angular.module('overview').filter('DateFilter', function() {
                 return months + " months ago";
             }
         }
+    }).filter('FormatDateFilter',function(){
+        return function(strDate){
+            if(!strDate)
+                return '';
+            var date = new Date(strDate);
+            var options = {
+                year: "numeric", month: "short",
+                day: "numeric", hour: "2-digit", minute: "2-digit"
+            };
+            return date.toLocaleTimeString("en-us", options) || '';
+        }
     });
 
