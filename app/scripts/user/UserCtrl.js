@@ -18,22 +18,28 @@ angular.module('user').controller('UserCtrl',
                 enableRowSelection:true,
                 columnDefs: [{
                     field: 'FirstName', 
-                    displayName: 'First Name'
+                    displayName: 'First Name',
+					cellClass : 'name-color'
                 },{
                     field:'Lastname', 
-                    displayName:'Last Name'
+                    displayName:'Last Name',
+					cellClass : 'green-color'
                 },{
                     field:'Email',
-                    displayName:'Email'
+                    displayName:'Email',
+					cellClass: 'orange-color'
                 },{
                     field:'CreatedDate',
-                    displayName:'Created Date'
+                    displayName:'Created Date',
+					cellClass: 'blue-color'
                 },{
                     field:'ModificationDate',
-                    displayName:'Modification Date'
+                    displayName:'Modification Date',
+					cellClass: 'skyblue-color'
                 },{
                     field:'UserRoles.SecurityGroupID',
-                    displayName:"Roles"
+                    displayName:"Roles",
+					cellClass : 'green-color'
                 }]
             } 
             UserApiSrv.getUserList('ManageUser',param, 
