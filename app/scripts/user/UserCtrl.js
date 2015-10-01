@@ -10,7 +10,8 @@ angular.module('user').controller('UserCtrl',
         'ApiSrv',
         'CommonSrv',
         'UserApiSrv',
-        function($scope ,$state, ApiSrv,CommonSrv,UserApiSrv){
+        'Global',
+        function($scope ,$state, ApiSrv,CommonSrv,UserApiSrv,Global){
                        
             var param = {};
             $scope.gridOptions = {

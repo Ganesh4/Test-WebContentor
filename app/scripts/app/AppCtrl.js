@@ -15,6 +15,7 @@
 				
 				$state.args = [];
 				$scope.user = {};
+				var wizardSteps = $state.current.data.wizardSteps;
 				/*
 				CommonSrv.getDesignCategories(function(data){
 			    	console.log('Args in AppCtrl --------  ' , data.plain());
@@ -50,14 +51,16 @@
 	            });
 
 	            $scope.$on(Global.EVENTS.WIZARD_CANCLE,function(event, data){
-
+	            	if(data.state)
+	            		$state.go(data.state);
 	            });
 
 	            $scope.$on(Global.EVENTS.ADD_NEW_USER,function(event, data){
 	                console.log('User ------- ',$scope.user);
 	                var user = $scope.user;
-	                UserApiSrv.addNewUser( 'users', user,function(data){
-
+	                UserApiSrv.addNewUser( 'users', user,function(response){
+	                	if(data.state)
+	                		$state.$go(data.state);
 	                });
 	            });
 			}

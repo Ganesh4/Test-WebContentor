@@ -14,7 +14,7 @@ angular.module('home').controller('HomeCtrl',
         'UserApiSrv',
         function($scope ,$state, ApiSrv,CommonSrv,Global,UserApiSrv){
 
-            var wizardSteps = $state.current.data.wizardSteps;
+            
             $scope.user = {};
             $scope.reload = function(){
                 $state.reload();
