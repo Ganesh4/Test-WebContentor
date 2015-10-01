@@ -17,22 +17,19 @@ angular.module('role').controller('RoleCtrl',
                 multiSelect: true,
                 enableRowSelection:true,
                 columnDefs: [{
-                    field: 'RoleName', 
+                    field: 'roleName', 
                     displayName: 'Role Name'
                 },{
-                	field: 'IsSystemRole', 
-                    displayName: 'System Role'
-                },{
-                    field: 'Description', 
+                    field: 'description', 
                     displayName: 'Description'
                 },{
-                    field: 'CreatedDate', 
+                    field: 'createdDate', 
                     displayName: 'Created Date',
-                    cellTemplate:'<div class="ui-grid-cell-contents">{{row.entity.CreatedDate | FormatDateFilter}}</div>'
+                    cellTemplate:'<div class="ui-grid-cell-contents">{{row.entity.createdDate | FormatDateFilter}}</div>'
                 },{
-                    field: 'ModifyDate', 
-                    displayName: 'Modify Date',
-                    cellTemplate:'<div class="ui-grid-cell-contents">{{row.entity.ModifyDate | FormatDateFilter}}</div>'
+                    field: 'modifiedDate', 
+                    displayName: 'Modified Date',
+                    cellTemplate:'<div class="ui-grid-cell-contents">{{row.entity.modifiedDate | FormatDateFilter}}</div>'
                 }]
             } 
              RoleApiSrv.getRoleList('roles',param, 
