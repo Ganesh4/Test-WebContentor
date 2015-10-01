@@ -31,11 +31,13 @@ angular.module('user').controller('UserCtrl',
                 },{
                     field:'CreatedDate',
                     displayName:'Created Date',
-					cellClass: 'blue-color'
+					cellClass: 'blue-color',
+                    cellTemplate:'<div class="ui-grid-cell-contents">{{row.entity.CreatedDate | FormatDateFilter}}</div>'
                 },{
                     field:'ModificationDate',
                     displayName:'Modification Date',
-					cellClass: 'skyblue-color'
+					cellClass: 'skyblue-color',
+                    cellTemplate:'<div class="ui-grid-cell-contents">{{row.entity.ModificationDate | FormatDateFilter}}</div>'
                 },{
                     field:'UserRoles.SecurityGroupID',
                     displayName:"Roles",
@@ -50,3 +52,4 @@ angular.module('user').controller('UserCtrl',
         }
     ]);
 })(angular);
+
