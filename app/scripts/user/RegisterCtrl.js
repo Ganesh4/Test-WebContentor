@@ -5,17 +5,19 @@
     angular.module('user').controller('RegisterCtrl', [
         '$scope',
         'reCAPTCHA',
-        function($scope, reCAPTCHA) {
-    	 	$scope.user = {};
+        'Global',
+        function($scope, reCAPTCHA, Global) {
+    	 	
     	 	// or you can also set key here
             reCAPTCHA.setPublicKey('6LfyK-0SAAAAAAl6V9jBGQgPxemtrpIZ-SPDPd-n');
             //var captchaText = reCAPTCHA.response();
             // console.log('captchaText ------- ',captchaText);
 
-			$scope.addUser = function() {
-				if ($scope.user) {
-				console.log("New User --------- ",$scope.user);
-			     }
+      			$scope.addUser = function() {
+      				if ($scope.user) {
+                console.log("User -----------",$scope.user);
+      				  $scope.$emit(Global.EVENTS.ADD_NEW_USER);
+      			  }
             };
             var country0 = {
           						id : '1',
@@ -56,14 +58,11 @@
           							
           						}]
           					};
-
-
-          	
-           $scope.countries =[country0,country1,country2];
-           $scope.updateCountry = function(){
-          	console.log($scope.user.country);
-          	$scope.states = $scope.user.country.states;
-          }
+            $scope.countries =[country0,country1,country2];
+            $scope.updateCountry = function(){
+              console.log($scope.user.country);
+              $scope.states = $scope.user.country.states;
+            }
           		
 	}
 
