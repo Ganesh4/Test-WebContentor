@@ -11,8 +11,10 @@ angular.module('user').controller('UserCtrl',
         'CommonSrv',
         'UserApiSrv',
         'Global',
-        function($scope ,$state, ApiSrv,CommonSrv,UserApiSrv,Global){
-                       
+        '$cookieStore',
+        function($scope ,$state, ApiSrv,CommonSrv,UserApiSrv,Global,$cookieStore){
+            $scope.loggedInUser = $cookieStore.get('loggedInUser');
+            console.log('$scope ----------- ',$scope.loggedInUser);
             var param = {};
             $scope.gridOptions = {
                 multiSelect: true,
@@ -50,6 +52,23 @@ angular.module('user').controller('UserCtrl',
                     if(data)
                         $scope.gridOptions.data = data.plain();
             });
+
+            ApiSrv.getList('roles',param,function(data){
+                if(data)
+                    $scope.roles = data.plain();
+                console.log('Roles ---------------- ',$scope.roles);
+            });
+
+            CommonSrv.getCountriesList(function(data){
+              $scope.countries = data.plain();
+              console.log('countries-------------',$scope.countries);
+            });
+            
+           // console.log('Countries ------------ ',$scope.coun);
+            $scope.updateCountry = function(){
+              $scope.states = $scope.user.country.SecurityStates;
+            }
+           
         }
     ]);
 })(angular);

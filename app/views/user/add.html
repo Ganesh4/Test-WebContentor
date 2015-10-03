@@ -8,7 +8,7 @@
   <div class="form-group form-group-left">
   	<div class="left-fg">
     <label for="exampleInputEmail1">First Name</label>
-    <input type="text" class="form-control" ng-model="user.firstName" placeholder="First Name">
+    <input type="text" class="form-control" ng-model="user.firstName" placeholder="First Name" >
     </div>
     <div class="right-fg">
     <label for="exampleInputEmail1">Last Name</label>
@@ -58,14 +58,15 @@
     </div>
     <div class="right-fg">
     <label for="exampleInputEmail1">Country</label>
-    <input type="text" class="form-control" ng-model="user.country" placeholder="Country" value = "1">
+     <select class="form-control" ng-model = "user.country" ng-options = "country.CountryName for country in countries"
+      ng-change = "updateCountry()"></select>
     </div>
   </div>
   
   <div class="form-group form-group-left">
   	<div class="left-fg">
     <label for="exampleInputEmail1">State</label>
-    <input type="text" class="form-control" ng-model="user.state" placeholder="State" value = "1">
+     <select ng-model = "user.state" class = "form-control" ng-options = "state.StateName for state in states"></select>
     </div>
     <div class="right-fg">
     <label for="exampleInputEmail1">Zip</label>

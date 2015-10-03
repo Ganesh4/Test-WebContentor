@@ -5,7 +5,10 @@
 		'$scope',
 		'$state',
 		'Restangular',
-		function(){
+		'$cookieStore',
+		function($scope,$state,Restangular,$cookieStore){
 			$scope.data = $state.current.data;
+			$scope.loggedInUser = $cookieStore.get('loggedInUser');
+			console.log("Campaign ----------- ",$scope.loggedInUser);
 		}]);
 })(angular);

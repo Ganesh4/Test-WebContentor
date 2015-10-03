@@ -32,6 +32,14 @@
 
                 }
 
+            }).state('app.success', {
+                url: '/success',
+                templateUrl:'views/user/success.html',
+                data: {
+                      displayName: 'Success',
+
+                }
+
             }).state('app.home', {
                 url: '/home',
                 templateUrl:'views/home/home.html',
