@@ -38,6 +38,10 @@
 	
 	.form-group {
 		
+		.input-width{
+			width: 50%;
+			}
+		
 		label {
 			font-weight:normal;
 		    }
@@ -47,19 +51,19 @@
 			}
 		
 		.campaign-left-fg{
-			width: 48%;
+			width: 25%;
 			float: left;
 		    }
 		.campaign-right-fg{
 			width: 48%;
 			float: left;
-			margin-left: 2%;
+			margin-left: 0%;
 		    }
 		.campaign-right-fg i{
 			color: #5d5e64;
 			font-size: 20px;
 			font-weight: bold;
-			margin-top: 22px;
+			margin-top: 20px;
 			cursor: pointer;
 			}
 			
