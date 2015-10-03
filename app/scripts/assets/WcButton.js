@@ -21,7 +21,7 @@ angular.module('assets').directive('wcButton',['Global','$parse',function(Global
 					scope.$emit(scope.onClick, scope.btnData);
 				}
 				scope.PREVIOUS_BTN_DISABLE = true;
-				scope.NEXT_BTN_DISABLE = false;
+				scope.NEXT_BTN_DISABLE = true;
 
 				scope.isEnabled = function(){
 					if(scope.disable){
@@ -43,7 +43,8 @@ angular.module('assets').directive('wcButton',['Global','$parse',function(Global
 	            });
 	            
 	            scope.$on(Global.EVENTS.NEXT_BTN_ENABLE,function(event, data){
-	                scope.NEXT_BTN_DISABLE = false;
+	            	console.log("Enable in WC");
+	               	scope.NEXT_BTN_DISABLE = false;
 	            });
 	            
 	            scope.$on(Global.EVENTS.PREVIOUS_BTN_ENABLE,function(event, data){

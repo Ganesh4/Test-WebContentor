@@ -33,10 +33,10 @@
                 }
 
             }).state('app.success', {
-                url: '/success',
+                url: '/register/success',
                 templateUrl:'views/user/success.html',
                 data: {
-                      displayName: 'Success',
+                      displayName: 'New User Registration/Success',
 
                 }
 

@@ -22,6 +22,9 @@
 	width: 222px;
     background-color:$main_blue_color;
 	}
+.navbar-brand img{
+	height: 50px;
+	}
 	
 .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover{
 	background-color: $main_blue_color;

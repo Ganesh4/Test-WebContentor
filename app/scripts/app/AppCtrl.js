@@ -71,6 +71,12 @@
 	            });
 
 
+	            $scope.enableNext = function(){
+	            	CommonSrv.enableNext($scope);
+	            }
+	            $scope.disableNext = function(){
+	            	CommonSrv.disableNext($scope);	
+	            }
 	            $scope.$on(Global.EVENTS.USER_REGISTER,function(event, data){
 	                console.log('User ------- ',$scope.user);
 	                var user = $scope.user;
