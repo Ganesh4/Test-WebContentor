@@ -6,7 +6,8 @@ angular.module('common').service('CommonSrv',
         'Restangular',
         '$state',
         'Global',
-        function (Restangular, $state, Global) {
+        'ApiSrv',
+        function (Restangular, $state, Global, ApiSrv) {
             var self = this;
             self.getFormData = function(data){
 
@@ -86,6 +87,12 @@ angular.module('common').service('CommonSrv',
             self.disableNext = function(scope){
                 scope.$broadcast(Global.EVENTS.NEXT_BTN_DISABLE);
             }
+
+            //Get Country Data
+            self.getCountriesList =function(success, error){
+                Restangular.all('countries').getList().then(success);
+            }
+
         }
     ]);
 })(angular);

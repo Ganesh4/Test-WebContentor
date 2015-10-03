@@ -13,14 +13,13 @@
 	background-color:$brder-color;
 	background-image:none;
 	box-shadow:none;
-	
 }
 
 /*====================== Logo Section Start Here ========================*/	
 
 .navbar-brand{
 	padding: 0px;
-	width: 223px;
+	width: 222px;
     background-color:$main_blue_color;
 	}
 	
@@ -41,14 +40,17 @@
 	padding-left: 25px;
 	padding-right: 25px;
 	}
+	
 .form-group i{
 	position: absolute;
 	padding: 10px 10px 10px 8px;
 	font-size: 16px;
 	}
+	
 .left-icon{
 	margin-right: -35px;
 	}
+	
 .right-icon{
 	margin-left: -35px;
 	position: relative !important;

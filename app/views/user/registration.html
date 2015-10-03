@@ -62,7 +62,10 @@
   <div class="col-lg-4">
     <div class="form-group">
         <label>Email</label>
+
         <input type="email" class="form-control" name = "email"  ng-model="user.email" placeholder="Email" required="required"  required-err-type="emailisrequired"/>
+
+      
     </div><!-- /input-group -->
   </div><!-- /.col-lg-4 -->
   
@@ -83,7 +86,7 @@
   <div class="col-lg-4">
     <div class="form-group">
     <label>Country</label>
-     <select class="form-control" ng-model = "user.country" ng-options = "country.name for country in countries"
+     <select class="form-control" ng-model = "user.country" ng-options = "country.CountryName for country in countries"
       ng-change = "updateCountry()"></select>
     </div><!-- /input-group -->
   </div><!-- /.col-lg-4 -->
@@ -113,7 +116,7 @@
     <div class="form-group">
     <label>State</label>
        <select ng-model = "user.state" class = "form-control" 
-        ng-options = "state.name for state in states"></select>
+        ng-options = "state.StateName for state in states"></select>
     </div><!-- /input-group -->
   </div><!-- /.col-lg-4 -->
   

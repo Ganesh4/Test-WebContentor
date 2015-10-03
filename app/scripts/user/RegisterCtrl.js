@@ -6,7 +6,8 @@
         '$scope',
         'reCAPTCHA',
         'Global',
-        function($scope, reCAPTCHA, Global) {
+        'CommonSrv',
+        function($scope, reCAPTCHA, Global,CommonSrv) {
     	 	
     	 	// or you can also set key here
             reCAPTCHA.setPublicKey('6LfyK-0SAAAAAAl6V9jBGQgPxemtrpIZ-SPDPd-n');
@@ -16,52 +17,18 @@
       			$scope.addUser = function() {
       				if ($scope.user) {
                 console.log("User -----------",$scope.user);
-      				  $scope.$emit(Global.EVENTS.ADD_NEW_USER);
+      				  $scope.$emit(Global.EVENTS.USER_REGISTER);
       			  }
             };
-            var country0 = {
-          						id : '1',
-          						name : 'USA',
-          						states : [{
-          							id : '1',
-          							name : 'California'
-          							
-          						},{
-          							id : '2',
-          							name : 'Washington'
-          							
-          						}]
-          					};
-          	var country1 = {
-          						id : '2',
-          						name : 'INDIA',
-          						states : [{
-          							id : '3',
-          							name : 'Delhi'
-          							
-          						},{
-          							id : '4',
-          							name : 'Mumbai'
-          							
-          						}]
-          					};
-            var country2 = {
-          						id : '3',
-          						name : 'Australia',
-          						states : [{
-          							id : '5',
-          							name : 'Victoria'
-          							
-          						},{
-          							id : '6',
-          							name : 'Queensland'
-          							
-          						}]
-          					};
-            $scope.countries =[country0,country1,country2];
+       
+            CommonSrv.getCountriesList(function(data){
+              $scope.countries = data.plain();
+              console.log('countries-------------',$scope.countries);
+            });
+            
+           // console.log('Countries ------------ ',$scope.coun);
             $scope.updateCountry = function(){
-              console.log($scope.user.country);
-              $scope.states = $scope.user.country.states;
+              $scope.states = $scope.user.country.SecurityStates;
             }
           		
 	}

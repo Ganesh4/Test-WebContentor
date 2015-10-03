@@ -6,40 +6,17 @@
   <div class="col-xs-12">
 
       <!-- Roles Row 1-->
-      <div class="img-thumbnail roles-row">
+      <div class="img-thumbnail roles-row" ng-repeat = "role in roles">
       		<div class="roles-radio">
-              <input type="radio" id="q156" name="roleId" ng-model="user.roleId" value="11" />
+              <input type="radio" name="roleId" ng-model="user.roleId" value="{{role.roleId}}" />
             </div>
             
             <div class="roles-content">
-              <p><strong>Role 1:</strong></p>
-              <p>This role grant full permission to user to access all features</p>
+              <p><strong>{{role.roleName}}</strong></p>
+              <p>{{role.description}}</p>
             </div>
       </div>
       
-      <!-- Roles Row 2-->
-      <div class="img-thumbnail roles-row">
-      		<div class="roles-radio">
-              <input type="radio" id="q156" name="roleId" ng-model="user.roleId" value="11" />
-            </div>
-            
-            <div class="roles-content">
-              <p><strong>Role 2:</strong></p>
-              <p>This role restricts the user to read only access</p>
-            </div>
-      </div>
-      
-      <!-- Roles Row 3-->
-      <div class="img-thumbnail roles-row">
-      		<div class="roles-radio">
-              <input type="radio" id="q156" name="roleId" ng-model="user.roleId" value="11" />
-            </div>
-            
-            <div class="roles-content">
-              <p><strong>Role 3:</strong></p>
-              <p>This role is for the approver</p>
-            </div>
-      </div>
 
   
   </div>

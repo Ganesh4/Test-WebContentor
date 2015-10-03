@@ -1,3 +1,4 @@
+
 /*
 *
 */
@@ -18,18 +19,24 @@ angular.module('role').controller('RoleCtrl',
                 enableRowSelection:true,
                 columnDefs: [{
                     field: 'roleName', 
-                    displayName: 'Role Name'
+                    displayName: 'Role Name',
+                    cellClass : 'name-color'
                 },{
                     field: 'description', 
-                    displayName: 'Description'
+                    displayName: 'Description',
+                    cellClass: 'orange-color'
+
                 },{
                     field: 'createdDate', 
                     displayName: 'Created Date',
+                    cellClass: 'blue-color',
                     cellTemplate:'<div class="ui-grid-cell-contents">{{row.entity.createdDate | FormatDateFilter}}</div>'
                 },{
                     field: 'modifiedDate', 
-                    displayName: 'Modified Date',
+                    displayName: 'Modify Date',
+                    cellClass: 'skyblue-color',
                     cellTemplate:'<div class="ui-grid-cell-contents">{{row.entity.modifiedDate | FormatDateFilter}}</div>'
+
                 }]
             } 
              RoleApiSrv.getRoleList('roles',param, 
@@ -41,3 +48,4 @@ angular.module('role').controller('RoleCtrl',
         }
     ]);
 })(angular);
+
