@@ -18,20 +18,25 @@ angular.module('role').controller('RoleCtrl',
                 enableRowSelection:true,
                 columnDefs: [{
                     field: 'RoleName', 
-                    displayName: 'Role Name'
+                    displayName: 'Role Name',
+                    cellClass : 'name-color'
                 },{
                 	field: 'IsSystemRole', 
-                    displayName: 'System Role'
+                    displayName: 'System Role',
+                    cellClass : 'green-color'
                 },{
                     field: 'Description', 
-                    displayName: 'Description'
+                    displayName: 'Description',
+                    cellClass: 'orange-color'
                 },{
                     field: 'CreatedDate', 
                     displayName: 'Created Date',
+                    cellClass: 'blue-color',
                     cellTemplate:'<div class="ui-grid-cell-contents">{{row.entity.CreatedDate | FormatDateFilter}}</div>'
                 },{
                     field: 'ModifyDate', 
                     displayName: 'Modify Date',
+                    cellClass: 'skyblue-color',
                     cellTemplate:'<div class="ui-grid-cell-contents">{{row.entity.ModifyDate | FormatDateFilter}}</div>'
                 }]
             } 
