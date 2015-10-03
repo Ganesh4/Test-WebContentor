@@ -1,10 +1,10 @@
 <div class="header-sub clearfix">
         <!--<div class="common-headng-wrap"><h2 class="common-headng">{{subheader.title}}</h2> </div>-->
         
-        <div class="sub-header-icon"><i class="fa fa-user"></i> </div>
-
-        <ui-breadcrumbs displayname-property="data.displayName" abstract-proxy-property="data.proxy" template-url="views/assets/uiBreadcrumbs.tpl.html"></ui-breadcrumbs>
+        <div class="sub-header-icon"><i class="fa fa-user"></i></div>
         
-        <wc-button name = "btn.name" type="btn.type" ng-repeat = "btn in actionBarBtn" on-click="btn.onClickEvent" btn-data="btn" disable = "btn.disable" ></wc-button>
+        <ui-breadcrumbs displayname-property="data.displayName" abstract-proxy-property="data.proxy" template-url="views/assets/uiBreadcrumbs.tpl.html"></ui-breadcrumbs>
+
+        <wc-button name = "btn.name" type="btn.type" ng-repeat = "btn in actionBarBtn" on-click="btn.onClickEvent" btn-data="btn" disable="btn.disable"></wc-button>
 </div>
   

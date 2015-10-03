@@ -1,4 +1,3 @@
-
 /**
  * 
  *
@@ -19,32 +18,18 @@
                 template:'<ui-view></ui-view>',
                 controller:'AppCtrl',
                 abstract:true,
+
                 data: {
                       displayName: false
                 },
-
-            }).state('app.login', {
-                url: '/login',
-                templateUrl:'views/login/login.html',
-                controller:'LoginCtrl',
-                data: {
-                      displayName: 'login',
-                }
 
             }).state('app.register', {
                 url: '/register',
                 templateUrl:'views/user/registration.html',
                 controller:'RegisterCtrl',
                 data: {
-                      displayName: 'register',
-                }
+                      displayName: 'New User Registration',
 
-            }).state('app.register.success', {
-                url: '/success',
-                templateUrl:'views/user/success.html',
-                controller:'SuccessCtrl',
-                data: {
-                      displayName: 'success',
                 }
 
             }).state('app.home', {
@@ -69,7 +54,7 @@
                 templateUrl:'views/design/DesignDetail.html',
                 controller:'DesignDetailCtrl',
                 data: {
-                     displayName: 'detail',
+                     displayName: 'Detail',
                 }
         
             }).state('app.home.manage.page.upload', {
@@ -77,7 +62,7 @@
                 templateUrl:'views/design/DesignUpload.html',
                 controller:'DesignCtrl',
                  data: {
-                     displayName: 'upload',
+                     displayName: 'Upload',
                 }
             });
             $stateProvider.state('app.editor', {
@@ -118,11 +103,12 @@
                 },
                
             }).state('app.preview', {
-                url:'/preview',
+                url:'/Preview',
                 templateUrl:'views/editor/TemplatePreview.html',
                 controller:'TemplatePreviewCtrl',
             });
         }
     ]);
+
 
 })(angular);

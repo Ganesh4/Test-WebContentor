@@ -35,8 +35,7 @@
 
 
 .campaign_rhs_wrapper {
-	padding:15px 15px 15px 15px;
-	display:block;	
+	
 	.form-group {
 		
 		label {
@@ -73,6 +72,41 @@
 			}	
 	}
 	.campaign-group-left{
+		display: flex;
+		}
+}
+
+/*====================== CampaignDetail Page ======================*/
+
+.main-campaigndetail{
+	margin-top: 42px;
+	
+	.campaigndetail-left-fg{
+			width: 48%;
+			float: left;
+			label{
+				margin-left: 20px;
+				cursor:pointer;
+				}
+			img{
+				cursor: pointer;
+				}
+		    }
+			
+	.campaigndetail-right-fg{
+			width: 48%;
+			float: left;
+			margin-left: 2%;
+			label{
+				margin-left: 20px;
+				cursor: pointer;
+				}
+			img{
+				cursor: pointer;
+				}
+		    }
+	
+	.campaigndetail-group-left{
 		display: flex;
 		}
 }
