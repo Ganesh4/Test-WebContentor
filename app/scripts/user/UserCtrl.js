@@ -11,7 +11,8 @@ angular.module('user').controller('UserCtrl',
         'CommonSrv',
         'UserApiSrv',
         'Global',
-        function($scope ,$state, ApiSrv,CommonSrv,UserApiSrv,Global){
+        'validator',
+        function($scope ,$state, ApiSrv,CommonSrv,UserApiSrv, Global,validator){
                        
             var param = {};
             $scope.gridOptions = {
@@ -19,30 +20,25 @@ angular.module('user').controller('UserCtrl',
                 enableRowSelection:true,
                 columnDefs: [{
                     field: 'FirstName', 
-                    displayName: 'First Name',
-					cellClass : 'name-color'
+                    displayName: 'First Name'
                 },{
                     field:'Lastname', 
-                    displayName:'Last Name',
-					cellClass : 'green-color'
+                    displayName:'Last Name'
                 },{
                     field:'Email',
-                    displayName:'Email',
-					cellClass: 'orange-color'
+                    displayName:'Email'
                 },{
                     field:'CreatedDate',
                     displayName:'Created Date',
-					cellClass: 'blue-color',
                     cellTemplate:'<div class="ui-grid-cell-contents">{{row.entity.CreatedDate | FormatDateFilter}}</div>'
                 },{
                     field:'ModificationDate',
                     displayName:'Modification Date',
-					cellClass: 'skyblue-color',
                     cellTemplate:'<div class="ui-grid-cell-contents">{{row.entity.ModificationDate | FormatDateFilter}}</div>'
+                   // cellFilter:' date : MM-dd-yyyy hh:mm:ss'
                 },{
                     field:'UserRoles.SecurityGroupID',
-                    displayName:"Roles",
-					cellClass : 'green-color'
+                    displayName:"Roles"
                 }]
             } 
             UserApiSrv.getUserList('users',param, 
@@ -50,7 +46,32 @@ angular.module('user').controller('UserCtrl',
                     if(data)
                         $scope.gridOptions.data = data.plain();
             });
+
+            $scope.empty = false;
+           
+            $scope.checkValidation = function(){
+            
+                console.log('User---------',$scope.user);
+                if(!$scope.user.firstName){
+                    $scope.empty = true;
+                }else if(!$scope.user.email){
+                    $scope.empty = true;
+                }else{
+                    $scope.empty = false;
+                }
+
+                if($scope.empty == false){
+                    $scope.enableNext();
+                }else{
+                    $scope.disableNext();
+                }
+
+
+            console.log('$scope.empty--------',$scope.empty);
+           }          
+            
+
+          
         }
     ]);
 })(angular);
-

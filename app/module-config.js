@@ -6,9 +6,9 @@
  */
 (function(angular){
 
-	angular.module('vendor',['ui.router','restangular', 'validation','validation.rule','ui.select2','ngSanitize','cb.x2js','ui.grid']);
+	angular.module('vendor',['ui.router','restangular', 'ui.select2','ngSanitize','cb.x2js','ui.grid']);
 
-	angular.module('common',['vendor','angularUtils.directives.uiBreadcrumbs']);
+	angular.module('common',['vendor','angularUtils.directives.uiBreadcrumbs','jcs-autoValidate']);
 	
 	angular.module('assets',['common']);
 

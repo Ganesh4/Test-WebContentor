@@ -63,6 +63,13 @@
 	                		$state.$go(data.state);
 	                });
 	            });
+
+	            $scope.enableNext = function(){
+	            	CommonSrv.enableNext($scope);
+	            }
+	            $scope.disableNext = function(){
+	            	CommonSrv.disableNext($scope);	
+	            }
 			}
 		]);
 })(angular);

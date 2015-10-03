@@ -39,28 +39,30 @@
 
  <div class="container-fluid"> 
  <div class="registration_form"> 
- <form class="form_main" name="Form" > 
+ <form class="form_main" name="Form" novalidate="novalidate"
+                  ng-submit="submit()"
+                  validate-non-visible-controls="false"> 
 <div class="row">
 
 
   <div class="col-lg-4">
     <div class="form-group">
        <label>First Name</label>
-            <input class="form-control" name="name" ng-model="user.firstName" placeholder="First Name" validator="required">
+            <input class="form-control" name="name" ng-model="user.firstName" placeholder="First Name" required="required"  required-err-type="firstNameRequired" />
     </div><!-- /input-group -->
   </div><!-- /.col-lg-4 -->
   
   <div class="col-lg-4">
     <div class="form-group">
      <label>Last Name</label>
-          <input class="form-control" ng-model="user.lastName" placeholder="Last Name">
+          <input class="form-control" ng-model="user.lastName" placeholder="Last Name"/>
     </div><!-- /input-group -->
   </div><!-- /.col-lg-4 -->
   
   <div class="col-lg-4">
     <div class="form-group">
         <label>Email</label>
-        <input class="form-control" name = "email"  ng-model="user.email" placeholder="Email" validator="required">
+        <input type="email" class="form-control" name = "email"  ng-model="user.email" placeholder="Email" required="required"  required-err-type="emailisrequired"/>
     </div><!-- /input-group -->
   </div><!-- /.col-lg-4 -->
   
@@ -74,7 +76,7 @@
   <div class="col-lg-4">
     <div class="form-group">
      <label>Mobile</label>
-          <input class="form-control" ng-model="user.mobile" placeholder="Mobile">
+         <input type="number" class="form-control" ng-model="user.mobile" placeholder="Mobile" required="required"  required-err-type="mobilisrequired">
     </div><!-- /input-group -->
   </div><!-- /.col-lg-4 -->
   
@@ -89,7 +91,7 @@
   <div class="col-lg-4">
     <div class="form-group">
      <label>Address1</label>
-          <input class="form-control" ng-model="user.address1" placeholder="Address">
+          <input class="form-control" ng-model="user.address1" placeholder="Address" required="required"  required-err-type="addressRequired"/>
     </div><!-- /input-group -->
   </div><!-- /.col-lg-4 -->
   
@@ -140,7 +142,7 @@
   
   <div class="col-lg-4">
     <div class="form-group">
-    <button ng-click= "addUser()" type = "submit" validation-submit="Form"  class="btn btn-success ">Sign in</button>
+    <button ng-click= "addUser()" type = "submit"   class="btn btn-success ">Sign in</button>
     </div><!-- /input-group -->
   </div><!-- /.col-lg-4 -->
 

@@ -76,6 +76,16 @@ angular.module('common').service('CommonSrv',
                 });
                 return index;
             }
+
+            //Enable NEXT BUTTON
+            self.enableNext = function(scope){
+                scope.$broadcast(Global.EVENTS.NEXT_BTN_ENABLE);
+            }
+
+            //DISABLE NEXT BUTTON
+            self.disableNext = function(scope){
+                scope.$broadcast(Global.EVENTS.NEXT_BTN_DISABLE);
+            }
         }
     ]);
 })(angular);
