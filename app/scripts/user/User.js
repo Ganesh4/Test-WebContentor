@@ -75,11 +75,13 @@
                     actionBarBtn: [
 	                    {
 			            	name : "Cancel",
-			                onClickEvent : 'CANCEL',
+			                onClickEvent : 'WIZARD_CANCLE',
+                            state : 'app.home.manage.user.list'
 			            },{
 	                    	name : "Ok",
 	                        onClickEvent : 'ADD_NEW_USER',
-	                        disable : 'OK_BTN_DISABLE'
+	                        disable : 'OK_BTN_DISABLE',
+                            state:'app.home.manage.user.list',
 	                    },{
 	                        name : "Next",
 	                        onClickEvent : 'WIZARD_NEXT',

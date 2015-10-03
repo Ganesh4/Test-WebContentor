@@ -26,7 +26,7 @@ angular.module('assets').directive('wcButton',['Global','$parse',function(Global
 				scope.isEnabled = function(){
 					if(scope.disable){
 						var model = $parse(scope.disable);
-						console.log('Model ----------  ',scope.disable , model(scope));
+						//console.log('Model ----------  ',scope.disable , model(scope));
 						return model(scope);
 					}
 					else 

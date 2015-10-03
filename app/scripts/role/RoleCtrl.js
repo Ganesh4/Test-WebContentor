@@ -28,8 +28,9 @@ angular.module('role').controller('RoleCtrl',
                     field: 'Description', 
                     displayName: 'Description',
                     cellClass: 'orange-color'
+
                 },{
-                    field: 'CreatedDate', 
+                    field: 'createdDate', 
                     displayName: 'Created Date',
                     cellClass: 'blue-color',
                     cellTemplate:'<div class="ui-grid-cell-contents">{{row.entity.CreatedDate | FormatDateFilter}}</div>'
@@ -38,6 +39,7 @@ angular.module('role').controller('RoleCtrl',
                     displayName: 'Modify Date',
                     cellClass: 'skyblue-color',
                     cellTemplate:'<div class="ui-grid-cell-contents">{{row.entity.ModifyDate | FormatDateFilter}}</div>'
+
                 }]
             } 
              RoleApiSrv.getRoleList('roles',param, 

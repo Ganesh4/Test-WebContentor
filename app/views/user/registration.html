@@ -32,21 +32,7 @@
 </nav><!--Navigation bar end here-->
 
 
-<div class="header-sub clearfix">
-        <!--<div class="common-headng-wrap"><h2 class="common-headng">{{subheader.title}}</h2> </div>-->
-        
-        <div class="sub-header-icon"><i class="fa fa-user"></i> </div>
-          <div class="ng-isolate-scope">  
-            <ol class="breadcrumb">
-            <!-- ngRepeat: crumb in breadcrumbs -->
-            <li class="ng-scope active">
-            <span  class="ng-binding"> New user registration</span>
-            </li>
-            </ol>
-           </div>
-        <button class="btn btn-default" type="button">Cancel</button>
-        <button class="btn btn-default disabled" type="button">Save</button>
-</div>
+<wc-sub-header></wc-sub-header>
    
 <!--Work area start here-->
 <div class="inner_wrapper">
@@ -74,7 +60,7 @@
   <div class="col-lg-4">
     <div class="form-group">
         <label>Email</label>
-        <input class="form-control" name = "email"  ng-model="user.email" placeholder="Email" validator="required">
+        <input class="form-control" name = "email"  ng-model="user.email" placeholder="Email">
     </div><!-- /input-group -->
   </div><!-- /.col-lg-4 -->
   
@@ -95,7 +81,7 @@
   <div class="col-lg-4">
     <div class="form-group">
     <label>Country</label>
-     <select class="form-control" ng-model = "user.country" ng-options = "country.name for country in countries"
+     <select class="form-control" ng-model = "user.country" ng-options = "country.CountryName for country in countries"
       ng-change = "updateCountry()"></select>
     </div><!-- /input-group -->
   </div><!-- /.col-lg-4 -->
@@ -125,7 +111,7 @@
     <div class="form-group">
     <label>State</label>
        <select ng-model = "user.state" class = "form-control" 
-        ng-options = "state.name for state in states"></select>
+        ng-options = "state.StateName for state in states"></select>
     </div><!-- /input-group -->
   </div><!-- /.col-lg-4 -->
   

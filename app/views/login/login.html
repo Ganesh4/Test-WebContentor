@@ -38,17 +38,17 @@
       <div class="form-signin">
         <h2 class="form-signin-heading">Please sign in</h2>
         <div>{{message}}</div>
-        <label class="sr-only" for="inputEmail">User Name</label>
-        <input type="text" autofocus required="" placeholder="User Name" ng-model="userName" class="form-control">
+        <label class="sr-only" for="inputEmail">Email</label>
+        <input type="text" autofocus required="" placeholder="User Name" ng-model="loginUser.email" class="form-control">
         <label class="sr-only" for="inputPassword">Password</label>
-        <input type="password" required="" placeholder="Password" ng-model="password" class="form-control">
+        <input type="password" required="" placeholder="Password" ng-model="loginUser.password" class="form-control">
         <div class="checkbox">
           <label>
             <input type="checkbox" value="remember-me"> Remember me
           </label>
         </div>
         <button class="btn btn-success "
-         ng-click = "loginCheck(userName,password)">Sign in</button>
+         ng-click = "loginCheck(email,password)">Sign in</button>
          <button class="btn  btn-success"
          ui-sref = "app.register">New Registration</button>
       </div>
