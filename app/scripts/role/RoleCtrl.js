@@ -17,15 +17,11 @@ angular.module('role').controller('RoleCtrl',
                 multiSelect: true,
                 enableRowSelection:true,
                 columnDefs: [{
-                    field: 'RoleName', 
+                    field: 'roleName', 
                     displayName: 'Role Name',
                     cellClass : 'name-color'
                 },{
-                	field: 'IsSystemRole', 
-                    displayName: 'System Role',
-                    cellClass : 'green-color'
-                },{
-                    field: 'Description', 
+                    field: 'description', 
                     displayName: 'Description',
                     cellClass: 'orange-color'
 
@@ -33,12 +29,12 @@ angular.module('role').controller('RoleCtrl',
                     field: 'createdDate', 
                     displayName: 'Created Date',
                     cellClass: 'blue-color',
-                    cellTemplate:'<div class="ui-grid-cell-contents">{{row.entity.CreatedDate | FormatDateFilter}}</div>'
+                    cellTemplate:'<div class="ui-grid-cell-contents">{{row.entity.createdDate | FormatDateFilter}}</div>'
                 },{
-                    field: 'ModifyDate', 
+                    field: 'modifiedDate', 
                     displayName: 'Modify Date',
                     cellClass: 'skyblue-color',
-                    cellTemplate:'<div class="ui-grid-cell-contents">{{row.entity.ModifyDate | FormatDateFilter}}</div>'
+                    cellTemplate:'<div class="ui-grid-cell-contents">{{row.entity.modifiedDate | FormatDateFilter}}</div>'
 
                 }]
             } 

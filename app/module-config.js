@@ -25,6 +25,8 @@
 	angular.module('user', ['manage' , 'reCAPTCHA']);
 
 	angular.module('role',['manage']);
+
+	angular.module('resources',['manage']);
 	
 	angular.module('overview',['home']);
 
@@ -38,6 +40,6 @@
 
 	angular.module('editor',['common','froala']);
 
-	angular.module('microsite',['login','home','overview','common','design','header','subheader','editor','campaign','manage','user','role']);
+	angular.module('microsite',['login','home','overview','common','design','header','subheader','editor','campaign','manage','user','role','resources']);
 
 })(angular);
