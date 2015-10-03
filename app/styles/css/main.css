@@ -7,6 +7,10 @@
 /* LIGHT GREEN COLOR */
 /* BORDER GREEN COLOR */
 /* BORDER GREEN COLOR */
+<<<<<<< HEAD
+=======
+/* GREEN COLOR */
+>>>>>>> 92ff093cb2bddb93ba154739b2a9ab798fbca03f
 /* FONT FAMILY */
 /* Scss Document */
 /* line 4, ../sass/global/_config.scss */
@@ -1383,6 +1387,7 @@ footer .text-left {
 }
 /* line 349, ../sass/global/_editor-blocks.scss */
 .block-container-section .btn-add-section {
+<<<<<<< HEAD
   border: 1px solid #000;
   margin-top: -4px;
 }
@@ -1394,6 +1399,18 @@ footer .text-left {
 /* line 357, ../sass/global/_editor-blocks.scss */
 .block-container-section .btn-add-section a:hover {
   background-color: #ccc;
+=======
+  			/*border: 1px solid #000;
+        margin-top: -4px;*/
+  			/*a{
+  		    display:block;		
+    			padding: 3px 5px;	
+  				
+  				&:hover{
+  			    background-color:#ccc;		
+  				}
+  			}*/
+>>>>>>> 92ff093cb2bddb93ba154739b2a9ab798fbca03f
 }
 /* line 361, ../sass/global/_editor-blocks.scss */
 .block-container-section .btn-add-section i {
@@ -1635,3 +1652,98 @@ footer .text-left {
   color: #468847;
   margin: 2px 0px;
 }
+<<<<<<< HEAD
+=======
+
+/* Scss Document */
+/*====================== Campaign Home Page ======================*/
+/* line 5, ../sass/global/_campaign-home.scss */
+.campaign-home-row {
+  width: 100%;
+  background-color: #e8f6e2;
+  border: 1px solid #d6e9c6;
+  box-shadow: none;
+  margin-bottom: 5px;
+}
+/* line 12, ../sass/global/_campaign-home.scss */
+.campaign-home-row .campagin-home-icon {
+  float: left;
+  padding: 5px;
+}
+/* line 17, ../sass/global/_campaign-home.scss */
+.campaign-home-row .campagin-home-icon i {
+  font-size: 24px;
+  color: #468847;
+}
+/* line 22, ../sass/global/_campaign-home.scss */
+.campaign-home-row .campagin-home-content {
+  float: left;
+  width: 92%;
+}
+/* line 26, ../sass/global/_campaign-home.scss */
+.campaign-home-row .campagin-home-content p {
+  color: #468847;
+  margin: 5px 0px;
+  font-weight: bold;
+}
+
+/*====================== New Campaign Page ======================*/
+/* line 37, ../sass/global/_campaign-home.scss */
+.campaign_rhs_wrapper {
+  padding: 15px 15px 15px 15px;
+  display: block;
+}
+/* line 42, ../sass/global/_campaign-home.scss */
+.campaign_rhs_wrapper .form-group label {
+  font-weight: normal;
+}
+/* line 46, ../sass/global/_campaign-home.scss */
+.campaign_rhs_wrapper .form-group .textarea-height {
+  max-height: 92px;
+}
+/* line 50, ../sass/global/_campaign-home.scss */
+.campaign_rhs_wrapper .form-group .campaign-left-fg {
+  width: 48%;
+  float: left;
+}
+/* line 54, ../sass/global/_campaign-home.scss */
+.campaign_rhs_wrapper .form-group .campaign-right-fg {
+  width: 48%;
+  float: left;
+  margin-left: 2%;
+}
+/* line 59, ../sass/global/_campaign-home.scss */
+.campaign_rhs_wrapper .form-group .campaign-right-fg i {
+  color: #5d5e64;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 22px;
+  cursor: pointer;
+}
+/* line 67, ../sass/global/_campaign-home.scss */
+.campaign_rhs_wrapper .form-group .checkbox-align {
+  width: 100%;
+}
+/* line 69, ../sass/global/_campaign-home.scss */
+.campaign_rhs_wrapper .form-group .checkbox-align label {
+  width: 30%;
+  margin: 0px 0px 5px;
+}
+/* line 75, ../sass/global/_campaign-home.scss */
+.campaign_rhs_wrapper .campaign-group-left {
+  display: flex;
+}
+
+/* Scss Document */
+/* line 3, ../sass/global/_user.scss */
+.ui-grid {
+  width: 97.5%;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+/* line 8, ../sass/global/_user.scss */
+.ui-grid-contents-wrapper {
+  width: 100%;
+}
+>>>>>>> 92ff093cb2bddb93ba154739b2a9ab798fbca03f

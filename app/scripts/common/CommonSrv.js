@@ -4,7 +4,9 @@
 angular.module('common').service('CommonSrv',
     [
         'Restangular',
-        function (Restangular) {
+        '$state',
+        'Global',
+        function (Restangular, $state, Global) {
             var self = this;
             self.getFormData = function(data){
 
@@ -35,6 +37,41 @@ angular.module('common').service('CommonSrv',
 
             self.getDesignCategories = function(success , error){
                Restangular.one('categories').getList().then(success);
+            }
+            
+            //Go To Next Step Of Wizard
+            self.goToNextStep = function(wizardSteps,scope){
+                var index = self.getWizardCurrentIndex(wizardSteps);
+                var maxLength = _.size(wizardSteps) - 1;
+                if(maxLength > index){
+                    console.log('index', index);
+                    scope.$broadcast(Global.EVENTS.NEXT_BTN_ENABLE);
+                    scope.$broadcast(Global.EVENTS.PREVIOUS_BTN_ENABLE);
+                    var stateName = wizardSteps[index + 1];
+                    $state.go(stateName);
+                }else{
+                    scope.$emit(Global.EVENTS.NEXT_BTN_DISABLE);
+                }
+            }
+            self.goToPreviousStep = function(wizardSteps, scope){
+                var index = self.getWizardCurrentIndex(wizardSteps);
+                if(index > 0){
+                    scope.$emit(Global.EVENTS.PREVIOUS_BTN_ENABLE);
+                    var stateName = wizardSteps[index-1];
+                    $state.go(stateName);
+                }else {
+                    scope.$emit(Global.EVENTS.PREVIOUS_BTN_DISABLE);
+                }
+            }
+            //Returns current index from the wizad list using current state name.
+            self.getWizardCurrentIndex = function(wizardSteps){
+                var stateName = $state.current.name;
+                var index = 0;
+                _.each(wizardSteps, function(value, key){
+                    if(value === stateName)
+                        index = key;
+                });
+                return index;
             }
         }
     ]);
