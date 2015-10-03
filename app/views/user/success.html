@@ -30,6 +30,7 @@
           </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav><!--Navigation bar end here-->
+<wc-sub-header></wc-sub-header>
 
 
 
@@ -42,10 +43,10 @@
  
 <div class="panel panel-success">
       <div class="panel-heading">
-        <h3 class="panel-title">Welcome, New User</h3>
+        <h3 class="panel-title">Welcome, {{user.firstName}}</h3>
       </div>
       <div class="panel-body">
-        Your login is your emailed johan@gmail.com <br/>
+        Your login is your emailed {{user.email}} <br/>
         A verification email is sent to the registered email, Please click on the link in the email and complete the registration process and set the login password for your account <br/><br/>
         Thanks for creating a yavun account Use it to create compaign to Market your product.
       </div>
