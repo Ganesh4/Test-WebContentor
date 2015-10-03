@@ -11,12 +11,10 @@ angular.module('user').controller('UserCtrl',
         'CommonSrv',
         'UserApiSrv',
         'Global',
-        'validator',
-        function($scope ,$state, ApiSrv,CommonSrv,UserApiSrv, Global,validator){
-                       
-
         '$cookieStore',
-        function($scope ,$state, ApiSrv,CommonSrv,UserApiSrv,Global,$cookieStore){
+        'validator',
+           
+        function($scope ,$state, ApiSrv,CommonSrv,UserApiSrv,Global,$cookieStore,validator){
             $scope.loggedInUser = $cookieStore.get('loggedInUser');
             console.log('$scope ----------- ',$scope.loggedInUser);
             var param = {};
