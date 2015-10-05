@@ -1,0 +1,26 @@
+
+<div ng-if="type === 'DROP_DOWN'">
+	<select ng-model = "model" class = "form-control" 
+        ng-options = "option in options"></select>
+</div>
+<div ng-if="type === 'TEXT'">
+	<input ng-if ="required" class="form-control" name="{{name}}" ng-model="model" placeholder="placeHolder" required="required"  required-err-type="{{validate}}" />
+
+	<input ng-if ="!required" class="form-control" name="{{name}}" ng-model="model" placeholder="placeHolder" required-err-type="{{validate}}" />
+</div>
+
+<div ng-if="type === 'RADIO'">
+	<input type="radio" ng-click = "onClick" ng-model="model">{{name}}</input>
+</div>
+<div ng-if="type === 'CHECKBOX'">
+	<label>
+        <input type="checkbox" ng-click = "onClick"> {{name}}
+	</label>
+</div> 
+
+<div class="form-group" ng-if="type === 'CAPTCHA'">
+            <label>Prove you are not a robot </label><br/>
+           <div class="g-recaptcha" ng-model="user.captcha" name = "captcha" data-sitekey=
+           "6Lc_0f4SAAAAAF9ZA_d7Dxi9qRbPMMNW-tLSvhe6"></div>
+</div><!-- /input-group -->
+

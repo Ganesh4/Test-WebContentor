@@ -3,13 +3,14 @@
 (function(angular){
 angular.module('assets').directive('wcInput',function(){
 	 	return{
-		restrict :'AE',
-		templateUrl:'views/assets/select.html',
-		scope : true,
-		link:function(scope,elem,attrs){
-			console.log("Options ----------- ",scope.options);
-		}
-
+			restrict :'AE',
+			templateUrl:'views/assets/input.html',
+			scope : {
+				
+			},
+			link:function(scope, elem, attrs){
+				
+			}
 		}
 	});
 
