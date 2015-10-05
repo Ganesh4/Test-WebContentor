@@ -62,7 +62,7 @@
                             menu : [{
                                 icon : 'fa fa-file-text',
                                 name : 'Promotional Pages',
-                                state : 'app.home.manage.page'
+                                state : 'app.home.manage.page.overview'
                             }]
                         },{
                             icon : 'fa fa-angle-down',

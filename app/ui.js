@@ -41,30 +41,7 @@
                       displayName: false
                 }
             });   
-            $stateProvider.state('app.home.manage.page', {
-                url: '/page',
-                templateUrl:"views/overview/overview.html",
-                controller:'OverviewCtrl',
-                 data: {
-                    tags:['Iteractive User Interface', 'Parrallex Design', 'Entertainment', 'Music'],                 
-                     displayName :'page' 
-                },     
-            }).state('app.home.manage.page.detail', {
-                url:'/detail',
-                templateUrl:'views/design/DesignDetail.html',
-                controller:'DesignDetailCtrl',
-                data: {
-                     displayName: 'Detail',
-                }
-        
-            }).state('app.home.manage.page.upload', {
-                url:'/upload',
-                templateUrl:'views/design/DesignUpload.html',
-                controller:'DesignCtrl',
-                 data: {
-                     displayName: 'Upload',
-                }
-            });
+            
             $stateProvider.state('app.editor', {
                 url:'/editor/:userId/:templateId',
                 templateUrl:'views/editor/TemplateEdit.html',
