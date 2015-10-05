@@ -22,7 +22,19 @@
 		        templateUrl:'views/user/RoleList.html',
 		        controller : 'RoleCtrl',
 		        data: {
-		        	 displayName: 'Roles'
+		        	 displayName: 'Roles',
+
+		        	  actionBarBtn: [{
+
+	                    name : 'Delete',
+	                    onClickEvent : 'DELETE_USER',
+	                },{
+	                    name : 'Properties'
+	                },{
+	                    name : 'Add',
+	                    onClickEvent : 'NAVIGATE',
+	                   
+	                }]
 		        }
 		    });
 

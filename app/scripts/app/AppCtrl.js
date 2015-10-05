@@ -18,6 +18,7 @@
 				$scope.countries = {};
 				$scope.loggedInUser = {};
 				var wizardSteps = $state.current.data.wizardSteps;
+				
 				/*
 				CommonSrv.getDesignCategories(function(data){
 			    	console.log('Args in AppCtrl --------  ' , data.plain());
@@ -67,6 +68,7 @@
 	                UserApiSrv.addNewUser( 'users', user,function(response){
 	                	if(data.state)
 	                		$state.go(data.state);
+	                		
 	                });
 	            });
 
