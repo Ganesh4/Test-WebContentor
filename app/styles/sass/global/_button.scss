@@ -3,10 +3,10 @@
 .header-sub {
 button  {
 	background-color: $grey-color;
-    border: 1px solid $brder-color;
-    margin-right: 10px;   
-    padding: 5px 15px 5px 15px;
-    min-width: 70px;
+  border: 1px solid $brder-color;
+  margin-right: 10px;   
+  padding: 5px 15px 5px 15px;
+  min-width: 70px;
 	float: right;
 	outline: none;
 	@include border-radius(2px);
@@ -14,6 +14,7 @@ button  {
 	box-shadow:none;
 	text-shadow:none;
 	font-size:13px;
+	
 	&:hover {
 		background-color:$COLOR_GREEN;
 		color:$workarea-color;
@@ -31,8 +32,8 @@ button  {
 
 .btn-group {
 	button.btn-default {
-		background-image:none;
-		background-color:none;
+	background-image:none;
+	background-color:none;
 	}
 }
 

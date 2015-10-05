@@ -53,19 +53,19 @@
 	                displayName: 'add',
 	                LeftNavList:[
 	                    {
-	                        icon : '',
+	                        icon : 'fa fa-angle-down',
 	                        name : 'Steps',
 	                        menu : [
 			                    {
-			                    	icon : 'fa fa-user',
+			                    	icon : 'fa fa-info-circle',
 			                        name : 'General',
 			                        state: 'app.home.manage.user.add.general',
 			                    },{
-			                        icon : '',
+			                        icon : 'fa fa-lightbulb-o',
 			                        name : 'Credentials',
 			                        state:'app.home.manage.user.add.credentials',
 			                    },{
-			                        icon : '',
+			                        icon : 'fa fa-users',
 			                        name : 'Roles',
 			                        state:'app.home.manage.user.add.roles'
 			                    }
@@ -81,7 +81,7 @@
 	                    	name : "Ok",
 	                        onClickEvent : 'ADD_NEW_USER',
 	                        disable : 'OK_BTN_DISABLE',
-                            state:'app.home.manage.user.list'
+                            state:'app.home.manage.user.list',
 	                    },{
 	                        name : "Next",
 	                        onClickEvent : 'WIZARD_NEXT',

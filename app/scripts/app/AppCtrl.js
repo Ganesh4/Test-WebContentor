@@ -12,9 +12,11 @@
 			'Global',
 			'UserApiSrv',
        		function($scope,$state, $q, ApiSrv, CommonSrv, Global, UserApiSrv){
-				
+				var param = {};
 				$state.args = [];
 				$scope.user = {};
+				$scope.countries = {};
+				$scope.loggedInUser = {};
 				var wizardSteps = $state.current.data.wizardSteps;
 				//Select 2 Options to populate.
 				$scope.select2Options = {
@@ -64,11 +66,39 @@
 	            $scope.$on(Global.EVENTS.ADD_NEW_USER,function(event, data){
 	                console.log('User ------- ',$scope.user);
 	                var user = $scope.user;
+	                if(!_.isUndefined(user.country))
+	                	user.country = $scope.user.country.SecurityCountryID;
+	                if(!_.isUndefined(user.state))
+	               		 user.state = $scope.user.state.SecurityStateID;
 	                UserApiSrv.addNewUser( 'users', user,function(response){
 	                	if(data.state)
-	                		$state.$go(data.state);
+	                		$state.go(data.state);
 	                });
 	            });
+
+
+	            $scope.enableNext = function(){
+	            	CommonSrv.enableNext($scope);
+	            }
+	            $scope.disableNext = function(){
+	            	CommonSrv.disableNext($scope);	
+	            }
+	            $scope.$on(Global.EVENTS.USER_REGISTER,function(event, data){
+	                console.log('User ------- ',$scope.user);
+	                var user = $scope.user;
+	               if(!_.isUndefined(user.country))
+	                user.country = $scope.user.country.SecurityCountryID;
+	              if(!_.isUndefined(user.state))
+	                user.state = $scope.user.state.SecurityStateID;
+	                UserApiSrv.addNewUser( 'user/register', user,function(response){
+	                	$state.go('app.success');
+	                	console.log("Success");
+	                },function(response){
+	                	console.log("Error");
+	                });
+	            });
+
+             	
 			}
 		]);
 })(angular);

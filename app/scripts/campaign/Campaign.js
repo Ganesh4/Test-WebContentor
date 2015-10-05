@@ -15,7 +15,7 @@
                  $stateProvider.state('app.home.campaign', {
                  url: '/campaign',
                  templateUrl:"views/campaign/home.html",
-                // controller:'CampaignCtrl',
+                 controller:'CampaignCtrl',
                     data: {
                     displayName: 'Campaign',
                     LeftNavList:[{

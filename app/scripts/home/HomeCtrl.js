@@ -13,9 +13,7 @@ angular.module('home').controller('HomeCtrl',
         'Global',
         'UserApiSrv',
         function($scope ,$state, ApiSrv,CommonSrv,Global,UserApiSrv){
-
-            
-            $scope.user = {};
+           
             $scope.reload = function(){
                 $state.reload();
             }

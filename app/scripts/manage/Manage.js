@@ -38,7 +38,8 @@
                             name : 'Resources',
                             menu : [{
                                 icon : 'fa fa-picture-o',
-                                name : 'Images'
+                                name : 'Images',
+                                state: 'app.home.manage.resources.images'
                             },{
                                 icon : 'fa fa-video-camera',
                                 name : 'Videos'

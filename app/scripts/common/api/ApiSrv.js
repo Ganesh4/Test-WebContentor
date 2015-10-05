@@ -57,6 +57,9 @@ angular.module('microsite').service('ApiSrv', ['$http', '$q', 'Restangular','Glo
 				// Be aware that no request interceptors are called this way.
 			});
 			return false; // error handled
+		}else if(response.status === 400){
+			console.log("Error ------------- 400",response.data.message);
+			return false;
 		}
 		return true; // error not handled
 	});

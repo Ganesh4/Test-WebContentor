@@ -32,6 +32,14 @@
 
                 }
 
+            }).state('app.success', {
+                url: '/register/success',
+                templateUrl:'views/user/success.html',
+                data: {
+                      displayName: 'New User Registration/Success',
+
+                }
+
             }).state('app.home', {
                 url: '/home',
                 templateUrl:'views/home/home.html',

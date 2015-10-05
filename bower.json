@@ -21,7 +21,9 @@
     "components-font-awesome": "~4.1.0",
     "angular-dragula": "~1.0.12",
     "angular-ui-grid" : "~3.0.6",
-    "angular-re-captcha" : "~0.2.0"
+    "angular-re-captcha" : "~0.2.0",
+    "angular-cookies" : "~1.2.29",
+    "angular-auto-validate" : "~1.18.17"
   },
   "resolutions": {
     "angular": ">= 1.0.8"
