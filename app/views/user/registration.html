@@ -69,7 +69,7 @@
   <div class="col-lg-4">
     <div class="form-group">
      <label>Last Name</label>
-          <input class="form-control" ng-model="user.lastName" placeholder="Last Name"/>
+          <input class="form-control" ng-model="user.lastName" placeholder="Last Name" required="required"  required-err-type="lastNameRequired"/>
     </div><!-- /input-group -->
   </div><!-- /.col-lg-4 -->
   
@@ -90,14 +90,17 @@
   <div class="col-lg-4">
     <div class="form-group">
        <label>Phone</label>
-            <input class="form-control" ng-model="user.phone" placeholder="Phone">
+            <input class="form-control" ng-model="user.phone" placeholder="Phone"
+             ng-pattern="/^[0-9]{10,13}$/" pattern-err-type="invalidPhoneNo" />
     </div><!-- /input-group -->
   </div><!-- /.col-lg-4 -->
   
   <div class="col-lg-4">
     <div class="form-group">
      <label>Mobile</label>
-         <input type="number" class="form-control" ng-model="user.mobile" placeholder="Mobile" required="required"  required-err-type="mobilisrequired">
+         <input  class="form-control" ng-model="user.mobile" placeholder="Mobile"  
+         ng-pattern="/^[0-9]{10,13}$/" name = "mobile" pattern-err-type="invalidMobile"/>
+        
     </div><!-- /input-group -->
   </div><!-- /.col-lg-4 -->
   
@@ -116,7 +119,7 @@
   <div class="col-lg-4">
     <div class="form-group">
      <label>Address1</label>
-          <input class="form-control" ng-model="user.address1" placeholder="Address" required="required"  required-err-type="addressRequired"/>
+          <input class="form-control" ng-model="user.address1" placeholder="Address"/>
     </div><!-- /input-group -->
   </div><!-- /.col-lg-4 -->
   
