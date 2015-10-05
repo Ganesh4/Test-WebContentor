@@ -22,25 +22,31 @@ angular.module('user').controller('UserCtrl',
                 enableRowSelection:true,
                 columnDefs: [{
                     field: 'FirstName', 
-                    displayName: 'First Name'
+                    displayName: 'First Name',
+                    cellClass : 'darkgrey-color'
                 },{
                     field:'Lastname', 
-                    displayName:'Last Name'
+                    displayName:'Last Name',
+                    cellClass : 'green-color'
                 },{
                     field:'Email',
-                    displayName:'Email'
+                    displayName:'Email',
+                    cellClass : 'orange-color'
+                },{
+                    field:'UserRoles.SecurityGroupID',
+                    displayName:"Roles",
+                    cellClass : 'blue-color'
                 },{
                     field:'CreatedDate',
                     displayName:'Created Date',
+                    cellClass : 'skyblue-color',
                     cellTemplate:'<div class="ui-grid-cell-contents">{{row.entity.CreatedDate | FormatDateFilter}}</div>'
                 },{
                     field:'ModificationDate',
                     displayName:'Modification Date',
+                    cellClass : 'green-color',
                     cellTemplate:'<div class="ui-grid-cell-contents">{{row.entity.ModificationDate | FormatDateFilter}}</div>'
                    // cellFilter:' date : MM-dd-yyyy hh:mm:ss'
-                },{
-                    field:'UserRoles.SecurityGroupID',
-                    displayName:"Roles"
                 }]
             } 
             UserApiSrv.getUserList('users',param, 

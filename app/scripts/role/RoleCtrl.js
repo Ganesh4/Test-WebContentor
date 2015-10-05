@@ -20,7 +20,7 @@ angular.module('role').controller('RoleCtrl',
                 columnDefs: [{
                     field: 'roleName', 
                     displayName: 'Role Name',
-                    cellClass : 'name-color'
+                    cellClass : 'darkgrey-color'
                 },{
                     field: 'description', 
                     displayName: 'Description',
