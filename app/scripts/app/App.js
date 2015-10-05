@@ -16,10 +16,13 @@
 	        // otherwise the current default culture is returned.
 	        defaultErrorMessageResolver.getErrorMessages().then(function (errorMessages) {
 	          	errorMessages['firstNameRequired'] = 'First Name Required';
-	          	errorMessages['emailisrequired'] = 'Email is required';
-	          	errorMessages['mobilisrequired'] = 'Mobile Number  Is Required';
-	          	errorMessages['addressRequired'] = 'Address Is Required Required';
-	          	errorMessages['anotherErrorMessage'] = 'An error message with the attribute value {0,1,2,3}';
+	            errorMessages['lastNameRequired'] = 'Last Name Required';
+	          	errorMessages['emailisrequired'] = 'Email is required';	
+	          	errorMessages['passwordisrequired'] = 'Password is required';
+	          	errorMessages['anotherErrorMessage'] = 'An error message with the attribute value {0,1,2,3,4}';
+	          	errorMessages['invalidMobile'] = 'Invalid Mobile Number';
+	          	errorMessages['invalidPhoneNo'] = 'Invalid Phone Number';
+	          	
 	        });
 
        }]);
