@@ -60,6 +60,14 @@ angular.module('microsite').service('ApiSrv', ['$http', '$q', 'Restangular','Glo
 		}else if(response.status === 400){
 			console.log("Error ------------- 400",response.data.message);
 			return false;
+			
+		}else if(response.status === 404){
+			console.log("Error ------------- 404",response.data.message);
+			return false;
+
+		}else if(response.status === 500){
+			console.log("Error ------------- 500",response.data.message);
+			return false;
 		}
 		return true; // error not handled
 	});

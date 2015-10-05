@@ -15,7 +15,7 @@
     </div>
     <div class="right-fg">
     <label for="exampleInputEmail1">Last Name</label>
-    <input type="text" class="form-control"  ng-model="user.lastName" placeholder="Last Name">
+    <input type="text" class="form-control"  ng-model="user.lastName" placeholder="Last Name" required="required" required-err-type="lastNameRequired"/>
     </div>
   </div>
   
@@ -47,11 +47,11 @@
   <div class="form-group form-group-left">
   	<div class="left-fg">
     <label for="exampleInputEmail1">Phone</label>
-    <input type="text" class="form-control" ng-model="user.phone" placeholder="Phone">
+    <input type="number" class="form-control" ng-model="user.phone" placeholder="Phone"  ng-pattern="/^[0-9]{10,13}$/" pattern-err-type="invalidPhoneNo">
     </div>
     <div class="right-fg">
     <label for="exampleInputEmail1">Mobile</label>
-    <input type="text" class="form-control" ng-model="user.mobile" placeholder="Mobile">
+    <input type="number" class="form-control" ng-model="user.mobile" placeholder="Mobile" ng-pattern="/^[0-9]{10,13}$/" name = "mobile" pattern-err-type="invalidMobile"/ />
     </div>
   </div>
 

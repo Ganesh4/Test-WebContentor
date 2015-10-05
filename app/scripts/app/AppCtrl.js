@@ -18,12 +18,7 @@
 				$scope.countries = {};
 				$scope.loggedInUser = {};
 				var wizardSteps = $state.current.data.wizardSteps;
-				//Select 2 Options to populate.
-				$scope.select2Options = {
-					'multiple': true,
-					'simple_tags': true,
-					'tags': $state.current.data.tags				
-				};
+				
 				/*
 				CommonSrv.getDesignCategories(function(data){
 			    	console.log('Args in AppCtrl --------  ' , data.plain());
@@ -73,6 +68,7 @@
 	                UserApiSrv.addNewUser( 'users', user,function(response){
 	                	if(data.state)
 	                		$state.go(data.state);
+	                		
 	                });
 	            });
 

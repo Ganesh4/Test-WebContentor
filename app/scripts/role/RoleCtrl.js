@@ -33,7 +33,7 @@ angular.module('role').controller('RoleCtrl',
                     cellTemplate:'<div class="ui-grid-cell-contents">{{row.entity.createdDate | FormatDateFilter}}</div>'
                 },{
                     field: 'modifiedDate', 
-                    displayName: 'Modify Date',
+                    displayName: 'Modification Date',
                     cellClass: 'skyblue-color',
                     cellTemplate:'<div class="ui-grid-cell-contents">{{row.entity.modifiedDate | FormatDateFilter}}</div>'
 
