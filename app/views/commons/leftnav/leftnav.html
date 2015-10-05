@@ -12,7 +12,7 @@
         <span>{{listItem.name}}</span>
      </div>
         <ul>
-           <li ui-sref-active = "nav-selected" ng-repeat = "menu in listItem.menu" ui-sref = "{{menu.state || '#'}}"> <i class="{{menu.icon}}"></i>{{menu.name}}</li>
+           <li ui-sref-active = "nav-selected" ng-repeat = "menu in listItem.menu" ui-sref = "{{menu.state || '#'}}" disabled="disabled"> <i class="{{menu.icon}}"></i>{{menu.name}}</li>
         </ul>
   </div>
 

@@ -67,6 +67,7 @@
 	                UserApiSrv.addNewUser( 'users', user,function(response){
 	                	if(data.state)
 	                		$state.go(data.state);
+	                		
 	                });
 	            });
 
