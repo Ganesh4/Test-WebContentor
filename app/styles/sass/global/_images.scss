@@ -1,0 +1,93 @@
+/* Scss Document */
+
+/*========== Images Grid View Start Here =============*/
+	
+.grid-box{
+		padding: 8px 0px;
+		width: 20%;
+		vertical-align: top;
+		
+		li{
+			list-style: none;
+			padding: 5px 0px;
+			float: left;
+			width: 100%;
+			
+			p{
+				float:left;
+				width: 40%;
+				margin: 0px
+				}
+			
+			span{
+				float:right;
+				width: 50%;
+				list-style:hebrew;
+				}
+			}
+		
+	    	li >span:before {
+				content: ":";
+				padding-right: 2px;
+			    }
+		}
+
+/*========== Images Grid View End Here =============*/
+
+/*========== Images Horizontal View Start Here =============*/
+
+.media-wrapper{
+	background-color: $workarea-color;
+	padding: 5px;
+	
+	.media-left-box{
+		background-color: $workarea-color;
+		border: 1px solid #e3eaef;
+		padding: 5px;
+		
+		img{
+			width: 150px;
+			height: 124px;
+			}
+		}
+	.media-body{
+		padding: 5px;
+		border-top: 1px solid #e3eaef;
+		border-bottom: 1px solid #e3eaef;
+		}
+	.media-right-box{
+		padding: 8px;
+		width: 20%;
+		border: 1px solid #e3eaef;
+		vertical-align: top;
+		
+		li{
+			list-style: none;
+			padding: 5px 0px;
+			float: left;
+			width: 100%;
+			
+			p{
+				float:left;
+				width: 40%;
+				margin: 0px
+				}
+			
+			span{
+				float:right;
+				width: 50%;
+				list-style:hebrew;
+				}
+			}
+		
+	    	li >span:before {
+				content: ":";
+				padding-right: 2px;
+			    }
+		}
+	.image-heading{
+		text-align: center;
+		}
+}
+
+/*========== Images Horizontal View End Here =============*/

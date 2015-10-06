@@ -1,32 +1,32 @@
 <div class="main_rhs_wrapper">
 <p><strong>General</strong></p>
 <p>Enter user information</p>
-<form name="Form" novalidate="novalidate"
+<form name="Form" novalidate
                   validate-non-visible-controls="false">
 <div class="row">
   <div class="col-md-8">  
   
   <div class="form-group form-group-left">
   	<div class="left-fg">
-    <label for="exampleInputEmail1">First Name</label>
+    <label>First Name</label>
 
     <input type="text" class="form-control" required ng-model="user.firstName" placeholder="First Name" required="required" required-err-type="firstNameRequired" ng-keyup = "checkValidation()" ng-change = "checkValidation()"/>
 
     </div>
     <div class="right-fg">
-    <label for="exampleInputEmail1">Last Name</label>
+    <label>Last Name</label>
     <input type="text" class="form-control"  ng-model="user.lastName" placeholder="Last Name" required="required" required-err-type="lastNameRequired"/>
     </div>
   </div>
   
   <div class="form-group form-group-left">
   	<div class="left-fg">
-     <label for="exampleInputEmail1">Email</label>
+     <label>Email</label>
     <input type="email" class="form-control" ng-model="user.email" placeholder="Email" 
     required="required"  required-err-type="emailisrequired" ng-keyup = "checkValidation()" ng-change = "checkValidation()"/>
     </div>
     <div class="right-fg">
-    <label for="exampleInputEmail1">Company</label>
+    <label>Company</label>
     <input type="text" class="form-control" ng-model="user.organizationName" placeholder="Company">
     </div>
 
@@ -34,11 +34,11 @@
 
   <div class="form-group form-group-left">
   	<div class="left-fg">
-    <label for="exampleInputEmail1">Address 1</label>
+    <label>Address 1</label>
     <input type="text" class="form-control" ng-model="user.address1" placeholder="Address 1">
     </div>
     <div class="right-fg">
-    <label for="exampleInputEmail1">Address 2</label>
+    <label>Address 2</label>
     <input type="text" class="form-control"  ng-model="user.address2" placeholder="Address 2">
     </div>
 
@@ -46,22 +46,22 @@
 
   <div class="form-group form-group-left">
   	<div class="left-fg">
-    <label for="exampleInputEmail1">Phone</label>
+    <label>Phone</label>
     <input type="number" class="form-control" ng-model="user.phone" placeholder="Phone"  ng-pattern="/^[0-9]{10,13}$/" pattern-err-type="invalidPhoneNo">
     </div>
     <div class="right-fg">
-    <label for="exampleInputEmail1">Mobile</label>
+    <label>Mobile</label>
     <input type="number" class="form-control" ng-model="user.mobile" placeholder="Mobile" ng-pattern="/^[0-9]{10,13}$/" name = "mobile" pattern-err-type="invalidMobile"/ />
     </div>
   </div>
 
   <div class="form-group form-group-left">
   	<div class="left-fg">
-    <label for="exampleInputEmail1">City</label>
+    <label>City</label>
     <input type="text" class="form-control" ng-model="user.city" placeholder="City">
     </div>
     <div class="right-fg">
-    <label for="exampleInputEmail1">Country</label>
+    <label>Country</label>
      <select class="form-control" ng-model = "user.country" ng-options = "country.CountryName for country in countries"
       ng-change = "updateCountry()"></select>
     </div>
@@ -69,11 +69,11 @@
   
   <div class="form-group form-group-left">
   	<div class="left-fg">
-    <label for="exampleInputEmail1">State</label>
+    <label>State</label>
      <select ng-model = "user.state" class = "form-control" ng-options = "state.StateName for state in states"></select>
     </div>
     <div class="right-fg">
-    <label for="exampleInputEmail1">Zip</label>
+    <label>Zip</label>
     <input type="text" class="form-control" ng-model="user.zip" placeholder="Zip">
  
     </div>

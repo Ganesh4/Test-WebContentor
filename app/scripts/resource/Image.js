@@ -36,7 +36,7 @@
 	                },{
 	                    name : "Add",
 	                    onClickEvent : 'NAVIGATE',
-	                    state:'app.home.manage.resources.images.add'
+	                    state:'app.home.manage.resources.add'
 	                    
 	                }]
 	            }     	
@@ -47,7 +47,7 @@
 		        data: {
 		        	 displayName: 'Images'
 		        }
-		    }).state('app.home.manage.resources.images.add',{
+		    }).state('app.home.manage.resources.add',{
 		        url:'/add',
 		        templateUrl:'views/resource/AddImage.html',
 		        controller : 'ImageCtrl',
