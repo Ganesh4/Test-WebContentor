@@ -29,10 +29,16 @@ angular.module('resources').controller('ImageCtrl',
                 },{
                     field: 'keywords', 
                     displayName: 'Keywords',
-                    cellClass : 'darkgrey-color'
+                    cellClass : 'darkgrey-color',
+                    cellTemplate:'<span class= " ui-grid-cell-contents" ng-repeat = "keyword in row.entity.keywords">{{keyword}}</span>'
                 },{
                     field: 'upload.fileSize', 
                     displayName: 'File Size',
+                    cellClass: 'orange-color'
+
+                },{
+                    field: 'upload.url', 
+                    displayName: 'Image Url',
                     cellClass: 'orange-color'
 
                 },{
@@ -58,13 +64,20 @@ angular.module('resources').controller('ImageCtrl',
 
                 }]
             } 
-            console.log('$scope.gridOptions', $scope.gridOptions);
+           
              ImageApiSrv.getImageList('4/4/images',param, 
                 function(data){
-                    console.log('Image ------------ ',data);
-                    if(data)
+                   // console.log('Image ------------ ',data);
+                    if(data){
                         $scope.gridOptions.data = data.plain();
+                        $scope.imageList = data.plain();
+                         console.log('Image ------------ ', $scope.imageList);
+
+                    }
+                
             });
+
+             
         }
     ]);
 })(angular);

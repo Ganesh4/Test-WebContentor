@@ -13,7 +13,9 @@ angular.module('assets').directive('wcButton',['Global','$parse',function(Global
 				type: '=',
 				btnData: '=',
 				onClick: '=',
-				disable: '='
+				disable: '=',
+				icon: '=',
+				state : '='
 			},
 			link:function(scope,elem,attrs){
 			
