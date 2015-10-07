@@ -5,7 +5,7 @@
 angular.module('assets').directive('wcButton',['Global','$parse',function(Global,$parse){
 		return{
 			restrict:'AE',
-			template:'<button class="btn btn-default" ng-disabled="isEnabled()" ng-click="doOnClick()">{{name}}</button> ',                
+			templateUrl:'./views/assets/button.html',                
 			scope:{
 				selectedTemplate: '=',
 				selectTemplate: '&',
