@@ -18,6 +18,7 @@
 				$scope.user = {};
 				$scope.countries = {};
 				$scope.loggedInUser = {};
+				 $scope.campaign = {};
 				var wizardSteps = $state.current.data.wizardSteps;
 				ApiSrv.accessToken();
 				
@@ -106,6 +107,12 @@
 	                });
 	            });
 
+            	 $scope.$on(Global.EVENTS.CAMPAIGN_SAVE,function(event, data){
+
+	            	
+	            	$scope.campaign.campaignFeatureId = _.keys($scope.campaign.campaignFeatureId);
+	            	console.log('campaign-----------',$scope.campaign);
+	            });
              	
 			}
 		]);

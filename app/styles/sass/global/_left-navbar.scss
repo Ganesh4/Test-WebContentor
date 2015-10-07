@@ -2,11 +2,11 @@
 
 .sidebar {    
 	padding-left: 15px;
-    padding-right: 15px;
-    position: relative;
+	padding-right: 15px;
+	position: relative;
 	height: calc(100vh - 50px);
-    top:-1px;
-    z-index: 1000;
+	top:-1px;
+	z-index: 1000;
 	background-color:$sidenavbar-color;
 }	
 	
