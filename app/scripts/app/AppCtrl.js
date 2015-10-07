@@ -11,7 +11,8 @@
 			'CommonSrv',
 			'Global',
 			'UserApiSrv',
-       		function($scope,$state, $q, ApiSrv, CommonSrv, Global, UserApiSrv){
+			'Restangular',
+       		function($scope,$state, $q, ApiSrv, CommonSrv, Global, UserApiSrv, Restangular){
 				var param = {};
 				$state.args = [];
 				$scope.user = {};
@@ -19,6 +20,7 @@
 				$scope.loggedInUser = {};
 				 $scope.campaign = {};
 				var wizardSteps = $state.current.data.wizardSteps;
+				ApiSrv.accessToken();
 				
 				/*
 				CommonSrv.getDesignCategories(function(data){
@@ -39,6 +41,16 @@
             	});
 				*/
     			//$scope.froalaOptions.froala("getSelection");
+    			$scope.$on('$stateChangeSuccess',function(event, data){
+    				console.log($state.current.name);
+    				if($state.current.name == 'app.home.manage.resources.images' ||
+    				   $state.current.name == 'app.home.manage.resources.images'){
+    					Restangular.setBaseUrl('http://192.168.1.34:8080/MicroS/');	
+    				}else{
+    					Restangular.setBaseUrl('http://192.168.1.69/Yavun/api');	
+    				}
+    				
+    			});
     			$scope.froalaOptions = {
         			buttons : ["bold", "italic", "underline", "sep", "align", "insertOrderedList", "insertUnorderedList"]
     			}

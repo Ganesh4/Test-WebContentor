@@ -11,6 +11,7 @@
 		'$urlRouterProvider',
 		'$stateProvider',
 		function($urlProvider,$stateProvider){
+
 		   	$stateProvider.state('app.home.manage.resources',{
 	            url:'/resources',
 	            template:'<ui-view></ui-view>',
@@ -21,20 +22,26 @@
 	                displayName: 'Images',
 
 	                actionBarBtn: [{
-	                    name : 'Refresh',
-	                    onClickEvent : 'REFRESH',
+	                    name : 'Export',
+	                    onClickEvent : 'EXPORT',
+	                    type  : "BUTTON"
 	                },{
-	                    name : "Export"
+	                    icon : 'fa fa-table',
+	                    type  : "icon"
 	                },{
-	                    name : "Delete",
-	                    onClickEvent : '',
+	                    icon : 'fa fa-list'
 	                },{
-	                    name : "Edit",
+	                    icon : 'ionicons ion-grid'
+	                },{
+	                    name : 'View'
+	                },{
+	                    name : 'Delete',
 	                    onClickEvent : ''
 	                },{
-	                    name : "Views"
+	                    name : 'Edit',
+	                    onClickEvent:''
 	                },{
-	                    name : "Add",
+	                    name : 'Add',
 	                    onClickEvent : 'NAVIGATE',
 	                    state:'app.home.manage.resources.add'
 	                    
@@ -52,7 +59,20 @@
 		        templateUrl:'views/resource/AddImage.html',
 		        controller : 'ImageCtrl',
 		        data: {
-		        	 displayName: 'Add'
+		        	 displayName: 'Add',
+
+		        	 actionBarBtn: [{
+	                    name : 'Delete',
+	                    onClickEvent : '',
+	                },{
+	                    name : 'Cancel',
+	                    onClickEvent : ''
+	                },{
+	                    name : 'Submit',
+	                    onClickEvent : '',
+	                    state:''
+	                    
+	                }]
 		        }
 		    });
 

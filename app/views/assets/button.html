@@ -1,10 +1,13 @@
-<ng-if = "type==BUTT">
-	<button class="btn btn-default" ng-click="doOnClick()">{{name}}</button>
+<ng-if = "type == 'BUTTON'">
+	<button class="btn btn-default" ng-disabled="isEnabled()" ng-click="doOnClick()">{{name}}</button>
 </ng-if> 
 
-<ng-if = "type == 'WIZARD_BTN'">
+<!--<ng-if = "type == 'WIZARD_BTN'">
 	<button class="btn btn-default" ng-click="doOnClick()" >previous</button>
 	<button class="btn btn-default" ng-click="doOnClick()" >next</button>
 	<button class="btn btn-default" ng-click="doOnClick()" >Ok</button>
 	<button class="btn btn-default" ng-click="doOnClick()" >Cancle</button>
+</ng-if> -->
+<ng-if = "type == 'icon'">
+<icon class=""  ng-click="doOnClick()"  title= "Table View"></icon>
 </ng-if>
