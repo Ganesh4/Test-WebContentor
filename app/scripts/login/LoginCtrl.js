@@ -8,16 +8,19 @@
         	'loginSrv',
         	'$state',
             '$cookieStore',
-        	function($scope,loginSrv,$state,$cookieStore){
+            'Global',
+        	function($scope, loginSrv, $state, $cookieStore, Global){
             	$scope.loginUser={};
-                $scope.loginCheck = function () {
-                    console.log('Login USer ----------------- ',$scope.loginUser);
-                    var loginUser = $scope.loginUser;
+                $scope.elements = $state.current.data.elements;
+                $scope.formBtns = $state.current.data.formButtons;
+                $scope.submitEvent = $state.current.data.submitEvent;
+                $scope.$on(Global.EVENTS.USER_LOGIN,function(event, data){
+                    console.log('Login USer ----------------- ',data);
+                    var loginUser = data;
                     loginSrv.loginCheck('Login',loginUser,function(data){
-                      
                         $cookieStore.put('loggedInUser',data.plain());
                         $state.go('app.home.campaign');
                     });
-                }
+                });
             }])
     })(angular)

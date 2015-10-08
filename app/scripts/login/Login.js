@@ -16,19 +16,57 @@
                 templateUrl:'views/login/login.html',
                 controller:'LoginCtrl',
                 data: {
-                      displayName: 'login',
+					displayName: 'login',
+					submitEvent: 'USER_LOGIN',
+					formButtons:[{
+                        name:'Submit',
+                        btnType:'submit',
+                        css:'btn btn-success',
+                    },{
+                    	name:'New User Registration',
+                    	onClick : 'NAVIGATE',
+	                    state : 'app.register.user'
+                    }],
+					elements:[
+				    {
+				    	rowClass :'',
+						rowElement:[{
+							name:'email',
+							//lable:'Email',
+							type: 'TEXT',
+				            required: true,
+				            validate:'emailisrequired',
+				            placeholder:'Email',
+				            model : 'email'
+						}]
+				    },{
+				    	rowClass :'',
+				    	rowElement:[{
+				            name:'password',
+				            //lable:'Password',
+				            type: 'PASSWORD',
+				            required: true,
+				            validate:'passwordisrequired',
+				            placeholder:'password',
+				            model : 'password'
+				        }]
+				    },{
+				    	rowClass :'',
+				    	rowElement:[{
+				    		name:'Remember me',
+				    		lable:'',
+				    		type:'CHECKBOX',
+				    	}]
+				    }]
                 }
-
             }).state('app.success.',{
 		        url:'/success',
 		        templateUrl:'views/login/success.html',
 		        controller : 'LoginCtrl',
 		        data: {
-		        	 displayName: 'Success'
+		        	displayName: 'Success',
+		        	
 		        }
 		    });
-
-		    
 	}]);
-
 })(angular);

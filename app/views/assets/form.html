@@ -1,20 +1,6 @@
 <form class="form_main" name="Form" novalidate="novalidate"
-                  ng-submit="submit()"
+                  ng-submit="formSubmit()"
                   validate-non-visible-controls="false">
-	<div class="row">
-		<div class="row" ng-repeat="element in elements">
-		  <div class="col-lg-4" ng-repeat = "rowElement in element.rowElement">
-		    <div class="form-group">
-		       <label>{{rowElement.lable}}</label>
-		       		<wc-input type="rowElement.type" name = "rowElement.name" model = "rowElement.model" placeholder="rowElement.placeholder" required="isRequired" validate = "rowElement.validate"></wc-input>
-		       		
-		    </div><!-- /input-group -->
-		  </div><!-- /.col-lg-4 -->
-		</div>
-		<div class="col-lg-4" ng-repeat= "btn in formBtn">
-	    	<div class="form-group">
-	    	<button ng-click= "btn.onClick" type = "btn.type"   class="btn btn-success ">{{btn.name}}</button>
-	    </div><!-- /input-group -->
-	  </div><!-- /.col-lg-4 -->
-	</div>
+	<ng-include src = "'views/assets/input.html'"></ng-include>
+	<wc-button ng-repeat = "btn in formBtns"  type="btn.btnType" name="btn.name" on-click="btn.onClick" btn-data="btn"></wc-button> 
 </form>

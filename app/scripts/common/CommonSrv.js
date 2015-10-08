@@ -93,6 +93,20 @@ angular.module('common').service('CommonSrv',
                 Restangular.all('countries').getList().then(success);
             }
 
+            //On Click Event Fire From This Location.
+            self.doOnClick = function(scope, data){
+                scope.$emit(scope.onClick, data);
+            }
+
+            //On Change Event Fire From this location.
+            self.doOnChange = function(scope, data){
+                scope.$emit(scope.onChange, data);
+            }
+
+            //On Key Up Event Fire From This Location
+            self.doOnkeyUp = function(scope, data){
+                scope.$emit(scope.onKeyUp, data);
+            }
         }
     ]);
 })(angular);

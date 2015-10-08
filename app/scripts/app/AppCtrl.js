@@ -18,7 +18,6 @@
 				$scope.countries = {};
 				$scope.loggedInUser = {};
 				var wizardSteps = $state.current.data.wizardSteps;
-				
 				/*
 				CommonSrv.getDesignCategories(function(data){
 			    	console.log('Args in AppCtrl --------  ' , data.plain());
@@ -37,7 +36,7 @@
                     $scope.templateCategories = response.plain();
             	});
 				*/
-    			//$scope.froalaOptions.froala("getSelection");
+				//$scope.froalaOptions.froala("getSelection");
     			$scope.froalaOptions = {
         			buttons : ["bold", "italic", "underline", "sep", "align", "insertOrderedList", "insertUnorderedList"]
     			}
@@ -59,7 +58,6 @@
 	            });
 
 	            $scope.$on(Global.EVENTS.ADD_NEW_USER,function(event, data){
-	                console.log('User ------- ',$scope.user);
 	                var user = $scope.user;
 	                if(!_.isUndefined(user.country))
 	                	user.country = $scope.user.country.SecurityCountryID;
@@ -72,25 +70,25 @@
 	                });
 	            });
 
-
 	            $scope.enableNext = function(){
 	            	CommonSrv.enableNext($scope);
 	            }
 	            $scope.disableNext = function(){
 	            	CommonSrv.disableNext($scope);	
 	            }
+
 	            $scope.$on(Global.EVENTS.USER_REGISTER,function(event, data){
-	                console.log('User ------- ',$scope.user);
-	                var user = $scope.user;
+	               console.log('User ------- ',data);
+	               var user = data;
 	               if(!_.isUndefined(user.country))
-	                user.country = $scope.user.country.SecurityCountryID;
-	              if(!_.isUndefined(user.state))
-	                user.state = $scope.user.state.SecurityStateID;
-	                UserApiSrv.addNewUser( 'user/register', user,function(response){
-	                	$state.go('app.success');
-	                	console.log("Success");
-	                },function(response){
-	                	console.log("Error");
+		                user.country = $scope.user.country.SecurityCountryID;
+	               if(!_.isUndefined(user.state))
+		                user.state = $scope.user.state.SecurityStateID;
+		                UserApiSrv.addNewUser( 'user/register', user,function(response){
+		                	$state.go('app.register.success');
+		                	console.log("Success");
+		                },function(response){
+		                	console.log("Error");
 	                });
 	            });
 

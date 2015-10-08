@@ -1,26 +1,57 @@
+<div class="" ng-repeat="(key , element) in elements">
+  <div ng-class="element.rowClass" ng-repeat = "rowElement in element.rowElement">
+    <div class="form-group">
+       <label ng-if="rowElement.lable !== undefined">{{rowElement.lable}}</label>
+		<div ng-if="rowElement.type === 'DROP_DOWN'">
+		    <select ng-model="formData[rowElement.model]" class = "form-control" 
+				ng-change = "{{rowElement.onChange}}" ng-options="{{rowElement.ngOptions}}">
+				<!--<option ng-repeat = "args in array">{{args}}</option>-->
+			</select>
+		</div>
+		<div ng-if="rowElement.type === 'TEXT'">
 
-<div ng-if="type === 'DROP_DOWN'">
-	<select ng-model = "model" class = "form-control" 
-        ng-options = "option in options"></select>
+		<input ng-if ="rowElement.required" class="form-control" 
+			name="{{rowElement.name}}" ng-model="formData[rowElement.model]" 
+			placeholder="{{rowElement.placeholder}}" required="rowElement.required"  required-err-type="{{rowElement.validate}}" />
+
+		<input ng-if ="!rowElement.required" class="form-control" name="{{rowElement.name}}" ng-model="formData[rowElement.model]" placeholder="{{rowElement.placeholder}}" />
+		</div>
+
+		<div ng-if="rowElement.type === 'PASSWORD'">
+
+			<input type="password" ng-if ="rowElement.required" class="form-control" 
+				name="{{rowElement.name}}" ng-model="formData[rowElement.model]" 
+				placeholder="{{rowElement.placeholder}}" required="rowElement.required"  required-err-type="{{rowElement.validate}}" />
+
+			<input type="password" ng-if ="!rowElement.required" class="form-control" name="{{rowElement.name}}" ng-model="formData[rowElement.model]" placeholder="{{rowElement.placeholder}}" />
+		</div>
+
+		<div ng-if="rowElement.type === 'PATTERN'">
+		<input class="form-control" name="{{rowElement.name}}" 
+			ng-model="formData[rowElement.model]" placeholder="{{placeholder}}" ng-pattern="{{rowElement.pattern}}" pattern-err-type="{{rowElement.validate}}" />
+		</div>
+
+		<div ng-if="rowElement.type === 'RADIO'">
+		<input type="radio" name = "{{rowElement.name}}" 
+			ng-model = "formData[rowElement.model]" ng-checked = "formData[rowElement.model]" ng-model="formData[rowElement.model]">{{rowElement.name}}</input>
+		</div>
+		<div ng-if="rowElement.type === 'CHECKBOX'">
+		<label>
+		<input type="checkbox" name = "{{rowElement.name}}" 
+			ng-model = "formData[rowElement.model]" ng-checked = "formData[rowElement.model]" ng-click = "rowElement.onClick"> {{rowElement.name}}</input>
+		</label>
+		</div> 
+
+		<div ng-if="rowElement.type === 'CAPTCHA'">
+			<div class="g-recaptcha" ng-model = "formData[rowElement.model]" 
+				name = "{{rowElement.name}}" data-sitekey="6Lc_0f4SAAAAAF9ZA_d7Dxi9qRbPMMNW-tLSvhe6">
+			</div>
+		</div>
+
+		<div ng-if="rowElement.type === 'BUTTON'">
+			<wc-button name = "rowElement.name" type = "rowElement.btnType">{{rowElement.name}}></wc-button>
+	 	</div> 
+    </div><!-- /input-group -->
+  </div><!-- /.col-lg-4 -->
 </div>
-<div ng-if="type === 'TEXT'">
-	<input ng-if ="required" class="form-control" name="{{name}}" ng-model="model" placeholder="placeHolder" required="required"  required-err-type="{{validate}}" />
-
-	<input ng-if ="!required" class="form-control" name="{{name}}" ng-model="model" placeholder="placeHolder" required-err-type="{{validate}}" />
-</div>
-
-<div ng-if="type === 'RADIO'">
-	<input type="radio" ng-click = "onClick" ng-model="model">{{name}}</input>
-</div>
-<div ng-if="type === 'CHECKBOX'">
-	<label>
-        <input type="checkbox" ng-click = "onClick"> {{name}}
-	</label>
-</div> 
-
-<div class="form-group" ng-if="type === 'CAPTCHA'">
-            <label>Prove you are not a robot </label><br/>
-           <div class="g-recaptcha" ng-model="user.captcha" name = "captcha" data-sitekey=
-           "6Lc_0f4SAAAAAF9ZA_d7Dxi9qRbPMMNW-tLSvhe6"></div>
-</div><!-- /input-group -->
 

@@ -4,25 +4,23 @@
 'use strict';
 
 (function(angular){
-    angular.module('microsite').directive('wcHeader',function()
-        {
-
-
-                return{
-
-                    restrict:'AE',
-                    templateUrl:'./views/commons/header/header.html',
-                    controller:('HeaderCtrl',['$scope','$state'],function($scope,$state)
-                            {
-
-                                
-
-
-
-
-                            })
-
-
-                }
-        })
-     })(angular);
+    angular.module('microsite').directive('wcHeader',
+        [
+        '$state',
+        function(state){
+        return{
+            restrict:'AE',
+            templateUrl:'./views/commons/header/header.html',
+            link:function(scope,attr,element){
+                scope.$watch(function(scope){
+                    return state.current.name;
+                },function(newValue,oldValue){
+                    if(newValue!==undefined){
+                        scope.mainNav = state.current.data.mainNav;
+                        scope.menues = state.current.data.menues;
+                    }
+                });
+            }    
+        }
+    }])
+})(angular);

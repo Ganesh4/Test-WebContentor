@@ -22,7 +22,9 @@
 
 	angular.module('manage',['home']);
 
-	angular.module('user', ['manage' , 'reCAPTCHA']);
+	angular.module('user', ['manage']);
+
+
 
 	angular.module('role',['manage']);
 
@@ -38,8 +40,10 @@
 
 	angular.module('subheader',['home']);
 
+		angular.module('register',['home','reCAPTCHA'])
+
 	angular.module('editor',['common','froala']);
 
-	angular.module('microsite',['login','home','overview','common','design','header','subheader','editor','campaign','manage','user','role','resources']);
+	angular.module('microsite',['login','home','overview','common','design','header','subheader','editor','campaign','manage','user','role','resources', 'register']);
 
 })(angular);
