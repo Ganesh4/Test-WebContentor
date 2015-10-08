@@ -5,10 +5,11 @@
 <div class="media media-wrapper" ng-repeat=" list in imageList">
     <div class="media-left media-middle media-left-box">
        <img class="media-object" src={{list.upload.url}} alt="Image Name">
-       <h3 class="media-heading image-heading">{{list.upload.fileName}}</h3>
+       
     </div>
     <div class="media-body">
-      <h4 class="media-heading">Description</h4>
+     <h2 class="media-heading image-heading">{{list.upload.fileName}}</h2>
+      <h3 class="media-heading">Description</h3>
      				{{list.description}}
           <div class="tabs-list-row">
              <h4>Keywords</h4>

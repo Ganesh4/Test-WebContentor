@@ -44,7 +44,8 @@
     			$scope.$on('$stateChangeSuccess',function(event, data){
     				console.log($state.current.name);
     				if($state.current.name == 'app.home.manage.resources.images' ||
-    				   $state.current.name == 'app.home.manage.resources.gridlist'){
+    				   $state.current.name == 'app.home.manage.resources.grid'  ||
+					   $state.current.name == 'app.home.manage.resources.list'){
     					Restangular.setBaseUrl('http://192.168.1.34:8080/MicroS/');	
     				}else{
     					Restangular.setBaseUrl('http://192.168.1.69/Yavun/api');	
