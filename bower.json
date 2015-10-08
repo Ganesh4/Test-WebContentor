@@ -23,7 +23,8 @@
     "angular-ui-grid" : "~3.0.6",
     "angular-re-captcha" : "~0.2.0",
     "angular-cookies" : "~1.2.29",
-    "angular-auto-validate" : "~1.18.17"
+    "angular-auto-validate" : "~1.18.17",
+    "angularjs-datepicker" : "~0.2.11"
   },
   "resolutions": {
     "angular": ">= 1.0.8"

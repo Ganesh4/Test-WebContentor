@@ -1,0 +1,29 @@
+<div class="main_rhs_wrapper">
+	<!-- Start Second view Row -->
+
+<!--list one -->
+<div class="media media-wrapper" ng-repeat=" list in imageList">
+    <div class="media-left media-middle media-left-box">
+       <img class="media-object" src={{list.upload.url}} alt="Image Name">
+       
+    </div>
+    <div class="media-body">
+      <span class="media_header">{{list.upload.fileName}}</span>
+      <span class="media_normal_text">Description</span>
+     				{{list.description}}
+          <div class="tabs-list-row">
+             <span>Keywords</span>
+             <span ng-repeat = "keyword in list.keywords">{{keyword}}</span>     
+          </div>
+    </div>
+    <div class="media-left media-middle media-right-box">
+     <li><p>Created by</p><span> Admin</span></li>
+     <li class="ui-grid-cell-contents"><p>Created on</p><span> {{list.createdDate | FormatDateFilter}}</span></li>
+     <li><p>Size</p><span> {{list.upload.fileSize}}</span></li>
+     <li><p>Category</p><span> Design</span></li>
+    </div>
+</div>
+<!--list one -->
+
+<!-- End Second view Row -->
+</div>

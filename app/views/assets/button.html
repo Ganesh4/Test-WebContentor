@@ -1,10 +1,19 @@
-<ng-if = "type==BUTT">
-	<button class="btn btn-default" ng-click="doOnClick()">{{name}}</button>
-</ng-if> 
+<button class="btn btn-default" ng-disabled="isEnabled()" ng-click="doOnClick()" ng-if = "type=='Button'">{{name}}</button>
+<button class="btn btn-default" ng-disabled="isEnabled()" ng-click="doOnClick()"
+ ng-if = "type == undefined">{{name}}</button>
+ 
+ 
 
-<ng-if = "type == 'WIZARD_BTN'">
+ 
+
+<i class="{{icon}}"  ng-if = "type == 'text'">{{name}}</i>
+<!--<ng-if = "type == 'WIZARD_BTN'">
 	<button class="btn btn-default" ng-click="doOnClick()" >previous</button>
 	<button class="btn btn-default" ng-click="doOnClick()" >next</button>
 	<button class="btn btn-default" ng-click="doOnClick()" >Ok</button>
 	<button class="btn btn-default" ng-click="doOnClick()" >Cancle</button>
-</ng-if>
+</ng-if> -->
+
+<i class="{{icon}}" ui-sref-active = "nav-selected" ui-sref = "{{state}}" ng-click="doOnClick()" ng-if = "type == 'icon'"  title= "{{name}}"></i>
+
+
