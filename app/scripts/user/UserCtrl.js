@@ -49,6 +49,7 @@ angular.module('user').controller('UserCtrl',
                    // cellFilter:' date : MM-dd-yyyy hh:mm:ss'
                 }]
             } 
+
             UserApiSrv.getUserList('users',param, 
                 function(data){
                     if(data)

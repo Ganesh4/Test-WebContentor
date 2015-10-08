@@ -19,7 +19,7 @@
 
 	        }).state('app.home.manage.role.list',{
 		        url:'/list',
-		        templateUrl:'views/user/RoleList.html',
+		        templateUrl:'views/role/RoleList.html',
 		        controller : 'RoleCtrl',
 		        data: {
 		        	 displayName: 'Roles',
