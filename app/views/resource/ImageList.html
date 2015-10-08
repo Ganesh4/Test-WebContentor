@@ -8,11 +8,11 @@
        
     </div>
     <div class="media-body">
-     <h2 class="media-heading image-heading">{{list.upload.fileName}}</h2>
-      <h3 class="media-heading">Description</h3>
+      <span class="media_header">{{list.upload.fileName}}</span>
+      <span class="media_normal_text">Description</span>
      				{{list.description}}
           <div class="tabs-list-row">
-             <h4>Keywords</h4>
+             <span>Keywords</span>
              <span ng-repeat = "keyword in list.keywords">{{keyword}}</span>     
           </div>
     </div>
