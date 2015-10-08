@@ -4,7 +4,7 @@
           box-sizing: $val;
 }
 
-@mixin user-select($val...) {
+@mixin user-select($val) {
   -webkit-user-select: $val;
      -moz-user-select: $val;
       -ms-user-select: $val;
@@ -36,7 +36,7 @@
 
 @mixin radial-gradient($gradient...) {
   background-image: -webkit-radial-gradient($gradient);
-  background-image:    -moz-radial-gradient($gradient);
+  background-image:   -moz-radial-gradient($gradient);
   background-image:      -o-radial-gradient($gradient);
   background-image:         radial-gradient($gradient);
 }
@@ -103,3 +103,50 @@
       -ms-border-radius: $radius;
           border-radius: $radius;
 }
+
+/*================== for imge view effect button  =================*/
+
+@mixin view_img_effect($view_img_effect_1) {  
+	-webkit-transition: $view_img_effect_1;
+	   -moz-transition: $view_img_effect_1;
+	     -o-transition: $view_img_effect_1;
+	    -ms-transition: $view_img_effect_1;
+	        transition: $view_img_effect_1;	
+	}
+	
+
+/*=============== Transform ===================*/	
+@mixin transform($transforms) {
+	-webkit-transform: $transforms;
+	   -moz-transform: $transforms;
+	     -o-transform: $transforms;
+	    -ms-transform: $transforms;	
+          transform: $transforms;
+}
+
+@mixin scale($scale) {
+	 @include transform(scale($scale));
+} 
+
+/*=============== Transform ===================*/
+
+/*=============== Opacity ===================*/
+@mixin yavun-opacity($yopacity) {
+  filter: alpha(opactiy=($yopacity * 100));
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$yopacity * 100})";
+  -moz-opacity: $yopacity;
+  -khtml-opacity: $yopacity;
+   opacity: $yopacity;
+}
+/*=============== Opacity ===================*/
+
+
+
+
+
+ 
+
+ 
+
+
+

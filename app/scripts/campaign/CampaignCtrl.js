@@ -7,8 +7,11 @@
 		'Restangular',
 		'$cookieStore',
 		function($scope,$state,Restangular,$cookieStore){
+           
 			$scope.data = $state.current.data;
-			$scope.loggedInUser = $cookieStore.get('loggedInUser');
-			console.log("Campaign ----------- ",$scope.loggedInUser);
+			$scope.features = ['email','microsite', 'banner'];
+
+			
+			
 		}]);
 })(angular);

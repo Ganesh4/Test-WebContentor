@@ -39,11 +39,18 @@ angular.module('role').controller('RoleCtrl',
 
                 }]
             } 
+
              RoleApiSrv.getRoleList('roles',param, 
                 function(data){
                     console.log('Roles ------------ ',data);
                     if(data)
                         $scope.gridOptions.data = data.plain();
+            });
+             
+              ApiSrv.getList('roles',param,function(data){
+                if(data)
+                    $scope.roles = data.plain();
+                console.log('Roles ---------------- ',$scope.roles);
             });
         }
     ]);

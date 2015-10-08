@@ -39,7 +39,7 @@
                         }).state('app.home.campaign.general', {
                             url: '/general',
                             templateUrl:"views/campaign/NewCampaign.html",
-                            // controller:'CampaignCtrl',
+                             controller:'CampaignCtrl',
                                 data: {
                                 displayName: 'General',
                                 LeftNavList:[{
@@ -63,7 +63,7 @@
                                                 onClickEvent : 'CANCEL',
                                             },{
                                                 name : "Save & Exit",
-                                                onClickEvent : '',
+                                                onClickEvent : 'CAMPAIGN_SAVE',
                                                 
                                             },{
                                                  name : "Save",

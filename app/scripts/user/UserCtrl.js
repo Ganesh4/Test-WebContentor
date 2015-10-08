@@ -80,13 +80,6 @@ angular.module('user').controller('UserCtrl',
            }          
             
 
-
-            ApiSrv.getList('roles',param,function(data){
-                if(data)
-                    $scope.roles = data.plain();
-                console.log('Roles ---------------- ',$scope.roles);
-            });
-
             CommonSrv.getCountriesList(function(data){
               $scope.countries = data.plain();
               console.log('countries-------------',$scope.countries);

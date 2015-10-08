@@ -1,130 +1,71 @@
 /* Scss Document */
 
 /*==================== 10th ====================*/
-.view-tenth img {
-   -webkit-transform: scaleY(1);
-   -moz-transform: scaleY(1);
-   -o-transform: scaleY(1);
-   -ms-transform: scaleY(1);
-   transform: scaleY(1);
-   -webkit-transition: all 0.7s ease-in-out;
-   -moz-transition: all 0.7s ease-in-out;
-   -o-transition: all 0.7s ease-in-out;
-   -ms-transition: all 0.7s ease-in-out;
-   transition: all 0.7s ease-in-out;
-   width: 100%;
-}
+.view-tenth img {   
+	@include transform(scale(1));  
+	@include view_img_effect(all 0.7s ease-in-out);   
+	width: 100%;
+	}
+	
 .view-tenth .mask {
-   background-color: rgba(36, 172, 227, 0.79);
-   -webkit-transition: all 0.5s linear;
-   -moz-transition: all 0.5s linear;
-   -o-transition: all 0.5s linear;
-   -ms-transition: all 0.5s linear;
-   transition: all 0.5s linear;
-   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
-   filter: alpha(opacity=0);
-   opacity: 0;
-}
+	background-color: rgba(36, 172, 227, 0.79);
+	@include view_img_effect(all 0.5s linear);
+	@include yavun-opacity(0);
+	}
+	
 .view-tenth h2 {
-   background: transparent;
-   margin: 20px 40px 0px 40px;
-   -webkit-transform: scale(0);
-   -moz-transform: scale(0);
-   -o-transform: scale(0);
-   -ms-transform: scale(0);
-   transform: scale(0);
-   color: #333;
-   -webkit-transition: all 0.5s linear;
-   -moz-transition: all 0.5s linear;
-   -o-transition: all 0.5s linear;
-   -ms-transition: all 0.5s linear;
-   transition: all 0.5s linear;
-   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
-   filter: alpha(opacity=0);
-   opacity: 0;
-}
+	background: transparent;
+	margin: 20px 40px 0px 40px;   
+	color: #333;
+	@include transform(scale(0));
+	@include view_img_effect(all 0.5s linear);
+	@include yavun-opacity(0);
+	}
+	
 .view-tenth h3 {
 	font-size: 16px;
 	color: #464646;
 	text-align: left;
 	margin-bottom: 5px;
 	}
+	
 .view-tenth p {
-   color: #fff;
-   font-size: 14px;
-   text-align: center;
-   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
-   filter: alpha(opacity=0);
-   opacity: 0;
-   -webkit-transform: scale(0);
-   -moz-transform: scale(0);
-   -o-transform: scale(0);
-   -ms-transform: scale(0);
-   transform: scale(0);
-   -webkit-transition: all 0.5s linear;
-   -moz-transition: all 0.5s linear;
-   -o-transition: all 0.5s linear;
-   -ms-transition: all 0.5s linear;
-   transition: all 0.5s linear;
-}
+	color: #fff;
+	font-size: 14px;
+	text-align: center; 
+	@include yavun-opacity(0);   
+	@include transform(scale(0));
+	@include view_img_effect(all 0.5s linear);
+	}
+	
 .view-tenth span {
-   color: #fff;
-   font-size: 14px;
-   text-align: center;
-   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
-   filter: alpha(opacity=0);
-   opacity: 0;
-   -webkit-transform: scale(0);
-   -moz-transform: scale(0);
-   -o-transform: scale(0);
-   -ms-transform: scale(0);
-   transform: scale(0);
-   -webkit-transition: all 0.5s linear;
-   -moz-transition: all 0.5s linear;
-   -o-transition: all 0.5s linear;
-   -ms-transition: all 0.5s linear;
-   transition: all 0.5s linear;
-}
-.view-tenth a.info {
-   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
-   filter: alpha(opacity=0);
-   opacity: 0;
-   -webkit-transform: scale(0);
-   -moz-transform: scale(0);
-   -o-transform: scale(0);
-   -ms-transform: scale(0);
-   transform: scale(0);
-   -webkit-transition: all 0.5s linear;
-   -moz-transition: all 0.5s linear;
-   -o-transition: all 0.5s linear;
-   -ms-transition: all 0.5s linear;
-   transition: all 0.5s linear;
-}
-.view-tenth:hover img {
-   -webkit-transform: scale(1.5,1.5);
-   -moz-transform: scale(1.5,1.5);
-   -o-transform: scale(1.5,1.5);
-   -ms-transform: scale(1.5,1.5);
-   transform: scale(1.5,1.5);
-   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
-   filter: alpha(opacity=0);
-   opacity: 50;
-}
-.view-tenth:hover .mask {
-   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
-   filter: alpha(opacity=100);
-   opacity: 1;
-}
-.view-tenth:hover h2,.view-tenth:hover p,.view-tenth:hover span,.view-tenth:hover a.info {
-   -webkit-transform: scale(1);
-   -moz-transform: scale(1);
-   -o-transform: scale(1);
-   -ms-transform: scale(1);
-   transform: scale(1);
-   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
-   filter: alpha(opacity=100);
-   opacity: 1;
-}		
+	color: #fff;
+	font-size: 14px;
+	text-align: center;  
+	@include yavun-opacity(0); 
+	@include transform(scale(0));
+	@include view_img_effect(all 0.5s linear);
+	}
+	
+.view-tenth a.info {  
+	@include yavun-opacity(0);  
+	@include transform(scale(0));
+	@include view_img_effect(all 0.5s linear);
+	}
+	
+.view-tenth:hover img {   
+	@include transform(scale(1.5,1.5));   
+	@include yavun-opacity(0);
+	}
+	
+.view-tenth:hover .mask { 
+    @include yavun-opacity(100);
+	}
+	
+.view-tenth:hover h2,.view-tenth:hover p,.view-tenth:hover span,.view-tenth:hover a.info {   
+	@include transform(scale(1));  
+	@include yavun-opacity(100);
+	}		
 				
 /*==================== Comman ====================*/
 
@@ -138,19 +79,23 @@
    cursor: default;
    height: 300px;
    cursor: pointer;
-}
+	}
+	
 .view .mask,.view .content {
    position: absolute;
    overflow: hidden;
    top: 0;
    left: 0;
    height: 100%;
+   width:100%;
    padding: 25px;
-}
+	}
+	
 .view img {
    display: block;
    position: relative;
-}
+   }
+	
 .view h2 {
    text-transform: uppercase;
    color: #fff;
@@ -160,14 +105,16 @@
    padding: 10px 0px;
    margin: 0px 0px 5px 0px;
    border-bottom: 1px solid #137ca6;
-}
+   }
+	
 .view.mask p {
    font-size: 12px;
    position: relative;
    color: #fff;
    padding: 10px 20px 20px;
    text-align: center;
-}
+   }
+   
 .view a.info {
    display: inline-block;
    text-decoration: none;
@@ -178,9 +125,4 @@
    -webkit-box-shadow: 0 0 1px #000;
    -moz-box-shadow: 0 0 1px #000;
    box-shadow: 0 0 1px #000;
-}
-/*.view a.info: hover {
-   -webkit-box-shadow: 0 0 5px #000;
-   -moz-box-shadow: 0 0 5px #000;
-   box-shadow: 0 0 5px #000;
-}*/
+	}
