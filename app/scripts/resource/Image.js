@@ -1,3 +1,4 @@
+
 /**
  * 
  *
@@ -22,31 +23,30 @@
 	                displayName: 'Images',
 
 	                actionBarBtn: [{
+	                    name : 'Export',
+	                    onClickEvent : 'EXPORT',
+	                    type  : "Button"
+	                },{
 	                	 name : 'Table View',
-	                    icon : 'fa fa-table view_grid_button',
+	                    icon : 'fa fa-table',
 	                    type  : "icon",
 	                    onClickEvent : '',
 	                    state:'app.home.manage.resources.images.table'
 	                },{
 	                	name : 'List View',
-	                    icon : 'fa fa-list view_grid_button',
+	                    icon : 'fa fa-list',
 	                    type  : "icon",
 	                    onClickEvent : '',
 	                    state:'app.home.manage.resources.images.list'
 	                },{
 	                	name : 'Grid View',
-	                    icon : 'fa fa-th-large view_grid_button',
+	                    icon : 'fa fa-th-large',
 	                    type  : "icon",
 	                    onClickEvent : '',
 	                    state:'app.home.manage.resources.images.grid'
 	                },{
 	                    name : 'View',
-	                    type : 'text',
-						icon : 'view_grid_text'
-	                },{
-	                    name : 'Export',
-	                    onClickEvent : 'EXPORT',
-	                    type  : "Button"
+	                    type : 'text'
 	                },{
 	                    name : 'Delete',
 	                    onClickEvent : '',
@@ -70,7 +70,7 @@
 	        	abstract:true
 	        }).state('app.home.manage.resources.images.table',{
 		        url:'/table',
-		        template:'<wc-grid grid-options = "gridOptions"></wc-grid>',
+		        template:'<wc-grid grid-options = "gridOptions" ui-grid-selection class="grid"></wc-grid>',
 		        controller : 'ImageCtrl',
 		        data: {
 		        	 displayName: 'Images'
@@ -104,7 +104,7 @@
 	                    onClickEvent : ''
 	                },{
 	                    name : 'Submit',
-	                    onClickEvent : '',
+	                    onClickEvent : 'ADD_NEW_IMAGE',
 	                    state:''
 	                }]
 		        }

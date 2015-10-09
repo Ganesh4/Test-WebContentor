@@ -20,6 +20,8 @@
 
 	angular.module('campaign',['home']);
 
+	angular.module('email',['campaign']);
+
 	angular.module('manage',['home']);
 
 	angular.module('user', ['manage']);
@@ -44,6 +46,6 @@
 
 	angular.module('editor',['common','froala']);
 
-	angular.module('microsite',['login','home','overview','common','design','header','subheader','editor','campaign','manage','user','role','resources', 'register']);
+	angular.module('microsite',['login','home','overview','common','design','header','subheader','editor','campaign','manage','user','role','resources', 'register', 'email']);
 
 })(angular);

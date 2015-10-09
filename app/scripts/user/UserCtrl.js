@@ -12,7 +12,6 @@ angular.module('user').controller('UserCtrl',
         'UserApiSrv',
         'Global',
         '$cookieStore',
-        
         function($scope ,$state, ApiSrv,CommonSrv,UserApiSrv,Global,$cookieStore){
             $scope.loggedInUser = $cookieStore.get('loggedInUser');
             console.log('$scope ----------- ',$scope.loggedInUser);
@@ -46,7 +45,7 @@ angular.module('user').controller('UserCtrl',
                     displayName:'Modification Date',
                     cellClass : 'green-color',
                     cellTemplate:'<div class="ui-grid-cell-contents">{{row.entity.ModificationDate | FormatDateFilter}}</div>'
-                   // cellFilter:' date : MM-dd-yyyy hh:mm:ss'
+                   
                 }]
             } 
 
@@ -90,6 +89,11 @@ angular.module('user').controller('UserCtrl',
             $scope.updateCountry = function(){
               $scope.states = $scope.user.country.SecurityStates;
             }
+             ApiSrv.getList('roles',param,function(data){
+                if(data)
+                    $scope.roles = data.plain();
+                console.log('Roles ---------------- ',$scope.roles);
+            });
            
         }
     ]);
