@@ -1,3 +1,4 @@
+
 /**
  * 
  *
@@ -22,6 +23,10 @@
 	                displayName: 'Images',
 
 	                actionBarBtn: [{
+	                    name : 'Export',
+	                    onClickEvent : 'EXPORT',
+	                    type  : "Button"
+	                },{
 	                	 name : 'Table View',
 	                    icon : 'fa fa-table view_grid_button',
 	                    type  : "icon",
@@ -42,11 +47,7 @@
 	                },{
 	                    name : 'View',
 	                    type : 'text',
-						icon : 'view_grid_text'
-	                },{
-	                    name : 'Export',
-	                    onClickEvent : 'EXPORT',
-	                    type  : "Button"
+						icon : 'view_grid_text' 
 	                },{
 	                    name : 'Delete',
 	                    onClickEvent : '',
@@ -66,7 +67,7 @@
 	            }     	
 	        }).state('app.home.manage.resources.images',{
 		        url:'/images/table',
-		        template:'<wc-grid grid-options = "gridOptions"></wc-grid>',
+		        template:'<wc-grid grid-options = "gridOptions" ui-grid-selection class="grid"></wc-grid>',
 		        controller : 'ImageCtrl',
 		        data: {
 		        	 displayName: 'Images'
@@ -86,7 +87,7 @@
 		        	 displayName: 'Image/List'
 		        }
 		    }).state('app.home.manage.resources.add',{
-		        url:'image/add',
+		        url:'/image/add',
 		        templateUrl:'views/resource/AddImage.html',
 		        controller : 'ImageCtrl',
 		        data: {
@@ -100,14 +101,12 @@
 	                    onClickEvent : ''
 	                },{
 	                    name : 'Submit',
-	                    onClickEvent : '',
+	                    onClickEvent : 'ADD_NEW_IMAGE',
 	                    state:''
 	                    
 	                }]
 		        }
-		    });
-
-		    
+		    });	    
 	}]);
 
 })(angular);
