@@ -93,6 +93,18 @@ angular.module('common').service('CommonSrv',
                 Restangular.all('countries').getList().then(success);
             }
 
+            //Enable NEXT BUTTON
+            self.enableSave = function(scope){
+                scope.$broadcast(Global.EVENTS.CAMPAIGN_SAVE_ENABLE);
+                scope.$broadcast(Global.EVENTS.CAMPAIGN_SAVE_EXIT_ENABLE);
+            }
+
+            //DISABLE NEXT BUTTON
+            self.disableSave = function(scope){
+                scope.$broadcast(Global.EVENTS.CAMPAIGN_SAVE_DISABLE);
+                scope.$broadcast(Global.EVENTS.CAMPAIGN_SAVE_EXIT_DISABLE);
+            }
+
         }
     ]);
 })(angular);

@@ -11,14 +11,15 @@
 			'CommonSrv',
 			'Global',
 			'UserApiSrv',
+			'CampaignApiSrv',
 			'Restangular',
-       		function($scope,$state, $q, ApiSrv, CommonSrv, Global, UserApiSrv, Restangular){
+       		function($scope,$state, $q, ApiSrv, CommonSrv, Global, UserApiSrv, CampaignApiSrv, Restangular){
 				var param = {};
 				$state.args = [];
 				$scope.user = {};
 				$scope.countries = {};
 				$scope.loggedInUser = {};
-				 $scope.campaign = {};
+				$scope.campaign = {};
 				var wizardSteps = $state.current.data.wizardSteps;
 				ApiSrv.accessToken();
 				
@@ -47,7 +48,8 @@
     				   $state.current.name == 'app.home.manage.resources.images'){
     					Restangular.setBaseUrl('http://192.168.1.34:8080/MicroS/');	
     				}else{
-    					Restangular.setBaseUrl('http://192.168.1.69/Yavun/api');	
+    					Restangular.setBaseUrl('http://192.168.1.69/Yavun/api');
+    					Restangular.configuration.defaultRequestParams = {};	
     				}
     				
     			});
@@ -108,12 +110,34 @@
 	            });
 
             	 $scope.$on(Global.EVENTS.CAMPAIGN_SAVE,function(event, data){
-
-	            	
 	            	$scope.campaign.campaignFeatureId = _.keys($scope.campaign.campaignFeatureId);
+	            	
 	            	console.log('campaign-----------',$scope.campaign);
+	            	ApiSrv.post('campaign',$scope.campaign,function(data){
+	            		console.log('data------------',$scope.campaign);
+	            	});
+	            	$state.go('app.home.campaign.detail');
 	            });
+
+            	 $scope.$on(Global.EVENTS.CAMPAIGN_SAVE_EXIT,function(event, data){
+	            	$scope.campaign.campaignFeatureId = _.keys($scope.campaign.campaignFeatureId);
+	            	
+	            	console.log('campaign-----------',$scope.campaign);
+	            	ApiSrv.post('campaign',$scope.campaign,function(data){
+	            		console.log('data------------',$scope.campaign);
+	            	});
+	            	$state.go('app.home.campaign');
+	            });
+            	 
+
+	            $scope.enableSave = function(){
+	            	CommonSrv.enableSave($scope);
+	            }
+	            $scope.disableSave = function(){
+	            	CommonSrv.disableSave($scope);	
+	            }
              	
+             
 			}
 		]);
 })(angular);
