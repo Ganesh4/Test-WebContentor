@@ -55,11 +55,11 @@
 	
 .view-tenth:hover img {   
 	@include transform(scale(1.5,1.5));   
-	@include yavun-opacity(0);
+	@include yavun-opacity(100);
 	}
 	
 .view-tenth:hover .mask { 
-    @include yavun-opacity(100);
+    @include yavun-opacity(50);
 	}
 	
 .view-tenth:hover h2,.view-tenth:hover p,.view-tenth:hover span,.view-tenth:hover a.info {   
