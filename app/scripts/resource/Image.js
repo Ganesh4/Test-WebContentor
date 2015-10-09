@@ -28,25 +28,26 @@
 	                    type  : "Button"
 	                },{
 	                	 name : 'Table View',
-	                    icon : 'fa fa-table',
+	                    icon : 'fa fa-table view_grid_button',
 	                    type  : "icon",
 	                    onClickEvent : '',
 	                    state:'app.home.manage.resources.images.table'
 	                },{
 	                	name : 'List View',
-	                    icon : 'fa fa-list',
+	                    icon : 'fa fa-list view_grid_button',
 	                    type  : "icon",
 	                    onClickEvent : '',
 	                    state:'app.home.manage.resources.images.list'
 	                },{
 	                	name : 'Grid View',
-	                    icon : 'fa fa-th-large',
+	                    icon : 'fa fa-th-large view_grid_button',
 	                    type  : "icon",
 	                    onClickEvent : '',
 	                    state:'app.home.manage.resources.images.grid'
 	                },{
 	                    name : 'View',
-	                    type : 'text'
+	                    type : 'text',
+						icon : 'view_grid_text' 
 	                },{
 	                    name : 'Delete',
 	                    onClickEvent : '',
