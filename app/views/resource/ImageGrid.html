@@ -1,0 +1,34 @@
+
+
+<!--- Start Main Wrapper -->
+<div class="main_rhs_wrapper">
+
+
+<!--Start First view Row -->
+<div class="row">
+
+<!-- Start image box 1 -->
+    <div class="col-sm-6 col-md-4" ng-repeat=" grid in imageList">
+      <div class="thumbnail">
+            <div class="view view-tenth">
+                <img src={{grid.upload.url}} />
+                <div class="mask">
+                    <h2>{{grid.upload.fileName}}</h2>
+                    <p>{{grid.description}}</p>
+                    <div class="media-left media-middle grid-box">
+                       <li><p>Category</p><span> {{grid.category.name}}</span></li>
+                    </div>
+                    <!--- tabs Start-->
+                    <div class="tabs-row">
+                    <span ng-repeat = "keyword in grid.keywords">{{keyword}}</span> 
+                    </div>
+                </div>
+            </div>
+      </div>
+    </div>
+<!-- End image box 1 -->
+    
+</div>
+</div>
+<!--- End Main Wrapper -->
+

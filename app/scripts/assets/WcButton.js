@@ -13,7 +13,9 @@ angular.module('assets').directive('wcButton',['Global','$parse',function(Global
 				type: '=',
 				btnData: '=',
 				onClick: '=',
-				disable: '='
+				disable: '=',
+				icon: '=',
+				state : '='
 			},
 			link:function(scope,elem,attrs){
 			
@@ -52,7 +54,7 @@ angular.module('assets').directive('wcButton',['Global','$parse',function(Global
 	            scope.$on(Global.EVENTS.PREVIOUS_BTN_ENABLE,function(event, data){
 	                scope.PREVIOUS_BTN_DISABLE = false;
 	            });
-
+	            
 	            scope.$on(Global.EVENTS.CAMPAIGN_SAVE_ENABLE,function(event, data){
 	                scope.CAMPAIGN_SAVE_DISABLE = false;
 	            });
@@ -68,6 +70,7 @@ angular.module('assets').directive('wcButton',['Global','$parse',function(Global
 	            scope.$on(Global.EVENTS.CAMPAIGN_SAVE_EXIT_DISABLE,function(event, data){
 	                scope.CAMPAIGN_SAVE_EXIT_DISABLE = true;
 	            });
+
 			}
 	  };
   }]);
