@@ -12,13 +12,16 @@
 			'Global',
 			'UserApiSrv',
 			'Restangular',
-       		function($scope,$state, $q, ApiSrv, CommonSrv, Global, UserApiSrv, Restangular){
+			'ImageApiSrv',
+       		function($scope,$state, $q, ApiSrv, CommonSrv, Global, UserApiSrv, Restangular,ImageApiSrv){
 				var param = {};
 				$state.args = [];
 				$scope.user = {};
+				$scope.image = {};
 				$scope.countries = {};
 				$scope.loggedInUser = {};
-				 $scope.campaign = {};
+				$scope.campaign = {};
+				$scope.files = [];
 				var wizardSteps = $state.current.data.wizardSteps;
 				ApiSrv.accessToken();
 				
@@ -43,14 +46,17 @@
     			//$scope.froalaOptions.froala("getSelection");
     			$scope.$on('$stateChangeSuccess',function(event, data){
     				console.log($state.current.name);
-    				if($state.current.name == 'app.home.manage.resources.images' ||
-    				   $state.current.name == 'app.home.manage.resources.gridlist'){
+    				if($state.current.name.indexOf('resources') != -1 ||
+    					$state.current.name == 'app.home.manage.page'){
     					Restangular.setBaseUrl('http://192.168.1.34:8080/MicroS/');	
     				}else{
+    					
     					Restangular.setBaseUrl('http://192.168.1.69/Yavun/api');	
     				}
     				
     			});
+
+
     			$scope.froalaOptions = {
         			buttons : ["bold", "italic", "underline", "sep", "align", "insertOrderedList", "insertUnorderedList"]
     			}
@@ -107,13 +113,36 @@
 	                });
 	            });
 
-            	 $scope.$on(Global.EVENTS.CAMPAIGN_SAVE,function(event, data){
+            	$scope.$on(Global.EVENTS.CAMPAIGN_SAVE,function(event, data){
 
 	            	
 	            	$scope.campaign.campaignFeatureId = _.keys($scope.campaign.campaignFeatureId);
 	            	console.log('campaign-----------',$scope.campaign);
 	            });
-             	
+
+             	$scope.$on(Global.EVENTS.ADD_NEW_IMAGE,function(event, data){
+             	 	
+             	 	var data = {
+						resource : $scope.image,
+						file: $scope.files
+					}
+					console.log('test ---',data);
+					
+					data.resource.category = JSON.parse(data.resource.category);
+                    
+                    ImageApiSrv.addNewImage('4/4/images',data,function(response){
+                    	console.log('Image------------',data);
+                 	});
+	            });
+         	    //listen for the file selected event
+			    $scope.$on("fileSelected", function (event, args) {
+			        $scope.$apply(function () {            
+						//add the file object to the scope's files collection
+						$scope.files.push(args);
+						//_.extend($scope.files, args);
+						console.log($scope.files);
+			        });
+			    });	 
 			}
 		]);
 })(angular);

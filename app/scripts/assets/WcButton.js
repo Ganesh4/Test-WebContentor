@@ -52,6 +52,7 @@ angular.module('assets').directive('wcButton',['Global','$parse',function(Global
 	            scope.$on(Global.EVENTS.PREVIOUS_BTN_ENABLE,function(event, data){
 	                scope.PREVIOUS_BTN_DISABLE = false;
 	            });
+
 			}
 	  };
   }]);

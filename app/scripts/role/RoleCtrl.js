@@ -47,11 +47,7 @@ angular.module('role').controller('RoleCtrl',
                         $scope.gridOptions.data = data.plain();
             });
              
-              ApiSrv.getList('roles',param,function(data){
-                if(data)
-                    $scope.roles = data.plain();
-                console.log('Roles ---------------- ',$scope.roles);
-            });
+             
         }
     ]);
 })(angular);

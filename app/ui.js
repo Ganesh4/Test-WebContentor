@@ -55,7 +55,7 @@
                 controller:'OverviewCtrl',
                  data: {
                     tags:['Iteractive User Interface', 'Parrallex Design', 'Entertainment', 'Music'],                 
-                     displayName :'page' 
+                    displayName :'page' 
                 },     
             }).state('app.home.manage.page.detail', {
                 url:'/detail',
