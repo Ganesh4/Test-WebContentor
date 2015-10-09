@@ -20,7 +20,7 @@
   width:100%;
 	min-height:50px;
 	/*padding:10px 0;*/
-	border-bottom:1px dotted #767676;
+	border-bottom:1px solid #767676;
 	
 	.content-padding{
     padding:15px 20px;		
@@ -41,10 +41,10 @@
 	a{
     width: 100%;
     display: block;
-    padding: 15px 0px;
-    text-align: center;
+    /*padding: 15px 0px;*/
+    text-align:initial;
     text-transform: uppercase;
-    font-size: 0.85em;
+    font-size: 0.80em;
 		
 		&:hover{
 	    color: #eee;
@@ -53,6 +53,20 @@
 		
 		
   }
+}
+.submenu-linkbox{
+	padding: 10px 0;
+	display: inline-block;
+	text-align: center;
+}
+.submenu-iconbox-left{
+	width: 28%;
+	border-right:1px dotted #767676;
+}
+.submenu-link-right{
+	width:69%;
+	text-align: left;
+  padding-left: 7px;
 }
 .submenu-content{
   width:81%;
@@ -424,23 +438,3 @@
 }
 
 /*===========  ============*/
-.right-blink{
-  text-transform:uppercase;
-	border:1px solid #eee;	
-}
-.navbar-square{
-  position:absolute;
-	top:0;
-	right:0;
-	z-index:9;
-}
-.blank-pos{
-	@exteng .navbar-left;
-	padding:0 15px;
-	font-size:0.9em;
-}
-.nav-icon-holder{
-  margin-right:20px;
-	padding:8px 10px;
-		
-}
