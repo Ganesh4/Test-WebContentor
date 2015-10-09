@@ -51,7 +51,8 @@
                                                     state:'app.home.campaign.general'
                                                 },{
                                                     icon : 'fa fa-envelope',
-                                                    name : 'Emails'
+                                                    name : 'Emails',
+                                                    state: 'app.home.campaign.emails'
                                                 },{
                                                     icon : 'fa fa-list-alt',
                                                     name : 'Promotional Pages'
