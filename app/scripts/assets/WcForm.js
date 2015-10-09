@@ -20,7 +20,6 @@
 				},
                 link : function(scope,elem,attrs){
                     
-                    console.log('submitEvent ------------ ',scope.submitEvent);
                     scope.doOnFormSubmit = function(){
                         //scope.$emit(Global.EVENTS.FORM_SUBMIT, scope.formData))
                     }

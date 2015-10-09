@@ -20,7 +20,7 @@
 					submitEvent: 'USER_LOGIN',
 					formButtons:[{
                         name:'Submit',
-                        btnType:'submit',
+                        btnType:'SUBMIT',
                         css:'btn btn-success',
                     },{
                     	name:'New User Registration',
