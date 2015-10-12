@@ -11,9 +11,8 @@ angular.module('user').controller('UserCtrl',
         'CommonSrv',
         'UserApiSrv',
         'Global',
-        '$cookieStore',
-        function($scope ,$state, ApiSrv,CommonSrv,UserApiSrv,Global,$cookieStore){
-            $scope.loggedInUser = $cookieStore.get('loggedInUser');
+        function($scope ,$state, ApiSrv,CommonSrv,UserApiSrv,Global){
+          
             console.log('$scope ----------- ',$scope.loggedInUser);
             var param = {};
             $scope.gridOptions = {

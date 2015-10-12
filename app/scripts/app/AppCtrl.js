@@ -15,7 +15,8 @@
 			'CampaignApiSrv',
 			'Restangular',
 			'ImageApiSrv',
-       		function($scope,$state, $q, ApiSrv, CommonSrv, Global, UserApiSrv,CampaignApiSrv, Restangular,ImageApiSrv){
+			'$cookieStore',
+       		function($scope,$state, $q, ApiSrv, CommonSrv, Global, UserApiSrv,CampaignApiSrv, Restangular,ImageApiSrv,$cookieStore){
 				var param = {};
 				$state.args = [];
 				$scope.user = {};
@@ -150,11 +151,9 @@
 						resource : $scope.image,
 						file: $scope.files
 					}
-					console.log('test ---',data);
-					
-					data.resource.category = JSON.parse(data.resource.category);
-                    
-                    ImageApiSrv.addNewImage('4/4/images',data,function(response){
+					//console.log('test ---',data);
+					//data.resource.category = JSON.parse(data.resource.category);
+                    ImageApiSrv.addNewImage($scope.userGroupUri+'images',data,function(response){
                     	console.log('Image------------',data);
                  	});
 	            });
@@ -166,7 +165,14 @@
 						//_.extend($scope.files, args);
 						console.log($scope.files);
 			        });
-			    });	 
+			    });
+
+			    if($cookieStore.get('loggedInUser') == undefined){
+			    	$state.go('app.login')
+			    }else{
+			    	$scope.loggedInUser = $cookieStore.get('loggedInUser');
+			    	$scope.userGroupUri = $scope.loggedInUser.securityUserID+'/'+$scope.loggedInUser.groupId+'/';
+			    }	 
              
 			}
 		]);
