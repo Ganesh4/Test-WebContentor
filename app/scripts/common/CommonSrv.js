@@ -70,10 +70,6 @@ angular.module('common').service('CommonSrv',
             //On Click Event Fire From This Location.
             self.doOnClick = function(scope, data){
                 scope.$emit(scope.onClick, data);
-            //Enable NEXT BUTTON
-            self.enableSave = function(scope){
-                scope.$broadcast(Global.EVENTS.CAMPAIGN_SAVE_ENABLE);
-                scope.$broadcast(Global.EVENTS.CAMPAIGN_SAVE_EXIT_ENABLE);
             }
 
             //On Change Event Fire From this location.
@@ -85,7 +81,14 @@ angular.module('common').service('CommonSrv',
             self.doOnkeyUp = function(scope, data){
                 scope.$emit(scope.onKeyUp, data);
             }
-        }
+            
+            //Enable NEXT BUTTON
+            self.enableSave = function(scope){
+                scope.$broadcast(Global.EVENTS.CAMPAIGN_SAVE_ENABLE);
+                scope.$broadcast(Global.EVENTS.CAMPAIGN_SAVE_EXIT_ENABLE);
+            }
+
+      
 
             //DISABLE NEXT BUTTON
             self.disableSave = function(scope){
