@@ -1,4 +1,21 @@
 /* Scss Document */
+.logo_wrapper {
+	margin-left:-16px;
+	margin-top:-1px;
+	padding-left:15px;
+	padding-right:15px;
+	position:relative;
+	width:17.1%;
+	height:51px;
+	background-color:$main_blue_color;
+	float:left;
+	a {
+		float:left;		
+		width:100%;
+		margin-left:-10px;
+	}
+}
+
 
 .navbar-default {
 	background-color:$header-color;
@@ -17,14 +34,15 @@
 
 /*====================== Logo Section Start Here ========================*/	
 
-.navbar-brand{
+.logo_wrapper img{	
+	width:80%;
+	height:auto;
+	}
+/*.navbar-brand{
 	padding: 0px;
 	width: 222px;
-    background-color:$main_blue_color;
 	}
-.navbar-brand img{
-	height: 50px;
-	}
+
 	
 .navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover{
 	background-color: $main_blue_color;
@@ -32,7 +50,7 @@
 
 .navbar-brand>img{
 	width: 210px;
-	}
+	}*/
 
 /*====================== Logo Section End Here ========================*/	
 
