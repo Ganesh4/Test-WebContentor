@@ -19,6 +19,7 @@
                     var loginUser = data;
                     loginSrv.loginCheck('Login',loginUser,function(data){
                         $cookieStore.put('loggedInUser',data.plain());
+                        $scope.loggedInUser = $cookieStore.get('loggedInUser');
                         $state.go('app.home.campaign');
                     });
                 });
