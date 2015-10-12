@@ -34,33 +34,12 @@
 <!--Work area start here-->
 <div class="inner_wrapper">
     <div class="container">
-       
       <div class="form-signin">
-      <form  name="Form" novalidate="novalidate"
-                  ng-submit="submit()"
-                  validate-non-visible-controls="false">
         <h2 class="form-signin-heading">Please sign in</h2>
-        <div>{{message}}</div>
-         <div class="form-group">
-        <label class="sr-only" for="inputEmail">Email</label>
-        <input type="email" autofocus required="" placeholder="Email" ng-model="loginUser.email" class="form-control" required="required"  required-err-type="emailisrequired" />
+        <div class="form-group">
+        <wc-form elements="elements" form-btns="formBtns" form-data="loginUser" submit-event="{{submitEvent}}"></wc-form>
         </div>
-         <div class="form-group">
-        <label class="sr-only" for="inputPassword">Password</label>
-        <input type="password" required="required" required-err-type="passwordisrequired" placeholder="Password" ng-model="loginUser.password" class="form-control">
-        </div>
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" value="remember-me"> Remember me
-          </label>
-        </div>
-        <button class="btn btn-success "
-         ng-click = "loginCheck(email,password)">Sign in</button>
-         <button class="btn  btn-success"
-         ui-sref = "app.register">New Registration</button>
-      </form>
       </div>
-
     </div>
    </div>
 <!--Work area end here-->

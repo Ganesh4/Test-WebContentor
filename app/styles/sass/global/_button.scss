@@ -2,27 +2,27 @@
 
 .header-sub {
 	button  {
-		background-color: $grey-color;
-		border: 1px solid $brder-color;
-		margin-right: 10px;   
-		padding: 5px 15px 5px 15px;
-		min-width: 70px;
-		float: right;
-		outline: none;
-		@include border-radius(2px);
-		background-image:none;
-		box-shadow:none;
-		text-shadow:none;
-		font-size:13px;
-		
+	background-color: $grey-color;
+  border: 1px solid $brder-color;
+  margin-right: 10px;   
+  padding: 5px 15px 5px 15px;
+  min-width: 70px;
+	float: right;
+	outline: none;
+	@include border-radius(2px);
+	background-image:none;
+	box-shadow:none;
+	text-shadow:none;
+	font-size:13px;
+	
 		&:hover,
 		&:focus,
 		&:active {
-			background-color:$COLOR_GREEN;
-			color:$workarea-color;
-			border:solid 1px $BORDE_GREEN;
-		}	
+		background-color:$COLOR_GREEN;
+		color:$workarea-color;
+		border:solid 1px $BORDE_GREEN;
 	}
+  }
 }
 
 .header-sub {

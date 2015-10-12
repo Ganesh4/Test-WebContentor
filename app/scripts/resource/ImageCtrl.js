@@ -62,7 +62,7 @@ angular.module('resources').controller('ImageCtrl',
                         cellTemplate:'<div class="ui-grid-cell-contents">{{row.entity.updatedDate | FormatDateFilter}}</div>'
                     }]
                 };
-            ImageApiSrv.getCategory('4/4/categories',{},function(data){
+            ImageApiSrv.getCategory($scope.userGroupUri+'categories',{},function(data){
                 if(data){
                     $scope.imageCategory = data.plain(); 
                     console.log('$scope.imageCategory -------- ',$scope.imageCategory);
@@ -80,7 +80,7 @@ angular.module('resources').controller('ImageCtrl',
                 'simple_tags': true,
                 'tags': []
             }; 
-            ImageApiSrv.getImageList('4/4/images',param,function(data){
+            ImageApiSrv.getImageList($scope.userGroupUri+'images',param,function(data){
                 // console.log('Image ------------ ',data);
                 if(data){
                     $scope.gridOptions.data = data.plain();

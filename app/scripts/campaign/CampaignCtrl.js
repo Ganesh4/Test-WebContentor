@@ -8,9 +8,10 @@
 		'$cookieStore',
         'CampaignApiSrv',
 		function($scope,$state,Restangular,$cookieStore,CampaignApiSrv){
-           
+
+            console.log($scope.loggedInUser.securityUserID,'---------',$scope.loggedInUser.groupId);
+            
 			$scope.data = $state.current.data;
-			
             $scope.checkValidation = function(){
 
             console.log('---------',$scope.user);
