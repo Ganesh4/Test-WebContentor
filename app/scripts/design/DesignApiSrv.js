@@ -11,19 +11,16 @@ angular.module('design').service('DesignSrv',
 	 	'$http', 
 	 	'Restangular',
 	 	'CommonSrv',
-	 	function ($http , Restangular, CommonSrv) {
+	 	'ApiSrv',
+	 	function ($http , Restangular, CommonSrv, ApiSrv) {
 			// Now set up the states
 			var self = this;
 			/**
 				Sends a post request to the backend.
 			**/
 			self.saveDesign = function(userId, data, success, error){
-				var formData = CommonSrv.getFormData(data);
-						Restangular.one(userId.toString()).one('designs').withHttpConfig({
-							transformRequest: angular.identity
-					}).customPOST(formData, undefined, undefined, {
-						'Content-Type': undefined
-					}).then(success);
+				var uri = userId+'/designs'
+				ApiSrv.postMultipart(uri, data, success, error);
 			}
 
 			self.getUserDesign = function(userId, params, success, error){

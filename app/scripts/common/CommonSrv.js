@@ -9,33 +9,7 @@ angular.module('common').service('CommonSrv',
         'ApiSrv',
         function (Restangular, $state, Global, ApiSrv) {
             var self = this;
-            self.getFormData = function(data){
-
-                var formData = new FormData();
-                console.log('My Form -------- ',formData);
-
-                _.each(data, function(value , key){
-                    console.log('Keys ---------  ', key);
-                    if(_.isArray(value)){   
-                        _.each(value, function(files , fileName){
-                            console.log(fileName , files);
-                            if(_.isObject(files)){
-                                _.each(files, function(file , fileKey){
-                                    console.log(file);
-                                    formData.append(fileKey , file);
-                                });
-                            }else
-                                formData.append(fileName , files);
-                        });
-                    }else{
-                        console.log('Not Array --------  ', key , value);
-                        formData.append(key , angular.toJson(value));
-                    }
-                });
-                console.log('FormData -------- ' ,  formData);
-                return formData;
-            }
-
+ 
             self.getDesignCategories = function(success , error){
                Restangular.one('categories').getList().then(success);
             }
@@ -91,6 +65,18 @@ angular.module('common').service('CommonSrv',
             //Get Country Data
             self.getCountriesList =function(success, error){
                 Restangular.all('countries').getList().then(success);
+            }
+
+            //Enable NEXT BUTTON
+            self.enableSave = function(scope){
+                scope.$broadcast(Global.EVENTS.CAMPAIGN_SAVE_ENABLE);
+                scope.$broadcast(Global.EVENTS.CAMPAIGN_SAVE_EXIT_ENABLE);
+            }
+
+            //DISABLE NEXT BUTTON
+            self.disableSave = function(scope){
+                scope.$broadcast(Global.EVENTS.CAMPAIGN_SAVE_DISABLE);
+                scope.$broadcast(Global.EVENTS.CAMPAIGN_SAVE_EXIT_DISABLE);
             }
 
         }

@@ -24,7 +24,7 @@
     "angular-re-captcha" : "~0.2.0",
     "angular-cookies" : "~1.2.29",
     "angular-auto-validate" : "~1.18.17",
-    "angularjs-datepicker" : "~0.2.11"
+    "angular-bootstrap" : "~0.11.0"
   },
   "resolutions": {
     "angular": ">= 1.0.8"
