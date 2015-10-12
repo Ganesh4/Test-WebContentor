@@ -19,19 +19,19 @@
 	padding: 10px !important;
 	}*/
 .ui-grid-row:nth-child(even){
-	background-color: #f9f9f9 !important;
+	background-color: #f9f9f9;
 	border-bottom: 1px solid #e3eaef !important;
 	&:hover{
 			background-color:#1b951b  !important;
+			cursor: pointer;
 			}
 	}
 .ui-grid-row:nth-child(odd){
-	background-color: #fff !important;
 	border-bottom: 1px solid #e3eaef !important;
 	height: 32px;
 	&:hover{
 			background-color:#1b951b  !important;
-			
+			cursor: pointer;
 			}
 	}
 .ui-grid-header{
@@ -59,10 +59,29 @@
 .ui-grid-render-container{
 	text-align: center;
 	}
+
+.ui-grid-row-selected{
+	background-color: #1b951b;
+	color: #fff;
+}
+.ui-grid-row.ui-grid-row-selected > [ui-grid-row] > .ui-grid-cell{
+	background-color: transparent !important;
+	}
+
+
 .ui-grid{	
 	.ui-grid-row:nth-child(2n+1) .ui-grid-cell, .ui-grid-row:nth-child(even) .ui-grid-cell{
 		background-color: transparent;
-	}
+		cursor: pointer;
+		
+	    }
+	
+.ui-grid-row:nth-child(2n+1) .ui-grid-cell, .ui-grid-row:nth-child(odd) .ui-grid-cell{
+		background-color: transparent;
+		cursor: pointer;
+		
+	    }
+
 	.ui-grid-row{
 		cursor: pointer;
 		&:hover{
@@ -74,6 +93,7 @@
 			}
 		}
 }
+
 
 	
 /*======= table drop down */
