@@ -12,21 +12,25 @@
             console.log($scope.loggedInUser.securityUserID,'---------',$scope.loggedInUser.groupId);
             
 			$scope.data = $state.current.data;
+            
             $scope.checkValidation = function(){
 
-            console.log('---------',$scope.user);
-            $scope.empty = false;
-            if(!$scope.campaign.name){
-            $scope.empty = true;
-            }else{
-            $scope.empty = false;
-            }
+                console.log('---------',$scope.user);
+                $scope.empty = false;
+                if(!$scope.campaign.name){
+                $scope.empty = true;
+                }else if(!$scope.campaign.startDate){
+                $scope.empty = true;
+                 
+                 }else{
+                $scope.empty = false;
+                }
 
-            if($scope.empty == false){
-            $scope.enableSave();
-            }else{
-            $scope.disableSave();
-            }
+                if($scope.empty == false){
+                    $scope.enableSave();
+                }else{
+                    $scope.disableSave();
+                }
 
 
             console.log('$scope.empty--------',$scope.empty);
