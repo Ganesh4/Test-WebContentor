@@ -92,13 +92,6 @@
                             placeholder:'Address Line 1',
                             model : 'address1',
                         },{
-                            name:'address2',
-                            lable:'Address Line 2',
-                            type: 'TEXT',
-                            required: false,
-                            placeholder:'Address Line 2',
-                            model : 'address2',
-                        },{
                             name:'city',
                             lable:'City',
                             type: 'TEXT',

@@ -149,7 +149,7 @@
 						file: $scope.files
 			}
 					//console.log('test ---',data);
-					//data.resource.category = JSON.parse(data.resource.category);
+					data.resource.category = JSON.parse(data.resource.category);
                     ImageApiSrv.addNewImage($scope.userGroupUri+'images',data,function(response){
                     	console.log('Image------------',data);
                  	});
