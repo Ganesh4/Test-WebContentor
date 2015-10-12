@@ -11,14 +11,11 @@ angular.module('user').controller('UserCtrl',
         'CommonSrv',
         'UserApiSrv',
         'Global',
-        '$cookieStore',
-        function($scope ,$state, ApiSrv,CommonSrv,UserApiSrv,Global,$cookieStore){
-            $scope.loggedInUser = $cookieStore.get('loggedInUser');
+        function($scope ,$state, ApiSrv,CommonSrv,UserApiSrv,Global){
+          
             console.log('$scope ----------- ',$scope.loggedInUser);
             var param = {};
             $scope.gridOptions = {
-                multiSelect: true,
-                enableRowSelection:true,
                 columnDefs: [{
                     field: 'FirstName', 
                     displayName: 'First Name',
@@ -48,6 +45,7 @@ angular.module('user').controller('UserCtrl',
                    
                 }]
             } 
+
             UserApiSrv.getUserList('users',param, 
                 function(data){
                     if(data)

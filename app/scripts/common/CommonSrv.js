@@ -67,11 +67,25 @@ angular.module('common').service('CommonSrv',
                 Restangular.all('countries').getList().then(success);
             }
 
+            //On Click Event Fire From This Location.
+            self.doOnClick = function(scope, data){
+                scope.$emit(scope.onClick, data);
             //Enable NEXT BUTTON
             self.enableSave = function(scope){
                 scope.$broadcast(Global.EVENTS.CAMPAIGN_SAVE_ENABLE);
                 scope.$broadcast(Global.EVENTS.CAMPAIGN_SAVE_EXIT_ENABLE);
             }
+
+            //On Change Event Fire From this location.
+            self.doOnChange = function(scope, data){
+                scope.$emit(scope.onChange, data);
+            }
+
+            //On Key Up Event Fire From This Location
+            self.doOnkeyUp = function(scope, data){
+                scope.$emit(scope.onKeyUp, data);
+            }
+        }
 
             //DISABLE NEXT BUTTON
             self.disableSave = function(scope){

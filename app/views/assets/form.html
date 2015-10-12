@@ -1,0 +1,6 @@
+<form class="form_main" name="Form" novalidate="novalidate"
+                  ng-submit="formSubmit()"
+                  validate-non-visible-controls="false">
+	<ng-include src = "'views/assets/input.html'"></ng-include>
+	<wc-button ng-repeat = "btn in formBtns"  type="btn.btnType" name="btn.name" on-click="btn.onClick" btn-data="btn"></wc-button> 
+</form>

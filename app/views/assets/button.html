@@ -1,10 +1,9 @@
-<button class="btn btn-default" ng-disabled="isEnabled()" ng-click="doOnClick()" ng-if = "type=='Button'">{{name}}</button>
+<button class="btn btn-default" ng-disabled="isEnabled()" ng-click="doOnClick()" 
+ng-if = "type=='Button'">{{name}}</button>
 <button class="btn btn-default" ng-disabled="isEnabled()" ng-click="doOnClick()"
  ng-if = "type == undefined">{{name}}</button>
  
- 
-
- 
+ <button type="submit" class="btn btn-default" ng-disabled="isEnabled()" ng-if = "type === 'SUBMIT'">{{name}}</button>
 
 <i class="{{icon}}"  ng-if = "type == 'text'">{{name}}</i>
 <!--<ng-if = "type == 'WIZARD_BTN'">
