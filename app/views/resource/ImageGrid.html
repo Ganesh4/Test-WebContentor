@@ -4,6 +4,9 @@
 <div class="main_rhs_wrapper">
 
 
+
+
+
 <!--Start First view Row -->
 <div class="row">
 
@@ -26,6 +29,14 @@
             <div class="view view-tenth">
                 <img src={{image.upload.url}} />
                 <div class="mask">
+                    <h2>{{image.upload.fileName}}</h2>
+                    <p>{{image.description}}</p>
+                
+                 <div class="checkbox mask-check">
+                    <input type="checkbox" id="c1" name="cc" />
+                    <label for="c1"><span></span></label>
+                 </div>
+                
                     <h2>{{image.upload.fileName}}</h2>
                     <p>{{image.description}}</p>
                     <div class="media-left media-middle grid-box">
