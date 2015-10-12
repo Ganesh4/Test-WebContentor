@@ -20,13 +20,16 @@ angular.module('assets').directive('wcButton',['Global','$parse',function(Global
 			link:function(scope,elem,attrs){
 				
 				scope.doOnClick = function(){
+					console.log('On - Click ----------  ' , scope.onClick);
 					if(scope.onClick)
-						scope.$emit(scope.onClick, scope.btnData);
+						scope.$root.$emit(scope.onClick, scope.btnData);
 				}
 				scope.PREVIOUS_BTN_DISABLE = true;
 				scope.NEXT_BTN_DISABLE = true;
 				scope.CAMPAIGN_SAVE_DISABLE = true;
 				scope.CAMPAIGN_SAVE_EXIT_DISABLE = true;
+				scope.DELETE_BTN_DISABLE = true;
+				scope.EDIT_BTN_DISABLE = true;
 
 				scope.isEnabled = function(){
 					if(scope.disable){
@@ -46,29 +49,37 @@ angular.module('assets').directive('wcButton',['Global','$parse',function(Global
 	                scope.PREVIOUS_BTN_DISABLE = true;
 	            });
 	            
-	            scope.$on(Global.EVENTS.NEXT_BTN_ENABLE,function(event, data){
+	            scope.$root.$on(Global.EVENTS.NEXT_BTN_ENABLE,function(event, data){
 	            	console.log("Enable in WC");
 	               	scope.NEXT_BTN_DISABLE = false;
 	            });
 	            
-	            scope.$on(Global.EVENTS.PREVIOUS_BTN_ENABLE,function(event, data){
+	            scope.$root.$on(Global.EVENTS.PREVIOUS_BTN_ENABLE,function(event, data){
 	                scope.PREVIOUS_BTN_DISABLE = false;
 	            });
 	            
-	            scope.$on(Global.EVENTS.CAMPAIGN_SAVE_ENABLE,function(event, data){
+	            scope.$root.$on(Global.EVENTS.CAMPAIGN_SAVE_ENABLE,function(event, data){
 	                scope.CAMPAIGN_SAVE_DISABLE = false;
 	            });
 
-	            scope.$on(Global.EVENTS.CAMPAIGN_SAVE_DISABLE,function(event, data){
+	            scope.$root.$on(Global.EVENTS.CAMPAIGN_SAVE_DISABLE,function(event, data){
 	                scope.CAMPAIGN_SAVE_DISABLE = true;
 	            });
 
-	            scope.$on(Global.EVENTS.CAMPAIGN_SAVE_EXIT_ENABLE,function(event, data){
+	            scope.$root.$on(Global.EVENTS.CAMPAIGN_SAVE_EXIT_ENABLE,function(event, data){
 	                scope.CAMPAIGN_SAVE_EXIT_DISABLE = false;
 	            });
 
-	            scope.$on(Global.EVENTS.CAMPAIGN_SAVE_EXIT_DISABLE,function(event, data){
+	            scope.$root.$on(Global.EVENTS.CAMPAIGN_SAVE_EXIT_DISABLE,function(event, data){
 	                scope.CAMPAIGN_SAVE_EXIT_DISABLE = true;
+	            });
+
+	            scope.$root.$on(Global.EVENTS.DELETE_BTN_ENABLE,function(event, data){
+					scope.DELETE_BTN_DISABLE = false;
+	            });
+
+	            scope.$root.$on(Global.EVENTS.EDIT_BUTTON_ENABLE,function(event, data){
+	            	scope.EDIT_BTN_DISABLE = false;
 	            });
 
 			}

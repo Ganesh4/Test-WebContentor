@@ -14,6 +14,7 @@ angular.module('resources').controller('ImageCtrl',
         'ImageApiSrv',
         function($scope ,$state, ApiSrv,Global,CommonSrv,ImageApiSrv){  
             var param = {};
+            $scope.image = {};
             $scope.gridOptions = {
                 multiSelect: true,
                 enableRowSelection:true,
@@ -69,6 +70,7 @@ angular.module('resources').controller('ImageCtrl',
                 }
             });
 
+
             //$scope.imageCategory = ['Test','Testing'];
             $scope.select2Options1 = {
                 'multiple': true,
@@ -87,6 +89,16 @@ angular.module('resources').controller('ImageCtrl',
                     $scope.imageList = data.plain();
                 }
             });
+                    //Delete Image Functionality..
+                $scope.$on(Global.EVENTS.DELETE_IMAGE,function(){
+                    alert('TEST');
+                    if(!_isEmpty($scope.gridRowSelectedData)){
+                        var imageData = $scope.gridRowSelectedData[0];
+                        console.log("imageData ------- " , imageData);
+                        
+                    }
+                    
+                });  
         }
     ]);
 })(angular);

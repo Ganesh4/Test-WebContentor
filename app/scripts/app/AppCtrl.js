@@ -25,7 +25,7 @@
 				$scope.loggedInUser = {};
 				$scope.campaign = {};
 				$scope.files = [];
-
+				$scope.gridRowSelectedData = [];
 				var wizardSteps = $state.current.data.wizardSteps;
 				ApiSrv.accessToken();
 				
@@ -169,8 +169,14 @@
 			    }else{
 			    	$scope.loggedInUser = $cookieStore.get('loggedInUser');
 			    	$scope.userGroupUri = $scope.loggedInUser.securityUserID+'/'+$scope.loggedInUser.groupId+'/';
-			    }	 
-             
+			    }
+			    
+			    //Selected data of the grid.
+			    $scope.$on(Global.EVENTS.GRID_ROW_DATA,function(event , data){
+                	if(data)
+                    	$scope.gridRowSelectedData = data;
+            	});
+	 	
 			}
 		]);
 })(angular);

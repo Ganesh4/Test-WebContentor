@@ -21,17 +21,19 @@
 	                displayName: 'user',
 	                actionBarBtn: [{
 	                    name : 'Refresh',
-	                    onClickEvent : 'REFRESH',
+	                    onClick : 'REFRESH',
 	                },{
 	                    name : "Export"
 	                },{
 	                    name : "Delete",
-	                    onClickEvent : 'DELETE_USER',
+	                    onClick : 'DELETE_USER',
+	                    disable :'DELETE_BTN_DISABLE',
 	                },{
-	                    name : "Properties"
+	                    name : "Properties",
+	                    disable :'EDIT_BTN_DISABLE',
 	                },{
 	                    name : "Add",
-	                    onClickEvent : 'NAVIGATE',
+	                    onClick : 'NAVIGATE',
 	                    state : 'app.home.manage.user.add.general'
 	                }]
 	            }
@@ -75,20 +77,20 @@
                     actionBarBtn: [
 	                    {
 			            	name : "Cancel",
-			                onClickEvent : 'WIZARD_CANCLE',
+			                onClick : 'WIZARD_CANCLE',
                             state : 'app.home.manage.user.list'
 			            },{
 	                    	name : "Ok",
-	                        onClickEvent : 'ADD_NEW_USER',
+	                        onClick : 'ADD_NEW_USER',
 	                        disable : 'OK_BTN_DISABLE',
                             state:'app.home.manage.user.list',
 	                    },{
 	                        name : "Next",
-	                        onClickEvent : 'WIZARD_NEXT',
+	                        onClick : 'WIZARD_NEXT',
 	                        disable : 'NEXT_BTN_DISABLE'
 	                    },{
 	                        name : 'Previous',
-	                        onClickEvent : 'WIZARD_PREVIOUS',
+	                        onClick : 'WIZARD_PREVIOUS',
 	                        disable : 'PREVIOUS_BTN_DISABLE'
 	                    }
 	                ],
@@ -117,8 +119,5 @@
 	                displayName: 'Roles',
 	            }
 	        }); 
-
 	}]);
-
 })(angular);
-
