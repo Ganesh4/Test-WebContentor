@@ -18,7 +18,9 @@
             $scope.empty = false;
             if(!$scope.campaign.name){
             $scope.empty = true;
-            }else{
+            }else if(!$scope.campaign.startDate){
+            $scope.empty = true;
+             }else{
             $scope.empty = false;
             }
 
