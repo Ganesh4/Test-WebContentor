@@ -21,7 +21,7 @@
 				$scope.image = {};
 				$scope.countries = {};
 				$scope.loggedInUser = {};
-				 $scope.campaign = {};
+				$scope.campaign = {};
 				$scope.files = [];
 				var wizardSteps = $state.current.data.wizardSteps;
 				ApiSrv.accessToken();
@@ -56,8 +56,6 @@
     				}
     				
     			});
-
-
     			$scope.froalaOptions = {
         			buttons : ["bold", "italic", "underline", "sep", "align", "insertOrderedList", "insertUnorderedList"]
     			}

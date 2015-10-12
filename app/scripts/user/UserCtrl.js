@@ -17,8 +17,6 @@ angular.module('user').controller('UserCtrl',
             console.log('$scope ----------- ',$scope.loggedInUser);
             var param = {};
             $scope.gridOptions = {
-                multiSelect: true,
-                enableRowSelection:true,
                 columnDefs: [{
                     field: 'FirstName', 
                     displayName: 'First Name',

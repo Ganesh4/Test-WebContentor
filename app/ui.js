@@ -34,6 +34,7 @@
                 controller:'HomeCtrl',
                 data: {
                     displayName: false,
+                    //logo:'images/yavun_logo.svg',
                     mainNav:[{
                         name:'Campaign',
                         state:'app.home.campaign'
@@ -98,10 +99,8 @@
                         {
                             name:'STATS',
                             icon:'',
-
                     }]
                 },
-               
             }).state('app.preview', {
                 url:'/Preview',
                 templateUrl:'views/editor/TemplatePreview.html',
@@ -109,6 +108,4 @@
             });
         }
     ]);
-
-
 })(angular);

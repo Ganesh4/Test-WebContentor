@@ -12,6 +12,8 @@
             restrict:'AE',
             templateUrl:'./views/commons/header/header.html',
             link:function(scope,attr,element){
+
+                scope.logo = state.current.data.logo;
                 scope.$watch(function(scope){
                     return state.current.name;
                 },function(newValue,oldValue){
