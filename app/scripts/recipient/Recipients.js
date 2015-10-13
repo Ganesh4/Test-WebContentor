@@ -178,12 +178,13 @@
                     },{
                         rowClass :'col-lg-6',
                         rowElement:[{
-                            name:'List',
+                            name:'listName',
                             lable:'List Name',
                             type: 'DROP_DOWN',
                             required: false,
                             placeholder:'List Name',
-                            model : 'Name',
+                            model : 'listName',
+                            ngOptions:'Recipien.listName for Recipien in RecipientList'
                         },{
                             name:'Submit',
                             type:'BUTTON',
