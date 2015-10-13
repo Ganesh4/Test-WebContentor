@@ -20,7 +20,7 @@
   width:100%;
 	min-height:50px;
 	/*padding:10px 0;*/
-	border-bottom:1px solid #767676;
+	border-bottom:1px solid $editor-border-color;
 	
 	.content-padding{
     padding:15px 20px;		
@@ -35,8 +35,8 @@
 	float:left;
 	
 	li{
-    border-bottom: 1px solid #767676;
-    border-right: 1px solid #767676;
+    border-bottom: 1px solid $editor-border-color;
+    border-right: 1px solid $editor-border-color;
 	}
 	a{
     width: 100%;
@@ -61,7 +61,7 @@
 }
 .submenu-iconbox-left{
 	width: 28%;
-	border-right:1px dotted #767676;
+	border-right:1px dotted $editor-border-color;
 }
 .submenu-link-right{
 	width:69%;
@@ -74,7 +74,8 @@
 	
 	.heading{
 		 width:100%;
-		 background-color:#ebebeb;	
+		 /*background-color:#ebebeb;*/	
+		 background-image:url(../../images/pattern1.gif);
 		 padding:4px 10px;
 	}	
 	.content-block{
@@ -163,11 +164,15 @@
 	width: 100%;
 	padding: 10px;
 	text-align: right;
-	border-top: 1px solid #ccc;
+	border-top: 1px solid $editor-border-color;
 	float:left;
+	
+	.btn:nth-child(2){
+    color:#000;		
+	}
 }
 .top-fixed-box{
-  border-bottom:1px solid #ccc;	
+  border-bottom:1px solid $editor-border-color;	
 	width:100%;
 	padding:10px;
 	text-align:right;
@@ -238,6 +243,7 @@
 
 .uploaded-date-bar{
 	background-color:#ebebeb;
+	background-image:$sub-heading-bg;
 	width:100%;
 	margin:0 auto;
 	padding:4px;
@@ -255,14 +261,15 @@
 	
 	.header{
      font-size:1.3em;
-		 border-bottom:1px solid #ccc;
+		 border-bottom:1px solid $editor-border-color;
 		 padding:5px;
+		 /*background-image:$sub-heading-bg;*/
 	}
 }
 .left-nav{
   width: 20%;
   float: left;	
-	border-right:1px solid #ccc;
+	border-right:1px solid $editor-border-color;
   height: 360px;
 	
 	.links{
@@ -271,10 +278,11 @@
      li{
 		     border-bottom:0;
 				 border-right:0;
+				 text-align:center;
 				 
 				 a{
 				    padding:7px 10px;
-				    font-size: 0.75em;
+				    font-size: 0.85em;
 						&:hover{
 								 background-color: transparent;
 								 color:blue;
@@ -438,3 +446,9 @@
 }
 
 /*===========  ============*/
+.nav > li > a:hover, .nav > li > a:focus{
+  background-color:#383838;
+}
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus{
+  background-color:#6d6d6d;
+}
