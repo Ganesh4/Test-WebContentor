@@ -44,7 +44,6 @@
                         }).state('app.home.campaign.general', {
                             url: '/general',
                             templateUrl:"views/campaign/NewCampaign.html",
-                             controller:'CampaignCtrl',
                                 data: {
                                 displayName: 'General',
                                 LeftNavList:[{
@@ -54,14 +53,6 @@
                                                     icon : 'fa fa-life-ring',
                                                     name : 'General',
                                                     state:'app.home.campaign.general'
-                                                },{
-                                                    icon : 'fa fa-envelope',
-                                                    name : 'Emails',
-                                                    state: 'app.home.campaign.emails'
-                                                },{
-                                                    icon : 'fa fa-list-alt',
-                                                    name : 'Promotional Pages',
-                                                    state : 'app.home.manage.page'
                                                 }]
                                              }
                                         ],
@@ -82,8 +73,9 @@
                                 }).state('app.home.campaign.detail', {
                                     url: '/detail',
                                     templateUrl:"views/campaign/CampaignDetail.html",
-                                    controller:'CampaignCtrl',
+                                    controller:"CampaignDetailCtrl",
                                     data:{
+                                         displayName: 'Detail',
                                         LeftNavList:[{
                                             icon : 'fa fa-angle-down',
                                             name : 'Properties',

@@ -19,10 +19,7 @@
                 $scope.empty = false;
                 if(!$scope.campaign.name){
                 $scope.empty = true;
-                }else if(!$scope.campaign.startDate){
-                $scope.empty = true;
-                 
-                 }else{
+                }else{
                 $scope.empty = false;
                 }
 
@@ -38,7 +35,7 @@
             }         			
             // grab today and inject into field
             $scope.today = function() {
-            $scope.campaign.startDate = new Date();
+            $scope.today = new Date();
             };
 
             $scope.tomorrow = function() {
@@ -72,10 +69,14 @@
             // assign custom format
             $scope.format = $scope.formats[0];   
 
-                CampaignApiSrv.getCampaignFeatures('features',{},function(data){
-                    $scope.featureList = data.plain()   
-                    console.log('Feature List ------- ',  $scope.featureList);
-                });
+            CampaignApiSrv.getCampaignFeatures('features',{},function(data){
+                $scope.featureList = data.plain()   
+                console.log('Feature List ------- ',  $scope.featureList);
+                $scope.selectedFeature = _.filter( $scope.featureList, function(obj){ return obj.SecurityFeatureID == $scope.campaign.campaignFeatureId; });
+                console.log('$scope.selectedFeature -------------------',$scope.selectedFeature);
+            });
+
+
 
 
 
