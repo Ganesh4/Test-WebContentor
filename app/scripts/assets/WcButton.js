@@ -20,7 +20,7 @@ angular.module('assets').directive('wcButton',['Global','$parse',function(Global
 			link:function(scope,elem,attrs){
 				
 				scope.doOnClick = function(){
-					console.log('On - Click ----------  ' , scope.onClick);
+					console.log('On-Click ----------  ' , scope.onClick);
 					if(scope.onClick)
 						scope.$root.$broadcast(scope.onClick, scope.btnData);
 				}
