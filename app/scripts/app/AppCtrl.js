@@ -17,7 +17,7 @@
 			'ImageApiSrv',
 			'localStorageService',
 			'$stateParams',
-       	    function($scope,$state, $q, ApiSrv, CommonSrv, Global, UserApiSrv,CampaignApiSrv, Restangular,ImageApiSrv,$cookieStore,$stateParams){
+       	    function($scope,$state, $q, ApiSrv, CommonSrv, Global, UserApiSrv,CampaignApiSrv, Restangular,ImageApiSrv,localStorageService,$stateParams){
 				var param = {};
 				$state.args = [];
 				$scope.user = {};
