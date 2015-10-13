@@ -22,6 +22,7 @@ $secondery-navebar-color:lighten($main-color, 95% ); //#f2f2f2 !default
 $body-color:lighten($main-color, 96% ); //#f5f5f5 !default
 $sidenavbar-color:lighten($main-color, 23% ); //#3b3b3b !default
 
+
 /* LIGHT GREEN COLOR */
 $ROLES_ROW_COLOR:#e8f6e2;
 /* BORDER GREEN COLOR */
@@ -46,7 +47,15 @@ $sidenavbar-hover-color:#1b951b;
 /* editor's blocks border color */
 $editor-border-color:#626262;
 
+/* heading bg image */
 $sub-heading-bg:url(../../images/pattern1.gif);
+
+/* section variables */
+$section-bgcolor:#f3f2f3;
+$section-bordercolor:#626262;
+$section-textcolor:#878688;
+
+
 
 
 

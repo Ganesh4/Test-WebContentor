@@ -54,6 +54,9 @@
 	 
 	  &:hover{
 	    background-color:$sidenavbar-hover-color;
+			i{
+		    color:#fff;		
+			}
 		}
 		>a{
 				 &:hover{
@@ -65,7 +68,7 @@
 
 	.fa{
 	 font-size:1.5em;
-	 color:$nav-icon-color;
+	 color:$section-textcolor;
 	}
 }
 .nav-edit-text{
