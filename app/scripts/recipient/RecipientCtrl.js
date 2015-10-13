@@ -14,20 +14,22 @@
             var param = {};
             $scope.gridOptions = {
                 columnDefs: [{
-                    field: 'Name', 
+                    field: 'listName', 
                     displayName: 'List Name',
                     cellClass : 'darkgrey-color'
                 },{
-                    field:'data.count', 
+                    field:'recipientCount', 
                     displayName:'List Count',
                     cellClass : 'green-color'
                 }]
             } 
 
-            RecipientApiSrv.getRecipient('list', param,function(data){
-                 if(data)
-                        $scope.gridOptions.data = data.plain();
-                        $scope.RecipientList = data.plain();
+            RecipientApiSrv.getRecipient($scope.loggedInUser.securityUserID+'/recipient/list', param,function(data){
+                if(data){
+                    $scope.gridOptions.data = data.plain();
+                    $scope.RecipientList = data.plain();
+                    alert('$scope.RecipientList -------- ',$scope.RecipientList);
+                }
             });
 			
 		}]);

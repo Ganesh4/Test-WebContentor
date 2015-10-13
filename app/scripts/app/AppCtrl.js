@@ -15,8 +15,9 @@
 			'CampaignApiSrv',
 			'Restangular',
 			'ImageApiSrv',
-			'$cookieStore',
-       		function($scope,$state, $q, ApiSrv, CommonSrv, Global, UserApiSrv,CampaignApiSrv, Restangular,ImageApiSrv,$cookieStore){
+			'localStorageService',
+			'$stateParams',
+       	    function($scope,$state, $q, ApiSrv, CommonSrv, Global, UserApiSrv,CampaignApiSrv, Restangular,ImageApiSrv,localStorageService,$stateParams){
 				var param = {};
 				$state.args = [];
 				$scope.user = {};
@@ -25,9 +26,10 @@
 				$scope.loggedInUser = {};
 				$scope.campaign = {};
 				$scope.files = [];
-
+				$scope.featureList = {};
+				$scope.gridRowSelectedData = [];
 				var wizardSteps = $state.current.data.wizardSteps;
-				ApiSrv.accessToken();
+				
 				
 				/*
 				CommonSrv.getDesignCategories(function(data){
@@ -49,17 +51,16 @@
 				*/
 				//$scope.froalaOptions.froala("getSelection");
     			$scope.$on('$stateChangeSuccess',function(event, data){
-    				console.log($state.current.name);
+    			
     				if($state.current.name.indexOf('resources') != -1 ||
-    					$state.current.name == 'app.home.manage.page'){
-    					Restangular.setBaseUrl('http://192.168.1.34:8080/MicroS/');	
+    					$state.current.name.indexOf('page') != -1){
+    					console.log($state.current.name);
+    					Restangular.setBaseUrl('http://192.168.1.34:8080/MicroS/');
+    					ApiSrv.accessToken();	
     				}else{
-
     					Restangular.setBaseUrl('http://192.168.1.69/Yavun/api');
     					Restangular.configuration.defaultRequestParams = {};	
-
     				}
-    				
     			});
     			$scope.froalaOptions = {
         			buttons : ["bold", "italic", "underline", "sep", "align", "insertOrderedList", "insertUnorderedList"]
@@ -90,7 +91,6 @@
 	                UserApiSrv.addNewUser( 'users', user,function(response){
 	                	if(data.state)
 	                		$state.go(data.state);
-	                		
 	                });
 	            });
 
@@ -117,8 +117,8 @@
 	            });
 
             	 $scope.$on(Global.EVENTS.CAMPAIGN_SAVE,function(event, data){
+
 	            	$scope.campaign.campaignFeatureId = _.keys($scope.campaign.campaignFeatureId);
-	            	
 	            	console.log('campaign-----------',$scope.campaign);
 	            	ApiSrv.post('campaign',$scope.campaign,function(data){
 	            		console.log('data------------',$scope.campaign);
@@ -139,22 +139,11 @@
 	            $scope.enableSave = function(){
 	            	CommonSrv.enableSave($scope);
 	            }
+	            
 	            $scope.disableSave = function(){
 	            	CommonSrv.disableSave($scope);	
 	            }
-             	$scope.$on(Global.EVENTS.ADD_NEW_IMAGE,function(event, data){
-             	
-             	 	var data = {
-						resource : $scope.image,
-						file: $scope.files
-			}
-					//console.log('test ---',data);
-					data.resource.category = JSON.parse(data.resource.category);
-                    ImageApiSrv.addNewImage($scope.userGroupUri+'images',data,function(response){
-                    	console.log('Image------------',data);
-                 	});
-	            });
-         	    //listen for the file selected event
+           	    //listen for the file selected event
 			    $scope.$on("fileSelected", function (event, args) {
 			        $scope.$apply(function () {            
 						//add the file object to the scope's files collection
@@ -164,13 +153,29 @@
 			        });
 			    });
 
-			    if($cookieStore.get('loggedInUser') == undefined){
+			    if(localStorageService.get('loggedInUser') == undefined){
 			    	$state.go('app.login')
 			    }else{
-			    	$scope.loggedInUser = $cookieStore.get('loggedInUser');
+			    	$scope.loggedInUser = localStorageService.get('loggedInUser');
 			    	$scope.userGroupUri = $scope.loggedInUser.securityUserID+'/'+$scope.loggedInUser.groupId+'/';
-			    }	 
-             
+			    }
+			    
+			    //Selected data of the grid.
+			    $scope.$on(Global.EVENTS.GRID_ROW_DATA,function(event , data){
+                	if(data)
+                    	$scope.gridRowSelectedData = data;
+            	});
+
+            	//Reload Data of the State
+            	$scope.$on(Global.EVENTS.RELOAD, function(event , data){
+					//This Will Reload All The States
+            		$state.transitionTo($state.current, $stateParams, {
+					    reload: true,
+					    inherit: false,
+					    notify: true
+					});
+            	});
+
 			}
 		]);
 })(angular);

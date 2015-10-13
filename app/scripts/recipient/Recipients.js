@@ -22,24 +22,23 @@
                }).state('app.home.manage.recipients.list', {
                     url: '/list',
                     templateUrl:'./views/recipient/recipients.html',
-                    controller:'RecipientCtrl',
                 data: {
                     displayName: ' List',
                     actionBarBtn: [{
                                     name : 'Export',
-                                    onClickEvent : '',
+                                    onClick : '',
                                },{
                                     name : 'Save',
-                                    onClickEvent : '',
+                                    onClick : '',
                                 
                                },{
                                     name : 'Add to List',
-                                    onClickEvent : 'NAVIGATE',
+                                    onClick : 'NAVIGATE',
                                     state: 'app.home.manage.recipients.add'
                                 
                                },{
                                     name : 'Delete',
-                                    onClickEvent : ''
+                                    onClick : ''
                      }],
                  }
              }).state('app.home.manage.recipients.add', {
@@ -51,10 +50,10 @@
                     submitEvent: 'ADD_RECIPIENT',
                     actionBarBtn: [{
                                     name : 'Cancel',
-                                    onClickEvent : '',
+                                    onClick : '',
                                },{
                                     name : 'Save',
-                                    onClickEvent : '',
+                                    onClick : '',
                                 
                                }],
                     elements:[
@@ -184,7 +183,7 @@
                             type: 'DROP_DOWN',
                             required: false,
                             placeholder:'List Name',
-                            model : 'Name',
+                            model : 'listName'
                         },{
                             name:'Submit',
                             type:'BUTTON',
@@ -195,7 +194,15 @@
                 }
                 
 
-             });
+             }).state('app.home.manage.recipients.import', {
+                    url: '/import',
+                    templateUrl:'views/recipient/ImportRecipient.html',
+                    controller:'RecipientCtrl',
+                data: {
+                     displayName: 'ImportRecipient',
+                    
+                    }
+               });
 
 		    
 	     }]);

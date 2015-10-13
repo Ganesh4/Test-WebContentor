@@ -38,13 +38,12 @@
                                 }],
                                 actionBarBtn: [{
                                                 name : "Create",
-                                                onClickEvent : '',
+                                                onClick : '',
                                             }],
                              }
                         }).state('app.home.campaign.general', {
                             url: '/general',
                             templateUrl:"views/campaign/NewCampaign.html",
-                             controller:'CampaignCtrl',
                                 data: {
                                 displayName: 'General',
                                 LeftNavList:[{
@@ -67,23 +66,24 @@
                                         ],
                                 actionBarBtn: [{
                                                 name : "Cancel",
-                                                onClickEvent : 'CANCEL',
+                                                onClick : 'CANCEL',
                                             },{
                                                 name : "Save & Exit",
-                                                onClickEvent : 'CAMPAIGN_SAVE_Exit',
+                                                onClick : 'CAMPAIGN_SAVE_Exit',
                                                 disable : 'CAMPAIGN_SAVE_DISABLE'
                                                 
                                             },{
                                                  name : "Save",
-                                                 onClickEvent : 'CAMPAIGN_SAVE',
+                                                 onClick : 'CAMPAIGN_SAVE',
                                                  disable : 'CAMPAIGN_SAVE_DISABLE'
                                             }],
                                         }
                                 }).state('app.home.campaign.detail', {
                                     url: '/detail',
                                     templateUrl:"views/campaign/CampaignDetail.html",
-                                    controller:'CampaignCtrl',
+                                    controller:"CampaignDetailCtrl",
                                     data:{
+                                         displayName: 'Detail',
                                         LeftNavList:[{
                                             icon : 'fa fa-angle-down',
                                             name : 'Properties',
@@ -103,15 +103,15 @@
                                         ],
                                         actionBarBtn: [{
                                                 name : "Cancel",
-                                                onClickEvent : '',
+                                                onClick : '',
                                             },{
                                                 name : "Edit",
-                                                onClickEvent : '',
+                                                onClick : '',
                                                 disable : ''
                                                 
                                             },{
                                                  name : "Delete",
-                                                 onClickEvent : '',
+                                                 onClick : '',
                                                  disable : ''
                                             }],
                                     }
