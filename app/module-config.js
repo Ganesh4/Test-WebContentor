@@ -26,8 +26,6 @@
 
 	angular.module('user', ['manage']);
 
-
-
 	angular.module('role',['manage']);
 
 	angular.module('resources',['manage']);
@@ -42,7 +40,7 @@
 
 	angular.module('subheader',['home']);
 
-		angular.module('register',['home','reCAPTCHA'])
+	angular.module('register',['home','reCAPTCHA'])
 
 	angular.module('editor',['common','froala']);
 

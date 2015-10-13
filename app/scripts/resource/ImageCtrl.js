@@ -15,6 +15,8 @@ angular.module('resources').controller('ImageCtrl',
         function($scope ,$state, ApiSrv,Global,CommonSrv,ImageApiSrv){  
             var param = {};
             $scope.image = {};
+            var self = this;
+            var checkedImageId;
             $scope.gridOptions = {
                 multiSelect: true,
                 enableRowSelection:true,
@@ -75,7 +77,6 @@ angular.module('resources').controller('ImageCtrl',
             $scope.select2Options1 = {
                 'multiple': true,
                 'simple_tags': true,
-                
             }; 
             $scope.select2Options = {
                 'multiple': true,
@@ -89,16 +90,32 @@ angular.module('resources').controller('ImageCtrl',
                     $scope.imageList = data.plain();
                 }
             });
-                    //Delete Image Functionality..
-                $scope.$on(Global.EVENTS.DELETE_IMAGE,function(){
-                    alert('TEST');
-                    if(!_isEmpty($scope.gridRowSelectedData)){
-                        var imageData = $scope.gridRowSelectedData[0];
-                        console.log("imageData ------- " , imageData);
-                        
-                    }
-                    
-                });  
+            //Delete Image Functionality..
+            $scope.$on(Global.EVENTS.DELETE_IMAGE,function(){
+                if(!_.isEmpty($scope.gridRowSelectedData)){
+                    var imageData = $scope.gridRowSelectedData[0];
+                    self.deleteImageById(imageData.id);
+                }
+            });
+            //Grid Selected
+            //id resource id
+            $scope.gridSelected = function(resourceData){
+                console.log(resourceData);
+                if(resourceData){
+                    var data = new Array();
+                    data[0] = resourceData;
+                    $scope.$emit(Global.EVENTS.GRID_ROW_DATA,data);
+                    $scope.$emit(Global.EVENTS.DELETE_BTN_ENABLE);
+                }
+            }  
+            //Delete Image by id.
+            self.deleteImageById = function(id){
+                var uri = '/'+$scope.loggedInUser.securityUserID + '/'+ $scope.loggedInUser.groupId +'/images/'+id;
+                console.log('URI ---------- ' , uri);
+                ImageApiSrv.deleteImage(uri , null , function(data){
+                    alert('Deleted Successfully');
+                });
+            }
         }
     ]);
 })(angular);

@@ -22,7 +22,7 @@ angular.module('assets').directive('wcButton',['Global','$parse',function(Global
 				scope.doOnClick = function(){
 					console.log('On - Click ----------  ' , scope.onClick);
 					if(scope.onClick)
-						scope.$root.$emit(scope.onClick, scope.btnData);
+						scope.$root.$broadcast(scope.onClick, scope.btnData);
 				}
 				scope.PREVIOUS_BTN_DISABLE = true;
 				scope.NEXT_BTN_DISABLE = true;

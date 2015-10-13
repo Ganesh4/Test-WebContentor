@@ -21,7 +21,7 @@
 	                displayName: 'user',
 	                actionBarBtn: [{
 	                    name : 'Refresh',
-	                    onClick : 'REFRESH',
+	                    onClick : 'RELOAD',
 	                },{
 	                    name : "Export"
 	                },{
@@ -45,7 +45,6 @@
 		        	 displayName: 'Users',
 		        }
 		    });
-
 
 		    $stateProvider.state('app.home.manage.user.add', {
 	            url:'/add',

@@ -72,35 +72,32 @@
 		        url:'/table',
 		        template:'<wc-grid grid-options = "gridOptions" ui-grid-selection class="grid"></wc-grid>',
 		        data: {
-		        	 displayName: 'Images'
+		        	 displayName: 'table'
 		        }
 		    }).state('app.home.manage.resources.images.grid',{
 		        url:'/grid',
 		        templateUrl:'views/resource/ImageGrid.html',
 		        data: {
-		        	 displayName: 'Image/Grid'
+		        	 displayName: 'Grid'
 		        }
 		    }).state('app.home.manage.resources.images.list',{
 		        url:'/list',
 		        templateUrl:'views/resource/ImageList.html',
 		        data: {
-		        	 displayName: 'Image/List'
+		        	 displayName: 'List'
 		        }
 		    }).state('app.home.manage.resources.images.add',{
 		        url:'/add',
 		        templateUrl:'views/resource/AddImage.html',
 		        data: {
-		        	 displayName: 'Image/Add',
-
+		        	 displayName: 'Add',
 		        	 actionBarBtn: [{
-	                    name : 'Delete',
-	                    onClickEvent : '',
-	                },{
 	                    name : 'Cancel',
-	                    onClickEvent : ''
+	                    onClick : 'NAVIGATE',
+	                    state:'app.home.manage.resources.images.grid',
 	                },{
 	                    name : 'Submit',
-	                    onClickEvent : 'ADD_NEW_IMAGE',
+	                    onClick : 'ADD_NEW_IMAGE',
 	                    state:''
 	                }]
 		        }

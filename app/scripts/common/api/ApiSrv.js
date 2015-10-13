@@ -93,11 +93,13 @@ angular.module('microsite').service('ApiSrv',
 			}).then(success);
 		}
 
+		self.delete = function(uri , params, success, error ){
+			Restangular.one(uri).remove(params).then(success);
+		}
+
        self.getFormData = function(data){
 
             var formData = new FormData();
-            console.log('My Form -------- ',formData);
-
             _.each(data, function(value , key){
                 console.log('Keys ---------  ', key);
                 if(_.isArray(value)){   

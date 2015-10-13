@@ -16,7 +16,8 @@
 			'Restangular',
 			'ImageApiSrv',
 			'$cookieStore',
-       		function($scope,$state, $q, ApiSrv, CommonSrv, Global, UserApiSrv,CampaignApiSrv, Restangular,ImageApiSrv,$cookieStore){
+			'$stateParams',
+       		function($scope,$state, $q, ApiSrv, CommonSrv, Global, UserApiSrv,CampaignApiSrv, Restangular,ImageApiSrv,$cookieStore,$stateParams){
 				var param = {};
 				$state.args = [];
 				$scope.user = {};
@@ -27,7 +28,7 @@
 				$scope.files = [];
 				$scope.gridRowSelectedData = [];
 				var wizardSteps = $state.current.data.wizardSteps;
-				ApiSrv.accessToken();
+				
 				
 				/*
 				CommonSrv.getDesignCategories(function(data){
@@ -51,15 +52,13 @@
     			$scope.$on('$stateChangeSuccess',function(event, data){
     				console.log($state.current.name);
     				if($state.current.name.indexOf('resources') != -1 ||
-    					$state.current.name == 'app.home.manage.page'){
-    					Restangular.setBaseUrl('http://192.168.1.34:8080/MicroS/');	
+    					$state.current.name.indexOf('page')){
+    					Restangular.setBaseUrl('http://localhost/MicroS/');
+    					ApiSrv.accessToken();	
     				}else{
-
     					Restangular.setBaseUrl('http://192.168.1.69/Yavun/api');
     					Restangular.configuration.defaultRequestParams = {};	
-
     				}
-    				
     			});
     			$scope.froalaOptions = {
         			buttons : ["bold", "italic", "underline", "sep", "align", "insertOrderedList", "insertUnorderedList"]
@@ -176,7 +175,17 @@
                 	if(data)
                     	$scope.gridRowSelectedData = data;
             	});
-	 	
+
+            	//Reload Data of the State
+            	$scope.$on(Global.EVENTS.RELOAD, function(event , data){
+					//This Will Reload All The States
+            		$state.transitionTo($state.current, $stateParams, {
+					    reload: true,
+					    inherit: false,
+					    notify: true
+					});
+            	});
+
 			}
 		]);
 })(angular);
