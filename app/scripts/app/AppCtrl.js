@@ -139,6 +139,7 @@
 	            $scope.enableSave = function(){
 	            	CommonSrv.enableSave($scope);
 	            }
+	            
 	            $scope.disableSave = function(){
 	            	CommonSrv.disableSave($scope);	
 	            }
