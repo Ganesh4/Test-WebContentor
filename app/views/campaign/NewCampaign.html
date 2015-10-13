@@ -19,14 +19,12 @@
    
     <input type="text" class="form-control" 
            datepicker-popup="{{format}}" 
-           class="form-control input-width"
            ng-model="campaign.startDate" 
            is-open="openedStart" 
            date-disabled="disabled(date, mode)"
            min-date="today" 
            ng-required="true" 
            id="date-picker" 
-           readonly
            show-button-bar="false"
            ng-change = "clearEndDate()"
            />

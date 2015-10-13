@@ -38,7 +38,7 @@
                                 }],
                                 actionBarBtn: [{
                                                 name : "Create",
-                                                onClickEvent : '',
+                                                onClick : '',
                                             }],
                              }
                         }).state('app.home.campaign.general', {
@@ -53,20 +53,28 @@
                                                     icon : 'fa fa-life-ring',
                                                     name : 'General',
                                                     state:'app.home.campaign.general'
+                                                },{
+                                                    icon : 'fa fa-envelope',
+                                                    name : 'Emails',
+                                                    state: 'app.home.campaign.emails'
+                                                },{
+                                                    icon : 'fa fa-list-alt',
+                                                    name : 'Promotional Pages',
+                                                    state : 'app.home.manage.page'
                                                 }]
                                              }
                                         ],
                                 actionBarBtn: [{
                                                 name : "Cancel",
-                                                onClickEvent : 'CANCEL',
+                                                onClick : 'CANCEL',
                                             },{
                                                 name : "Save & Exit",
-                                                onClickEvent : 'CAMPAIGN_SAVE_Exit',
+                                                onClick : 'CAMPAIGN_SAVE_Exit',
                                                 disable : 'CAMPAIGN_SAVE_DISABLE'
                                                 
                                             },{
                                                  name : "Save",
-                                                 onClickEvent : 'CAMPAIGN_SAVE',
+                                                 onClick : 'CAMPAIGN_SAVE',
                                                  disable : 'CAMPAIGN_SAVE_DISABLE'
                                             }],
                                         }
@@ -95,15 +103,15 @@
                                         ],
                                         actionBarBtn: [{
                                                 name : "Cancel",
-                                                onClickEvent : '',
+                                                onClick : '',
                                             },{
                                                 name : "Edit",
-                                                onClickEvent : '',
+                                                onClick : '',
                                                 disable : ''
                                                 
                                             },{
                                                  name : "Delete",
-                                                 onClickEvent : '',
+                                                 onClick : '',
                                                  disable : ''
                                             }],
                                     }
