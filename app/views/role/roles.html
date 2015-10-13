@@ -1,0 +1,28 @@
+<div class="main_rhs_wrapper">
+<p><strong>Role</strong></p>
+<p>Specify the role for this user</p>
+<form>
+<div class="row">
+  <div class="col-xs-12">
+
+      <!-- Roles Row 1-->
+      <div class="img-thumbnail roles-row" ng-repeat = "role in roles">
+      		<div class="roles-radio">
+              <input type="radio" name="roleId" ng-model="user.roleId" value="{{role.roleId}}" />
+            </div>
+            
+            <div class="roles-content">
+              <p><strong>{{role.roleName}}</strong></p>
+              <p>{{role.description}}</p>
+              <p>{{message}}</p>
+            </div>
+      </div>
+      
+
+  
+  </div>
+  
+</div>
+</form>
+
+</div>

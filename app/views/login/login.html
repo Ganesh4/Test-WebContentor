@@ -1,66 +1,16 @@
 
 <div class="wrapper">
-
-<!--Navigation bar start here-->
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#"><img src="images/yavun_logo.svg" alt=""/></a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    
-     
-        
-      
-      <ul class="nav navbar-nav navbar-right nav-icon-color">
-               <li><a href="#"><i class="fa fa-question-circle"></i></a></li>      
-      </ul>
-      
-
-
-          </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav><!--Navigation bar end here-->
+<wc-header></wc-header>
    
 <!--Work area start here-->
 <div class="inner_wrapper">
     <div class="container">
-       
       <div class="form-signin">
-      <form  name="Form" novalidate="novalidate"
-                  ng-submit="submit()"
-                  validate-non-visible-controls="false">
         <h2 class="form-signin-heading">Please sign in</h2>
-        <div>{{message}}</div>
-         <div class="form-group">
-        <label class="sr-only" for="inputEmail">Email</label>
-        <input type="email" autofocus required="" placeholder="Email" ng-model="loginUser.email" class="form-control" required="required"  required-err-type="emailisrequired" />
+        <div class="form-group">
+        <wc-form elements="elements" form-btns="formBtns" form-data="loginUser" submit-event="{{submitEvent}}"></wc-form>
         </div>
-         <div class="form-group">
-        <label class="sr-only" for="inputPassword">Password</label>
-        <input type="password" required="required" required-err-type="passwordisrequired" placeholder="Password" ng-model="loginUser.password" class="form-control">
-        </div>
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" value="remember-me"> Remember me
-          </label>
-        </div>
-        <button class="btn btn-success "
-         ng-click = "loginCheck(email,password)">Sign in</button>
-         <button class="btn  btn-success"
-         ui-sref = "app.register">New Registration</button>
-      </form>
       </div>
-
     </div>
    </div>
 <!--Work area end here-->

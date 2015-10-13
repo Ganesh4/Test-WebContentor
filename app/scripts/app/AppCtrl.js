@@ -47,7 +47,7 @@
                     $scope.templateCategories = response.plain();
             	});
 				*/
-    			//$scope.froalaOptions.froala("getSelection");
+				//$scope.froalaOptions.froala("getSelection");
     			$scope.$on('$stateChangeSuccess',function(event, data){
     				console.log($state.current.name);
     				if($state.current.name.indexOf('resources') != -1 ||
@@ -61,8 +61,6 @@
     				}
     				
     			});
-
-
     			$scope.froalaOptions = {
         			buttons : ["bold", "italic", "underline", "sep", "align", "insertOrderedList", "insertUnorderedList"]
     			}
@@ -84,7 +82,6 @@
 	            });
 
 	            $scope.$on(Global.EVENTS.ADD_NEW_USER,function(event, data){
-	                console.log('User ------- ',$scope.user);
 	                var user = $scope.user;
 	                if(!_.isUndefined(user.country))
 	                	user.country = $scope.user.country.SecurityCountryID;
@@ -97,25 +94,25 @@
 	                });
 	            });
 
-
 	            $scope.enableNext = function(){
 	            	CommonSrv.enableNext($scope);
 	            }
 	            $scope.disableNext = function(){
 	            	CommonSrv.disableNext($scope);	
 	            }
+
 	            $scope.$on(Global.EVENTS.USER_REGISTER,function(event, data){
-	                console.log('User ------- ',$scope.user);
-	                var user = $scope.user;
+	               console.log('User ------- ',data);
+	               var user = data;
 	               if(!_.isUndefined(user.country))
-	                user.country = $scope.user.country.SecurityCountryID;
-	              if(!_.isUndefined(user.state))
-	                user.state = $scope.user.state.SecurityStateID;
-	                UserApiSrv.addNewUser( 'user/register', user,function(response){
-	                	$state.go('app.success');
-	                	console.log("Success");
-	                },function(response){
-	                	console.log("Error");
+		                user.country = $scope.user.country.SecurityCountryID;
+	               if(!_.isUndefined(user.state))
+		                user.state = $scope.user.state.SecurityStateID;
+		                UserApiSrv.addNewUser( 'user/register', user,function(response){
+		                	$state.go('app.register.success');
+		                	console.log("Success");
+		                },function(response){
+		                	console.log("Error");
 	                });
 	            });
 
@@ -131,11 +128,11 @@
 
             	 $scope.$on(Global.EVENTS.CAMPAIGN_SAVE_EXIT,function(event, data){
 	            	$scope.campaign.campaignFeatureId = _.keys($scope.campaign.campaignFeatureId);
-	            	
+             	
 	            	console.log('campaign-----------',$scope.campaign);
 	            	ApiSrv.post('campaign',$scope.campaign,function(data){
 	            		console.log('data------------',$scope.campaign);
-	            	});
+	            });
 	            	$state.go('app.home.campaign');
 	            });
 
@@ -145,14 +142,14 @@
 	            $scope.disableSave = function(){
 	            	CommonSrv.disableSave($scope);	
 	            }
-	            $scope.$on(Global.EVENTS.ADD_NEW_IMAGE,function(event, data){
-             	 	
+             	$scope.$on(Global.EVENTS.ADD_NEW_IMAGE,function(event, data){
+             	
              	 	var data = {
 						resource : $scope.image,
 						file: $scope.files
-					}
+			}
 					//console.log('test ---',data);
-					//data.resource.category = JSON.parse(data.resource.category);
+					data.resource.category = JSON.parse(data.resource.category);
                     ImageApiSrv.addNewImage($scope.userGroupUri+'images',data,function(response){
                     	console.log('Image------------',data);
                  	});

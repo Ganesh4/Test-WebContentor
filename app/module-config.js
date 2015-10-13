@@ -8,7 +8,7 @@
 
 	angular.module('vendor',['ui.router','restangular','ui.select2','ngSanitize','cb.x2js','ui.grid','ngCookies','ui.bootstrap']);
 
-	angular.module('common',['vendor','angularUtils.directives.uiBreadcrumbs','jcs-autoValidate']);
+	angular.module('common',['vendor','angularUtils.directives.uiBreadcrumbs','jcs-autoValidate','ui.grid.selection']);
 	
 	angular.module('assets',['common']);
 
@@ -24,11 +24,13 @@
 
 	angular.module('manage',['home']);
 
-	angular.module('user', ['manage' , 'reCAPTCHA']);
+	angular.module('user', ['manage']);
 
 	angular.module('role',['manage']);
 
 	angular.module('resources',['manage']);
+
+	angular.module('recipients',['manage']);
 	
 	angular.module('overview',['home']);
 
@@ -40,8 +42,10 @@
 
 	angular.module('subheader',['home']);
 
+	angular.module('register',['home','reCAPTCHA'])
+
 	angular.module('editor',['common','froala']);
 
-	angular.module('microsite',['login','home','overview','common','design','header','subheader','editor','campaign','manage','user','role','resources','email']);
+	angular.module('microsite',['login','home','overview','common','design','header','subheader','editor','campaign','manage','user','role','resources', 'register', 'email','recipients']);
 
 })(angular);

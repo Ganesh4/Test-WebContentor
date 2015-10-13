@@ -31,19 +31,19 @@
 	                    icon : 'fa fa-table view_grid_button',
 	                    type  : "icon",
 	                    onClickEvent : '',
-	                    state:'app.home.manage.resources.images'
+	                    state:'app.home.manage.resources.images.table'
 	                },{
 	                	name : 'List View',
 	                    icon : 'fa fa-list view_grid_button',
 	                    type  : "icon",
 	                    onClickEvent : '',
-	                    state:'app.home.manage.resources.list'
+	                    state:'app.home.manage.resources.images.list'
 	                },{
 	                	name : 'Grid View',
 	                    icon : 'fa fa-th-large view_grid_button',
 	                    type  : "icon",
 	                    onClickEvent : '',
-	                    state:'app.home.manage.resources.grid'
+	                    state:'app.home.manage.resources.images.grid'
 	                },{
 	                    name : 'View',
 	                    type : 'text',
@@ -66,28 +66,32 @@
 	                }]
 	            }     	
 	        }).state('app.home.manage.resources.images',{
-		        url:'/images/table',
+	        	url:'/images',
+	        	template:'<ui-view></ui-view>',
+	        	abstract:true
+	        }).state('app.home.manage.resources.images.table',{
+		        url:'/table',
 		        template:'<wc-grid grid-options = "gridOptions" ui-grid-selection class="grid"></wc-grid>',
 		        controller : 'ImageCtrl',
 		        data: {
 		        	 displayName: 'Images'
 		        }
-		    }).state('app.home.manage.resources.grid',{
-		        url:'/image/grid',
+		    }).state('app.home.manage.resources.images.grid',{
+		        url:'/grid',
 		        templateUrl:'views/resource/ImageGrid.html',
 		        controller : 'ImageCtrl',
 		        data: {
 		        	 displayName: 'Image/Grid'
 		        }
-		    }).state('app.home.manage.resources.list',{
-		        url:'/image/list',
+		    }).state('app.home.manage.resources.images.list',{
+		        url:'/list',
 		        templateUrl:'views/resource/ImageList.html',
 		        controller : 'ImageCtrl',
 		        data: {
 		        	 displayName: 'Image/List'
 		        }
 		    }).state('app.home.manage.resources.add',{
-		        url:'/image/add',
+		        url:'/add',
 		        templateUrl:'views/resource/AddImage.html',
 		        controller : 'ImageCtrl',
 		        data: {
@@ -103,10 +107,8 @@
 	                    name : 'Submit',
 	                    onClickEvent : 'ADD_NEW_IMAGE',
 	                    state:''
-	                    
 	                }]
 		        }
-		    });	    
+		    });
 	}]);
-
 })(angular);

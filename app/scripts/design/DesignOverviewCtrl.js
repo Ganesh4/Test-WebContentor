@@ -3,7 +3,7 @@
 **/
 'use strict';
 (function(angular){
-angular.module('overview').controller('OverviewCtrl',
+angular.module('overview').controller('DesignOverviewCtrl',
 	[
 	    
 		'$scope',
@@ -13,9 +13,8 @@ angular.module('overview').controller('OverviewCtrl',
 		'CommonSrv',
 		
 		function($scope,$state, Restangular, OverviewApiSrv,CommonSrv){
+			Restangular.setBaseUrl('http://localhost/MicroS/');
 			$scope.subheader = $scope.$parent.subheader;
-			//$scope.subheader.breadcrumb = ['home','overview'];
-			
 			$scope.isHidden = false;   
 			$scope.templates = [];
 			$scope.templateType = ''; 

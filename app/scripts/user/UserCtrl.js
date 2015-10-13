@@ -16,8 +16,6 @@ angular.module('user').controller('UserCtrl',
             console.log('$scope ----------- ',$scope.loggedInUser);
             var param = {};
             $scope.gridOptions = {
-                multiSelect: true,
-                enableRowSelection:true,
                 columnDefs: [{
                     field: 'FirstName', 
                     displayName: 'First Name',
@@ -47,6 +45,7 @@ angular.module('user').controller('UserCtrl',
                    
                 }]
             } 
+
             UserApiSrv.getUserList('users',param, 
                 function(data){
                     if(data)

@@ -3,14 +3,16 @@
 (function(angular){
 
 	angular.module('app').config([function(){ 
-
+		
 
 	}]).run([
        'validator',
        'foundation5ElementModifier',
        'defaultErrorMessageResolver',
        'ElementModifierSrv',
-       function (validator, foundation5ElementModifier, defaultErrorMessageResolver, ElementModifierSrv) {
+       '$rootScope',
+       'CommonSrv',
+       function (validator, foundation5ElementModifier, defaultErrorMessageResolver, ElementModifierSrv, $rootScope, CommonSrv) {
 			validator.registerDomModifier(ElementModifierSrv.key, ElementModifierSrv);
             // passing a culture into getErrorMessages('fr-fr') will get the culture specific messages
 	        // otherwise the current default culture is returned.
@@ -26,6 +28,8 @@
 	          	errorMessages['invalidPhoneNo'] = 'Invalid Phone Number';
 	          	
 	        });
+
+			
 
        }]);
 

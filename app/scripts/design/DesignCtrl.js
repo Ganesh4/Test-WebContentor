@@ -14,14 +14,7 @@
 			$scope.design = {};
 			$scope.files = [];
 			$scope.index;
-			//Select 2 Options to populate.
-			console.log($state);
-			$scope.select2Options = {
-				'multiple': true,
-				'simple_tags': true,
-				'tags': $state.current.data.tags				
-			};
-						
+		
 			$scope.uploadDesign = function(){
 				$scope.design.seo.metaDescription = $scope.design.description;
 				var category = _.filter($scope.catagories,function(category){

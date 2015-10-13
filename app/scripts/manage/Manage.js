@@ -39,7 +39,7 @@
                             menu : [{
                                 icon : 'fa fa-picture-o',
                                 name : 'Images',
-                                state: 'app.home.manage.resources.images'
+                                state: 'app.home.manage.resources.images.grid'
                             },{
                                 icon : 'fa fa-video-camera',
                                 name : 'Videos'
@@ -55,7 +55,8 @@
                                 name : 'Emails'
                             },{
                                 icon : 'fa fa-list-alt',
-                                name : 'Recipients'
+                                name : 'Recipients',
+                                state: 'app.home.manage.recipients.list'
                             }]
                         },{
                             icon : 'fa fa-angle-down',
@@ -63,7 +64,7 @@
                             menu : [{
                                 icon : 'fa fa-file-text',
                                 name : 'Promotional Pages',
-                                state : 'app.home.manage.page'
+                                state : 'app.home.manage.page.overview'
                             }]
                         },{
                             icon : 'fa fa-angle-down',

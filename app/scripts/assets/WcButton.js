@@ -18,9 +18,10 @@ angular.module('assets').directive('wcButton',['Global','$parse',function(Global
 				state : '='
 			},
 			link:function(scope,elem,attrs){
-			
+				
 				scope.doOnClick = function(){
-					scope.$emit(scope.onClick, scope.btnData);
+					if(scope.onClick)
+						scope.$emit(scope.onClick, scope.btnData);
 				}
 				scope.PREVIOUS_BTN_DISABLE = true;
 				scope.NEXT_BTN_DISABLE = true;
@@ -30,7 +31,6 @@ angular.module('assets').directive('wcButton',['Global','$parse',function(Global
 				scope.isEnabled = function(){
 					if(scope.disable){
 						var model = $parse(scope.disable);
-						//console.log('Model ----------  ',scope.disable , model(scope));
 						return model(scope);
 					}
 					else 

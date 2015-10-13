@@ -33,10 +33,65 @@
 
 /*====================== New Campaign Page ======================*/
 
+.margin-for-addimg{
+	margin-left: 0px;
+	padding-left: 0px;
+	}
 
 .campaign_rhs_wrapper {
+		
+	.class-top{
+		margin-top: 15px;
+		}
+	
+	.addimg-row{
+		display: inline-block;
+		width: 100%;
+		
+		.select2-container .select2-choice{
+			background-color: #fff;
+			background-image: none;
+			height: 32px;
+			line-height: 28px;
+			color: #8E8E8E;
+			}
+			
+		label {
+			  width: 100%;
+			  padding-left: 0px;
+			  margin-left: 0px;
+			  }
+		.textfield-width{
+			  width: 70%;
+			  }
+		.addimg-left-fg{
+			width: 64%;
+			float: left;
+			margin-right: 2px;
+		    }
+		.addimg-right-fg{
+			width: 36%;
+			float: left;
+			margin-left: 0%;
+			
+			  i{
+				color: #5d5e64;
+				font-size: 20px;
+				font-weight: bold;
+				margin-top: 20px;
+				cursor: pointer;
+				}
+		 }
+	}
 	
 	.form-group {
+		
+		.dropdown-menu{
+			
+			i{ position: relative;
+			padding: 0px;
+				}
+		}
 		
 		.input-width{
 			width: 50%;
@@ -51,9 +106,9 @@
 			}
 		
 		.campaign-left-fg{
-			width: 25%;
+			width: 44%;
 			float: left;
-			margin-right:15px;
+			margin-right: 2px;
 		    }
 		.campaign-right-fg{
 			width: 48%;
