@@ -15,8 +15,8 @@
 			'CampaignApiSrv',
 			'Restangular',
 			'ImageApiSrv',
-			'$cookieStore',
-       		function($scope,$state, $q, ApiSrv, CommonSrv, Global, UserApiSrv,CampaignApiSrv, Restangular,ImageApiSrv,$cookieStore){
+			'localStorageService',
+       		function($scope,$state, $q, ApiSrv, CommonSrv, Global, UserApiSrv,CampaignApiSrv, Restangular,ImageApiSrv,localStorageService){
 				var param = {};
 				$state.args = [];
 				$scope.user = {};
@@ -164,10 +164,10 @@
 			        });
 			    });
 
-			    if($cookieStore.get('loggedInUser') == undefined){
+			    if(localStorageService.get('loggedInUser') == undefined){
 			    	$state.go('app.login')
 			    }else{
-			    	$scope.loggedInUser = $cookieStore.get('loggedInUser');
+			    	$scope.loggedInUser = localStorageService.get('loggedInUser');
 			    	$scope.userGroupUri = $scope.loggedInUser.securityUserID+'/'+$scope.loggedInUser.groupId+'/';
 			    }	 
              

@@ -5,10 +5,9 @@
 		'$scope',
 		'$state',
 		'Restangular',
-		'$cookieStore',
         'CampaignApiSrv',
-		function($scope,$state,Restangular,$cookieStore,CampaignApiSrv){
-
+		function($scope,$state,Restangular,CampaignApiSrv){
+            console.log("$scope.loggedInUser ----------- ",$scope.loggedInUser);
             console.log($scope.loggedInUser.securityUserID,'---------',$scope.loggedInUser.groupId);
             
 			$scope.data = $state.current.data;
@@ -71,12 +70,9 @@
             // assign custom format
             $scope.format = $scope.formats[0];   
 
-                CampaignApiSrv.getCampaignFeatures('features',{},function(data){
-                    $scope.featureList = data.plain()   
-                    console.log('Feature List ------- ',  $scope.featureList);
-                });
-
-
-
+            CampaignApiSrv.getCampaignFeatures('features',{},function(data){
+                $scope.featureList = data.plain()   
+                console.log('Feature List ------- ',  $scope.featureList);
+            });
         }]);
 })(angular);
