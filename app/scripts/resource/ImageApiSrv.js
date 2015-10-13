@@ -22,7 +22,9 @@ angular.module('resources').service('ImageApiSrv',
 				//ApiSrv.post(uri,params,success,error);
 				ApiSrv.postMultipart(uri, formData, success, error);
 			}
-
+			self.deleteImage = function(uri, params, success, error){
+				ApiSrv.delete(uri, params, success, error);
+			}
      }]);
 
 })(angular);

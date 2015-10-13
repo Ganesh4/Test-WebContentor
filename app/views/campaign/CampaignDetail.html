@@ -1,11 +1,10 @@
 <div class="main_rhs_wrapper">
-<p><strong>Description of the campaign  goes here</strong></p>
+<p><strong>{{campaign.name}}</strong></p>
+<p>{{campaign.description}}</p>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.</p>
+<p>This campaign started on {{campaign.startDate | FormatDateFilter}}  and ends on {{campaign.endDate | FormatDateFilter}} </p>
 
-<p>This campaign started on 5th september and ends 30 october 2015</p>
-
-<p>Features</p>
+<p><strong>Features</strong></p>
 
   <div class="row">
     <div class="col-md-6">
@@ -13,16 +12,17 @@
     
     <div class="form-group campaigndetail-group-left">
     
-      <div class="campaigndetail-left-fg">
-        <img src="images/email-icon.png" width="60" height="60" alt=""/>
-        <label ui-sref = "">Email</label>
-        </div>
+      <div class="campaigndetail-left-fg" ng-repeat = "feature in selectedFeatures">
+       
+        <img src="images/microsite-icon.png" width="60" height="60" alt="" ng-if="feature.Feature == 'Microsite'" ui-sref = "app.home.manage.page.overview"/> 
+       
+        <img src="images/email-icon.png" width="60" height="60" alt="" ng-if="feature.Feature == 'Email'"/>
+
+        <img src="images/blog-icon.png" width="60" height="60" alt="" ng-if="feature.Feature == 'Blog'"/> 
         
-      <div class="campaigndetail-right-fg" ui-sref = "app.home.manage.page">
-          <img src="images/microsite-icon.png" width="60" height="60" alt=""/> 
-          <label>Microsite</label>
+        <label>{{feature.Feature}}</label>
+        
       </div>
-      
     </div>
     
     </div>

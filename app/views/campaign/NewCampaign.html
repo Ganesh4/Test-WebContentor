@@ -1,7 +1,8 @@
 <div class="main_rhs_wrapper">
+
 <p><strong>General</strong></p>
 <p>Enter the  campaign information</p>
- <form name="Form" novalidate="novalidate"
+ <form name="Form" novalidate
                   validate-non-visible-controls="false"
                   >
 
@@ -14,16 +15,20 @@
   
   <div class="form-group campaign-group-left">
   	<div class="campaign-left-fg">
-    <label for="exampleInputEmail1">Start Date</label>
-    <p class="input-group datepicker" >
+    <label>Start Date</label>
+   
     <input type="text" class="form-control" 
            datepicker-popup="{{format}}" 
            ng-model="campaign.startDate" 
            is-open="openedStart" 
+           date-disabled="disabled(date, mode)"
+           min-date="today" 
+           ng-required="true" 
+           id="date-picker" 
            show-button-bar="false"
            ng-change = "clearEndDate()"
            />
-    </p>       
+          
     </div>
 
     <div class="campaign-right-fg" ng-click="openStart($event)">
@@ -33,7 +38,7 @@
   
   <div class="form-group campaign-group-left">
   	<div class="campaign-left-fg"  >
-    <label for="exampleInputEmail1">End Date</label>
+    <label>End Date</label>
     <input type="text" class="form-control" 
            datepicker-popup="{{format}}" 
            class="form-control input-width"
@@ -63,7 +68,6 @@
         <label class="checkbox-inline" ng-repeat = "feature in featureList">
           <input type="checkbox" name="" ng-model = "campaign.campaignFeatureId[feature.SecurityFeatureID]" value="{{feature.SecurityFeatureID}}">{{feature.Feature}}
         </label>
-        
        </span> 
   </div>
   

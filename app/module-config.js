@@ -26,11 +26,11 @@
 
 	angular.module('user', ['manage']);
 
-
-
 	angular.module('role',['manage']);
 
 	angular.module('resources',['manage']);
+
+	angular.module('recipients',['manage']);
 	
 	angular.module('overview',['home']);
 
@@ -42,10 +42,10 @@
 
 	angular.module('subheader',['home']);
 
-		angular.module('register',['home','reCAPTCHA'])
+	angular.module('register',['home','reCAPTCHA'])
 
 	angular.module('editor',['common','froala']);
 
-	angular.module('microsite',['login','home','overview','common','design','header','subheader','editor','campaign','manage','user','role','resources', 'register', 'email']);
+	angular.module('microsite',['login','home','overview','common','design','header','subheader','editor','campaign','manage','user','role','resources', 'register', 'email','recipients']);
 
 })(angular);

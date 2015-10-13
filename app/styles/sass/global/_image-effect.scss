@@ -126,3 +126,18 @@
    -moz-box-shadow: 0 0 1px #000;
    box-shadow: 0 0 1px #000;
 	}
+	
+	.checkbox-style ul {		
+		  li {
+			  width: 24px;
+			  height: 26px;
+			  background-color:#3e4042;
+			  border-radius: 2px;
+		  }
+		  li.selected {
+			  width: 28px;
+			  height: 26px;
+			  background-image:url(../../images/select.png);
+			  background-color:transparent;
+		  }
+    }

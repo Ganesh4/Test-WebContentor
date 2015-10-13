@@ -55,7 +55,12 @@
                                 name : 'Emails'
                             },{
                                 icon : 'fa fa-list-alt',
-                                name : 'Recipients'
+                                name : 'Recipients',
+                                state: 'app.home.manage.recipients.list'
+                            },{
+                                icon : 'fa fa-list-alt',
+                                name : 'Segmentation',
+                                state: ''
                             }]
                         },{
                             icon : 'fa fa-angle-down',
