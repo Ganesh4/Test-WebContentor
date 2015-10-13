@@ -25,6 +25,7 @@
 				$scope.loggedInUser = {};
 				$scope.campaign = {};
 				$scope.files = [];
+				$scope.featureList = {};
 
 				var wizardSteps = $state.current.data.wizardSteps;
 				ApiSrv.accessToken();
@@ -117,8 +118,8 @@
 	            });
 
             	 $scope.$on(Global.EVENTS.CAMPAIGN_SAVE,function(event, data){
+
 	            	$scope.campaign.campaignFeatureId = _.keys($scope.campaign.campaignFeatureId);
-	            	
 	            	console.log('campaign-----------',$scope.campaign);
 	            	ApiSrv.post('campaign',$scope.campaign,function(data){
 	            		console.log('data------------',$scope.campaign);

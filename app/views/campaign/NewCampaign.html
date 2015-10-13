@@ -21,7 +21,8 @@
            class="form-control input-width"
            ng-model="campaign.startDate" 
            is-open="openedStart" 
-           date-disabled="disabled(date, mode)" 
+           date-disabled="disabled(date, mode)"
+           min-date="today" 
            ng-required="true" 
            id="date-picker" 
            readonly
@@ -68,7 +69,6 @@
         <label class="checkbox-inline" ng-repeat = "feature in featureList">
           <input type="checkbox" name="" ng-model = "campaign.campaignFeatureId[feature.SecurityFeatureID]" value="{{feature.SecurityFeatureID}}">{{feature.Feature}}
         </label>
-        
        </span> 
   </div>
   
