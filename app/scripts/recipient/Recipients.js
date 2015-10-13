@@ -183,7 +183,7 @@
                             type: 'DROP_DOWN',
                             required: false,
                             placeholder:'List Name',
-                            model : 'Name',
+                            model : 'listName'
                         },{
                             name:'Submit',
                             type:'BUTTON',

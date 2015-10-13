@@ -1,7 +1,7 @@
 /* Scss Document */
 
 .menu-circle{
-	background-color: #26ADE3;
+	background-color: $main_blue_color;
 	width: 75px;
 	height: 75px;
 	border-radius: 50%;
@@ -26,7 +26,7 @@
 	  margin-left: 5px;
 	  
 	  i{
-		color:#26ADE3;
+		color:$main_blue_color;
 		font-size: 20px;
 		margin: 20px 0 0 20px;
 		}
@@ -38,7 +38,7 @@
 	  bottom: 160px;
 	  
 	  i{
-		color:#26ADE3;
+		color:$main_blue_color;
 		font-size: 20px;
 		margin: 20px 0 0 22px;
 		}
@@ -47,7 +47,7 @@
 
 
 .menu-circle-2{
-	background-color: #26ADE3;
+	background-color: $main_blue_color;
 	width: 75px;
 	height: 75px;
 	border-radius: 50%;
@@ -72,7 +72,7 @@
 	  margin-left: 5px;
 	  
 	  i{
-		color:#26ADE3;
+		color:$main_blue_color;
 		font-size: 20px;
 		margin: 20px 0 0 22px;
 		}
@@ -84,7 +84,7 @@
 	  bottom: 160px;
 	  
 	  i{
-		color:#26ADE3;
+		color:$main_blue_color;
 		font-size: 20px;
 		margin: 20px 0 0 22px;
 		}

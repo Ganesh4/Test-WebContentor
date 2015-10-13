@@ -24,11 +24,11 @@
                 }]
             } 
 
-            RecipientApiSrv.getRecipient('1/recipient/list', param,function(data){
+            RecipientApiSrv.getRecipient($scope.loggedInUser.securityUserID+'/recipient/list', param,function(data){
                 if(data){
                     $scope.gridOptions.data = data.plain();
                     $scope.RecipientList = data.plain();
-                    console.log('$scope.RecipientList -------- ',$scope.RecipientList);
+                    alert('$scope.RecipientList -------- ',$scope.RecipientList);
                 }
             });
 			
