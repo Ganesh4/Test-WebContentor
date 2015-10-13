@@ -88,8 +88,6 @@ angular.module('common').service('CommonSrv',
                 scope.$broadcast(Global.EVENTS.CAMPAIGN_SAVE_EXIT_ENABLE);
             }
 
-      
-
             //DISABLE NEXT BUTTON
             self.disableSave = function(scope){
                 scope.$broadcast(Global.EVENTS.CAMPAIGN_SAVE_DISABLE);

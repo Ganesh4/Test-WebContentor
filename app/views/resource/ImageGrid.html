@@ -2,17 +2,32 @@
 
 <!--- Start Main Wrapper -->
 <div class="main_rhs_wrapper">
+    <!--Start First view Row -->
+    <div class="row">
 
-<!--Start First view Row -->
-<div class="row">
 
-<!-- Start image box 1 -->
-    <div class="col-sm-6 col-md-4" ng-repeat=" grid in imageList">
-      <div class="thumbnail">
-            <div class="view view-tenth">
-                <img src={{grid.upload.url}} />
-                <div class="mask">
-                
+        <div ng-if = "imageList.length === 0"  class= "col-xs-12"> 
+            <div class="img-thumbnail campaign-home-row">
+                <div class="campagin-home-icon">
+                 <i class="fa fa-arrow-circle-right"></i>
+                </div>
+               
+                <div class="campagin-home-content" ui-sref = "app.home.manage.resources.images.add">
+                  <p>Click to add your first Image</p>
+                </div>
+            </div>
+        </div>
+
+    <!-- Start image box 1 -->
+        <div class="col-sm-6 col-md-4" ng-repeat=" image in imageList" 
+            ng-click = "gridSelected(image)">
+            <div class="thumbnail">
+                <div class="view view-tenth">
+                    <img src={{image.upload.url}} />
+                    <div class="mask">
+                        <h2>{{image.upload.fileName}}</h2>
+                        <p>{{image.description}}</p>
+                    
             
                     <div class="checkbox-style">
                         <ul>
@@ -20,23 +35,21 @@
                         </ul>
                     </div>
              
-                
-                    <h2>{{grid.upload.fileName}}</h2>
-                    <p>{{grid.description}}</p>
-                    <div class="media-left media-middle grid-box">
-                       <li><p>Category</p><span> {{grid.category.name}}</span></li>
-                    </div>
-                    <!--- tabs Start-->
-                    <div class="tabs-row">
-                    <span ng-repeat = "keyword in grid.keywords">{{keyword}}</span> 
+                        <h2>{{image.upload.fileName}}</h2>
+                        <p>{{image.description}}</p>
+                        <div class="media-left media-middle grid-box">
+                           <li><p>Category</p><span> {{image.category.name}}</span></li>
+                        </div>
+                        <!--- tabs Start-->
+                        <div class="tabs-row">
+                        <span ng-repeat = "keyword in image.keywords">{{keyword}}</span> 
+                        </div>
                     </div>
                 </div>
-            </div>
-      </div>
+          </div>
+        </div>
+    <!-- End image box 1 -->
     </div>
-<!-- End image box 1 -->
-    
-</div>
 </div>
 <!--- End Main Wrapper -->
 
