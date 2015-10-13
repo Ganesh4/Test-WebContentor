@@ -50,9 +50,10 @@
 				*/
 				//$scope.froalaOptions.froala("getSelection");
     			$scope.$on('$stateChangeSuccess',function(event, data){
-    				console.log($state.current.name);
+    			
     				if($state.current.name.indexOf('resources') != -1 ||
-    					$state.current.name.indexOf('page')){
+    					$state.current.name.indexOf('page') != -1){
+    					console.log($state.current.name);
     					Restangular.setBaseUrl('http://localhost/MicroS/');
     					ApiSrv.accessToken();	
     				}else{
@@ -89,7 +90,6 @@
 	                UserApiSrv.addNewUser( 'users', user,function(response){
 	                	if(data.state)
 	                		$state.go(data.state);
-	                		
 	                });
 	            });
 
@@ -141,19 +141,7 @@
 	            $scope.disableSave = function(){
 	            	CommonSrv.disableSave($scope);	
 	            }
-             	$scope.$on(Global.EVENTS.ADD_NEW_IMAGE,function(event, data){
-             	
-             	 	var data = {
-						resource : $scope.image,
-						file: $scope.files
-			}
-					//console.log('test ---',data);
-				 	data.resource.category = JSON.parse(data.resource.category);
-                    ImageApiSrv.addNewImage($scope.userGroupUri+'images',data,function(response){
-                    	console.log('Image------------',data);
-                 	});
-	            });
-         	    //listen for the file selected event
+           	    //listen for the file selected event
 			    $scope.$on("fileSelected", function (event, args) {
 			        $scope.$apply(function () {            
 						//add the file object to the scope's files collection

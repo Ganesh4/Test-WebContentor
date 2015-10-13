@@ -114,7 +114,26 @@ angular.module('resources').controller('ImageCtrl',
                 console.log('URI ---------- ' , uri);
                 ImageApiSrv.deleteImage(uri , null , function(data){
                     alert('Deleted Successfully');
+                      $scope.$emit(Global.EVENTS.RELOAD);
                 });
+            }
+
+            $scope.$on(Global.EVENTS.ADD_NEW_IMAGE,function(event, data){
+                
+                var data = {
+                    resource : $scope.image,
+                    file: $scope.files
+                }
+                ImageApiSrv.addNewImage($scope.userGroupUri+'images',data,function(response){
+                    $state.transitionTo('app.home.manage.resources.images.grid');
+                    $scope.$emit(Global.EVENTS.RELOAD);
+                });
+            });
+
+            $scope.setCategoryValue = function(category){
+                if(category)
+                    $scope.image.category = JSON.parse(category);
+                console.log('$scope.image ', $scope.image);
             }
         }
     ]);
