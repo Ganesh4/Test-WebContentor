@@ -5,9 +5,8 @@
 		'$scope',
 		'$state',
 		'Restangular',
-		'$cookieStore',
-        'CampaignApiSrv',
-		function($scope,$state,Restangular,$cookieStore,CampaignApiSrv){
+		'CampaignApiSrv',
+		function($scope,$state,Restangular,CampaignApiSrv){
 			console.log("My Campaign --------------- ",$scope.campaign.campaignFeatureId,'----------',$scope.featureList);
 			$scope.selectedFeatures = [];
 			_.each($scope.featureList,function(value,key){
@@ -20,4 +19,5 @@
 			console.log('$scope.selectedFeatures --------- ',$scope.selectedFeatures);
 
         }]);
+
 })(angular);

@@ -14,7 +14,7 @@
 		   	$stateProvider.state('app.home.manage.recipients', {
 	                url: '/recipients',
 	                template:'<ui-view></ui-view>',
-	                controller:'RecipientCtrl',
+	                 controller:'RecipientCtrl',
                 data: {
 	                 displayName: 'Recipients',
 	                
@@ -27,6 +27,11 @@
                     actionBarBtn: [{
                                     name : 'Export',
                                     onClick : '',
+                               },{
+                                    name : 'Create List',
+                                    onClick : '',
+                                    state: ''
+                                
                                },{
                                     name : 'Save',
                                     onClick : '',
@@ -50,10 +55,10 @@
                     submitEvent: 'ADD_RECIPIENT',
                     actionBarBtn: [{
                                     name : 'Cancel',
-                                    onClick : '',
+                                    onClick : 'ADD_RECIPIENT_CANCEL',
                                },{
                                     name : 'Save',
-                                    onClick : '',
+                                    onClick : 'ADD_RECIPIENT',
                                 
                                }],
                     elements:[
@@ -113,8 +118,8 @@
                             required: true,
                             validate:'invalidPhoneNo',
                             pattern :'/^[0-9]{10,13}$/',
-                            placeholder:'phone',
-                            model : 'phone'
+                            placeholder:'Work Phone',
+                            model : 'workPhone'
                         }]
 
                      },{ 
@@ -126,8 +131,8 @@
                             required: true,
                             validate:'invalidMobile',
                             pattern :'/^[0-9]{10,13}$/',
-                            placeholder:'mobile',
-                            model : 'mobile'
+                            placeholder:'Mobile',
+                            model : 'mobile',
                         },{
                             name:'address',
                             lable:'Address',
@@ -178,17 +183,13 @@
                     },{
                         rowClass :'col-lg-6',
                         rowElement:[{
-                            name:'List',
+                            name:'listName',
                             lable:'List Name',
                             type: 'DROP_DOWN',
                             required: false,
                             placeholder:'List Name',
-                            model : 'listName'
-                        },{
-                            name:'Submit',
-                            type:'BUTTON',
-                            btnType:'submit',
-                            css:'btn btn-success',
+                            model : 'listId',
+                            ngOptions:'recipient.listName for recipient in RecipientList',
                         }],
                     }] 
                 }
@@ -197,9 +198,81 @@
              }).state('app.home.manage.recipients.import', {
                     url: '/import',
                     templateUrl:'views/recipient/ImportRecipient.html',
-                    controller:'RecipientCtrl',
                 data: {
                      displayName: 'ImportRecipient',
+                      LeftNavList:[{
+                        icon : 'fa fa-angle-down',
+                        name : 'STEPS',
+                        menu : [{
+                                     icon : 'fa fa-plus',
+                                     name : 'General',
+                                     state:'app.home.manage.recipients.import'
+                                },{
+                                    icon : 'fa fa-list-alt',
+                                    name : 'Mapping',
+                                    state:'app.home.manage.recipients.mapping'
+                               }],
+
+                             }],
+                     actionBarBtn: [{
+                                    name : "CVS",
+                                    onClick : '',
+                                },{
+                                    name : "Download Exl",
+                                    onClick : '',
+                                },{
+                                    name : "Cancel",
+                                    onClick : '',
+                                },{
+                                    name : "Save",
+                                    onClick : '',
+                                },{
+                                    name : "Next",
+                                    onClick : '',
+                                },{
+                                    name : "Previous",
+                                    onClick : '',
+                            }],
+                    
+                    }
+               }).state('app.home.manage.recipients.mapping', {
+                    url: '/mapping',
+                    templateUrl:'views/recipient/MappingRecipient.html',
+                data: {
+                     displayName: 'MappingRecipient',
+                     LeftNavList:[{
+                        icon : 'fa fa-angle-down',
+                        name : 'STEPS',
+                        menu : [{
+                                     icon : 'fa fa-plus',
+                                     name : 'General',
+                                     state:'app.home.manage.recipients.import'
+                                },{
+                                    icon : 'fa fa-list-alt',
+                                    name : 'Mapping',
+                                    state:'app.home.manage.recipients.mapping'
+                               }],
+
+                             }],
+                     actionBarBtn: [{
+                                    name : "CVS",
+                                    onClick : '',
+                                },{
+                                    name : "Download Exl",
+                                    onClick : '',
+                                },{
+                                    name : "Cancel",
+                                    onClick : '',
+                                },{
+                                    name : "Save",
+                                    onClick : '',
+                                },{
+                                    name : "Next",
+                                    onClick : '',
+                                },{
+                                    name : "Previous",
+                                    onClick : '',
+                            }],
                     
                     }
                });

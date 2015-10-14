@@ -53,7 +53,7 @@
 	                    disable:'DELETE_BTN_DISABLE'
 	                },{
 	                    name : 'Edit',
-	                    onClick:'',
+	                    onClick:'EDIT_IMAGE',
 	                    type  : "Button"
 
 	                },{
@@ -70,7 +70,7 @@
 	        	abstract:true,
 	        }).state('app.home.manage.resources.images.table',{
 		        url:'/table',
-		        template:'<wc-grid grid-options = "gridOptions" ui-grid-selection class="grid"></wc-grid>',
+		        template:'<wc-grid grid-options = "gridOptions" class="grid"></wc-grid>',
 		        data: {
 		        	 displayName: 'table'
 		        }
@@ -91,6 +91,21 @@
 		        templateUrl:'views/resource/AddImage.html',
 		        data: {
 		        	 displayName: 'Add',
+		        	 actionBarBtn: [{
+	                    name : 'Cancel',
+	                    onClick : 'NAVIGATE',
+	                    state:'app.home.manage.resources.images.grid',
+	                },{
+	                    name : 'Submit',
+	                    onClick : 'ADD_NEW_IMAGE',
+	                    state:''
+	                }]
+		        }
+		    }).state('app.home.manage.resources.images.edit',{
+		        url:'/edit',
+		        templateUrl:'views/resource/EditImage.html',
+		        data: {
+		        	 displayName: 'Edit',
 		        	 actionBarBtn: [{
 	                    name : 'Cancel',
 	                    onClick : 'NAVIGATE',
