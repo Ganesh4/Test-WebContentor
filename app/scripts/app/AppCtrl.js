@@ -118,7 +118,6 @@
             	 $scope.$on(Global.EVENTS.CAMPAIGN_SAVE,function(event, data){
 	            	$scope.campaign.campaignFeatureId = _.keys($scope.campaign.campaignFeatureId);
 	            	
-	            	console.log('campaign-----------',$scope.campaign);
 	            	ApiSrv.post('campaign',$scope.campaign,function(data){
 	            		console.log('data------------',$scope.campaign);
 	            	});
@@ -160,8 +159,20 @@
 			    
 			    //Selected data of the grid.
 			    $scope.$on(Global.EVENTS.GRID_ROW_DATA,function(event , data){
-                	if(data)
-                    	$scope.gridRowSelectedData = data;
+                	if(data){
+                    	$scope.gridRowSelectedData.push(data);
+                	}
+            	});
+            	//Removes Element From Grid
+            	$scope.$on(Global.EVENTS.REMOVE_GRID_ROW_DATA,function(event,data){
+            		if(data){
+        		   		var index = _.indexOf($scope.gridRowSelectedData , data);
+        		   		if(index !=-1)
+        		   			$scope.gridRowSelectedData.splice(index, 1);
+
+        		   		if(_.isEmpty($scope.gridRowSelectedData))
+        		   			$scope.$emit(Global.EVENTS.DELETE_BTN_DISABLE);
+            		}
             	});
 
             	//Reload Data of the State
@@ -173,7 +184,6 @@
 					    notify: true
 					});
             	});
-
 			}
 		]);
 })(angular);

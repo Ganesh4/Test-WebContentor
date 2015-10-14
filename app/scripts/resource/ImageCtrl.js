@@ -15,8 +15,10 @@ angular.module('resources').controller('ImageCtrl',
         function($scope ,$state, ApiSrv,Global,CommonSrv,ImageApiSrv){  
             var param = {};
             $scope.image = {};
+            $scope.checked = false;
             var self = this;
             var checkedImageId;
+            $scope.elements = $state.current.data.elements;
             $scope.gridOptions = {
                 multiSelect: true,
                 enableRowSelection:true,
@@ -67,7 +69,7 @@ angular.module('resources').controller('ImageCtrl',
                 };
             ImageApiSrv.getCategory($scope.userGroupUri+'categories',{},function(data){
                 if(data){
-                    $scope.imageCategory = data.plain(); 
+                    $scope.$root.imageCategory = data.plain(); 
                     console.log('$scope.imageCategory -------- ',$scope.imageCategory);
                 }
             });
@@ -93,28 +95,21 @@ angular.module('resources').controller('ImageCtrl',
             //Delete Image Functionality..
             $scope.$on(Global.EVENTS.DELETE_IMAGE,function(){
                 if(!_.isEmpty($scope.gridRowSelectedData)){
-                    var imageData = $scope.gridRowSelectedData[0];
-                    self.deleteImageById(imageData.id);
+                    var imageData = $scope.gridRowSelectedData;
+                    _.each(imageData , function(value , key ){
+                        self.deleteImageById(value.id);
+                    });
+                   alert('Deleted Successfully');
+                   $scope.$emit(Global.EVENTS.RELOAD);
                 }
             });
-            //Grid Selected
-            //id resource id
-            $scope.gridSelected = function(resourceData){
-                console.log(resourceData);
-                if(resourceData){
-                    var data = new Array();
-                    data[0] = resourceData;
-                    $scope.$emit(Global.EVENTS.GRID_ROW_DATA,data);
-                    $scope.$emit(Global.EVENTS.DELETE_BTN_ENABLE);
-                }
-            }  
+      
             //Delete Image by id.
             self.deleteImageById = function(id){
                 var uri = '/'+$scope.loggedInUser.securityUserID + '/'+ $scope.loggedInUser.groupId +'/images/'+id;
                 console.log('URI ---------- ' , uri);
                 ImageApiSrv.deleteImage(uri , null , function(data){
-                    alert('Deleted Successfully');
-                      $scope.$emit(Global.EVENTS.RELOAD);
+                    
                 });
             }
 
@@ -133,8 +128,24 @@ angular.module('resources').controller('ImageCtrl',
             $scope.setCategoryValue = function(category){
                 if(category)
                     $scope.image.category = JSON.parse(category);
-                console.log('$scope.image ', $scope.image);
+                console.log('$scope.image ', $scope.image); 
             }
+
+            $scope.$on('UNCHECKALL',function(event, data){
+                $scope.$broadcast(Global.EVENTS.IS_CHECKED, false );
+            });
+
+            $scope.$on(Global.EVENTS.UPDATE_IMAGE,function(event, data){
+                var data = {
+                    resource : $scope.image,
+                    file: $scope.files
+                }
+                var uri = $scope.userGroupUri+'images';
+                ImageApiSrv.updateImage(uri, data , function(response){
+                    $scope.$emit(Global.EVENTS.RELOAD);
+                    $state.transitionTo('app.home.manage.resources.images.grid');
+                });
+            });
         }
     ]);
 })(angular);

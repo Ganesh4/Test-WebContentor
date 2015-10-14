@@ -53,7 +53,8 @@
 	                    disable:'DELETE_BTN_DISABLE'
 	                },{
 	                    name : 'Edit',
-	                    onClick:'',
+	                    onClick:'NAVIGATE',
+	                    state:'app.home.manage.resources.images.edit',
 	                    type  : "Button"
 
 	                },{
@@ -98,8 +99,51 @@
 	                },{
 	                    name : 'Submit',
 	                    onClick : 'ADD_NEW_IMAGE',
-	                    state:''
 	                }]
+		        }
+		    }).state('app.home.manage.resources.images.edit',{
+		    	url:'/edit',
+		    	template:'{{image}}<wc-form elements ="elements" select-2-options = "select2Options" form-btns="formBtns" form-data="image"></wc-form>',
+				controller:'ImageEditCtrl',
+				data: {
+		        	displayName: 'Edit',
+		        	actionBarBtn: [{
+	                    name : 'Cancel',
+	                    onClick : 'NAVIGATE',
+	                    state:'app.home.manage.resources.images.grid',
+	                },{
+	                    name : 'Update',
+	                    onClick : 'UPDATE_IMAGE',
+	                }],
+                	elements:[
+                    {
+                        rowClass :'col-md-5',
+                		rowElement:[{
+                			name:'Description',
+                			lable:'Description',
+                			type: 'TEXT_AREA',
+                            required: false,
+                            validate:'',
+                            placeholder:'Description',
+                            model : 'description'
+                		},{
+                			name:'Keywords',
+                            lable:'Keywords',
+                            type: 'SELECT_TAGS',
+                            required: false,
+                            validate:'',
+                            placeholder:'Keywords',
+                            model : 'keywords'
+                		},{
+                			name:'Category',
+                            lable:'Category',
+                			type:'DROP_DOWN',
+                			placeholder:'Category',
+                			onChange:'setCategoryValue(category)',
+                			ngOptions:'category.name for category in $parent.imageCategory',
+                            model : 'category'
+                		}],
+                	}]
 		        }
 		    });
 	}]);

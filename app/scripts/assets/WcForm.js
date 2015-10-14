@@ -16,9 +16,12 @@
 					elements : '=',
 					formBtns : '=',
                     formData : '=',
-                    submitEvent: '@'
+                    submitEvent: '@',
+                    select2Options: '='
 				},
                 link : function(scope,elem,attrs){
+
+                    console.log('elements ---------- ', scope.elements);
                     
                     scope.doOnFormSubmit = function(){
                         //scope.$emit(Global.EVENTS.FORM_SUBMIT, scope.formData))

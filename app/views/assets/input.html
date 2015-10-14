@@ -1,22 +1,34 @@
 <div class="" ng-repeat="(key , element) in elements">
-  <div ng-class="element.rowClass" ng-repeat = "rowElement in element.rowElement">
-    <div class="form-group">
-       <label ng-if="rowElement.lable !== undefined">{{rowElement.lable}}</label>
+  <div ng-class="element.rowClass">
+
+    <div class="form-group" ng-repeat = "rowElement in element.rowElement">
+       
+        <label ng-if="rowElement.lable !== undefined">{{rowElement.lable}}</label>
+		
 		<div ng-if="rowElement.type === 'DROP_DOWN'">
 		    <select ng-model="formData[rowElement.model]" class = "form-control" 
-				ng-change = "{{rowElement.onChange}}" ng-options="{{rowElement.ngOptions}}">
+				ng-change = "{{rowElement.onChange}}" ng-options="{{$parent.rowElement.ngOptions}}">
 				<!--<option ng-repeat = "args in array">{{args}}</option>-->
 			</select>
 		</div>
+
 		<div ng-if="rowElement.type === 'TEXT'">
 
-		<input ng-if ="rowElement.required" class="form-control" 
-			name="{{rowElement.name}}" ng-model="formData[rowElement.model]" 
-			placeholder="{{rowElement.placeholder}}" required="rowElement.required"  required-err-type="{{rowElement.validate}}" />
+			<input ng-if ="rowElement.required" class="form-control" 
+				name="{{rowElement.name}}" ng-model="formData[rowElement.model]" 
+				placeholder="{{rowElement.placeholder}}" required="rowElement.required"  required-err-type="{{rowElement.validate}}" />
 
-		<input ng-if ="!rowElement.required" class="form-control" name="{{rowElement.name}}" ng-model="formData[rowElement.model]" placeholder="{{rowElement.placeholder}}" />
+			<input ng-if ="!rowElement.required" class="form-control" name="{{rowElement.name}}" ng-model="formData[rowElement.model]" placeholder="{{rowElement.placeholder}}" />
 		</div>
 
+		<div ng-if="rowElement.type === 'TEXT_AREA'">
+			<textarea class="form-control textarea-height" ng-model = "formData[rowElement.model]" 		rows="5" ng-valid placeholder="{{rowElement.placeholder}}"></textarea>
+		</div>
+
+		<div ng-if="rowElement.type === 'SELECT_TAGS'">
+		 	<input  ui-select2="select2Options" class="form-control textfield-width" 
+    			ng-model="formData[rowElement.model]" data-placeholder="{{rowElement.placeholder}}">
+    	</div>
 		<div ng-if="rowElement.type === 'PASSWORD'">
 
 			<input type="password" ng-if ="rowElement.required" class="form-control" 

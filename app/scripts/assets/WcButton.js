@@ -78,10 +78,13 @@ angular.module('assets').directive('wcButton',['Global','$parse',function(Global
 					scope.DELETE_BTN_DISABLE = false;
 	            });
 
+	           	scope.$root.$on(Global.EVENTS.DELETE_BTN_DISABLE,function(event, data){
+					scope.DELETE_BTN_DISABLE = true;
+	            });
+
 	            scope.$root.$on(Global.EVENTS.EDIT_BUTTON_ENABLE,function(event, data){
 	            	scope.EDIT_BTN_DISABLE = false;
 	            });
-
 			}
 	  };
   }]);

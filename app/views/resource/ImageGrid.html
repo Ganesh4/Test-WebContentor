@@ -18,22 +18,15 @@
         </div>
 
     <!-- Start image box 1 -->
-        <div class="col-sm-6 col-md-4" ng-repeat=" image in imageList" 
-            ng-click = "gridSelected(image)">
+        <div class="col-sm-6 col-md-4" ng-repeat=" image in imageList track by $index"  
+            >
             <div class="thumbnail">
                 <div class="view view-tenth">
                     <img src={{image.upload.url}} />
                     <div class="mask">
                         <h2>{{image.upload.fileName}}</h2>
                         <p>{{image.description}}</p>
-                    
-            
-                    <div class="checkbox-style">
-                        <ul>
-                          <li class="selected"></li>
-                        </ul>
-                    </div>
-             
+                        <wc-check-box checked = "checked" data = "image" index = "$index"></wc-check-box>
                         <h2>{{image.upload.fileName}}</h2>
                         <p>{{image.description}}</p>
                         <div class="media-left media-middle grid-box">
