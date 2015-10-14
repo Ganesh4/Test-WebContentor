@@ -15,7 +15,9 @@
             $scope.checkValidation = function(){
 
                 if(!$scope.campaign.name){
-                $scope.empty = true;
+                   $scope.empty = true;
+                }else if(!$scope.campaign.campaignFeatureId){
+                   $scope.empty = true;
                 }else{
                 $scope.empty = false;
                 }
@@ -26,9 +28,6 @@
                 }else{
                     $scope.disableSave();
                 }
-
-
-            
 
             }         			
             // grab today and inject into field
@@ -48,14 +47,15 @@
             $event.preventDefault();
             $event.stopPropagation();
 
-            $scope.openedStart = true;
+            $scope.campaign.openedStart = true;
+            console.log($scope.campaign.openedStart);
             };
             // open min-cal
             $scope.openEnd = function($event) {
             $event.preventDefault();
             $event.stopPropagation();
 
-            $scope.openedEnd = true;
+            $scope.campaign.openedEnd = true;
             };
 
             $scope.clearEndDate = function(){
@@ -70,7 +70,6 @@
             CampaignApiSrv.getCampaignFeatures('features',{},function(data){
                 $scope.featureList = data.plain()   
                 console.log('Feature List ------- ',  $scope.featureList);
-              
             });
 
 
