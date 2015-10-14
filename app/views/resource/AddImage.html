@@ -43,7 +43,7 @@
            datepicker-popup="{{format}}" 
            class="form-control input-width"
            ng-model="campaign.startDate" 
-           is-open="openedStart" 
+           is-open="image.openedEnd" 
            date-disabled="disabled(date, mode)" 
            ng-required="true" 
            id="date-picker" 
@@ -54,7 +54,7 @@
     </p>       
     </div>
 
-    <div class="campaign-right-fg" ng-click="openStart($event)">
+    <div class="campaign-right-fg" ng-click="openEnd($event)">
         <i class="fa fa-calendar" ></i>
     </div>
   </div>

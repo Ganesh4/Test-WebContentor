@@ -130,6 +130,13 @@ angular.module('resources').controller('ImageCtrl',
                     $scope.image.category = JSON.parse(category);
                 console.log('$scope.image ', $scope.image); 
             }
+            // open min-cal
+            $scope.openEnd = function($event) {
+                $event.preventDefault();
+                $event.stopPropagation();
+
+                $scope.image.openedEnd = true;
+            };
 
             $scope.$on('UNCHECKALL',function(event, data){
                 $scope.$broadcast(Global.EVENTS.IS_CHECKED, false );

@@ -8,7 +8,8 @@
         [
         'CommonSrv',
         'Global',
-        function(CommonSrv,Global){
+        'RecipientApiSrv',
+        function(CommonSrv,Global,RecipientApiSrv){
             return{
                 restrict:'AE',
                 templateUrl:'views/assets/form.html',
@@ -21,7 +22,6 @@
 				},
                 link : function(scope,elem,attrs){
 
-                    console.log('elements ---------- ', scope.elements);
                     
                     scope.doOnFormSubmit = function(){
                         //scope.$emit(Global.EVENTS.FORM_SUBMIT, scope.formData))
@@ -41,11 +41,21 @@
                        
                     });
 
+                    // Should be come Dynamically 
+                     RecipientApiSrv.getRecipientList('1/recipient/list', {},function(data){
+                        if(data){
+                            scope.RecipientList = data.plain();
+                        }
+                    });
+
+
+
                     //Update State Object According to the Country Selected. 
                     scope.updateCountry = function(){
-                        console.log('User -------- ' , scope.formData.country);
+                        console.log('User -------- ' , scope);
                         scope.states = scope.formData.country.SecurityStates;
                     }
+
                 }
             }
         }])

@@ -5,40 +5,34 @@
 		'$scope',
 		'$state',
 		'Restangular',
-		'$cookieStore',
         'CampaignApiSrv',
-		function($scope,$state,Restangular,$cookieStore,CampaignApiSrv){
-
+		function($scope,$state,Restangular,CampaignApiSrv){
+            console.log("$scope.loggedInUser ----------- ",$scope.loggedInUser);
             console.log($scope.loggedInUser.securityUserID,'---------',$scope.loggedInUser.groupId);
             
 			$scope.data = $state.current.data;
-            
+            $scope.empty = false;
             $scope.checkValidation = function(){
 
-                console.log('---------',$scope.user);
-                $scope.empty = false;
                 if(!$scope.campaign.name){
-                $scope.empty = true;
-                }else if(!$scope.campaign.startDate){
-                $scope.empty = true;
-                 
-                 }else{
+                   $scope.empty = true;
+                }else if(!$scope.campaign.campaignFeatureId){
+                   $scope.empty = true;
+                }else{
                 $scope.empty = false;
                 }
 
                 if($scope.empty == false){
+                    console.log('$scope.empty--------',$scope.empty);   
                     $scope.enableSave();
                 }else{
                     $scope.disableSave();
                 }
 
-
-            console.log('$scope.empty--------',$scope.empty);
-
             }         			
             // grab today and inject into field
             $scope.today = function() {
-            $scope.campaign.startDate = new Date();
+            $scope.today = new Date();
             };
 
             $scope.tomorrow = function() {
@@ -53,14 +47,15 @@
             $event.preventDefault();
             $event.stopPropagation();
 
-            $scope.openedStart = true;
+            $scope.campaign.openedStart = true;
+            console.log($scope.campaign.openedStart);
             };
             // open min-cal
             $scope.openEnd = function($event) {
             $event.preventDefault();
             $event.stopPropagation();
 
-            $scope.openedEnd = true;
+            $scope.campaign.openedEnd = true;
             };
 
             $scope.clearEndDate = function(){
@@ -72,10 +67,10 @@
             // assign custom format
             $scope.format = $scope.formats[0];   
 
-                CampaignApiSrv.getCampaignFeatures('features',{},function(data){
-                    $scope.featureList = data.plain()   
-                    console.log('Feature List ------- ',  $scope.featureList);
-                });
+            CampaignApiSrv.getCampaignFeatures('features',{},function(data){
+                $scope.featureList = data.plain()   
+                console.log('Feature List ------- ',  $scope.featureList);
+            });
 
 
 

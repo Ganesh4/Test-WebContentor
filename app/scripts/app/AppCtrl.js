@@ -15,9 +15,9 @@
 			'CampaignApiSrv',
 			'Restangular',
 			'ImageApiSrv',
-			'$cookieStore',
+			'localStorageService',
 			'$stateParams',
-       		function($scope,$state, $q, ApiSrv, CommonSrv, Global, UserApiSrv,CampaignApiSrv, Restangular,ImageApiSrv,$cookieStore,$stateParams){
+       	    function($scope,$state, $q, ApiSrv, CommonSrv, Global, UserApiSrv,CampaignApiSrv, Restangular,ImageApiSrv,localStorageService,$stateParams){
 				var param = {};
 				$state.args = [];
 				$scope.user = {};
@@ -26,6 +26,7 @@
 				$scope.loggedInUser = {};
 				$scope.campaign = {};
 				$scope.files = [];
+				$scope.featureList = {};
 				$scope.gridRowSelectedData = [];
 				var wizardSteps = $state.current.data.wizardSteps;
 				
@@ -54,7 +55,7 @@
     				if($state.current.name.indexOf('resources') != -1 ||
     					$state.current.name.indexOf('page') != -1){
     					console.log($state.current.name);
-    					Restangular.setBaseUrl('http://localhost/MicroS/');
+    					Restangular.setBaseUrl('http://192.168.1.34:8080/MicroS/');
     					ApiSrv.accessToken();	
     				}else{
     					Restangular.setBaseUrl('http://192.168.1.69/Yavun/api');
@@ -116,8 +117,8 @@
 	            });
 
             	 $scope.$on(Global.EVENTS.CAMPAIGN_SAVE,function(event, data){
+
 	            	$scope.campaign.campaignFeatureId = _.keys($scope.campaign.campaignFeatureId);
-	            	
 	            	ApiSrv.post('campaign',$scope.campaign,function(data){
 	            		console.log('data------------',$scope.campaign);
 	            	});
@@ -137,6 +138,7 @@
 	            $scope.enableSave = function(){
 	            	CommonSrv.enableSave($scope);
 	            }
+	            
 	            $scope.disableSave = function(){
 	            	CommonSrv.disableSave($scope);	
 	            }
@@ -150,10 +152,10 @@
 			        });
 			    });
 
-			    if($cookieStore.get('loggedInUser') == undefined){
+			    if(localStorageService.get('loggedInUser') == undefined){
 			    	$state.go('app.login')
 			    }else{
-			    	$scope.loggedInUser = $cookieStore.get('loggedInUser');
+			    	$scope.loggedInUser = localStorageService.get('loggedInUser');
 			    	$scope.userGroupUri = $scope.loggedInUser.securityUserID+'/'+$scope.loggedInUser.groupId+'/';
 			    }
 			    

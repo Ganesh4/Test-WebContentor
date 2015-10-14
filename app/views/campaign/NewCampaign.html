@@ -1,4 +1,5 @@
 <div class="main_rhs_wrapper">
+
 <p><strong>General</strong></p>
 <p>Enter the  campaign information</p>
  <form name="Form" novalidate
@@ -8,8 +9,8 @@
 <div class="row campaign_rhs_wrapper">
   <div class="col-md-6">
   <div class="form-group">
-    <label for="exampleInputEmail1">Name</label>
-    <input type="text" class="form-control input-width" ng-model="campaign.name" placeholder="Name" required="required" required-err-type="firstNameRequired" ng-keyup = "checkValidation()" ng-change = "checkValidation()"/  >
+    <label for="exampleInputEmail1">Campaign Name</label>
+    <input type="text" class="form-control input-width" ng-model="campaign.name" placeholder="Name"         required="required" required-err-type="campaignNameRequired" ng-keyup = "checkValidation()" ng-change = "checkValidation()"/  >
   </div>
   
   <div class="form-group campaign-group-left">
@@ -18,13 +19,12 @@
    
     <input type="text" class="form-control" 
            datepicker-popup="{{format}}" 
-           class="form-control input-width"
            ng-model="campaign.startDate" 
-           is-open="openedStart" 
-           date-disabled="disabled(date, mode)" 
+           is-open="campaign.openedStart" 
+           date-disabled="disabled(date, mode)"
+           min-date="today" 
            ng-required="true" 
            id="date-picker" 
-           readonly
            show-button-bar="false"
            ng-change = "clearEndDate()"
            />
@@ -43,7 +43,7 @@
            datepicker-popup="{{format}}" 
            class="form-control input-width"
            ng-model="campaign.endDate" 
-           is-open="openedEnd"
+           is-open="campaign.openedEnd"
            min-date=" campaign.startDate "  
            date-disabled="disabled(date, mode)" 
            ng-required="true" 
@@ -63,13 +63,17 @@
   </div>
   
     <div class="form-group">
-        <label for="exampleInputEmail1" style="width: 100%;">Features</label>
+       
+       <label for="exampleInputEmail1" style="width: 100%;">Features</label>
         <span class="checkbox-align"> 
+        <div> 
         <label class="checkbox-inline" ng-repeat = "feature in featureList">
-          <input type="checkbox" name="" ng-model = "campaign.campaignFeatureId[feature.SecurityFeatureID]" value="{{feature.SecurityFeatureID}}">{{feature.Feature}}
+          <input type="checkbox" name="" ng-model = "campaign.campaignFeatureId[feature.SecurityFeatureID]" required="required" required-err-type="featuredRequired" ng-keyup = "checkValidation()" ng-change = "checkValidation()" value="{{feature.SecurityFeatureID}}">{{feature.Feature}}
+
         </label>
-        
-       </span> 
+       </div>
+       </span>  
+       
   </div>
   
   <div class="form-group">

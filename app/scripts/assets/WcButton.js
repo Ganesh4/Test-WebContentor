@@ -20,7 +20,7 @@ angular.module('assets').directive('wcButton',['Global','$parse',function(Global
 			link:function(scope,elem,attrs){
 				
 				scope.doOnClick = function(){
-					console.log('On - Click ----------  ' , scope.onClick);
+					console.log('On-Click ----------  ' , scope.onClick);
 					if(scope.onClick)
 						scope.$root.$broadcast(scope.onClick, scope.btnData);
 				}
@@ -58,19 +58,19 @@ angular.module('assets').directive('wcButton',['Global','$parse',function(Global
 	                scope.PREVIOUS_BTN_DISABLE = false;
 	            });
 	            
-	            scope.$root.$on(Global.EVENTS.CAMPAIGN_SAVE_ENABLE,function(event, data){
+	            scope.$on(Global.EVENTS.CAMPAIGN_SAVE_ENABLE,function(event, data){
 	                scope.CAMPAIGN_SAVE_DISABLE = false;
 	            });
 
-	            scope.$root.$on(Global.EVENTS.CAMPAIGN_SAVE_DISABLE,function(event, data){
+	            scope.$on(Global.EVENTS.CAMPAIGN_SAVE_DISABLE,function(event, data){
 	                scope.CAMPAIGN_SAVE_DISABLE = true;
 	            });
 
-	            scope.$root.$on(Global.EVENTS.CAMPAIGN_SAVE_EXIT_ENABLE,function(event, data){
+	            scope.$on(Global.EVENTS.CAMPAIGN_SAVE_EXIT_ENABLE,function(event, data){
 	                scope.CAMPAIGN_SAVE_EXIT_DISABLE = false;
 	            });
 
-	            scope.$root.$on(Global.EVENTS.CAMPAIGN_SAVE_EXIT_DISABLE,function(event, data){
+	            scope.$on(Global.EVENTS.CAMPAIGN_SAVE_EXIT_DISABLE,function(event, data){
 	                scope.CAMPAIGN_SAVE_EXIT_DISABLE = true;
 	            });
 

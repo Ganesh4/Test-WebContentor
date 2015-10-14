@@ -19,6 +19,7 @@
 	        defaultErrorMessageResolver.getErrorMessages().then(function (errorMessages) {
 	          	errorMessages['firstNameRequired'] = 'First Name Required';
 	            errorMessages['lastNameRequired'] = 'Last Name Required';
+				errorMessages['featuredRequired'] = 'featured is Required';
 	          	errorMessages['emailisrequired'] = 'Email is required';	
 	          	errorMessages['passwordisrequired'] = 'Password is required';
                 errorMessages['startingdate'] = 'Start date required';
@@ -28,8 +29,6 @@
 	          	errorMessages['invalidPhoneNo'] = 'Invalid Phone Number';
 	          	
 	        });
-
-			
 
        }]);
 
