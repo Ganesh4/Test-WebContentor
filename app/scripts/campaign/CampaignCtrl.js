@@ -16,6 +16,8 @@
 
                 if(!$scope.campaign.name){
                 $scope.empty = true;
+                }else if(!$scope.campaign.campaignFeatureId){
+                $scope.empty = true;
                 }else{
                 $scope.empty = false;
                 }
