@@ -53,7 +53,7 @@
 	                    disable:'DELETE_BTN_DISABLE'
 	                },{
 	                    name : 'Edit',
-	                    onClick:'',
+	                    onClick:'EDIT_IMAGE',
 	                    type  : "Button"
 
 	                },{
@@ -91,6 +91,21 @@
 		        templateUrl:'views/resource/AddImage.html',
 		        data: {
 		        	 displayName: 'Add',
+		        	 actionBarBtn: [{
+	                    name : 'Cancel',
+	                    onClick : 'NAVIGATE',
+	                    state:'app.home.manage.resources.images.grid',
+	                },{
+	                    name : 'Submit',
+	                    onClick : 'ADD_NEW_IMAGE',
+	                    state:''
+	                }]
+		        }
+		    }).state('app.home.manage.resources.images.edit',{
+		        url:'/edit',
+		        templateUrl:'views/resource/EditImage.html',
+		        data: {
+		        	 displayName: 'Edit',
 		        	 actionBarBtn: [{
 	                    name : 'Cancel',
 	                    onClick : 'NAVIGATE',
