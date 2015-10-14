@@ -15,9 +15,9 @@
 			'CampaignApiSrv',
 			'Restangular',
 			'ImageApiSrv',
-			'$cookieStore',
+			'localStorageService',
 			'$stateParams',
-       		function($scope,$state, $q, ApiSrv, CommonSrv, Global, UserApiSrv,CampaignApiSrv, Restangular,ImageApiSrv,$cookieStore,$stateParams){
+       	    function($scope,$state, $q, ApiSrv, CommonSrv, Global, UserApiSrv,CampaignApiSrv, Restangular,ImageApiSrv,localStorageService,$stateParams){
 				var param = {};
 				$state.args = [];
 				$scope.user = {};
@@ -139,6 +139,7 @@
 	            $scope.enableSave = function(){
 	            	CommonSrv.enableSave($scope);
 	            }
+	            
 	            $scope.disableSave = function(){
 	            	CommonSrv.disableSave($scope);	
 	            }
@@ -152,10 +153,10 @@
 			        });
 			    });
 
-			    if($cookieStore.get('loggedInUser') == undefined){
+			    if(localStorageService.get('loggedInUser') == undefined){
 			    	$state.go('app.login')
 			    }else{
-			    	$scope.loggedInUser = $cookieStore.get('loggedInUser');
+			    	$scope.loggedInUser = localStorageService.get('loggedInUser');
 			    	$scope.userGroupUri = $scope.loggedInUser.securityUserID+'/'+$scope.loggedInUser.groupId+'/';
 			    }
 			    

@@ -7,9 +7,9 @@
         	'$scope',
         	'loginSrv',
         	'$state',
-            '$cookieStore',
             'Global',
-        	function($scope, loginSrv, $state, $cookieStore, Global){
+            'localStorageService',
+        	function($scope, loginSrv, $state, Global, localStorageService){
             	$scope.loginUser={};
                 $scope.elements = $state.current.data.elements;
                 $scope.formBtns = $state.current.data.formButtons;
@@ -18,8 +18,12 @@
                     console.log('Login USer ----------------- ',data);
                     var loginUser = data;
                     loginSrv.loginCheck('Login',loginUser,function(data){
-                        $cookieStore.put('loggedInUser',data.plain());
-                        $scope.loggedInUser = $cookieStore.get('loggedInUser');
+                        
+                        console.log('Data ------------',data.plain());
+
+                        localStorageService.set('loggedInUser',data.plain());
+                        //$cookieStore.put('loggedInUser',data.plain());
+                        $scope.loggedInUser = localStorageService.get('loggedInUser');
                         $state.go('app.home.campaign');
                     });
                 });

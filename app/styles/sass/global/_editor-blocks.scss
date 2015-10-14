@@ -3,17 +3,17 @@
 
 .block-container{
   width:640px;
-	height:500px;
+	min-height:500px;
 	position:absolute;
 	top: 60px;
 	left: 108px;
 	/*display:none;*/
+	background-color:$sidenavbar-color;
 }
 
 .submenu-block{
   width:100%;	
-	background-color:$sidenavbar-color;
-	border:1px solid #000;	
+ 	/*border:1px solid #000;*/	
 	float:left;
 }
 .submenu-header{
@@ -23,12 +23,15 @@
 	border-bottom:1px solid $editor-border-color;
 	
 	.content-padding{
-    padding:15px 20px;		
+    padding:10px 15px;		
 	}
 	.heading-top{
-	    font-size:1.3em;
-			float:left;
-		}	
+	  font-size:20px;
+		float:left;
+   	text-transform:capitalize;
+		margin-top:3px;
+	}
+
 }
 .submenu-leftnav{
  	width: 120px;
@@ -48,7 +51,10 @@
 		
 		&:hover{
 	    color: #eee;
-      background-color: #b8b8b8;	
+      background-color:$sidenavbar-hover-color;	
+			span{
+		    color:#fff;		
+			}
 		}
 		
 		
@@ -103,6 +109,10 @@
   		background-color:transparent;
 			color:#000;
 		}
+	}
+  .right-arrow{
+     font-size: 30px;		
+		 cursor: pointer;
 	}
 }
 
@@ -327,30 +337,55 @@
 .block-container-section{
   	@extend .block-container;
 		width:440px;
-		height:320px;
-		background-color:#fff;
-		border:1px solid #000;
+		/*height:320px;*/
+		/*background-color:$sidenavbar-color;*/
+		/*border:1px solid $section-bordercolor;
+		color:$section-textcolor;*/
+		padding:15px;
+    text-transform: none;
 		
 		.submenu-block{
 	    border:0;		
+
 		}
 		.submenu-header{
 	    border-bottom:0;	
 			
 			h3{
-				text-transform:uppercase;		
+
 				margin-top:5px;
 			}	
+			.sub-header{
+				float: left;
+				width: 100%;
+				margin: 10px 0 0;
+				border-top: 1px solid $section-bordercolor;
+				padding: 10px 0;	
+        text-align: left;
+			}
+			.content-padding{
+				padding:0px 0px;		
+			}
+
 		}
 		li{
-			border-top: 1px solid #000;
+			border-top: 1px solid $section-bordercolor;
+			border-left: 1px solid $section-bordercolor;
+			border-right: 1px solid $section-bordercolor;
 			float: left;
 			width: 100%;
 			cursor:pointer;
 			
 			&:hover{
-		    background-color:#f4f4f4;		
+		    background-color:$sidenavbar-hover-color;
+				/*color:#fff;
+				i{
+			    color:#fff;		
+				}*/
 			}
+		}
+		li:last-child{
+			border-bottom: 1px solid $section-bordercolor;	
 		}
 		.section-inner{
 			width: 100%;
@@ -375,8 +410,9 @@
 			}
 		}
 	 .btn-add-section{
-			border: 1px solid #000;
+			border: 1px solid $section-bordercolor;
 			padding:5px 10px;
+			border-radius:initial;
       /*margin-top: -4px;*/
 			
 			/*a{
@@ -388,7 +424,7 @@
 				}
 			}*/
 			&:hover{
-  	    background-color:#ccc;		
+  	    background-color:$sidenavbar-hover-color;
 			}
 			i{
 				font-size: 1.2em;
@@ -396,15 +432,24 @@
 				margin: 2px 4px 0 0;
 			} 
 			span{
-        font-size: 0.9em;		
+        font-size: 0.9em;	
+				text-transform:lowercase;	
 			}
 		}	
+}
+
+/*============ section-setting-box =============*/
+.section-setting-box{
+  @extend .block-container;
+  left:600px;
+	width:380px;
+	padding:15px;
 }
 
 
 /*============ control-bar styles =============*/
 .vertically-centered{
-    display:inline-block;
+  display:inline-block;
 	vertical-align:middle;
   margin-left: -4px;
 }
