@@ -15,8 +15,8 @@
 		   	$stateProvider.state('app.home.manage.user',{
 	            url:'/user',
 	            template:'<ui-view></ui-view>',
-	            controller: 'UserCtrl',
 	            abstract: true,
+	            controller: 'UserCtrl',
               	data:{
 	                displayName: 'user',
 	                actionBarBtn: [{
@@ -47,12 +47,15 @@
 		    }).state('app.home.manage.user.edit',{
 	         	 url:'/edit',
 		        template:'<div class = "col-md-8"><wc-form elements="elements" form-btns="formBtns" form-data="user" submit-event="{{submitEvent}}"></wc-form></div>',
-		        data: {
+		       	controller:'UserCtrl',
+		       	data: {
 		        	displayName: 'Edit',
 		        	actionBarBtn: [{
-	                    name : 'Update',
+	                    name : 'Cancel',
+	                    onClick : 'NAVIGATE',
+	                    state : 'app.home.manage.user.list'
 	                },{
-	                    name : 'Cancel'
+	                    name : 'Update'
 	                }],
 		        	elements:[
 				    {
@@ -64,7 +67,7 @@
                             required: true,
                             validate:'firstNameRequired',
                             placeholder:'First Name',
-                            model : 'FirstName'
+                            model : 'firstName'
 						},{
 							name:'lastName',
                 			lable:'Last Name',
@@ -72,7 +75,7 @@
                             required: true,
                             validate:'lastNameRequired',
                             placeholder:'Last Name',
-                            model : 'lastName'
+                            model : 'lastname'
 						}]
 				    },{
 				    	rowClass :'col-lg-6',
