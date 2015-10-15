@@ -16,11 +16,6 @@ angular.module('user').service('UserApiSrv', ['ApiSrv', function (ApiSrv) {
 	self.addNewUser =function(uri, params, success, error){
 		ApiSrv.post(uri,params,success,error);
 	}
-
-	self.deleteUser =function(uri, params, success, error){
-		ApiSrv.delete(uri, params, success, error);
-	}
-	
 }]);
 
 })(angular);

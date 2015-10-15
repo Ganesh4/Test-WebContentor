@@ -13,7 +13,6 @@
             console.log($scope.loggedInUser.securityUserID,'---------',$scope.loggedInUser.groupId);
             $scope.campaign = {};
             console.log($scope.loggedInUser.securityUserID,'---------',$scope.loggedInUser.groupId);
-
 			$scope.data = $state.current.data;
             $scope.empty = false;
             $scope.checkValidation = function(){
