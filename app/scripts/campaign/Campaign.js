@@ -36,10 +36,6 @@
                                 }],
 
                             }],
-                            actionBarBtn: [{
-                                name : "Create",
-                                onClick : '',
-                            }],
                         }
                     }).state('app.home.campaign.general', {
                         url: '/general',
@@ -57,7 +53,8 @@
                             }],
                             actionBarBtn: [{
                                             name : "Cancel",
-                                            onClick : 'CANCEL',
+                                            onClick : 'NAVIGATE',
+                                            state :'app.home.campaign'
                                         },{
                                             name : "Save & Exit",
                                             onClick : 'CAMPAIGN_SAVE_EXIT',
@@ -82,15 +79,12 @@
                                             icon : 'fa fa-life-ring',
                                             name : 'General',
                                             state:'app.home.campaign.general'
-                                        },{
-                                            icon : 'fa fa-list-alt',
-                                            name : 'Promotional Pages',
-                                            state : 'app.home.manage.page'
-                                    }]
+                                        }]
                                 }],
                                 actionBarBtn: [{
                                         name : "Cancel",
-                                        onClick : '',
+                                        onClick : 'NAVIGATE',
+                                        state :'app.home.campaign'
                                     },{
                                         name : "Edit",
                                         onClick : 'NAVIGATE',
@@ -128,11 +122,11 @@
                                 }],
                                 actionBarBtn: [{
                                         name : "Cancel",
-                                        onClick : '',
+                                        onClick : 'CAMPAIGN_CANCEL',
                                     },{
                                         name : "Update",
-                                        onClick : '',
-                                        disable : ''
+                                        onClick : 'CAMPAIGN_UPDATE'
+                                        
                                         
                                 }],
                             }
