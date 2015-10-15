@@ -1,4 +1,5 @@
 /* Scss Document */
+
 .recipients_table .ui-grid {  
   margin-left:0px;
   float:left;
@@ -7,18 +8,19 @@
 	
 .recipients_table .col-md-4 {
 	padding-right:0px;
-}
+	}
 	
 .rcp_border_radus {
 	border-radius: 50%;
 	position: absolute;
-}
+	}
+	
 .menu-circle{
 	@extend .rcp_border_radus; 
 	background-color: $main_blue_color;
 	width: 60px;
 	height: 60px;	
-	right: 50px;	
+	right: 50px;
 	bottom: -100px;
 	cursor: pointer;	
 	i{
@@ -27,72 +29,62 @@
 		margin: 20px 0 0 21px;
 		}
 	
-	li{
+	li {
 	  @extend .rcp_border_radus;
 	  background-color:$sidenavbar-color;
 	  width: 50px;
 	  height: 50px;
 	  bottom: 72px;
-	  margin-left: 5px;
-	  
-	  i{
+	  margin-left: 5px;	  
+	  i {
 		color:$main_blue_color;
 		font-size: 18px;
 		margin: 16px 0 0 16px;
-		}
-		
+		}	
 	  }
 	  
 	 li:nth-child(2){
-	  background-color:$sidenavbar-color;
-	  bottom: 135px;
-	  
+	  background-color: $sidenavbar-color;
+	  bottom: 135px;	  
 	  i{
 		color:$main_blue_color;
 		font-size: 18px;
 		margin: 16px 0 0 18px;
 		}
 	  }
-}
+	}
 
-.menu-circle-2{
-	background-color:$main_blue_color;
+.menu-circle-2 {
+	@extend.extend-all;
+	background-color: $main_blue_color;
 	width: 75px;
 	height: 75px;
-	border-radius: 50%;
 	right: 200px;
-	position: absolute;
 	bottom: -100px;
-	cursor: pointer;
-	
-	i{
-		color:$workarea-color;
-		font-size: 30px;
+	cursor: pointer;	
+	i {color: $workarea-color;
+	   font-size: 30px;
 		margin: 25px 0 0 25px;
-		}
-	
+		}	
 	li{
-	  background-color:$sidenavbar-color;
+
+	  @extend.extend-all;
+	  background-color: $sidenavbar-color;
 	  width: 60px;
 	  height: 60px;
-	  border-radius: 50%;
-	  position: absolute;
 	  bottom: 86px;
-	  margin-left: 5px;
-	  
-	  i{
+	  margin-left: 5px;	  
+	  i {
 		color:$main_blue_color;
 		font-size: 20px;
 		margin: 20px 0 0 22px;
 		}
-		
 	  }
 	  
 	 li:nth-child(2){
 	  background-color:$sidenavbar-color;
-	  bottom: 160px;
-	  
-	  i{
+	  bottom: 160px;	  
+	  i {
 		color:$main_blue_color;
 		font-size: 20px;
 		margin: 20px 0 0 22px;
@@ -104,8 +96,31 @@
 
 .import-main{
 	width: 100%;
-	
-	p{
+	p {
 		margin-bottom: 15px;
 		}
+	}
+	
+/*======================== Import Mapping for Recipients ============================*/
+
+.table-header{
+	background-color: $table-color;
+	height: 36px;
+	text-transform: uppercase;
+	}
+.table-bordered>thead>tr>th{
+	font-weight: normal;
+	}
+.table-body-color{
+	background-color: $table-color;
+	}
+	
+.table>tbody>tr>td{
+	line-height: 32px;
+	}
+.table-align{
+	padding: 0px;
+	}
+.table{
+	color: $table-text-color;
 	}
