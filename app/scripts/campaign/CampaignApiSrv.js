@@ -9,6 +9,7 @@
 angular.module('campaign').service('CampaignApiSrv', ['ApiSrv', function (ApiSrv) {
 
 	var self = this;
+	
 	self.getCampaignFeatures = function(uri, params, success, error){
 		ApiSrv.getList(uri, params, success, error)
 	}
