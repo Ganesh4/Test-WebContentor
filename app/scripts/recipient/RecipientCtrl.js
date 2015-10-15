@@ -54,23 +54,14 @@
                 }
             });
 
-           //  RecipientApiSrv.getRecipient('/1/recipients',param,function(data){
-             //   if(data){
-             //       $scope.recipientsGridOptions.data = data.plain();
-               //     $scope.Recipients = data.plain();
-             //       console.log('$scope.Recipients -------- ',$scope.Recipients);
-            //    }
-          //  });
 
-			   $scope.$on(Global.EVENTS.ADD_RECIPIENT,function(event, data){
-                 
-                 RecipientApiSrv.addRecipient($scope.loggedInUser.securityUserID+'/recipients',{},function(response){
+			$scope.$on(Global.EVENTS.ADD_RECIPIENT,function(event, data){    
+             RecipientApiSrv.addRecipient($scope.loggedInUser.securityUserID+'/recipients',{},function(response){
                    console.log('ADD_RECIPIENT--------------',$scope.recipients,'-----data------------',data); 
-                 });
-               
-              });
-               $scope.$on(Global.EVENTS.GET_RECIPIENT_BY_LIST,function(event, data){
-               // console.log('GET_RECIPIENT_BY_LIST',$scope.RecipientList);
+                });
+                $state.go('app.home.manage.recipients.list');
+            });
+            $scope.$on(Global.EVENTS.GET_RECIPIENT_BY_LIST,function(event, data){
                 if(!_.isEmpty($scope.gridRowSelectedData)){
                     var selectedList = $scope.gridRowSelectedData[0];
                     console.log('selectedListId------',selectedList);
@@ -83,10 +74,8 @@
                         $scope.Recipients = data.plain();
                     }
                });
+
            });
-            
-
-
 		}]);
 
 })(angular);

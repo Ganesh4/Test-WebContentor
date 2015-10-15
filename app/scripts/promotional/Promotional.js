@@ -6,17 +6,17 @@
 'use strict';
 
 (function(angular){
-	angular.module('email').config(
+	angular.module('promotional').config(
 		[
 		'$urlRouterProvider',
 		'$stateProvider',
 		function($urlProvider,$stateProvider){
-		   	$stateProvider.state('app.home.campaign.emails', {
-	                url: '/emails',
-	                templateUrl:'views/email/emails.html',
-	                controller:'EmailCtrl',
+		   	$stateProvider.state('app.home.campaign.promotional', {
+	                url: '/promotional',
+	                templateUrl:'views/promotional/promotional.html',
+	                controller:'PromotionalCtrl',
                 data: {
-	                displayName: 'Emails',
+	                displayName: 'Promotional',
 	                LeftNavList:[{
                             icon : 'fa fa-angle-down',
                             name : 'Properties',
@@ -36,21 +36,19 @@
                                  }
                             ],
                     actionBarBtn: [{
-                                    name : "Cancel",
-                                    onClickEvent : 'CANCEL',
+                                    name : "Delete",
+                                    onClickEvent : '',
                                },{
-                                    name : "Save & Exit",
-                                    onClickEvent : 'CAMPAIGN_SAVE',
+                                    name : "Create",
+                                    onClickEvent : '',
                                 
                                },{
-                                    name : "Save",
+                                    name : "Cancel",
                                     onClickEvent : ''
                      }],
                  }
 
              });
-
-		    
 	     }]);
 
     })(angular);
