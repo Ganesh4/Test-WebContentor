@@ -43,7 +43,7 @@
                                     onClickEvent : '',
                                 
                                },{
-                                    name : "Save",
+                                    name : "Cancel",
                                     onClickEvent : ''
                      }],
                  }
