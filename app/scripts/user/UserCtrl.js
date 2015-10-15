@@ -12,7 +12,10 @@ angular.module('user').controller('UserCtrl',
         'UserApiSrv',
         'Global',
         function($scope ,$state, ApiSrv,CommonSrv,UserApiSrv,Global){
-          
+             // console.log('captchaText ------- ',captchaText);
+            $scope.elements = $state.current.data.elements;
+            $scope.formBtns = $state.current.data.formBtns;
+            $scope.submitEvent = $state.current.data.submitEvent;
             console.log('$scope ----------- ',$scope.loggedInUser);
             var param = {};
            // $scope.user = {};
@@ -108,7 +111,7 @@ angular.module('user').controller('UserCtrl',
                 if(!_.isEmpty($scope.gridRowSelectedData)){
                     var userData = $scope.gridRowSelectedData[0];
                     console.log('userData ------- ',userData);
-                    self.deleteUser(userData.SecurityUserId);
+                    self.deleteUser(userData.securityUserId);
                 }
             });
 

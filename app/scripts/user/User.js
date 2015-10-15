@@ -30,6 +30,7 @@
 	                    disable :'DELETE_BTN_DISABLE',
 	                },{
 	                    name : "Properties",
+	                    onClick:'EDIT_USER',
 	                    disable :'EDIT_BTN_DISABLE',
 	                },{
 	                    name : "Add",
@@ -167,6 +168,7 @@
                             model : 'zip',
                         }]
 				    }]
+				}
 
 		    });
 
