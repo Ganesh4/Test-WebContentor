@@ -28,11 +28,6 @@
                                     name : 'Export',
                                     onClick : '',
                                },{
-                                    name : 'Create List',
-                                    onClick : '',
-                                    state: ''
-                                
-                               },{
                                     name : 'Save',
                                     onClick : '',
                                 
@@ -200,39 +195,6 @@
                     templateUrl:'views/recipient/ImportRecipient.html',
                 data: {
                      displayName: 'ImportRecipient',
-                      LeftNavList:[{
-                        icon : 'fa fa-angle-down',
-                        name : 'STEPS',
-                        menu : [{
-                                     icon : 'fa fa-plus',
-                                     name : 'General',
-                                     state:'app.home.manage.recipients.import'
-                                },{
-                                    icon : 'fa fa-list-alt',
-                                    name : 'Mapping',
-                                    state:'app.home.manage.recipients.mapping'
-                               }],
-
-                             }],
-                     actionBarBtn: [{
-                                    name : "CVS",
-                                    onClick : '',
-                                },{
-                                    name : "Download Exl",
-                                    onClick : '',
-                                },{
-                                    name : "Cancel",
-                                    onClick : '',
-                                },{
-                                    name : "Save",
-                                    onClick : '',
-                                },{
-                                    name : "Next",
-                                    onClick : '',
-                                },{
-                                    name : "Previous",
-                                    onClick : '',
-                            }],
                     
                     }
                }).state('app.home.manage.recipients.mapping', {
@@ -240,39 +202,6 @@
                     templateUrl:'views/recipient/MappingRecipient.html',
                 data: {
                      displayName: 'MappingRecipient',
-                     LeftNavList:[{
-                        icon : 'fa fa-angle-down',
-                        name : 'STEPS',
-                        menu : [{
-                                     icon : 'fa fa-plus',
-                                     name : 'General',
-                                     state:'app.home.manage.recipients.import'
-                                },{
-                                    icon : 'fa fa-list-alt',
-                                    name : 'Mapping',
-                                    state:'app.home.manage.recipients.mapping'
-                               }],
-
-                             }],
-                     actionBarBtn: [{
-                                    name : "CVS",
-                                    onClick : '',
-                                },{
-                                    name : "Download Exl",
-                                    onClick : '',
-                                },{
-                                    name : "Cancel",
-                                    onClick : '',
-                                },{
-                                    name : "Save",
-                                    onClick : '',
-                                },{
-                                    name : "Next",
-                                    onClick : '',
-                                },{
-                                    name : "Previous",
-                                    onClick : '',
-                            }],
                     
                     }
                });

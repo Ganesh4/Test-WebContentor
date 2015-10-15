@@ -5,13 +5,13 @@
 		'$scope',
 		'$state',
 		'Restangular',
-		'CampaignApiSrv',
+        'CampaignApiSrv',
 		function($scope,$state,Restangular,CampaignApiSrv){
 			console.log("My Campaign --------------- ",$scope.campaign.campaignFeatureId,'----------',$scope.featureList);
 			$scope.selectedFeatures = [];
 			_.each($scope.featureList,function(value,key){
 				_.each($scope.campaign.campaignFeatureId,function(v,k){
-						if(value.SecurityFeatureID == v)
+						if(value.SecurityFeatureId == v)
 							$scope.selectedFeatures.push(value);
 				})
 				
@@ -19,5 +19,4 @@
 			console.log('$scope.selectedFeatures --------- ',$scope.selectedFeatures);
 
         }]);
-
 })(angular);
