@@ -135,13 +135,22 @@ angular.module('resources').controller('ImageCtrl',
                     $scope.image.category = JSON.parse(category);
                 console.log('$scope.image ', $scope.image);
             }
-            // open min-cal
-            $scope.openEnd = function($event) {
+            
+            $scope.openStart = function($event) {
                 $event.preventDefault();
                 $event.stopPropagation();
 
-                $scope.image.openedEnd = true;
-            };
+                $scope.openedStart = true;
+                };
+                // open min-cal
+                $scope.openEnd = function($event) {
+                $event.preventDefault();
+                $event.stopPropagation();
+
+        
+                // handle formats
+                $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
+                }
         }
     ]);
 })(angular);

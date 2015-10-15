@@ -63,17 +63,12 @@
   </div>
   
     <div class="form-group">
-       
-       <label for="exampleInputEmail1" style="width: 100%;">Features</label>
+        <label for="exampleInputEmail1" style="width: 100%;">Features</label>
         <span class="checkbox-align"> 
-        <div> 
         <label class="checkbox-inline" ng-repeat = "feature in featureList">
-          <input type="checkbox" name="" ng-model = "campaign.campaignFeatureId[feature.SecurityFeatureID]" required="required" required-err-type="featuredRequired" ng-keyup = "checkValidation()" ng-change = "checkValidation()" value="{{feature.SecurityFeatureID}}">{{feature.Feature}}
-
+          <input type="checkbox" name="" ng-model = "campaign.campaignFeatureId[feature.SecurityFeatureID]" required="required" required-err-type="featuredrequired" ng-keyup = "checkValidation()" ng-change = "checkValidation()" value="{{feature.SecurityFeatureID}}">{{feature.Feature}}
         </label>
-       </div>
-       </span>  
-       
+       </span> 
   </div>
   
   <div class="form-group">

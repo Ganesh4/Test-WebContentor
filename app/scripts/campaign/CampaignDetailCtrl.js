@@ -5,7 +5,7 @@
 		'$scope',
 		'$state',
 		'Restangular',
-		'CampaignApiSrv',
+        'CampaignApiSrv',
 		function($scope,$state,Restangular,CampaignApiSrv){
 			console.log("My Campaign --------------- ",$scope.campaign.campaignFeatureId,'----------',$scope.featureList);
 			$scope.selectedFeatures = [];
@@ -19,5 +19,4 @@
 			console.log('$scope.selectedFeatures --------- ',$scope.selectedFeatures);
 
         }]);
-
 })(angular);
