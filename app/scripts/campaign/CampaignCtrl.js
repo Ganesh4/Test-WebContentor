@@ -7,12 +7,9 @@
 		'Restangular',
         'Global',
         'CampaignApiSrv',          
-        'localStorageService',
-		function($scope,$state,Restangular,CampaignApiSrv,localStorageService){
+		function($scope,$state,Restangular,Global,CampaignApiSrv){
             console.log("$scope.loggedInUser ----------- ",$scope.loggedInUser);
-            console.log($scope.loggedInUser.securityUserID,'---------',$scope.loggedInUser.groupId);
             $scope.campaign = {};
-            console.log($scope.loggedInUser.securityUserID,'---------',$scope.loggedInUser.groupId);
 			$scope.data = $state.current.data;
             $scope.empty = false;
             $scope.checkValidation = function(){
@@ -49,15 +46,14 @@
             $scope.openStart = function($event) {
             $event.preventDefault();
             $event.stopPropagation();
-
             $scope.campaign.openedStart = true;
             console.log($scope.campaign.openedStart);
             };
+
             // open min-cal
             $scope.openEnd = function($event) {
             $event.preventDefault();
             $event.stopPropagation();
-
             $scope.campaign.openedEnd = true;
             };
 
@@ -84,6 +80,7 @@
             });
             $scope.$on(Global.EVENTS.CAMPAIGN_SAVE,function(event, data){
                 $scope.campaign.campaignFeatureId = _.keys($scope.campaign.campaignFeatureId);
+                console.log('Posted Data -------------',   $scope.campaign);
                 CampaignApiSrv.saveCampaign($scope.loggedInUser.securityUserID+'/campaign',$scope.campaign,function(data){
                     console.log('data------------',data.plain());
                     $scope.campaign = data.plain()[0];
