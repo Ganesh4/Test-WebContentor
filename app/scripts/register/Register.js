@@ -103,7 +103,7 @@
                         rowClass :'col-lg-4',
                         rowElement:[{
                             name:'state',
-                            lable:'state',
+                            lable:'State',
                             type: 'DROP_DOWN',
                             required: false,
                             placeholder:'State',

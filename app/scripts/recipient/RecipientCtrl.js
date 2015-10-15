@@ -40,6 +40,11 @@
                     field:'ZIP', 
                     displayName:'Zip Code',
                     cellClass : 'green-color'
+                },{
+					field :'ZIP',
+					cellTemplate :'<div>...</div>', 
+                    displayName:'Action',
+                    cellClass : 'green-color'
                 }]
             } 
 

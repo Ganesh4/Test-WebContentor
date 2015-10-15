@@ -15,6 +15,20 @@
 	position: absolute;
 	}
 	
+.menu-circle:hover{
+	
+	ul{
+		display: block;
+		}
+	li{
+		display: block;
+		}
+		
+	li:nth-child(2){
+		display: block;
+		}
+}
+
 .menu-circle{
 	@extend .rcp_border_radus; 
 	background-color: $main_blue_color;
@@ -23,6 +37,14 @@
 	right: 50px;
 	bottom: -100px;
 	cursor: pointer;	
+	ul{
+		width: 60px;
+		height: 135px;
+		position: relative;
+		top: -180px;
+		display: none;
+		}
+	
 	i{
 		color:$workarea-color;
 		font-size: 26px;
@@ -34,22 +56,26 @@
 	  background-color:$sidenavbar-color;
 	  width: 50px;
 	  height: 50px;
-	  bottom: 72px;
-	  margin-left: 5px;	  
-	  i {
-		color:$main_blue_color;
-		font-size: 18px;
-		margin: 16px 0 0 16px;
-		}	
-	  }
+	  bottom: 10px;
+	  margin-left: 5px;
+	  display: none;
 	  
-	 li:nth-child(2){
-	  background-color: $sidenavbar-color;
-	  bottom: 135px;	  
 	  i{
 		color:$main_blue_color;
 		font-size: 18px;
 		margin: 16px 0 0 18px;
+		}
+
+	  }
+	  
+	 li:nth-child(2){
+	  background-color: $sidenavbar-color;
+	  bottom: 68px;
+	  
+	  i{
+		color:$main_blue_color;
+		font-size: 18px;
+		margin: 16px 0 0 16px;
 		}
 	  }
 	}

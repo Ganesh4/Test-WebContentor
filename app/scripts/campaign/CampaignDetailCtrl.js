@@ -11,7 +11,7 @@
 			$scope.selectedFeatures = [];
 			_.each($scope.featureList,function(value,key){
 				_.each($scope.campaign.campaignFeatureId,function(v,k){
-						if(value.SecurityFeatureID == v)
+						if(value.SecurityFeatureId == v)
 							$scope.selectedFeatures.push(value);
 				})
 				
