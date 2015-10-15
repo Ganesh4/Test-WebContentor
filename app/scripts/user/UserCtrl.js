@@ -116,12 +116,8 @@ angular.module('user').controller('UserCtrl',
             //Edit USer Page Navigation
             $scope.$on(Global.EVENTS.EDIT_USER,function(){
                 console.log(' $state.current.data.elements---', $state.current.data.elements);
-                $scope.elements = $state.current.data.elements;
-                $scope.formBtns = $state.current.data.formBtns;
-                $scope.submitEvent = $state.current.data.submitEvent;
                  if(!_.isEmpty($scope.gridRowSelectedData)){
                     var userData = $scope.gridRowSelectedData[0];
-                   
                     //self.deleteUser(userData.SecurityUserId);
                     $scope.user = userData;
                     console.log('userData ------- ', $scope.user);
@@ -132,14 +128,6 @@ angular.module('user').controller('UserCtrl',
                     $state.go('app.home.manage.user.edit');
                 }
             });
-
-            //Update User Functions
-            $scope.$on(Global.EVENTS.UPDATE_USER,function(){
-               UserApiSrv.updateUser($scope.loggedInUser.securityUserID+'/users',$scope.user,function(){
-                console.log('Updated One ------- ',data.plain());
-               });
-            });
-
            
         }
     ]);

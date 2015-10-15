@@ -36,6 +36,27 @@
 	                    name : "Add",
 	                    onClick : 'NAVIGATE',
 	                    state : 'app.home.manage.user.add.general'
+	                }]
+	            }
+	        }).state('app.home.manage.user.list',{
+		        url:'/list',
+		        templateUrl:'views/user/user.html',
+		        data: {
+		        	 displayName: 'Users',
+		        }
+		    }).state('app.home.manage.user.edit',{
+	         	url:'/edit',
+		        template:'{{user}}<div class = "col-md-8"><wc-form elements="elements" form-btns="formBtns" form-data="user" submit-event="{{submitEvent}}"></wc-form></div>',
+		       	 controller: 'UserEditCtrl',
+		       	data: {
+		        	displayName: 'Edit',
+		        	actionBarBtn: [{
+	                    name : 'Cancel',
+	                    onClick : 'NAVIGATE',
+	                    state : 'app.home.manage.user.list'
+	                },{
+	                    name : 'Update',
+	                     onClick : 'UPDATE_USER',
 	                }],
 	                elements:[
 				    {
@@ -147,26 +168,6 @@
                             model : 'zip',
                         }]
 				    }]
-	            }
-	        }).state('app.home.manage.user.list',{
-		        url:'/list',
-		        templateUrl:'views/user/user.html',
-		        data: {
-		        	 displayName: 'Users',
-		        }
-		    }).state('app.home.manage.user.edit',{
-	         	url:'/edit',
-		        template:'{{user}}<div class = "col-md-8"><wc-form elements="elements" form-btns="formBtns" form-data="user" submit-event="{{submitEvent}}"></wc-form></div>',
-		       	data: {
-		        	displayName: 'Edit',
-		        	actionBarBtn: [{
-	                    name : 'Cancel',
-	                    onClick : 'NAVIGATE',
-	                    state : 'app.home.manage.user.list'
-	                },{
-	                    name : 'Update',
-	                     onClick : 'UPDATE_USER',
-	                }],
 		        	
 				}
 

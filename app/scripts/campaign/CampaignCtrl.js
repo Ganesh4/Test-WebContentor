@@ -79,7 +79,6 @@
                 $state.go('app.home.campaign');
             });
             $scope.$on(Global.EVENTS.CAMPAIGN_SAVE,function(event, data){
-                alert("Here");
                 $scope.campaign.campaignFeatureId = _.keys($scope.campaign.campaignFeatureId);
                 CampaignApiSrv.saveCampaign($scope.loggedInUser.securityUserID+'/campaign',$scope.campaign,function(data){
                     console.log('data------------',data.plain());
