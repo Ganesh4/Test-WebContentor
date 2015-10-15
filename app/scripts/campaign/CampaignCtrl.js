@@ -5,10 +5,13 @@
 		'$scope',
 		'$state',
 		'Restangular',
-        'CampaignApiSrv',
+        'Global',
+        'CampaignApiSrv',          
         'localStorageService',
 		function($scope,$state,Restangular,CampaignApiSrv,localStorageService){
-            
+            console.log("$scope.loggedInUser ----------- ",$scope.loggedInUser);
+            console.log($scope.loggedInUser.securityUserID,'---------',$scope.loggedInUser.groupId);
+            $scope.campaign = {};
             console.log($scope.loggedInUser.securityUserID,'---------',$scope.loggedInUser.groupId);
 			$scope.data = $state.current.data;
             $scope.empty = false;
@@ -67,9 +70,25 @@
             // assign custom format
             $scope.format = $scope.formats[0];   
 
-            CampaignApiSrv.getCampaignFeatures('features',{},function(data){
+            CampaignApiSrv.getCampaignFeatures($scope.loggedInUser.securityUserID+'/campaign/features',null,function(data){
                 $scope.featureList = data.plain()   
                 console.log('Feature List ------- ',  $scope.featureList);
+            });
+           
+            $scope.$on(Global.EVENTS.CAMPAIGN_SAVE_EXIT,function(event, data){
+                $scope.campaign.campaignFeatureId = _.keys($scope.campaign.campaignFeatureId);
+                CampaignApiSrv.saveCampaign($scope.loggedInUser.securityUserID+'/campaign',$scope.campaign,function(data){
+                    console.log('data------------',$scope.campaign);
+                });
+                $state.go('app.home.campaign');
+            });
+            $scope.$on(Global.EVENTS.CAMPAIGN_SAVE,function(event, data){
+                $scope.campaign.campaignFeatureId = _.keys($scope.campaign.campaignFeatureId);
+                CampaignApiSrv.saveCampaign($scope.loggedInUser.securityUserID+'/campaign',$scope.campaign,function(data){
+                    console.log('data------------',data.plain());
+                    $scope.campaign = data.plain()[0];
+                });
+                $state.go('app.home.campaign.detail');
             });
 
 

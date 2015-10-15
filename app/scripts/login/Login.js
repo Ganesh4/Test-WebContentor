@@ -47,7 +47,7 @@
 				            type: 'PASSWORD',
 				            required: true,
 				            validate:'passwordisrequired',
-				            placeholder:'password',
+				            placeholder:'Password',
 				            model : 'password'
 				        }]
 				    },{

@@ -40,6 +40,11 @@
                     field:'ZIP', 
                     displayName:'Zip Code',
                     cellClass : 'green-color'
+                },{
+					field :'ZIP',
+					cellTemplate :'<div>...</div>', 
+                    displayName:'Action',
+                    cellClass : 'green-color'
                 }]
             } 
 
@@ -52,7 +57,7 @@
                 }
             });
 
-             RecipientApiSrv.getRecipient('/1/recipients',param,function(data){
+             RecipientApiSrv.getRecipient('/recipients',param,function(data){
                 if(data){
                     $scope.recipientsGridOptions.data = data.plain();
                     $scope.Recipients = data.plain();

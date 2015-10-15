@@ -23,17 +23,16 @@
 	                    name : 'Refresh',
 	                    onClick : 'RELOAD',
 	                },{
-	                    name : 'Export'
+	                    name : "Export"
 	                },{
-	                    name : 'Delete',
+	                    name : "Delete",
 	                    onClick : 'DELETE_USER',
 	                    disable :'DELETE_BTN_DISABLE',
 	                },{
-	                    name : 'Properties',
-	                    onClick:'EDIT_USER',
+	                    name : "Properties",
 	                    disable :'EDIT_BTN_DISABLE',
 	                },{
-	                    name : 'Add',
+	                    name : "Add",
 	                    onClick : 'NAVIGATE',
 	                    state : 'app.home.manage.user.add.general'
 	                }]
@@ -41,6 +40,7 @@
 	        }).state('app.home.manage.user.list',{
 		        url:'/list',
 		        templateUrl:'views/user/user.html',
+		        controller : 'UserCtrl',
 		        data: {
 		        	 displayName: 'Users',
 		        }
@@ -168,8 +168,9 @@
                         }]
 				    }]
 
-		        }
-	         });
+		    });
+
+
 		    $stateProvider.state('app.home.manage.user.add', {
 	            url:'/add',
 	         	template:'<ui-view></ui-view>',

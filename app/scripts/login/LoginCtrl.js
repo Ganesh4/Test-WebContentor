@@ -18,12 +18,12 @@
                     console.log('Login USer ----------------- ',data);
                     var loginUser = data;
                     loginSrv.loginCheck('Login',loginUser,function(data){
-                    
-                        localStorageService.clearAll();
-                        $scope.loggedInUser = {};
+                        
                         console.log('Data ------------',data.plain());
+
                         localStorageService.set('loggedInUser',data.plain());
                         //$cookieStore.put('loggedInUser',data.plain());
+                        $scope.loggedInUser = localStorageService.get('loggedInUser');
                         $state.go('app.home.campaign');
                     });
                 });

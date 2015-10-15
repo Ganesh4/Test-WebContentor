@@ -12,9 +12,7 @@ angular.module('user').controller('UserCtrl',
         'UserApiSrv',
         'Global',
         function($scope ,$state, ApiSrv,CommonSrv,UserApiSrv,Global){
-            $scope.elements = $state.current.data.elements;
-            $scope.formBtns = $state.current.data.formButtons;
-            $scope.submitEvent = $state.current.data.submitEvent;
+          
             console.log('$scope ----------- ',$scope.loggedInUser);
             var param = {};
            // $scope.user = {};
@@ -50,7 +48,7 @@ angular.module('user').controller('UserCtrl',
                 }]
             } 
 
-            UserApiSrv.getUserList($scope.loggedInUser.securityUserID+'/users',param, 
+            UserApiSrv.getUserList('users',param, 
                 function(data){
                     if(data)
                         $scope.gridOptions.data = data.plain();
@@ -90,7 +88,6 @@ angular.module('user').controller('UserCtrl',
             $scope.updateCountry = function(){
               $scope.states = $scope.user.country.SecurityStates;
             }
-
              ApiSrv.getList('roles',param,function(data){
                 if(data)
                     $scope.roles = data.plain();
@@ -125,6 +122,7 @@ angular.module('user').controller('UserCtrl',
                     $state.go('app.home.manage.user.edit');
                 }
             })
+
            
         }
     ]);
