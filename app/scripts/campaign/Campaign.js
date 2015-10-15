@@ -127,20 +127,14 @@
                                         }]
                                 }],
                                 actionBarBtn: [{
-                                        name : "Previous",
+                                        name : "Cancel",
                                         onClick : '',
                                     },{
-                                        name : "Next",
+                                        name : "Update",
                                         onClick : '',
                                         disable : ''
                                         
-                                    },{
-                                        name : "Ok",
-                                        onClick : '',
-                                        disable : ''
-                                        
-                                    }
-                                ],
+                                }],
                             }
                         }) ; 
             }]);

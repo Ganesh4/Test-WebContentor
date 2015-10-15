@@ -50,7 +50,7 @@
 				*/
 				//$scope.froalaOptions.froala("getSelection");
     			$scope.$on('$stateChangeSuccess',function(event, data){
-    			
+    				$scope.loggedInUser =  localStorageService.get('loggedInUser');
     				if($state.current.name.indexOf('resources') != -1 ||
     					$state.current.name.indexOf('page') != -1){
     					console.log($state.current.name);
