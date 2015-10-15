@@ -29,6 +29,10 @@
 		}
 }
 
+.rcp_border_radus{
+	position:absolute;
+	}
+
 .menu-circle{
 	@extend .rcp_border_radus; 
 	background-color: $main_blue_color;
