@@ -41,14 +41,13 @@
 	        }).state('app.home.manage.user.list',{
 		        url:'/list',
 		        templateUrl:'views/user/user.html',
-		        controller : 'UserCtrl',
 		        data: {
 		        	 displayName: 'Users',
 		        }
 		    }).state('app.home.manage.user.edit',{
-	         	 url:'/edit',
-		        template:'<div class = "col-md-8"><wc-form elements="elements" form-btns="formBtns" form-data="user" submit-event="{{submitEvent}}"></wc-form></div>',
-		       	controller:'UserCtrl',
+	         	url:'/edit',
+		        template:'{{user}}<div class = "col-md-8"><wc-form elements="elements" form-btns="formBtns" form-data="user" submit-event="{{submitEvent}}"></wc-form></div>',
+		       	 controller: 'UserEditCtrl',
 		       	data: {
 		        	displayName: 'Edit',
 		        	actionBarBtn: [{
@@ -56,9 +55,10 @@
 	                    onClick : 'NAVIGATE',
 	                    state : 'app.home.manage.user.list'
 	                },{
-	                    name : 'Update'
+	                    name : 'Update',
+	                     onClick : 'UPDATE_USER',
 	                }],
-		        	elements:[
+	                elements:[
 				    {
 				    	rowClass :'col-lg-6',
 						rowElement:[{
@@ -168,6 +168,7 @@
                             model : 'zip',
                         }]
 				    }]
+		        	
 				}
 
 		    });

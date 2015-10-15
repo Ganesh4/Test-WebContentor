@@ -9,8 +9,7 @@
 		     ApiSrv.getList(uri, params, success, error)
 
 	        }   
-
-	        self.getRecipient = function(uri, params, success, error){
+	        self.getRecipientByList = function(uri, params, success, error){
 		     ApiSrv.getList(uri, params, success, error)
 
 	        }   
@@ -18,5 +17,4 @@
 		          ApiSrv.post(uri,params,success,error);
 	        }
         }]);
-
     })(angular);
