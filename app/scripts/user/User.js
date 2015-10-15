@@ -46,7 +46,7 @@
 		        }
 		    }).state('app.home.manage.user.edit',{
 	         	url:'/edit',
-		        template:'{{user}}<div class = "col-md-8"><wc-form elements="elements" form-btns="formBtns" form-data="user" submit-event="{{submitEvent}}"></wc-form></div>',
+		        template:'<div class = "col-md-8"><wc-form elements="elements" form-btns="formBtns" form-data="user" submit-event="{{submitEvent}}"></wc-form></div>',
 		       	 controller: 'UserEditCtrl',
 		       	data: {
 		        	displayName: 'Edit',
@@ -76,7 +76,7 @@
                             required: true,
                             validate:'lastNameRequired',
                             placeholder:'Last Name',
-                            model : 'lastname'
+                            model : 'lastName'
 						}]
 				    },{
 				    	rowClass :'col-lg-6',
@@ -87,7 +87,8 @@
                             required: true,
                             validate:'emailisrequired',
                             placeholder:'Email',
-                            model : 'email'
+                            model : 'email',
+                            disable : true
 						},{
 							name:'company',
                 			lable:'Company',
