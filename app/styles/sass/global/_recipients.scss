@@ -102,9 +102,8 @@
 	}
 	
 /*======================== Import Mapping for Recipients ============================*/
-
 .table-header{
-	background-color: $table-color;
+	background-color:$body-color;
 	height: 36px;
 	text-transform: uppercase;
 	}
@@ -113,6 +112,8 @@
 	}
 .table-body-color{
 	background-color: $table-color;
+	
+	
 	}
 	
 .table>tbody>tr>td{
