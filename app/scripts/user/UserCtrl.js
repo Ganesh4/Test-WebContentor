@@ -48,7 +48,7 @@ angular.module('user').controller('UserCtrl',
                 }]
             } 
 
-            UserApiSrv.getUserList('users',param, 
+            UserApiSrv.getUserList($scope.loggedInUser.securityUserID+'/users',param, 
                 function(data){
                     if(data)
                         $scope.gridOptions.data = data.plain();
