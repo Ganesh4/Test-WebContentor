@@ -6,11 +6,14 @@
 		'$state',
 		'Restangular',
         'Global',
-        'CampaignApiSrv',
-		function($scope,$state,Restangular,Global,CampaignApiSrv){
+        'CampaignApiSrv',          
+        'localStorageService',
+		function($scope,$state,Restangular,CampaignApiSrv,localStorageService){
             console.log("$scope.loggedInUser ----------- ",$scope.loggedInUser);
             console.log($scope.loggedInUser.securityUserID,'---------',$scope.loggedInUser.groupId);
             $scope.campaign = {};
+            console.log($scope.loggedInUser.securityUserID,'---------',$scope.loggedInUser.groupId);
+
 			$scope.data = $state.current.data;
             $scope.empty = false;
             $scope.checkValidation = function(){

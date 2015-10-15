@@ -49,12 +49,12 @@ angular.module('assets').directive('wcButton',['Global','$parse',function(Global
 	                scope.PREVIOUS_BTN_DISABLE = true;
 	            });
 	            
-	            scope.$root.$on(Global.EVENTS.NEXT_BTN_ENABLE,function(event, data){
+	            scope.$on(Global.EVENTS.NEXT_BTN_ENABLE,function(event, data){
 	            	console.log("Enable in WC");
 	               	scope.NEXT_BTN_DISABLE = false;
 	            });
 	            
-	            scope.$root.$on(Global.EVENTS.PREVIOUS_BTN_ENABLE,function(event, data){
+	            scope.$on(Global.EVENTS.PREVIOUS_BTN_ENABLE,function(event, data){
 	                scope.PREVIOUS_BTN_DISABLE = false;
 	            });
 	            
