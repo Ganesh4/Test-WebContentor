@@ -29,6 +29,11 @@
 		}
 }
 
+.rcp_border_radus{
+	position:absolute;
+	}
+
+
 .menu-circle{
 	@extend .rcp_border_radus; 
 	background-color: $main_blue_color;
@@ -81,7 +86,6 @@
 	}
 
 .menu-circle-2 {
-	@extend.extend-all;
 	background-color: $main_blue_color;
 	width: 75px;
 	height: 75px;
@@ -93,8 +97,6 @@
 		margin: 25px 0 0 25px;
 		}	
 	li{
-
-	  @extend.extend-all;
 	  background-color: $sidenavbar-color;
 	  width: 60px;
 	  height: 60px;
