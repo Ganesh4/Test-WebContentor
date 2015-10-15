@@ -13,9 +13,7 @@ angular.module('user').controller('UserCtrl',
         'Global',
         function($scope ,$state, ApiSrv,CommonSrv,UserApiSrv,Global){
              // console.log('captchaText ------- ',captchaText);
-            $scope.elements = $state.current.data.elements;
-            $scope.formBtns = $state.current.data.formBtns;
-            $scope.submitEvent = $state.current.data.submitEvent;
+          
             console.log('$scope ----------- ',$scope.loggedInUser);
             var param = {};
            // $scope.user = {};
@@ -115,17 +113,21 @@ angular.module('user').controller('UserCtrl',
                 }
             });
 
+            //Edit USer Page Navigation
             $scope.$on(Global.EVENTS.EDIT_USER,function(){
+                console.log(' $state.current.data.elements---', $state.current.data.elements);
                  if(!_.isEmpty($scope.gridRowSelectedData)){
                     var userData = $scope.gridRowSelectedData[0];
-                   
                     //self.deleteUser(userData.SecurityUserId);
                     $scope.user = userData;
-                     console.log('userData ------- ',$scope.user);
+                    console.log('userData ------- ', $scope.user);
+                    /*console.log($scope.countries);
+                     var country =  _.find($scope.countries,function(country){ return country.SecurityCountryID == $scope.user.country.countryid });
+                    console.log('country ------- ', country);
+                    $scope.user.country = country;*/
                     $state.go('app.home.manage.user.edit');
                 }
-            })
-
+            });
            
         }
     ]);
