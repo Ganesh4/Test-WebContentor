@@ -121,9 +121,10 @@
                                         }]
                                 }],
                                 actionBarBtn: [{
-                                        name : "Cancel",
-                                        onClick : 'CAMPAIGN_CANCEL',
-                                    },{
+                                         name : "Cancel",
+                                        onClick : 'NAVIGATE',
+                                        state :'app.home.campaign'
+                                        },{
                                         name : "Update",
                                         onClick : 'CAMPAIGN_UPDATE'
                                         
