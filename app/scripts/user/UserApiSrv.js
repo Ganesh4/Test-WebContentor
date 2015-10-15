@@ -17,10 +17,9 @@ angular.module('user').service('UserApiSrv', ['ApiSrv', function (ApiSrv) {
 		ApiSrv.post(uri,params,success,error);
 	}
 
-	self.deleteUser =function(uri, params, success, error){
-		ApiSrv.delete(uri, params, success, error);
+	self.deleteUser = function(uri, params, success, error){
+		ApiSrv.delete(uri,params,success,error);
 	}
-	
 }]);
 
 })(angular);

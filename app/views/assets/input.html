@@ -28,17 +28,18 @@
 
 		<div ng-if="rowElement.type === 'PATTERN'">
 		<input class="form-control" name="{{rowElement.name}}" 
-			ng-model="formData[rowElement.model]" placeholder="{{placeholder}}" ng-pattern="{{rowElement.pattern}}" pattern-err-type="{{rowElement.validate}}" />
+			ng-model="formData[rowElement.model]" placeholder="{{placeholder}}"
+			ng-pattern="{{rowElement.pattern}}" pattern-err-type="{{rowElement.validate}}" />
 		</div>
 
 		<div ng-if="rowElement.type === 'RADIO'">
 		<input type="radio" name = "{{rowElement.name}}" 
-			ng-model = "formData[rowElement.model]" ng-checked = "formData[rowElement.model]" ng-model="formData[rowElement.model]">{{rowElement.name}}
+			ng-model = "formData[rowElement.model]" ng-checked = "formData[rowElement.model]" ng-model="formData[rowElement.model]">{{rowElement.name}}</input>
 		</div>
 		<div ng-if="rowElement.type === 'CHECKBOX'">
 		<label>
 		<input type="checkbox" name = "{{rowElement.name}}" 
-			ng-model = "formData[rowElement.model]" ng-checked = "formData[rowElement.model]" ng-click = "rowElement.onClick"> {{rowElement.name}}
+			ng-model = "formData[rowElement.model]" ng-checked = "formData[rowElement.model]" ng-click = "rowElement.onClick"> {{rowElement.name}}</input>
 		</label>
 		</div> 
 
@@ -51,7 +52,7 @@
 		<div ng-if="rowElement.type === 'BUTTON'">
 			<button class = "btn btn-default"name = "rowElement.name" type = "rowElement.btnType">{{rowElement.name}}</button>
 	 	</div> 
-    </div><!--group -->
+    </div><!-- /input-group -->
   </div><!-- /.col-lg-4 -->
 </div>
 

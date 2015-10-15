@@ -12,35 +12,38 @@ angular.module('user').controller('UserCtrl',
         'UserApiSrv',
         'Global',
         function($scope ,$state, ApiSrv,CommonSrv,UserApiSrv,Global){
+             // console.log('captchaText ------- ',captchaText);
             $scope.elements = $state.current.data.elements;
-            $scope.formBtns = $state.current.data.formButtons;
+            $scope.formBtns = $state.current.data.formBtns;
             $scope.submitEvent = $state.current.data.submitEvent;
             console.log('$scope ----------- ',$scope.loggedInUser);
             var param = {};
+           // $scope.user = {};
+            
             $scope.gridOptions = {
                 columnDefs: [{
-                    field: 'FirstName', 
+                    field: 'firstName', 
                     displayName: 'First Name',
                     cellClass : 'darkgrey-color'
                 },{
-                    field:'Lastname', 
+                    field:'lastName', 
                     displayName:'Last Name',
                     cellClass : 'green-color'
                 },{
-                    field:'Email',
+                    field:'email',
                     displayName:'Email',
                     cellClass : 'orange-color'
                 },{
-                    field:'UserRoles.SecurityGroupID',
+                    field:'userRoles.securityGroupID',
                     displayName:"Roles",
                     cellClass : 'blue-color'
                 },{
-                    field:'CreatedDate',
+                    field:'createdDate',
                     displayName:'Created Date',
                     cellClass : 'skyblue-color',
                     cellTemplate:'<div class="ui-grid-cell-contents">{{row.entity.CreatedDate | FormatDateFilter}}</div>'
                 },{
-                    field:'ModificationDate',
+                    field:'modifiedDate',
                     displayName:'Modification Date',
                     cellClass : 'green-color',
                     cellTemplate:'<div class="ui-grid-cell-contents">{{row.entity.ModificationDate | FormatDateFilter}}</div>'
@@ -88,7 +91,6 @@ angular.module('user').controller('UserCtrl',
             $scope.updateCountry = function(){
               $scope.states = $scope.user.country.SecurityStates;
             }
-
              ApiSrv.getList('roles',param,function(data){
                 if(data)
                     $scope.roles = data.plain();
@@ -109,19 +111,21 @@ angular.module('user').controller('UserCtrl',
                 if(!_.isEmpty($scope.gridRowSelectedData)){
                     var userData = $scope.gridRowSelectedData[0];
                     console.log('userData ------- ',userData);
-                    self.deleteUser(userData.SecurityUserId);
+                    self.deleteUser(userData.securityUserId);
                 }
             });
 
             $scope.$on(Global.EVENTS.EDIT_USER,function(){
                  if(!_.isEmpty($scope.gridRowSelectedData)){
                     var userData = $scope.gridRowSelectedData[0];
-                    console.log('userData ------- ',userData);
+                   
                     //self.deleteUser(userData.SecurityUserId);
                     $scope.user = userData;
+                     console.log('userData ------- ',$scope.user);
                     $state.go('app.home.manage.user.edit');
                 }
             })
+
            
         }
     ]);

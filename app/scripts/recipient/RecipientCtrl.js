@@ -1,3 +1,4 @@
+
 'use strict';
 (function(angular){
 	angular.module('recipients').controller('RecipientCtrl',
@@ -87,4 +88,5 @@
 
 
 		}]);
+
 })(angular);

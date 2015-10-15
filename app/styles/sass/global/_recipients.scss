@@ -1,89 +1,118 @@
 /* Scss Document */
 
-.extend-all{
+.recipients_table .ui-grid {  
+  margin-left:0px;
+  float:left;
+  width:99.5%;   
+	}
+	
+.recipients_table .col-md-4 {
+	padding-right:0px;
+	}
+	
+.rcp_border_radus {
 	border-radius: 50%;
 	position: absolute;
 	}
+	
+.menu-circle:hover{
+	
+	ul{
+		display: block;
+		}
+	li{
+		display: block;
+		}
+		
+	li:nth-child(2){
+		display: block;
+		}
+}
+
+.rcp_border_radus{
+	position:absolute;
+	}
+
 
 .menu-circle{
-	@extend.extend-all;
+	@extend .rcp_border_radus; 
 	background-color: $main_blue_color;
 	width: 60px;
-	height: 60px;
+	height: 60px;	
 	right: 50px;
 	bottom: -100px;
-	cursor: pointer;
+	cursor: pointer;	
+	ul{
+		width: 60px;
+		height: 135px;
+		position: relative;
+		top: -180px;
+		display: none;
+		}
 	
 	i{
-		color: $workarea-color;
+		color:$workarea-color;
 		font-size: 26px;
 		margin: 20px 0 0 21px;
 		}
 	
-	li{
-	  @extend.extend-all;
-	  background-color: $sidenavbar-color;
+	li {
+	  @extend .rcp_border_radus;
+	  background-color:$sidenavbar-color;
 	  width: 50px;
 	  height: 50px;
-	  bottom: 72px;
+	  bottom: 10px;
 	  margin-left: 5px;
-	  
-	  i{
-		color:$main_blue_color;
-		font-size: 18px;
-		margin: 16px 0 0 16px;
-		}
-		
-	  }
-	  
-	 li:nth-child(2){
-	  background-color: $sidenavbar-color;
-	  bottom: 135px;
+	  display: none;
 	  
 	  i{
 		color:$main_blue_color;
 		font-size: 18px;
 		margin: 16px 0 0 18px;
 		}
-	  }
-}
 
-.menu-circle-2{
-	@extend.extend-all;
+	  }
+	  
+	 li:nth-child(2){
+	  background-color: $sidenavbar-color;
+	  bottom: 68px;
+	  
+	  i{
+		color:$main_blue_color;
+		font-size: 18px;
+		margin: 16px 0 0 16px;
+		}
+	  }
+	}
+
+.menu-circle-2 {
 	background-color: $main_blue_color;
 	width: 75px;
 	height: 75px;
 	right: 200px;
 	bottom: -100px;
-	cursor: pointer;
-	
-	i{
-		color: $workarea-color;
-		font-size: 30px;
+	cursor: pointer;	
+	i {color: $workarea-color;
+	   font-size: 30px;
 		margin: 25px 0 0 25px;
-		}
-	
+		}	
 	li{
-	  @extend.extend-all;
 	  background-color: $sidenavbar-color;
 	  width: 60px;
 	  height: 60px;
 	  bottom: 86px;
-	  margin-left: 5px;
-	  
-	  i{
+	  margin-left: 5px;	  
+	  i {
 		color:$main_blue_color;
 		font-size: 20px;
 		margin: 20px 0 0 22px;
 		}
-		
 	  }
 	  
 	 li:nth-child(2){
-	  background-color: $sidenavbar-color;
-	  bottom: 160px;
-	  
-	  i{
+	  background-color:$sidenavbar-color;
+	  bottom: 160px;	  
+	  i {
 		color:$main_blue_color;
 		font-size: 20px;
 		margin: 20px 0 0 22px;
@@ -95,8 +124,7 @@
 
 .import-main{
 	width: 100%;
-	
-	p{
+	p {
 		margin-bottom: 15px;
 		}
 	}

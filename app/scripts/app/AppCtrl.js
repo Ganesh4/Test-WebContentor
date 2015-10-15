@@ -24,7 +24,6 @@
 				$scope.image = {};
 				$scope.countries = {};
 				$scope.loggedInUser = {};
-				$scope.campaign = {};
 				$scope.files = [];
 				$scope.featureList = {};
 				$scope.gridRowSelectedData = [];
@@ -51,9 +50,7 @@
 				*/
 				//$scope.froalaOptions.froala("getSelection");
     			$scope.$on('$stateChangeSuccess',function(event, data){
-           
-    				$scope.loggedInUser = localStorageService.get('loggedInUser');
-    				console.log("$scope.loggedInUser ----------- ",$scope.loggedInUser);
+    				$scope.loggedInUser =  localStorageService.get('loggedInUser');
     				if($state.current.name.indexOf('resources') != -1 ||
     					$state.current.name.indexOf('page') != -1){
     					console.log($state.current.name);
@@ -90,7 +87,7 @@
 	                	user.country = $scope.user.country.SecurityCountryID;
 	                if(!_.isUndefined(user.state))
 	               		 user.state = $scope.user.state.SecurityStateID;
-	                UserApiSrv.addNewUser( $scope.loggedInUser.securityUserID+'/users', user,function(response){
+	                UserApiSrv.addNewUser( 'users', user,function(response){
 	                	if(data.state)
 	                		$state.go(data.state);
 	                });
@@ -118,26 +115,8 @@
 	                });
 	            });
 
-            	 $scope.$on(Global.EVENTS.CAMPAIGN_SAVE,function(event, data){
-
-	            	$scope.campaign.campaignFeatureId = _.keys($scope.campaign.campaignFeatureId);
-	            	console.log('campaign-----------',$scope.campaign);
-	            	ApiSrv.post('campaign',$scope.campaign,function(data){
-	            		console.log('data------------',$scope.campaign);
-	            	});
-	            	$state.go('app.home.campaign.detail');
-	            });
-
-            	 $scope.$on(Global.EVENTS.CAMPAIGN_SAVE_EXIT,function(event, data){
-	            	$scope.campaign.campaignFeatureId = _.keys($scope.campaign.campaignFeatureId);
-             	
-	            	console.log('campaign-----------',$scope.campaign);
-	            	ApiSrv.post('campaign',$scope.campaign,function(data){
-	            		console.log('data------------',$scope.campaign);
-	            });
-	            	$state.go('app.home.campaign');
-	            });
-
+            
+            	
 	            $scope.enableSave = function(){
 	            	CommonSrv.enableSave($scope);
 	            }

@@ -15,25 +15,25 @@
 		   	$stateProvider.state('app.home.manage.user',{
 	            url:'/user',
 	            template:'<ui-view></ui-view>',
-	            controller: 'UserCtrl',
 	            abstract: true,
+	            controller: 'UserCtrl',
               	data:{
 	                displayName: 'user',
 	                actionBarBtn: [{
 	                    name : 'Refresh',
 	                    onClick : 'RELOAD',
 	                },{
-	                    name : 'Export'
+	                    name : "Export"
 	                },{
-	                    name : 'Delete',
+	                    name : "Delete",
 	                    onClick : 'DELETE_USER',
 	                    disable :'DELETE_BTN_DISABLE',
 	                },{
-	                    name : 'Properties',
+	                    name : "Properties",
 	                    onClick:'EDIT_USER',
 	                    disable :'EDIT_BTN_DISABLE',
 	                },{
-	                    name : 'Add',
+	                    name : "Add",
 	                    onClick : 'NAVIGATE',
 	                    state : 'app.home.manage.user.add.general'
 	                }]
@@ -41,18 +41,22 @@
 	        }).state('app.home.manage.user.list',{
 		        url:'/list',
 		        templateUrl:'views/user/user.html',
+		        controller : 'UserCtrl',
 		        data: {
 		        	 displayName: 'Users',
 		        }
 		    }).state('app.home.manage.user.edit',{
 	         	 url:'/edit',
 		        template:'<div class = "col-md-8"><wc-form elements="elements" form-btns="formBtns" form-data="user" submit-event="{{submitEvent}}"></wc-form></div>',
-		        data: {
+		       	controller:'UserCtrl',
+		       	data: {
 		        	displayName: 'Edit',
 		        	actionBarBtn: [{
-	                    name : 'Update',
+	                    name : 'Cancel',
+	                    onClick : 'NAVIGATE',
+	                    state : 'app.home.manage.user.list'
 	                },{
-	                    name : 'Cancel'
+	                    name : 'Update'
 	                }],
 		        	elements:[
 				    {
@@ -64,7 +68,7 @@
                             required: true,
                             validate:'firstNameRequired',
                             placeholder:'First Name',
-                            model : 'FirstName'
+                            model : 'firstName'
 						},{
 							name:'lastName',
                 			lable:'Last Name',
@@ -72,7 +76,7 @@
                             required: true,
                             validate:'lastNameRequired',
                             placeholder:'Last Name',
-                            model : 'lastName'
+                            model : 'lastname'
 						}]
 				    },{
 				    	rowClass :'col-lg-6',
@@ -164,9 +168,11 @@
                             model : 'zip',
                         }]
 				    }]
+				}
 
-		        }
-	         });
+		    });
+
+
 		    $stateProvider.state('app.home.manage.user.add', {
 	            url:'/add',
 	         	template:'<ui-view></ui-view>',
