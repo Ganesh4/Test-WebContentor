@@ -20,6 +20,10 @@ angular.module('user').service('UserApiSrv', ['ApiSrv', function (ApiSrv) {
 	self.deleteUser = function(uri, params, success, error){
 		ApiSrv.delete(uri,params,success,error);
 	}
+
+	self.updateUser = function(uri, params, success, error){
+		ApiSrv.put(uri,params,success,error);
+	}
 }]);
 
 })(angular);
