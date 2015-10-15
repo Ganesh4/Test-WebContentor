@@ -30,7 +30,8 @@
                                         state: 'app.home.campaign.emails'
                                     },{
                                         icon : 'fa fa-list-alt',
-                                         name : 'Promotional Pages'
+                                         name : 'Promotional Pages',
+                                         state : 'app.home.campaign.promotional'
                                     }]
                                  }
                             ],
