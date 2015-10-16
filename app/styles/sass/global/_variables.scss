@@ -25,6 +25,7 @@ $sidenavbar-color:#1e3e66;
 $search-border-color:#234d82;
 $logo-color: #14519a;
 
+
 /* LIGHT GREEN COLOR */
 $ROLES_ROW_COLOR:#e8f6e2;
 /* BORDER GREEN COLOR */
@@ -49,6 +50,9 @@ $sidenavbar-hover-color:#1b951b;
 /* editor's blocks border color */
 $editor-border-color:#626262;
 
+/* editor's blocks font size */
+$editor-fontsize:11px;
+
 /* heading bg image */
 $sub-heading-bg:url(../../images/pattern1.gif);
 
@@ -56,8 +60,11 @@ $sub-heading-bg:url(../../images/pattern1.gif);
 $section-bgcolor:#f3f2f3;
 $section-bordercolor:#626262;
 $section-textcolor:#878688;
-$table-color: #fff;
 $table-text-color:#000;
+
+/* table color variables */
+$table-color:#f9f9f9;
+$table-text-color:#5b676f;
 
 
 

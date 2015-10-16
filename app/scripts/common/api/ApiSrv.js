@@ -93,6 +93,11 @@ angular.module('microsite').service('ApiSrv',
 			}).then(success);
 		}
 
+		self.put = function(uri, params, success , error){
+			console.log("params -------------- ",params);
+			Restangular.one(uri).customPUT(params).then(success);
+		}
+
 		self.delete = function(uri , params, success, error ){
 			Restangular.one(uri).remove(params).then(success);
 		}

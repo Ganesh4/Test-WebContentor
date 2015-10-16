@@ -50,7 +50,7 @@
 				*/
 				//$scope.froalaOptions.froala("getSelection");
     			$scope.$on('$stateChangeSuccess',function(event, data){
-    			
+    				$scope.loggedInUser =  localStorageService.get('loggedInUser');
     				if($state.current.name.indexOf('resources') != -1 ||
     					$state.current.name.indexOf('page') != -1){
     					console.log($state.current.name);
@@ -80,25 +80,6 @@
 	            	if(data.state)
 	            		$state.go(data.state);
 	            });
-
-	            $scope.$on(Global.EVENTS.ADD_NEW_USER,function(event, data){
-	                var user = $scope.user;
-	                if(!_.isUndefined(user.country))
-	                	user.country = $scope.user.country.SecurityCountryID;
-	                if(!_.isUndefined(user.state))
-	               		 user.state = $scope.user.state.SecurityStateID;
-	                UserApiSrv.addNewUser( 'users', user,function(response){
-	                	if(data.state)
-	                		$state.go(data.state);
-	                });
-	            });
-
-	            $scope.enableNext = function(){
-	            	CommonSrv.enableNext($scope);
-	            }
-	            $scope.disableNext = function(){
-	            	CommonSrv.disableNext($scope);	
-	            }
 
 	            $scope.$on(Global.EVENTS.USER_REGISTER,function(event, data){
 	               console.log('User ------- ',data);
