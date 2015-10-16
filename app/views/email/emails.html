@@ -1,10 +1,183 @@
+
+
+<div class="main_rhs_wrapper">
 <h1>Campaign Emails </h1>
-<div class="thumb-category">       
-   <h3 class="thumb-category-title">Featured</h3>
-   <div class="right-elements">
-      <div class="btn_view-all">
-        <a href="#">View all</a>
-      </div>
-         <wc-on-off-button is-hidden  = "isHidden"></wc-on-off-button>
-    </div> 
-</div>
+ <div class="thumb-row">
+  <div class="thumb-category">
+     <h3 class="thumb-category-title">Featured</h3>
+     <div class="right-elements">
+        <div class="btn_view-all">
+          <a href="#">View all</a>
+        </div>
+           <wc-on-off-button is-hidden  = "isHidden"></wc-on-off-button>
+      </div> 
+  </div>
+    
+  
+    <div class="col-lg-4">
+              <div class="thumb-block">
+                <div class="thumb-img">
+                      <div class="view view-tenth">
+                        <img src={{image.upload.url}} />
+                        <div class="mask">
+                            <h2>{{image.upload.fileName}}</h2>
+                            <p>{{image.description}}</p>
+                        
+                
+                        <div class="checkbox-style">
+                            <ul>
+                              <li class="selected"></li>
+                            </ul>
+                        </div>
+                 
+                            <h2>{{image.upload.fileName}}</h2>
+                            <p>{{image.description}}</p>
+                            <div class="media-left media-middle grid-box">
+                               <li><p>Category</p><span> {{image.category.name}}</span></li>
+                            </div>
+                            <!--- tabs Start-->
+                            <div class="tabs-row">
+                            <span ng-repeat = "keyword in image.keywords">{{keyword}}</span> 
+                            </div>
+                        </div>
+                    </div>
+                </div>   
+                <div class="thumb-innr">
+        
+                  <div class="thumb-details">
+                    <span class="title">Template Title</span>
+                    <p class="thumb-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis 
+                    </p>
+                    <div class="thumb-info">
+                      <span class="revision">Revision:6</span>
+                      <span class="age">Age:5 days ago</span>
+                    </div>
+                    <span class="btn_view-more">
+                      <a ui-sref="home.design.detail">View More</a>
+                    </span>
+                  </div>
+              </div>       
+            </div> <!-- thumb block -->
+    </div>
+    
+  <div class="col-lg-4">
+              <div class="thumb-block">
+                <div class="thumb-img"></div>   
+                <div class="thumb-innr">
+        
+                  <div class="thumb-details">
+                    <span class="title">Template Title</span>
+                    <p class="thumb-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis 
+                    </p>
+                    <div class="thumb-info">
+                      <span class="revision">Revision:6</span>
+                      <span class="age">Age:5 days ago</span>
+                    </div>
+                    <span class="btn_view-more">
+                      <a ui-sref="home.design.detail">View More</a>
+                    </span>
+                  </div>
+              </div>       
+            </div> <!-- thumb block -->
+  </div>
+    
+  <div class="col-lg-4">
+              <div class="thumb-block">
+                <div class="thumb-img"></div>   
+                <div class="thumb-innr">
+        
+                  <div class="thumb-details">
+                    <span class="title">Template Title</span>
+                    <p class="thumb-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis 
+                    </p>
+                    <div class="thumb-info">
+                      <span class="revision">Revision:6</span>
+                      <span class="age">Age:5 days ago</span>
+                    </div>
+                    <span class="btn_view-more">
+                      <a ui-sref="home.design.detail">View More</a>
+                    </span>
+                  </div>
+              </div>       
+            </div> <!-- thumb block -->
+  </div>
+  </div> <!-- end -->
+  
+<div class="thumb-row">
+  <div class="thumb-category">
+     <h3 class="thumb-category-title">Featured</h3>
+     <div class="right-elements">
+        <div class="btn_view-all">
+          <a href="#">View all</a>
+        </div>
+           <wc-on-off-button is-hidden  = "isHidden"></wc-on-off-button>
+      </div> 
+  </div>
+    
+  
+    <div class="col-lg-4">
+              <div class="thumb-block">
+                <div class="thumb-img"></div>   
+                <div class="thumb-innr">
+        
+                  <div class="thumb-details">
+                    <span class="title">Template Title</span>
+                    <p class="thumb-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis 
+                    </p>
+                    <div class="thumb-info">
+                      <span class="revision">Revision:6</span>
+                      <span class="age">Age:5 days ago</span>
+                    </div>
+                    <span class="btn_view-more">
+                      <a ui-sref="home.design.detail">View More</a>
+                    </span>
+                  </div>
+              </div>       
+            </div> <!-- thumb block -->
+    </div>
+    
+  <div class="col-lg-4">
+              <div class="thumb-block">
+                <div class="thumb-img"></div>   
+                <div class="thumb-innr">
+        
+                  <div class="thumb-details">
+                    <span class="title">Template Title</span>
+                    <p class="thumb-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis 
+                    </p>
+                    <div class="thumb-info">
+                      <span class="revision">Revision:6</span>
+                      <span class="age">Age:5 days ago</span>
+                    </div>
+                    <span class="btn_view-more">
+                      <a ui-sref="home.design.detail">View More</a>
+                    </span>
+                  </div>
+              </div>       
+            </div> <!-- thumb block -->
+  </div>
+    
+  <div class="col-lg-4">
+              <div class="thumb-block">
+                <div class="thumb-img"></div>   
+                <div class="thumb-innr">
+        
+                  <div class="thumb-details">
+                    <span class="title">Template Title</span>
+                    <p class="thumb-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam velit, vulputate eu pharetra nec, mattis ac neque. Duis 
+                    </p>
+                    <div class="thumb-info">
+                      <span class="revision">Revision:6</span>
+                      <span class="age">Age:5 days ago</span>
+                    </div>
+                    <span class="btn_view-more">
+                      <a ui-sref="home.design.detail">View More</a>
+                    </span>
+                  </div>
+              </div>       
+            </div> <!-- thumb block -->
+  </div>
+  
+  
+  </div>
+</div> <!-- rhs end -->
