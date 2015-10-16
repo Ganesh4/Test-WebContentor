@@ -55,7 +55,6 @@ angular.module('user').controller('UserCtrl',
                         $scope.gridOptions.data = data.plain();
             });
 
-
             $scope.empty = false;
            
             $scope.checkValidation = function(){
@@ -70,25 +69,39 @@ angular.module('user').controller('UserCtrl',
                 }
 
                 if($scope.empty == false){
-                    $scope.enableNext();
+                    $scope.$emit(Global.EVENTS.NEXT_BTN_ENABLE);
                 }else{
-                    $scope.disableNext();
+                    $scope.$emit(Global.EVENTS.NEXT_BTN_DISABLE);
                 }
-
-
-            console.log('$scope.empty--------',$scope.empty);
+                console.log('$scope.empty--------',$scope.empty);
            }          
             
+            //Add User
+            $scope.$on(Global.EVENTS.ADD_NEW_USER,function(event, data){
+                var user = $scope.user;
+                if(!_.isUndefined(user.country))
+                    user.country = $scope.user.country.SecurityCountryID;
+                if(!_.isUndefined(user.state))
+                     user.state = $scope.user.state.SecurityStateID;
+               
+                UserApiSrv.addNewUser($scope.loggedInUser.securityUserID+'/users', user,function(response){
+                    if(data.state)
+                        $state.go(data.state);
+                });
+            });
 
+            //Get Country List
             CommonSrv.getCountriesList(function(data){
               $scope.countries = data.plain();
               console.log('countries-------------',$scope.countries);
             });
             
-           // console.log('Countries ------------ ',$scope.coun);
+           // Update State Drop Down According to Country
             $scope.updateCountry = function(){
               $scope.states = $scope.user.country.SecurityStates;
             }
+
+            //Get Role List
              ApiSrv.getList('roles',param,function(data){
                 if(data)
                     $scope.roles = data.plain();
@@ -116,12 +129,8 @@ angular.module('user').controller('UserCtrl',
             //Edit USer Page Navigation
             $scope.$on(Global.EVENTS.EDIT_USER,function(){
                 console.log(' $state.current.data.elements---', $state.current.data.elements);
-                $scope.elements = $state.current.data.elements;
-                $scope.formBtns = $state.current.data.formBtns;
-                $scope.submitEvent = $state.current.data.submitEvent;
                  if(!_.isEmpty($scope.gridRowSelectedData)){
                     var userData = $scope.gridRowSelectedData[0];
-                   
                     //self.deleteUser(userData.SecurityUserId);
                     $scope.user = userData;
                     console.log('userData ------- ', $scope.user);
@@ -132,14 +141,6 @@ angular.module('user').controller('UserCtrl',
                     $state.go('app.home.manage.user.edit');
                 }
             });
-
-            //Update User Functions
-            $scope.$on(Global.EVENTS.UPDATE_USER,function(){
-               UserApiSrv.updateUser($scope.loggedInUser.securityUserID+'/users',$scope.user,function(){
-                console.log('Updated One ------- ',data.plain());
-               });
-            });
-
            
         }
     ]);

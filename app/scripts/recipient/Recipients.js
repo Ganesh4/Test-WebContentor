@@ -14,6 +14,7 @@
 		   	$stateProvider.state('app.home.manage.recipients', {
 	                url: '/recipients',
 	                template:'<ui-view></ui-view>',
+                     abstract: true,
 	                 controller:'RecipientCtrl',
                 data: {
 	                 displayName: 'Recipients',
@@ -33,8 +34,7 @@
                                 
                                },{
                                     name : 'Add to List',
-                                    onClick : 'NAVIGATE',
-                                    state: 'app.home.manage.recipients.add'
+                                    onClick : '',
                                 
                                },{
                                     name : 'Delete',
@@ -50,10 +50,12 @@
                     submitEvent: 'ADD_RECIPIENT',
                     actionBarBtn: [{
                                     name : 'Cancel',
-                                    onClick : 'ADD_RECIPIENT_CANCEL',
+                                    onClick: 'NAVIGATE',
+                                    state : 'app.home.manage.recipients.list'
                                },{
                                     name : 'Save',
-                                    onClick : 'ADD_RECIPIENT',
+                                    onClick : 'NAVIGATE',
+                                    state : 'app.home.manage.recipients.list'
                                 
                                }],
                     elements:[

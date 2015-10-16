@@ -29,7 +29,7 @@
 
   <div class="form-group addimg-row class-top">
     <label class="control-label" for "Image Category">Category:</label>
-    <select class="textfield-width" ng-model="category" ng-change = "setCategoryValue(category)">
+    <select class="textfield-width form-control" ng-model="category" ng-change = "setCategoryValue(category)">
          <option value="">Select A Category</option>
          <option ng-repeat="category in imageCategory" value="{{category}}">{{category.name}}</option>             
     </select>

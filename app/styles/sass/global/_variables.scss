@@ -16,11 +16,15 @@ $COLOR_GREEN:#419641;
 $BORDE_GREEN:#3e8f3e;
 
 /* BLACK SHADES */
-$header-color:lighten($main-color, 90% ); //#e5e5e5 !default
-$brder-color:lighten($main-color, 84% ); //#d6d6d6 !default
+$header-color:#1e3e66;
+$brder-color:#1b5098;
+$icon-head-color:#1b4f98;
 $secondery-navebar-color:lighten($main-color, 95% ); //#f2f2f2 !default
-$body-color:lighten($main-color, 96% ); //#f5f5f5 !default
-$sidenavbar-color:lighten($main-color, 23% ); //#3b3b3b !default
+$body-color: #dfe7ea;
+$sidenavbar-color:#1e3e66;
+$search-border-color:#234d82;
+$logo-color: #14519a;
+
 
 /* LIGHT GREEN COLOR */
 $ROLES_ROW_COLOR:#e8f6e2;
