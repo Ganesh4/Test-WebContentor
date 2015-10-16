@@ -1,13 +1,13 @@
 /* Scss Document */
 .logo_wrapper {
 	margin-left:-16px;
-	margin-top:-1px;
+/*	margin-top:-1px;*/
 	padding-left:15px;
 	padding-right:15px;
 	position:relative;
 	width:17.1%;
 	height: 52px;
-	background-color:$main_blue_color;
+	background-color: $logo-color;
 	float:left;
 	a {
 		float:left;		
@@ -29,7 +29,16 @@
 	background-color:$brder-color;
 	background-image:none;
 	box-shadow:none;
+	color: $workarea-color;
+	border-bottom: 3px solid #f7af63;
 }
+
+.navbar-default .navbar-nav>li>a{
+	color: $workarea-color;
+	}
+.navbar-default .navbar-nav>li>a:hover{
+	color: $workarea-color;
+	}
 
 /*====================== Logo Section Start Here ========================*/	
 
@@ -59,12 +68,15 @@
 	background-color: $header-color;
 	padding-left: 25px;
 	padding-right: 25px;
+	border: 1px solid $search-border-color;
+	color: $workarea-color;
 	}
 	
 .form-group i{
 	position: absolute;
 	padding: 10px 10px 10px 8px;
 	font-size: 16px;
+	color: $search-border-color;
 	}
 	
 .left-icon{
@@ -80,15 +92,13 @@
 	
 .nav-icon-color{
 		li{
-			background-color: $body-color;
-			border-left: 1px solid $brder-color;
-			border-right: 1px solid $workarea-color;
 				a{
 				padding: 13px 20px !important; 
 				}
 				
 			   i{
 				 font-size: 22px;
+				 color:#c5d9e2;
 				}
 		}
 }

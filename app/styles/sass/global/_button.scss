@@ -3,10 +3,9 @@
 .header-sub {
 	button  {
 	background-color: $grey-color;
-  border: 1px solid $brder-color;
-  margin-right: 10px;   
-  padding: 5px 15px 5px 15px;
-  min-width: 70px;
+    margin-right: 10px;   
+    padding: 5px 15px 5px 15px;
+    min-width: 70px;
 	float: right;
 	outline: none;
 	@include border-radius(2px);
@@ -18,9 +17,8 @@
 		&:hover,
 		&:focus,
 		&:active {
-		background-color:$COLOR_GREEN;
+		background-color: $header-color;
 		color:$workarea-color;
-		border:solid 1px $BORDE_GREEN;
 	}
   }
 }
@@ -40,9 +38,9 @@
 		&:hover,
 		&:focus,
 		&:active {			
-			background-color:$COLOR_GREEN;
+			background-color: $header-color;
 			color:$workarea-color;
-			border:solid 1px $BORDE_GREEN;
+			border:solid 1px $header-color;
 			box-shadow:none;
 		}	
   	}
