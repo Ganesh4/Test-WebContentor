@@ -7,7 +7,7 @@
 		'Restangular',
         'CampaignApiSrv',
 		function($scope,$state,Restangular,CampaignApiSrv){
-			console.log("My Campaign --------------- ",$scope.campaign.campaignFeatureId,'----------',$scope.featureList);
+			console.log("My Campaign --------------- ",$scope.campaign);
 			$scope.selectedFeatures = [];
 			_.each($scope.featureList,function(value,key){
 				_.each($scope.campaign.campaignFeatureId,function(v,k){

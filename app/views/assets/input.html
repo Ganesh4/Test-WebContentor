@@ -28,7 +28,8 @@
 
 		<div ng-if="rowElement.type === 'PATTERN'">
 		<input class="form-control" name="{{rowElement.name}}" 
-			ng-model="formData[rowElement.model]" placeholder="{{placeholder}}" ng-pattern="{{rowElement.pattern}}" pattern-err-type="{{rowElement.validate}}" />
+			ng-model="formData[rowElement.model]" placeholder="{{placeholder}}"
+			ng-pattern="{{rowElement.pattern}}" pattern-err-type="{{rowElement.validate}}" />
 		</div>
 
 		<div ng-if="rowElement.type === 'RADIO'">
