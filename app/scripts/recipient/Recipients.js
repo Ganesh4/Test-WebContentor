@@ -15,13 +15,13 @@
 	                url: '/recipients',
 	                template:'<ui-view></ui-view>',
                      abstract: true,
-	                 controller:'RecipientCtrl',
                 data: {
 	                 displayName: 'Recipients',
 	                
                     }
-               }).state('app.home.manage.recipients.list', {
+                }).state('app.home.manage.recipients.list', {
                     url: '/list',
+                    controller:'RecipientCtrl',
                     templateUrl:'./views/recipient/recipients.html',
                 data: {
                     displayName: ' List',
@@ -41,10 +41,10 @@
                                     onClick : ''
                      }],
                  }
-             }).state('app.home.manage.recipients.add', {
+                }).state('app.home.manage.recipients.add', {
                     url: '/add',
-                    templateUrl:'views/recipient/AddRecipient.html',
                     controller:'RecipientCtrl',
+                    templateUrl:'views/recipient/AddRecipient.html',
                 data: {
                     displayName: 'Add',
                     submitEvent: 'ADD_RECIPIENT',
@@ -54,8 +54,7 @@
                                     state : 'app.home.manage.recipients.list'
                                },{
                                     name : 'Save',
-                                    onClick : 'NAVIGATE',
-                                    state : 'app.home.manage.recipients.list'
+                                    onClick : 'ADD_RECIPIENT'
                                 
                                }],
                     elements:[
@@ -92,8 +91,7 @@
                             name:'title',
                             lable:'Title',
                             type: 'TEXT',
-                            required: true,
-                            validate:'titleisrequired',
+                            required: false,
                             placeholder:'Title',
                             model : 'title'
                         }]
@@ -114,7 +112,7 @@
                             type: 'PATTERN',
                             required: true,
                             validate:'invalidPhoneNo',
-                            pattern :'/^[0-9]{10,13}$/',
+                            pattern :'^[0-9]{10,13}$',
                             placeholder:'Work Phone',
                             model : 'workPhone'
                         }]
@@ -127,17 +125,16 @@
                             type: 'PATTERN',
                             required: true,
                             validate:'invalidMobile',
-                            pattern :'/^[0-9]{10,13}$/',
+                            pattern :'^[0-9]{10,13}$',
                             placeholder:'Mobile',
                             model : 'mobile',
                         },{
                             name:'address',
                             lable:'Address',
-                            type: 'PATTERN',
-                            required: true,
-                            validate:'invalidPhoneNo',
+                            type: 'TEXT',
+                            required: false,
                             placeholder:'Address',
-                            model : 'address'
+                            model : 'address',
                         }]
 
                     },{
@@ -180,33 +177,31 @@
                     },{
                         rowClass :'col-lg-6',
                         rowElement:[{
-                            name:'listName',
+                            name:'listId',
                             lable:'List Name',
                             type: 'DROP_DOWN',
                             required: false,
                             placeholder:'List Name',
-                            model : 'listId',
+                            model : 'list',
                             ngOptions:'recipient.listName for recipient in RecipientList',
                         }],
                     }] 
-                }
-                
-
-             }).state('app.home.manage.recipients.import', {
+                 }
+                }).state('app.home.manage.recipients.import', {
                     url: '/import',
                     templateUrl:'views/recipient/ImportRecipient.html',
                 data: {
                      displayName: 'ImportRecipient',
                     
                     }
-               }).state('app.home.manage.recipients.mapping', {
+                }).state('app.home.manage.recipients.mapping', {
                     url: '/mapping',
                     templateUrl:'views/recipient/MappingRecipient.html',
                 data: {
                      displayName: 'MappingRecipient',
                     
-                    }
-               });
+                }
+            });
 
 		    
 	     }]);

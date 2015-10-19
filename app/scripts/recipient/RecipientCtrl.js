@@ -12,11 +12,8 @@
 		   $scope.elements = $state.current.data.elements;
            $scope.formBtns = $state.current.data.formBtns;
            $scope.submitEvent = $state.current.data.submitEvent;
-           $scope.recipients={};
-           console.log('TEST',$scope.loggedInUser.securityUserID,'---------',$scope.loggedInUser.groupId);
-
+           $scope.recipients = {};
             var param = {};
-            //$scope.admin = "Ganesh";
             $scope.gridOptions = {
                 columnDefs: [{
                     field: 'listName', 
@@ -39,12 +36,11 @@
                     displayName:'Email',
                     cellClass : 'green-color'
                 },{
-                    field:'ZIP', 
+                    field:'zip', 
                     displayName:'Zip Code',
                     cellClass : 'green-color'
                 }]
             } 
-
 
             RecipientApiSrv.getRecipientList($scope.loggedInUser.securityUserID+'/recipient/list', param,function(data){
                 if(data){
@@ -53,13 +49,22 @@
                     console.log('$scope.RecipientList -------- ',$scope.RecipientList);
                 }
             });
+			$scope.$on(Global.EVENTS.ADD_RECIPIENT,function(event, data){ 
+                console.log('Recipients ------------ ',$scope.recipients);
+                var recipient = $scope.recipients;
+                if(!_.isUndefined(recipient.country))
+                    recipient.country = $scope.recipients.country.SecurityCountryID;
+                if(!_.isUndefined(recipient.state))
+                    recipient.state = $scope.recipients.state.SecurityStateID;
+                 if(!_.isUndefined(recipient.list))
+                    recipient.listId = $scope.recipients.list.listId;
 
-
-			$scope.$on(Global.EVENTS.ADD_RECIPIENT,function(event, data){    
-             RecipientApiSrv.addRecipient($scope.loggedInUser.securityUserID+'/recipients',{},function(response){
-                   console.log('ADD_RECIPIENT--------------',$scope.recipients,'-----data------------',data); 
+                recipient = _.omit(recipient,'list');
+                RecipientApiSrv.addRecipient($scope.loggedInUser.securityUserID+'/recipients',recipient,function(response){
+                    //console.log('Added Recipients ---------- ', data.plain());
                 });
                 $state.go('app.home.manage.recipients.list');
+                 
             });
             $scope.$on(Global.EVENTS.GET_RECIPIENT_BY_LIST,function(event, data){
                 if(!_.isEmpty($scope.gridRowSelectedData)){
@@ -68,11 +73,11 @@
                     var listId = selectedList.listId;
                 }
                 
-                RecipientApiSrv.getRecipientByList($scope.loggedInUser.securityUserID+'/'+listId+'/recipient/list',{},function(data){
-                    if(data){
-                        $scope.recipientsGridOptions.data = data.plain();
-                        $scope.Recipients = data.plain();
-                    }
+            RecipientApiSrv.getRecipientByList($scope.loggedInUser.securityUserID+'/'+listId+'/recipient/list',{},function(data){
+                if(data){
+                    $scope.recipientsGridOptions.data = data.plain();
+                    $scope.Recipients = data.plain();
+                }
                });
 
            });
