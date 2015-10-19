@@ -45,7 +45,7 @@
                         },{
                             name:'email',
                             lable:'Email',
-                            type: 'TEXT',
+                            type: 'EMAIL',
                             required: true,
                             validate:'emailisrequired',
                             placeholder:'Email',
