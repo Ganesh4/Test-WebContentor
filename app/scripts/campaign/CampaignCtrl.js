@@ -10,6 +10,7 @@
 		function($scope,$state,Restangular,Global,CampaignApiSrv){
             console.log("$scope.loggedInUser ----------- ",$scope.loggedInUser);
             $scope.campaign = {};
+            $scope.campaignList = {};
 			$scope.data = $state.current.data;
             $scope.empty = false;
             $scope.checkValidation = function(){
@@ -87,7 +88,11 @@
                 $state.go('app.home.campaign.detail');
             });
 
-
+            CampaignApiSrv.getcampaignList($scope.loggedInUser.securityUserID+'/campaign',null,function(data){
+                $scope.campaignList = data.plain()   
+                console.log('campaignList ------- ',  $scope.campaignList);
+            });
+           
 
         }]);
 })(angular);
