@@ -32,19 +32,19 @@ angular.module('user').controller('UserCtrl',
                     displayName:'Email',
                     cellClass : 'orange-color'
                 },{
-                    field:'userRoles.securityGroupID',
+                    field:'securityRole.roleName',
                     displayName:"Roles",
                     cellClass : 'blue-color'
                 },{
                     field:'createdDate',
                     displayName:'Created Date',
                     cellClass : 'skyblue-color',
-                    cellTemplate:'<div class="ui-grid-cell-contents">{{row.entity.CreatedDate | FormatDateFilter}}</div>'
+                    cellTemplate:'<div class="ui-grid-cell-contents">{{row.entity.createdDate | FormatDateFilter}}</div>'
                 },{
                     field:'modifiedDate',
                     displayName:'Modification Date',
                     cellClass : 'green-color',
-                    cellTemplate:'<div class="ui-grid-cell-contents">{{row.entity.ModificationDate | FormatDateFilter}}</div>'
+                    cellTemplate:'<div class="ui-grid-cell-contents">{{row.entity.modifiedDate | FormatDateFilter}}</div>'
                    
                 }]
             } 
@@ -53,6 +53,7 @@ angular.module('user').controller('UserCtrl',
                 function(data){
                     if(data)
                         $scope.gridOptions.data = data.plain();
+                        console.log(data.plain());
             });
 
             $scope.empty = false;
