@@ -24,7 +24,7 @@
 	          	errorMessages['passwordisrequired'] = 'Password is required';
 	          	errorMessages['featuredrequired'] = 'Featured is required';
                 errorMessages['startingdate'] = 'Start date required';
-	          	errorMessages['passwordisrequired'] = 'End date required';
+	          	errorMessages['enddate'] = 'End date required';
 	          	errorMessages['anotherErrorMessage'] = 'An error message with the attribute value {0,1,2,3,4,5,6}';
 	          	errorMessages['invalidMobile'] = 'Invalid Mobile Number';
 	          	errorMessages['invalidPhoneNo'] = 'Invalid Phone Number';
