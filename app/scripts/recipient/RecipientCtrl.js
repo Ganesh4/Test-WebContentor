@@ -14,7 +14,7 @@
            $scope.submitEvent = $state.current.data.submitEvent;
            $scope.recipients = {};
             var param = {};
-            $scope.gridOptions = {
+           $scope.gridOptions = {
                 columnDefs: [{
                     field: 'listName', 
                     displayName: 'List Name',
@@ -79,6 +79,7 @@
                         $scope.recipientsGridOptions.data = data.plain();
                         $scope.Recipients = data.plain();
                     }
+
                });
             });
              //Delete Recipient Functionality..

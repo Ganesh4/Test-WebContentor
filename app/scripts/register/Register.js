@@ -45,7 +45,7 @@
                         },{
                             name:'email',
                             lable:'Email',
-                            type: 'TEXT',
+                            type: 'EMAIL',
                             required: true,
                             validate:'emailisrequired',
                             placeholder:'Email',
@@ -79,7 +79,7 @@
                             placeholder:'Country',
                             model : 'country',
                             onChange : 'updateCountry()',
-                            ngOptions: 'country.CountryName for country in countries'
+                            ngOptions: 'country.countryName for country in countries'
                         }]
 
                     },{
