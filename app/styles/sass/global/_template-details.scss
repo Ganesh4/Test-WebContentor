@@ -22,16 +22,16 @@
  }
  > li.active{
 			 a{
-				background-color:#6d6d6d;/*3b3b3b*/
-				/*color:#fff; */
-					&:hover{
-						background-color:#7a7a7a;	
-						color:#000; 
-					}	
-					&:visited{
-					  background-color:#ecebeb;		
-					  /*color:#000;*/ 
-					}
+					background-color:#6d6d6d;/*3b3b3b*/
+					/*color:#fff; */
+						&:hover{
+							background-color:#7a7a7a;	
+							color:#000; 
+						}	
+						&:visited{
+					      background-color:#ecebeb;		
+						  /*color:#000;*/ 
+						}
 			 }
 	 }
 }

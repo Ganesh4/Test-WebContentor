@@ -70,6 +70,7 @@
 		font-size: 20px;
 		border-bottom: 1px solid #e3eaef;
 		padding-bottom: 10px;
+		word-break: break-all;
 		}
 		
 	span{
@@ -96,6 +97,8 @@
 		}
 	.thumbnail{
 		float: left;
+		background-color: transparent;
+		background-image: none;
 		
 		.caption{
 			float: left;
