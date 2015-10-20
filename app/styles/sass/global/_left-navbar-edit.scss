@@ -1,28 +1,26 @@
 /* Scss Document */
 
 .left-navbar-edit{
-  width:5%;
-	
+    width:5%;
 	float:left;
 	/*border-right:2px solid #000;*/
 	height:700px;	
-  position: fixed;
+    position: fixed;
 	z-index:99;
 	background-color:$sidenavbar-color;
 	color:#fff;
-	
 	
 	a{
 		color:#fff;
 	}
 }
 .left-navbar-edit-header{
-  width: 100%;
+    width: 100%;
 	text-align: center;
 	padding: 6px 0;	
 	border-top:2px solid #1a1a1a;
 	border-bottom:2px solid #1a1a1a;
-  min-height: 60px;	
+    min-height: 60px;	
 }
 .left-navbar-edit-header{
 	width: 100%;

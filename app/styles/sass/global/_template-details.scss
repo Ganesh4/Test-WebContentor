@@ -14,25 +14,25 @@
 
  > li {		 
 		 > a{
-   		 background-color:#2d2d2d;
-  	  	border-radius: 0; 
-				color:#d7d7d7;
-        padding: 6px 35px;
-		 }
+			background-color:#2d2d2d;
+			border-radius: 0; 
+			color:#d7d7d7;
+			padding: 6px 35px;
+		    }
  }
  > li.active{
 			 a{
-					background-color:#6d6d6d;/*3b3b3b*/
-					/*color:#fff; */
-						&:hover{
-							background-color:#7a7a7a;	
-							color:#000; 
-						}	
-						&:visited{
-					    background-color:#ecebeb;		
-							/*color:#000;*/ 
-						}
-				 }
+				background-color:#6d6d6d;/*3b3b3b*/
+				/*color:#fff; */
+					&:hover{
+						background-color:#7a7a7a;	
+						color:#000; 
+					}	
+					&:visited{
+					  background-color:#ecebeb;		
+					  /*color:#000;*/ 
+					}
+			 }
 	 }
 }
 .tab-content{
@@ -58,17 +58,18 @@
     padding-top: 30%;
 		
 		a{
-			padding: 5px 10px;
-      border: 1px solid #000;
-      color: #000;
-   		text-decoration:none;
-      display: block;
-			width: 25%;
-			margin: 0 auto 10px;
-			background-color:#d6d6d6;
+		  padding: 7px 10px;
+          color: #000;
+   		  text-decoration:none;
+          display: block;
+		  width: 25%;
+		  margin: 0 auto 10px;
+		  background-color: $workarea-color;
+		  border-radius: 3px;
 		
 			&:hover{
-					@extend .bg-text-color;    		
+					color: $workarea-color;
+					background-color: $header-color;		
 			}
 		 }
 }
