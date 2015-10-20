@@ -22,6 +22,6 @@
 	        }
 	        self.updateRecipient = function(uri, params, success, error){
 		    ApiSrv.put(uri,params,success,error);
-	}
+	        }
         }]);
     })(angular);
