@@ -19,6 +19,7 @@ angular.module('resources').controller('ImageCtrl',
             var self = this;
             var checkedImageId;
             $scope.elements = $state.current.data.elements;
+            //$scope.isCalenderOpen = false;
             $scope.gridOptions = {
                 multiSelect: true,
                 enableRowSelection:true,
@@ -96,20 +97,52 @@ angular.module('resources').controller('ImageCtrl',
             $scope.$on(Global.EVENTS.DELETE_IMAGE,function(){
                 if(!_.isEmpty($scope.gridRowSelectedData)){
                     var imageData = $scope.gridRowSelectedData;
-                    _.each(imageData , function(value , key ){
-                        self.deleteImageById(value.id);
-                    });
-                   alert('Deleted Successfully');
-                   $scope.$emit(Global.EVENTS.RELOAD);
+                    var ids = [] , params = {};
+                    if(_.size(imageData)>1){
+                        _.each(imageData , function(value , key ){
+                            ids.push(value.id);
+                        });
+                        self.deleteBulkImages(ids);
+                    }else{
+                        self.deleteImageById(imageData[0].id , null);
+                    }
                 }
             });
-      
+            
+
+            self.deleteBulkImages = function(ids){
+                var uri = '/'+$scope.loggedInUser.securityUserID + '/'+ $scope.loggedInUser.groupId +'/images';
+                var params = {};
+                params['ids'] = ids;//self.getArrayQueryParams(ids)
+
+                console.log('params --------  ' , params);
+                ImageApiSrv.deleteImage(uri , params , function(data){
+                    alert('Deleted Successfully');
+                    $scope.$emit(Global.EVENTS.RELOAD);
+                });
+            }
+            self.getArrayQueryParams = function(data){
+                var params = {};
+                var i = 0;
+                _.each(data,function(value, key){
+                    params['ids['+i+']'] = value;
+                    i++;
+                });
+                return params;
+            }
             //Delete Image by id.
-            self.deleteImageById = function(id){
-                var uri = '/'+$scope.loggedInUser.securityUserID + '/'+ $scope.loggedInUser.groupId +'/images/'+id;
+            self.deleteImageById = function(id, params){
+                var uri = '/'+$scope.loggedInUser.securityUserID + '/'+ $scope.loggedInUser.groupId +'/images/';
+                if(id !== null)
+                    uri = uri + id;
+                else 
+                    return;    
+                
                 console.log('URI ---------- ' , uri);
-                ImageApiSrv.deleteImage(uri , null , function(data){
-                    
+
+                ImageApiSrv.deleteImage(uri , params , function(data){
+                    alert('Deleted Successfully');
+                    $scope.$emit(Global.EVENTS.RELOAD);
                 });
             }
 
@@ -134,24 +167,11 @@ angular.module('resources').controller('ImageCtrl',
             $scope.openEnd = function($event) {
                 $event.preventDefault();
                 $event.stopPropagation();
-
-                $scope.image.openedEnd = true;
+                $scope.isCalenderOpen = true;
             };
 
             $scope.$on('UNCHECKALL',function(event, data){
                 $scope.$broadcast(Global.EVENTS.IS_CHECKED, false );
-            });
-
-            $scope.$on(Global.EVENTS.UPDATE_IMAGE,function(event, data){
-                var data = {
-                    resource : $scope.image,
-                    file: $scope.files
-                }
-                var uri = $scope.userGroupUri+'images';
-                ImageApiSrv.updateImage(uri, data , function(response){
-                    $scope.$emit(Global.EVENTS.RELOAD);
-                    $state.transitionTo('app.home.manage.resources.images.grid');
-                });
             });
         }
     ]);

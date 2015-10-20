@@ -119,6 +119,14 @@
                     {
                         rowClass :'col-md-5',
                 		rowElement:[{
+                			name: 'Name',
+                			lable: 'Image Name',
+                			type: 'TEXT',
+                			required: false,
+                			placeholder: 'Image Name',
+                			model: 'upload.fileName'
+
+                		},{
                 			name:'Description',
                 			lable:'Description',
                 			type: 'TEXT_AREA',
@@ -140,8 +148,15 @@
                 			type:'DROP_DOWN',
                 			placeholder:'Category',
                 			onChange:'setCategoryValue(category)',
-                			ngOptions:'category.name for category in $parent.imageCategory',
+                			ngOptions:'category.name for category in imageCategory',
                             model : 'category'
+                		},{
+                			name: 'ExpiryDate',
+                			lable: 'Expiry Date',
+                			type: 'CALENDAR',
+                			model: 'expiryDate',
+                			onChange: '',
+                			format: 'yyyy-mm-dd',
                 		}],
                 	}]
 		        }

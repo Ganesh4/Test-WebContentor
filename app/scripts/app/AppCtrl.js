@@ -55,7 +55,7 @@
     				if($state.current.name.indexOf('resources') != -1 ||
     					$state.current.name.indexOf('page') != -1){
     					console.log($state.current.name);
-    					Restangular.setBaseUrl('http://192.168.1.34:8080/MicroS/');
+    					Restangular.setBaseUrl('http://192.168.1.162/MicroS/');
     					ApiSrv.accessToken();	
     				}else{
     					Restangular.setBaseUrl('http://192.168.1.69/Yavun/api');
@@ -118,7 +118,7 @@
 
             	 $scope.$on(Global.EVENTS.CAMPAIGN_SAVE,function(event, data){
 
-	            	$scope.campaign.campaignFeatureId = _.keys($scope.campaign.campaignFeatureId);
+					$scope.campaign.campaignFeatureId = _.keys($scope.campaign.campaignFeatureId);
 	            	ApiSrv.post('campaign',$scope.campaign,function(data){
 	            		console.log('data------------',$scope.campaign);
 	            	});
@@ -152,17 +152,19 @@
 			        });
 			    });
 
-			    if(localStorageService.get('loggedInUser') == undefined){
+			    /*if(localStorageService.get('loggedInUser') == undefined){
 			    	$state.go('app.login')
 			    }else{
 			    	$scope.loggedInUser = localStorageService.get('loggedInUser');
 			    	$scope.userGroupUri = $scope.loggedInUser.securityUserID+'/'+$scope.loggedInUser.groupId+'/';
-			    }
+			    }*/
 			    
 			    //Selected data of the grid.
 			    $scope.$on(Global.EVENTS.GRID_ROW_DATA,function(event , data){
                 	if(data){
                     	$scope.gridRowSelectedData.push(data);
+                	}else if(_.isArray(data)){
+                		$scope.gridRowSelectedData = data;
                 	}
             	});
             	//Removes Element From Grid
