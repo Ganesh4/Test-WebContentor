@@ -22,7 +22,7 @@
 	background-color: #f9f9f9;
 	border-bottom: 1px solid #e3eaef !important;
 	&:hover{
-			background-color:#1b951b  !important;
+			background-color: $header-color  !important;
 			cursor: pointer;
 			}
 	}
@@ -30,7 +30,7 @@
 	border-bottom: 1px solid #e3eaef !important;
 	height: 32px;
 	&:hover{
-			background-color:#1b951b  !important;
+			background-color: $header-color  !important;
 			cursor: pointer;
 			}
 	}
@@ -64,7 +64,6 @@
 	.ui-grid-row:nth-child(2n+1) .ui-grid-cell, .ui-grid-row:nth-child(even) .ui-grid-cell{
 		background-color: transparent;
 		cursor: pointer;
-		
 	    }
 }
 	
@@ -91,12 +90,12 @@
 /*======= table drop down */
 
 .ui-grid-menu .ui-grid-menu-inner ul li button.ui-grid-menu-item-active{
-	background-color: #107c10 !important;
+	background-color: $header-color !important;
 	color:#fff;
 	}
 	
 .ui-grid-menu .ui-grid-menu-inner ul li button:hover{
-	background-color: #1b951b;
+	background-color: $header-color;
 	box-shadow: none;
 	color: #fff;
 	}
@@ -121,7 +120,7 @@
 	
 .ui-grid-canvas {
 	.ui-grid-row.ui-grid-row-selected > [ui-grid-row] > .ui-grid-cell {
-	background-color: #1b951b;
+	background-color: $header-color;
 	color: #fff;
 	}
 }

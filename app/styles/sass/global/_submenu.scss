@@ -6,11 +6,11 @@
 
 .header-sub {
 	width: 100%;	
-	background-color:$secondery-navebar-color;
+	background-color:$workarea-color;
 	padding-top:9px;
 	padding-bottom:9px;
 	min-height:50px;
-	border-bottom:solid 1px $brder-color;
+	border-bottom:solid 1px $workarea-color;
 	
 	.sub-header-icon{
 		float: left;
@@ -30,7 +30,7 @@
 	color: #333333;
 	font-size: 16px;
 	line-height: 30px;
-
+	background-color: $workarea-color;
  	}
 
 

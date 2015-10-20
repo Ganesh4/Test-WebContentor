@@ -70,8 +70,13 @@
 
                     //Update State Object According to the Country Selected. 
                     scope.updateCountry = function(){
-                        console.log('User -------- ' , scope);
-                        scope.states = scope.formData.country.SecurityStates;
+                        console.log('User -------- ' , scope.formData.country.securityCountryId);
+                        var id = scope.formData.country.securityCountryId;
+                        CommonSrv.getStatesByCountryId('countries/'+id,function(data){
+                            scope.states = data.plain();
+                            console.log('States --------------- ',data.plain());
+                        });
+                        
                     }
 
                 }

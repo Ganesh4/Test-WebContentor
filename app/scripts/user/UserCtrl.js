@@ -12,46 +12,49 @@ angular.module('user').controller('UserCtrl',
         'UserApiSrv',
         'Global',
         function($scope ,$state, ApiSrv,CommonSrv,UserApiSrv,Global){
+             // console.log('captchaText ------- ',captchaText);
           
             console.log('$scope ----------- ',$scope.loggedInUser);
             var param = {};
+           // $scope.user = {};
+            
             $scope.gridOptions = {
                 columnDefs: [{
-                    field: 'FirstName', 
+                    field: 'firstName', 
                     displayName: 'First Name',
                     cellClass : 'darkgrey-color'
                 },{
-                    field:'Lastname', 
+                    field:'lastName', 
                     displayName:'Last Name',
                     cellClass : 'green-color'
                 },{
-                    field:'Email',
+                    field:'email',
                     displayName:'Email',
                     cellClass : 'orange-color'
                 },{
-                    field:'UserRoles.SecurityGroupID',
+                    field:'securityRole.roleName',
                     displayName:"Roles",
                     cellClass : 'blue-color'
                 },{
-                    field:'CreatedDate',
+                    field:'createdDate',
                     displayName:'Created Date',
                     cellClass : 'skyblue-color',
-                    cellTemplate:'<div class="ui-grid-cell-contents">{{row.entity.CreatedDate | FormatDateFilter}}</div>'
+                    cellTemplate:'<div class="ui-grid-cell-contents">{{row.entity.createdDate | FormatDateFilter}}</div>'
                 },{
-                    field:'ModificationDate',
+                    field:'modifiedDate',
                     displayName:'Modification Date',
                     cellClass : 'green-color',
-                    cellTemplate:'<div class="ui-grid-cell-contents">{{row.entity.ModificationDate | FormatDateFilter}}</div>'
+                    cellTemplate:'<div class="ui-grid-cell-contents">{{row.entity.modifiedDate | FormatDateFilter}}</div>'
                    
                 }]
             } 
 
-            UserApiSrv.getUserList('users',param, 
+            UserApiSrv.getUserList($scope.loggedInUser.securityUserID+'/users',param, 
                 function(data){
                     if(data)
                         $scope.gridOptions.data = data.plain();
+                        console.log(data.plain());
             });
-
 
             $scope.empty = false;
            
@@ -67,29 +70,77 @@ angular.module('user').controller('UserCtrl',
                 }
 
                 if($scope.empty == false){
-                    $scope.enableNext();
+                    $scope.$emit(Global.EVENTS.NEXT_BTN_ENABLE);
                 }else{
-                    $scope.disableNext();
+                    $scope.$emit(Global.EVENTS.NEXT_BTN_DISABLE);
                 }
-
-
-            console.log('$scope.empty--------',$scope.empty);
+                console.log('$scope.empty--------',$scope.empty);
            }          
             
+            //Add User
+            $scope.$on(Global.EVENTS.ADD_NEW_USER,function(event, data){
+                var user = $scope.user;
+                if(!_.isUndefined(user.country))
+                    user.country = $scope.user.country.SecurityCountryID;
+                if(!_.isUndefined(user.state))
+                     user.state = $scope.user.state.SecurityStateID;
+               
+                UserApiSrv.addNewUser($scope.loggedInUser.securityUserID+'/users', user,function(response){
+                    if(data.state)
+                        $state.go(data.state);
+                });
+            });
 
+            //Get Country List
             CommonSrv.getCountriesList(function(data){
               $scope.countries = data.plain();
               console.log('countries-------------',$scope.countries);
             });
             
-           // console.log('Countries ------------ ',$scope.coun);
+           // Update State Drop Down According to Country
             $scope.updateCountry = function(){
               $scope.states = $scope.user.country.SecurityStates;
             }
+
+            //Get Role List
              ApiSrv.getList('roles',param,function(data){
                 if(data)
                     $scope.roles = data.plain();
                 console.log('Roles ---------------- ',$scope.roles);
+            });
+
+             //Delete User Functionality..
+             self.deleteUser = function(id){
+
+                UserApiSrv.deleteUser($scope.loggedInUser.securityUserID+'/users/'+id, null, function(data){
+                    alert('Deleted Successfully');
+                    $scope.$emit(Global.EVENTS.RELOAD);
+                })
+             }
+
+            $scope.$on(Global.EVENTS.DELETE_USER,function(){
+
+                if(!_.isEmpty($scope.gridRowSelectedData)){
+                    var userData = $scope.gridRowSelectedData[0];
+                    console.log('userData ------- ',userData);
+                    self.deleteUser(userData.securityUserId);
+                }
+            });
+
+            //Edit USer Page Navigation
+            $scope.$on(Global.EVENTS.EDIT_USER,function(){
+                console.log(' $state.current.data.elements---', $state.current.data.elements);
+                 if(!_.isEmpty($scope.gridRowSelectedData)){
+                    var userData = $scope.gridRowSelectedData[0];
+                    //self.deleteUser(userData.SecurityUserId);
+                    $scope.user = userData;
+                    console.log('userData ------- ', $scope.user);
+                    /*console.log($scope.countries);
+                     var country =  _.find($scope.countries,function(country){ return country.SecurityCountryID == $scope.user.country.countryid });
+                    console.log('country ------- ', country);
+                    $scope.user.country = country;*/
+                    $state.go('app.home.manage.user.edit');
+                }
             });
            
         }

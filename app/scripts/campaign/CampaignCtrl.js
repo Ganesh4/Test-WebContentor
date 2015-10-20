@@ -5,11 +5,11 @@
 		'$scope',
 		'$state',
 		'Restangular',
-        'CampaignApiSrv',
-		function($scope,$state,Restangular,CampaignApiSrv){
+        'Global',
+        'CampaignApiSrv',          
+		function($scope,$state,Restangular,Global,CampaignApiSrv){
             console.log("$scope.loggedInUser ----------- ",$scope.loggedInUser);
-            console.log($scope.loggedInUser.securityUserID,'---------',$scope.loggedInUser.groupId);
-            
+            $scope.campaign = {};
 			$scope.data = $state.current.data;
             $scope.empty = false;
             $scope.checkValidation = function(){
@@ -46,15 +46,14 @@
             $scope.openStart = function($event) {
             $event.preventDefault();
             $event.stopPropagation();
-
             $scope.campaign.openedStart = true;
             console.log($scope.campaign.openedStart);
             };
+
             // open min-cal
             $scope.openEnd = function($event) {
             $event.preventDefault();
             $event.stopPropagation();
-
             $scope.campaign.openedEnd = true;
             };
 
@@ -67,9 +66,25 @@
             // assign custom format
             $scope.format = $scope.formats[0];   
 
-            CampaignApiSrv.getCampaignFeatures('features',{},function(data){
+            CampaignApiSrv.getCampaignFeatures($scope.loggedInUser.securityUserID+'/campaign/features',null,function(data){
                 $scope.featureList = data.plain()   
                 console.log('Feature List ------- ',  $scope.featureList);
+            });
+           
+            $scope.$on(Global.EVENTS.CAMPAIGN_SAVE_EXIT,function(event, data){
+                $scope.campaign.campaignFeatureId = _.keys($scope.campaign.campaignFeatureId);
+                CampaignApiSrv.saveCampaign($scope.loggedInUser.securityUserID+'/campaign',$scope.campaign,function(data){
+                    console.log('data------------',$scope.campaign);
+                });
+                $state.go('app.home.campaign');
+            });
+            $scope.$on(Global.EVENTS.CAMPAIGN_SAVE,function(event, data){
+                $scope.campaign.campaignFeatureId = _.keys($scope.campaign.campaignFeatureId);
+                CampaignApiSrv.saveCampaign($scope.loggedInUser.securityUserID+'/campaign',$scope.campaign,function(data){
+                    console.log('data------------',data.plain());
+                    $scope.campaign = data.plain()[0];
+                });
+                $state.go('app.home.campaign.detail');
             });
 
 

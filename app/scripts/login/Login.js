@@ -33,7 +33,7 @@
 						rowElement:[{
 							name:'email',
 							//lable:'Email',
-							type: 'TEXT',
+							type: 'EMAIL',
 				            required: true,
 				            validate:'emailisrequired',
 				            placeholder:'Email',
@@ -47,7 +47,7 @@
 				            type: 'PASSWORD',
 				            required: true,
 				            validate:'passwordisrequired',
-				            placeholder:'password',
+				            placeholder:'Password',
 				            model : 'password'
 				        }]
 				    },{

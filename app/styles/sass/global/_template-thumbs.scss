@@ -1,7 +1,7 @@
 /* Scss Document */
 
 .thumb-row{
-  /* float: left;*/
+   float: left;
    width: 100%;	
 }
 .thumb-block{
@@ -173,4 +173,7 @@
 				}
 		 }
 }
-
+.promotional-text{
+   font-size:1.5em;
+	 color:$ROLES_CONTENT_COLOR; 	
+}
