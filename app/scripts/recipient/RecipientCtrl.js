@@ -14,7 +14,7 @@
            $scope.submitEvent = $state.current.data.submitEvent;
            $scope.recipients = {};
             var param = {};
-            $scope.gridOptions = {
+           $scope.gridOptions = {
                 columnDefs: [{
                     field: 'listName', 
                     displayName: 'List Name',
@@ -66,21 +66,27 @@
                 $state.go('app.home.manage.recipients.list');
                  
             });
-            $scope.$on(Global.EVENTS.GET_RECIPIENT_BY_LIST,function(event, data){
-                if(!_.isEmpty($scope.gridRowSelectedData)){
-                    var selectedList = $scope.gridRowSelectedData[0];
-                    console.log('selectedListId------',selectedList);
-                    var listId = selectedList.listId;
-                }
-                
-            RecipientApiSrv.getRecipientByList($scope.loggedInUser.securityUserID+'/'+listId+'/recipient/list',{},function(data){
+
+            RecipientApiSrv.getRecipientByList($scope.loggedInUser.securityUserID+'/7/recipient/list',{},function(data){
                 if(data){
                     $scope.recipientsGridOptions.data = data.plain();
                     $scope.Recipients = data.plain();
                 }
                });
 
-           });
+           $scope.$on(Global.EVENTS.GET_RECIPIENT_BY_LIST,function(event, data){
+                if(!_.isEmpty($scope.gridRowSelectedData)){
+                    var selectedList = $scope.gridRowSelectedData[0];
+                    console.log('selectedListId------',selectedList);
+                    var listId = selectedList.listId;
+                    RecipientApiSrv.getRecipientByList($scope.loggedInUser.securityUserID+'/'+listId+'/recipient/list',null,function(data){
+                        if(data){
+                            $scope.recipientsGridOptions.data = data.plain();
+                            $scope.Recipients = data.plain();
+                        }
+                     });
+                }
+            });
 		}]);
 
 })(angular);

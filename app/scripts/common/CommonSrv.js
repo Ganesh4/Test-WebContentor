@@ -67,6 +67,11 @@ angular.module('common').service('CommonSrv',
                 Restangular.all('countries').getList().then(success);
             }
 
+            //Get States By Countruy Id
+            self.getStatesByCountryId =function(uri, success, error){
+                Restangular.all(uri).getList().then(success);
+            }            
+
             //On Click Event Fire From This Location.
             self.doOnClick = function(scope, data){
                 scope.$emit(scope.onClick, data);

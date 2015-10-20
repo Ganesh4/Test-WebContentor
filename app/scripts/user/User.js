@@ -119,7 +119,7 @@
                 			type: 'PATTERN',
                             required: true,
                             validate:'invalidPhoneNo',
-                            pattern :'/^[0-9]{10,13}$/',
+                            pattern :'^[0-9]{10,13}$',
                             placeholder:'Phone',
                             model : 'phone'
 						},{
@@ -128,7 +128,7 @@
                             type: 'PATTERN',
                             required: true,
                             validate:'invalidMobile',
-                            pattern :'/^[0-9]{10,13}$/',
+                            pattern :'^[0-9]{10,13}$',
                             placeholder:'mobile',
                             model : 'mobile'
 						}]
@@ -148,7 +148,7 @@
                             placeholder:'Country',
                             model : 'country',
                             onChange : 'updateCountry()',
-                            ngOptions: 'country.CountryName for country in countries'
+                            ngOptions: 'country.countryName for country in countries'
                         }]
 				    },{
 				    	rowClass :'col-lg-6',
@@ -159,7 +159,7 @@
                             required: false,
                             placeholder:'State',
                             model : 'state',
-                            ngOptions:'state.StateName for state in states'
+                            ngOptions:'state.stateName for state in states'
 						},{
                              name:'zip',
                             lable:'Zip',
