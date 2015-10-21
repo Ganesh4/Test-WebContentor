@@ -38,7 +38,7 @@
                     //logo:'images/yavun_logo.svg',
                     mainNav:[{
                         name:'Campaign',
-                        state:'app.home.campaign'
+                        state:'app.home.campaign.all'
                     },{
                         name:'Manage',
                         state:'app.home.manage.user.list'
