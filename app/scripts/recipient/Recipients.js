@@ -30,17 +30,17 @@
                                     name : 'Export',
                                     onClick : '',
                                },{
-                                    name : 'Save',
-                                    onClick : '',
-                                
-                               },{
-                                    name : 'Add to List',
+                                    name : 'Create List',
                                     onClick : '',
                                 
                                },{
                                     name : 'Delete',
                                     onClick : 'DELETE_RECIPIENT'
-                     }],
+                               },{
+                                    name : 'Save',
+                                    onClick : '',
+                                
+                               }],
                  }
                 }).state('app.home.manage.recipients.add', {
                     url: '/add',
@@ -83,7 +83,7 @@
                         rowElement:[{
                             name:'email',
                             lable:'Email',
-                            type: 'TEXT',
+                            type: 'EMAIL',
                             required: true,
                             validate:'emailisrequired',
                             placeholder:'Email',
@@ -243,7 +243,7 @@
                         rowElement:[{
                             name:'email',
                             lable:'Email',
-                            type: 'TEXT',
+                            type: 'EMAIL',
                             required: true,
                             validate:'emailisrequired',
                             placeholder:'Email',
@@ -308,7 +308,7 @@
                             placeholder:'Country',
                             model : 'country',
                             onChange : 'updateCountry()',
-                            ngOptions: 'country.CountryName for country in countries'
+                            ngOptions: 'country.countryName for country in countries'
                    },{
                             name:'state',
                             lable:'State',
@@ -316,7 +316,7 @@
                             required: false,
                             placeholder:'State',
                             model : 'state',
-                            ngOptions:'state.StateName for state in states'
+                            ngOptions:'state.stateName for state in states'
                         }]
                     },{
                         rowClass :'col-lg-6',
@@ -348,9 +348,6 @@
                         }],
                     }] 
                  }
-            });
-
-		    
+            });   
 	     }]);
-
     })(angular);

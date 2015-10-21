@@ -108,7 +108,7 @@
                             required: false,
                             placeholder:'State',
                             model : 'state',
-                            ngOptions:'state.StateName for state in states'
+                            ngOptions:'state.stateName for state in states'
                         },{
                             name:'zip',
                             lable:'Zip',
