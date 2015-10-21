@@ -2,7 +2,7 @@
 <div class="main_rhs_wrapper">
 
 <!--- First Row Start Here-->
-<div ng-if = "campaignList.length == 0">
+<div ng-if = "allCampaignList.length == 0">
 <p>Welcome {{loggedInUser.firstName}} to the new and exciting interface of yavun</p>
 <div class="row">
   <div class="col-xs-12">
@@ -29,8 +29,8 @@
 <!-- Campaign list Row Start Here-->
 <div class="row">
   
-<!-- box 1 Start Here--->
-    <div class="col-lg-4 campaign-list-row" ng-repeat = "campaign in campaignList">
+<!-- box 1 Start Here-->
+    <div class="col-lg-4 campaign-list-row" ng-repeat = "campaign in allCampaignList">
     <div class="thumbnail">
         <div class="thumb-block">
                 <div class="thumb-img">
@@ -59,11 +59,11 @@
         </div>
     </div>
     </div>
-<!-- box 1 End Here--->
+<!-- box 1 End Here-->
  
        
 </div>
-<!--- Campaign list Row Start Here-->
+<!-- Campaign list Row Start Here-->
 </div>
 
 </div>

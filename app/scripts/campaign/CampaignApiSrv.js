@@ -24,11 +24,13 @@ angular.module('campaign').service('CampaignApiSrv', ['ApiSrv', function (ApiSrv
 	self.saveCampaign =function(uri, params, success, error){
 		ApiSrv.post(uri,params,success,error);
 	}
-	
-	self.getcampaignList = function(uri, params, success, error){
+
+	self.getAllCampaignList = function(uri, params, success, error){
 		ApiSrv.getList(uri, params, success, error)
 	}
-	
+	self.getCampaignListByUser = function(uri, params, success, error){
+		ApiSrv.getList(uri, params, success, error)
+	}
 
 }]);
 

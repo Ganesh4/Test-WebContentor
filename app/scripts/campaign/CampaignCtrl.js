@@ -88,9 +88,13 @@
                 $state.go('app.home.campaign.detail');
             });
 
-            CampaignApiSrv.getcampaignList($scope.loggedInUser.securityUserID+'/campaign',null,function(data){
+            CampaignApiSrv.getAllCampaignList($scope.loggedInUser.securityUserID+'/campaign/all',null,function(data){
+                $scope.allCampaignList = data.plain()   
+                console.log('All campaignList ------- ',  $scope.campaignList);
+            });
+              CampaignApiSrv.getCampaignListByUser($scope.loggedInUser.securityUserID+'/campaign',null,function(data){
                 $scope.campaignList = data.plain()   
-                console.log('campaignList ------- ',  $scope.campaignList);
+                console.log('User campaignList ------- ',  $scope.campaignList);
             });
            
 
