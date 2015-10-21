@@ -31,14 +31,14 @@
                                     onClick : '',
                                },{
                                     name : 'Create List',
-                                    onClick : '',
+                                    onClick : 'INPUT_BOX_ENABLED',
                                 
                                },{
                                     name : 'Delete',
                                     onClick : 'DELETE_RECIPIENT'
                                },{
                                     name : 'Save',
-                                    onClick : '',
+                                    onClick : 'ADD_EMAIL_RECIPIENT_LIST'
                                 
                                }],
                  }
@@ -348,6 +348,9 @@
                         }],
                     }] 
                  }
-            });   
+            });
+
+		    
 	     }]);
+
     })(angular);

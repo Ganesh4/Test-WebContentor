@@ -22,12 +22,11 @@ angular.module('recipients').controller('RecipientEditCtrl',
                  var recipient = $scope.recipients;
                  console.log('Edit Recipient-----------',recipient);
                 if(!_.isUndefined(recipient.country))
-                    recipient.country = $scope.recipients.country.SecurityCountryID;
+                    recipient.country = $scope.recipients.country.securityCountryID;
                 if(!_.isUndefined(recipient.state))
-                    recipient.state = $scope.recipients.state.SecurityStateID;
+                    recipient.state = $scope.recipients.state.securityStateID;
                  if(!_.isUndefined(recipient.list))
                     recipient.listId = $scope.recipients.list.listId;
-
                 recipient = _.omit(recipient,'list');
              RecipientApiSrv.updateRecipient($scope.loggedInUser.securityUserID+'/recipients',recipients,function(){
                 console.log('Updated data ------- ',data.plain());
