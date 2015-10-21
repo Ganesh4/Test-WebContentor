@@ -67,32 +67,32 @@
             // assign custom format
             $scope.format = $scope.formats[0];   
 
-            CampaignApiSrv.getCampaignFeatures($scope.loggedInUser.securityUserID+'/campaign/features',null,function(data){
+            CampaignApiSrv.getCampaignFeatures($scope.loggedInUser.securityUserId+'/campaign/features',null,function(data){
                 $scope.featureList = data.plain()   
                 console.log('Feature List ------- ',  $scope.featureList);
             });
            
             $scope.$on(Global.EVENTS.CAMPAIGN_SAVE_EXIT,function(event, data){
                 $scope.campaign.campaignFeatureId = _.keys($scope.campaign.campaignFeatureId);
-                CampaignApiSrv.saveCampaign($scope.loggedInUser.securityUserID+'/campaign',$scope.campaign,function(data){
+                CampaignApiSrv.saveCampaign($scope.loggedInUser.securityUserId+'/campaign',$scope.campaign,function(data){
                     console.log('data------------',$scope.campaign);
                 });
                 $state.go('app.home.campaign');
             });
             $scope.$on(Global.EVENTS.CAMPAIGN_SAVE,function(event, data){
                 $scope.campaign.campaignFeatureId = _.keys($scope.campaign.campaignFeatureId);
-                CampaignApiSrv.saveCampaign($scope.loggedInUser.securityUserID+'/campaign',$scope.campaign,function(data){
+                CampaignApiSrv.saveCampaign($scope.loggedInUser.securityUserId+'/campaign',$scope.campaign,function(data){
                     console.log('data------------',data.plain());
                     $scope.campaign = data.plain()[0];
                 });
                 $state.go('app.home.campaign.detail');
             });
 
-            CampaignApiSrv.getAllCampaignList($scope.loggedInUser.securityUserID+'/campaign/all',null,function(data){
+            CampaignApiSrv.getAllCampaignList($scope.loggedInUser.securityUserId+'/campaign/all',null,function(data){
                 $scope.allCampaignList = data.plain()   
-                console.log('All campaignList ------- ',  $scope.campaignList);
+                console.log('All campaignList ------- ',  $scope.allCampaignList);
             });
-              CampaignApiSrv.getCampaignListByUser($scope.loggedInUser.securityUserID+'/campaign',null,function(data){
+              CampaignApiSrv.getCampaignListByUser($scope.loggedInUser.securityUserId+'/campaign',null,function(data){
                 $scope.campaignList = data.plain()   
                 console.log('User campaignList ------- ',  $scope.campaignList);
             });
