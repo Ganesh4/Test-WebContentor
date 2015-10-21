@@ -20,13 +20,13 @@ angular.module('user').controller('UserEditCtrl',
             //Update User Functions
             $scope.$on(Global.EVENTS.UPDATE_USER,function(){
             	var user = $scope.user;
-                if(!_.isUndefined(user.country))
-                	user.country = $scope.user.country.SecurityCountryID;
-                if(!_.isUndefined(user.state))
-               		user.state = $scope.user.state.SecurityStateID;
-               
+                user.securityState = user.state;
+                user = _.omit(user,'state');
+                user = _.omit(user,'country');
+                user.securityStateId =  user.securityState.securityStateId;
+                console.log('Update User ------------ ',user); 
 
-               UserApiSrv.updateUser($scope.loggedInUser.securityUserID+'/users',user,function(){
+               UserApiSrv.updateUser($scope.loggedInUser.securityUserID+'/users',user,function(data){
                 console.log('Updated One ------- ',data.plain());
                 $scope.$emit(Global.EVENTS.RELOAD);
                 $state.transitionTo('app.home.manage.user.list');

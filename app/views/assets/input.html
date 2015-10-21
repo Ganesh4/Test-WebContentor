@@ -17,6 +17,15 @@
 		<input ng-if ="!rowElement.required" class="form-control" name="{{rowElement.name}}" ng-model="formData[rowElement.model]" placeholder="{{rowElement.placeholder}}" />
 		</div>
 
+		<div ng-if="rowElement.type === 'EMAIL'">
+
+		<input ng-if ="rowElement.required" class="form-control" type = "email"
+			name="{{rowElement.name}}" ng-model="formData[rowElement.model]" 
+			placeholder="{{rowElement.placeholder}}" required="rowElement.required"  required-err-type="{{rowElement.validate}}" />
+
+		<input ng-if ="!rowElement.required" class="form-control" name="{{rowElement.name}}" ng-model="formData[rowElement.model]" placeholder="{{rowElement.placeholder}}" />
+		</div>
+
 		<div ng-if="rowElement.type === 'PASSWORD'">
 
 			<input type="password" ng-if ="rowElement.required" class="form-control" 

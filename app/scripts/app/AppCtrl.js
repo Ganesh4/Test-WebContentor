@@ -85,9 +85,9 @@
 	               console.log('User ------- ',data);
 	               var user = data;
 	               if(!_.isUndefined(user.country))
-		                user.country = $scope.user.country.SecurityCountryID;
+		                user.country = $scope.user.country.securityCountryID;
 	               if(!_.isUndefined(user.state))
-		                user.state = $scope.user.state.SecurityStateID;
+		                user.state = $scope.user.state.securityStateID;
 		                UserApiSrv.addNewUser( 'user/register', user,function(response){
 		                	$state.go('app.register.success');
 		                	console.log("Success");
