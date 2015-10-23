@@ -52,7 +52,8 @@
                             name : 'Emails and Recipients',
                             menu : [{
                                 icon : 'fa fa-envelope',
-                                name : 'Emails'
+                                name : 'Emails',
+                                state:'app.home.campaign.emails'
                             },{
                                 icon : 'fa fa-list-alt',
                                 name : 'Recipients',
