@@ -14,7 +14,7 @@
                  // var route = 'app.home.mange';
                     $stateProvider.state('app.home.campaign', {
                         url: '/campaign',
-                        templateUrl:"views/campaign/home.html",
+                        template:"<ui-view></ui-view>",
                         controller:'CampaignCtrl',
                         data: {
                             displayName: 'Campaign',
@@ -28,14 +28,27 @@
                                         },{
                                             icon : 'fa fa-list-alt',
                                             name : 'My Campaigns',
-                                            state:''
+                                            state:'app.home.campaign.my'
                                        },{
                                             icon : 'fa fa-file-text',
                                             name : 'All Campaigns',
-                                            state:''
+                                            state:'app.home.campaign.all'
                                 }],
 
                             }],
+                        }
+                    }).state('app.home.campaign.all', {
+                        url: '/all',
+                        templateUrl:"views/campaign/home.html",
+                        data: {
+                            displayName: 'Campaign',
+                        }
+                    }).state('app.home.campaign.my', {
+                        url: '/my',
+                        templateUrl:"views/campaign/UserCampaign.html",
+                        controller:'CampaignCtrl',
+                        data: {
+                            displayName: 'Campaign',
                         }
                     }).state('app.home.campaign.general', {
                         url: '/general',

@@ -26,7 +26,7 @@ angular.module('user').controller('UserEditCtrl',
                 user.securityStateId =  user.securityState.securityStateId;
                 console.log('Update User ------------ ',user); 
 
-               UserApiSrv.updateUser($scope.loggedInUser.securityUserID+'/users',user,function(data){
+               UserApiSrv.updateUser($scope.loggedInUser.securityUserId+'/users',user,function(data){
                 console.log('Updated One ------- ',data.plain());
                 $scope.$emit(Global.EVENTS.RELOAD);
                 $state.transitionTo('app.home.manage.user.list');

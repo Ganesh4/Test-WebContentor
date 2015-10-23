@@ -1,0 +1,68 @@
+<div ui-view>
+<div class="main_rhs_wrapper">
+
+<!--- First Row Start Here-->
+<div ng-if = "campaignList.length == 0">
+<p>Welcome {{loggedInUser.firstName}} to the new and exciting interface of yavun</p>
+<div class="row">
+  <div class="col-xs-12">
+
+      <!-- campaign Row 1-->
+      <div class="img-thumbnail campaign-home-row">
+      		<div class="campagin-home-icon">
+             <i class="fa fa-arrow-circle-right"></i>
+            </div>
+            
+            <div class="campagin-home-content">
+              <p>To go through click on the New campaign on left</p>
+            </div>
+      </div>
+
+  </div>
+</div>
+</div>
+<!-- First Row End Here-->
+<div class="campaign-thumb-row">
+
+<!-- Campaign list Row Start Here-->
+<div class="row">
+  
+<!-- box 1 Start Here-->
+    <div class="col-lg-4 campaign-list-row" ng-repeat = "campaign in campaignList">
+    <div class="thumbnail">
+        <div class="thumb-block">
+                <div class="thumb-img">
+                  <span class="btn_template-img-over">
+                  <a target="_blank"> <i class="fa fa-info-circle"></i>Details</a>
+                  <a><i class="fa fa-pencil-square-o"></i>Edit</a>
+                  </span> 
+                  
+            <div class="caption">
+            <h3>{{campaign.name}}</h3>
+            <span><i class="fa fa-calendar"></i>{{campaign.endDate | FormatDateFilter}}</span>
+            <span><i class="fa fa-calendar"></i>{{campaign.startDate | FormatDateFilter}}</span>
+            <p>{{campaign.description}}</p>
+           <div class="email-row">
+               <span ng-repeat = "feature in campaign.CampaignFeatures">
+
+                <i class="fa fa-desktop" ng-if = "feature.securityFeatures.feature == 'Promotional Pages'"></i>
+
+                <i class="fa fa-envelope-o" ng-if = "feature.securityFeatures.feature == 'Email'"></i>
+                {{feature.securityFeatures.feature}}
+               </span>
+           </div>
+          </div>
+              </div>
+                  
+        </div>
+    </div>
+    </div>
+<!-- box 1 End Here-->
+ 
+       
+</div>
+<!-- Campaign list Row Start Here-->
+</div>
+
+</div>
+</div>

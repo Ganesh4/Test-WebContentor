@@ -14,9 +14,10 @@
            $scope.submitEvent = $state.current.data.submitEvent;
            $scope.recipients = {};
             var param = {};
+           $scope.isInputDisable = true;
            $scope.gridOptions = {
                 columnDefs: [{
-                    field: 'listName', 
+                    field: 'name', 
                     displayName: 'List Name',
                     cellClass : 'darkgrey-color'
                 },{
@@ -42,7 +43,7 @@
                 }]
             }
 
-            RecipientApiSrv.getRecipientList($scope.loggedInUser.securityUserID+'/recipient/list', param,function(data){
+            RecipientApiSrv.getRecipientList($scope.loggedInUser.securityUserId+'/email/list/', param,function(data){
                 if(data){
                     $scope.gridOptions.data = data.plain();
                     $scope.RecipientList = data.plain();
@@ -60,7 +61,7 @@
                     recipient.listId = $scope.recipients.list.listId;
 
                 recipient = _.omit(recipient,'list');
-                RecipientApiSrv.addRecipient($scope.loggedInUser.securityUserID+'/recipients',recipient,function(response){
+                RecipientApiSrv.addRecipient($scope.loggedInUser.securityUserId+'/recipients',recipient,function(response){
                     //console.log('Added Recipients ---------- ', data.plain());
                 });
                 $state.go('app.home.manage.recipients.list');
@@ -74,7 +75,7 @@
                         var listId = selectedList.listId;
                     }
                             
-            RecipientApiSrv.getRecipientByList($scope.loggedInUser.securityUserID+'/'+listId+'/recipient/list',{},function(data){
+            RecipientApiSrv.getRecipientByList($scope.loggedInUser.securityUserId+'/'+listId+'/recipients',{},function(data){
                     if(data){
                         $scope.recipientsGridOptions.data = data.plain();
                         $scope.Recipients = data.plain();
@@ -82,9 +83,10 @@
 
                });
             });
+
              //Delete Recipient Functionality..
              self.deleteRecipient = function(id){
-            RecipientApiSrv.deleteRecipient($scope.loggedInUser.securityUserID+'/recipients/'+id, null, function(data){
+            RecipientApiSrv.deleteRecipient($scope.loggedInUser.securityUserId+'/recipients/'+id, null, function(data){
                     alert('Recipients Delete Successfully');
                     $scope.$emit(Global.EVENTS.RELOAD);
                 })
@@ -96,7 +98,37 @@
                     console.log('RecipientApiSrv ------- ',RecipientData);
                     self.deleteRecipient(RecipientData.recipientId);
                 }
-              });            
+            });    
+
+            $scope.$on(Global.EVENTS.ADD_EMAIL_RECIPIENT_LIST,function(event,data){
+                console.log('$scope.loggedInUser.securityUserId',$scope.loggedInUser.securityUserId);
+                var emaillist = $scope.name;
+               RecipientApiSrv.addEmailList($scope.loggedInUser.securityUserId+'/email/list',emaillist,function(response){
+               $scope.isInputDisable = true;
+                 
+
+               }); 
+                
+           }); 
+            $scope.$on(Global.EVENTS.INPUT_BOX_ENABLED, function(event,data){
+                $scope.isInputDisable = false;
+                console.log('$scope.isInputDisable ----------- ',$scope.isInputDisable);
+
+            });
+
+           /* $scope.edit = false;
+            $scope.data = {};
+            $scope.editField = function() {
+                $scope.edit = true;
+            };
+            $scope.cancelEdit = function() {
+                $scope.edit = false;
+            };
+            $scope.updateList = function(field, name) { 
+                console.log(field + ' + ' + name);
+
+
+            };    */ 
 	}]);
 
 })(angular);

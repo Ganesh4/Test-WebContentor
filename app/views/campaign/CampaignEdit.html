@@ -8,13 +8,13 @@
 <div class="row campaign_rhs_wrapper">
   <div class="col-md-6">
   <div class="form-group">
-    <label for="exampleInputEmail1">Name</label>{{campaign}}
+    <label for="exampleInputEmail1">Name <span class="error-red">*</span></label>{{campaign}}
     <input type="text" class="form-control input-width" ng-model="campaign.name" placeholder="Name" required="required" required-err-type="firstNameRequired" ng-keyup = "checkValidation()" ng-change = "checkValidation()"/  >
   </div>
   
   <div class="form-group campaign-group-left">
   	<div class="campaign-left-fg">
-    <label>Start Date</label>
+    <label>Start Date <span class="error-red">*</span></label>
    
     <input type="text" class="form-control" 
            datepicker-popup="{{format}}" 
@@ -39,7 +39,7 @@
   
   <div class="form-group campaign-group-left">
   	<div class="campaign-left-fg"  >
-    <label>End Date</label>
+    <label>End Date <span class="error-red">*</span></label>
     <input type="text" class="form-control" 
            datepicker-popup="{{format}}" 
            class="form-control input-width"
@@ -64,7 +64,7 @@
   </div>
   
     <div class="form-group">
-        <label for="exampleInputEmail1" style="width: 100%;">Features</label>
+        <label for="exampleInputEmail1" style="width: 100%;">Features <span class="error-red">*</span></label>
         <span class="checkbox-align"> 
         <label class="checkbox-inline"  ng-repeat = "feature in featureList">
           <input type="checkbox" ng-checked = "campaign.feature.SecurityFeatureID" name="" ng-model = "campaign.campaignFeatureId[feature.SecurityFeatureID]" value="{{feature.SecurityFeatureID}}">{{feature.Feature}}{{selectedFeatures}}
