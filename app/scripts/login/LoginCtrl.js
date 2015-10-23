@@ -24,7 +24,7 @@
                         localStorageService.set('loggedInUser',data.plain());
                         //$cookieStore.put('loggedInUser',data.plain());
                         $scope.loggedInUser = localStorageService.get('loggedInUser');
-                        $state.go('app.home.campaign');
+                        $state.go('app.home.campaign.all');
                     });
                 });
             }])

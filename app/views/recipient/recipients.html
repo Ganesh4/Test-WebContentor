@@ -1,3 +1,18 @@
+<!--<div >
+
+    	<span ng-click="editField()" ng-if="edit === false">{{selectedList.listName}}</span>
+
+    	<div ng-if="edit === true">
+    		<input type="text" ng-bind="selectedList.listName" value="selectedList.listName" ng-model="selectedList.listName" />
+    		<button type="submit" class="btn btn-primary" ng-click="updateList(data.field, 'somename')"><span class="glyphicon glyphicon-ok"></span></button>
+    		<button type="button" class="btn btn-default" ng-click="cancelEdit()"><span class="glyphicon glyphicon-remove"></span></button>
+    	</div>
+
+    </div>-->
+    <div>
+    List Name: 
+    <input type="text" name="name" ng-model="name" ng-disabled = "isInputDisable"/>
+    <div>
 <div class="recipients_table">
 
 	<div class= "col-md-4">
