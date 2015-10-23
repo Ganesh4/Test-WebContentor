@@ -17,7 +17,7 @@
            $scope.isInputDisable = true;
            $scope.gridOptions = {
                 columnDefs: [{
-                    field: 'listName', 
+                    field: 'name', 
                     displayName: 'List Name',
                     cellClass : 'darkgrey-color'
                 },{
