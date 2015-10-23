@@ -143,13 +143,14 @@
                             placeholder:'Keywords',
                             model : 'keywords'
                 		},{
-                			name:'Category',
-                            lable:'Category',
-                			type:'DROP_DOWN',
-                			placeholder:'Category',
-                			onChange:'setCategoryValue(category)',
-                			ngOptions:'category.name for category in imageCategory',
-                            model : 'category'
+                			name: 'Category',
+                            lable: 'Category',
+                			type: 'DROP_DOWN',
+                			placeholder: 'Category',
+                			onChange: 'setCategoryValue(category)',
+                			ngOptions: 'category.name for category in imageCategory',
+                            model: 'category',
+                            initMethod: 'getImageCategories()',
                 		},{
                 			name: 'ExpiryDate',
                 			lable: 'Expiry Date',

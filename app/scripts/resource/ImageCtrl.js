@@ -183,7 +183,7 @@ angular.module('resources').controller('ImageCtrl',
         
                 // handle formats
             $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
-        }
+        
         }
     ]);
 })(angular);

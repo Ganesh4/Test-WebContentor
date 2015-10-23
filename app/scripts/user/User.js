@@ -148,7 +148,8 @@
                             placeholder:'Country',
                             model : 'country',
                             onChange : 'updateCountry()',
-                            ngOptions: 'country.countryName for country in countries'
+                            ngOptions: 'country.countryName for country in countries',
+                            initMethod:'getCountries()'
                         }]
 				    },{
 				    	rowClass :'col-lg-6',

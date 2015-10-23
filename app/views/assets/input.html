@@ -1,10 +1,9 @@
 <div class="" ng-repeat="(key , element) in elements">
   <div ng-class="element.rowClass">
-
     <div class="form-group" ng-repeat = "rowElement in element.rowElement">
-       <wc-fields form-data = "formData" format = "rowElement.format" options="rowElement.ngOptions"
+       <wc-fields form-data = "formData" init-method ="rowElement.initMethod"
+        format = "rowElement.format" options="rowElement.ngOptions"
         type = "rowElement.type" model = "rowElement.model" on-change = "rowElement.onChange" name = "rowElement.name" placeholder="rowElement.placeholder" validate = "rowElement.validate"></wc-fields>
-       
     </div><!-- /input-group -->
   </div><!-- /.col-lg-4 -->
 
