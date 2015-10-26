@@ -106,7 +106,7 @@ angular.module('user').controller('UserCtrl',
              ApiSrv.getList($scope.loggedInUser.securityUserId+'/roles',param,function(data){
                 if(data)
                     $scope.roles = data.plain();
-                console.log('Roles ---------------- ',$scope.roles);
+                console.log('Roles List ---------------- ',$scope.roles);
             });
 
              //Delete User Functionality..
