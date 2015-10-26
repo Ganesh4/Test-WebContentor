@@ -11,7 +11,8 @@
         'RecipientApiSrv',
         '$parse',
         'ImageApiSrv',
-        function(CommonSrv,Global,RecipientApiSrv,$parse, ImageApiSrv){
+        '$state',
+        function(CommonSrv,Global,RecipientApiSrv,$parse, ImageApiSrv, $state){
             return{
                 restrict:'AE',
                 templateUrl:'views/assets/form.html',
@@ -26,6 +27,16 @@
 
                     var self = this;
 
+                    scope.$watch(function(scope){
+                            return $state.current.name;
+                    },function(newValue,oldValue){
+                            if(newValue!==undefined){
+                                 scope.elements = $state.current.data.elements;
+                                 scope.formBtns = $state.current.data.formButtons;
+                            }
+                    });
+                   
+
                     scope.formSubmit = function(){
                         scope.$emit(scope.submitEvent, scope.formData);
                     }
@@ -33,12 +44,7 @@
                     scope.doOnChange = function(){
                         CommonSrv.doOnChange(scope,{}); 
                     }
-                    // Should be come Dynamically 
-                    RecipientApiSrv.getRecipientList('1/recipient/list', {},function(data){
-                        if(data){
-                            scope.RecipientList = data.plain();
-                        }
-                    });
+
                 }
             }
         }])

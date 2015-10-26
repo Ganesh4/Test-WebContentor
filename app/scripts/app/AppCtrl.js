@@ -17,11 +17,11 @@
 			'ImageApiSrv',
 			'localStorageService',
 			'$stateParams',
-       	    function($scope,$state, $q, ApiSrv, CommonSrv, Global, UserApiSrv,CampaignApiSrv, Restangular,ImageApiSrv,localStorageService,$stateParams){
+			'$rootScope',
+       	    function($scope,$state, $q, ApiSrv, CommonSrv, Global, UserApiSrv,CampaignApiSrv, Restangular,ImageApiSrv,localStorageService,$stateParams,$rootScope){
 				var param = {};
 				$state.args = [];
 				$scope.user = {};
-				$scope.image = {};
 				$scope.countries = {};
 				$scope.loggedInUser = {};
 				$scope.files = [];
@@ -54,7 +54,7 @@
     				if($state.current.name.indexOf('resources') != -1 ||
     					$state.current.name.indexOf('page') != -1){
     					console.log($state.current.name);
-    					Restangular.setBaseUrl('http://192.168.1.162/MicroS/');
+    					Restangular.setBaseUrl('http://192.168.1.168/MicroS/');
     					ApiSrv.accessToken();	
     				}else{
     					Restangular.setBaseUrl('http://192.168.1.69/Yavun/api');
@@ -82,7 +82,6 @@
 	            });
 
 	            $scope.$on(Global.EVENTS.USER_REGISTER,function(event, data){
-	               console.log('User ------- ',data);
 	               var user = data;
 	               if(!_.isUndefined(user.country))
 		                user.country = $scope.user.country.securityCountryID;
@@ -111,7 +110,7 @@
 						//add the file object to the scope's files collection
 						$scope.files.push(args);
 						//_.extend($scope.files, args);
-						console.log($scope.files);
+						
 			        });
 			    });
 
@@ -120,8 +119,8 @@
 			    }else{
 			    	$scope.loggedInUser = localStorageService.get('loggedInUser');
 			    	$scope.userGroupUri = $scope.loggedInUser.securityUserId+'/'+$scope.loggedInUser.securityGroup.securityGroupId+'/';
-			    	
-			    	
+			    	$rootScope.userGroupUri = $scope.userGroupUri;
+			    	$rootScope.userId = $scope.loggedInUser.securityUserId;
 			    }
 			    
 			    //Selected data of the grid.

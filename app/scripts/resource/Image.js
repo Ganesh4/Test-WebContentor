@@ -89,7 +89,7 @@
 		        }
 		    }).state('app.home.manage.resources.images.add',{
 		        url:'/add',
-		        templateUrl:'views/resource/AddImage.html',
+		        template:'<wc-form elements ="elements" select-2-options = "select2Options" form-btns="formBtns" form-data="image"></wc-form>',//views/resource/AddImage.html',
 		        data: {
 		        	 displayName: 'Add',
 		        	 actionBarBtn: [{
@@ -99,11 +99,55 @@
 	                },{
 	                    name : 'Submit',
 	                    onClick : 'ADD_NEW_IMAGE',
-	                }]
+	                }],
+                	elements:[
+                    {
+                        rowClass :'col-md-5',
+                		rowElement:[{
+                			name:'Description',
+                			lable:'Description',
+                			type: 'TEXT_AREA',
+                            required: false,
+                            validate:'',
+                            placeholder:'Description',
+                            model : 'description'
+                		},{
+                			name:'Keywords',
+                            lable:'Keywords',
+                            type: 'SELECT_TAGS',
+                            required: false,
+                            validate:'',
+                            placeholder:'Keywords',
+                            model : 'keywords'
+                		},{
+                			name: 'Category',
+                            lable: 'Category',
+                			type: 'DROP_DOWN',
+                			placeholder: 'Category',
+                			onChange: 'setCategoryValue(category)',
+                			ngOptions: 'category.name for category in imageCategory',
+                            model: 'category',
+                            initEvent: 'IMAGE_CATEGORY',
+                		},{
+                			name: 'ExpiryDate',
+                			lable: 'Expiry Date',
+                			type: 'CALENDAR',
+                			model: 'expiryDate',
+                			onChange: '',
+                			format: 'yyyy-MM-dd',
+                		},{
+                			name: 'file',
+                			lable: 'Upload Image',
+                			type: 'FILE',
+                			required: false,
+                			placeholder: 'Image File',
+                			fileName: 'file'
+                		}],
+                	}]
 		        }
 		    }).state('app.home.manage.resources.images.edit',{
 		    	url:'/edit',
-		    	template:'{{image}}<wc-form elements ="elements" select-2-options = "select2Options" form-btns="formBtns" form-data="image"></wc-form>',
+		    	template:'<wc-form elements ="elements" select-2-options = "select2Options" form-btns="formBtns" form-data="image"></wc-form>',
 				controller:'ImageEditCtrl',
 				data: {
 		        	displayName: 'Edit',
@@ -147,17 +191,16 @@
                             lable: 'Category',
                 			type: 'DROP_DOWN',
                 			placeholder: 'Category',
-                			onChange: 'setCategoryValue(category)',
                 			ngOptions: 'category.name for category in imageCategory',
                             model: 'category',
-                            initMethod: 'getImageCategories()',
+                            initEvent: 'IMAGE_CATEGORY',
                 		},{
                 			name: 'ExpiryDate',
                 			lable: 'Expiry Date',
                 			type: 'CALENDAR',
                 			model: 'expiryDate',
                 			onChange: '',
-                			format: 'yyyy-mm-dd',
+                			format: 'yyyy-MM-dd',
                 		}],
                 	}]
 		        }

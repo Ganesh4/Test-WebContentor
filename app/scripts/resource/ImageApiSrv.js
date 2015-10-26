@@ -25,7 +25,7 @@ angular.module('resources').service('ImageApiSrv',
 			ApiSrv.delete(uri, params, success, error);
 		}
 		self.updateImage =function(uri, formData, success, error){
-			ApiSrv.putMultipart(uri, formData, success, error);
+			ApiSrv.put(uri, formData, success, error);
 		}
 
      }]);

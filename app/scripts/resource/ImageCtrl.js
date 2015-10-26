@@ -74,18 +74,7 @@ angular.module('resources').controller('ImageCtrl',
                     console.log('$scope.imageCategory -------- ',$scope.imageCategory);
                 }
             });
-
-
-            //$scope.imageCategory = ['Test','Testing'];
-            $scope.select2Options1 = {
-                'multiple': true,
-                'simple_tags': true,
-            }; 
-            $scope.select2Options = {
-                'multiple': true,
-                'simple_tags': true,
-                'tags': []
-            }; 
+            
             ImageApiSrv.getImageList($scope.userGroupUri+'images',param,function(data){
                 // console.log('Image ------------ ',data);
                 if(data){
@@ -132,7 +121,7 @@ angular.module('resources').controller('ImageCtrl',
             }
             //Delete Image by id.
             self.deleteImageById = function(id, params){
-                var uri = '/'+$scope.loggedInUser.securityUserID + '/'+ $scope.loggedInUser.groupId +'/images/';
+                var uri = $scope.userGroupUri +'/images/';
                 if(id !== null)
                     uri = uri + id;
                 else 
@@ -152,9 +141,9 @@ angular.module('resources').controller('ImageCtrl',
                     resource : $scope.image,
                     file: $scope.files
                 }
+                console.log('data -------- ' , data);
                 ImageApiSrv.addNewImage($scope.userGroupUri+'images',data,function(response){
                     $state.transitionTo('app.home.manage.resources.images.grid');
-                    $scope.$emit(Global.EVENTS.RELOAD);
                 });
             });
 
@@ -167,9 +156,8 @@ angular.module('resources').controller('ImageCtrl',
             $scope.openStart = function($event) {
                 $event.preventDefault();
                 $event.stopPropagation();
-
                 $scope.openedStart = true;
-                };
+            };
             // open min-cal
             $scope.openEnd = function($event) {
                 $event.preventDefault();
@@ -180,10 +168,6 @@ angular.module('resources').controller('ImageCtrl',
             $scope.$on('UNCHECKALL',function(event, data){
                 $scope.$broadcast(Global.EVENTS.IS_CHECKED, false );
             });
-        
-                // handle formats
-            $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
-        
         }
     ]);
 })(angular);

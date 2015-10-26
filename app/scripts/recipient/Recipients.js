@@ -185,6 +185,7 @@
                             placeholder:'List Name',
                             model : 'list',
                             ngOptions:'recipient.listName for recipient in RecipientList',
+                            initMethod: 'RECIPIENT_LIST',
                         }],
                     }] 
                  }
@@ -309,6 +310,7 @@
                             model : 'country',
                             onChange : 'updateCountry()',
                             ngOptions: 'country.countryName for country in countries'
+                            initMethod: 'COUNTRY_LIST',
                    },{
                             name:'state',
                             lable:'State',
@@ -345,6 +347,7 @@
                             placeholder:'List Name',
                             model : 'list',
                             ngOptions:'recipient.listName for recipient in RecipientList',
+                            initMethod: 'RECIPIENT_LIST',
                         }],
                     }] 
                  }
