@@ -23,7 +23,6 @@
                     url: '/list',
                     controller:'RecipientCtrl',
                     templateUrl:'./views/recipient/recipients.html',
-                    
                     data: {
                     displayName: ' Recipient List',
                     actionBarBtn: [{
@@ -184,7 +183,7 @@
                             required: false,
                             placeholder:'List Name',
                             model : 'list',
-                            ngOptions:'recipient.listName for recipient in RecipientList',
+                            ngOptions:'recipient.name for recipient in RecipientList',
                         }],
                     }] 
                  }

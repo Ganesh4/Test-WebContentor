@@ -109,11 +109,77 @@
 		background-color: transparent;
 		background-image: none;
 		
+		.campaign-img{
+			width: 100px;
+			float: left;
+			position: absolute;
+			z-index: 99;
+			}
+			
+		.discription{
+			width: 100%;
+			height: 100%;
+			padding: 15px;
+			color: #fff;
+			float: left;
+			background-color: #272c30;
+			position: absolute;
+			top: 150px;
+			}
+		
 		.caption{
 			padding: 15px;
+			}
 			
+		.name{
+		       color: #fff;
+			   background-color: #1a2224;
+			   padding: 10px 10px 10px 115px;
+			   text-align:center;
+			   margin-bottom: 0px;
+			   text-transform: uppercase;
+			   font-size: 20px;
+			   word-break: break-all;
+       		   }
 			
-			.email-row{
+		.caption-new{
+			padding: 15px 15px 15px 115px;
+			z-index: 9;
+			background-color: $header-color;
+			float: left;
+			height: 107px;
+            width: 100%;
+			position: absolute;
+			
+			span{
+				width: 100%;
+				margin-bottom: 15px;
+				float: left;
+				}
+			
+			.email-row-new{
+		
+		span{
+			margin-bottom: 10px;
+			padding-left: 20px;
+			width: 100%;
+			float: left;
+			color: #7d86cb;
+			
+			i{
+				margin-right: 15px;
+				}
+			  }
+			
+		span:nth-child(2){
+			color: #90c251;
+			width: 100%;
+		}
+		
+		}	
+			}
+			
+		.email-row{
 		
 		span{
 			margin-bottom: 10px;
@@ -134,17 +200,120 @@
 		}	
 			
 			
-			
-			
-			
-			
-			
-			
-			}
 		}
 		
 		
 
 		
 }
+}
+
+
+/*====================== New scss forCampaign list Page ======================*/
+
+
+.thumb-block-new{
+	width: 100%;
+	height: auto;
+	float: left;
+	margin-bottom:20px;
+	
+	&:hover .btn_template-img-over{
+		  display:block;
+		  background: rgba(27, 80, 152, 0.58);
+		  
+		  i{
+			  margin-right: 15px;
+			  }
+	}
+		  
+		  
+.thumb-img-new{
+	height: 370px;
+	overflow:hidden;
+	position:relative;
+    cursor: pointer;
+	background-color: #eeeff3;
+
+		img{
+			width: 100%;
+			height: auto;	
+			}
+    }
+	
+.thumb-innr-new{
+    padding:10px 15px 10px; 
+	float: left;
+	width: 100%;
+	background-color: #C2CEDC;
+	color: #fff;
+	
+	p{
+		text-align: left;
+		color: #353535;
+		}
+	
+	.date-fix{
+            width: 100%;
+			
+			span{
+				margin-bottom: 10px;
+				width: 50%;
+				float: left;
+				color: #353535;
+			
+			i{
+				margin-right: 15px;
+				}
+			  }
+			
+		span:nth-child(2){
+			width: 50%;
+			float: right
+		}
+	}
+}
+
+.title-new{
+		width: 100%;
+		font-size: 1.1em;
+		display: block;
+		padding: 5px 0px 5px 15px;
+		text-transform: uppercase;
+		position: absolute;
+		bottom: 0px;
+		background-color: #1B5098;
+		color: $workarea-color;
+	}
+	
+.thumb-info-new{
+	width: 100%;
+	float: left;
+	padding: 5px 0;
+	text-align: left;
+	
+	h2{
+		color: #353535;
+		font-weight: bold;
+		border-bottom: 1px solid #ccc;
+		margin-bottom: 10px;
+		}
+	
+	span{
+		@extend .info-text-size;
+		margin-bottom: 10px;
+		margin-right: 10px;
+		color: #353535;
+		
+		i{
+			margin-right: 10px;
+			}
+		}
+		span:nth-child(2){
+			color: #353535;
+		}
+		
+}
+	
+	
 }

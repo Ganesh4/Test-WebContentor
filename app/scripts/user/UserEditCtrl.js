@@ -15,6 +15,7 @@ angular.module('user').controller('UserEditCtrl',
 			$scope.elements = $state.current.data.elements;
 			$scope.formBtns = $state.current.data.formBtns;
 			$scope.submitEvent = $state.current.data.submitEvent;
+            var param ={};
 
 
             //Update User Functions
@@ -31,6 +32,12 @@ angular.module('user').controller('UserEditCtrl',
                 $scope.$emit(Global.EVENTS.RELOAD);
                 $state.transitionTo('app.home.manage.user.list');
                });
+            });
+             //Get Role List
+             ApiSrv.getList($scope.loggedInUser.securityUserId+'/roles',param,function(data){
+                if(data)
+                    $scope.roles = data.plain();
+                console.log('Roles  ---------------- ',$scope.roles);
             });
 
            
