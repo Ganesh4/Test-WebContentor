@@ -180,8 +180,11 @@
 		 }
 }
 .promotional-text{
-   font-size:1.5em;
-	 color:$ROLES_CONTENT_COLOR; 	
+	font-size:1.5em;
+	color:$ROLES_CONTENT_COLOR; 	
+	float: left;
+	text-align: center;
+	width: 100%;
 }
 
 /* Scss Document */
