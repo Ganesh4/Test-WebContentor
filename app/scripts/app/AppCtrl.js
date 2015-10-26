@@ -119,7 +119,9 @@
 			    	$state.go('app.login')
 			    }else{
 			    	$scope.loggedInUser = localStorageService.get('loggedInUser');
-			    	$scope.userGroupUri = $scope.loggedInUser.securityUserID+'/'+$scope.loggedInUser.groupId+'/';
+			    	$scope.userGroupUri = $scope.loggedInUser.securityUserId+'/'+$scope.loggedInUser.securityGroup.securityGroupId+'/';
+			    	
+			    	console.log("dsjfhdsf -------------- ",$scope.loggedInUser);
 			    }
 			    
 			    //Selected data of the grid.

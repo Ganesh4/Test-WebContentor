@@ -49,7 +49,7 @@ angular.module('user').controller('UserCtrl',
                 }]
             } 
 
-            UserApiSrv.getUserList($scope.loggedInUser.securityUserID+'/users',param, 
+            UserApiSrv.getUserList($scope.loggedInUser.securityUserId+'/users',param, 
                 function(data){
                     if(data)
                         $scope.gridOptions.data = data.plain();
@@ -85,7 +85,7 @@ angular.module('user').controller('UserCtrl',
                 if(!_.isUndefined(user.state))
                      user.state = $scope.user.state.SecurityStateID;
                
-                UserApiSrv.addNewUser($scope.loggedInUser.securityUserID+'/users', user,function(response){
+                UserApiSrv.addNewUser($scope.loggedInUser.securityUserId+'/users', user,function(response){
                     if(data.state)
                         $state.go(data.state);
                 });
@@ -103,7 +103,7 @@ angular.module('user').controller('UserCtrl',
             }
 
             //Get Role List
-             ApiSrv.getList('roles',param,function(data){
+             ApiSrv.getList($scope.loggedInUser.securityUserId+'/roles',param,function(data){
                 if(data)
                     $scope.roles = data.plain();
                 console.log('Roles ---------------- ',$scope.roles);
@@ -112,7 +112,7 @@ angular.module('user').controller('UserCtrl',
              //Delete User Functionality..
              self.deleteUser = function(id){
 
-                UserApiSrv.deleteUser($scope.loggedInUser.securityUserID+'/users/'+id, null, function(data){
+                UserApiSrv.deleteUser($scope.loggedInUser.securityUserId+'/users/'+id, null, function(data){
                     alert('Deleted Successfully');
                     $scope.$emit(Global.EVENTS.RELOAD);
                 })

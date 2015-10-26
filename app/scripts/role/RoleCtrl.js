@@ -40,7 +40,7 @@ angular.module('role').controller('RoleCtrl',
                 }]
             } 
 
-             RoleApiSrv.getRoleList('roles',param, 
+             RoleApiSrv.getRoleList($scope.loggedInUser.securityUserId+'/roles',param, 
                 function(data){
                     console.log('Roles ------------ ',data);
                     if(data)

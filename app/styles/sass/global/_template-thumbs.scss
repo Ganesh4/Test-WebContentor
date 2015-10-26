@@ -19,13 +19,18 @@
 	&:hover .btn_template-img-over{
 		  display:block;
 		  background: rgba(36, 172, 227, 0.79);
+		  
+		  i{
+			  margin-right: 15px;
+			  }
 		  }
 	.title{
 		width: 100%;
 		font-size: 1.1em;
 		display: block;
 		padding: 5px 0;
-		text-transform: uppercase;  	
+		text-transform: uppercase;
+		text-align: center;	
 	}
 }
 .thumb-innr{
@@ -68,13 +73,13 @@
 	.revision{
 		@extend .info-text-size;
 	   	float:left;
-		width: 100%;
+		width: 50%;
 		margin-bottom: 10px;
 		}
 	.age{
 		@extend .info-text-size;
 	  	float:right;
-		width: 100%;
+		width: 50%;
 		}
 }
 .bg-text-color{

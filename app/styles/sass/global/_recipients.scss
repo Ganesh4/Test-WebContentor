@@ -148,3 +148,57 @@
 .table{
 	color: $table-text-color;
 	}
+/*======================== Editable field for Recipients ============================*/
+
+.recip-main{
+	
+ .form-group{
+		 margin-bottom: 0px;
+		 }
+		 
+.recip-edit-row{
+	 float: left;
+	 width: 100%;
+	 margin-top: 15px;
+
+	.recip-left-fg{
+		width: 20%;
+		float: left;
+		margin-right: 2px;
+		}
+	.recip-right-fg{
+		width: 8%;
+		float: left;
+		margin-left: 0%;
+					a{
+					  padding: 7px 10px;
+					  color: #353535;
+					  text-decoration:none;
+					  display: block;
+					  margin: 0;
+					  background-color: $workarea-color;
+					  border-radius: 3px;
+					  cursor: pointer;
+					  border: 1px solid #e3eaef;
+					
+						&:hover{
+								color: $workarea-color;
+								background-color: $header-color;	
+								
+								i{
+								  color: $workarea-color;
+								  }
+	
+						}
+						
+					  i{
+						  color: $header-color;
+						  margin-right: 10px;
+						  padding: 0px;
+						  position: relative;
+						  }
+					 }
+		}
+		
+ }
+}

@@ -62,7 +62,7 @@
     </div>
     <div class="right-fg">
     <label>Country</label>
-     <select class="form-control" ng-model = "user.country" ng-options = "country.CountryName for country in countries"
+     <select class="form-control" ng-model = "user.country" ng-options = "country.countryName for country in countries"
       ng-change = "updateCountry()"></select>
     </div>
   </div>
@@ -70,7 +70,7 @@
   <div class="form-group form-group-left">
   	<div class="left-fg">
     <label>State</label>
-     <select ng-model = "user.state" class = "form-control" ng-options = "state.StateName for state in states"></select>
+     <select ng-model = "user.state" class = "form-control" ng-options = "state.stateName for state in states"></select>
     </div>
     <div class="right-fg">
     <label>Zip</label>
