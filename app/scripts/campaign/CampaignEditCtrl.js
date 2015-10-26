@@ -13,7 +13,7 @@
 				var self = this;
 				$state.args = [];	
 			
-				console.log('$scope.selectedFeatures --------- ',$scope.selectedFeatures);
+				console.log('$scope.selectedFeatures --------- ',$scope.campaign);
 
         		  $scope.today = function() {
             $scope.today = new Date();
