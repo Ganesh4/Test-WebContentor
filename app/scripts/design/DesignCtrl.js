@@ -39,8 +39,6 @@
 					console.log($scope.files);
 		        });
 		    });	 
-		    $scope.subheader.title = 'Upload Design';  
-            //$scope.subheader.breadcrumb =['home','Upload Design'];
 		    CommonSrv.getDesignCategories(function(data){
 		    	console.log('Categories --------  ' , data.plain());
 		    	if(data)

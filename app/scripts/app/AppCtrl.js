@@ -125,10 +125,10 @@
 			    
 			    //Selected data of the grid.
 			    $scope.$on(Global.EVENTS.GRID_ROW_DATA,function(event , data){
-                	if(data){
-                    	$scope.gridRowSelectedData.push(data);
-                	}else if(_.isArray(data)){
+                	if(_.isArray(data)){
                 		$scope.gridRowSelectedData = data;
+                	}else if(data){
+                    	$scope.gridRowSelectedData.push(data);
                 	}
             	});
             	//Removes Element From Grid

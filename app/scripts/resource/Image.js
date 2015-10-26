@@ -124,7 +124,6 @@
                             lable: 'Category',
                 			type: 'DROP_DOWN',
                 			placeholder: 'Category',
-                			onChange: 'setCategoryValue(category)',
                 			ngOptions: 'category.name for category in imageCategory',
                             model: 'category',
                             initEvent: 'IMAGE_CATEGORY',

@@ -26,7 +26,7 @@
                 link : function(scope,element,attrs){
 
                     var self = this;
-
+                    scope.states = [];
                     scope.$watch(function(scope){
                             return $state.current.name;
                     },function(newValue,oldValue){
@@ -45,6 +45,14 @@
                         CommonSrv.doOnChange(scope,{}); 
                     }
 
+                    //Update State Object According to the Country Selected. 
+                    scope.$on(Global.EVENTS.UPDATE_COUNTRY,function(){
+                        var id = scope.formData.country.securityCountryId;
+                        CommonSrv.getStatesByCountryId('countries/'+id,function(data){
+                            scope.states = data.plain();
+                            console.log('States --------------- ',data.plain());
+                        });
+                    });
                 }
             }
         }])

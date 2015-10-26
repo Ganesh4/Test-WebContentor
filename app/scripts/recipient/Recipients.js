@@ -82,7 +82,7 @@
                         rowElement:[{
                             name:'email',
                             lable:'Email',
-                            type: 'EMAIL',
+                            type: 'TEXT',
                             required: true,
                             validate:'emailisrequired',
                             placeholder:'Email',
@@ -147,7 +147,8 @@
                             placeholder:'Country',
                             model : 'country',
                             onChange : 'updateCountry()',
-                            ngOptions: 'country.countryName for country in countries'
+                            ngOptions: 'country.countryName for country in countries',
+                            initEvent: 'COUNTRY_LIST',
                         },{
                             name:'state',
                             lable:'State',
@@ -184,7 +185,7 @@
                             placeholder:'List Name',
                             model : 'list',
                             ngOptions:'recipient.name for recipient in RecipientList',
-                            initMethod: 'RECIPIENT_LIST',
+                            initEvent: 'RECIPIENT_LIST',
                         }],
                     }] 
                  }
@@ -243,7 +244,7 @@
                         rowElement:[{
                             name:'email',
                             lable:'Email',
-                            type: 'EMAIL',
+                            type: 'TEXT',
                             required: true,
                             validate:'emailisrequired',
                             placeholder:'Email',
@@ -308,8 +309,8 @@
                             placeholder:'Country',
                             model : 'country',
                             onChange : 'updateCountry()',
-                            ngOptions: 'country.countryName for country in countries'
-                            initMethod: 'COUNTRY_LIST',
+                            ngOptions: 'country.countryName for country in countries',
+                            initEvent: 'COUNTRY_LIST',
                    },{
                             name:'state',
                             lable:'State',
@@ -346,7 +347,7 @@
                             placeholder:'List Name',
                             model : 'list',
                             ngOptions:'recipient.listName for recipient in RecipientList',
-                            initMethod: 'RECIPIENT_LIST',
+                            initEvent: 'RECIPIENT_LIST',
                         }],
                     }] 
                  }
