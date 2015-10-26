@@ -115,12 +115,14 @@
 			        });
 			    });
 
-			    /*if(localStorageService.get('loggedInUser') == undefined){
+			    if(localStorageService.get('loggedInUser') == undefined){
 			    	$state.go('app.login')
 			    }else{
 			    	$scope.loggedInUser = localStorageService.get('loggedInUser');
-			    	$scope.userGroupUri = $scope.loggedInUser.securityUserId+'/'+$scope.loggedInUser.groupId+'/';
-			    }*/
+			    	$scope.userGroupUri = $scope.loggedInUser.securityUserId+'/'+$scope.loggedInUser.securityGroup.securityGroupId+'/';
+			    	
+			    	
+			    }
 			    
 			    //Selected data of the grid.
 			    $scope.$on(Global.EVENTS.GRID_ROW_DATA,function(event , data){

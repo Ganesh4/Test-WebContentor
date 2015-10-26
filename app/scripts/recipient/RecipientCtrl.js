@@ -17,7 +17,7 @@
            $scope.isInputDisable = true;
            $scope.gridOptions = {
                 columnDefs: [{
-                    field: 'listName', 
+                    field: 'name', 
                     displayName: 'List Name',
                     cellClass : 'darkgrey-color'
                 },{
@@ -103,7 +103,7 @@
             $scope.$on(Global.EVENTS.ADD_EMAIL_RECIPIENT_LIST,function(event,data){
                 console.log('$scope.loggedInUser.securityUserId',$scope.loggedInUser.securityUserId);
                 var emaillist = $scope.name;
-               RecipientApiSrv.addEmailList($scope.loggedInUser.securityUserId+'/email/list',{emaillist},function(response){
+               RecipientApiSrv.addEmailList($scope.loggedInUser.securityUserId+'/email/list',emaillist,function(response){
                $scope.isInputDisable = true;
                  
 

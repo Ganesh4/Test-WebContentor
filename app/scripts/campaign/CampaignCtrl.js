@@ -96,6 +96,8 @@
                 $scope.campaignList = data.plain()   
                 console.log('User campaignList ------- ',  $scope.campaignList);
             });
+
+              
            
 
         }]);
