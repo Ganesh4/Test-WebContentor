@@ -71,7 +71,7 @@
 	        	abstract:true,
 	        }).state('app.home.manage.resources.images.table',{
 		        url:'/table',
-		        template:'<wc-grid grid-options = "gridOptions" ui-grid-selection class="grid"></wc-grid>',
+		        template:'<wc-grid grid-options = "gridOptions" class="grid"></wc-grid>',
 		        data: {
 		        	 displayName: 'table'
 		        }

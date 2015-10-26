@@ -66,10 +66,11 @@
     <div class="form-group">
         <label for="exampleInputEmail1" style="width: 100%;">Features <span class="error-red">*</span></label>
         <span class="checkbox-align"> 
-        <label class="checkbox-inline"  ng-repeat = "feature in featureList">
-          <input type="checkbox" ng-checked = "campaign.feature.SecurityFeatureID" name="" ng-model = "campaign.campaignFeatureId[feature.SecurityFeatureID]" value="{{feature.SecurityFeatureID}}">{{feature.Feature}}{{selectedFeatures}}
+        <label class="checkbox-inline"  ng-repeat = "data in featureList">
+          <input type="checkbox" ng-checked = "campaign.data.securityFeatureId" name="" ng-model = "campaign.campaignFeatureId[data.securityFeatureId]" value="{{data.securityFeatureId}}">{{data.feature}}{{selectedFeatures}}
         </label>
        </span> 
+      
   </div>
 
   </div>

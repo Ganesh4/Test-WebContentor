@@ -169,6 +169,18 @@
                             placeholder:'Zip',
                             model : 'zip',
                         }]
+				    },{
+				    	rowClass :'col-lg-6',
+						rowElement:[{
+							 name:'securityRoleId',
+                            lable:'Roles',
+                            type: 'DROP_DOWN',
+                            required: false,
+                            placeholder:'Roles',
+                            model : 'securityRoleId',
+                            ngOptions:'role.roleName for role in Roles'
+						}]
+
 				    }]
 		        	
 				}
