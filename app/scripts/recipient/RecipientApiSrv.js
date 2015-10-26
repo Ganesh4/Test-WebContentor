@@ -27,5 +27,8 @@
 	        self.addEmailList =function(uri, params, success, error){
 		          ApiSrv.post(uri,params,success,error);
 	        }
+	        self.deleteEmailList = function(uri, params, success, error){
+		        ApiSrv.delete(uri,params,success,error);
+	        }
         }]);
     })(angular);
