@@ -149,7 +149,7 @@ angular.module('microsite').service('ApiSrv',
                         templateUrl: './views/commons/notification/Notification.html',
                        	button :[{
                        		name : 'Ok',
-                       		onClick : 'ApiSrv.clickedLink()' 
+                       		onClick : '' 
                        	},{
                        		name : 'Cancel',
                        		
@@ -178,9 +178,7 @@ angular.module('microsite').service('ApiSrv',
             }
         }
 
-         self.clickedLink = function(){
-        notify('You clicked a link!');
-    };
+         
 
 }]);
 })(angular);
