@@ -65,6 +65,7 @@
         			buttons : ["bold", "italic", "underline", "sep", "align", "insertOrderedList", "insertUnorderedList"]
     			}
     			$scope.$on(Global.EVENTS.NAVIGATE,function(event,data){
+    				alert("Navigation");
                 	$state.go(data.state);
             	});
 
@@ -121,6 +122,7 @@
 			    	$scope.userGroupUri = $scope.loggedInUser.securityUserId+'/'+$scope.loggedInUser.securityGroup.securityGroupId+'/';
 			    	$rootScope.userGroupUri = $scope.userGroupUri;
 			    	$rootScope.userId = $scope.loggedInUser.securityUserId;
+
 			    }
 			    
 			    //Selected data of the grid.

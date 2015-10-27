@@ -98,6 +98,7 @@ angular.module('common').service('CommonSrv',
                 scope.$broadcast(Global.EVENTS.CAMPAIGN_SAVE_DISABLE);
                 scope.$broadcast(Global.EVENTS.CAMPAIGN_SAVE_EXIT_DISABLE);
             }
+
         }
     ]);
 })(angular);
