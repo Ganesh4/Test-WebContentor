@@ -65,7 +65,6 @@
         			buttons : ["bold", "italic", "underline", "sep", "align", "insertOrderedList", "insertUnorderedList"]
     			}
     			$scope.$on(Global.EVENTS.NAVIGATE,function(event,data){
-    				alert("Navigation");
                 	$state.go(data.state);
             	});
 
