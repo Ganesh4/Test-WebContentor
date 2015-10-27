@@ -1,25 +1,20 @@
-<div class="cg-notify-message" ng-class="[$classes, 
-    $position === 'center' ? 'cg-notify-message-center' : '',
-    $position === 'left' ? 'cg-notify-message-left' : '',
-    $position === 'right' ? 'cg-notify-message-right' : '']"
-    ng-style="{'margin-left': $centerMargin}">
+<div class="main-model">
+  <div class="modal-box " ng-class="[$classes]">
 
-<div ng-show="!$messageTemplate">
-    {{$message}}
-</div>
-<div>
-<wc-button name = "btn.name" type="btn.type" ng-repeat = "btn in $button" on-click="btn.onClick" btn-data="btn" state = "btn.state"></wc-button>
-</div>
-
-<div ng-show="$messageTemplate" class="cg-notify-message-template">
-    
-</div>
-
-<button type="button" class="cg-notify-close" ng-click="$close()">
-    <span aria-hidden="true">&times;</span>
-    <span class="cg-notify-sr-only">Close</span>
-</button>
-
-
-
+    <a class="btn-close" ng-click="$close()">×</a>
+    <div class="modal-text">
+      <p ng-show="!$messageTemplate"> <i class="fa fa-info-circle"></i>
+      	{{$message}}
+      </p>
+      <p ng-show="$messageTemplate" class="cg-notify-message-template">
+      	
+      </p>
+      <div class="modal-button" >
+      		<div ng-repeat = "btn in $button">
+      		<wc-button name = "btn.name" type="btn.type" on-click="btn.onClick" btn-data="btn" disable="btn.disable" icon = "btn.icon" state = "btn.state"></wc-button>
+      
+      		</div>
+      	</div>
+    </div>
+  </div>
 </div>
