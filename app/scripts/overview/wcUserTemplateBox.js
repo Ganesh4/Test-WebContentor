@@ -43,7 +43,7 @@
            				scope.categories = [];
            				scope.categories.push({name: 'featured'});
            				scope.templates = data.plain();
-						scope.templateType = 'Featured';
+						      scope.templateType = 'Featured';
 					});
 
            		}else if(type = "categoryTemplates"){
@@ -69,7 +69,7 @@
 
               scope.editDesign = function(id){
                 if(id){
-                var href = state.go('app.editor', {'templateId' : id.toString(), 'userId' : '1'}, {absolute: true});
+                  var href = state.go('app.editor', {'templateId' : id.toString(), 'userId' : '1'}, {absolute: true});
                 //window.open(href, '_blank');
                 }
               }

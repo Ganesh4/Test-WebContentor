@@ -143,15 +143,15 @@
             		}
             	});
 
-            	//Reload Data of the State
-            	$scope.$on(Global.EVENTS.RELOAD, function(event , data){
+				//Reload Data of the State
+				$scope.$on(Global.EVENTS.RELOAD, function(event , data){
 					//This Will Reload All The States
-            		$state.transitionTo($state.current, $stateParams, {
-					    reload: true,
-					    inherit: false,
-					    notify: true
+					$state.transitionTo($state.current, $stateParams, {
+						reload: true,
+						inherit: false,
+						notify: true
 					});
-            	});
+				});
 			}
 		]);
 })(angular);
