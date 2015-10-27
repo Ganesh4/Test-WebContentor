@@ -65,6 +65,7 @@
                     //console.log('Added Recipients ---------- ', data.plain());
                 });
                 $state.go('app.home.manage.recipients.list');
+                $scope.$emit(Global.EVENTS.RELOAD);
                  
             });
 
@@ -102,9 +103,11 @@
 
             $scope.$on(Global.EVENTS.ADD_EMAIL_RECIPIENT_LIST,function(event,data){
                 console.log('$scope.loggedInUser.securityUserId',$scope.loggedInUser.securityUserId);
-                var emaillist = $scope.name;
-               RecipientApiSrv.addEmailList($scope.loggedInUser.securityUserId+'/email/list',emaillist,function(response){
+                var list = {};
+                list.name = $scope.name;
+               RecipientApiSrv.addEmailList($scope.loggedInUser.securityUserId+'/email/list',list,function(response){
                $scope.isInputDisable = true;
+               $scope.$emit(Global.EVENTS.RELOAD);
                  
 
                }); 
@@ -115,6 +118,14 @@
                 console.log('$scope.isInputDisable ----------- ',$scope.isInputDisable);
 
             });
+            //Delete EmailList Functionality..
+             self.deleteEmailList = function(id){
+            RecipientApiSrv.deleteRecipient($scope.loggedInUser.securityUserId+'/email/list'+id, null, function(data){
+                    alert('EmailList Delete Successfully');
+                    $scope.$emit(Global.EVENTS.RELOAD);
+                })
+            }
+            
 
            /* $scope.edit = false;
             $scope.data = {};

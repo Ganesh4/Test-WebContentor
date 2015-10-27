@@ -40,13 +40,11 @@
                     });
 
                     // Should be come Dynamically 
-                     RecipientApiSrv.getRecipientList('1/recipient/list', {},function(data){
+                     RecipientApiSrv.getRecipientList('1/email/list', {},function(data){
                         if(data){
                             scope.RecipientList = data.plain();
                         }
                     });
-
-
 
                     //Update State Object According to the Country Selected. 
                     scope.updateCountry = function(){
@@ -58,6 +56,7 @@
                         });
                         
                     }
+
 
                 }
             }
