@@ -1,7 +1,23 @@
 
- <span >
+ <!--<span >
       List Name: <input type="text" name="name" ng-model="name" ng-disabled = "isInputDisable"/>
- </span>
+ </span>-->
+ 
+ 
+   <div class="col-xs-12 recip-main">
+
+          <div class="form-group recip-edit-row">
+            <div class="recip-left-fg">
+                <input type="text" class="form-control" name="name" ng-model="name" ng-disabled = "isInputDisable"/>
+            </div>
+        
+            <div class="recip-right-fg">
+                  <a><i class="fa fa-pencil-square-o"></i>Edit</a>
+            </div>
+            
+          </div>
+
+    </div>
 
 <div class="recipients_table">
 
@@ -17,11 +33,22 @@
 
 
 <div class="menu-circle">
-<i class="fa fa-plus"></i>
+<div class="plus-circle"><i class="fa fa-plus"></i></div>
+
 <ul>
-    <li><i class="fa fa-user" ui-sref-active = "nav-selected" ui-sref = "app.home.manage.recipients.add" title ="Add Contacts"></i></li>
-    <li><i class="fa fa-users" ui-sref-active = "nav-selected" ui-sref = "app.home.manage.recipients.import" title="Import Contacts"></i></li>
-    
+
+    <li>
+    <i class="fa fa-user" ui-sref-active = "nav-selected" ui-sref = "app.home.manage.recipients.add"></i>
+    </li>
+    <li>
+    <i class="fa fa-users" ui-sref-active = "nav-selected" ui-sref = "app.home.manage.recipients.import"></i>
+    </li>
+    <!-- title -->
+    <span class="import-recip">Import Recipient</span>
+    <span class="add-recip">Add Recipient</span>
+    <!-- title -->
+
 </ul>
 
 </div>
+

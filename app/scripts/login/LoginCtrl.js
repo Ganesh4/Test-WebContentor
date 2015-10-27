@@ -12,14 +12,14 @@
             'notify',
         	function($scope, loginSrv, $state, Global, localStorageService,notify){
                  notify({
-                        message : 'TEST MESSAGE', //instead of this we can pass messageTemplate Also
-                        position : 'right', //Options ['left' , 'center' , 'right']
+                        message : 'Sample Dialog Box', //instead of this we can pass messageTemplate Also
+                        //position : 'right', //Options ['left' , 'center' , 'right']
                         duration : 1000000000, //Time in milisecond for which the notification is visible
-                        classes : 'notify-error',
+                        classes : 'notify-Warning',
                         templateUrl: './views/commons/notification/Notification.html',
                         button :[{
                             name : 'Ok',
-                            onClick : 'NAVIGATE', 
+                            onClick : 'DIALOG_CLOSE', 
                             type : 'Button',
                             state : 'app.register.user'
                         },{
