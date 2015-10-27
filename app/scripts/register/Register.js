@@ -79,7 +79,8 @@
                             placeholder:'Country',
                             model : 'country',
                             onChange : 'updateCountry()',
-                            ngOptions: 'country.countryName for country in countries'
+                            ngOptions: 'country.countryName for country in countries',
+                            initMethod:'getCountries()',
                         }]
 
                     },{
@@ -108,7 +109,8 @@
                             required: false,
                             placeholder:'State',
                             model : 'state',
-                            ngOptions:'state.stateName for state in states'
+                            ngOptions:'state.stateName for state in states',
+                            initMethod:'',
                         },{
                             name:'zip',
                             lable:'Zip',

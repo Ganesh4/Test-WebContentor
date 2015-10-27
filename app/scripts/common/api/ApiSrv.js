@@ -93,6 +93,13 @@ angular.module('microsite').service('ApiSrv',
 					'Content-Type': undefined
 			}).then(success);
 		}
+		self.putMultipart = function(uri, data, success, error){
+			var formData = self.getFormData(data);
+			Restangular.one(uri).withHttpConfig({transformRequest: angular.identity
+			}).customPUT(formData, undefined, undefined, {
+					'Content-Type': undefined
+			}).then(success);
+		}
 
 		self.put = function(uri, params, success , error){
 			console.log("params -------------- ",params);
