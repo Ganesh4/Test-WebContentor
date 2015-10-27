@@ -65,6 +65,7 @@
         			buttons : ["bold", "italic", "underline", "sep", "align", "insertOrderedList", "insertUnorderedList"]
     			}
     			$scope.$on(Global.EVENTS.NAVIGATE,function(event,data){
+    				alert("Navigation");
                 	$state.go(data.state);
             	});
 
@@ -120,8 +121,6 @@
 			    }else{
 			    	$scope.loggedInUser = localStorageService.get('loggedInUser');
 			    	$scope.userGroupUri = $scope.loggedInUser.securityUserId+'/'+$scope.loggedInUser.securityGroup.securityGroupId+'/';
-			    	
-			    	console.log("dsjfhdsf -------------- ",$scope.loggedInUser);
 			    }
 			    
 			    //Selected data of the grid.
