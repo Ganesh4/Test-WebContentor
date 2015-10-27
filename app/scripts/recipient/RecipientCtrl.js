@@ -9,9 +9,7 @@
 		 'RecipientApiSrv',
          'Global',
 		 function($scope,$state,Restangular,RecipientApiSrv,Global){
-		   $scope.elements = $state.current.data.elements;
-           $scope.formBtns = $state.current.data.formBtns;
-           $scope.submitEvent = $state.current.data.submitEvent;
+		                         
            $scope.recipients = {};
             var param = {};
            $scope.isInputDisable = true;
@@ -63,10 +61,10 @@
                 recipient = _.omit(recipient,'list');
                 RecipientApiSrv.addRecipient($scope.loggedInUser.securityUserId+'/recipients',recipient,function(response){
                     //console.log('Added Recipients ---------- ', data.plain());
+                    if(response === true)
+                        $state.go('app.home.manage.recipients.list');
                 });
-                $state.go('app.home.manage.recipients.list');
-                $scope.$emit(Global.EVENTS.RELOAD);
-                 
+                
             });
 
             $scope.$on(Global.EVENTS.GET_RECIPIENT_BY_LIST,function(event, data){

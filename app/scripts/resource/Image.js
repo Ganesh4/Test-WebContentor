@@ -53,7 +53,8 @@
 	                    disable:'DELETE_BTN_DISABLE'
 	                },{
 	                    name : 'Edit',
-	                    onClick:'EDIT_IMAGE',
+	                    onClick:'NAVIGATE',
+	                    state:'app.home.manage.resources.images.edit',
 	                    type  : "Button"
 
 	                },{
@@ -88,7 +89,7 @@
 		        }
 		    }).state('app.home.manage.resources.images.add',{
 		        url:'/add',
-		        templateUrl:'views/resource/AddImage.html',
+		        template:'<wc-form elements ="elements" select-2-options = "select2Options" form-btns="formBtns" form-data="image"></wc-form>',//views/resource/AddImage.html',
 		        data: {
 		        	 displayName: 'Add',
 		        	 actionBarBtn: [{
@@ -98,23 +99,109 @@
 	                },{
 	                    name : 'Submit',
 	                    onClick : 'ADD_NEW_IMAGE',
-	                    state:''
-	                }]
+	                }],
+                	elements:[
+                    {
+                        rowClass :'col-md-5',
+                		rowElement:[{
+                			name:'Description',
+                			lable:'Description',
+                			type: 'TEXT_AREA',
+                            required: false,
+                            validate:'',
+                            placeholder:'Description',
+                            model : 'description'
+                		},{
+                			name:'Keywords',
+                            lable:'Keywords',
+                            type: 'SELECT_TAGS',
+                            required: false,
+                            validate:'',
+                            placeholder:'Keywords',
+                            model : 'keywords'
+                		},{
+                			name: 'Category',
+                            lable: 'Category',
+                			type: 'DROP_DOWN',
+                			placeholder: 'Category',
+                			ngOptions: 'category.name for category in imageCategory',
+                            model: 'category',
+                            initEvent: 'IMAGE_CATEGORY',
+                		},{
+                			name: 'ExpiryDate',
+                			lable: 'Expiry Date',
+                			type: 'CALENDAR',
+                			model: 'expiryDate',
+                			onChange: '',
+                			format: 'yyyy-MM-dd',
+                		},{
+                			name: 'file',
+                			lable: 'Upload Image',
+                			type: 'FILE',
+                			required: false,
+                			placeholder: 'Image File',
+                			fileName: 'file'
+                		}],
+                	}]
 		        }
 		    }).state('app.home.manage.resources.images.edit',{
-		        url:'/edit',
-		        templateUrl:'views/resource/EditImage.html',
-		        data: {
-		        	 displayName: 'Edit',
-		        	 actionBarBtn: [{
+		    	url:'/edit',
+		    	template:'<wc-form elements ="elements" select-2-options = "select2Options" form-btns="formBtns" form-data="image"></wc-form>',
+				controller:'ImageEditCtrl',
+				data: {
+		        	displayName: 'Edit',
+		        	actionBarBtn: [{
 	                    name : 'Cancel',
 	                    onClick : 'NAVIGATE',
 	                    state:'app.home.manage.resources.images.grid',
 	                },{
-	                    name : 'Submit',
-	                    onClick : 'ADD_NEW_IMAGE',
-	                    state:''
-	                }]
+	                    name : 'Update',
+	                    onClick : 'UPDATE_IMAGE',
+	                }],
+                	elements:[
+                    {
+                        rowClass :'col-md-5',
+                		rowElement:[{
+                			name: 'Name',
+                			lable: 'Image Name',
+                			type: 'TEXT',
+                			required: false,
+                			placeholder: 'Image Name',
+                			model: 'upload.fileName'
+
+                		},{
+                			name:'Description',
+                			lable:'Description',
+                			type: 'TEXT_AREA',
+                            required: false,
+                            validate:'',
+                            placeholder:'Description',
+                            model : 'description'
+                		},{
+                			name:'Keywords',
+                            lable:'Keywords',
+                            type: 'SELECT_TAGS',
+                            required: false,
+                            validate:'',
+                            placeholder:'Keywords',
+                            model : 'keywords'
+                		},{
+                			name: 'Category',
+                            lable: 'Category',
+                			type: 'DROP_DOWN',
+                			placeholder: 'Category',
+                			ngOptions: 'category.name for category in imageCategory',
+                            model: 'category',
+                            initEvent: 'IMAGE_CATEGORY',
+                		},{
+                			name: 'ExpiryDate',
+                			lable: 'Expiry Date',
+                			type: 'CALENDAR',
+                			model: 'expiryDate',
+                			onChange: '',
+                			format: 'yyyy-MM-dd',
+                		}],
+                	}]
 		        }
 		    });
 	}]);

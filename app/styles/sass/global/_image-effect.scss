@@ -89,7 +89,26 @@
    height: 100%;
    width:100%;
    padding: 25px;
-	}
+   
+   .checkbox-style{
+	   position: absolute;
+	   
+    ul {		
+		  li {
+			  width: 24px;
+			  height: 26px;
+			  background-color:#3e4042;
+			  border-radius: 2px;
+		  }
+		  li.selected {
+			  width: 28px;
+			  height: 26px;
+			  background-image:url(../../images/select.png);
+			  background-color:transparent;
+		  }
+    }
+    }
+}
 	
 .view img {
    display: block;
@@ -127,17 +146,3 @@
    box-shadow: 0 0 1px #000;
 	}
 	
-	.checkbox-style ul {		
-		  li {
-			  width: 24px;
-			  height: 26px;
-			  background-color:#3e4042;
-			  border-radius: 2px;
-		  }
-		  li.selected {
-			  width: 28px;
-			  height: 26px;
-			  background-image:url(../../images/select.png);
-			  background-color:transparent;
-		  }
-    }

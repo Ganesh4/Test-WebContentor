@@ -1,0 +1,73 @@
+
+<label ng-if="lable !== undefined">{{lable}}</label>
+{{initMethod}}
+<div ng-if="type === 'DROP_DOWN'" ng-init= "init()">
+    <select class = "form-control" 
+		ng-change = "{{onChange}}"  ng-options="{{options}}">
+		<!--<option ng-repeat = "args in array">{{args}}</option>-->
+	</select>
+
+</div>
+
+<div ng-if="type === 'TEXT'">
+
+	<input ng-if ="required" class="form-control" 
+		name="{{name}}" placeholder="{{placeholder}}" required="required"  ng-model = "formData[model]"   required-err-type="{{validate}}" />
+
+	<input ng-if ="!required" class="form-control" ng-init = "bracket(model)" 							ng-model = "formData[model]" name="{{name}}" placeholder="{{placeholder}}" />
+</div>
+
+<div ng-if="type === 'TEXT_AREA'">
+	<textarea class="form-control textarea-height" rows="5" ng-valid placeholder="{{placeholder}}"></textarea>
+</div>
+
+<div ng-if="type === 'SELECT_TAGS'">
+ 	<input  ui-select2="select2Options" class="form-control textfield-width" 
+		ng-model="formData[model]" data-placeholder="{{placeholder}}">
+</div>
+<div ng-if="type === 'PASSWORD'">
+
+	<input type="password" ng-if ="required" class="form-control" 
+		name="{{name}}" ng-model="formData[model]" 
+		placeholder="{{placeholder}}" required="required"  required-err-type="{{validate}}" />
+
+	<input type="password" ng-if ="!required" class="form-control" 
+		name="{{name}}" ng-model="formData[model]" placeholder="{{placeholder}}" />
+</div>
+
+<div ng-if="type === 'PATTERN'">
+	<input class="form-control" name="{{name}}" 
+		ng-model="formData[model]" placeholder="{{placeholder}}" ng-pattern="{{pattern}}" pattern-err-type="{{validate}}" />
+</div>
+
+<div ng-if="type === 'RADIO'">
+	<input type="radio" name = "{{name}}" 
+		ng-model = "formData[model]" ng-checked = "formData[model]" ng-model="formData[model]">{{name}}</input>
+</div>
+<div ng-if="type === 'CHECKBOX'">
+	<label>
+	<input type="checkbox" name = "{{name}}" 
+		ng-model = "formData[model]" ng-checked = "formData[model]" ng-click = "onClick"> {{name}}</input>
+	</label>
+</div>
+
+
+<div ng-if="type === 'CAPTCHA'">
+	<div class="g-recaptcha" ng-model = "formData[model]" 
+		name = "{{name}}" data-sitekey="6Lc_0f4SAAAAAF9ZA_d7Dxi9qRbPMMNW-tLSvhe6">
+	</div>
+</div>
+
+<div ng-if="type === 'CALENDAR'">
+	<wc-calendar form-data="formData" model="model" format = "format"></wc-calendar>
+</div>
+
+<div ng-if="type === 'BUTTON'">
+	<button class = "btn btn-default"name = "name" type = "btnType">{{name}}</button>
+</div> 
+
+<div class="margin-for-addimg" ng-if="type === 'FILE'">
+	<div class="col-sm-10" >
+    	<wc-file-upload-model name = "fileName"/>
+	</div>
+<div>

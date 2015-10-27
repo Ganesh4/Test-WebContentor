@@ -97,6 +97,14 @@
                 console.log('User campaignList ------- ',  $scope.campaignList);
             });
 
+               $scope.getCampaignDetail = function(resourceData){
+                if(resourceData){
+                    console.log('resourceData ------------ ',resourceData);
+                    $scope.campaign = resourceData;
+                    console.log('campaign ------------ ',$scope.campaign);
+                    $state.go('app.home.campaign.detail')
+                }
+            }  
               
            
 

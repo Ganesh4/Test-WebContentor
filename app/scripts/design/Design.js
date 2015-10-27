@@ -17,22 +17,22 @@
                 displayName :'Page',
                 actionsBtn :[{
                 	name: 'View More',
-                	onClickEvent: '',
+                	onClick: '',
                 }],
                 actionBarBtn: [{
                     name : 'Refresh',
-                    onClickEvent : 'REFRESH',
+                    onClick : 'REFRESH',
                 },{
                     name : "Export"
                 },{
                     name : "Delete",
-                    onClickEvent : 'DELETE_USER',
+                    onClick : 'DELETE_USER',
                 },{
                     name : "Properties"
                 },{
                     name : "Add",
-                    onClickEvent : 'NAVIGATE',
-                    state : 'app.home.manage.user.add.general'
+                    onClick : 'NAVIGATE',
+                    state : 'app.home.manage.page.add'
                 }] 
             },     
 		}).state('app.home.manage.page.overview', {
@@ -51,12 +51,51 @@
                  displayName: 'Detail',
             }
     
-        }).state('app.home.manage.page.upload', {
-            url:'/upload',
+        }).state('app.home.manage.page.add', {
+            url:'/add',
             templateUrl:'views/design/DesignUpload.html',
             controller:'DesignCtrl',
              data: {
-                 displayName: 'Upload',
+                 displayName: 'Upload New Promotional Page',
+                 rowElement:[{
+                    name:'name',
+                    lable:'name',
+                    type: 'TEXT',
+                    required: false,
+                    validate:'',
+                    placeholder:'Description',
+                    model : 'name'
+                },{
+                    name:'Keywords',
+                    lable:'Keywords',
+                    type: 'SELECT_TAGS',
+                    required: false,
+                    validate:'',
+                    placeholder:'Keywords',
+                    model : 'seo.keywords'
+                },{
+                    name: 'Category',
+                    lable: 'Category',
+                    type: 'DROP_DOWN',
+                    placeholder: 'Category',
+                    ngOptions: 'category.name for catagory in catagories',
+                    model: 'category',
+                    initEvent: 'IMAGE_CATEGORY',
+                },{
+                    name: 'ExpiryDate',
+                    lable: 'Expiry Date',
+                    type: 'CALENDAR',
+                    model: 'expiryDate',
+                    onChange: '',
+                    format: 'yyyy-MM-dd',
+                },{
+                    name: 'file',
+                    lable: 'Upload Image',
+                    type: 'FILE',
+                    required: false,
+                    placeholder: 'Image File',
+                    fileName: 'file'
+                }],
             }
         });
 	}]);
