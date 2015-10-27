@@ -186,7 +186,7 @@
                             type: 'DROP_DOWN',
                             required: false,
                             placeholder:'List Name',
-                            model : 'emailRecipientsList',
+                            model : 'list',
                             ngOptions:'recipient.name for recipient in RecipientList',
                             initEvent: 'RECIPIENT_LIST',
                         }],

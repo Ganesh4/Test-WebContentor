@@ -55,8 +55,10 @@
                     recipient.country = $scope.emailRecipients.country.securityCountryID;
                 if(!_.isUndefined(recipient.state))
                     recipient.state = $scope.emailRecipients.state.securityStateID;
-                 if(!_.isUndefined(recipient.list))
-                    recipient.listId = $scope.emailRecipients.list.listId;
+                 if(!_.isUndefined(recipient.list)){
+                    recipient.emailRecipientsList = [];
+                    recipient.emailRecipientsList.push($scope.emailRecipients.list);
+                }
 
                 recipient = _.omit(recipient,'list');
                 RecipientApiSrv.addRecipient($scope.loggedInUser.securityUserId+'/recipients',recipient,function(response){
