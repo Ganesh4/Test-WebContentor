@@ -113,12 +113,22 @@
            }); 
             $scope.$on(Global.EVENTS.INPUT_BOX_ENABLED, function(event,data){
                 $scope.isInputDisable = false;
+                $scope.SAVE_BTN_DISABLE = true;
                 console.log('$scope.isInputDisable ----------- ',$scope.isInputDisable);
 
             });
-            //Delete EmailList Functionality..
+            //Delete Email List Functionality..
+            $scope.$on(Global.EVENTS.DELETE_EMAIL_LIST,function(){
+
+                if(!_.isEmpty($scope.gridRowSelectedData)){
+                    var RecipientData = $scope.gridRowSelectedData[0];
+                    console.log('Email List Data ------- ',RecipientData.listId);
+
+                    self.deleteEmailList(RecipientData.listId);
+                }
+            });
              self.deleteEmailList = function(id){
-            RecipientApiSrv.deleteRecipient($scope.loggedInUser.securityUserId+'/email/list'+id, null, function(data){
+            RecipientApiSrv.deleteRecipient($scope.loggedInUser.securityUserId+'/email/list/'+id, null, function(data){
                     alert('EmailList Delete Successfully');
                     $scope.$emit(Global.EVENTS.RELOAD);
                 })

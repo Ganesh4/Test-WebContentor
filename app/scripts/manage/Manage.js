@@ -49,14 +49,14 @@
                             }]
                         },{
                             icon : 'fa fa-angle-down',
-                            name : 'Emails and Recipients',
+                            name : 'Emails and Contacts',
                             menu : [{
                                 icon : 'fa fa-envelope',
                                 name : 'Emails',
                                 state:'app.home.manage.emails'
                             },{
                                 icon : 'fa fa-list-alt',
-                                name : 'Recipients',
+                                name : 'Contacts',
                                 state: 'app.home.manage.recipients.list'
                             },{
                                 icon : 'fa fa-list-alt',
