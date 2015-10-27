@@ -35,9 +35,13 @@
 		  padding: 20px;
 		  text-align: center;
 		  
+		  p{
+			  font-size: 14px;
+			  }
+		  
 		  i{
 			  margin-right: 10px;
-			  font-size: 20px;
+			  font-size: 24px;
 			  }
 
 		  .modal-button{
@@ -47,9 +51,21 @@
 			  position: absolute;
 			  bottom: 25px;
 			  
-			  button{
-				  float: left;
+			  div{
 				  margin-right: 15px;
+				  display: inline-block;
+				  
+				  button{
+					  width: 80px;
+					  background-color: #fff;
+					  background-image: none;					  
+					  border: none;
+					  }
+				button:hover {
+						color: #ffffff;
+						background-color: #1e3e66;
+					}
+					  
 				  }
 		  }
 	   }
