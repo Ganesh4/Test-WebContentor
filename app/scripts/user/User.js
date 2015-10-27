@@ -83,7 +83,7 @@
 						rowElement:[{
 							name:'email',
                 			lable:'Email',
-                			type: 'EMAIL',
+                			type: 'TEXT',
                             required: true,
                             validate:'emailisrequired',
                             placeholder:'Email',
@@ -148,20 +148,22 @@
                             placeholder:'Country',
                             model : 'country',
                             onChange : 'updateCountry()',
-                            ngOptions: 'country.countryName for country in countries'
+                            ngOptions: 'country.countryName for country in countries',
+                            initEvent: 'COUNTRY_LIST',
                         }]
 				    },{
 				    	rowClass :'col-lg-6',
 						rowElement:[{
-							 name:'state',
+							name:'state',
                             lable:'state',
                             type: 'DROP_DOWN',
                             required: false,
                             placeholder:'State',
                             model : 'state',
-                            ngOptions:'state.stateName for state in states'
+                            ngOptions:'state.stateName for state in states',
+                            initMethod:'',
 						},{
-                             name:'zip',
+                            name:'zip',
                             lable:'Zip',
                             type: 'TEXT',
                             required: false,
@@ -171,7 +173,7 @@
 				    },{
 				    	rowClass :'col-lg-6',
 						rowElement:[{
-							 name:'securityRoleId',
+							name:'securityRoleId',
                             lable:'Roles',
                             type: 'DROP_DOWN',
                             required: false,

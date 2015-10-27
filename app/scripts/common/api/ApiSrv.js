@@ -13,7 +13,8 @@ angular.module('microsite').service('ApiSrv',
 	'$q',
 	'Restangular',
 	'Global',
-	function ($http, $q, Restangular, Global ) {
+	'notify',
+	function ($http, $q, Restangular, Global, notify) {
 
 		var self = this;
 	    var result = {};
@@ -64,11 +65,11 @@ angular.module('microsite').service('ApiSrv',
 				});
 				return false; // error handled
 			}else if(response.status === 400){
-				console.log("Error ------------- 400",response.data.message);
+				console.log("Error ------------- 400",response);
 				return false;
 				
 			}else if(response.status === 404){
-				console.log("Error ------------- 404",response.data.message);
+				console.log("Error ------------- 404",response.ModelState.error);
 				return false;
 
 			}else if(response.status === 500){
@@ -89,6 +90,13 @@ angular.module('microsite').service('ApiSrv',
 			var formData = self.getFormData(data);
 			Restangular.one(uri).withHttpConfig({transformRequest: angular.identity
 			}).customPOST(formData, undefined, undefined, {
+					'Content-Type': undefined
+			}).then(success);
+		}
+		self.putMultipart = function(uri, data, success, error){
+			var formData = self.getFormData(data);
+			Restangular.one(uri).withHttpConfig({transformRequest: angular.identity
+			}).customPUT(formData, undefined, undefined, {
 					'Content-Type': undefined
 			}).then(success);
 		}
@@ -126,5 +134,51 @@ angular.module('microsite').service('ApiSrv',
             console.log('FormData -------- ' ,  formData);
             return formData;
         }
+
+
+        //Notifications
+        self.showNotification = function(type,message){
+            
+            switch(type){
+                case 'error':
+                    notify({
+                        message : message, //instead of this we can pass messageTemplate Also
+                        position : 'right', //Options ['left' , 'center' , 'right']
+                        duration : 1000000000, //Time in milisecond for which the notification is visible
+                        classes : 'notify-error',
+                        templateUrl: './views/commons/notification/Notification.html',
+                       	button :[{
+                       		name : 'Ok',
+                       		onClick : '' 
+                       	},{
+                       		name : 'Cancel',
+                       		
+
+                       	}]
+                    });
+                    break;
+                case 'success' :
+                    notify({
+                        message : message, //instead of this we can pass messageTemplate Also
+                        position : 'right', //Options ['left' , 'center' , 'right']
+                        duration : 10000, //Time in milisecond for which the notification is visible
+                        classes : 'notify-Success'
+
+                    });
+                    break;
+                case 'warning' :
+                    notify({
+                        message : message, //instead of this we can pass messageTemplate Also
+                        position : 'right', //Options ['left' , 'center' , 'right']
+                        duration : 10000, //Time in milisecond for which the notification is visible
+                        classes : 'notify-Warning'
+
+                    });
+                    break;    
+            }
+        }
+
+         
+
 }]);
 })(angular);

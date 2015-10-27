@@ -1,67 +1,10 @@
 <div class="" ng-repeat="(key , element) in elements">
-  <div ng-class="element.rowClass" ng-repeat = "rowElement in element.rowElement">
-    <div class="form-group">
-       <label ng-if="rowElement.lable !== undefined">{{rowElement.lable}}</label>
-		<div ng-if="rowElement.type === 'DROP_DOWN'">
-		    <select ng-model="formData[rowElement.model]" class = "form-control" 
-				ng-change = "{{rowElement.onChange}}" ng-options="{{rowElement.ngOptions}}">
-				<!--<option ng-repeat = "args in array">{{args}}</option>-->
-			</select>
-		</div>
-		<div ng-if="rowElement.type === 'TEXT'">
-
-		<input ng-if ="rowElement.required" class="form-control" 
-			name="{{rowElement.name}}" ng-model="formData[rowElement.model]" 
-			placeholder="{{rowElement.placeholder}}" required="rowElement.required"  required-err-type="{{rowElement.validate}}" />
-
-		<input ng-if ="!rowElement.required" class="form-control" name="{{rowElement.name}}" ng-model="formData[rowElement.model]" placeholder="{{rowElement.placeholder}}" />
-		</div>
-
-		<div ng-if="rowElement.type === 'EMAIL'">
-
-		<input ng-if ="rowElement.required" class="form-control" type = "email"
-			name="{{rowElement.name}}" ng-model="formData[rowElement.model]" 
-			placeholder="{{rowElement.placeholder}}" required="rowElement.required"  required-err-type="{{rowElement.validate}}" />
-
-		<input ng-if ="!rowElement.required" class="form-control" name="{{rowElement.name}}" ng-model="formData[rowElement.model]" placeholder="{{rowElement.placeholder}}" />
-		</div>
-
-		<div ng-if="rowElement.type === 'PASSWORD'">
-
-			<input type="password" ng-if ="rowElement.required" class="form-control" 
-				name="{{rowElement.name}}" ng-model="formData[rowElement.model]" 
-				placeholder="{{rowElement.placeholder}}" required="rowElement.required"  required-err-type="{{rowElement.validate}}" />
-
-			<input type="password" ng-if ="!rowElement.required" class="form-control" name="{{rowElement.name}}" ng-model="formData[rowElement.model]" placeholder="{{rowElement.placeholder}}" />
-		</div>
-
-		<div ng-if="rowElement.type === 'PATTERN'">
-		<input class="form-control" name="{{rowElement.name}}" 
-			ng-model="formData[rowElement.model]" placeholder="{{placeholder}}"
-			ng-pattern="{{rowElement.pattern}}" pattern-err-type="{{rowElement.validate}}" />
-		</div>
-
-		<div ng-if="rowElement.type === 'RADIO'">
-		<input type="radio" name = "{{rowElement.name}}" 
-			ng-model = "formData[rowElement.model]" ng-checked = "formData[rowElement.model]" ng-model="formData[rowElement.model]">{{rowElement.name}}</input>
-		</div>
-		<div ng-if="rowElement.type === 'CHECKBOX'">
-		<label>
-		<input type="checkbox" name = "{{rowElement.name}}" 
-			ng-model = "formData[rowElement.model]" ng-checked = "formData[rowElement.model]" ng-click = "rowElement.onClick"> {{rowElement.name}}</input>
-		</label>
-		</div> 
-
-		<div ng-if="rowElement.type === 'CAPTCHA'">
-			<div class="g-recaptcha" ng-model = "formData[rowElement.model]" 
-				name = "{{rowElement.name}}" data-sitekey="6Lc_0f4SAAAAAF9ZA_d7Dxi9qRbPMMNW-tLSvhe6">
-			</div>
-		</div>
-
-		<div ng-if="rowElement.type === 'BUTTON'">
-			<button class = "btn btn-default"name = "rowElement.name" type = "rowElement.btnType">{{rowElement.name}}</button>
-	 	</div> 
+  <div ng-class="element.rowClass">
+    <div class="form-group" ng-repeat = "rowElement in element.rowElement">
+       <wc-fields lable="rowElement.lable" form-data = "formData" init-event ="rowElement.initEvent"
+        format = "rowElement.format" options="rowElement.ngOptions"
+        type = "rowElement.type" model = "rowElement.model" on-change = "rowElement.onChange" name = "rowElement.name" placeholder="rowElement.placeholder" validate = "rowElement.validate" file-name="rowElement.fileName" states = "states"></wc-fields>
     </div><!-- /input-group -->
   </div><!-- /.col-lg-4 -->
-</div>
 
+</div>

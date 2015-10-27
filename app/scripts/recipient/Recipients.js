@@ -34,10 +34,12 @@
                                 
                                },{
                                     name : 'Delete',
-                                    onClick : 'DELETE_RECIPIENT'
+                                    onClick : 'DELETE_EMAIL_LIST',
+                                    disable :'DELETE_BTN_DISABLE'
                                },{
                                     name : 'Save',
-                                    onClick : 'ADD_EMAIL_RECIPIENT_LIST'
+                                    onClick : 'ADD_EMAIL_RECIPIENT_LIST',
+                                    disable :'SAVE_BTN_DISABLE'
                                 
                                }],
                  }
@@ -82,7 +84,7 @@
                         rowElement:[{
                             name:'email',
                             lable:'Email',
-                            type: 'EMAIL',
+                            type: 'TEXT',
                             required: true,
                             validate:'emailisrequired',
                             placeholder:'Email',
@@ -147,7 +149,8 @@
                             placeholder:'Country',
                             model : 'country',
                             onChange : 'updateCountry()',
-                            ngOptions: 'country.countryName for country in countries'
+                            ngOptions: 'country.countryName for country in countries',
+                            initEvent: 'COUNTRY_LIST',
                         },{
                             name:'state',
                             lable:'State',
@@ -184,6 +187,7 @@
                             placeholder:'List Name',
                             model : 'list',
                             ngOptions:'recipient.name for recipient in RecipientList',
+                            initEvent: 'RECIPIENT_LIST',
                         }],
                     }] 
                  }
@@ -191,14 +195,14 @@
                     url: '/import',
                     templateUrl:'views/recipient/ImportRecipient.html',
                 data: {
-                     displayName: 'ImportRecipient',
+                     displayName: 'ImportContact',
                     
                     }
                 }).state('app.home.manage.recipients.mapping', {
                     url: '/mapping',
                     templateUrl:'views/recipient/MappingRecipient.html',
                 data: {
-                     displayName: 'MappingRecipient',
+                     displayName: 'MappingContact',
                     
                 }
                 }).state('app.home.manage.recipients.edit', {
@@ -242,7 +246,7 @@
                         rowElement:[{
                             name:'email',
                             lable:'Email',
-                            type: 'EMAIL',
+                            type: 'TEXT',
                             required: true,
                             validate:'emailisrequired',
                             placeholder:'Email',
@@ -307,7 +311,8 @@
                             placeholder:'Country',
                             model : 'country',
                             onChange : 'updateCountry()',
-                            ngOptions: 'country.countryName for country in countries'
+                            ngOptions: 'country.countryName for country in countries',
+                            initEvent: 'COUNTRY_LIST',
                    },{
                             name:'state',
                             lable:'State',
@@ -344,6 +349,7 @@
                             placeholder:'List Name',
                             model : 'list',
                             ngOptions:'recipient.listName for recipient in RecipientList',
+                            initEvent: 'RECIPIENT_LIST',
                         }],
                     }] 
                  }
