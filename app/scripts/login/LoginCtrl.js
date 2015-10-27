@@ -9,9 +9,9 @@
         	'$state',
             'Global',
             'localStorageService',
-            'notify',
-        	function($scope, loginSrv, $state, Global, localStorageService,notify){
-                 notify({
+            'CommonSrv',
+        	function($scope, loginSrv, $state, Global, localStorageService,CommonSrv){
+                 /*notify({
                         message : 'Sample Dialog Box', //instead of this we can pass messageTemplate Also
                         //position : 'right', //Options ['left' , 'center' , 'right']
                         duration : 1000000000, //Time in milisecond for which the notification is visible
@@ -27,7 +27,8 @@
                             type : 'Button'
 
                         }]
-                    });
+                    });*/
+                CommonSrv.showNotification('success','Sample Dialog Box');
             	$scope.loginUser={};
                 $scope.elements = $state.current.data.elements;
                 $scope.formBtns = $state.current.data.formButtons;

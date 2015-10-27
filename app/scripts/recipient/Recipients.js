@@ -158,7 +158,8 @@
                             required: false,
                             placeholder:'State',
                             model : 'state',
-                            ngOptions:'state.stateName for state in states'
+                            ngOptions:'state.stateName for state in states',
+                            initMethod:'',
                         }]
                     },{
                         rowClass :'col-lg-6',
@@ -180,7 +181,7 @@
                     },{
                         rowClass :'col-lg-6',
                         rowElement:[{
-                            name:'listId',
+                            name:'recipient',
                             lable:'List Name',
                             type: 'DROP_DOWN',
                             required: false,

@@ -10,7 +10,7 @@
          'Global',
 		 function($scope,$state,Restangular,RecipientApiSrv,Global){
 		                         
-           $scope.recipients = {};
+           $scope.emailRecipients = {};
             var param = {};
            $scope.isInputDisable = true;
            $scope.gridOptions = {
@@ -49,14 +49,16 @@
                 }
             });
 			$scope.$on(Global.EVENTS.ADD_RECIPIENT,function(event, data){ 
-                console.log('Recipients ------------ ',$scope.recipients);
-                var recipient = $scope.recipients;
+                console.log('Recipients ------------ ',$scope.emailRecipients);
+                var recipient = $scope.emailRecipients;
                 if(!_.isUndefined(recipient.country))
-                    recipient.country = $scope.recipients.country.securityCountryID;
+                    recipient.country = $scope.emailRecipients.country.securityCountryID;
                 if(!_.isUndefined(recipient.state))
-                    recipient.state = $scope.recipients.state.securityStateID;
-                 if(!_.isUndefined(recipient.list))
-                    recipient.listId = $scope.recipients.list.listId;
+                    recipient.state = $scope.emailRecipients.state.securityStateID;
+                 if(!_.isUndefined(recipient.list)){
+                    recipient.emailRecipientsList = [];
+                    recipient.emailRecipientsList.push($scope.emailRecipients.list);
+                }
 
                 recipient = _.omit(recipient,'list');
                 RecipientApiSrv.addRecipient($scope.loggedInUser.securityUserId+'/recipients',recipient,function(response){

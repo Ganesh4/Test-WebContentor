@@ -13,8 +13,7 @@ angular.module('microsite').service('ApiSrv',
 	'$q',
 	'Restangular',
 	'Global',
-	'notify',
-	function ($http, $q, Restangular, Global, notify) {
+	function ($http, $q, Restangular, Global) {
 
 		var self = this;
 	    var result = {};
@@ -136,48 +135,7 @@ angular.module('microsite').service('ApiSrv',
         }
 
 
-        //Notifications
-        self.showNotification = function(type,message){
-            
-            switch(type){
-                case 'error':
-                    notify({
-                        message : message, //instead of this we can pass messageTemplate Also
-                        position : 'right', //Options ['left' , 'center' , 'right']
-                        duration : 1000000000, //Time in milisecond for which the notification is visible
-                        classes : 'notify-error',
-                        templateUrl: './views/commons/notification/Notification.html',
-                       	button :[{
-                       		name : 'Ok',
-                       		onClick : '' 
-                       	},{
-                       		name : 'Cancel',
-                       		
-
-                       	}]
-                    });
-                    break;
-                case 'success' :
-                    notify({
-                        message : message, //instead of this we can pass messageTemplate Also
-                        position : 'right', //Options ['left' , 'center' , 'right']
-                        duration : 10000, //Time in milisecond for which the notification is visible
-                        classes : 'notify-Success'
-
-                    });
-                    break;
-                case 'warning' :
-                    notify({
-                        message : message, //instead of this we can pass messageTemplate Also
-                        position : 'right', //Options ['left' , 'center' , 'right']
-                        duration : 10000, //Time in milisecond for which the notification is visible
-                        classes : 'notify-Warning'
-
-                    });
-                    break;    
-            }
-        }
-
+        
          
 
 }]);
