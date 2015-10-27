@@ -14,6 +14,7 @@
                  // var route = 'app.home.mange';
                     $stateProvider.state('app.home.campaign', {
                         url: '/campaign',
+                        abstract: true,
                         template:"<ui-view></ui-view>",
                         controller:'CampaignCtrl',
                         data: {
@@ -67,7 +68,7 @@
                             actionBarBtn: [{
                                             name : "Cancel",
                                             onClick : 'NAVIGATE',
-                                            state :'app.home.campaign'
+                                            state :'app.home.campaign.all'
                                         },{
                                             name : "Save & Exit",
                                             onClick : 'CAMPAIGN_SAVE_EXIT',
@@ -97,7 +98,7 @@
                                 actionBarBtn: [{
                                         name : "Cancel",
                                         onClick : 'NAVIGATE',
-                                        state :'app.home.campaign'
+                                        state :'app.home.campaign.all'
                                     },{
                                         name : "Edit",
                                         onClick : 'NAVIGATE',
