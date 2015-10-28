@@ -38,6 +38,11 @@
                     field:'zip', 
                     displayName:'Zip Code',
                     cellClass : 'green-color'
+                },{
+                    field:'.', 
+                    displayName:'Action',
+                    cellTemplate: './views/assets/rowmenu.html',
+                    //cellTemplate: '<wc-ellipsis-menu></wc-ellipsis-menu>',
                 }]
             }
 
@@ -75,14 +80,17 @@
                         console.log('selectedListId------',selectedList);
                         var listId = selectedList.listId;
                     }
-                            
-            RecipientApiSrv.getRecipientByList($scope.loggedInUser.securityUserId+'/'+listId+'/recipients',{},function(data){
-                    if(data){
-                        $scope.recipientsGridOptions.data = data.plain();
-                        $scope.Recipients = data.plain();
-                    }
+                if(!_.isUndefined(listId)){         
+                    RecipientApiSrv.getRecipientByList($scope.loggedInUser.securityUserId+'/'+listId+'/recipients',{},function(data){
+                        if(data){
+                            $scope.recipientsGridOptions.data = data.plain();
+                            $scope.Recipients = data.plain();
+                        }
 
-               });
+                    });
+                }else{
+                    self.showSubMenu();
+                }
             });
 
              //Delete Recipient Functionality..
@@ -135,21 +143,22 @@
                     $scope.$emit(Global.EVENTS.RELOAD);
                 })
             }
+            //Edit USer Page Navigation
+            $scope.$on(Global.EVENTS.EDIT_CONTACT,function(){
+                console.log(' $state.current.data.elements---', $state.current.data.elements);
+                 if(!_.isEmpty($scope.gridRowSelectedData)){
+                    var contactData = $scope.gridRowSelectedData[0];
+                    $scope.emailRecipients = contactData;
+                    console.log('contactData ------- ', $scope.emailRecipients);
+                 
+                    $state.go('app.home.manage.recipient.edit');
+                }
+            });
             
-
-           /* $scope.edit = false;
-            $scope.data = {};
-            $scope.editField = function() {
-                $scope.edit = true;
-            };
-            $scope.cancelEdit = function() {
-                $scope.edit = false;
-            };
-            $scope.updateList = function(field, name) { 
-                console.log(field + ' + ' + name);
-
-
-            };    */ 
+            self.showSubMenu = function(){
+                alert("Show Sub Menu");
+            }
+           
 	}]);
 
 })(angular);
