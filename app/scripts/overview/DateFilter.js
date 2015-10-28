@@ -4,8 +4,9 @@
 angular.module('overview').filter('DateFilter', function() {
         return function(createdTime) {
             
+
             var currentTime = (new Date()).getTime();
-            var dateDifference = currentTime - createdTime;
+            var dateDifference = currentTime - new Date(createdTime);
             var seconds = Math.floor(dateDifference / 1000);
             var minutes = Math.floor(seconds / 60);
             var hours = Math.floor(minutes / 60);

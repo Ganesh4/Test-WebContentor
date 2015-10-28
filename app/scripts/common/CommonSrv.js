@@ -10,9 +10,7 @@ angular.module('common').service('CommonSrv',
         function (Restangular, $state, Global, ApiSrv) {
             var self = this;
  
-            self.getDesignCategories = function(success , error){
-               Restangular.one('categories').getList().then(success);
-            }
+            
             
             //Go To Next Step Of Wizard
             self.goToNextStep = function(wizardSteps,scope){

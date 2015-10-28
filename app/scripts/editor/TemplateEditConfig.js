@@ -7,10 +7,52 @@
 
 (function(angular){
 	angular.module('editor').config(['$urlRouterProvider','$stateProvider',	function($urlProvider,$stateProvider){
-	var route = 'app.editor';
-   $stateProvider.state(route + '.add',{
+	
+    var route = 'app.editor';
+
+    $stateProvider.state('app.preview', {
+        url:'/Preview',
+        templateUrl:'views/editor/TemplatePreview.html',
+        controller:'TemplatePreviewCtrl',
+    });
+    $stateProvider.state(route, {
+        url:'/editor/:userId/:templateId',
+        templateUrl:'views/editor/TemplateEdit.html',
+        controller:'TemplateEditCtrl',
+        data : {
+            mainMenu : [{
+                name:'ADD',
+                icon:'fa fa-plus-square',
+                state:'app.editor.add'
+                },
+                {
+                    name:'SECTION',
+                    icon:'',
+                    state:'app.editor.section'
+                },
+                {
+                    name:'WIDGETS',
+                    icon:'',
+                    state:'app.editor.widgets'
+                },
+                {
+                    name:'FORM',
+                    icon:'',
+                    state:'app.editor.form'
+                },
+                {
+                    name:'SCO',
+                    icon:'',
+                    state:'app.editor.sco'
+                },
+                {
+                    name:'STATS',
+                    icon:'',
+            }]
+        },
+        }).state(route + '.add',{
                 url:'/add',
-                templateUrl:'views/editor/SubMenu.html',
+                template:'<wc-sub-menu></wc-sub-menu>',
                 data:{
                     title : 'Add Content',
                     subMenu: [{

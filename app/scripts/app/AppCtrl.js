@@ -52,8 +52,8 @@
     			$scope.$on('$stateChangeSuccess',function(event, data){
     				$scope.loggedInUser =  localStorageService.get('loggedInUser');
     				if($state.current.name.indexOf('resources') != -1 ||
-    					$state.current.name.indexOf('page') != -1){
-    					console.log($state.current.name);
+    					$state.current.name.indexOf('page') != -1 || 
+    					$state.current.name.indexOf('editor') != -1 ){
     					Restangular.setBaseUrl('http://192.168.1.168/MicroS/');
     					ApiSrv.accessToken();	
     				}else{
@@ -64,6 +64,7 @@
     			$scope.froalaOptions = {
         			buttons : ["bold", "italic", "underline", "sep", "align", "insertOrderedList", "insertUnorderedList"]
     			}
+    			
     			$scope.$on(Global.EVENTS.NAVIGATE,function(event,data){
     				alert("Navigation");
                 	$state.go(data.state);
@@ -96,8 +97,6 @@
 	                });
 	            });
 
-             	
-            	
 	            $scope.enableSave = function(){
 	            	CommonSrv.enableSave($scope);
 	            }
@@ -110,8 +109,6 @@
 			        $scope.$apply(function () {            
 						//add the file object to the scope's files collection
 						$scope.files.push(args);
-						//_.extend($scope.files, args);
-						
 			        });
 			    });
 

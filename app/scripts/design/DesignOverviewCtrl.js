@@ -11,9 +11,9 @@ angular.module('overview').controller('DesignOverviewCtrl',
 		'Restangular',
 		'OverviewApiSrv',
 		'CommonSrv',
-		
-		function($scope,$state, Restangular, OverviewApiSrv,CommonSrv){
-			Restangular.setBaseUrl('http://localhost/MicroS/');
+		'DesignApiSrv',
+		function($scope,$state, Restangular, OverviewApiSrv, CommonSrv, DesignApiSrv){
+			
 			$scope.subheader = $scope.$parent.subheader;
 			$scope.isHidden = false;   
 			$scope.templates = [];
@@ -42,6 +42,13 @@ angular.module('overview').controller('DesignOverviewCtrl',
 					data : [{label: 'Age'},{label: 'None'}]
 				}
 			];
+			DesignApiSrv.getAllDesigns({
+				filter:$scope.filter
+			},$scope,function(data){
+				if(data){
+					$scope.categories = data.plain();
+				}
+			});
 		}
 	]);
 })(angular);

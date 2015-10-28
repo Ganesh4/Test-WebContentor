@@ -1,5 +1,10 @@
-
 <nav class="left-navbar-edit">
-  <div class="left-navbar-edit-header"></div>
-      <div wc-edit-main-menu></div>
+  <!--<div class="left-navbar-edit-header"></div>-->
+	<ul class="nav-main-edit">
+		<li ui-sref = "{{menu.state}}" ui-sref-active="btn_active" ng-repeat="menu in menus">
+			<div><i class="{{menu.icon}}"></i></div>
+			<span class="nav-edit-text">{{menu.name}}</span>
+        </li>
+        <ui-view></ui-view>
+	</ul>
 </nav>

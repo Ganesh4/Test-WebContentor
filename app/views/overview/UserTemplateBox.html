@@ -9,13 +9,13 @@
           <div class="btn_view-all">
             <a ui-sref="#">View all</a>
           </div>
-            
               <wc-on-off-button is-hidden = "isHidden"></wc-on-off-button>
         </div> 
     </div> 
     <!-- thumb-category -->
-    <div class="row" ng-if = "category.name != 'featured'" ng-hide = "isHidden">
-        <div class="col-lg-4"  ng-repeat ='template in templates | categoryFilter : category.name'>
+    <div class="row" ng-hide = "isHidden">
+        <div class="col-lg-4"  ng-repeat ='template in category.designs'>
+
             <div class="thumb-block" ng-mouseover="onMouseOver($event)">
                 <div class="thumb-img">
                   <span class="btn_template-img-over">
