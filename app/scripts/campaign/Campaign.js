@@ -78,8 +78,60 @@
                                             disable : 'CAMPAIGN_SAVE_DISABLE'
                                         }
                             ],
-                        }
-                        }).state('app.home.campaign.detail', {
+                            elements:[{
+                                    rowClass :'col-lg-2',
+                                    rowElement:[{
+                                        lable:'Campaign Name',
+                                        name:'campaignName',   
+                                        type: 'TEXT',
+                                        required: true,
+                                        placeholder:'',
+                                        model : 'name'
+                                    }]
+                                },
+                                {
+                                    rowClass :'col-lg-2',
+                                    rowElement:[{
+                                        name:'startDate',
+                                        type: 'TEXT',
+                                        required: true,
+                                        placeholder:'',
+                                        model:"startDate"                        
+                                    }]
+                                },
+                                
+                                {
+                                    rowClass :'col-lg-2',
+                                    rowElement:[{
+                                        name:'endDate',
+                                        type: 'TEXT',
+                                        required: true,
+                                        placeholder:'',
+                                        model:"endDate"                        
+                                    }]
+                                },
+                                {
+                                    rowClass :'col-lg-2',
+                                    rowElement:[{
+                                        name:'description',
+                                        type: 'TEXT',
+                                        placeholder:'Description',
+                                        model : 'description'
+                                    }]
+                                },
+                                {
+                                    rowClass :'col-lg-2',
+                                    rowElement:[{
+                                        name:'CampaignFeatures',
+                                        type: 'checkbox',
+                                        required: true,
+                                        model : 'CampaignFeatures'
+                                    }]
+
+                                }] 
+                             
+                            }
+                 }).state('app.home.campaign.detail', {
                             url: '/detail',
                             templateUrl:"views/campaign/CampaignDetail.html",
                             controller:"CampaignDetailCtrl",
