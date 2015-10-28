@@ -9,6 +9,7 @@
 	left: 67px;
 	/*display:none;*/
 	background-color:$sidenavbar-color;
+	
 }
 
 .submenu-block{
@@ -90,6 +91,10 @@
     overflow-y: auto;
 	}
 }
+.caption{
+	width:100%;		
+	text-align:center;
+}
 .elements-right{
   width:auto;/*150px*/
 	float:right;
@@ -131,9 +136,7 @@
 		i{
 		  font-size:7em;
 		}
-		.caption{
-	    width:100%;		
-		}
+
 	}
 }
 
@@ -291,7 +294,7 @@
 				 
 				 a{
 				    padding:7px 10px;
-				    font-size: 0.85em;
+				    font-size: 11px;
 						&:hover{
 								 background-color: transparent;
 								 color:blue;
@@ -467,6 +470,7 @@
 	width:360px;
 	padding:15px;
 	font-size:11px;
+	top:10px;
 	
 	i{
     font-size:14px;		
@@ -485,6 +489,18 @@
 
 	.heading-top{
     margin-top:0;		
+	}
+	.control-options{
+    cursor:pointer;
+		
+		&:hover{
+	    i{
+		    color:#fff;		
+			}		
+		}
+		.glyphicon{
+			font-size:18px;
+		}
 	}
 }
 .settings-header{
@@ -570,6 +586,11 @@
 			border:1px solid $section-bordercolor;
 			padding: 5px 0;
 			
+			.col-md-3{
+				padding-right: 9px;
+				padding-left: 9px;	
+				text-align:center;	
+			}
 			i{
 				position: static;
 				padding: 0;
@@ -728,8 +749,8 @@
 
 /*===========  ============*/
 .nav > li > a:hover, .nav > li > a:focus{
-  background-color:#383838;
+  background-color:#27476f;/*383838*/
 }
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus{
-  background-color:#6d6d6d;
+  background-color:#3d608c;/*6d6d6d*/
 }
