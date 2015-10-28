@@ -11,6 +11,7 @@
 		$stateProvider.state('app.home.manage.page', {
  			url: '/page',
  			abstract:true,
+            controller:'DesignCtrl',
  			template:'<ui-view></ui-view>',
  			data: {
                 tags:['Iteractive User Interface', 'Parrallex Design', 'Entertainment', 'Music'],                 
@@ -54,8 +55,7 @@
         }).state('app.home.manage.page.add', {
             url:'/add',
             templateUrl:'views/design/DesignUpload.html',
-            controller:'DesignCtrl',
-             data: {
+            data: {
                  displayName: 'Upload New Promotional Page',
                  rowElement:[{
                     name:'name',

@@ -52,9 +52,9 @@
     			$scope.$on('$stateChangeSuccess',function(event, data){
     				$scope.loggedInUser =  localStorageService.get('loggedInUser');
     				if($state.current.name.indexOf('resources') != -1 ||
-    					$state.current.name.indexOf('page') != -1){
-    					console.log($state.current.name);
-    					Restangular.setBaseUrl('http://192.168.1.34:8080/MicroS/');
+    					$state.current.name.indexOf('page') != -1 || 
+    					$state.current.name.indexOf('editor') != -1 ){
+    					Restangular.setBaseUrl('http://192.168.1.168/MicroS/');
     					ApiSrv.accessToken();	
     				}else{
     					Restangular.setBaseUrl('http://192.168.1.69/Yavun/api');
@@ -64,6 +64,7 @@
     			$scope.froalaOptions = {
         			buttons : ["bold", "italic", "underline", "sep", "align", "insertOrderedList", "insertUnorderedList"]
     			}
+    			
     			$scope.$on(Global.EVENTS.NAVIGATE,function(event,data){
                 	$state.go(data.state);
             	});
@@ -95,8 +96,6 @@
 	                });
 	            });
 
-             	
-            	
 	            $scope.enableSave = function(){
 	            	CommonSrv.enableSave($scope);
 	            }
@@ -109,8 +108,6 @@
 			        $scope.$apply(function () {            
 						//add the file object to the scope's files collection
 						$scope.files.push(args);
-						//_.extend($scope.files, args);
-						
 			        });
 			    });
 
@@ -144,15 +141,15 @@
             		}
             	});
 
-            	//Reload Data of the State
-            	$scope.$on(Global.EVENTS.RELOAD, function(event , data){
+				//Reload Data of the State
+				$scope.$on(Global.EVENTS.RELOAD, function(event , data){
 					//This Will Reload All The States
-            		$state.transitionTo($state.current, $stateParams, {
-					    reload: true,
-					    inherit: false,
-					    notify: true
+					$state.transitionTo($state.current, $stateParams, {
+						reload: true,
+						inherit: false,
+						notify: true
 					});
-            	});
+				});
 			}
 		]);
 })(angular);

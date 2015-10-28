@@ -29,7 +29,8 @@
     "karma-ng-html2js-preprocessor": "~0.1.0",
     "karma-phantomjs-launcher": "~0.1.4",
     "protractor": "^2.1.0",
-    "shelljs": "^0.2.6"
+    "shelljs": "^0.2.6",
+    "medium-editor":"5.9.0"
   },
   "scripts": {
     "prestart": "npm install",

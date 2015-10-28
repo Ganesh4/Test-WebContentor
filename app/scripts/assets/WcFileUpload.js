@@ -19,6 +19,7 @@
                         //emit event upward
                         var fileData = {};
                         fileData[model] = files[i];
+                        console.log("File Data ---------- " , fileData);
                         scope.$emit("fileSelected", fileData);
                     }   
                 });
