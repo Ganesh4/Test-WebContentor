@@ -9,6 +9,7 @@
 	left: 67px;
 	/*display:none;*/
 	background-color:$sidenavbar-color;
+	
 }
 
 .submenu-block{
@@ -90,6 +91,10 @@
     overflow-y: auto;
 	}
 }
+.caption{
+	width:100%;		
+	text-align:center;
+}
 .elements-right{
   width:auto;/*150px*/
 	float:right;
@@ -131,9 +136,7 @@
 		i{
 		  font-size:7em;
 		}
-		.caption{
-	    width:100%;		
-		}
+
 	}
 }
 
@@ -291,7 +294,7 @@
 				 
 				 a{
 				    padding:7px 10px;
-				    font-size: 0.85em;
+				    font-size: 11px;
 						&:hover{
 								 background-color: transparent;
 								 color:blue;
@@ -467,6 +470,7 @@
 	width:360px;
 	padding:15px;
 	font-size:11px;
+	top:10px;
 	
 	i{
     font-size:14px;		
@@ -486,6 +490,18 @@
 	.heading-top{
     margin-top:0;		
 	}
+	.control-options{
+    cursor:pointer;
+		
+		&:hover{
+	    i{
+		    color:#fff;		
+			}		
+		}
+		.glyphicon{
+			font-size:18px;
+		}
+	}
 }
 .settings-header{
     width: 100%;
@@ -496,18 +512,6 @@
    float: left;
    width: 100%;
 		
-	.form-group{
-		width:100%;
-		float:left;
-		margin:10px auto 0px;	
-		border:1px solid $section-bordercolor;
-    padding: 5px 0;
-		
-		i{
-			position: static;
-			padding: 0;
-		}
-	}
 	.control-label{
     /*border:1px solid #c9c9c9;*/
 		margin-left:0;
@@ -575,6 +579,23 @@
 			border-top:none;
 			padding: 10px 0 0;
 		}
+		.form-group{
+			width:100%;
+			float:left;
+			margin:10px auto 0px;	
+			border:1px solid $section-bordercolor;
+			padding: 5px 0;
+			
+			.col-md-3{
+				padding-right: 9px;
+				padding-left: 9px;	
+				text-align:center;	
+			}
+			i{
+				position: static;
+				padding: 0;
+			}
+		}
 }
 .left-bg-thumb{
   float:left;
@@ -586,6 +607,12 @@
 	    text-decoration:underline;
 		}		
 	}
+	.caption{
+    width:100%;
+		text-align:center;		
+    font-size: $label-fontsize;
+    margin-top: 10px;
+	}
 }
 .right-style{
   float:right;
@@ -595,8 +622,52 @@
     width:100%;
 	}
   .style-label{
-    font-size:14px;
+    font-size:$label-fontsize;
 		font-weight:normal;
+	}
+}
+
+.property-wrap{
+  @extend .box-css;
+	
+	.property-row{
+    @extend .box-css;
+    margin-bottom: 8px;
+
+	}
+	.property-col-left{
+    width:48%;
+		text-align:right;
+		font-size:$label-fontsize;
+		float:left;
+	}
+	.value-col-right{
+    width:50%;
+		text-align:right;
+		float:left;
+	}
+	.spinner{
+    float:right;
+		width:80px;		
+	}
+	.form-control{
+    height:24px; 		
+		border-radius:0;
+		font-size:12px;
+	}
+	.input-group-btn-vertical{
+		.btn{
+	    padding:5.5px 7px;
+		}
+	   > .btn:first-child{
+		   border-top-right-radius: 0px;     
+		 }
+	   > .btn:last-child{
+		   border-bottom-right-radius: 0px;     
+		 }
+		 i{
+		    font-size:9px;	 
+			}
 	}
 }
 .edit-img-holder{
@@ -609,13 +680,23 @@
 		height:auto;		
 	}	
 }
+.property-box{
+	
+  .bottom-fixed-box{
+    border-top:1px solid $section-bordercolor;
+		margin-top:10px;
+	}
+	.edit-img-holder{
+    height:100px;		
+	}
+}
 
 /*======== section-padding-box ========*/
 .section-padding-box{
   @extend .block-container-section;
 	top:240px;
 	top: 280px;
-	width: 452px;
+	width: 432px;
 	left: 888px;
 	min-height: 240px;
 	
@@ -668,8 +749,8 @@
 
 /*===========  ============*/
 .nav > li > a:hover, .nav > li > a:focus{
-  background-color:#383838;
+  background-color:#27476f;/*383838*/
 }
 .nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus{
-  background-color:#6d6d6d;
+  background-color:#3d608c;/*6d6d6d*/
 }

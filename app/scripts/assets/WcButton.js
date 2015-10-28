@@ -2,7 +2,7 @@
 
 (function(angular){
 
-angular.module('assets').directive('wcButton',['Global','$parse',function(Global,$parse){
+angular.module('assets').directive('wcButton',['Global','$parse','notify',function(Global,$parse,notify){
 		return{
 			restrict:'AE',
 			templateUrl:'./views/assets/button.html',                
@@ -25,7 +25,7 @@ angular.module('assets').directive('wcButton',['Global','$parse',function(Global
 						scope.$root.$broadcast(scope.onClick, scope.btnData);
 				}
 				scope.PREVIOUS_BTN_DISABLE = true;
-				scope.NEXT_BTN_DISABLE = true;
+				scope.NEXT_BTN_DISABLE = false;
 				scope.CAMPAIGN_SAVE_DISABLE = true;
 				scope.CAMPAIGN_SAVE_EXIT_DISABLE = true;
 				scope.DELETE_BTN_DISABLE = true;
@@ -77,10 +77,17 @@ angular.module('assets').directive('wcButton',['Global','$parse',function(Global
 					scope.DELETE_BTN_DISABLE = false;
 	            });
 
+	           	scope.$root.$on(Global.EVENTS.DELETE_BTN_DISABLE,function(event, data){
+					scope.DELETE_BTN_DISABLE = true;
+	            });
+
 	            scope.$root.$on(Global.EVENTS.EDIT_BUTTON_ENABLE,function(event, data){
 	            	scope.EDIT_BTN_DISABLE = false;
 	            });
 
+	            scope.$on(Global.EVENTS.DIALOG_CLOSE,function(event, data){
+	            	notify.closeAll();
+	            });
 			}
 	  };
   }]);

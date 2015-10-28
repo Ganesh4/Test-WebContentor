@@ -17,11 +17,11 @@
 			'ImageApiSrv',
 			'localStorageService',
 			'$stateParams',
-       	    function($scope,$state, $q, ApiSrv, CommonSrv, Global, UserApiSrv,CampaignApiSrv, Restangular,ImageApiSrv,localStorageService,$stateParams){
+			'$rootScope',
+       	    function($scope,$state, $q, ApiSrv, CommonSrv, Global, UserApiSrv,CampaignApiSrv, Restangular,ImageApiSrv,localStorageService,$stateParams,$rootScope){
 				var param = {};
 				$state.args = [];
 				$scope.user = {};
-				$scope.image = {};
 				$scope.countries = {};
 				$scope.loggedInUser = {};
 				$scope.files = [];
@@ -82,7 +82,6 @@
 	            });
 
 	            $scope.$on(Global.EVENTS.USER_REGISTER,function(event, data){
-	               console.log('User ------- ',data);
 	               var user = data;
 	               if(!_.isUndefined(user.country))
 		                user.country = $scope.user.country.securityCountryID;
@@ -96,7 +95,7 @@
 	                });
 	            });
 
-            
+             	
             	
 	            $scope.enableSave = function(){
 	            	CommonSrv.enableSave($scope);
@@ -111,7 +110,7 @@
 						//add the file object to the scope's files collection
 						$scope.files.push(args);
 						//_.extend($scope.files, args);
-						console.log($scope.files);
+						
 			        });
 			    });
 
@@ -120,14 +119,29 @@
 			    }else{
 			    	$scope.loggedInUser = localStorageService.get('loggedInUser');
 			    	$scope.userGroupUri = $scope.loggedInUser.securityUserId+'/'+$scope.loggedInUser.securityGroup.securityGroupId+'/';
-			    	
-			    	console.log("loggedInUser -------------- ",$scope.loggedInUser);
+			    	$rootScope.userGroupUri = $scope.userGroupUri;
+			    	$rootScope.userId = $scope.loggedInUser.securityUserId;
+
 			    }
 			    
 			    //Selected data of the grid.
 			    $scope.$on(Global.EVENTS.GRID_ROW_DATA,function(event , data){
-                	if(data)
-                    	$scope.gridRowSelectedData = data;
+                	if(_.isArray(data)){
+                		$scope.gridRowSelectedData = data;
+                	}else if(data){
+                    	$scope.gridRowSelectedData.push(data);
+                	}
+            	});
+            	//Removes Element From Grid
+            	$scope.$on(Global.EVENTS.REMOVE_GRID_ROW_DATA,function(event,data){
+            		if(data){
+        		   		var index = _.indexOf($scope.gridRowSelectedData , data);
+        		   		if(index !=-1)
+        		   			$scope.gridRowSelectedData.splice(index, 1);
+
+        		   		if(_.isEmpty($scope.gridRowSelectedData))
+        		   			$scope.$emit(Global.EVENTS.DELETE_BTN_DISABLE);
+            		}
             	});
 
             	//Reload Data of the State
@@ -139,7 +153,6 @@
 					    notify: true
 					});
             	});
-
 			}
 		]);
 })(angular);

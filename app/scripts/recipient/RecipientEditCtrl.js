@@ -18,17 +18,19 @@ angular.module('recipients').controller('RecipientEditCtrl',
 
 
             //Update Recipient Functions
-            $scope.$on(Global.EVENTS.UPDATE_RECIPIENT,function(){
-                 var recipient = $scope.recipients;
+            $scope.$on(Global.EVENTS.UPDATE_CONTACT,function(){
+                 var recipient = $scope.emailRecipients;
+
                  console.log('Edit Recipient-----------',recipient);
+                 
                 if(!_.isUndefined(recipient.country))
-                    recipient.country = $scope.recipients.country.securityCountryID;
+                    recipient.country = $scope.emailRecipients.country.securityCountryID;
                 if(!_.isUndefined(recipient.state))
-                    recipient.state = $scope.recipients.state.securityStateID;
+                    recipient.state = $scope.emailRecipients.state.securityStateID;
                  if(!_.isUndefined(recipient.list))
-                    recipient.listId = $scope.recipients.list.listId;
+                    recipient.listId = $scope.emailRecipients.list.listId;
                 recipient = _.omit(recipient,'list');
-             RecipientApiSrv.updateRecipient($scope.loggedInUser.securityUserID+'/recipients',recipients,function(){
+             RecipientApiSrv.updateRecipient($scope.loggedInUser.securityUserId+'/recipients',emailRecipients,function(){
                 console.log('Updated data ------- ',data.plain());
                 $scope.$emit(Global.EVENTS.RELOAD);
                 $state.transitionTo('app.home.manage.recipients.list');

@@ -79,17 +79,12 @@ a{
 
 /*======= Warning =======*/
 
-.notify-error{
-	background-color: #c9302c;
-	color: #fff;
-	}
-	
-.notify-Success{
-	background-color: #449d44;
-	color: #fff;
-	}
-	
-.notify-Warning{
-	background-color: #ec971f;
-	color: #fff;
+.box-css{
+  width:100%;
+	float:left;
+}
+
+.notify{
+	background-color: $header-color;
+	color: $workarea-color;
 	}
