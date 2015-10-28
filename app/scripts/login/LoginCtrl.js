@@ -28,7 +28,7 @@
 
                         }]
                     });*/
-                CommonSrv.showNotification('success','Sample Dialog Box');
+                CommonSrv.showNotification('error','Sample Dialog Box');
             	$scope.loginUser={};
                 $scope.elements = $state.current.data.elements;
                 $scope.formBtns = $state.current.data.formButtons;

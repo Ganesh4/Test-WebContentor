@@ -32,6 +32,7 @@
             scope.$classes = args.classes;
             scope.$messageTemplate = args.messageTemplate;
             scope.$button = args.button;
+            scope.$icon = args.icon;
 
             if (maximumOpen > 0) {
                 var numToClose = (openNotificationsScope.length + 1) - maximumOpen;

@@ -109,8 +109,9 @@ angular.module('common').service('CommonSrv',
                         message : message, //instead of this we can pass messageTemplate Also
                         //position : 'right', //Options ['left' , 'center' , 'right']
                         duration : 1000000000, //Time in milisecond for which the notification is visible
-                        classes : 'notify-error',
+                        classes : 'notify',
                         templateUrl: './views/commons/notification/Notification.html',
+                        icon:'fa fa-times-circle - error',   
                         button :[{
                             name : 'Ok',
                             onClick : 'DIALOG_CLOSE', 
@@ -128,8 +129,9 @@ angular.module('common').service('CommonSrv',
                         message : message, //instead of this we can pass messageTemplate Also
                         //position : 'right', //Options ['left' , 'center' , 'right']
                         duration : 1000000000, //Time in milisecond for which the notification is visible
-                        classes : 'notify-Success',
+                        classes : 'notify',
                         templateUrl: './views/commons/notification/Notification.html',
+                        icon:'fa fa-check-circle - sucsses',
                         button :[{
                             name : 'Ok',
                             onClick : 'DIALOG_CLOSE', 
@@ -147,8 +149,9 @@ angular.module('common').service('CommonSrv',
                         message : message, //instead of this we can pass messageTemplate Also
                         //position : 'right', //Options ['left' , 'center' , 'right']
                         duration : 1000000000, //Time in milisecond for which the notification is visible
-                        classes : 'notify-Warning',
+                        classes : 'notify',
                         templateUrl: './views/commons/notification/Notification.html',
+                        icon:'fa fa-info-circle',
                         button :[{
                             name : 'Ok',
                             onClick : 'DIALOG_CLOSE', 
