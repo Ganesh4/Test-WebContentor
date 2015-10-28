@@ -4,11 +4,12 @@
   display: block;
   background: rgba(0, 0, 0, 0.6);
   position: fixed;
-  top: 0;
+  top: 0 !important;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: 9999;
+  margin-top: 0px !important;
   
   .modal-box {
 	  border: #333333 solid 0px;
@@ -36,12 +37,15 @@
 		  text-align: center;
 		  
 		  p{
-			  font-size: 14px;
+			  font-size: 18px;
 			  }
 		  
 		  i{
 			  margin-right: 10px;
-			  font-size: 24px;
+			  font-size: 30px;
+			  position: relative;
+			  left: 5px;
+			  top: 3px;
 			  }
 
 		  .modal-button{
@@ -57,13 +61,16 @@
 				  
 				  button{
 					  width: 80px;
-					  background-color: #fff;
+					  background-color: $logo-color;
 					  background-image: none;					  
 					  border: none;
+					  color: $workarea-color;
+					  text-shadow: none;
 					  }
 				button:hover {
-						color: #ffffff;
-						background-color: #1e3e66;
+						color: $workarea-color;
+						background-color: $COLOR_GREEN;
+						outline: none;
 					}
 					  
 				  }
