@@ -13,7 +13,7 @@
                 templateUrl:'./views/commons/leftnav/LeftNavEditor.html',
                 link:function(scope){
                     scope.menus = $state.current.data.mainMenu;
-                    scope.path = $location.path();
+                    //scope.path = $location.path();
                 }
             }
     }])
