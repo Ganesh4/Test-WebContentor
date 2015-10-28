@@ -6,7 +6,7 @@
  */
 (function(angular){
 
-	angular.module('vendor',['ui.router','restangular','ui.select2','ngSanitize','cb.x2js','ui.grid','ui.bootstrap','LocalStorageModule','cgNotify']);
+	angular.module('vendor',['ui.router','restangular','ui.select2','ngSanitize','cb.x2js','ui.grid','ui.bootstrap','LocalStorageModule']);
 
 	angular.module('common',['vendor','angularUtils.directives.uiBreadcrumbs','jcs-autoValidate','ui.grid.selection']);
 	

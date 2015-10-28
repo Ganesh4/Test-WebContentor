@@ -11,16 +11,13 @@
     margin-bottom: 25px;
     border-radius: 10px;
 
-
-
 .campaign-list-row:hover{
 	
 	.campaign-mask{
 		display: block;
 		/*opacity: 0.86;*/
-		}
-	
-	}
+	    }
+}
 
 .campaign-list-row{
 	cursor: pointer;
@@ -56,8 +53,6 @@
 					}
 				}
 				
-				
-				
 			 button:hover{
 				background-color: #1e3e66;
 				color: #fff;
@@ -72,7 +67,6 @@
 			}
 		}
 		
-	
 	h3{
 		text-align:center;
 		margin-bottom: 15px;
@@ -88,7 +82,6 @@
 		i{
 		  margin-right: 10px;
 		  }
-		
 	}
 		
 	span:nth-child(2){
@@ -200,11 +193,7 @@
 		}	
 			
 			
-		}
-		
-		
-
-		
+		}	
 }
 }
 
@@ -226,8 +215,7 @@
 			  margin-right: 15px;
 			  }
 	}
-		  
-		  
+	  
 .thumb-img-new{
 	height: 370px;
 	overflow:hidden;
@@ -313,6 +301,7 @@
 		margin-bottom: 10px;
 		margin-right: 10px;
 		color: $campaign-font;
+		float: left;
 		
 		i{margin-right: 7px;
 		  }
@@ -320,11 +309,6 @@
 		.blog-color{color: #FBB955;}
 		.email-color{color: #F16161;}
 		.promotional-color{color: #69B7F9;}
-	}
-		
-		
-		
-}
-	
-	
+	}	
+}	
 }

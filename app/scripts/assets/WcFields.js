@@ -10,7 +10,8 @@ angular.module('assets').directive('wcFields',
 	'$rootScope',
 	'RecipientApiSrv',
 	'CommonSrv',
-	function(Global, $compile, ImageApiSrv, $rootScope,RecipientApiSrv, CommonSrv){
+	'RoleApiSrv',
+	function(Global, $compile, ImageApiSrv, $rootScope,RecipientApiSrv, CommonSrv,RoleApiSrv){
 		return{
 			restrict:'AE',
 			scope:{
@@ -67,6 +68,7 @@ angular.module('assets').directive('wcFields',
 	            	//Fetches Country List from the Backend.
                     CommonSrv.getCountriesList(function(data){
 						scope.countries = data.plain();
+						console.log('scope.countries -------- ',scope.countries);
                     });
 	            });
 
@@ -86,6 +88,16 @@ angular.module('assets').directive('wcFields',
 							scope.RecipientList = data.plain();
 						}
 					});
+				});
+
+				//Event For Roles List
+				scope.$on(Global.EVENTS.ROLE_LIST,function(){
+					RoleApiSrv.getRoleList($rootScope.userId+'/roles',{},function(data){
+						if(data){
+							scope.roleList = data.plain();
+							console.log('scope.roleList -------- ',scope.roleList);
+						}
+					})
 				});
 
 	            scope.updateCountry = function(){

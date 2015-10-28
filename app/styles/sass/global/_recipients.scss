@@ -30,52 +30,117 @@
 }
 
 .menu-circle{
-	@extend .rcp_border_radus; 
-	background-color: $main_blue_color;
-	width: 60px;
-	height: 60px;	
-	right: 50px;
-	bottom: -100px;
-	cursor: pointer;	
-	ul{
-		width: 60px;
-		height: 135px;
-		position: relative;
-		top: -180px;
-		display: none;
+	cursor: pointer;
+	
+	.plus-circle:hover{
+		  opacity: 0.6;
+		  transition: opacity 1s ease-in-out;
+		  -moz-transition: opacity 1s ease-in-out;
+		  -webkit-transition: opacity 1s ease-in-out;
 		}
+		
+	.plus-circle{
+		@extend .rcp_border_radus; 
+		background-color: $main_blue_color;
+		width: 60px;
+		height: 60px;
+		right: 50px;
+	    bottom: -100px;
+		opacity: 0.60;
+		transition: opacity .55s ease-in-out;
+		-moz-transition: opacity .55s ease-in-out;
+		-webkit-transition: opacity .55s ease-in-out;
 	
 	i{
 		color:$workarea-color;
 		font-size: 26px;
-		margin: 20px 0 0 21px;
+		margin: 20px 0 0 20px;
+		}
+		
+	}
+	
+	ul:hover{
+		opacity: 1.0;
+		transition: opacity .55s ease-in-out;
+		-moz-transition: opacity .55s ease-in-out;
+		-webkit-transition: opacity .55s ease-in-out;
+		}
+		
+	ul:hover:after{
+	  	    opacity: 0.50;
+			transition: opacity .100s ease-in-out;
+			-moz-transition: opacity .100s ease-in-out;
+			-webkit-transition: opacity .100s ease-in-out;
+		}
+	
+	ul{
+		width: 60px;
+		height: 135px;
+		position: absolute;
+		display: none;
+		right: 50px;
+        bottom: -110px;
+		  opacity: 0.6;
+		  transition: opacity 1s ease-in-out;
+		  -moz-transition: opacity 1s ease-in-out;
+		  -webkit-transition: opacity 1s ease-in-out;
+		
+		.import-recip{
+			position: absolute;
+			width: auto;
+			background-color: #353535;
+			color: #fff;
+			left: -140px;
+			top: 5px;
+			padding: 5px 15px;
+			border-radius: 3px;
+			}
+		.add-recip{
+			position: absolute;
+			width: auto;
+			background-color: #353535;
+			color: #fff;
+			left: -125px;
+			top: 80px;
+			padding: 5px 15px;
+			border-radius: 3px;
+			}
+			
+		}
+	
+	
+		
+	li:hover{
+		-webkit-transform: rotate(360deg); /* Safari */
+        transform: rotate(360deg);
 		}
 	
 	li {
 	  @extend .rcp_border_radus;
-	  background-color:$sidenavbar-color;
-	  width: 50px;
-	  height: 50px;
+	  background-color:$main_blue_color;
+	  width: 60px;
+	  height: 60px;
 	  bottom: 10px;
-	  margin-left: 5px;
+	  margin-left: 0px;
 	  display: none;
+	  -webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* Safari */
+      transition: width 2s, height 2s, transform 2s;	
 	  
 	  i{
-		color:$main_blue_color;
+		color:$workarea-color;
 		font-size: 18px;
-		margin: 16px 0 0 18px;
+		margin: 22px 0 0 24px;
 		}
-
 	  }
 	  
 	 li:nth-child(2){
-	  background-color: $sidenavbar-color;
-	  bottom: 68px;
+	  background-color: $main_blue_color;
+	  bottom: 85px;
 	  
 	  i{
-		color:$main_blue_color;
+		color:$workarea-color;
 		font-size: 18px;
-		margin: 16px 0 0 16px;
+		margin: 22px 0 0 21px;
 		}
 	  }
 	}

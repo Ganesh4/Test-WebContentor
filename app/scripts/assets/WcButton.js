@@ -2,7 +2,7 @@
 
 (function(angular){
 
-angular.module('assets').directive('wcButton',['Global','$parse',function(Global,$parse){
+angular.module('assets').directive('wcButton',['Global','$parse','notify',function(Global,$parse,notify){
 		return{
 			restrict:'AE',
 			templateUrl:'./views/assets/button.html',                
@@ -83,6 +83,10 @@ angular.module('assets').directive('wcButton',['Global','$parse',function(Global
 
 	            scope.$root.$on(Global.EVENTS.EDIT_BUTTON_ENABLE,function(event, data){
 	            	scope.EDIT_BTN_DISABLE = false;
+	            });
+
+	            scope.$on(Global.EVENTS.DIALOG_CLOSE,function(event, data){
+	            	notify.closeAll();
 	            });
 			}
 	  };
