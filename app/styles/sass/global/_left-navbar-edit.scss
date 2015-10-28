@@ -136,3 +136,27 @@
 .footer-edit{
   width:92%;	
 }
+.left-navbar-edit-bottom{
+
+}
+.left-navbar-edit-bottom{
+    height: 55px;
+    width: 100%;
+    bottom: 0;
+		text-align:center;	
+	
+		li{
+			width:6%;		
+			padding:10px 0px 5px;
+			display:inline-block;
+			margin-left: -4px;
+			float:none;
+			z-index:999;
+		}	
+		li:first-child{
+			border-left:1px dotted #626262;		
+		}
+		.nav-edit-text {
+			margin-top: 7px;
+		}
+}

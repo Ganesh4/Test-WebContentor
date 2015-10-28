@@ -5,21 +5,13 @@
 
 (function(angular){
 
-    angular.module('editor').directive('wcFooterEditor',function()
-        {
-
-
-                return{
-
-                    restrict:'AE',
-                    templateUrl:'./views/commons/footer/FooterEditor.html',
-                    controller:('FooterEditorCtrl',['$scope','$state'],function($scope,$state)
-                            {
-
-
-                            })
-
-
-                }
-        })
-     })(angular);
+    angular.module('editor').directive('wcFooterEditor',function(){
+        return{
+            restrict:'AE',
+            templateUrl:'./views/commons/footer/FooterEditor.html',
+            controller:('FooterEditorCtrl',['$scope','$state'],function($scope,$state){
+                
+            })
+        }
+    })
+})(angular);

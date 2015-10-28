@@ -6,7 +6,7 @@
 'use strict';
 
 (function(angular){
-angular.module('design').service('DesignSrv',
+angular.module('design').service('DesignApiSrv',
 	 [
 	 	'$http', 
 	 	'Restangular',
@@ -35,7 +35,22 @@ angular.module('design').service('DesignSrv',
 				var template = Restangular.one(userId.toString(),'template').one('xml');
 				template.get(params).then(success);
 			}
-	}
-	]);
 
+			self.getAllDesigns = function(data,scope,success,error){
+				Restangular.one(scope.userGroupUri.toString()+'categories').customGETLIST('designs', data).then(success);
+			}
+	 		
+	 		self.getUserDesigns = function(userId, params, success, error){
+	 			Restangular.one(userId.toString()).customGET('designs', params).then(success);
+	 		}
+
+	 		self.getCategoriesDesigns = function(categoryName, params, scope,success, error){
+	 			Restangular.one(scope.userGroupUri.toString()+'categories',categoryName).all('designs').getList(params).then(success);
+	 		}
+
+	 		self.getDesignCategories = function(success , error){
+               Restangular.one('/1/0/categories').getList().then(success);
+            }
+		}
+	]);
 })(angular);
