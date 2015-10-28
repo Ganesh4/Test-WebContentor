@@ -24,7 +24,7 @@
                     controller:'RecipientCtrl',
                     templateUrl:'./views/recipient/recipients.html',
                     data: {
-                    displayName: ' Recipient List',
+                    displayName: ' Contact List',
                     actionBarBtn: [{
                                     name : 'Export',
                                     onClick : '',
@@ -321,7 +321,8 @@
                             required: false,
                             placeholder:'State',
                             model : 'state',
-                            ngOptions:'state.stateName for state in states'
+                            ngOptions:'state.stateName for state in states',
+                            initMethod:'',
                         }]
                     },{
                         rowClass :'col-lg-6',
@@ -343,13 +344,13 @@
                     },{
                         rowClass :'col-lg-6',
                         rowElement:[{
-                            name:'listId',
+                            name:'recipient',
                             lable:'List Name',
                             type: 'DROP_DOWN',
                             required: false,
                             placeholder:'List Name',
                             model : 'list',
-                            ngOptions:'recipient.listName for recipient in RecipientList',
+                            ngOptions:'recipient.name for recipient in RecipientList',
                             initEvent: 'RECIPIENT_LIST',
                         }],
                     }] 
