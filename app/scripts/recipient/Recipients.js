@@ -34,10 +34,12 @@
                                 
                                },{
                                     name : 'Delete',
-                                    onClick : 'DELETE_RECIPIENT'
+                                    onClick : 'DELETE_EMAIL_LIST',
+                                    disable :'DELETE_BTN_DISABLE'
                                },{
                                     name : 'Save',
-                                    onClick : 'ADD_EMAIL_RECIPIENT_LIST'
+                                    onClick : 'ADD_EMAIL_RECIPIENT_LIST',
+                                    disable :'SAVE_BTN_DISABLE'
                                 
                                }],
                  }
@@ -156,7 +158,8 @@
                             required: false,
                             placeholder:'State',
                             model : 'state',
-                            ngOptions:'state.stateName for state in states'
+                            ngOptions:'state.stateName for state in states',
+                            initMethod:'',
                         }]
                     },{
                         rowClass :'col-lg-6',
@@ -178,7 +181,7 @@
                     },{
                         rowClass :'col-lg-6',
                         rowElement:[{
-                            name:'listId',
+                            name:'recipient',
                             lable:'List Name',
                             type: 'DROP_DOWN',
                             required: false,
@@ -193,14 +196,14 @@
                     url: '/import',
                     templateUrl:'views/recipient/ImportRecipient.html',
                 data: {
-                     displayName: 'ImportRecipient',
+                     displayName: 'ImportContact',
                     
                     }
                 }).state('app.home.manage.recipients.mapping', {
                     url: '/mapping',
                     templateUrl:'views/recipient/MappingRecipient.html',
                 data: {
-                     displayName: 'MappingRecipient',
+                     displayName: 'MappingContact',
                     
                 }
                 }).state('app.home.manage.recipients.edit', {

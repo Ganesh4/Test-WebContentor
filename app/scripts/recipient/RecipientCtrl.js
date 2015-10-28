@@ -10,7 +10,7 @@
          'Global',
 		 function($scope,$state,Restangular,RecipientApiSrv,Global){
 		                         
-           $scope.recipients = {};
+           $scope.emailRecipients = {};
             var param = {};
            $scope.isInputDisable = true;
            $scope.gridOptions = {
@@ -49,14 +49,16 @@
                 }
             });
 			$scope.$on(Global.EVENTS.ADD_RECIPIENT,function(event, data){ 
-                console.log('Recipients ------------ ',$scope.recipients);
-                var recipient = $scope.recipients;
+                console.log('Recipients ------------ ',$scope.emailRecipients);
+                var recipient = $scope.emailRecipients;
                 if(!_.isUndefined(recipient.country))
-                    recipient.country = $scope.recipients.country.securityCountryID;
+                    recipient.country = $scope.emailRecipients.country.securityCountryID;
                 if(!_.isUndefined(recipient.state))
-                    recipient.state = $scope.recipients.state.securityStateID;
-                 if(!_.isUndefined(recipient.list))
-                    recipient.listId = $scope.recipients.list.listId;
+                    recipient.state = $scope.emailRecipients.state.securityStateID;
+                 if(!_.isUndefined(recipient.list)){
+                    recipient.emailRecipientsList = [];
+                    recipient.emailRecipientsList.push($scope.emailRecipients.list);
+                }
 
                 recipient = _.omit(recipient,'list');
                 RecipientApiSrv.addRecipient($scope.loggedInUser.securityUserId+'/recipients',recipient,function(response){
@@ -113,12 +115,22 @@
            }); 
             $scope.$on(Global.EVENTS.INPUT_BOX_ENABLED, function(event,data){
                 $scope.isInputDisable = false;
+                $scope.SAVE_BTN_DISABLE = true;
                 console.log('$scope.isInputDisable ----------- ',$scope.isInputDisable);
 
             });
-            //Delete EmailList Functionality..
+            //Delete Email List Functionality..
+            $scope.$on(Global.EVENTS.DELETE_EMAIL_LIST,function(){
+
+                if(!_.isEmpty($scope.gridRowSelectedData)){
+                    var RecipientData = $scope.gridRowSelectedData[0];
+                    console.log('Email List Data ------- ',RecipientData.listId);
+
+                    self.deleteEmailList(RecipientData.listId);
+                }
+            });
              self.deleteEmailList = function(id){
-            RecipientApiSrv.deleteRecipient($scope.loggedInUser.securityUserId+'/email/list'+id, null, function(data){
+            RecipientApiSrv.deleteRecipient($scope.loggedInUser.securityUserId+'/email/list/'+id, null, function(data){
                     alert('EmailList Delete Successfully');
                     $scope.$emit(Global.EVENTS.RELOAD);
                 })

@@ -7,7 +7,8 @@ angular.module('common').service('CommonSrv',
         '$state',
         'Global',
         'ApiSrv',
-        function (Restangular, $state, Global, ApiSrv) {
+        'notify',
+        function (Restangular, $state, Global, ApiSrv,notify) {
             var self = this;
  
             self.getDesignCategories = function(success , error){
@@ -98,6 +99,74 @@ angular.module('common').service('CommonSrv',
                 scope.$broadcast(Global.EVENTS.CAMPAIGN_SAVE_DISABLE);
                 scope.$broadcast(Global.EVENTS.CAMPAIGN_SAVE_EXIT_DISABLE);
             }
+
+            //Notifications
+        self.showNotification = function(type,message){
+            
+            switch(type){
+                case 'error':
+                   notify({
+                        message : message, //instead of this we can pass messageTemplate Also
+                        //position : 'right', //Options ['left' , 'center' , 'right']
+                        duration : 1000000000, //Time in milisecond for which the notification is visible
+                        classes : 'notify',
+                        templateUrl: './views/commons/notification/Notification.html',
+                        icon:'fa fa-times-circle - error',   
+                        button :[{
+                            name : 'Ok',
+                            onClick : 'DIALOG_CLOSE', 
+                            type : 'Button',
+                            state : 'app.register.user'
+                        },{
+                            name : 'Cancel',
+                            type : 'Button'
+
+                        }]
+                    });
+                    break;
+                case 'success' :
+                    notify({
+                        message : message, //instead of this we can pass messageTemplate Also
+                        //position : 'right', //Options ['left' , 'center' , 'right']
+                        duration : 1000000000, //Time in milisecond for which the notification is visible
+                        classes : 'notify',
+                        templateUrl: './views/commons/notification/Notification.html',
+                        icon:'fa fa-check-circle - sucsses',
+                        button :[{
+                            name : 'Ok',
+                            onClick : 'DIALOG_CLOSE', 
+                            type : 'Button',
+                            state : 'app.register.user'
+                        },{
+                            name : 'Cancel',
+                            type : 'Button'
+
+                        }]
+                    });
+                    break;
+                case 'warning' :
+                   notify({
+                        message : message, //instead of this we can pass messageTemplate Also
+                        //position : 'right', //Options ['left' , 'center' , 'right']
+                        duration : 1000000000, //Time in milisecond for which the notification is visible
+                        classes : 'notify',
+                        templateUrl: './views/commons/notification/Notification.html',
+                        icon:'fa fa-info-circle',
+                        button :[{
+                            name : 'Ok',
+                            onClick : 'DIALOG_CLOSE', 
+                            type : 'Button',
+                            state : 'app.register.user'
+                        },{
+                            name : 'Cancel',
+                            type : 'Button'
+
+                        }]
+                    });
+                    break;    
+            }
+        }
+
 
         }
     ]);
