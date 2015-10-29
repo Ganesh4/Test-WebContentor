@@ -1,11 +1,19 @@
- <div class="submenu-header">
- <div class="content-padding">
-     <h3 class="heading-top">{{data.title}}</h3>
+<div class="block-container">
+  <div class="submenu-block">
+     <div class="submenu-header">
+       <div class="content-padding">
+         <h3 class="heading-top">Add Content</h3>
+       </div>
      </div>
-     </div>
-     <div class="submenu-leftnav" >
+     <div class="submenu-leftnav">
        <ul>
-         <li ng-repeat = "item in data.subMenu"><a ui-sref="{{item.stateName}}">{{item.name}}</a></li>           
+         <li ng-repeat = "item in data.subMenu" ><a ui-sref="{{item.stateName}}">
+           <span class="submenu-linkbox submenu-iconbox-left fa fa-file-image-o"></span>
+           <span class="submenu-linkbox submenu-link-right">{{item.name}}</span>
+         </a>
+         </li>
        </ul>
      </div>         
-     <ui-view></ui-view>
+     <ui-view></ui-view>   
+  </div>
+</div> 

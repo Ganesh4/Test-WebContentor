@@ -266,3 +266,78 @@
 		
  }
 }
+
+/*======================== action bar for Recipients ============================*/
+
+.action-row{
+	    width: 20px;
+		height: 100%;
+		margin: 0 auto;
+	
+	i{
+		font-size: 17px;
+		line-height: 30px;
+		color: #999999;
+		}
+		
+	i:hover{
+		color: $workarea-color;
+		}
+	
+	ul{
+		background-color: #fff;
+		width: 150px;
+		position: absolute;
+		display: none;
+		right: 70px;
+		-webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), inset 0 12px 12px -14px rgba(0, 0, 0, 0.2);
+   		-moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), inset 0 12px 12px -14px rgba(0, 0, 0, 0.2);
+        /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), inset 0 12px 12px -14px rgba(0, 0, 0, 0.2); */
+		border: 1px solid #d4d4d4;
+		
+		li{
+			background: #f3f3f3;
+			border: 1px solid #d4d4d4;
+			text-align: left;
+			position: relative;
+			white-space: nowrap;
+			-webkit-border-radius: 0px;
+			-moz-border-radius: 0px;
+			border-radius: 0px;
+			-webkit-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), inset 0 12px 12px -14px rgba(0, 0, 0, 0.2);
+			-moz-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), inset 0 12px 12px -14px rgba(0, 0, 0, 0.2);
+			box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), inset 0 12px 12px -14px rgba(0, 0, 0, 0.2);
+			
+			span{
+				padding: 10px;
+				color: #353535;
+				
+			i{
+				margin-right: 15px;
+				}
+				
+			}
+		}
+		
+		li:hover{
+			background-color: $header-color;
+			
+			span{
+				color: $workarea-color;
+				
+				i{
+				color: $workarea-color;
+				}
+			 }
+		}
+	  }
+			
+}
+
+.action-row:hover{
+	
+	ul{
+	  display: block;
+	  }
+}
+

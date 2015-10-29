@@ -8,20 +8,22 @@
 			'$scope',
 			'Restangular',
 			'$stateParams',
-			'DesignSrv',
+			'DesignApiSrv',
 			'x2js',
-			function($scope, $http, $stateParams, DesignSrv, x2js){
+			'TemplateApiSrv',
+			function($scope, Restangular, $stateParams, DesignApiSrv, x2js, TemplateApiSrv){
 				
 				/*dragulaService.options($scope, 'menu', {
       				copy: true
     			});
 				*/
+				Restangular.setBaseUrl('http://192.168.1.168/MicroS/');
 				console.log('Template Id --------- ',$stateParams.templateId);
-				DesignSrv.getDesignById($stateParams, function(data){
+				DesignApiSrv.getDesignById($stateParams, function(data){
 					if(data){
 						$scope.design = data.plain();
 						var url = $scope.design.template.url;
-						DesignSrv.getTemplateXmlData($stateParams.userId, {
+						TemplateApiSrv.getTemplateXmlData($stateParams.userId, {
 							'resource':$scope.design.template.xmlFile
 						}, function(data){
 							if(data){
