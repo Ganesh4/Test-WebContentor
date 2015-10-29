@@ -8,7 +8,7 @@
 	}
 	
 .view-tenth .mask {
-	background-color: rgba(36, 172, 227, 0.79);
+	background-color: rgba(0, 185, 141, 0.85);/*rgba(36, 172, 227, 0.79)*/
 	@include view_img_effect(all 0.5s linear);
 	@include yavun-opacity(0);
 	}

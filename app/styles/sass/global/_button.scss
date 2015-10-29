@@ -13,13 +13,14 @@
 	box-shadow:none;
 	text-shadow:none;
 	font-size:13px;
+	border-color: #e1e1e1;
 	
 		&:hover,
 		&:focus,
 		&:active {
 		background-color: $header-color;
 		color:$workarea-color;
-		@include border-radius(4px);
+		@include border-radius(2px);
 	}
   }
 }

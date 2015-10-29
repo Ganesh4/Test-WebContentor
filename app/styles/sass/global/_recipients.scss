@@ -41,7 +41,7 @@
 		
 	.plus-circle{
 		@extend .rcp_border_radus; 
-		background-color: $main_blue_color;
+		background-color: $header-color;
 		width: 60px;
 		height: 60px;
 		right: 50px;
@@ -117,7 +117,7 @@
 	
 	li {
 	  @extend .rcp_border_radus;
-	  background-color:$main_blue_color;
+	  background-color: $header-color;
 	  width: 60px;
 	  height: 60px;
 	  bottom: 10px;
@@ -134,7 +134,7 @@
 	  }
 	  
 	 li:nth-child(2){
-	  background-color: $main_blue_color;
+	  background-color: $header-color;
 	  bottom: 85px;
 	  
 	  i{
@@ -145,40 +145,6 @@
 	  }
 	}
 
-.menu-circle-2 {
-	background-color: $main_blue_color;
-	width: 75px;
-	height: 75px;
-	right: 200px;
-	bottom: -100px;
-	cursor: pointer;	
-	i {color: $workarea-color;
-	   font-size: 30px;
-		margin: 25px 0 0 25px;
-		}	
-	li{
-	  background-color: $sidenavbar-color;
-	  width: 60px;
-	  height: 60px;
-	  bottom: 86px;
-	  margin-left: 5px;	  
-	  i {
-		color:$main_blue_color;
-		font-size: 20px;
-		margin: 20px 0 0 22px;
-		}
-	  }
-	  
-	 li:nth-child(2){
-	  background-color:$sidenavbar-color;
-	  bottom: 160px;	  
-	  i {
-		color:$main_blue_color;
-		font-size: 20px;
-		margin: 20px 0 0 22px;
-		}
-	  }
-}
 
 /*======================== Import Recipients ============================*/
 
