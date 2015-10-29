@@ -41,6 +41,12 @@
                                     onClick : 'ADD_EMAIL_RECIPIENT_LIST',
                                     disable :'SAVE_BTN_DISABLE'
                                 
+                               },{
+                                    name : 'Edit',
+                                    onClick : 'EDIT_CONTACT',
+                                    state :'app.home.manage.recipients.edit',
+                                    
+                                
                                }],
                  }
                 }).state('app.home.manage.recipients.add', {
@@ -209,17 +215,17 @@
                 }).state('app.home.manage.recipients.edit', {
                     url: '/edit',
                     controller:'RecipientEditCtrl',
-                    template:'<div class = "col-md-8"><wc-form elements="elements" form-btns="formBtns" form-data="recipients" submit-event="{{submitEvent}}"></wc-form></div>',
+                    templateUrl:'./views/recipient/EditRecipient.html',
                  data: {
                     displayName: 'Edit',
-                    submitEvent: 'UPDATE_RECIPIENT',
+                    submitEvent: 'UPDATE_CONTACT',
                     actionBarBtn: [{
                                     name : 'Cancel',
                                     onClick: 'NAVIGATE',
                                     state : 'app.home.manage.recipients.list'
                                },{
                                     name : 'Update',
-                                    onClick : 'UPDATE_RECIPIENT'
+                                    onClick : 'UPDATE_CONTACT'
                                 
                                }],
                     elements:[
@@ -314,7 +320,7 @@
                             onChange : 'updateCountry()',
                             ngOptions: 'country.countryName for country in countries',
                             initEvent: 'COUNTRY_LIST',
-                   },{
+                        },{
                             name:'state',
                             lable:'State',
                             type: 'DROP_DOWN',

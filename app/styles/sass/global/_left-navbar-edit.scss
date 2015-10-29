@@ -136,14 +136,13 @@
 .footer-edit{
   width:92%;	
 }
-.left-navbar-edit-bottom{
 
-}
 .left-navbar-edit-bottom{
     height: 55px;
     width: 100%;
     bottom: 0;
 		text-align:center;	
+		z-index:999;
 	
 		li{
 			width:6%;		
