@@ -9,7 +9,10 @@
         'CommonSrv',
         'Global',
         'RecipientApiSrv',
-        function(CommonSrv,Global,RecipientApiSrv){
+        '$parse',
+        'ImageApiSrv',
+        '$state',
+        function(CommonSrv,Global,RecipientApiSrv,$parse, ImageApiSrv, $state){
             return{
                 restrict:'AE',
                 templateUrl:'views/assets/form.html',
@@ -17,48 +20,39 @@
 					elements : '=',
 					formBtns : '=',
                     formData : '=',
-                    submitEvent: '@'                    
+                    submitEvent: '@',
+                    select2Options: '='
 				},
-                link : function(scope,elem,attrs){
+                link : function(scope,element,attrs){
 
-                    scope.doOnFormSubmit = function(){
-                        //scope.$emit(Global.EVENTS.FORM_SUBMIT, scope.formData))
-                    }
+                    var self = this;
+                    scope.states = [];
+                    scope.$watch(function(scope){
+                            return $state.current.name;
+                    },function(newValue,oldValue){
+                            if(newValue!==undefined){
+                                 scope.elements = $state.current.data.elements;
+                                 scope.formBtns = $state.current.data.formButtons;
+                            }
+                    });
+                   
 
                     scope.formSubmit = function(){
                         scope.$emit(scope.submitEvent, scope.formData);
                     }
-
+                   
                     scope.doOnChange = function(){
                         CommonSrv.doOnChange(scope,{}); 
                     }
-                   
-                    //Fetches Country List from the Backend.
-                    CommonSrv.getCountriesList(function(data){
-                        scope.countries = data.plain();
-                       
-                    });
-
-                    // Should be come Dynamically 
-                     RecipientApiSrv.getRecipientList('1/recipient/list', {},function(data){
-                        if(data){
-                            scope.RecipientList = data.plain();
-                        }
-                    });
-
-
 
                     //Update State Object According to the Country Selected. 
-                    scope.updateCountry = function(){
-                        console.log('User -------- ' , scope.formData.country.securityCountryId);
+                    scope.$on(Global.EVENTS.UPDATE_COUNTRY,function(){
                         var id = scope.formData.country.securityCountryId;
                         CommonSrv.getStatesByCountryId('countries/'+id,function(data){
                             scope.states = data.plain();
                             console.log('States --------------- ',data.plain());
                         });
-                        
-                    }
-
+                    });
                 }
             }
         }])

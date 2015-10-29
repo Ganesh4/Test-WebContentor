@@ -13,7 +13,7 @@
             '$stateProvider',
             function($urlProvider, $stateProvider){
             // var route = 'app.home.mange';
-             $stateProvider.state('app.home.manage', {
+            $stateProvider.state('app.home.manage', {
                 url: '/manage',
                 templateUrl: "views/manage/manage.html",
                 abstract: true,
@@ -49,14 +49,14 @@
                             }]
                         },{
                             icon : 'fa fa-angle-down',
-                            name : 'Emails and Recipients',
+                            name : 'Emails and Contacts',
                             menu : [{
                                 icon : 'fa fa-envelope',
                                 name : 'Emails',
-                                state:'app.home.campaign.emails'
+                                state:'app.home.manage.emails'
                             },{
                                 icon : 'fa fa-list-alt',
-                                name : 'Recipients',
+                                name : 'Contacts',
                                 state: 'app.home.manage.recipients.list'
                             },{
                                 icon : 'fa fa-list-alt',
@@ -87,8 +87,17 @@
                             }]
                         }
                     ]
+                 }
+
+             }).state('app.home.manage.emails', {
+                url: '/emails',
+                templateUrl: "views/email/EmailList.html",
+                data: {
+
+                    displayName: 'Emails',
             }
-        });  
+                
+        }); 
     }]);
 })(angular);
 

@@ -1,8 +1,14 @@
+
+ <!--<span >
+      List Name: <input type="text" name="name" ng-model="name" ng-disabled = "isInputDisable"/>
+ </span>-->
+ 
+ 
    <div class="col-xs-12 recip-main">
 
           <div class="form-group recip-edit-row">
             <div class="recip-left-fg">
-                <input type="text" class="form-control" ng-model="name" ng-disabled = "isInputDisable"/>
+                <input type="text" class="form-control" name="name" ng-model="name" ng-disabled = "isInputDisable"/>
             </div>
         
             <div class="recip-right-fg">
@@ -13,13 +19,13 @@
 
     </div>
 
-
 <div class="recipients_table">
 
-	<div class= "col-md-4">
+	<div class= "col-md-4" >
 		<wc-grid grid-options = "gridOptions" ></wc-grid>		
 	</div>
 	<div class = "col-md-8">
+
 		<wc-grid grid-options = "recipientsGridOptions" ></wc-grid>		
 	</div>
 
@@ -27,11 +33,22 @@
 
 
 <div class="menu-circle">
-<i class="fa fa-plus"></i>
+<div class="plus-circle"><i class="fa fa-plus"></i></div>
+
 <ul>
-    <li><i class="fa fa-user" ui-sref-active = "nav-selected" ui-sref = "app.home.manage.recipients.add" title ="Add Recipient"></i></li>
-    <li><i class="fa fa-users" ui-sref-active = "nav-selected" ui-sref = "app.home.manage.recipients.import" title="Import Recipient"></i></li>
-    
+
+    <li>
+    <i class="fa fa-user" ui-sref-active = "nav-selected" ui-sref = "app.home.manage.recipients.add"></i>
+    </li>
+    <li>
+    <i class="fa fa-users" ui-sref-active = "nav-selected" ui-sref = "app.home.manage.recipients.import"></i>
+    </li>
+    <!-- title -->
+    <span class="import-recip">Import Contact</span>
+    <span class="add-recip">Add Contact</span>
+    <!-- title -->
+
 </ul>
 
 </div>
+

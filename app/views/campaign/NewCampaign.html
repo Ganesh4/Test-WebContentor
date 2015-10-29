@@ -66,8 +66,8 @@
 
         <label for="exampleInputEmail1" style="width: 100%;">Features <span class="error-red">*</span></label>
         <span class="checkbox-align"> 
-        <label class="checkbox-inline" ng-repeat = "feature in featureList">
-          <input type="checkbox"  ng-model = "campaign.campaignFeatureId[feature.SecurityFeatureId]" required="required" required-err-type="featuredrequired" ng-keyup = "checkValidation()" ng-change = "checkValidation()" value="{{feature.SecurityFeatureId}}">{{feature.Feature}}
+        <label class="checkbox-inline" ng-repeat = "data in featureList">
+          <input type="checkbox"  ng-model = "campaign.campaignFeatureId[data.securityFeatureId]" required="required" required-err-type="featuredrequired" ng-keyup = "checkValidation()" ng-change = "checkValidation()" value="{{data.securityFeatureId}}">{{data.feature}}
         </label>
        </span> 
   </div>

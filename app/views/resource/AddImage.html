@@ -25,7 +25,7 @@
         <div class="col-sm-10">
           <wc-file-upload-model name = "file"/>
         </div>
-     </div>
+    </div>
 
   <div class="form-group addimg-row class-top">
     <label class="control-label" for "Image Category">Category:</label>
@@ -37,24 +37,24 @@
 
    <div class="form-group campaign-group-left">
     <div class="campaign-left-fg">
-    <label for="exampleInputEmail1">Expiry Date</label>
+    <label>Expiry Date</label>
     <p class="input-group datepicker" >
-    <input type="text" class="form-control" 
-           datepicker-popup="{{format}}" 
-           class="form-control input-width"
-           ng-model="campaign.startDate" 
-           is-open="openedStart" 
-           date-disabled="disabled(date, mode)" 
-           ng-required="true" 
-           id="date-picker" 
-           readonly
-           show-button-bar="false"
-           ng-change = "clearEndDate()"
-           />
+      <input type="text" class="form-control" 
+             datepicker-popup="{{format}}" 
+             class="form-control input-width"
+             ng-model="image.expiryDate" 
+             is-open="calendar.isCalenderOpen" 
+             date-disabled="disabled(date, mode)" 
+             ng-required="true" 
+             id="date-picker" 
+             readonly
+             show-button-bar="false"
+             ng-change = "clearEndDate()"
+             />
     </p>       
     </div>
-
-    <div class="campaign-right-fg" ng-click="openStart($event)">
+      {{isCalenderOpen}}
+    <div class="campaign-right-fg" ng-click="calendar.isCalenderOpen = !calendar.isCalenderOpen">
         <i class="fa fa-calendar" ></i>
     </div>
   </div>

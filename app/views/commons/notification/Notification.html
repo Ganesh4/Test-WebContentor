@@ -1,0 +1,20 @@
+<div class="main-model">
+  <div class="modal-box " ng-class="[$classes]">
+
+    <!--<a class="btn-close" ng-click="$close()">×</a>-->
+    <div class="modal-text">
+      <p ng-show="!$messageTemplate"> <i class="{{$icon}}"></i>
+      	{{$message}}
+      </p>
+     <div ng-show="$messageTemplate" class="cg-notify-message-template">
+        
+    </div>
+      <div class="modal-button" >
+      		<div ng-repeat = "btn in $button">
+      		<wc-button name = "btn.name" type="btn.type" on-click="btn.onClick" btn-data="btn" disable="btn.disable" icon = "btn.icon" state = "btn.state"></wc-button>
+      
+      		</div>
+      	</div>
+    </div>
+  </div>
+</div>

@@ -2,7 +2,8 @@
 <!--[if lt IE 7]>      <html lang="en" ng-app="microsite" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html lang="en" ng-app="microsite" class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html lang="en" ng-app="microsite" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="microsite" class="no-js"> <!--<![endif]-->
+<!--[if gt IE 8]><!--> 
+<html lang="en" ng-app="microsite" class="no-js"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,7 +16,7 @@
 
   <!-- main css file  -->
 
-  
+  <link rel = "stylesheet" href = "bower_components/angular-notify/dist/angular-notify.min.css"/>
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
 
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.css">
@@ -28,6 +29,7 @@
   <link rel="stylesheet" href="bower_components/FroalaWysiwygEditor/css/froala_style.min.css" />
   
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  
   
 <!--  <link rel="stylesheet" href="bower_components/angularjs-datepicker/dist/angular-datepicker.min.min.css" /> -->
 </head>
@@ -91,6 +93,7 @@
   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <script src="bower_components/angular-local-storage/dist/angular-local-storage.min.js">
   </script>
+  <!--<script src = "bower_components/angular-notify/angular-notify.js"></script>-->
 <!--bootstrap file scripts -->
 
 <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
@@ -136,12 +139,16 @@
 <script src="scripts/assets/WcInput.js"></script>
 <script src="scripts/assets/WcForm.js"></script>
 <script src="scripts/assets/WcBorderHighlight.js"></script>
+<script src="scripts/assets/WcCheckBox.js"></script>
+<script src="scripts/assets/WcCalendar.js"></script>
+<script src="scripts/assets/WcFields.js"></script>
 <script src="scripts/common/subheader/WcSubHeader.js"></script>
 <script src="scripts/common/header/WcHeaderEditor.js"></script>
 <script src="scripts/common/footer/WcFooterEditor.js"></script>
 <script src="scripts/editor/WcEditMenus.js"></script>
 <script src="scripts/editor/WcLeftNavEditor.js"></script>
 <script src="scripts/common/leftnav/WcLeftNavMenu.js"></script>
+<script src="scripts/assets/WcEllipsisMenu.js"></script>
 
 
 <!-- Services Script -->
@@ -158,6 +165,7 @@
 <script src="scripts/email/EmailApiSrv.js"></script>
 <script src="scripts/recipient/RecipientApiSrv.js"></script>
 <script src="scripts/promotional/PromotionalApiSrv.js"></script>
+<script src="scripts/common/notification/NotificationSrv.js"></script>
 
 <!--Controller file scripts -->
 <script src="scripts/home/HomeCtrl.js"></script>
@@ -178,6 +186,7 @@
 <script src="scripts/login/LoginCtrl.js"></script>
 <script src="scripts/role/RoleCtrl.js"></script>
 <script src="scripts/resource/ImageCtrl.js"></script>
+<script src="scripts/resource/ImageEditCtrl.js"></script>
 <script src="scripts/user/RegisterCtrl.js"></script>
 <script src="scripts/email/EmailCtrl.js"></script>
 <script src="scripts/recipient/RecipientCtrl.js"></script>

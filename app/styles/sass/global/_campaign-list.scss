@@ -11,16 +11,13 @@
     margin-bottom: 25px;
     border-radius: 10px;
 
-
-
 .campaign-list-row:hover{
 	
 	.campaign-mask{
 		display: block;
 		/*opacity: 0.86;*/
-		}
-	
-	}
+	    }
+}
 
 .campaign-list-row{
 	cursor: pointer;
@@ -56,8 +53,6 @@
 					}
 				}
 				
-				
-				
 			 button:hover{
 				background-color: #1e3e66;
 				color: #fff;
@@ -72,7 +67,6 @@
 			}
 		}
 		
-	
 	h3{
 		text-align:center;
 		margin-bottom: 15px;
@@ -88,7 +82,6 @@
 		i{
 		  margin-right: 10px;
 		  }
-		
 	}
 		
 	span:nth-child(2){
@@ -200,11 +193,7 @@
 		}	
 			
 			
-		}
-		
-		
-
-		
+		}	
 }
 }
 
@@ -226,8 +215,7 @@
 			  margin-right: 15px;
 			  }
 	}
-		  
-		  
+	  
 .thumb-img-new{
 	height: 370px;
 	overflow:hidden;
@@ -245,12 +233,14 @@
     padding:10px 15px 10px; 
 	float: left;
 	width: 100%;
-	background-color: #C2CEDC;
+	background-color: #F5F5F5;/*C2CEDC-3E3E3E old colors*/
 	color: #fff;
+	min-height: 175px;
 	
 	p{
 		text-align: left;
-		color: #353535;
+		color: $campaign-font;
+		word-break: break-all;
 		}
 	
 	.date-fix{
@@ -260,10 +250,12 @@
 				margin-bottom: 10px;
 				width: 50%;
 				float: left;
-				color: #353535;
+				color: $campaign-font;
+				font-style: italic;
 			
 			i{
 				margin-right: 15px;
+				color: #A2A0A0;
 				}
 			  }
 			
@@ -282,7 +274,7 @@
 		text-transform: uppercase;
 		position: absolute;
 		bottom: 0px;
-		background-color: #1B5098;
+		background-color: $header-color;
 		color: $workarea-color;
 	}
 	
@@ -293,27 +285,30 @@
 	text-align: left;
 	
 	h2{
-		color: #353535;
-		font-weight: bold;
+		color: $campaign-font;
 		border-bottom: 1px solid #ccc;
 		margin-bottom: 10px;
-		}
+		padding-bottom: 10px;
+		
+		i{
+			margin-right: 15px;
+			color: #A2A0A0;
+			}
+	}
 	
 	span{
 		@extend .info-text-size;
 		margin-bottom: 10px;
 		margin-right: 10px;
-		color: #353535;
+		color: $campaign-font;
+		float: left;
 		
-		i{
-			margin-right: 10px;
-			}
-		}
-		span:nth-child(2){
-			color: #353535;
-		}
-		
-}
-	
-	
+		i{margin-right: 7px;
+		  }
+		  
+		.blog-color{color: #FBB955;}
+		.email-color{color: #F16161;}
+		.promotional-color{color: #69B7F9;}
+	}	
+}	
 }

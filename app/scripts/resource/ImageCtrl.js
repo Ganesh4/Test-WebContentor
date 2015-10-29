@@ -15,8 +15,11 @@ angular.module('resources').controller('ImageCtrl',
         function($scope ,$state, ApiSrv,Global,CommonSrv,ImageApiSrv){  
             var param = {};
             $scope.image = {};
+            $scope.checked = false;
             var self = this;
             var checkedImageId;
+            $scope.elements = $state.current.data.elements;
+            //$scope.isCalenderOpen = false;
             $scope.gridOptions = {
                 multiSelect: true,
                 enableRowSelection:true,
@@ -67,22 +70,11 @@ angular.module('resources').controller('ImageCtrl',
                 };
             ImageApiSrv.getCategory($scope.userGroupUri+'categories',{},function(data){
                 if(data){
-                    $scope.imageCategory = data.plain(); 
+                    $scope.$root.imageCategory = data.plain(); 
                     console.log('$scope.imageCategory -------- ',$scope.imageCategory);
                 }
             });
-
-
-            //$scope.imageCategory = ['Test','Testing'];
-            $scope.select2Options1 = {
-                'multiple': true,
-                'simple_tags': true,
-            }; 
-            $scope.select2Options = {
-                'multiple': true,
-                'simple_tags': true,
-                'tags': []
-            }; 
+            
             ImageApiSrv.getImageList($scope.userGroupUri+'images',param,function(data){
                 // console.log('Image ------------ ',data);
                 if(data){
@@ -93,28 +85,53 @@ angular.module('resources').controller('ImageCtrl',
             //Delete Image Functionality..
             $scope.$on(Global.EVENTS.DELETE_IMAGE,function(){
                 if(!_.isEmpty($scope.gridRowSelectedData)){
-                    var imageData = $scope.gridRowSelectedData[0];
-                    self.deleteImageById(imageData.id);
+                    var imageData = $scope.gridRowSelectedData;
+                    var ids = [] , params = {};
+                    if(_.size(imageData)>1){
+                        _.each(imageData , function(value , key ){
+                            ids.push(value.id);
+                        });
+                        self.deleteBulkImages(ids);
+                    }else{
+                        self.deleteImageById(imageData[0].id , null);
+                    }
                 }
             });
-            //Grid Selected
-            //id resource id
-            $scope.gridSelected = function(resourceData){
-                console.log(resourceData);
-                if(resourceData){
-                    var data = new Array();
-                    data[0] = resourceData;
-                    $scope.$emit(Global.EVENTS.GRID_ROW_DATA,data);
-                    $scope.$emit(Global.EVENTS.DELETE_BTN_ENABLE);
-                }
-            }  
-            //Delete Image by id.
-            self.deleteImageById = function(id){
-                var uri = '/'+$scope.loggedInUser.securityUserID + '/'+ $scope.loggedInUser.groupId +'/images/'+id;
-                console.log('URI ---------- ' , uri);
-                ImageApiSrv.deleteImage(uri , null , function(data){
+            
+
+            self.deleteBulkImages = function(ids){
+                var uri = '/'+$scope.loggedInUser.securityUserID + '/'+ $scope.loggedInUser.groupId +'/images';
+                var params = {};
+                params['ids'] = ids;//self.getArrayQueryParams(ids)
+
+                console.log('params --------  ' , params);
+                ImageApiSrv.deleteImage(uri , params , function(data){
                     alert('Deleted Successfully');
-                      $scope.$emit(Global.EVENTS.RELOAD);
+                    $scope.$emit(Global.EVENTS.RELOAD);
+                });
+            }
+            self.getArrayQueryParams = function(data){
+                var params = {};
+                var i = 0;
+                _.each(data,function(value, key){
+                    params['ids['+i+']'] = value;
+                    i++;
+                });
+                return params;
+            }
+            //Delete Image by id.
+            self.deleteImageById = function(id, params){
+                var uri = $scope.userGroupUri +'/images/';
+                if(id !== null)
+                    uri = uri + id;
+                else 
+                    return;    
+                
+                console.log('URI ---------- ' , uri);
+
+                ImageApiSrv.deleteImage(uri , params , function(data){
+                    alert('Deleted Successfully');
+                    $scope.$emit(Global.EVENTS.RELOAD);
                 });
             }
 
@@ -124,33 +141,33 @@ angular.module('resources').controller('ImageCtrl',
                     resource : $scope.image,
                     file: $scope.files
                 }
+                console.log('data -------- ' , data);
                 ImageApiSrv.addNewImage($scope.userGroupUri+'images',data,function(response){
                     $state.transitionTo('app.home.manage.resources.images.grid');
-                    $scope.$emit(Global.EVENTS.RELOAD);
                 });
             });
 
             $scope.setCategoryValue = function(category){
                 if(category)
                     $scope.image.category = JSON.parse(category);
-                console.log('$scope.image ', $scope.image);
+                console.log('$scope.image ', $scope.image); 
             }
             
             $scope.openStart = function($event) {
                 $event.preventDefault();
                 $event.stopPropagation();
-
                 $scope.openedStart = true;
-                };
-                // open min-cal
-                $scope.openEnd = function($event) {
+            };
+            // open min-cal
+            $scope.openEnd = function($event) {
                 $event.preventDefault();
                 $event.stopPropagation();
+                $scope.isCalenderOpen = true;
+            };
 
-        
-                // handle formats
-                $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
-                }
+            $scope.$on('UNCHECKALL',function(event, data){
+                $scope.$broadcast(Global.EVENTS.IS_CHECKED, false );
+            });
         }
     ]);
 })(angular);

@@ -33,7 +33,7 @@
 						rowElement:[{
 							name:'email',
 							//lable:'Email',
-							type: 'EMAIL',
+							type: 'TEXT',
 				            required: true,
 				            validate:'emailisrequired',
 				            placeholder:'Email',

@@ -9,10 +9,8 @@
 		 'RecipientApiSrv',
          'Global',
 		 function($scope,$state,Restangular,RecipientApiSrv,Global){
-		   $scope.elements = $state.current.data.elements;
-           $scope.formBtns = $state.current.data.formBtns;
-           $scope.submitEvent = $state.current.data.submitEvent;
-           $scope.recipients = {};
+		                         
+           $scope.emailRecipients = {};
             var param = {};
            $scope.isInputDisable = true;
            $scope.gridOptions = {
@@ -40,6 +38,11 @@
                     field:'zip', 
                     displayName:'Zip Code',
                     cellClass : 'green-color'
+                },{
+                    field:'.', 
+                    displayName:'Action',
+                    cellTemplate: './views/assets/rowmenu.html',
+                    //cellTemplate: '<wc-ellipsis-menu></wc-ellipsis-menu>',
                 }]
             }
 
@@ -51,21 +54,24 @@
                 }
             });
 			$scope.$on(Global.EVENTS.ADD_RECIPIENT,function(event, data){ 
-                console.log('Recipients ------------ ',$scope.recipients);
-                var recipient = $scope.recipients;
+                console.log('Recipients ------------ ',$scope.emailRecipients);
+                var recipient = $scope.emailRecipients;
                 if(!_.isUndefined(recipient.country))
-                    recipient.country = $scope.recipients.country.securityCountryID;
+                    recipient.country = $scope.emailRecipients.country.securityCountryID;
                 if(!_.isUndefined(recipient.state))
-                    recipient.state = $scope.recipients.state.securityStateID;
-                 if(!_.isUndefined(recipient.list))
-                    recipient.listId = $scope.recipients.list.listId;
+                    recipient.state = $scope.emailRecipients.state.securityStateID;
+                 if(!_.isUndefined(recipient.list)){
+                    recipient.emailRecipientsList = [];
+                    recipient.emailRecipientsList.push($scope.emailRecipients.list);
+                }
 
                 recipient = _.omit(recipient,'list');
                 RecipientApiSrv.addRecipient($scope.loggedInUser.securityUserId+'/recipients',recipient,function(response){
                     //console.log('Added Recipients ---------- ', data.plain());
+                    if(response === true)
+                        $state.go('app.home.manage.recipients.list');
                 });
-                $state.go('app.home.manage.recipients.list');
-                 
+                
             });
 
             $scope.$on(Global.EVENTS.GET_RECIPIENT_BY_LIST,function(event, data){
@@ -74,14 +80,17 @@
                         console.log('selectedListId------',selectedList);
                         var listId = selectedList.listId;
                     }
-                            
-            RecipientApiSrv.getRecipientByList($scope.loggedInUser.securityUserId+'/'+listId+'/recipients',{},function(data){
-                    if(data){
-                        $scope.recipientsGridOptions.data = data.plain();
-                        $scope.Recipients = data.plain();
-                    }
+                if(!_.isUndefined(listId)){         
+                    RecipientApiSrv.getRecipientByList($scope.loggedInUser.securityUserId+'/'+listId+'/recipients',{},function(data){
+                        if(data){
+                            $scope.recipientsGridOptions.data = data.plain();
+                            $scope.Recipients = data.plain();
+                        }
 
-               });
+                    });
+                }else{
+                    self.showSubMenu();
+                }
             });
 
              //Delete Recipient Functionality..
@@ -102,9 +111,11 @@
 
             $scope.$on(Global.EVENTS.ADD_EMAIL_RECIPIENT_LIST,function(event,data){
                 console.log('$scope.loggedInUser.securityUserId',$scope.loggedInUser.securityUserId);
-                var emaillist = $scope.name;
-               RecipientApiSrv.addEmailList($scope.loggedInUser.securityUserId+'/email/list',emaillist,function(response){
+                var list = {};
+                list.name = $scope.name;
+               RecipientApiSrv.addEmailList($scope.loggedInUser.securityUserId+'/email/list',list,function(response){
                $scope.isInputDisable = true;
+               $scope.$emit(Global.EVENTS.RELOAD);
                  
 
                }); 
@@ -112,23 +123,42 @@
            }); 
             $scope.$on(Global.EVENTS.INPUT_BOX_ENABLED, function(event,data){
                 $scope.isInputDisable = false;
+                $scope.SAVE_BTN_DISABLE = true;
                 console.log('$scope.isInputDisable ----------- ',$scope.isInputDisable);
 
             });
+            //Delete Email List Functionality..
+            $scope.$on(Global.EVENTS.DELETE_EMAIL_LIST,function(){
 
-           /* $scope.edit = false;
-            $scope.data = {};
-            $scope.editField = function() {
-                $scope.edit = true;
-            };
-            $scope.cancelEdit = function() {
-                $scope.edit = false;
-            };
-            $scope.updateList = function(field, name) { 
-                console.log(field + ' + ' + name);
+                if(!_.isEmpty($scope.gridRowSelectedData)){
+                    var RecipientData = $scope.gridRowSelectedData[0];
+                    console.log('Email List Data ------- ',RecipientData.listId);
 
-
-            };    */ 
+                    self.deleteEmailList(RecipientData.listId);
+                }
+            });
+             self.deleteEmailList = function(id){
+            RecipientApiSrv.deleteRecipient($scope.loggedInUser.securityUserId+'/email/list/'+id, null, function(data){
+                    alert('EmailList Delete Successfully');
+                    $scope.$emit(Global.EVENTS.RELOAD);
+                })
+            }
+            //Edit USer Page Navigation
+            $scope.$on(Global.EVENTS.EDIT_CONTACT,function(){
+                console.log(' $state.current.data.elements---', $state.current.data.elements);
+                 if(!_.isEmpty($scope.gridRowSelectedData)){
+                    var contactData = $scope.gridRowSelectedData[0];
+                    $scope.emailRecipients = contactData;
+                    console.log('contactData ------- ', $scope.emailRecipients);
+                 
+                    $state.go('app.home.manage.recipient.edit');
+                }
+            });
+            
+            self.showSubMenu = function(){
+                alert("Show Sub Menu");
+            }
+           
 	}]);
 
 })(angular);
