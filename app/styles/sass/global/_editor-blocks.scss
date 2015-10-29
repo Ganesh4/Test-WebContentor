@@ -8,8 +8,9 @@
 	top: 60px;
 	left: 67px;
 	/*display:none;*/
-	background-color:$sidenavbar-color;
-	
+	background-color:$sidenavbar-color;	
+	color:$editor-text-color;
+	z-index:99;
 }
 
 .submenu-block{
@@ -687,7 +688,21 @@
 		margin-top:10px;
 	}
 	.edit-img-holder{
-    height:100px;		
+    height:100px;
+	}
+	.range{
+    width:240px;  		
+	}
+	.control-label{
+		text-align:center;
+	}
+	.radio{
+    margin-top:0;
+    margin-bottom:0;		
+		
+		input{
+		  margin-top:2px;
+		}
 	}
 }
 
@@ -699,8 +714,16 @@
 	width: 432px;
 	left: 888px;
 	min-height: 240px;
-	
+}
 
+/*======== section-animation-box ========*/
+.section-animation-box{
+  @extend .block-container-section;
+    top: 10px;
+    width: 432px;
+    left: 561px;
+    min-height: 240px;
+    z-index: 9;
 }
 
 
