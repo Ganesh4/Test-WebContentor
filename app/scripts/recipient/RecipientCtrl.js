@@ -38,11 +38,6 @@
                     field:'zip', 
                     displayName:'Zip Code',
                     cellClass : 'green-color'
-                },{
-                    field:'.', 
-                    displayName:'Action',
-                    cellTemplate: './views/assets/rowmenu.html',
-                    
                 }]
             }
 
@@ -80,7 +75,9 @@
                         console.log('selectedListId------',selectedList);
                         var listId = selectedList.listId;
                     }
-                if(!_.isUndefined(listId)){         
+                if(!_.isUndefined(listId)){ 
+                    $scope.$emit(Global.EVENTS.EDIT_BUTTON_DISABLE);
+                    $scope.$emit(Global.EVENTS.DELETE_BTN_DISABLE);        
                     RecipientApiSrv.getRecipientByList($scope.loggedInUser.securityUserId+'/'+listId+'/recipients',{},function(data){
                         if(data){
                             $scope.recipientsGridOptions.data = data.plain();
@@ -89,7 +86,9 @@
 
                     });
                 }else{
-                    self.showSubMenu();
+                    $scope.$emit(Global.EVENTS.EDIT_BUTTON_ENABLE);
+                    $scope.$emit(Global.EVENTS.DELETE_BTN_ENABLE);
+                    var selectedList = $scope.gridRowSelectedData[0];
                 }
             });
 
@@ -100,6 +99,8 @@
                     $scope.$emit(Global.EVENTS.RELOAD);
                 })
             }
+
+            
             $scope.$on(Global.EVENTS.DELETE_RECIPIENT,function(){
 
                 if(!_.isEmpty($scope.gridRowSelectedData)){
@@ -114,10 +115,8 @@
                 var list = {};
                 list.name = $scope.name;
                RecipientApiSrv.addEmailList($scope.loggedInUser.securityUserId+'/email/list',list,function(response){
-               $scope.isInputDisable = true;
-               $scope.$emit(Global.EVENTS.RELOAD);
-                 
-
+                   $scope.isInputDisable = true;
+                   $scope.$emit(Global.EVENTS.RELOAD);
                }); 
                 
            }); 
@@ -145,7 +144,7 @@
             }
             //Edit Contact Page Navigation
             $scope.$on(Global.EVENTS.EDIT_CONTACT,function(){
-                console.log(' $state.current.data.elements---', $state.current.data.elements);
+               alert("Herte");
                  if(!_.isEmpty($scope.gridRowSelectedData)){
                     var selectedList = $scope.gridRowSelectedData[0];
                     $scope.contactData = selectedList;
@@ -155,11 +154,6 @@
                 }
             });
             
-            self.showSubMenu = function(){
-                
-               
-            }
-           
 	}]);
 
 })(angular);
