@@ -13,14 +13,9 @@ angular.module('recipients').controller('RecipientEditCtrl',
         'Global',
         function($scope ,$state, ApiSrv,CommonSrv,RecipientApiSrv,Global){
 
-
-           $scope.contactData = {};
-
-           console.log('ContactData-------',$scope.contactData);
-            
-
+            console.log("$scope.contactData ----------------- ",$scope.contactData);
             //Update Recipient Functions
-            $scope.$on(Global.EVENTS.UPDATE_CONTACT,function(){
+           /* $scope.$on(Global.EVENTS.UPDATE_CONTACT,function(){
 
                  var recipient = $scope.contactData;
 
@@ -37,7 +32,7 @@ angular.module('recipients').controller('RecipientEditCtrl',
                 console.log('Updated data ------- ',data.plain());
                 $state.transitionTo('app.home.manage.recipients.list');
                });
-            });      
+            }); */     
 
         }
     ]);
