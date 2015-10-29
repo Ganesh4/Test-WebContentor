@@ -192,9 +192,9 @@
 	 margin-top: 15px;
 
 	.recip-left-fg{
-		width: 20%;
+		width: 24%;
 		float: left;
-		margin-right: 2px;
+		margin-right: 10px;
 		}
 	.recip-right-fg{
 		width: 8%;
@@ -213,7 +213,7 @@
 					
 						&:hover{
 								color: $workarea-color;
-								background-color: $header-color;	
+								background-color: $link-hover;	
 								
 								i{
 								  color: $workarea-color;
