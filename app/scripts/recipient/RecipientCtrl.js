@@ -144,7 +144,6 @@
             }
             //Edit Contact Page Navigation
             $scope.$on(Global.EVENTS.EDIT_CONTACT,function(){
-               alert("Herte");
                  if(!_.isEmpty($scope.gridRowSelectedData)){
                     var selectedList = $scope.gridRowSelectedData[0];
                     $scope.contactData = selectedList;
