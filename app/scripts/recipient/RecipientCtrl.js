@@ -42,7 +42,7 @@
                     field:'.', 
                     displayName:'Action',
                     cellTemplate: './views/assets/rowmenu.html',
-                    //cellTemplate: '<wc-ellipsis-menu></wc-ellipsis-menu>',
+                    
                 }]
             }
 
@@ -143,20 +143,21 @@
                     $scope.$emit(Global.EVENTS.RELOAD);
                 })
             }
-            //Edit USer Page Navigation
+            //Edit Contact Page Navigation
             $scope.$on(Global.EVENTS.EDIT_CONTACT,function(){
                 console.log(' $state.current.data.elements---', $state.current.data.elements);
                  if(!_.isEmpty($scope.gridRowSelectedData)){
-                    var contactData = $scope.gridRowSelectedData[0];
-                    $scope.emailRecipients = contactData;
-                    console.log('contactData ------- ', $scope.emailRecipients);
+                    var selectedList = $scope.gridRowSelectedData[0];
+                    $scope.contactData = selectedList;
+                    console.log('TEST------- ', $scope.contactData);
                  
-                    $state.go('app.home.manage.recipient.edit');
+                    $state.go('app.home.manage.recipients.edit');
                 }
             });
             
             self.showSubMenu = function(){
-                alert("Show Sub Menu");
+                
+               
             }
            
 	}]);
