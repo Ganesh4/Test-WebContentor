@@ -67,46 +67,7 @@
                 }
             });   
             
-            $stateProvider.state('app.editor', {
-                url:'/editor/:userId/:templateId',
-                templateUrl:'views/editor/TemplateEdit.html',
-                controller:'TemplateEditCtrl',
-                data : {
-                    mainMenu : [{
-                        name:'ADD',
-                        icon:'fa fa-plus-square',
-                        state:'app.editor.add'
-                        },
-                        {
-                            name:'SECTION',
-                            icon:'',
-                            state:'app.editor.section'
-                        },
-                        {
-                            name:'WIDGETS',
-                            icon:'',
-                            state:'app.editor.widgets'
-                        },
-                        {
-                            name:'FORM',
-                            icon:'',
-                            state:'app.editor.form'
-                        },
-                        {
-                            name:'SCO',
-                            icon:'',
-                            state:'app.editor.sco'
-                        },
-                        {
-                            name:'STATS',
-                            icon:'',
-                    }]
-                },
-            }).state('app.preview', {
-                url:'/Preview',
-                templateUrl:'views/editor/TemplatePreview.html',
-                controller:'TemplatePreviewCtrl',
-            });
+
         }
     ]);
 })(angular);

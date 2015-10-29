@@ -103,11 +103,11 @@ angular.module('user').controller('UserCtrl',
             }
 
             //Get Role List
-             ApiSrv.getList($scope.loggedInUser.securityUserId+'/roles',param,function(data){
+            /* ApiSrv.getList($scope.loggedInUser.securityUserId+'/roles',param,function(data){
                 if(data)
                     $scope.roles = data.plain();
                 console.log('Roles List ---------------- ',$scope.roles);
-            });
+            });*/
 
              //Delete User Functionality..
              self.deleteUser = function(id){

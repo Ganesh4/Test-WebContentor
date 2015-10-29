@@ -47,7 +47,9 @@
 
                     //Update State Object According to the Country Selected. 
                     scope.$on(Global.EVENTS.UPDATE_COUNTRY,function(){
+                        
                         var id = scope.formData.country.securityCountryId;
+                        console.log('scope.formData ----------- ',id);
                         CommonSrv.getStatesByCountryId('countries/'+id,function(data){
                             scope.states = data.plain();
                             console.log('States --------------- ',data.plain());
