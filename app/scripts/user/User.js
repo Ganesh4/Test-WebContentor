@@ -369,7 +369,7 @@
 	        		 displayName: 'Credentials',
 	        		 elements:[
 				    {
-				    	rowClass :'col-md-4',
+				    	rowClass :'col-lg-6',
 						rowElement:[{
 							name:'Password',
                 			lable:'Password',
@@ -396,7 +396,7 @@
 	        		 displayName: 'Roles',
 	        		 elements:[
 				    {
-				    	rowClass :'col-xs-12',
+				    	rowClass :'col-lg-6',
 						rowElement:[{
 							name:'securityRoleId',
                             lable:'Roles',
