@@ -27,27 +27,27 @@
 		}
 		
 	.hamburger i{
-		color: $brder-color;
+		color: $left-nav-ico;
 		font-size: 31px;
 		}
 		
 	.hamburger i:hover{
-		color: #c5d9e2;
+		color: $header-color;
 		}
 }
 
 .leftnav-Toggle {
-	border-top: 1px solid #414248;
+	border-top: 0px solid #414248;
 		
 	.leftnav-Toggle-name {
 		height: 32px;
-		background-color:#234d82;
+		background-color: #dddddd;
 		width: 100%;
-		color: #fff;
+		color: $left-nav-ico;
 		}
 		
 	.leftnav-Toggle-name i {
-		color: #ccdce5;
+		color: $left-nav-ico;
 		font-size: 23px;
 		font-weight: bolder;
 		padding: 6px 6px 6px 10px;
@@ -61,32 +61,35 @@
 	ul {		
 		li {
 			width: 100%;
-			background-color: $header-color;
-			color: #ccdce5;
+			background-color: $sidenavbar-color;
+			color: $left-nav-ico;
 			height: 37px;
 			padding: 10px;
 			cursor: pointer;
 			&:hover {
-			background-color: $body-color;
-			color: #377ee4  !important;
-			border-left: 5px solid #377ee4;
+			background-color: $link-hover;
+			color: $workarea-color  !important;
+			
+			i{
+				color:$workarea-color;
 				}
 			}
+		 }
 				
 		li i {
 			margin-right: 10px;
+			color: $left-nav-ico;
 			}
 	}
 }
 
 .nav-selected{
-	background-color: whitesmoke !important;
-	color: #377ee4 !important;
-	border-left: 5px solid #377ee4;
+	background-color: $link-hover !important;
+	color: $workarea-color !important;
 	}
 	
 .nav-selected i{	
-	color: #377ee4 !important;
+	color: $workarea-color !important;
 	}	
 	
 .left-navbar{

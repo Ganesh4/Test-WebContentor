@@ -3,10 +3,10 @@
 .thumb-row{
     float: left;
     width: 100%;	
-    background-color: #fff;
+    background-color: $table-color;
     padding: 10px 20px;
     margin-bottom: 25px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 .thumb-block{
 	width: 100%;
@@ -169,7 +169,7 @@
 	  
 		a{
 		  /*text-decoration:underline; */
-		  background-color: #47a8d8;
+		  background-color: $link-hover;
 		  padding: 3px 10px;
 		  color: #fff;
 		  cursor: pointer;
@@ -196,4 +196,3 @@
 				}
 		 }
 }
-
