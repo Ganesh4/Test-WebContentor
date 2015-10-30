@@ -18,7 +18,7 @@
 		&:hover,
 		&:focus,
 		&:active {
-		background-color: $header-color;
+		background-color: $link-hover;
 		color:$workarea-color;
 		@include border-radius(2px);
 	}
@@ -28,7 +28,7 @@
 .header-sub {
 	i.view_grid_button  {
 		background-color: $grey-color;
-		border: 1px solid $brder-color;
+		border: 1px solid #e1e1e1;
 		@include border-radius(2px);
 		float:right;	
 		font-size:18px;
@@ -39,9 +39,9 @@
 		&:hover,
 		&:focus,
 		&:active {			
-			background-color: $header-color;
+			background-color: $link-hover;
 			color:$workarea-color;
-			border:solid 1px $header-color;
+			border:solid 1px $link-hover;
 			box-shadow:none;
 		}	
   	}

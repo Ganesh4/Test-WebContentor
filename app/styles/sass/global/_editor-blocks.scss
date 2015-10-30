@@ -2,17 +2,26 @@
 /* submenu blocks */
 
 .block-container{
-  width:640px;
+  width:580px;
 	min-height:500px;
 	position:absolute;
 	top: 60px;
 	left: 67px;
 	/*display:none;*/
-	background-color:$sidenavbar-color;	
+	background-color:$editor-bgcolor;	
 	color:$editor-text-color;
 	z-index:99;
+	border:1px solid $editor-border-color;
 }
+.image-upload{
 
+  .bottom-fixed-box{
+    position:absolute;
+		bottom:0;
+		width:80%;
+		right:0;		
+	}
+}
 .submenu-block{
   width:100%;	
  	/*border:1px solid #000;*/	
@@ -76,13 +85,13 @@
   padding-left: 7px;
 }
 .submenu-content{
-  width:81%;
+  width:79%;
 	float:right;
 	
 	.heading{
 		 width:100%;
 		 /*background-color:#ebebeb;*/	
-		 background-image:url(../../images/pattern1.gif);
+		 /*background-image:url(../../images/pattern1.gif);*/
 		 padding:4px 10px;
 	}	
 	.content-block{
@@ -157,12 +166,13 @@
   @extend .submenu-header;
 }*/
 .image-container{
-  margin:10px 20px;
+  margin:0px 0px;
+	position:relative;
 	
 	.nav-pills{
 		 a{
 		   padding:6px 20px;
-	     text-transform:capitalize;	 
+	     text-transform:capitalize;
 		 }
 	}	
 	.tab-pane{
@@ -170,6 +180,66 @@
 		 position: relative;
 		 padding:0;
 	 }
+	 
+	.tab-content{
+    border:none;
+	}
+	.image-sidenav{
+    position: absolute;
+    z-index: 990;
+		border:1px solid $editor-border-color;
+		width:20%;    		
+		min-height:499px;
+	}
+	.nav {
+		width: 100%;
+		
+		/*float: left;*/
+
+	}
+	.nav-pills{
+    > li{
+	     width:100%;
+			 border:none;
+			 border-bottom:1px solid $editor-border-color;
+			 
+			 > a{
+				   background-color:transparent; 
+				 } 		
+		}		
+	}
+	.bottom-fixed-box{
+     width: 80%;		
+		 float:right;
+	}
+	.left-nav{
+	   width: 20.1%; 
+		 padding-top: 155px;	
+		 border-right:none;
+		 
+		 .header{
+		    background-color:#132f52;
+			}
+	}
+	.top-icon{
+    width:100%;
+		height:100px;
+		background-color:#132f52;
+		
+		.glyphicon{
+	     font-size: 50px;		
+			 padding:25px;
+		}
+	}
+	.upload-image-content{
+    width: 80%;
+    float: right;		
+	}
+	.image-library-content{
+    padding-left:0;		
+
+	}
+	
 }
 .bottom-fixed-box{
 	/*position: absolute;
@@ -196,11 +266,12 @@
   }
 }
 .user-library-content{
-  width:100%;
-	float:left;
+  width:80%;
+	float:right;
 	height:350px;
 	padding:10px;
 	overflow-y:scroll;
+	margin-right:10px;
 	
 	.user-library-blocks{
     width:96%;
@@ -255,14 +326,14 @@
 
 
 .uploaded-date-bar{
-	background-color:#ebebeb;
-	background-image:$sub-heading-bg;
+	background-color:#132f52;
+/*	background-image:$sub-heading-bg;*/
 	width:100%;
 	margin:0 auto;
 	padding:4px;
 	
 	.date{
-    font-size:0.85em;   		
+    font-size:0.85em;
 	}
 }
 
@@ -271,6 +342,8 @@
   @extend .user-library-content;
 	padding-top:0px;
 	overflow:hidden;
+	width:100%;
+	margin-right:0;
 	
 	.header{
      font-size:1.3em;
@@ -299,6 +372,7 @@
 						&:hover{
 								 background-color: transparent;
 								 color:blue;
+								 text-decoration:underline;
 						}
 			  	}
 				 a.active{
@@ -308,7 +382,7 @@
 	}
 }
 .right-content{
-  width: 78%;
+  width: 79.7%;
   float: right;	
 }
 .image-library-blocks{
