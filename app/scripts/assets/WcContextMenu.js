@@ -2,7 +2,7 @@
 
 (function(angular){
 
-angular.module('microsite').directive('wcSectionContextMenu',function($compile){
+angular.module('microsite').directive('wcContextMenu',function($compile){
 		return{
 			restrict:'AE',
 			link : function(scope, element, attrs){
