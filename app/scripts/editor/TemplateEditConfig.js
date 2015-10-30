@@ -27,27 +27,27 @@
                 },
                 {
                     name:'SECTION',
-                    icon:'',
+                    icon:'app.editor.add',
                     state:'app.editor.section'
                 },
                 {
                     name:'WIDGETS',
-                    icon:'',
+                    icon:'app.editor.add',
                     state:'app.editor.widgets'
                 },
                 {
                     name:'FORM',
-                    icon:'',
+                    icon:'app.editor.add',
                     state:'app.editor.form'
                 },
                 {
-                    name:'SCO',
-                    icon:'',
+                    name:'SEO',
+                    icon:'app.editor.add',
                     state:'app.editor.sco'
                 },
                 {
                     name:'STATS',
-                    icon:'',
+                    icon:'app.editor.add',
             }]
         },
         }).state(route + '.add',{
