@@ -179,7 +179,8 @@
                             required: false,
                             placeholder:'Roles',
                             model : 'securityRoleId',
-                            ngOptions:'role.roleName for role in Roles'
+                            ngOptions:'role.roleName for role in RolesList',
+                            initEvent:'ROLE_LIST',
 						}]
 
 				    }]
