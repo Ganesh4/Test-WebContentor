@@ -27,7 +27,8 @@ angular.module('assets').directive('wcFields',
 				initEvent: '=',
 				fileName: '=',
 				lable: '=',
-				states: '=',  
+				states: '=',
+				required: '='  
 			},
 			templateUrl : './views/assets/fields.html',
 			link : function(scope, element, attrs){

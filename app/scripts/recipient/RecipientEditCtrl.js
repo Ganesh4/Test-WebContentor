@@ -12,30 +12,27 @@ angular.module('recipients').controller('RecipientEditCtrl',
         'RecipientApiSrv',
         'Global',
         function($scope ,$state, ApiSrv,CommonSrv,RecipientApiSrv,Global){
-            $scope.elements = $state.current.data.elements;
-            $scope.formBtns = $state.current.data.formBtns;
-            $scope.submitEvent = $state.current.data.submitEvent;
 
-
+            console.log("$scope.contactData ----------------- ",$scope.contactData);
             //Update Recipient Functions
-            $scope.$on(Global.EVENTS.UPDATE_CONTACT,function(){
-                 var recipient = $scope.emailRecipients;
+           /* $scope.$on(Global.EVENTS.UPDATE_CONTACT,function(){
 
-                 console.log('Edit Recipient-----------',recipient);
-                 
+                 var recipient = $scope.contactData;
+
+                 console.log('Edit -----------',$scope.contactData);
+
                 if(!_.isUndefined(recipient.country))
-                    recipient.country = $scope.emailRecipients.country.securityCountryID;
+                    recipient.country = $scope.contactData.country.securityCountryID;
                 if(!_.isUndefined(recipient.state))
-                    recipient.state = $scope.emailRecipients.state.securityStateID;
+                    recipient.state = $scope.contactData.state.securityStateID;
                  if(!_.isUndefined(recipient.list))
-                    recipient.listId = $scope.emailRecipients.list.listId;
+                    recipient.listId = $scope.contactData.list.listId;
                 recipient = _.omit(recipient,'list');
-             RecipientApiSrv.updateRecipient($scope.loggedInUser.securityUserId+'/recipients',emailRecipients,function(){
+             RecipientApiSrv.updateRecipient($scope.loggedInUser.securityUserId+'/recipients',contactData,function(){
                 console.log('Updated data ------- ',data.plain());
-                $scope.$emit(Global.EVENTS.RELOAD);
                 $state.transitionTo('app.home.manage.recipients.list');
                });
-            });      
+            }); */     
 
         }
     ]);

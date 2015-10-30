@@ -179,7 +179,8 @@
                             required: false,
                             placeholder:'Roles',
                             model : 'securityRoleId',
-                            ngOptions:'role.roleName for role in Roles'
+                            ngOptions:'role.roleName for role in RolesList',
+                            initEvent:'ROLE_LIST',
 						}]
 
 				    }]
@@ -391,18 +392,17 @@
 	        }).state('app.home.manage.user.add.roles', {
 	            url:'/roles',
 	            template:'<div class = "col-md-8"><wc-form elements="elements" form-btns="formBtns" form-data="user" submit-event="{{submitEvent}}"></wc-form></div>',
-	            controller:'RoleCtrl',
 	        	data:{
 	        		 displayName: 'Roles',
 	        		 elements:[
 				    {
 				    	rowClass :'col-xs-12',
 						rowElement:[{
-							name:'roleId',
+							name:'securityRoleId',
                             lable:'Roles',
                             type: 'DROP_DOWN',
                             required: true,
-                            model : 'roleId',
+                            model : 'securityRoleId',
                             ngOptions:'role.roleName for role in roleList',
                             initEvent:'ROLE_LIST',
 						}]

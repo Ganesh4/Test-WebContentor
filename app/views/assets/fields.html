@@ -2,7 +2,7 @@
 <label ng-if="lable !== undefined">{{lable}}</label>
 {{initMethod}}
 <div ng-if="type === 'DROP_DOWN'" ng-init= "init()">
-    <select class = "form-control" 
+    <select class = "form-control" ng-model="drop"
 		ng-change = "{{onChange}}"  ng-options="{{options}}">
 		<!--<option ng-repeat = "args in array">{{args}}</option>-->
 	</select>
@@ -10,7 +10,6 @@
 </div>
 
 <div ng-if="type === 'TEXT'">
-
 	<input ng-if ="required" class="form-control" 
 		name="{{name}}" placeholder="{{placeholder}}" required="required"  ng-model = "formData[model]"   required-err-type="{{validate}}" />
 
@@ -50,7 +49,6 @@
 		ng-model = "formData[model]" ng-checked = "formData[model]" ng-click = "onClick"> {{name}}</input>
 	</label>
 </div>
-
 
 <div ng-if="type === 'CAPTCHA'">
 	<div class="g-recaptcha" ng-model = "formData[model]" 

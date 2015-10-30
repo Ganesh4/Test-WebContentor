@@ -6,10 +6,10 @@
 .campaign-thumb-row {
     float: left;
     width: 100%;
-    background-color: #fff;
+    background-color: #f9f9f9;
     padding: 20px 20px;
     margin-bottom: 25px;
-    border-radius: 10px;
+    border-radius: 5px;
 
 .campaign-list-row:hover{
 	
@@ -209,10 +209,11 @@
 	
 	&:hover .btn_template-img-over{
 		  display:block;
-		  background: rgba(27, 80, 152, 0.58);
+		  background: rgba(64, 125, 106, 0.72);
 		  
 		  i{
 			  margin-right: 15px;
+			  font-size: 14px;
 			  }
 	}
 	  
@@ -233,9 +234,9 @@
     padding:10px 15px 10px; 
 	float: left;
 	width: 100%;
-	background-color: #F5F5F5;/*C2CEDC-3E3E3E old colors*/
+	background-color: $thumb-color;/*C2CEDC-3E3E3E old colors*/
 	color: #fff;
-	min-height: 175px;
+	height: 210px;
 	
 	p{
 		text-align: left;

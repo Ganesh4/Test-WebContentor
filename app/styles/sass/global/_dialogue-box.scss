@@ -60,16 +60,18 @@
 				  display: inline-block;
 				  
 				  button{
-					  width: 80px;
-					  background-color: $logo-color;
+					  width: 70px;
+					  background-color: $workarea-color;
 					  background-image: none;					  
 					  border: none;
-					  color: $workarea-color;
+					  color: $main-color;
 					  text-shadow: none;
+					  border-radius: 2px;
+					  padding: 5px 15px;
 					  }
 				button:hover {
 						color: $workarea-color;
-						background-color: $COLOR_GREEN;
+						background-color: $logo-color;
 						outline: none;
 					}
 					  
@@ -79,5 +81,3 @@
    }
   
 }
-
-

@@ -24,8 +24,8 @@
     "angular-re-captcha" : "~0.2.0",
     "angular-auto-validate" : "~1.18.17",
     "angular-bootstrap" : "~0.11.0",
-    "angular-local-storage" : "~0.2.3",
-    "angular-notify" : "2.5.0"
+    "angular-local-storage" : "~0.2.3"
+    
   },
   "resolutions": {
     "angular": ">= 1.0.8"

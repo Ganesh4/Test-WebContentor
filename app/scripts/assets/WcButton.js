@@ -85,6 +85,10 @@ angular.module('assets').directive('wcButton',['Global','$parse','notify',functi
 	            	scope.EDIT_BTN_DISABLE = false;
 	            });
 
+	            scope.$root.$on(Global.EVENTS.EDIT_BUTTON_DISABLE,function(event, data){
+	            	scope.EDIT_BTN_DISABLE = true;
+	            });
+
 	            scope.$on(Global.EVENTS.DIALOG_CLOSE,function(event, data){
 	            	notify.closeAll();
 	            });
