@@ -17,7 +17,7 @@
       				copy: true
     			});
 				*/
-				Restangular.setBaseUrl('http://192.168.1.168/MicroS/');
+				Restangular.setBaseUrl('http://192.168.1.24/MicroS/');
 				console.log('Template Id --------- ',$stateParams.templateId);
 				DesignApiSrv.getDesignById($stateParams, function(data){
 					if(data){
