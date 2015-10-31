@@ -1,16 +1,16 @@
 
 <!--<div  ng-click="showSubMenu()">...</div>-->
 
-<div class="action-row">
+<div class="action-row" >
 
-<i class="fa fa-ellipsis-v" ng-click="showSubMenu()"></i>
+<i class="fa fa-ellipsis-v"></i>
 	
-<ul>
-   <li><span><i class="fa fa-pencil-square-o"></i>Edit Contact</span></li>
-   <li><span><i class="fa fa-trash-o"></i>Delete Contact</span></li>
-   <li><span><i class="fa fa-minus-circle"></i>Unsubscribe</span> </li>
+<ul >
+   <li><span ng-click="editContact()"><i class="fa fa-pencil-square-o" ></i>Edit Contact</span></li>
+   <li><span ng-click="deleteContact()"><i class="fa fa-trash-o"></i>Delete Contact</span></li>
+   <li><span ><i class="fa fa-minus-circle"></i>Unsubscribe</span> </li>
  <!--  <li><span><i class="fa fa-check-circle"></i>Resubscribe</span></li>-->
-   <li><span><i class="fa fa-times-circle"></i>Remove from list</span></li>
+   <li><span ng-click="deleteContact()"><i class="fa fa-times-circle"></i>Remove from list</span></li>
 </ul>
 
 </div>

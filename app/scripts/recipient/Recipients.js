@@ -34,18 +34,12 @@
                                 
                                },{
                                     name : 'Delete',
-                                    onClick : 'DELETE_RECIPIENT',
+                                    onClick : 'DELETE_EMAIL_LIST',
                                     disable :'DELETE_BTN_DISABLE'
                                },{
                                     name : 'Save',
                                     onClick : 'ADD_EMAIL_RECIPIENT_LIST',
                                     disable :'SAVE_BTN_DISABLE'
-                                
-                               },{
-                                    name : 'Edit',
-                                    onClick : 'EDIT_CONTACT',
-                                    state :'app.home.manage.recipients.edit',
-                                    disable :'EDIT_BTN_DISABLE'
                                 
                                }],
                  }

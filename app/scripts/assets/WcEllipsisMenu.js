@@ -1,20 +1,29 @@
+
+/**
+ * 
+ */
 'use strict';
-
 (function(angular){
+    angular.module('recipients').directive('wcEllipsisMenu',
 
-angular.module('recipients').directive('wcEllipsisMenu',function(){
-		return{
-			restrict:'AE',
-			templateUrl:'./views/assets/rowmenu.html',
-			scope : {
-				onClick : '@'
-			},
-			link : function(scope, element, attrs){
-				//console.log('element ---------- ',element);
-				function showSubMenu(){
-					console.log("In SubMenu -------------");
-				}
-			}
-		}
-	});
+    	['Global',
+    	function(Global){
+        return{
+            restrict:'AE',
+            scope:{
+            	onClick:'='
+            },
+            templateUrl:'./views/assets/rowmenu.html',
+            link:function(scope){
+        	scope.editContact = function(){
+        	scope.$emit(Global.EVENTS.EDIT_CONTACT);
+        	
+        	   }
+        	 scope.deleteContact = function(){
+        	 	scope.$emit(Global.EVENTS.DELETE_RECIPIENT);
+        	 }
+				
+        	}
+    	}
+    }]);
 })(angular);
