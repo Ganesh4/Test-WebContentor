@@ -55,16 +55,16 @@
                                 name : 'Emails',
                                 state:'app.home.manage.emails'
                             },{
-                                icon : 'fa fa-list-alt',
+                                icon : 'fa fa-users',
                                 name : 'Contacts',
                                 state: 'app.home.manage.recipients.list'
                             },{
-                                icon : 'fa fa-list-alt',
+                                icon : 'fa fa-plus-square',
                                 name : 'Segmentation',
                                 state: ''
                             }]
                         },{
-                            icon : 'fa fa-angle-down',
+                            icon : 'fa fa-plus-square',
                             name : 'Promotional Pages',
                             menu : [{
                                 icon : 'fa fa-file-text',
@@ -75,7 +75,7 @@
                             icon : 'fa fa-angle-down',
                             name : 'Reports',
                             menu : [{
-                                icon : 'fa fa-bar-chart',
+                                icon : 'fa fa-th',
                                 name : 'Analytics'
                             }]
                         },{

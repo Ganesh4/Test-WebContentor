@@ -28,6 +28,8 @@
 	          	errorMessages['anotherErrorMessage'] = 'An error message with the attribute value {0,1,2,3,4,5,6}';
 	          	errorMessages['invalidMobile'] = 'Invalid Mobile Number';
 	          	errorMessages['invalidPhoneNo'] = 'Invalid Phone Number';
+	          	errorMessages['roleNameRequired'] = 'Role name is required';
+
 	          	
 	        });
 

@@ -20,7 +20,7 @@ angular.module('microsite').directive('wcHtmlBind',function($compile){
                 	//angular.element(element[0]).children().editable();
             		new MediumEditor(element[0],{
 					    toolbar: false,
-				      	imageDragging: true,
+				      	imageDragging: true
 					});
                 });
 
