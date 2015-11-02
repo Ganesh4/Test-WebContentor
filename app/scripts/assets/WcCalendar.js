@@ -27,13 +27,13 @@ angular.module('assets').directive('wcCalendar',
 	            }
 
 				// grab today and inject into field
-				scope.today = function() {
+				/*scope.today = function() {
 					scope.today = new Date();
 				};
 				scope.today();
 				scope.tomorrow = function() {
 					scope.campaign.endDate = new Date(scope.startDate.getTime() + 24 * 60 * 60 * 1000);
-				};
+				};*/
 			}
 		}
 	}]

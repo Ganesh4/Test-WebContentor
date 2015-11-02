@@ -179,7 +179,7 @@
                             required: false,
                             placeholder:'Roles',
                             model : 'securityRoleId',
-                            ngOptions:'role.roleName for role in roleList',
+                           ngOptions:'role.roleName for role in roleList',
                             initEvent:'ROLE_LIST',
 						}]
 
@@ -369,7 +369,7 @@
 	        		 displayName: 'Credentials',
 	        		 elements:[
 				    {
-				    	rowClass :'col-md-4',
+				    	rowClass :'col-lg-6',
 						rowElement:[{
 							name:'Password',
                 			lable:'Password',
@@ -396,7 +396,7 @@
 	        		 displayName: 'Roles',
 	        		 elements:[
 				    {
-				    	rowClass :'col-xs-12',
+				    	rowClass :'col-lg-6',
 						rowElement:[{
 							name:'securityRoleId',
                             lable:'Roles',

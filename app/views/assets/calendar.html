@@ -1,15 +1,20 @@
-<div class="form-group campaign-group-left">
-  <div class="campaign-left-fg">
+<div class ="campaign_rhs_wrapper">
+<div class ="image-group-left">
+ <div class="image-left-fg">
     <!--<label>Expiry Date</label> -->
-    <div class="input-group datepicker" >
+    <!--<div class="input-group datepicker" >-->
         <input type="text" class="form-control" datepicker-popup="{{format}}" 
             class="form-control input-width" ng-model="formData[model]" 
             is-open="calendar.isCalendarOpen" date-disabled="disabled(date, mode)" 
             ng-required="true" id="date-picker" readonly show-button-bar="false"
             ng-change = "{{onChange}}"/>
-        <div class="campaign-right-fg" ng-click="doOnClick($event)">
-              <i class="fa fa-calendar" ></i>
-        </div>
-    </div>       
+       
+    <!--</div>  -->
+         
   </div>
-</div> 
+  <div class="image-right-fg" ng-click="doOnClick($event)">
+      <i class="fa fa-calendar" ></i>
+  </div> 
+
+</div>
+</div>

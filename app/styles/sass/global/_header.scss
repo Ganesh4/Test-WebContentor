@@ -117,6 +117,13 @@
 }
 .navbar-right {
     margin-right: -30px;
+	
+	input:focus { 
+          background-color: $workarea-color;
+		  color: #000;
+		  border: 0px;
+    }
+
     }
 	
 .navbar-left{

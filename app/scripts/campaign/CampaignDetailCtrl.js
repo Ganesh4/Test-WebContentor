@@ -8,15 +8,9 @@
         'CampaignApiSrv',
 		function($scope,$state,Restangular,CampaignApiSrv){
 			console.log("My Campaign --------------- ",$scope.campaign);
-			$scope.selectedFeatures = [];
-			_.each($scope.featureList,function(value,key){
-				_.each($scope.campaign.campaignFeatureId,function(v,k){
-						if(value.securityFeatureId == v)
-							$scope.selectedFeatures.push(value);
-				})
-				
-			});
-			console.log('$scope.selectedFeatures --------- ',$scope.selectedFeatures);
+			$scope.selectedFeatures = $scope.campaign.CampaignFeatures;
+			console.log("selectedFeatures --------------- ",$scope.selectedFeatures);
+			
 
         }]);
 })(angular);

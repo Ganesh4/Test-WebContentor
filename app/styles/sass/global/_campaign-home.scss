@@ -84,6 +84,7 @@
 		 }
 	}
 	
+	
 	.form-group {
 		
 		.dropdown-menu{
@@ -131,10 +132,37 @@
 				  }
 			}	
 	}
+	
 	.campaign-group-left{
-		display: flex;
+		display: flex;	
 		}
+
+	.image-group-left{
+		display: flex;
+		
+		.image-left-fg{
+			width: 44%;
+			float: left;
+			margin-right: 2px;
+		    }
+		.image-right-fg{
+			width: 42%;
+			float: left;
+			margin-left: 0%;
+		    }
+		.image-right-fg i{
+			color: #5d5e64;
+			font-size: 20px;
+			font-weight: bold;
+			margin-top: 0px;
+			cursor: pointer;
+			}		
+		}
+	
 }
+
+
+	
 
 /*====================== CampaignDetail Page ======================*/
 
