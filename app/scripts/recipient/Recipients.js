@@ -26,6 +26,9 @@
                     data: {
                     displayName: ' Contact List',
                     actionBarBtn: [{
+                                    name : 'Refresh',
+                                    onClick : 'RELOAD'
+                               },{
                                     name : 'Export',
                                     onClick : '',
                                },{
@@ -194,7 +197,6 @@
                  }
             }).state('app.home.manage.recipients.add', {
                     url: '/add',
-                    controller:'RecipientCtrl',
                     templateUrl:'views/recipient/AddRecipient.html',
                 data: {
                     displayName: 'Add',
@@ -205,7 +207,7 @@
                                     state : 'app.home.manage.recipients.list'
                                },{
                                     name : 'Save',
-                                    onClick : 'ADD_RECIPIENT'
+                                    onClick : 'ADD_RECIPIENT',
                                 
                                }],
                     elements:[
