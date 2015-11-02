@@ -2,7 +2,7 @@
 <p><strong>{{campaign.name}}</strong></p>
 <p>{{campaign.description}}</p>
 
-<p>This campaign started on {{campaign.startDate | FormatDateFilter}}  and ends on {{campaign.endDate | FormatDateFilter}} </p>
+<p>This campaign started on {{campaign.startDate}}  and ends on {{campaign.endDate}} </p>
 
 <p><strong>Features</strong></p>
 
@@ -13,14 +13,13 @@
     <div class="form-group campaigndetail-group-left">
     
       <div class="campaigndetail-left-fg" ng-repeat = "data in selectedFeatures">
+        <img src="images/microsite-icon.png" width="60" height="60" alt="" ng-if="data.securityFeatures.feature == 'Promotional Pages'" ui-sref = "app.home.manage.page.overview"/> 
        
-        <img src="images/microsite-icon.png" width="60" height="60" alt="" ng-if="data.feature == 'Microsite'" ui-sref = "app.home.manage.page.overview"/> 
-       
-        <img src="images/email-icon.png" width="60" height="60" alt="" ng-if="data.feature == 'Email'" ui-sref = "app.home.campaign.emails" />
+        <img src="images/email-icon.png" width="60" height="60" alt="" ng-if="data.securityFeatures.feature == 'Email'" ui-sref = "app.home.campaign.emails" />
 
-        <img src="images/blog-icon.png" width="60" height="60" alt="" ng-if="data.feature == 'Blog'" ui-sref = "app.home.manage.page.overview"/> 
+        <img src="images/blog-icon.png" width="60" height="60" alt="" ng-if="data.securityFeatures.feature == 'Blog'" ui-sref = "app.home.manage.page.overview"/> 
         
-        <label>{{data.feature}}</label>
+        <label>{{data.securityFeatures.feature}}</label>
         
       </div>
     </div>

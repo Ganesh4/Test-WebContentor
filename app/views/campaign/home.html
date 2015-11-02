@@ -30,12 +30,12 @@
 
  <!-- thumb-category -->
     <div class="row">
-              <div class="col-lg-4" ng-repeat = "campaign in allCampaignList">
+        <div class="col-lg-4" ng-repeat = "campaign in allCampaignList">
             <div class="thumb-block-new" ng-mouseover="onMouseOver($event)">
                 <div class="thumb-img">
                   <span class="btn_template-img-over">
                   <a target="_blank"  ng-click = "getCampaignDetail(campaign)"><i class="fa fa-info-circle"></i>Details</a>
-                  <a  ng-click = "getCampaignDetail(campaign)"><i class="fa fa-pencil-square-o"></i>Edit</a></span> 
+                  <a  ng-click = "EditCampaignDetail(campaign)"><i class="fa fa-pencil-square-o"></i>Edit</a></span> 
                   <img src="images/2.jpg"/>
                   <span class="title-new">{{campaign.name}}</span>
                  </div>
