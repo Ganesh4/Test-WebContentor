@@ -41,6 +41,7 @@ h2.common-headng{
 	 height: 0;	
 }
 
+
 .content-padding {
   width: 100%;
   float: left;
@@ -86,4 +87,15 @@ a{
 .notify{
 	background-color: $header-color;
 	color: $workarea-color;
+	}
+
+/*======= Input border =======*/
+
+.form-control{
+	border-color: #e3eaef ;
+	box-shadow: none;
+	}
+
+.select2-container-multi .select2-choices{
+	border: 1px solid #e3eaef !important;
 	}

@@ -7,7 +7,7 @@
 	height:700px;	
     position: fixed;
 	z-index:99;
-	background-color:$sidenavbar-color;
+	background-color:$editor-bgcolor;
 	color:#fff;
 	
 	a{
@@ -128,7 +128,7 @@
 	 }
 }
 .content-main-edit{
-  width:95%;	
+  width:100%;	
   margin-top: 60px;
 	position:relative;
 	z-index:9;

@@ -22,7 +22,7 @@
 	background-color: #f9f9f9;
 	border-bottom: 1px solid #e3eaef !important;
 	&:hover{
-			background-color: $header-color  !important;
+			background-color: $link-hover-hover !important;
 			cursor: pointer;
 			}
 	}
@@ -30,9 +30,10 @@
 	border-bottom: 1px solid #e3eaef !important;
 	height: 32px;
 	&:hover{
-			background-color: $header-color  !important;
+			background-color: $link-hover-hover !important;
 			cursor: pointer;
 			}
+			
 	}
 .ui-grid-header{
 	border-bottom: 1px solid #e3eaef !important;
@@ -78,7 +79,7 @@
 		&:hover{
 			background-color: #1b951b;
 			.ui-grid-cell-contents{
-				color: #fff;
+				color: #353535;
 				}
 		
 			}
@@ -120,11 +121,11 @@
 	
 .ui-grid-canvas {
 	.ui-grid-row.ui-grid-row-selected > [ui-grid-row] > .ui-grid-cell {
-	background-color: $header-color;
-	color: #fff;
+	background-color: $link-hover-hover;
+	color: #353535;
 	}
 }
 .ui-grid-row-selected{
 	background-color: #1b951b;
-	color: #fff;
+	color: #353535;
 }

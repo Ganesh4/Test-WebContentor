@@ -6,8 +6,8 @@
 .campaign-thumb-row {
     float: left;
     width: 100%;
-    background-color: #f9f9f9;
-    padding: 20px 20px;
+    /*background-color: #f9f9f9;
+    padding: 20px 20px;*/
     margin-bottom: 25px;
     border-radius: 5px;
 
@@ -236,7 +236,7 @@
 	width: 100%;
 	background-color: $thumb-color;/*C2CEDC-3E3E3E old colors*/
 	color: #fff;
-	min-height: 175px;
+	height: 210px;
 	
 	p{
 		text-align: left;

@@ -13,7 +13,7 @@
 			
 			$scope.design = {};
 			$scope.index;
-			Restangular.setBaseUrl('http://192.168.1.168/MicroS/');
+			Restangular.setBaseUrl('http://192.168.1.24/MicroS/');
 			$scope.select2Options = {
 	                'multiple': true,
 	                'simple_tags': true,
