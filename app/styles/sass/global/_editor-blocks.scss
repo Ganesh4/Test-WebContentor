@@ -153,6 +153,20 @@
 .element-highlight{
   border:2px dashed #000;
 }
+.selected{
+	border:2px solid $editor-border-color;
+	resize: both; 
+ 	overflow: hidden;
+}
+.handle{
+    position: absolute;
+    z-index: 999;
+    float: right;
+    right: 0px;
+}
+.handle:hover {
+  background: #09F;
+}
 
 /*.image-block1{
 	width: 640px;z

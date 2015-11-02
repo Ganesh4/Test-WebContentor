@@ -11,15 +11,17 @@ angular.module('microsite').directive('wcBorderHighlight',function($compile){
 			    element.bind('mousemove', function(event){
 					clearBorder();
 					scope.nodeName = event.target.nodeName;
-					addBorder(event.target);			    	
+					
+					if(!angular.element(element[0]).find('.selected').hasClass('selected'))
+						addBorder(event.target);		    	
 			    });
 
 			    var addBorder = function(ele){
-			    	angular.element(ele).addClass("element-highlight");
+			    	angular.element(ele).addClass('element-highlight');
 			    }
 
 			    var clearBorder = function(){
-			    	angular.element(element[0]).find(".element-highlight").removeClass("element-highlight");
+			    	angular.element(element[0]).find('.element-highlight').removeClass('element-highlight');
 			    }
 			}
 		}
