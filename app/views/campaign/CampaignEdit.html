@@ -1,81 +1,8 @@
 <div class="main_rhs_wrapper">
 <p><strong>General</strong></p>
 <p>Enter the  campaign information</p>
- <form name="Form" novalidate
-                  validate-non-visible-controls="false"
-                  >
-
-<div class="row campaign_rhs_wrapper">
-  <div class="col-md-6">
-  <div class="form-group">
-    <label for="exampleInputEmail1">Name <span class="error-red">*</span></label>{{campaign}}
-    <input type="text" class="form-control input-width" ng-model="campaign.name" placeholder="Name" required="required" required-err-type="firstNameRequired" ng-keyup = "checkValidation()" ng-change = "checkValidation()"/  >
+ <div class = "col-md-6">
+    <wc-form elements="elements" form-btns="formBtns" form-data="campaign" submit-event="{{submitEvent}}"></wc-form>
   </div>
-  
-  <div class="form-group campaign-group-left">
-  	<div class="campaign-left-fg">
-    <label>Start Date <span class="error-red">*</span></label>
-   
-    <input type="text" class="form-control" 
-           datepicker-popup="{{format}}" 
-           class="form-control input-width"
-           ng-model="campaign.startDate" 
-           is-open="openedStart" 
-           date-disabled="disabled(date, mode)"
-           min-date="today" 
-           ng-required="true" 
-           id="date-picker" 
-           readonly
-           show-button-bar="false"
-           ng-change = "clearEndDate()"
-           />
-          
-    </div>
-
-    <div class="campaign-right-fg" ng-click="openStart($event)">
-        <i class="fa fa-calendar" ></i>
-    </div>
-  </div>
-  
-  <div class="form-group campaign-group-left">
-  	<div class="campaign-left-fg"  >
-    <label>End Date <span class="error-red">*</span></label>
-    <input type="text" class="form-control" 
-           datepicker-popup="{{format}}" 
-           class="form-control input-width"
-           ng-model="campaign.endDate" 
-           is-open="openedEnd"
-           min-date=" campaign.startDate "  
-           date-disabled="disabled(date, mode)" 
-           ng-required="true" 
-           id="date-picker" 
-           readonly
-           show-button-bar="false"
-           />
-    </div>
-    <div class="campaign-right-fg">
-       <i class="fa fa-calendar" ng-click="openEnd($event)"></i>
-    </div>
-  </div>
-  
-   <div class="form-group">
-    <label for="exampleInputEmail1">Description</label>
-    <textarea class="form-control textarea-height" rows="5" ng-model="campaign.description" id="comment" placeholder="Description"></textarea>
-  </div>
-  
-    <div class="form-group">
-        <label for="exampleInputEmail1" style="width: 100%;">Features <span class="error-red">*</span></label>
-        <span class="checkbox-align"> 
-        <label class="checkbox-inline"  ng-repeat = "data in featureList">
-          <input type="checkbox" ng-checked = "campaign.data.securityFeatureId" name="" ng-model = "campaign.campaignFeatureId[data.securityFeatureId]" value="{{data.securityFeatureId}}">{{data.feature}}{{selectedFeatures}}
-        </label>
-       </span> 
-      
-  </div>
-
-  </div>
-  
-</div>
-</form>
 
 </div>

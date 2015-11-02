@@ -47,9 +47,8 @@
                     }).state('app.home.campaign.my', {
                         url: '/my',
                         templateUrl:"views/campaign/UserCampaign.html",
-                        controller:'CampaignCtrl',
                         data: {
-                            displayName: 'Campaign',
+                            displayName: 'My Campaign',
                         }
                     }).state('app.home.campaign.general', {
                         url: '/general',
@@ -80,53 +79,65 @@
                                         }
                             ],
                             elements:[{
-                                    rowClass :'col-lg-2',
+                                    rowClass :'col-lg-12',
                                     rowElement:[{
                                         lable:'Campaign Name',
                                         name:'campaignName',   
                                         type: 'TEXT',
                                         required: true,
-                                        placeholder:'',
-                                        model : 'name'
+                                        placeholder:'Campaign Name',
+                                        model : 'name',
+                                        validate:'campaignNameRequired',
                                     }]
                                 },
                                 {
-                                    rowClass :'col-lg-2',
+                                    rowClass :'col-lg-12',
                                     rowElement:[{
+                                        lable:'Start Date',
                                         name:'startDate',
-                                        type: 'TEXT',
+                                        type: 'CALENDAR',
                                         required: true,
-                                        placeholder:'',
-                                        model:"startDate"                        
+                                        placeholder:'Start Date',
+                                        model:'startDate',
+                                        validate:'startingdate',
+                                        format: 'yyyy-MM-dd',
+                                        onChange: '',                        
                                     }]
                                 },
                                 
                                 {
-                                    rowClass :'col-lg-2',
+                                    rowClass :'col-lg-12',
                                     rowElement:[{
+                                        lable:'End Date',
                                         name:'endDate',
-                                        type: 'TEXT',
+                                        type: 'CALENDAR',
                                         required: true,
-                                        placeholder:'',
-                                        model:"endDate"                        
+                                        placeholder:'End Date',
+                                        model:"endDate",                        
+                                        format: 'yyyy-MM-dd',
+
                                     }]
                                 },
                                 {
-                                    rowClass :'col-lg-2',
+                                    rowClass :'col-lg-12',
                                     rowElement:[{
+                                        lable: 'Description',
                                         name:'description',
-                                        type: 'TEXT',
+                                        type: 'TEXT_AREA',
                                         placeholder:'Description',
                                         model : 'description'
                                     }]
                                 },
                                 {
-                                    rowClass :'col-lg-2',
+                                    rowClass :'col-lg-12',
                                     rowElement:[{
+                                        lable : 'Features',
                                         name:'CampaignFeatures',
-                                        type: 'checkbox',
+                                        type: 'SELECT_TAGS',
                                         required: true,
-                                        model : 'CampaignFeatures'
+                                        model : 'features',
+                                        initEvent: 'CAMPAIGN_FEATURE_LIST',
+                                        placeholder : 'Features'
                                     }]
 
                                 }] 
@@ -193,9 +204,70 @@
                                         },{
                                         name : "Update",
                                         onClick : 'CAMPAIGN_UPDATE'
-                                        
-                                        
-                                }],
+                                    }],
+                                elements:[{
+                                    rowClass :'col-lg-12',
+                                    rowElement:[{
+                                        lable:'Campaign Name',
+                                        name:'campaignName',   
+                                        type: 'TEXT',
+                                        required: true,
+                                        placeholder:'Campaign Name',
+                                        model : 'name',
+                                        validate:'campaignNameRequired',
+                                    }]
+                                },
+                                {
+                                    rowClass :'col-lg-12',
+                                    rowElement:[{
+                                        lable:'Start Date',
+                                        name:'startDate',
+                                        type: 'CALENDAR',
+                                        required: true,
+                                        placeholder:'Start Date',
+                                        model:'startDate',
+                                        validate:'startingdate',
+                                        format: 'yyyy-MM-dd',
+                                        onChange: '',                        
+                                    }]
+                                },
+                                
+                                {
+                                    rowClass :'col-lg-12',
+                                    rowElement:[{
+                                        lable:'End Date',
+                                        name:'endDate',
+                                        type: 'CALENDAR',
+                                        required: true,
+                                        placeholder:'End Date',
+                                        model:"endDate",                        
+                                        format: 'yyyy-MM-dd',
+
+                                    }]
+                                },
+                                {
+                                    rowClass :'col-lg-12',
+                                    rowElement:[{
+                                        lable: 'Description',
+                                        name:'description',
+                                        type: 'TEXT_AREA',
+                                        placeholder:'Description',
+                                        model : 'description'
+                                    }]
+                                },
+                                {
+                                    rowClass :'col-lg-12',
+                                    rowElement:[{
+                                        lable : 'Features',
+                                        name:'CampaignFeatures',
+                                        type: 'SELECT_TAGS',
+                                        required: true,
+                                        model : 'features',
+                                        initEvent: 'CAMPAIGN_FEATURE_LIST',
+                                        placeholder : 'Features'
+                                    }]
+
+                                }] 
                             }
                         }) ; 
             }]);
