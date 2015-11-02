@@ -1,7 +1,7 @@
 /* Scss Document */
 /* submenu blocks */
 
-.block-container{
+.block-container {
   width:580px;
 	min-height:500px;
 	position:absolute;
@@ -13,39 +13,46 @@
 	z-index:99;
 	border:1px solid $editor-border-color;
 }
-.image-upload{
+
+.image-upload {
   min-height:640px;
 	width:500px;
 
-  .bottom-fixed-box{
+  .bottom-fixed-box {
     position:absolute;
 		bottom:0;
 		width:80%;
 		right:0;		
 	}
+
 }
 
-.image-container{
-.submenu-block{
-  width:100%;	
- 	/*border:1px solid #000;*/	
-	float:left;
+.image-container {
+	.submenu-block {
+	  width:100%;	
+		/*border:1px solid #000;*/	
+		float:left;
+	}
+	
 }
-.submenu-header{
+	
+.submenu-header {
   width:76%;
 	float:right;
 	/*min-height:50px;*/
 	/*padding:10px 0;*/
 	border-bottom:1px solid $editor-border-color;
 	
-	.content-padding{
+	.content-padding {
     padding:10px 15px;		
-	}
+	} 
+	
 	.image-label{
     font-size:11px;
 	}
+	
 	.links{
-    padding:0 3px;
+    	padding:0 3px;
 		cursor:pointer;
 		color:$section-textcolor;
 		
@@ -53,7 +60,8 @@
 	    color:#fff;		
 		}
 	}
-	.category{
+	
+	.category {
     color:#fff;
 		
 		.select-label{
@@ -83,13 +91,13 @@
 		}
 	}
 }
-.heading-top{
+.heading-top {
 	font-size:16px;
 	float:left;
 	text-transform:capitalize;
 	margin-top:3px;
 }
-.submenu-leftnav{
+.submenu-leftnav {
  	width: 24%;/*120px*/
 	float:left;
 	border-right: 1px solid $editor-border-color;
@@ -131,23 +139,25 @@
   }		
 	
 }
-.submenu-linkbox{
+
+.submenu-linkbox {
 	padding: 10px 0;
 	display: inline-block;
 	text-align: center;
 }
-.submenu-iconbox-left{
+.submenu-iconbox-left {
 	width: 28%;
 	border-right:1px dotted $editor-border-color;
 	color:$section-textcolor;
 }
-.submenu-link-right{
+.submenu-link-right {
 	width:68%;
 	text-align: left;
   padding-left: 7px;
   font-size: 10px;
 }
-.submenu-content{
+
+.submenu-content {
   width:76%;
 	float:right;
 	
@@ -164,11 +174,13 @@
     overflow-y: auto;*/
 	}
 }
-.caption{
+
+.caption {
 	width:100%;		
 	text-align:center;
 }
-.elements-right{
+
+.elements-right {
   width:auto;/*150px*/
 	float:right;
 	text-align:right;
@@ -193,7 +205,7 @@
 	}
 }
 
-.icon-blocks{
+.icon-blocks {
    margin: 30px;	
 	 text-align:center;
 	 
@@ -213,7 +225,7 @@
 	}
 }
 
-.element-highlight{
+.element-highlight {
   border:2px dashed #000;
 }
 
@@ -228,7 +240,7 @@
 .image-header{
   @extend .submenu-header;
 }*/
-.image-container{
+.image-container {
   margin:0px 0px;
 	position:relative;
 	
@@ -304,7 +316,7 @@
 	}
 	
 }
-.bottom-fixed-box{
+.bottom-fixed-box {
 	/*position: absolute;
 	bottom: 0px;*/
 	width: 100%;
@@ -317,7 +329,7 @@
     color:#000;		
 	}
 }
-.top-fixed-box{
+.top-fixed-box {
   border-bottom:1px solid $editor-border-color;	
 	width:100%;
 	padding:10px;
@@ -328,7 +340,7 @@
 		height:20px;
   }
 }
-.user-library-content{
+.user-library-content {
   width:80%;
 	float:right;
 	height:350px;
@@ -340,7 +352,8 @@
 		margin:15px auto;	
   }
 }
-.library-block{
+
+.library-block {
 	width:25%;
   float:left;
   padding:3px;
@@ -387,14 +400,14 @@
 }
 
 
-.uploaded-date-bar{
+.uploaded-date-bar {
 
 	.user-library-blocks{
     width:96%;
 		margin:15px auto;	
   }
 }
-.library-block{
+.library-block {
 	width:33.33%;
   float:left;
   padding:13px 3px;
@@ -453,7 +466,7 @@
 }
 
 
-.uploaded-date-bar{
+.uploaded-date-bar {
 	background-color:#132f52;
 /*	background-image:$sub-heading-bg;*/
 	width:100%;
@@ -466,7 +479,7 @@
 }
 
 /*=========== upload-image styles ===========*/
-.image-library-content{
+.image-library-content {
   @extend .user-library-content;
 	padding-top:0px;
 	overflow:hidden;
@@ -480,7 +493,7 @@
 		 /*background-image:$sub-heading-bg;*/
 	}
 }
-.left-nav{
+.left-nav {
   width: 20%;
   float: left;	
 	border-right:1px solid $editor-border-color;
@@ -509,11 +522,11 @@
 			}		
 	}
 }
-.right-content{
+.right-content {
   width: 79.7%;
   float: right;	
 }
-.image-library-blocks{
+.image-library-blocks {
     width: 100%;
     padding: 10px 20px;
     float: left;	
@@ -531,7 +544,7 @@
 	 background-repeat:no-repeat;
    background-position: center 30%;
 }*/
-.upload-image-content{
+.upload-image-content {
 	 background-image:url(../../images/drag-and-drop.png);
 	 background-repeat:no-repeat;
    background-position: center 30%;
@@ -539,7 +552,7 @@
 }
 
 /*=================== section styles ====================*/
-.block-container-section{
+.block-container-section {
   	@extend .block-container;
 		width:440px;
 		/*height:320px;*/
@@ -644,12 +657,12 @@
 			}
 		}	
 }
-.section-inner{
+.section-inner {
 	width: 100%;
 	float: left;
   margin-bottom: 10px;
 }
-.section-right-content{
+.section-right-content {
 	@extend .elements-right;		
 	
 	a{
@@ -667,7 +680,7 @@
 }
 
 /*============ section-setting-box =============*/
-.section-setting-box{
+.section-setting-box {
   @extend .block-container-section;
   left:520px;
 	width:360px;
@@ -706,12 +719,12 @@
 		}
 	}
 }
-.settings-header{
+.settings-header {
     width: 100%;
     float: left;
     padding: 10px 0 0px;
 }
-.horizontal-row{
+.horizontal-row {
    float: left;
    width: 100%;
 		
@@ -748,7 +761,7 @@
 	  width:170px;	
 	}
 }
-.color-picker-btn{
+.color-picker-btn {
   width:12px;
 	height:12px;
 	border:1px solid #000;
@@ -758,12 +771,12 @@
 	margin-right: 5px;
 	cursor:pointer;
 }
-.color2{
+.color2 {
 	background-color:red;
 }
 
 /*========== section-bgimage-box =========*/
-.section-bgimage-box{
+.section-bgimage-box {
     @extend .block-container-section;
     left: 1000px;
     min-height: 240px;
