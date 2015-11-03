@@ -8,13 +8,16 @@
 
           <div class="form-group recip-edit-row">
             <div class="recip-left-fg">
-                <input type="text" class="form-control" name = "name" ng-model= "list.name" ng-disabled = "isInputDisable"/>
+                <input type="text" class="form-control" name = "list.name" ng-model= "list.name" ng-disabled = "isInputDisable"/>
             </div>
         
             <div class="recip-right-fg">
-                  <a><i class="fa fa-pencil-square-o" ng-click = ""></i>Edit</a>
+                  <a ng-click = "editEmailList()"><i class="fa fa-pencil-square-o"  ></i>Edit</a>
+
             </div>
-            
+            <div class="recip-right-fg">
+             <a ng-click = "updateEmailList()"><i class=""  ng-disabled = "saveDisable"></i>Save</a>
+            </div>
           </div>
 
     </div>

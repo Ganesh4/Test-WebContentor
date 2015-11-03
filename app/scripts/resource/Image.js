@@ -19,6 +19,7 @@
 	            abstract: true,
 	            controller: 'ImageCtrl',
 	            data:{
+	            	icon : 'fa fa-picture-o',
 	                displayName: 'Images',
 	                actionBarBtn: [{
 	                    name : 'Export',

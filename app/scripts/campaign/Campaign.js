@@ -42,18 +42,21 @@
                         url: '/all',
                         templateUrl:"views/campaign/home.html",
                         data: {
+                            icon:'fa fa-file-text',
                             displayName: 'Campaign',
                         }
                     }).state('app.home.campaign.my', {
                         url: '/my',
                         templateUrl:"views/campaign/UserCampaign.html",
                         data: {
+                            icon : 'fa fa-list-alt',
                             displayName: 'My Campaign',
                         }
                     }).state('app.home.campaign.general', {
                         url: '/general',
                         templateUrl:"views/campaign/NewCampaign.html",
                         data: {
+                            icon : 'fa fa-plus',
                             displayName: 'General',
                             LeftNavList:[{
                                 icon : 'fa fa-angle-down',

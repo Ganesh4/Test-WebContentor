@@ -15,11 +15,12 @@
 	            url:'/role',
 	            template:'<ui-view></ui-view>',
 	            controller: 'RoleCtrl',
-	            abstract: true
+	            abstract: true,
 	        }).state('app.home.manage.role.list',{
 		        url:'/list',
 		        templateUrl:'views/role/RoleList.html',
 		        data: {
+		        	 icon : 'fa fa-users',
 		        	 displayName: 'Roles',
 
 		        	  actionBarBtn: [{
@@ -49,6 +50,7 @@
 		        url:'/add',
 		        template:'<div class="inner_wrapper"><div class="container-fluid"> <div class = "col-md-8"><wc-form elements="elements" form-btns="formBtns" form-data="roles" submit-event="{{submitEvent}}"></wc-form></div></div></div>',
 		        data: {
+		        	  icon : 'fa fa-users',
 		        	 displayName: 'Add Role',
 
 		        	  actionBarBtn: [{
@@ -89,6 +91,7 @@
 		        url:'/edit',
 		        template:'<div class="inner_wrapper"><div class="container-fluid"> <div class = "col-md-8"><wc-form elements="elements" form-btns="formBtns" form-data="roles" submit-event="{{submitEvent}}"></wc-form></div></div></div>',
 		        data: {
+		        	 icon : 'fa fa-users',
 		        	 displayName: 'EditRole',
 
 		        	  actionBarBtn: [{

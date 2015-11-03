@@ -26,11 +26,17 @@ angular.module('recipients').controller('RecipientEditCtrl',
                  recipient.securityState = recipient.state;
                  recipient = _.omit(recipient,'state');
                  recipient = _.omit(recipient,'country');
+
                  recipient.securityStateId =  recipient.securityState.securityStateId;
-                 if(!_.isUndefined(recipient.list))
-                recipient.listId = $scope.contactData.list.listId;
+                 console.log('recipient.securityStateId---',recipient.securityStateId);
+                  if(!_.isUndefined(recipient.list)){
+                    console.log('recipient.list',recipient.list);
+                    recipient.emailRecipientsList = [];
+                    recipient.emailRecipientsList.push(recipient.list);
+                   // console.log('recipient.emailRecipientsList.push($scope.emailRecipients.list)',recipient.emailRecipientsList.push($scope.emailRecipients));
+                }
                 recipient = _.omit(recipient,'list');
-                RecipientApiSrv.updateRecipient($scope.loggedInUser.securityUserId+'/recipients',recipient,function(){
+                RecipientApiSrv.updateRecipient($scope.loggedInUser.securityUserId+'/recipients',recipient,function(data){
                     alert('Recipients Updated Successfully');
                 console.log('Updated data ------- ',data.plain());
                 $state.transitionTo('app.home.manage.recipients.list');

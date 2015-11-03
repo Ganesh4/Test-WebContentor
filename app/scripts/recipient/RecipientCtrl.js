@@ -67,7 +67,7 @@
 
                 recipient = _.omit(recipient,'list');
                 RecipientApiSrv.addRecipient($scope.loggedInUser.securityUserId+'/recipients',recipient,function(response){
-                    //console.log('Added Recipients ---------- ', data.plain());
+                    alert('Add Recipients Successfully');
                     if(response === true)
                         $state.go('app.home.manage.recipients.list');
                 });
@@ -155,8 +155,24 @@
                     $state.go('app.home.manage.recipients.edit');
                 }
             });
+                $scope.editEmailList = function(){
+                    $scope.isInputDisable = false;
+                    if(!_.isEmpty($scope.gridRowSelectedData)){
+                        var selectedList = $scope.gridRowSelectedData[0];
+                        $scope.list = selectedList;
+                    }
 
-             
+                  $scope.updateEmailList = function(){
+                    var list = $scope.list;
+                    console.log('list-------------',list);
+                    RecipientApiSrv.updateEmailList($scope.loggedInUser.securityUserId+'/email/list',list,function(){
+                        alert('Update EmailList Successfully');
+                        $scope.isInputDisable = true;
+                    });
+
+                  }
+
+                }       
             
 	}]);
 

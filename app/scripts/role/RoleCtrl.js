@@ -54,8 +54,9 @@ angular.module('role').controller('RoleCtrl',
              $scope.$on(Global.EVENTS.ADD_ROLE,function(event, data){ 
                 var roles = $scope.roles;
               RoleApiSrv.addRole($scope.loggedInUser.securityUserId+'/roles',roles,function(response){
-                if(response === true)
-                    $state.go('app.home.manage.recipients.list');
+                alert('Add Role Successfully');
+                    $state.go('app.home.manage.role.list');
+                    $scope.$edit(Global.EVENTS.RELOAD);
               })  
             });
 
@@ -85,15 +86,23 @@ angular.module('role').controller('RoleCtrl',
                 
 
                 }
+
             });
+
              $scope.$on(Global.EVENTS.UPDATE_ROLE,function(){
                var roles = $scope.roles;
 
               RoleApiSrv.updateRole($scope.loggedInUser.securityUserId+'/roles',roles,function(data){
                 //console.log('Updated  ------- ',data.plain());
                 alert('Role Update Successfully');
-              })
-             })
+                $scope.$edit(Global.EVENTS.RELOAD);
+                $state.go('app.home.manage.role.list');
+                $scope.roles ="";
+
+
+              });
+
+             });
               
         }
     ]);

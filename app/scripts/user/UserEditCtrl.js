@@ -24,7 +24,7 @@ angular.module('user').controller('UserEditCtrl',
                 user.securityState = user.state;
                 user = _.omit(user,'state');
                 user = _.omit(user,'country');
-                user.securityStateId =  user.securityState.securityStateId;
+               user.securityStateId =  user.securityState.securityStateId;
                 console.log('Update User ------------ ',user); 
 
                UserApiSrv.updateUser($scope.loggedInUser.securityUserId+'/users',user,function(data){

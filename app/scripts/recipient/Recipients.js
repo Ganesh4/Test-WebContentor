@@ -17,6 +17,7 @@
                     abstract: true,
                     controller:'RecipientCtrl',
                 data: {
+                     icon : 'fa fa-users',
 	                 displayName: 'Recipients',
 	                
                     }
@@ -51,6 +52,7 @@
                     controller:'RecipientEditCtrl',
                     templateUrl:'./views/recipient/EditRecipient.html',
                  data: {
+                    icon:'fa fa-pencil-square-o',
                     displayName: 'Edit',
                     submitEvent: 'UPDATE_CONTACT',
                     actionBarBtn: [{

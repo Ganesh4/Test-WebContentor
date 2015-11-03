@@ -16,8 +16,10 @@
                     scope.$watch(function(scope){
                             return state.current.name;
                         },function(newValue,oldValue){
-                            if(newValue!==undefined)
+                            if(newValue!==undefined){
                                 scope.actionBarBtn = state.current.data.actionBarBtn;
+                                scope.icon = state.current.data.icon;
+                            }
                     });
                 }
 

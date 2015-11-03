@@ -93,7 +93,7 @@
                 url: '/emails',
                 templateUrl: "views/email/EmailList.html",
                 data: {
-
+                    icon :'fa fa-envelope',
                     displayName: 'Emails',
             }
                 

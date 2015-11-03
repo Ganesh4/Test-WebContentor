@@ -18,6 +18,7 @@
 	            abstract: true,
 	            controller: 'UserCtrl',
               	data:{
+              		icon : 'fa fa-user',
 	                displayName: 'user',
 	                actionBarBtn: [{
 	                    name : 'Refresh',
@@ -42,13 +43,15 @@
 		        url:'/list',
 		        templateUrl:'views/user/user.html',
 		        data: {
+		        	 icon : 'fa fa-user',
 		        	 displayName: 'Users',
 		        }
 		    }).state('app.home.manage.user.edit',{
 	         	url:'/edit',
-		        template:'<div class = "col-md-8"><wc-form elements="elements" form-btns="formBtns" form-data="user" submit-event="{{submitEvent}}"></wc-form></div>',
+		        template:'<div class = "col-md-8"><wc-form elements="elements" form-btns="formBtns" form-data="user" submit-event="{{submitEvent}}">{{user}}</wc-form></div>',
 		       	 controller: 'UserEditCtrl',
 		       	data: {
+		       		icon : 'fa fa-user',
 		        	displayName: 'Edit',
 		        	actionBarBtn: [{
 	                    name : 'Cancel',
@@ -94,7 +97,7 @@
                 			lable:'Company',
                 			type: 'TEXT',
                             placeholder:'Company',
-                            model : 'organizationName'
+                            model : 'company'
 						}]
 				    },{
 				    	rowClass :'col-lg-6',
@@ -195,6 +198,7 @@
 	         	template:'<ui-view></ui-view>',
                 abstract: true,
 	            data:{
+	            	icon : 'fa fa-info-circle',
 	                displayName: 'add',
 	                LeftNavList:[
 	                    {
@@ -284,7 +288,7 @@
                 			lable:'Company',
                 			type: 'TEXT',
                             placeholder:'Company',
-                            model : 'organizationName'
+                            model : 'company'
 						}]
 				    },{
 				    	rowClass :'col-lg-6',
@@ -349,7 +353,7 @@
                             type: 'DROP_DOWN',
                             required: false,
                             placeholder:'State',
-                            model : 'state',
+                            model : 'securityStateId',
                             ngOptions:'state.stateName for state in states',
                             initMethod:'',
 						},{
@@ -358,7 +362,7 @@
                             type: 'TEXT',
                             required: false,
                             placeholder:'Zip',
-                            model : 'zip',
+                            model : 'zip'
                         }]
 				    }]
 	        	}
@@ -366,6 +370,7 @@
 	            url:'/credentials',
 	            template:'<div class = "col-md-8"><wc-form elements="elements" form-btns="formBtns" form-data="user" submit-event="{{submitEvent}}"></wc-form></div>',
 	        	data:{
+	        		 icon : 'fa fa-lightbulb-o',
 	        		 displayName: 'Credentials',
 	        		 elements:[
 				    {
@@ -393,6 +398,7 @@
 	            url:'/roles',
 	            template:'<div class = "col-md-8"><wc-form elements="elements" form-btns="formBtns" form-data="user" submit-event="{{submitEvent}}"></wc-form></div>',
 	        	data:{
+	        		 icon : 'fa fa-users',
 	        		 displayName: 'Roles',
 	        		 elements:[
 				    {
