@@ -31,6 +31,7 @@ angular.module('recipients').controller('RecipientEditCtrl',
                 recipient.listId = $scope.contactData.list.listId;
                 recipient = _.omit(recipient,'list');
                 RecipientApiSrv.updateRecipient($scope.loggedInUser.securityUserId+'/recipients',recipient,function(){
+                    alert('Recipients Updated Successfully');
                 console.log('Updated data ------- ',data.plain());
                 $state.transitionTo('app.home.manage.recipients.list');
                });

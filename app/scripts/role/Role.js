@@ -19,16 +19,24 @@
 	        }).state('app.home.manage.role.list',{
 		        url:'/list',
 		        templateUrl:'views/role/RoleList.html',
-		        controller : 'RoleCtrl',
 		        data: {
 		        	 displayName: 'Roles',
 
 		        	  actionBarBtn: [{
+                    name : 'Refresh',
+                    onClick : 'RELOAD'
+                   },{
 
 	                    name : 'Delete',
-	                    onClick : 'DELETE_USER',
+	                    onClick : 'DELETE_ROLE',
+	                    disable :'DELETE_BTN_DISABLE'
+
 	                },{
 	                    name : 'Properties',
+	                    onClick:'EDIT_ROLE',
+	                    state:'app.home.manage.role.edit',
+	                    disable:'DELETE_BTN_DISABLE'
+
 
 	                },{
 	                    name : 'Add',
@@ -40,17 +48,18 @@
 		    }).state('app.home.manage.role.add',{
 		        url:'/add',
 		        template:'<div class="inner_wrapper"><div class="container-fluid"> <div class = "col-md-8"><wc-form elements="elements" form-btns="formBtns" form-data="roles" submit-event="{{submitEvent}}"></wc-form></div></div></div>',
-		        controller : 'RoleCtrl',
 		        data: {
 		        	 displayName: 'Add Role',
 
 		        	  actionBarBtn: [{
 
 	                    name : 'Cancel',
-	                    onClick : '',
+	                    onClick: 'NAVIGATE',
+                        state : 'app.home.manage.role.list'
 	                },{
 	                    name : 'Save',
-	                    onClick : 'NAVIGATE',
+	                    onClick : 'ADD_ROLE',
+	                    
 	                   
 	                }],
 
@@ -79,17 +88,17 @@
 		    }).state('app.home.manage.role.edit',{
 		        url:'/edit',
 		        template:'<div class="inner_wrapper"><div class="container-fluid"> <div class = "col-md-8"><wc-form elements="elements" form-btns="formBtns" form-data="roles" submit-event="{{submitEvent}}"></wc-form></div></div></div>',
-		        controller : 'RoleCtrl',
 		        data: {
 		        	 displayName: 'EditRole',
 
 		        	  actionBarBtn: [{
 
 	                    name : 'Cancel',
-	                    onClick : ''
+	                    onClick: 'NAVIGATE',
+                        state : 'app.home.manage.role.list'
 	                },{
-	                    name : 'Save',
-	                    onClick : '',
+	                    name : 'Update',
+	                    onClick : 'UPDATE_ROLE',
 	                   
 	                }],
 	                elements:[
