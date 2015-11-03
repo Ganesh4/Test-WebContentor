@@ -39,8 +39,7 @@
                         $scope.campaign.CampaignFeatures = _.without($scope.campaign.CampaignFeatures,value);
                     }
                 });*/
-                console.log('Campaign ------------------ ',_.omit($scope.campaign,'features'));
-                console.log(' $scope.campaign.CampaignFeatures -------------- ', $scope.campaign);
+               $scope.campaign = _.omit($scope.campaign,'features')
                CampaignApiSrv.updateCampaign($scope.loggedInUser.securityUserId+'/campaign',$scope.campaign,function(data){
                     console.log('data------------',data.plain());
                     $scope.campaign = {};

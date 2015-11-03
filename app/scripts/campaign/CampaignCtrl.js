@@ -38,8 +38,10 @@
                         $scope.campaign.CampaignFeatures = _.without($scope.campaign.CampaignFeatures,value);
                     }
                 });*/
-                console.log('Campaign ------------------ ',_.omit($scope.campaign,'features'));
+                 
                
+                $scope.campaign = _.omit($scope.campaign,'features');
+                  
                 CampaignApiSrv.saveCampaign($scope.loggedInUser.securityUserId+'/campaign',$scope.campaign,function(data){
                     console.log('data------------',data.plain());
                     $scope.campaign = data.plain();
@@ -65,14 +67,18 @@
                     var putObject = {'securityFeatures': selctedFeature[0]};
                     $scope.campaign.CampaignFeatures.push(putObject);
                 });
-
+                  $scope.campaign = _.omit($scope.campaign,'features');
                /* _.each($scope.campaign.CampaignFeatures,function(value,key){
                     if(!_.isObject(value)){
                         $scope.campaign.CampaignFeatures = _.without($scope.campaign.CampaignFeatures,value);
                     }
                 });*/
-                console.log('Campaign ------------------ ',_.omit($scope.campaign,'features'));
                
+                var data = {
+                        campaign : $scope.campaign,
+                        file: $scope.files
+                    }
+                 console.log('Campaign ------------------ ',data);
                 CampaignApiSrv.saveCampaign($scope.loggedInUser.securityUserId+'/campaign',$scope.campaign,function(data){
                     console.log('data------------',data.plain());
                     $scope.campaign = data.plain();

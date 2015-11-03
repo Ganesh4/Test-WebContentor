@@ -140,7 +140,17 @@
                                         placeholder : 'Features'
                                     }]
 
-                                }] 
+                                },{
+                                    rowClass :'col-md-5',
+                                    rowElement:[{
+                                        name: 'file',
+                                        lable: 'Upload Image',
+                                        type: 'FILE',
+                                        required: false,
+                                        placeholder: 'Image File',
+                                        fileName: 'file'
+                                    }]
+                                }]  
                              
                             }
                  }).state('app.home.campaign.detail', {
