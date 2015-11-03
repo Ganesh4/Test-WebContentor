@@ -21,7 +21,7 @@ angular.module('microsite').directive('wcHtmlBind',function($compile){
                 	//angular.element(element[0]).children().editable();
             		editor = new MediumEditor(element[0],{
 					    toolbar: false,
-				      	imageDragging: true
+				      	imageDragging: false
 					});
 
 					editor.on(element[0], 'click', function(event, editable){
@@ -52,7 +52,7 @@ angular.module('microsite').directive('wcHtmlBind',function($compile){
 						//Only First time element should be initialize.
 						//if(!angular.element(ele).hasClass('draggable'))
 							scope.dragElement(ele);
-						
+						$(ele).resizable();
 						//angular.element(ele).addClass('draggable');
 	               		event.preventDefault();					
 				    }

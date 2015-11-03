@@ -12,7 +12,7 @@ angular.module('microsite').directive('wcBorderHighlight',function($compile){
 					clearBorder();
 					scope.nodeName = event.target.nodeName;
 					
-					if(!angular.element(element[0]).find('.selected').hasClass('selected'))
+					//if(!angular.element(element[0]).find('.selected').hasClass('selected'))
 						addBorder(event.target);		    	
 			    });
 

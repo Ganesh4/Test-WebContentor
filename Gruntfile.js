@@ -97,7 +97,7 @@ module.exports = function (grunt) {
     grunt.registerTask('dev', ['bower', 'connect:server', 'watch:dev']);
     grunt.registerTask('test', ['bower', 'jshint', 'karma:continuous']);
     grunt.registerTask('minified', ['bower', 'connect:server', 'watch:min']);
-    grunt.registerTask('server', ['connect:server','compass', 'watch']);
+    grunt.registerTask('server', ['connect:server', 'watch']);
     grunt.registerTask('package', ['bower', 'jshint', 'karma:unit', 'clean:temp']);
     grunt.registerTask('default',['watch']);
 };

@@ -55,7 +55,7 @@
     					$state.current.name.indexOf('page') != -1 || 
     					$state.current.name.indexOf('editor') != -1 ){
 
-    					Restangular.setBaseUrl('http://192.168.1.34:8080/MicroS/');
+    					Restangular.setBaseUrl('http://192.168.1.24/MicroS/');
     					ApiSrv.accessToken();	
     				}else{
     					Restangular.setBaseUrl('http://192.168.1.69/Yavun/api');
