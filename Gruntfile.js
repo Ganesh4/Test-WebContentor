@@ -69,10 +69,10 @@ module.exports = function (grunt) {
         }, connect: {
             server: {
                 options: {
-                    hostname: 'localhost',
+                    hostname: '192.168.1.24',
                     port: 4040,
                     open: {
-                        target: 'http://localhost:4040/app' // target url to open
+                        target: 'http://192.168.1.24:4040/app' // target url to open
                     },
                     debug: true
                 }
@@ -97,7 +97,7 @@ module.exports = function (grunt) {
     grunt.registerTask('dev', ['bower', 'connect:server', 'watch:dev']);
     grunt.registerTask('test', ['bower', 'jshint', 'karma:continuous']);
     grunt.registerTask('minified', ['bower', 'connect:server', 'watch:min']);
-    grunt.registerTask('server', ['connect:server', 'watch']);
+    grunt.registerTask('server', ['connect:server','compass', 'watch']);
     grunt.registerTask('package', ['bower', 'jshint', 'karma:unit', 'clean:temp']);
     grunt.registerTask('default',['watch']);
 };

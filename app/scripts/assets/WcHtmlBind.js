@@ -23,35 +23,18 @@ angular.module('microsite').directive('wcHtmlBind',function($compile){
 					    toolbar: false,
 				      	imageDragging: true
 					});
+
 					editor.on(element[0], 'click', function(event, editable){
 						if(!angular.element(event.target).parent().hasClass('handle'))
 							resizeAndDrag(event, editable);
 						
 					});
-				    
+									    
 				    scope.dragElement = function(element){
-				    	alert('TEST');
-				    	console.log('Element -------',angular.element(element[0]));
-				    	var mainContainer = angular.element(element[0]).parent().attr('class');
-				    	
-				    	scope.drag = $(element).draggabilly({
+				    	scope.drag =new Draggabilly(element,{
 				    		containment : '.content-main',
-				    		//handle:'.handle'
+				    		handle:'.handle'
 				    	});
-				    	
-				    	scope.drag.on( 'dragStart', function() {
-				    		//drag.draggabilly('enable');
-				    	});
-
-				    	scope.drag.on( 'dragEnd', function() {
-				    		//scope.drag.draggabilly('destroy');
-				    		angular.element(element[0]).find('.handle').remove();
-				    	});
-				    	//
-				    }
-
-				    scope.dragNow = function(){
-				    	scope.drag.draggabilly('enable');
 				    }
 				    var resizeAndDrag = function(event , editable){
 
@@ -66,13 +49,11 @@ angular.module('microsite').directive('wcHtmlBind',function($compile){
 						angular.element(element[0]).find('.handle').remove();
 						angular.element(ele).prepend('<span class="handle" ><i class="fa fa-arrows"></i></span>');
 						
-						
-						//$compile(element.contents())(scope);
-						
 						//Only First time element should be initialize.
-						if(!angular.element(ele).hasClass('draggable'))
+						//if(!angular.element(ele).hasClass('draggable'))
 							scope.dragElement(ele);
-						angular.element(ele).addClass('draggable');
+						
+						//angular.element(ele).addClass('draggable');
 	               		event.preventDefault();					
 				    }
 
