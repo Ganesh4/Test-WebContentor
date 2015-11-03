@@ -23,7 +23,7 @@ body {
 
 h1,h2,h3,h4,h5,h6 {
   margin:0;
-  padding:0;	
+  padding:0
 } 
 
 h2.common-headng{
@@ -99,3 +99,142 @@ a{
 .select2-container-multi .select2-choices{
 	border: 1px solid #e3eaef !important;
 	}
+	
+
+/*======= Resizable Div =======*/
+
+/*=== left Div ===*/
+.resizable-left{
+    height: 100%;
+	position: absolute;
+	width: 6px;
+	left: -12px;
+}
+
+/*=== Right Div ===*/
+.resizable-right {
+    height: 100%;
+	position: absolute;
+	width: 6px;
+	right: -12px;
+}
+
+.resizable-right span, .resizable-left span{
+    position: absolute;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+	border-width: 0px 1px;
+	width: 6px;
+	height: 20px;
+	top: 50%;
+	cursor: col-resize;
+}
+
+/*=== Top Div ===*/
+.resizable-top {
+	position: absolute;
+	width: 100%;
+	top: -12px;
+	height: 6px;
+}
+
+/*=== Bottom Div ===*/
+.resizable-bottom {
+	position: absolute;
+	width: 100%;
+	bottom: -12px;
+	height: 6px;
+}
+
+.resizable-bottom span, .resizable-top span{
+    position: absolute;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+	border-width: 1px 0px;
+	width: 20px;
+	height: 6px;
+	left: 50%;
+	cursor: row-resize;
+}
+
+/*======= Corner Resizable Div =======*/
+
+.cr-top {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	right: -14px;
+	top: -12px;
+}
+
+.cr-right {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	bottom: -14px;
+	right: -14px;
+}
+
+.cr-bottom {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	bottom: -14px;
+	left: -12px;
+}
+
+.cr-left {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: -12px;
+	left: -12px;
+}
+
+.cr-top span{ 
+    border-width: 1px 1px 0px 0px !important; 
+	cursor: ne-resize; 
+	}
+.cr-right span{ 
+	border-width: 0px 1px 1px 0px !important; 
+	cursor: se-resize; 
+	}
+.cr-bottom span{ 
+	border-width: 0px 0px 1px 1px !important; 
+	cursor: ne-resize; 
+	}
+.cr-left span{ 
+	border-width: 1px 0px 0px 1px !important; 
+	cursor: se-resize; 
+	}
+
+.cr-top span,.cr-right span, .cr-bottom span, .cr-left span{
+    position: absolute;
+    box-sizing: border-box;
+	width: 16px;
+	height: 16px;
+	border: 1px solid #ccc;
+}
+
+.cr-top span:nth-of-type(2) { 
+  	width: 12px;
+	height: 12px;
+	top: 4px;
+	}
+.cr-right span:nth-of-type(2) { 
+  	width: 12px;
+	height: 12px;
+	}
+.cr-bottom span:nth-of-type(2) { 
+  	width: 12px;
+	height: 12px;
+	left: 4px;
+	}
+.cr-left span:nth-of-type(2) { 
+  	width: 12px;
+	height: 12px;
+	top: 4px;
+	left: 4px;
+	}
+	
+
