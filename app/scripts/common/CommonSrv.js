@@ -99,7 +99,7 @@ angular.module('common').service('CommonSrv',
             }
 
             //Notifications
-        self.showNotification = function(type,message){
+        self.showNotification = function(type,message,button){
             
             switch(type){
                 case 'error':
@@ -110,16 +110,7 @@ angular.module('common').service('CommonSrv',
                         classes : 'notify',
                         templateUrl: './views/commons/notification/Notification.html',
                         icon:'fa fa-times-circle - error',   
-                        button :[{
-                            name : 'Ok',
-                            onClick : 'DIALOG_CLOSE', 
-                            type : 'Button',
-                            state : 'app.register.user'
-                        },{
-                            name : 'Cancel',
-                            type : 'Button'
-
-                        }]
+                        button :button
                     });
                     break;
                 case 'success' :
@@ -130,16 +121,7 @@ angular.module('common').service('CommonSrv',
                         classes : 'notify',
                         templateUrl: './views/commons/notification/Notification.html',
                         icon:'fa fa-check-circle - sucsses',
-                        button :[{
-                            name : 'Ok',
-                            onClick : 'DIALOG_CLOSE', 
-                            type : 'Button',
-                            state : 'app.register.user'
-                        },{
-                            name : 'Cancel',
-                            type : 'Button'
-
-                        }]
+                        button :button
                     });
                     break;
                 case 'warning' :
@@ -150,16 +132,7 @@ angular.module('common').service('CommonSrv',
                         classes : 'notify',
                         templateUrl: './views/commons/notification/Notification.html',
                         icon:'fa fa-info-circle',
-                        button :[{
-                            name : 'Ok',
-                            onClick : 'DIALOG_CLOSE', 
-                            type : 'Button',
-                            state : 'app.register.user'
-                        },{
-                            name : 'Cancel',
-                            type : 'Button'
-
-                        }]
+                         button :button
                     });
                     break;    
             }

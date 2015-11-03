@@ -28,7 +28,18 @@
 
                         }]
                     });*/
-                CommonSrv.showNotification('error','Sample Dialog Box');
+                var dialogBtn = [{
+                            name : 'Ok',
+                            onClick : 'DIALOG_CLOSE', 
+                            type : 'Button',
+                            state : 'app.register.user'
+                        },{
+                            name : 'Cancel',
+                            type : 'Button'
+
+                        }];
+
+                CommonSrv.showNotification('error','Sample Dialog Box',dialogBtn);
             	$scope.loginUser={};
                 $scope.elements = $state.current.data.elements;
                 $scope.formBtns = $state.current.data.formButtons;
