@@ -26,8 +26,8 @@ angular.module('assets').directive('wcButton',['Global','$parse','notify',functi
 				}
 				scope.PREVIOUS_BTN_DISABLE = true;
 				scope.NEXT_BTN_DISABLE = false;
-				scope.CAMPAIGN_SAVE_DISABLE = true;
-				scope.CAMPAIGN_SAVE_EXIT_DISABLE = true;
+				//scope.CAMPAIGN_SAVE_DISABLE = true;
+				//scope.CAMPAIGN_SAVE_EXIT_DISABLE = true;
 				scope.DELETE_BTN_DISABLE = true;
 				scope.EDIT_BTN_DISABLE = true;
 

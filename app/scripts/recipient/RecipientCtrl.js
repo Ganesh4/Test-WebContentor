@@ -101,6 +101,7 @@
             RecipientApiSrv.deleteRecipient($scope.loggedInUser.securityUserId+'/recipients/'+id, null, function(data){
                     alert('Recipients Delete Successfully');
                     $scope.$emit(Global.EVENTS.RELOAD);
+                    //$scope.gridApi.selection.clearSelectedRows();
                 })
             }
 
@@ -116,6 +117,7 @@
 
             $scope.$on(Global.EVENTS.ADD_EMAIL_RECIPIENT_LIST,function(event,data){
                RecipientApiSrv.addEmailList($scope.loggedInUser.securityUserId+'/email/list',$scope.list,function(response){
+                    alert('Add Email List Successfully');
                    $scope.isInputDisable = true;
                    $scope.$emit(Global.EVENTS.RELOAD);
                }); 

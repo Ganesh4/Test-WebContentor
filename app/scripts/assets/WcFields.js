@@ -11,7 +11,8 @@ angular.module('assets').directive('wcFields',
 	'RecipientApiSrv',
 	'CommonSrv',
 	'RoleApiSrv',
-	function(Global, $compile, ImageApiSrv, $rootScope,RecipientApiSrv, CommonSrv,RoleApiSrv){
+	'CampaignApiSrv',
+	function(Global, $compile, ImageApiSrv, $rootScope,RecipientApiSrv, CommonSrv,RoleApiSrv,CampaignApiSrv){
 		return{
 			restrict:'AE',
 			scope:{
@@ -28,7 +29,7 @@ angular.module('assets').directive('wcFields',
 				fileName: '=',
 				lable: '=',
 				states: '=',
-				required: '='  
+				required: '=',
 			},
 			templateUrl : './views/assets/fields.html',
 			link : function(scope, element, attrs){
@@ -40,12 +41,13 @@ angular.module('assets').directive('wcFields',
 						var props = model.split('.');
 						var newModel = 'formData'+(props.length ? "['" + props.join("']['") + "']" : ']');
 						var input = angular.element(element).find(':input').attr('ng-model', newModel);
+						
 						//input.unbind();
 						$compile(input)(scope);
 					}
 				}
 				//$scope.imageCategory = ['Test','Testing'];
-	            scope.select2Options1 = {
+	           scope.select2Options1 = {
 	                'multiple': true,
 	                'simple_tags': true,
 	            }; 
@@ -100,6 +102,27 @@ angular.module('assets').directive('wcFields',
 						}
 					})
 				});
+				 
+				//GET CAMPAIGN FETAURES
+				scope.$on(Global.EVENTS.CAMPAIGN_FEATURE_LIST,function(){
+					 /*CampaignApiSrv.getCampaignFeatures($rootScope.userId+'/campaign/features',null,function(data){
+                		scope.featureList = data.plain();	
+                		scope.featureList = _.clone(scope.featureList);
+                		console.log('Feature List ------- ',  scope.featureList);
+                		var mydata = _.pluck(scope.featureList,'feature');
+                		 console.log('Feature List ------- ',  mydata);
+                		console.log('Select2Options ------------- ',scope.select2Options.tags);
+                		console.log('Feature List ------- ',  scope.featureList);
+                		//scope.features = [];
+            		});*/
+					//Should Be Dynamic
+            		scope.select2Options = {
+	                'multiple': true,
+	                'simple_tags': true,
+	                'tags': ['Email','Promotional Pages', 'Blog']
+	            	}	
+				});
+
 
 	            scope.updateCountry = function(){
 	            	scope.$emit(Global.EVENTS.UPDATE_COUNTRY);
