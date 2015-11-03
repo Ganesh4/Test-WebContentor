@@ -11,6 +11,7 @@
 		 function($scope,$state,Restangular,RecipientApiSrv,Global){
 		                         
            $scope.emailRecipients = {};
+           $scope.list ={};
             var param = {};
            $scope.isInputDisable = true;
            $scope.gridOptions = {
@@ -38,6 +39,10 @@
                     field:'zip', 
                     displayName:'Zip Code',
                     cellClass : 'green-color'
+                },{
+                    field:'.', 
+                    displayName:'Action',
+                    cellTemplate:'<wc-ellipsis-menu></wc-ellipsis-menu>'
                 }]
             }
 
@@ -76,8 +81,7 @@
                         var listId = selectedList.listId;
                     }
                 if(!_.isUndefined(listId)){ 
-                    $scope.$emit(Global.EVENTS.EDIT_BUTTON_DISABLE);
-                    $scope.$emit(Global.EVENTS.DELETE_BTN_DISABLE);        
+                    $scope.$emit(Global.EVENTS.EDIT_BUTTON_DISABLE);        
                     RecipientApiSrv.getRecipientByList($scope.loggedInUser.securityUserId+'/'+listId+'/recipients',{},function(data){
                         if(data){
                             $scope.recipientsGridOptions.data = data.plain();
@@ -87,8 +91,8 @@
                     });
                 }else{
                     $scope.$emit(Global.EVENTS.EDIT_BUTTON_ENABLE);
-                    $scope.$emit(Global.EVENTS.DELETE_BTN_ENABLE);
                     var selectedList = $scope.gridRowSelectedData[0];
+                    
                 }
             });
 
@@ -97,6 +101,7 @@
             RecipientApiSrv.deleteRecipient($scope.loggedInUser.securityUserId+'/recipients/'+id, null, function(data){
                     alert('Recipients Delete Successfully');
                     $scope.$emit(Global.EVENTS.RELOAD);
+                    //$scope.gridApi.selection.clearSelectedRows();
                 })
             }
 
@@ -111,10 +116,8 @@
             });    
 
             $scope.$on(Global.EVENTS.ADD_EMAIL_RECIPIENT_LIST,function(event,data){
-                console.log('$scope.loggedInUser.securityUserId',$scope.loggedInUser.securityUserId);
-                var list = {};
-                list.name = $scope.name;
-               RecipientApiSrv.addEmailList($scope.loggedInUser.securityUserId+'/email/list',list,function(response){
+               RecipientApiSrv.addEmailList($scope.loggedInUser.securityUserId+'/email/list',$scope.list,function(response){
+                    alert('Add Email List Successfully');
                    $scope.isInputDisable = true;
                    $scope.$emit(Global.EVENTS.RELOAD);
                }); 
@@ -152,6 +155,8 @@
                     $state.go('app.home.manage.recipients.edit');
                 }
             });
+
+             
             
 	}]);
 

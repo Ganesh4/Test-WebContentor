@@ -1,6 +1,5 @@
 
 <label ng-if="lable !== undefined">{{lable}}</label>
-{{initMethod}}
 <div ng-if="type === 'DROP_DOWN'" ng-init= "init()">
     <select class = "form-control" ng-model="drop"
 		ng-change = "{{onChange}}"  ng-options="{{options}}">
@@ -20,7 +19,7 @@
 	<textarea class="form-control textarea-height" rows="5" ng-valid placeholder="{{placeholder}}"></textarea>
 </div>
 
-<div ng-if="type === 'SELECT_TAGS'">
+<div ng-if="type === 'SELECT_TAGS'"  ng-init= "init()">
  	<input  ui-select2="select2Options" class="form-control textfield-width" 
 		ng-model="formData[model]" data-placeholder="{{placeholder}}">
 </div>
@@ -50,6 +49,12 @@
 	</label>
 </div>
 
+<div ng-if="type === 'CHECKBOX_GROUP'">
+	<div ng-repeat = "feature in featureList">
+		<input type="checkbox" checklist-model = "formData[model]" checklist-value="feature">{{feature.feature}}
+	</div>
+</div>
+
 <div ng-if="type === 'CAPTCHA'">
 	<div class="g-recaptcha" ng-model = "formData[model]" 
 		name = "{{name}}" data-sitekey="6Lc_0f4SAAAAAF9ZA_d7Dxi9qRbPMMNW-tLSvhe6">
@@ -61,7 +66,7 @@
 </div>
 
 <div ng-if="type === 'BUTTON'">
-	<button class = "btn btn-default"name = "name" type = "btnType">{{name}}</button>
+	<button class = "btn btn-default" = "name" type = "btnType">{{name}}</button>
 </div> 
 
 <div class="margin-for-addimg" ng-if="type === 'FILE'">

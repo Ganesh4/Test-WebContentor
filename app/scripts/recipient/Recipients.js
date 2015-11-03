@@ -26,6 +26,9 @@
                     data: {
                     displayName: ' Contact List',
                     actionBarBtn: [{
+                                    name : 'Refresh',
+                                    onClick : 'RELOAD'
+                               },{
                                     name : 'Export',
                                     onClick : '',
                                },{
@@ -34,18 +37,12 @@
                                 
                                },{
                                     name : 'Delete',
-                                    onClick : 'DELETE_RECIPIENT',
+                                    onClick : 'DELETE_EMAIL_LIST',
                                     disable :'DELETE_BTN_DISABLE'
                                },{
                                     name : 'Save',
                                     onClick : 'ADD_EMAIL_RECIPIENT_LIST',
                                     disable :'SAVE_BTN_DISABLE'
-                                
-                               },{
-                                    name : 'Edit',
-                                    onClick : 'EDIT_CONTACT',
-                                    state :'app.home.manage.recipients.edit',
-                                    disable :'EDIT_BTN_DISABLE'
                                 
                                }],
                  }
@@ -200,7 +197,6 @@
                  }
             }).state('app.home.manage.recipients.add', {
                     url: '/add',
-                    controller:'RecipientCtrl',
                     templateUrl:'views/recipient/AddRecipient.html',
                 data: {
                     displayName: 'Add',
@@ -211,7 +207,7 @@
                                     state : 'app.home.manage.recipients.list'
                                },{
                                     name : 'Save',
-                                    onClick : 'ADD_RECIPIENT'
+                                    onClick : 'ADD_RECIPIENT',
                                 
                                }],
                     elements:[
